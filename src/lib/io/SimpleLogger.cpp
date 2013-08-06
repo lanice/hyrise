@@ -52,6 +52,7 @@ void SimpleLogger::logValue(const tx::transaction_id_t &transaction_id,
 void SimpleLogger::logCommit(const tx::transaction_id_t &transaction_id) {
     _mutex.lock();
     _logfile << "(t," << transaction_id << ")";
+    _logfile.flush();
     _mutex.unlock();
 }
 

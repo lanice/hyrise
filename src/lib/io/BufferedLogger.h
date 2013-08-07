@@ -51,6 +51,7 @@ private:
 
     std::mutex _bufferMutex;
     std::mutex _fileMutex;
+    std::atomic<int> _writing;
 };
 
 }

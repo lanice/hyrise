@@ -3,6 +3,8 @@
 #include <atomic>
 #include <cstring>
 
+#define LOG_BUFFER_SIZE 16384
+
 namespace hyrise {
 namespace io {
 
@@ -15,7 +17,7 @@ void BufferedLogger::logDictionary(const storage::table_id_t &table_id,
                                    const storage::field_t &column,
                                    const storage::hyrise_int_t &value,
                                    const storage::value_id_t &value_id) {
-  char entry[200];
+  char entry[90];
   unsigned int len = sprintf(entry, "(d,%c,%lu,%li,%u)", table_id, column, value, value_id);
   _append(entry, len);
 }
@@ -24,7 +26,7 @@ void BufferedLogger::logDictionary(const storage::table_id_t &table_id,
                                    const storage::field_t &column,
                                    const storage::hyrise_float_t &value,
                                    const storage::value_id_t &value_id) {
-  char entry[200];
+  char entry[90];
   unsigned int len = sprintf(entry, "(d,%c,%lu,%f,%u)", table_id, column, value, value_id);
   _append(entry, len);
 }
@@ -53,57 +55,64 @@ void BufferedLogger::logValue(const tx::transaction_id_t &transaction_id,
 }
 
 void BufferedLogger::logCommit(const tx::transaction_id_t &transaction_id) {
-  char entry[50];
+  char entry[24];
   unsigned int len = sprintf(entry, "(t,%li)", transaction_id);
   _append(entry, len);
   _flush();
 }
 
 void BufferedLogger::_append(const char *str, const unsigned int len) {
-  _bufferMutex.lock();
+  char *head = NULL;
 
-  if(_head + len < _tail) {
-    memcpy(_head, str, len);
-    _head += len;
+  _bufferMutex.lock();
+  head = _head;
+  _head = _buffer + ((_head - _buffer + len) % LOG_BUFFER_SIZE);
+  ++_writing;
+  _bufferMutex.unlock();
+
+  if(head + len < _tail) {
+    memcpy(head, str, len);
   } else {
-    uint64_t part1 = _tail - _head;
+    uint64_t part1 = _tail - head;
     uint64_t part2 = len - part1;
-    memcpy(_head, str, part1);
+    memcpy(head, str, part1);
     memcpy(_buffer, str+part1, part2);
-    _head = _buffer + part2;
   }
 
-  _bufferMutex.unlock();
+  --_writing;
 }
 
 void BufferedLogger::_flush() {
-  uint64_t part1, part2;
-  char *head = _head;
+  char *head = NULL;
+
+  _bufferMutex.lock();
+  while(_writing > 0);
+  head = _head;
+  _bufferMutex.unlock();
 
   _fileMutex.lock();
-
   if(head > _last_write) {
     fwrite(_last_write, sizeof(char), head-_last_write, _logfile);
   } else {
-    part1 = _tail - _last_write;
-    part2 = _head - _buffer;
+    uint64_t part1 = _tail - _last_write;
+    uint64_t part2 = head - _buffer;
     fwrite(_last_write, sizeof(char), part1, _logfile);
     fwrite(_buffer, sizeof(char), part2, _logfile);
   }
   _last_write = head;
   fflush(_logfile);
-
   _fileMutex.unlock();
 }
 
 BufferedLogger::BufferedLogger() {
   _logfile = fopen("logfile", "w");
 
-  _buffer_size = 16384;
+  _buffer_size = LOG_BUFFER_SIZE;
   _buffer = (char*) malloc(_buffer_size);
   _head = _buffer;
   _last_write = _buffer;
   _tail = _buffer + _buffer_size;
+  _writing = 0;
 }
 
 }

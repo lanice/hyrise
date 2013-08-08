@@ -85,22 +85,27 @@ void BufferedLogger::_append(const char *str, const unsigned int len) {
 void BufferedLogger::_flush() {
   char *head = NULL;
 
+  _fileMutex.lock();
+
   _bufferMutex.lock();
   while(_writing > 0);
   head = _head;
   _bufferMutex.unlock();
 
-  _fileMutex.lock();
   if(head > _last_write) {
     fwrite(_last_write, sizeof(char), head-_last_write, _logfile);
-  } else {
+  } else if(head < _last_write) {
     uint64_t part1 = _tail - _last_write;
     uint64_t part2 = head - _buffer;
     fwrite(_last_write, sizeof(char), part1, _logfile);
     fwrite(_buffer, sizeof(char), part2, _logfile);
+  } else {
+    _fileMutex.unlock();
+    return;
   }
   _last_write = head;
   fflush(_logfile);
+
   _fileMutex.unlock();
 }
 

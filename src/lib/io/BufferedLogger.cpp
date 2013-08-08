@@ -1,6 +1,5 @@
 #include "io/BufferedLogger.h"
 
-#include <atomic>
 #include <cstring>
 
 #define LOG_BUFFER_SIZE 16384

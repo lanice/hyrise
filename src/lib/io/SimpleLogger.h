@@ -5,6 +5,7 @@
 #include <mutex>
 #include <string>
 
+#include "storage/storage_types.h"
 #include "helper/types.h"
 
 namespace hyrise {
@@ -31,7 +32,7 @@ public:
                   const storage::pos_t &row,
                   const storage::pos_t &invalidated_row,
                   const uint64_t &field_bitmask,
-                  const std::vector<storage::value_id_t> &value_ids);
+                  const ValueIdList *value_ids);
     void logCommit(const tx::transaction_id_t &transaction_id);
 
 private:

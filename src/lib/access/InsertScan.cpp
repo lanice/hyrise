@@ -7,6 +7,8 @@
 #include "helper/checked_cast.h"
 
 #include "io/TransactionManager.h"
+#include "io/SimpleLogger.h"
+
 #include "storage/Store.h"
 #include "storage/meta_storage.h"
 
@@ -64,6 +66,10 @@ void InsertScan::executePlanOperation() {
   for(size_t i=0, upper = _data->size(); i < upper; ++i) {
     store->copyRowToDelta(_data, i, writeArea.first+i, _txContext.tid, hidden);
     mods.insertPos(store, beforSize+i);
+
+    uint64_t bitmask = (1 << (_data->columnCount() + 1)) - 1;
+    std::vector<ValueId> vids = _data.get()->copyValueIds(i);
+    io::SimpleLogger::getInstance().logValue(mods.tid, reinterpret_cast<uintptr_t>(store.get()), beforSize+i, 0, bitmask, &vids);
   }
 
   addResult(input.getTable(0));

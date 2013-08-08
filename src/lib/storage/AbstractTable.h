@@ -16,6 +16,7 @@
 #include <string>
 
 #include "helper/types.h"
+#include "io/SimpleLogger.h"
 
 #include <storage/AbstractResource.h>
 #include <storage/storage_types.h>
@@ -321,6 +322,7 @@ public:
       valueId.valueId = map->getValueIdForValue(value);
     } else if (create) {
       valueId.valueId = map->addValue(value);
+      hyrise::io::SimpleLogger::getInstance().logDictionary(table_id, column, value, valueId.valueId);
       /*if (map->isOrdered()) {
         throw std::runtime_error("Cannot insert value in an ordered dictionary");
       } else {

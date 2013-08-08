@@ -10,7 +10,11 @@ TEST_F(SimpleLoggerTests, simple_log_test) {
   SimpleLogger::getInstance().logDictionary('a', 1, (int64_t)2, 3);
   SimpleLogger::getInstance().logDictionary('a', 1, 2.0f, 3);
   SimpleLogger::getInstance().logDictionary('a', 1, "zwei", 3);
-  SimpleLogger::getInstance().logValue(1,'a',2,3,4,{5,6,7});
+  std::vector<ValueId> vids;
+  vids.push_back(ValueId(0, 0));
+  vids.push_back(ValueId(1, 0));
+  vids.push_back(ValueId(2, 0));
+  SimpleLogger::getInstance().logValue(1,'a',2,3,4,&vids);
   SimpleLogger::getInstance().logCommit(1);
 }
 

@@ -18,7 +18,7 @@ void BufferedLogger::logDictionary(const storage::table_id_t &table_id,
                                    const storage::hyrise_int_t &value,
                                    const storage::value_id_t &value_id) {
   char entry[90];
-  unsigned int len = sprintf(entry, "(d,%c,%lu,%li,%u)", table_id, column, value, value_id);
+  unsigned int len = sprintf(entry, "(d,%u,%lu,%li,%u)", (int)table_id, column, value, value_id);
   _append(entry, len);
 }
 
@@ -27,7 +27,7 @@ void BufferedLogger::logDictionary(const storage::table_id_t &table_id,
                                    const storage::hyrise_float_t &value,
                                    const storage::value_id_t &value_id) {
   char entry[90];
-  unsigned int len = sprintf(entry, "(d,%c,%lu,%f,%u)", table_id, column, value, value_id);
+  unsigned int len = sprintf(entry, "(d,%u,%lu,%f,%u)", (int)table_id, column, value, value_id);
   _append(entry, len);
 }
 
@@ -36,7 +36,7 @@ void BufferedLogger::logDictionary(const storage::table_id_t &table_id,
                                    const storage::hyrise_string_t &value,
                                    const storage::value_id_t &value_id) {
   char entry[200];
-  unsigned int len = sprintf(entry, "(d,%c,%lu,%s,%u)", table_id, column, value.c_str(), value_id);
+  unsigned int len = sprintf(entry, "(d,%u,%lu,%s,%u)", (int)table_id, column, value.c_str(), value_id);
   _append(entry, len);
 }
 
@@ -45,11 +45,14 @@ void BufferedLogger::logValue(const tx::transaction_id_t &transaction_id,
                               const storage::pos_t &row,
                               const storage::pos_t &invalidated_row,
                               const uint64_t &field_bitmask,
-                              const std::vector<storage::value_id_t> &value_ids) {
+                              const ValueIdList *value_ids) {
   char entry[200];
-  unsigned int len = sprintf(entry, "(v,%li,%c,%lu,%lu,%lu,(%u", transaction_id, table_id, row, invalidated_row, field_bitmask, value_ids[0]);
-  for(auto it = ++value_ids.cbegin(); it != value_ids.cend(); ++it)
-    len += sprintf(&entry[len], ",%u", *it);
+  unsigned int len = sprintf(entry, "(v,%li,%u,%lu,%lu,%lu,(", transaction_id, (int)table_id, row, invalidated_row, field_bitmask);
+  if(value_ids != nullptr) {
+    len += sprintf(&entry[len], "%u", (*value_ids)[0].valueId);
+    for(auto it = ++value_ids->cbegin(); it != value_ids->cend(); ++it)
+      len += sprintf(&entry[len], ",%u", it->valueId);
+  }
   len += sprintf(&entry[len], "))");
   _append(entry, len);
 }

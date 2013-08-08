@@ -1,5 +1,5 @@
 #ifndef SRC_LIB_IO_BUFFEREDLOGGER_H
-#define SRC_LIB_IO_SIMPLELOGGER_H
+#define SRC_LIB_IO_BUFFEREDLOGGER_H
 
 #include <atomic>
 #include <cstdio>

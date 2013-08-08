@@ -13,38 +13,38 @@ BufferedLogger &BufferedLogger::getInstance() {
   return instance;
 }
 
-void BufferedLogger::logDictionary(const storage::table_id_t &table_id,
-                                   const storage::field_t &column,
-                                   const storage::hyrise_int_t &value,
-                                   const storage::value_id_t &value_id) {
+void BufferedLogger::logDictionary(const storage::table_id_t table_id,
+                                   const storage::field_t column,
+                                   const storage::hyrise_int_t value,
+                                   const storage::value_id_t value_id) {
   char entry[90];
   unsigned int len = sprintf(entry, "(d,%c,%lu,%li,%u)", table_id, column, value, value_id);
   _append(entry, len);
 }
 
-void BufferedLogger::logDictionary(const storage::table_id_t &table_id,
-                                   const storage::field_t &column,
-                                   const storage::hyrise_float_t &value,
-                                   const storage::value_id_t &value_id) {
+void BufferedLogger::logDictionary(const storage::table_id_t table_id,
+                                   const storage::field_t column,
+                                   const storage::hyrise_float_t value,
+                                   const storage::value_id_t value_id) {
   char entry[90];
   unsigned int len = sprintf(entry, "(d,%c,%lu,%f,%u)", table_id, column, value, value_id);
   _append(entry, len);
 }
 
-void BufferedLogger::logDictionary(const storage::table_id_t &table_id,
-                                   const storage::field_t &column,
+void BufferedLogger::logDictionary(const storage::table_id_t table_id,
+                                   const storage::field_t column,
                                    const storage::hyrise_string_t &value,
-                                   const storage::value_id_t &value_id) {
+                                   const storage::value_id_t value_id) {
   char entry[200];
   unsigned int len = sprintf(entry, "(d,%c,%lu,%s,%u)", table_id, column, value.c_str(), value_id);
   _append(entry, len);
 }
 
-void BufferedLogger::logValue(const tx::transaction_id_t &transaction_id,
-                              const storage::table_id_t &table_id,
-                              const storage::pos_t &row,
-                              const storage::pos_t &invalidated_row,
-                              const uint64_t &field_bitmask,
+void BufferedLogger::logValue(const tx::transaction_id_t transaction_id,
+                              const storage::table_id_t table_id,
+                              const storage::pos_t row,
+                              const storage::pos_t invalidated_row,
+                              const uint64_t field_bitmask,
                               const std::vector<storage::value_id_t> &value_ids) {
   char entry[200];
   unsigned int len = sprintf(entry, "(v,%li,%c,%lu,%lu,%lu,(%u", transaction_id, table_id, row, invalidated_row, field_bitmask, value_ids[0]);
@@ -54,7 +54,7 @@ void BufferedLogger::logValue(const tx::transaction_id_t &transaction_id,
   _append(entry, len);
 }
 
-void BufferedLogger::logCommit(const tx::transaction_id_t &transaction_id) {
+void BufferedLogger::logCommit(const tx::transaction_id_t transaction_id) {
   char entry[24];
   unsigned int len = sprintf(entry, "(t,%li)", transaction_id);
   _append(entry, len);

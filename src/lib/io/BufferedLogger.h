@@ -14,25 +14,25 @@ class BufferedLogger {
 public:
     static BufferedLogger &getInstance();
 
-    void logDictionary(const storage::table_id_t &table_id,
-                       const storage::field_t &column,
-                       const storage::hyrise_int_t &value,
-                       const storage::value_id_t &value_id);
-    void logDictionary(const storage::table_id_t &table_id,
-                       const storage::field_t &column,
-                       const storage::hyrise_float_t &value,
-                       const storage::value_id_t &value_id);
-    void logDictionary(const storage::table_id_t &table_id,
-                       const storage::field_t &column,
+    void logDictionary(const storage::table_id_t table_id,
+                       const storage::field_t column,
+                       const storage::hyrise_int_t value,
+                       const storage::value_id_t value_id);
+    void logDictionary(const storage::table_id_t table_id,
+                       const storage::field_t column,
+                       const storage::hyrise_float_t value,
+                       const storage::value_id_t value_id);
+    void logDictionary(const storage::table_id_t table_id,
+                       const storage::field_t column,
                        const storage::hyrise_string_t &value,
-                       const storage::value_id_t &value_id);
-    void logValue(const tx::transaction_id_t &transaction_id,
-                  const storage::table_id_t &table_id,
-                  const storage::pos_t &row,
-                  const storage::pos_t &invalidated_row,
-                  const uint64_t &field_bitmask,
+                       const storage::value_id_t value_id);
+    void logValue(const tx::transaction_id_t transaction_id,
+                  const storage::table_id_t table_id,
+                  const storage::pos_t row,
+                  const storage::pos_t invalidated_row,
+                  const uint64_t field_bitmask,
                   const std::vector<storage::value_id_t> &value_ids);
-    void logCommit(const tx::transaction_id_t &transaction_id);
+    void logCommit(const tx::transaction_id_t transaction_id);
 
 private:
     BufferedLogger();

@@ -82,10 +82,15 @@ void BufferedLogger::_append(const char *str, const unsigned int len) {
   }
 
   --_writing;
+
+  uint64_t s = _size.fetch_add(len);
+  if(s > LOG_BUFFER_SIZE/2)
+    _flush();
 }
 
 void BufferedLogger::_flush() {
   char *head = NULL;
+  uint64_t written = 0;
 
   _fileMutex.lock();
 
@@ -95,10 +100,12 @@ void BufferedLogger::_flush() {
   _bufferMutex.unlock();
 
   if(head > _last_write) {
-    fwrite(_last_write, sizeof(char), head-_last_write, _logfile);
+    written = head - _last_write;
+    fwrite(_last_write, sizeof(char), written, _logfile);
   } else if(head < _last_write) {
     uint64_t part1 = _tail - _last_write;
     uint64_t part2 = head - _buffer;
+    written = part1 + part2;
     fwrite(_last_write, sizeof(char), part1, _logfile);
     fwrite(_buffer, sizeof(char), part2, _logfile);
   } else {
@@ -107,6 +114,8 @@ void BufferedLogger::_flush() {
   }
   _last_write = head;
   fflush(_logfile);
+
+  _size -= written;
 
   _fileMutex.unlock();
 }
@@ -120,6 +129,7 @@ BufferedLogger::BufferedLogger() {
   _last_write = _buffer;
   _tail = _buffer + _buffer_size;
   _writing = 0;
+  _size = 0;
 }
 
 }

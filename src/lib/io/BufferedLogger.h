@@ -53,6 +53,7 @@ private:
     std::mutex _bufferMutex;
     std::mutex _fileMutex;
     std::atomic<int> _writing;
+    std::atomic<uint64_t> _size;
 };
 
 }

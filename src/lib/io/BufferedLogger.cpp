@@ -112,10 +112,9 @@ void BufferedLogger::_flush() {
     _fileMutex.unlock();
     return;
   }
+  _size -= written;
   _last_write = head;
   fflush(_logfile);
-
-  _size -= written;
 
   _fileMutex.unlock();
 }

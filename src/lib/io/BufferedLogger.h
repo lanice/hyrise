@@ -51,7 +51,7 @@ private:
     std::atomic<uint64_t> _size;
 };
 
-template<>
+/*template<>
 void BufferedLogger::logDictionary<storage::hyrise_int_t>(storage::table_id_t table_id,
                                                           storage::field_t column,
                                                           const storage::hyrise_int_t &value,
@@ -79,7 +79,7 @@ void BufferedLogger::logDictionary<storage::hyrise_string_t>(storage::table_id_t
   char entry[200];
   unsigned int len = sprintf(entry, "(d,%u,%lu,%s,%u)", (int)table_id, column, value.c_str(), value_id);
   _append(entry, len);
-}
+}*/
 
 }
 }

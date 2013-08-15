@@ -11,6 +11,36 @@ BufferedLogger &BufferedLogger::getInstance() {
   return instance;
 }
 
+template<>
+void BufferedLogger::logDictionary<storage::hyrise_int_t>(storage::table_id_t table_id,
+                                                          storage::field_t column,
+                                                          const storage::hyrise_int_t &value,
+                                                          storage::value_id_t value_id) {
+  char entry[90];
+  unsigned int len = sprintf(entry, "(d,%u,%lu,%li,%u)", (int)table_id, column, value, value_id);
+  _append(entry, len);
+}
+
+template<>
+void BufferedLogger::logDictionary<storage::hyrise_float_t>(storage::table_id_t table_id,
+                                                            storage::field_t column,
+                                                            const storage::hyrise_float_t &value,
+                                                            storage::value_id_t value_id) {
+  char entry[90];
+  unsigned int len = sprintf(entry, "(d,%u,%lu,%f,%u)", (int)table_id, column, value, value_id);
+  _append(entry, len);
+}
+
+template<>
+void BufferedLogger::logDictionary<storage::hyrise_string_t>(storage::table_id_t table_id,
+                                                             storage::field_t column,
+                                                             const storage::hyrise_string_t &value,
+                                                             storage::value_id_t value_id) {
+  char entry[200];
+  unsigned int len = sprintf(entry, "(d,%u,%lu,%s,%u)", (int)table_id, column, value.c_str(), value_id);
+  _append(entry, len);
+}
+
 void BufferedLogger::logValue(const tx::transaction_id_t transaction_id,
                               const storage::table_id_t table_id,
                               const storage::pos_t row,

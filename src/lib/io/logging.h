@@ -8,10 +8,10 @@ namespace hyrise {
 namespace io {
 
   // Uncomment to use SimpleLogger
-  //typedef SimpleLogger Logger;
+  typedef SimpleLogger Logger;
 
   // Uncomment to use BufferedLogger
-  typedef BufferedLogger Logger;
+  //typedef BufferedLogger Logger;
 
 }
 }

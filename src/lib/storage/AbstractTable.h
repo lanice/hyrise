@@ -16,7 +16,7 @@
 #include <string>
 
 #include "helper/types.h"
-#include "io/SimpleLogger.h"
+#include "io/logging.h"
 
 #include <storage/AbstractResource.h>
 #include <storage/storage_types.h>
@@ -67,7 +67,7 @@ class AbstractTable : public AbstractResource {
 private:
 
   unsigned _generation;
-  
+
 public:
 
   typedef std::shared_ptr<AbstractDictionary> SharedDictionaryPtr;
@@ -149,7 +149,7 @@ public:
   virtual const ColumnMetadata *metadataAt(const size_t column, const size_t row = 0, const table_id_t table_id = 0) const = 0;
 
   /**
-   * Returs a list of references to metadata of this table. 
+   * Returs a list of references to metadata of this table.
    *
    * The list is newly created for all calls to this method, but the
    * references stay the same. Thus calling this method incurrs a
@@ -322,11 +322,11 @@ public:
       valueId.valueId = map->getValueIdForValue(value);
     } else if (create) {
       valueId.valueId = map->addValue(value);
-      hyrise::io::SimpleLogger::getInstance().logDictionary(table_id, column, value, valueId.valueId);
+      hyrise::io::Logger::getInstance().logDictionary<T>(table_id, column, value, valueId.valueId);
       /*if (map->isOrdered()) {
         throw std::runtime_error("Cannot insert value in an ordered dictionary");
       } else {
-        
+
       }*/
     } else {
       // TODO: We should document that INT_MAX is an invalid document ID
@@ -534,7 +534,7 @@ public:
    */
   virtual hyrise::storage::atable_ptr_t copy() const = 0;
 
-  /** 
+  /**
   * get underlying attribute vectors for column
   *
   * This method returns a struct containing the reference to the attribute
@@ -544,7 +544,7 @@ public:
   virtual const attr_vectors_t getAttributeVectors(size_t column) const;
 
   virtual void debugStructure(size_t level=0) const;
-  
+
 };
 
 #endif  // SRC_LIB_STORAGE_ABSTRACTTABLE_H_

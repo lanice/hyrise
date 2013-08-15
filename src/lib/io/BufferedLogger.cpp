@@ -1,42 +1,14 @@
 #include "io/BufferedLogger.h"
 
-#include <cstring>
-
-#define LOG_BUFFER_SIZE 16384
-
 namespace hyrise {
 namespace io {
+
+constexpr uint64_t LOG_BUFFER_SIZE = 16384;
+constexpr char LOG_FILE_NAME[] = "logfile";
 
 BufferedLogger &BufferedLogger::getInstance() {
   static BufferedLogger instance;
   return instance;
-}
-
-void BufferedLogger::logDictionary(const storage::table_id_t table_id,
-                                   const storage::field_t column,
-                                   const storage::hyrise_int_t value,
-                                   const storage::value_id_t value_id) {
-  char entry[90];
-  unsigned int len = sprintf(entry, "(d,%u,%lu,%li,%u)", (int)table_id, column, value, value_id);
-  _append(entry, len);
-}
-
-void BufferedLogger::logDictionary(const storage::table_id_t table_id,
-                                   const storage::field_t column,
-                                   const storage::hyrise_float_t value,
-                                   const storage::value_id_t value_id) {
-  char entry[90];
-  unsigned int len = sprintf(entry, "(d,%u,%lu,%f,%u)", (int)table_id, column, value, value_id);
-  _append(entry, len);
-}
-
-void BufferedLogger::logDictionary(const storage::table_id_t table_id,
-                                   const storage::field_t column,
-                                   const storage::hyrise_string_t &value,
-                                   const storage::value_id_t value_id) {
-  char entry[200];
-  unsigned int len = sprintf(entry, "(d,%u,%lu,%s,%u)", (int)table_id, column, value.c_str(), value_id);
-  _append(entry, len);
 }
 
 void BufferedLogger::logValue(const tx::transaction_id_t transaction_id,
@@ -120,7 +92,7 @@ void BufferedLogger::_flush() {
 }
 
 BufferedLogger::BufferedLogger() {
-  _logfile = fopen("logfile", "w");
+  _logfile = fopen(LOG_FILE_NAME, "w");
 
   _buffer_size = LOG_BUFFER_SIZE;
   _buffer = (char*) malloc(_buffer_size);

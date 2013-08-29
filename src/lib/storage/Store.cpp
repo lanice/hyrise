@@ -370,9 +370,16 @@ hyrise::tx::TX_CODE Store::checkForConcurrentCommit(const pos_list_t& pos, const
 hyrise::tx::TX_CODE Store::markForDeletion(const pos_t pos, const hyrise::tx::transaction_id_t tid) {
   if(atomic_cas(&_tidVector[pos], hyrise::tx::UNKNOWN, tid)) {
     return hyrise::tx::TX_CODE::TX_OK;
-  } else {
-    return hyrise::tx::TX_CODE::TX_FAIL_CONCURRENT_COMMIT;
   }
+
+  if(_tidVector[pos] == tid) {
+    // It is a row that we inserted ourselves. We remove the TID, leaving it with TID=0,begin=0,end=0 which is invisible to everyone
+    // No need for a CAS here since we already have it "locked"
+    _tidVector[pos] = 0;
+    return hyrise::tx::TX_CODE::TX_OK;
+  }
+
+  return hyrise::tx::TX_CODE::TX_FAIL_CONCURRENT_COMMIT;
 }
 
 hyrise::tx::TX_CODE Store::unmarkForDeletion(const pos_list_t& pos, const hyrise::tx::transaction_id_t tid) {

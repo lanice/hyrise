@@ -546,7 +546,7 @@ TEST_F(TransactionTests, delete_rollback) {
   del.addInput(pc);
   del.execute();
 
-  tx::TransactionManager::rollbackTransaction(writeCtx.tid);
+  tx::TransactionManager::rollbackTransaction(writeCtx);
   ASSERT_EQ(tx::UNKNOWN, linxxxs->tid(0));
 }
 

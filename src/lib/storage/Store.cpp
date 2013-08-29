@@ -51,8 +51,9 @@ void Store::merge() {
 
   // get valid positions
   std::vector<bool> validPositions(_cidBeginVector.size());
+  hyrise::tx::transaction_cid_t last_commit_id = hyrise::tx::TransactionManager::getInstance().getLastCommitId();
   hyrise::functional::forEachWithIndex(_cidBeginVector, [&](size_t i, bool v){
-    validPositions[i] = isVisibleForTransaction(i, hyrise::tx::TransactionManager::getInstance().getLastCommitId(), hyrise::tx::MERGE_TID);
+    validPositions[i] = isVisibleForTransaction(i, last_commit_id, hyrise::tx::MERGE_TID);
   });
 
   main_tables = merger->merge(tmp, true, validPositions);

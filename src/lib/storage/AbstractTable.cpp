@@ -18,6 +18,8 @@
 
 #include <iostream>
 
+using namespace hyrise::storage;
+
 hyrise::storage::atable_ptr_t AbstractTable::copy_structure(const field_list_t *fields, const bool reuse_dict, const size_t initial_size, const bool with_containers, const bool compressed) const {
   std::vector<const ColumnMetadata *> metadata;
   std::vector<AbstractTable::SharedDictionaryPtr> *dictionaries = nullptr;
@@ -307,13 +309,13 @@ void AbstractTable::debugStructure(size_t level) const {
   std::cout << std::string(level, '\t') << "AbstractTable " << this << std::endl;
 }
 
-boost::uuids::uuid AbstractTable::getUuid() const {
+unique_id AbstractTable::getUuid() const {
   return _uuid;
 }
 
-void AbstractTable::setUuid(boost::uuids::uuid u) {
+void AbstractTable::setUuid(unique_id u) {
   if (u.is_nil()) {
-    _uuid = boost::uuids::random_generator()();
+    _uuid = unique_id::create();
   }
   _uuid = u;
 }

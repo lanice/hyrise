@@ -28,33 +28,40 @@
       <div class="span3 hyrisesidebar">
           {%- block sidebarlogo %}
           {%- if logo %}
-            <p class="logo"><a href="{{ pathto(master_doc) }}">
-              <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
-            </a></p>
+            <p class="logo">
+              <a href="{{ pathto(master_doc) }}">
+                <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
+              </a>
+              <p>
+                ...is a new relational storage engine for main memory database systems. It is built on the premise that enterprise application workloads can benefit from a dedicated main-memory storage engine.
+              </p>
+            </p>
           {%- endif %}
           {%- endblock %}
-          {%- if sidebars != None %}
-            {#- new style sidebar: explicitly include/exclude templates #}
-            {%- for sidebartemplate in sidebars %}
-            {%- include sidebartemplate %}
-            {%- endfor %}
-          {%- else %}
-            {#- old style sidebars: using blocks -- should be deprecated #}
-            {%- block sidebartoc %}
-            {%- include "localtoc.html" %}
-            {%- endblock %}
-            {%- block sidebarrel %}
-            {%- include "relations.html" %}
-            {%- endblock %}
-            {%- block sidebarsourcelink %}
-            {%- include "sourcelink.html" %}
-            {%- endblock %}
-            {%- if customsidebar %}
-            {%- include customsidebar %}
+          {%- if pagename != index %}
+            {%- if sidebars != None %}
+              {#- new style sidebar: explicitly include/exclude templates #}
+              {%- for sidebartemplate in sidebars %}
+              {%- include sidebartemplate %}
+              {%- endfor %}
+            {%- else %}
+              {#- old style sidebars: using blocks -- should be deprecated #}
+              {%- block sidebartoc %}
+              {%- include "localtoc.html" %}
+              {%- endblock %}
+              {%- block sidebarrel %}
+              {%- include "relations.html" %}
+              {%- endblock %}
+              {%- block sidebarsourcelink %}
+              {%- include "sourcelink.html" %}
+              {%- endblock %}
+              {%- if customsidebar %}
+              {%- include customsidebar %}
+              {%- endif %}
+              {%- block sidebarsearch %}
+              {%- include "searchbox.html" %}
+              {%- endblock %}
             {%- endif %}
-            {%- block sidebarsearch %}
-            {%- include "searchbox.html" %}
-            {%- endblock %}
           {%- endif %}
       </div>
       {%- endif %}
@@ -145,7 +152,7 @@
                         {%- endif %}
                         <div class="main span9">
                             <div class="row-fluid">
-                                {{ toc|replace('<ul>', '<ul class="nav nav-pills pull-left">', 1) }}
+                                {{ toc|replace('<ul>', '<ul class="nav nav-pills pull-left">', 1)|replace('<ul class="current">', '<ul class="nav nav-pills pull-left">', 1 )|replace('<li class="toctree-l1 current">', '<li class="toctree-l1 active">') }}
                             </div>
                             {% block body %} {% endblock %}
                         </div>

@@ -3,7 +3,8 @@ Documentation
 #############
 
 .. toctree::
-   :hidden:
+   :maxdepth: 1
+   :titlesonly:
 
    getting_started
    architecture   

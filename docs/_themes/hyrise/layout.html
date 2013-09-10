@@ -38,7 +38,7 @@
             </p>
           {%- endif %}
           {%- endblock %}
-          {%- if pagename == 'documentation' %}
+          {%- if pagename != 'index' and pagename != 'people' and pagename != 'projects' and pagename != 'publications' %}
             {%- if sidebars != None %}
               {#- new style sidebar: explicitly include/exclude templates #}
               {%- for sidebartemplate in sidebars %}
@@ -150,9 +150,7 @@
                             {%- block sidebar %}{{ sidebar() }}{% endblock %}
                         {%- endif %}
                         <div class="main col-md-9">
-                            <div class="row-fluid">
-                                {{ toc |replace('<ul>', '<ul class="nav nav-pills pull-left">', 1)|replace('<ul class="current">', '<ul class="nav nav-pills pull-left">', 1 )|replace('<li class="toctree-l1 current">', '<li class="toctree-l1 active">') }}
-                            </div>
+                            {%- include 'globaltoc.html' %}
                             <div class="content">
                               {% block body %} {% endblock %}
                             </div>
@@ -197,7 +195,7 @@
                   </div>
                 </div>
 
-                <div class="container">
+                <div class="container index-container">
                   <div class="container-fluid">
                     <div class="section">       
                       <div class="row-fluid">

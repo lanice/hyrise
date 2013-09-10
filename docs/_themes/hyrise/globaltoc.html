@@ -1,0 +1,29 @@
+{#
+    basic/localtoc.html
+    ~~~~~~~~~~~~~~~~~~~
+
+    Sphinx sidebar template: local table of contents.
+
+    :copyright: Copyright 2007-2013 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+<div class="row-fluid">
+  <!-- <ul class="nav nav-pills pull-left">
+    <li {%- if pagename == 'index' %} class="active" {%- endif %}>
+        <a href="index.html">Home</a>
+    </li>
+    <li {%- if pagename == 'documentation' %} class="active" {%- endif %}>
+      <a href="documentation.html">Documentation</a>
+    </li>
+    <li {%- if pagename == 'people' %} class="active" {%- endif %}>
+      <a href="people.html">People</a>
+    </li>
+    <li {%- if pagename == 'projects' %} class="active" {%- endif %}>
+      <a href="projects.html">Projects</a>
+    </li>
+    <li {%- if pagename == 'publications' %} class="active" {%- endif %}>
+      <a href="publications.html">Publications</a>
+    </li>
+  </ul> -->
+    {{ toctree() |replace('<ul>', '<ul class="nav nav-pills pull-left">', 1)|replace('<ul class="current">', '<ul class="nav nav-pills pull-left">', 1 )|replace('<li class="toctree-l1 current">', '<li class="toctree-l1 active">') }}
+</div>

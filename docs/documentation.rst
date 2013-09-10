@@ -3,7 +3,7 @@ Documentation
 #############
 
 .. toctree::
-   :glob:
+   :hidden:
 
    getting_started
    architecture   
@@ -12,6 +12,7 @@ Documentation
    faq
    proposals
    doxygen
+   
 
 What is HYRISE
 --------------

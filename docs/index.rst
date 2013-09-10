@@ -1,16 +1,11 @@
-Welcome to HYRISE
-=================
-
-.. contents::
-   :local:
-   :depth: 1
+Home
+=====
 
 .. toctree::
-   :glob: 
    :maxdepth: 1
 
-   home
-   ocumentation
+   self
+   documentation
    people
    projects
    publications

@@ -26,7 +26,7 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.intersphinx', "sphinx.ext.graphviz", "breathe", "sphinxcontrib.seqdiag"]#, 'sphinxcontrib.fulltoc']
+extensions = ['sphinx.ext.intersphinx', "sphinx.ext.graphviz", "breathe", "sphinxcontrib.seqdiag", 'sphinxcontrib.fulltoc']
 
 seqdiag_html_image_format = "SVG"
 

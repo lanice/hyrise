@@ -8,22 +8,24 @@
     :license: BSD, see LICENSE for details.
 #}
 <div class="row-fluid">
-  <!-- <ul class="nav nav-pills pull-left">
+  <ul class="nav nav-pills pull-left">
     <li {%- if pagename == 'index' %} class="active" {%- endif %}>
-        <a href="index.html">Home</a>
+        <a href="{{ pathto(master_doc) }}">Home</a>
     </li>
     <li {%- if pagename == 'documentation' %} class="active" {%- endif %}>
-      <a href="documentation.html">Documentation</a>
+      <a href="{{ pathto('documentation') }}">Documentation</a>
     </li>
     <li {%- if pagename == 'people' %} class="active" {%- endif %}>
-      <a href="people.html">People</a>
+      <a href="{{ pathto('people') }}">People</a>
     </li>
     <li {%- if pagename == 'projects' %} class="active" {%- endif %}>
-      <a href="projects.html">Projects</a>
+      <a href="{{ pathto('projects') }}">Projects</a>
     </li>
     <li {%- if pagename == 'publications' %} class="active" {%- endif %}>
-      <a href="publications.html">Publications</a>
+      <a href="{{ pathto('publications') }}">Publications</a>
     </li>
-  </ul> -->
-    {{ toctree() |replace('<ul>', '<ul class="nav nav-pills pull-left">', 1)|replace('<ul class="current">', '<ul class="nav nav-pills pull-left">', 1 )|replace('<li class="toctree-l1 current">', '<li class="toctree-l1 active">') }}
+  </ul>
+
+    {# automatic top-navigation generation not working with fulltoc plugin (yet) #}
+    {# {{ toctree() |replace('<ul>', '<ul class="nav nav-pills pull-left">', 1)|replace('<ul class="current">', '<ul class="nav nav-pills pull-left">', 1 )|replace('<li class="toctree-l1 current">', '<li class="toctree-l1 active">') }} #}
 </div>

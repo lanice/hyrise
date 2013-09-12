@@ -8,7 +8,7 @@ h1 {
       text-align: center;
 }
 .onload h1 {
-      display: none;
+    /*  display: none;*/
 }
 
 li {
@@ -48,7 +48,7 @@ dt:hover > a.headerlink {
 
 
 .nav {
-      margin-bottom:0px;
+      margin-bottom: 30px;
 }
 
 .nav-pills > .active > a {
@@ -99,7 +99,7 @@ dt:hover > a.headerlink {
 }
 
 .section {
-      margin: 50px 0;
+      margin-bottom: 50px;
 }
 .index-container .section {
       overflow: hidden;
@@ -142,7 +142,7 @@ dt:hover > a.headerlink {
 }
 
 /* normalize bootstrap lists */
-div#tocWrapper {
+div#tocWrapper {
       margin-bottom: 20px;
 }
 ul.list {
@@ -153,8 +153,23 @@ ul.list {
       margin-bottom: 0px;
 }
 
-/* normalize prettyprint */
+/* prettyprint and line numbers */
 pre.prettyprint {
       padding: 9.5px !important;
       border: 1px solid #cccccc !important;
+}
+td.linenos {
+      position: absolute;
+}
+td.linenos pre {
+      border: none;
+      background: none;
+      border-radius: 0;
+      border-right: 1px solid silver;
+}
+td.linenos + .code pre span {
+      white-space: nowrap;
+}
+td.linenos + .code pre {
+      padding-left: 40px;
 }

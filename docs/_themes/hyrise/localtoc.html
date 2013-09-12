@@ -9,7 +9,9 @@
 #}
 {%- if display_toc %}
   
-  {{ toc }}
+  <div id="tocWrapper" style="margin-bottom: 20px;">
+    {{ toc }}
+  </div>
 
   {# {{ toctree(maxdepth=-1, titles_only=True) }} #}
   <!-- possible but links have to be removed, too..problem: closing tags-->

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="cas_8h" kind="file">
+    <compoundname>cas.h</compoundname>
+    <includedby refid="_store_8cpp" local="no">src/lib/storage/Store.cpp</includedby>
+    <invincdepgraph>
+      <node id="10329">
+        <label>src/lib/storage/Store.cpp</label>
+        <link refid="_store_8cpp"/>
+      </node>
+      <node id="10328">
+        <label>src/lib/helper/cas.h</label>
+        <link refid="cas.h"/>
+        <childnode refid="10329" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cas_8h_1aaad299c5f0bd4a2dc0c3dbe9a4090184" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool atomic_cas</definition>
+        <argsstring>(T *ptr, T oldV, T newV)</argsstring>
+        <name>atomic_cas</name>
+        <param>
+          <type>T *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>oldV</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>newV</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/cas.h" line="5" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/cas.h" bodystart="5" bodyend="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_HELPER_CAS_H_</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_HELPER_CAS_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="5" refid="cas_8h_1aaad299c5f0bd4a2dc0c3dbe9a4090184" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="cas_8h_1aaad299c5f0bd4a2dc0c3dbe9a4090184" kindref="member">atomic_cas</ref>(T*<sp/>ptr,<sp/>T<sp/>oldV,<sp/>T<sp/>newV)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__sync_bool_compare_and_swap(ptr,<sp/>oldV,<sp/>newV);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/cas.h"/>
+  </compounddef>
+</doxygen>

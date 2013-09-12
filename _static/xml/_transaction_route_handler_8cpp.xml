@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_transaction_route_handler_8cpp" kind="file">
+    <compoundname>TransactionRouteHandler.cpp</compoundname>
+    <includes refid="_transaction_route_handler_8h" local="yes">io/TransactionRouteHandler.h</includes>
+    <includes local="no">sstream</includes>
+    <includes refid="_transaction_manager_8h" local="yes">io/TransactionManager.h</includes>
+    <includes refid="_http_helper_8h" local="yes">helper/HttpHelper.h</includes>
+    <includes refid="numerical__converter_8h" local="yes">helper/numerical_converter.h</includes>
+    <includes local="yes">cereal/archives/json.hpp</includes>
+    <includes local="yes">cereal/types/vector.hpp</includes>
+    <incdepgraph>
+      <node id="12830">
+        <label>src/lib/io/TransactionRouteHandler.cpp</label>
+        <link refid="TransactionRouteHandler.cpp"/>
+        <childnode refid="12831" relation="include">
+        </childnode>
+        <childnode refid="12841" relation="include">
+        </childnode>
+        <childnode refid="12842" relation="include">
+        </childnode>
+        <childnode refid="12858" relation="include">
+        </childnode>
+        <childnode refid="12859" relation="include">
+        </childnode>
+        <childnode refid="12861" relation="include">
+        </childnode>
+        <childnode refid="12862" relation="include">
+        </childnode>
+      </node>
+      <node id="12844">
+        <label>atomic</label>
+      </node>
+      <node id="12851">
+        <label>limits</label>
+      </node>
+      <node id="12846">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="12847" relation="include">
+        </childnode>
+        <childnode refid="12844" relation="include">
+        </childnode>
+      </node>
+      <node id="12848">
+        <label>helper/Synchronized.h</label>
+        <link refid="_synchronized_8h"/>
+        <childnode refid="12834" relation="include">
+        </childnode>
+      </node>
+      <node id="12850">
+        <label>cstdint</label>
+      </node>
+      <node id="12856">
+        <label>stdint.h</label>
+      </node>
+      <node id="12855">
+        <label>stdexcept</label>
+      </node>
+      <node id="12832">
+        <label>string</label>
+      </node>
+      <node id="12845">
+        <label>map</label>
+      </node>
+      <node id="12857">
+        <label>ostream</label>
+      </node>
+      <node id="12833">
+        <label>net/Router.h</label>
+        <link refid="_router_8h"/>
+        <childnode refid="12834" relation="include">
+        </childnode>
+        <childnode refid="12835" relation="include">
+        </childnode>
+        <childnode refid="12832" relation="include">
+        </childnode>
+        <childnode refid="12836" relation="include">
+        </childnode>
+        <childnode refid="12837" relation="include">
+        </childnode>
+      </node>
+      <node id="12831">
+        <label>io/TransactionRouteHandler.h</label>
+        <link refid="_transaction_route_handler_8h"/>
+        <childnode refid="12832" relation="include">
+        </childnode>
+        <childnode refid="12833" relation="include">
+        </childnode>
+      </node>
+      <node id="12840">
+        <label>condition_variable</label>
+      </node>
+      <node id="12854">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="12838" relation="include">
+        </childnode>
+        <childnode refid="12832" relation="include">
+        </childnode>
+        <childnode refid="12855" relation="include">
+        </childnode>
+        <childnode refid="12856" relation="include">
+        </childnode>
+        <childnode refid="12857" relation="include">
+        </childnode>
+      </node>
+      <node id="12858">
+        <label>helper/HttpHelper.h</label>
+        <link refid="_http_helper_8h"/>
+        <childnode refid="12845" relation="include">
+        </childnode>
+        <childnode refid="12832" relation="include">
+        </childnode>
+      </node>
+      <node id="12861">
+        <label>cereal/archives/json.hpp</label>
+      </node>
+      <node id="12838">
+        <label>vector</label>
+      </node>
+      <node id="12841">
+        <label>sstream</label>
+      </node>
+      <node id="12853">
+        <label>cereal/cereal.hpp</label>
+      </node>
+      <node id="12835">
+        <label>unordered_map</label>
+      </node>
+      <node id="12859">
+        <label>helper/numerical_converter.h</label>
+        <link refid="numerical__converter_8h"/>
+        <childnode refid="12860" relation="include">
+        </childnode>
+      </node>
+      <node id="12839">
+        <label>mutex</label>
+      </node>
+      <node id="12860">
+        <label>boost/optional.hpp</label>
+      </node>
+      <node id="12847">
+        <label>thread</label>
+      </node>
+      <node id="12849">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="12850" relation="include">
+        </childnode>
+        <childnode refid="12832" relation="include">
+        </childnode>
+        <childnode refid="12851" relation="include">
+        </childnode>
+        <childnode refid="12834" relation="include">
+        </childnode>
+        <childnode refid="12838" relation="include">
+        </childnode>
+      </node>
+      <node id="12836">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="12832" relation="include">
+        </childnode>
+      </node>
+      <node id="12843">
+        <label>algorithm</label>
+      </node>
+      <node id="12862">
+        <label>cereal/types/vector.hpp</label>
+      </node>
+      <node id="12842">
+        <label>io/TransactionManager.h</label>
+        <link refid="_transaction_manager_8h"/>
+        <childnode refid="12843" relation="include">
+        </childnode>
+        <childnode refid="12844" relation="include">
+        </childnode>
+        <childnode refid="12845" relation="include">
+        </childnode>
+        <childnode refid="12839" relation="include">
+        </childnode>
+        <childnode refid="12835" relation="include">
+        </childnode>
+        <childnode refid="12846" relation="include">
+        </childnode>
+        <childnode refid="12848" relation="include">
+        </childnode>
+        <childnode refid="12849" relation="include">
+        </childnode>
+        <childnode refid="12852" relation="include">
+        </childnode>
+        <childnode refid="12854" relation="include">
+        </childnode>
+      </node>
+      <node id="12834">
+        <label>memory</label>
+      </node>
+      <node id="12837">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="12838" relation="include">
+        </childnode>
+        <childnode refid="12839" relation="include">
+        </childnode>
+        <childnode refid="12834" relation="include">
+        </childnode>
+        <childnode refid="12840" relation="include">
+        </childnode>
+        <childnode refid="12832" relation="include">
+        </childnode>
+      </node>
+      <node id="12852">
+        <label>io/TXContext.h</label>
+        <link refid="_t_x_context_8h"/>
+        <childnode refid="12849" relation="include">
+        </childnode>
+        <childnode refid="12853" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1tx">hyrise::tx</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_transaction_route_handler_8h" kindref="compound">io/TransactionRouteHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_transaction_manager_8h" kindref="compound">io/TransactionManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_http_helper_8h" kindref="compound">helper/HttpHelper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="numerical__converter_8h" kindref="compound">helper/numerical_converter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cereal/archives/json.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cereal/types/vector.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">tx<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>reg_status<sp/>=<sp/>net::Router::registerRoute&lt;TransactionStatusHandler&gt;(</highlight><highlight class="stringliteral">&quot;/status/tx&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classhyrise_1_1tx_1_1_request_handler_1af504b2ed3c56d7e368ef80b2216f79b1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_request_handler_1af504b2ed3c56d7e368ef80b2216f79b1" kindref="member">RequestHandler::operator()</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_request_handler_1ab8b579b4a0fbdab35d2bc3ae2720fd22" kindref="member">_connection</ref>-&gt;<ref refid="classhyrise_1_1net_1_1_abstract_connection_1a5a81423c8555d550b89758550d4c5e6f" kindref="member">respond</ref>(<ref refid="classhyrise_1_1tx_1_1_request_handler_1af197f892626b70f8540e56a552d1aa47" kindref="member">processRequest</ref>());</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(std::exception&amp;<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_request_handler_1ab8b579b4a0fbdab35d2bc3ae2720fd22" kindref="member">_connection</ref>-&gt;<ref refid="classhyrise_1_1net_1_1_abstract_connection_1a5a81423c8555d550b89758550d4c5e6f" kindref="member">respond</ref>(std::string(</highlight><highlight class="stringliteral">&quot;error:<sp/>&quot;</highlight><highlight class="normal">)<sp/>+<sp/>e.what(),<sp/>500);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classhyrise_1_1tx_1_1_transaction_status_handler_1a8bcb9b3ccca1618ecfc101668073719c" refkind="member"><highlight class="normal">std::string<sp/><ref refid="classhyrise_1_1tx_1_1_transaction_status_handler_1a8bcb9b3ccca1618ecfc101668073719c" kindref="member">TransactionStatusHandler::processRequest</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>std::ostringstream<sp/>out;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>cereal::JSONOutputArchive<sp/>archive(out);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>archive(cereal::make_nvp(</highlight><highlight class="stringliteral">&quot;contexts&quot;</highlight><highlight class="normal">,<sp/><ref refid="group___transaction_1ga10e36ee27cd9e7412b57531636d8a135" kindref="member">TransactionManager::getRunningTransactionContexts</ref>()));</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out.str();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}}</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionRouteHandler.cpp"/>
+  </compounddef>
+</doxygen>

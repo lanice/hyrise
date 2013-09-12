@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_abstract_core_bound_queue" kind="class" prot="public" abstract="yes">
+    <compoundname>AbstractCoreBoundQueue</compoundname>
+    <basecompoundref refid="class_abstract_task_queue" prot="public" virt="non-virtual">AbstractTaskQueue</basecompoundref>
+    <derivedcompoundref refid="class_core_bound_priority_queue" prot="public" virt="non-virtual">CoreBoundPriorityQueue</derivedcompoundref>
+    <derivedcompoundref refid="class_core_bound_queue" prot="public" virt="non-virtual">CoreBoundQueue</derivedcompoundref>
+    <derivedcompoundref refid="class_w_s_core_bound_priority_queue" prot="public" virt="non-virtual">WSCoreBoundPriorityQueue</derivedcompoundref>
+    <derivedcompoundref refid="class_w_s_core_bound_queue" prot="public" virt="non-virtual">WSCoreBoundQueue</derivedcompoundref>
+    <includes refid="_abstract_core_bound_queue_8h" local="no">AbstractCoreBoundQueue.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_abstract_core_bound_queue_1a85ec39df5b0715322bd2377d131f61c2" prot="protected" static="no" mutable="no">
+        <type>std::thread *</type>
+        <definition>std::thread* AbstractCoreBoundQueue::_thread</definition>
+        <argsstring></argsstring>
+        <name>_thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="18" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_abstract_core_bound_queue_1ae3052e927bc180940af268739d3cd156" prot="protected" static="no" mutable="no">
+        <type>std::atomic&lt; <ref refid="class_abstract_task_queue_1ae23c29958eae1e9a30a39638271432e6" kindref="member">queue_status_t</ref> &gt;</type>
+        <definition>std::atomic&lt;queue_status_t&gt; AbstractCoreBoundQueue::_status</definition>
+        <argsstring></argsstring>
+        <name>_status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="20" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_abstract_core_bound_queue_1ac95d664429941c1498f375e957646137" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AbstractCoreBoundQueue::_core</definition>
+        <argsstring></argsstring>
+        <name>_core</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="22" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_abstract_core_bound_queue_1ab57cf781e1daa5985057b5f1a471b5d2" prot="protected" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex AbstractCoreBoundQueue::_queueMutex</definition>
+        <argsstring></argsstring>
+        <name>_queueMutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="24" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_abstract_core_bound_queue_1ab10c2fe728ed772291086dd4010f36d8" prot="protected" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex AbstractCoreBoundQueue::_threadStatusMutex</definition>
+        <argsstring></argsstring>
+        <name>_threadStatusMutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="26" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_abstract_core_bound_queue_1aef36fd9aa88f29f500516395d3160e36" prot="protected" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable AbstractCoreBoundQueue::_condition</definition>
+        <argsstring></argsstring>
+        <name>_condition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="28" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_abstract_core_bound_queue_1aaa808d78eed24b10236611a12baa90c6" prot="protected" static="yes" mutable="no">
+        <type>log4cxx::LoggerPtr</type>
+        <definition>log4cxx::LoggerPtr AbstractCoreBoundQueue::logger</definition>
+        <argsstring></argsstring>
+        <name>logger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="30" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_abstract_core_bound_queue_1a33d99e5749f26892bb2fc917adc52eef" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbstractCoreBoundQueue::launchThread</definition>
+        <argsstring>(int core)</argsstring>
+        <name>launchThread</name>
+        <param>
+          <type>int</type>
+          <declname>core</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="34" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.cpp" bodystart="35" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_core_bound_queue_1a2aac4a0e43692ea2810e790d405adde7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AbstractCoreBoundQueue::AbstractCoreBoundQueue</definition>
+        <argsstring>()</argsstring>
+        <name>AbstractCoreBoundQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="36" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_abstract_core_bound_queue_1aa6dfd5d2c2bd4bd1b4bb8415f6b1c4fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>AbstractCoreBoundQueue::~AbstractCoreBoundQueue</definition>
+        <argsstring>()</argsstring>
+        <name>~AbstractCoreBoundQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="40" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_core_bound_queue_1ab10c862a308c1668f13962cf7b68d65e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt; &gt;</type>
+        <definition>virtual std::vector&lt;std::shared_ptr&lt;Task&gt; &gt; AbstractCoreBoundQueue::emptyQueue</definition>
+        <argsstring>()=0</argsstring>
+        <name>emptyQueue</name>
+        <reimplementedby refid="class_core_bound_queue_1a183402b6d64fc4c36602ba9b05f6eeb1">emptyQueue</reimplementedby>
+        <reimplementedby refid="class_core_bound_priority_queue_1ab48b865d617ed792b2febdd18109d5cd">emptyQueue</reimplementedby>
+        <reimplementedby refid="class_w_s_core_bound_queue_1a8d28b343377c7dabe8f160640b5d2966">emptyQueue</reimplementedby>
+        <reimplementedby refid="class_w_s_core_bound_priority_queue_1a11e4af1025112f005fb71c2dbc6b9d56">emptyQueue</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>empty queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_core_bound_queue_1a81f5bc3b9ea7aedc2706a9c072096659" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AbstractCoreBoundQueue::join</definition>
+        <argsstring>()</argsstring>
+        <name>join</name>
+        <reimplements refid="class_abstract_task_queue_1a253e5a3dbe7788f3f0e8daa303b330fd">join</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="50" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_core_bound_queue_1a54462c0fff124727a4cabf46bc9bb11f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt; &gt;</type>
+        <definition>virtual std::vector&lt;std::shared_ptr&lt;Task&gt; &gt; AbstractCoreBoundQueue::stopQueue</definition>
+        <argsstring>()=0</argsstring>
+        <name>stopQueue</name>
+        <reimplementedby refid="class_core_bound_queue_1abe86744c5646ce5473ef6dd27db0bf4a">stopQueue</reimplementedby>
+        <reimplementedby refid="class_core_bound_priority_queue_1a425c2ffbc469338374628a3054f9b5df">stopQueue</reimplementedby>
+        <reimplementedby refid="class_w_s_core_bound_queue_1acdc16e62b97344c4751f83d3536f517e">stopQueue</reimplementedby>
+        <reimplementedby refid="class_w_s_core_bound_priority_queue_1af1c1025c2741d5fbce2b279a043810fa">stopQueue</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_core_bound_queue_1a9ec37ad1ae0f22d1420a2724ffe11ee7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int AbstractCoreBoundQueue::getCore</definition>
+        <argsstring>() const </argsstring>
+        <name>getCore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="58" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" bodystart="58" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1399">
+        <label>CoreBoundQueue</label>
+        <link refid="class_core_bound_queue"/>
+        <childnode refid="1396" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1400">
+        <label>WSCoreBoundPriorityQueue</label>
+        <link refid="class_w_s_core_bound_priority_queue"/>
+        <childnode refid="1396" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1397">
+        <label>AbstractTaskQueue</label>
+        <link refid="class_abstract_task_queue"/>
+      </node>
+      <node id="1401">
+        <label>WSCoreBoundQueue</label>
+        <link refid="class_w_s_core_bound_queue"/>
+        <childnode refid="1396" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1398">
+        <label>CoreBoundPriorityQueue</label>
+        <link refid="class_core_bound_priority_queue"/>
+        <childnode refid="1396" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1396">
+        <label>AbstractCoreBoundQueue</label>
+        <link refid="class_abstract_core_bound_queue"/>
+        <childnode refid="1397" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1403">
+        <label>AbstractTaskQueue</label>
+        <link refid="class_abstract_task_queue"/>
+      </node>
+      <node id="1402">
+        <label>AbstractCoreBoundQueue</label>
+        <link refid="class_abstract_core_bound_queue"/>
+        <childnode refid="1403" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" line="14" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.h" bodystart="14" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_abstract_core_bound_queue_1aef36fd9aa88f29f500516395d3160e36" prot="protected" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>_condition</name></member>
+      <member refid="class_abstract_core_bound_queue_1ac95d664429941c1498f375e957646137" prot="protected" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>_core</name></member>
+      <member refid="class_abstract_core_bound_queue_1ab57cf781e1daa5985057b5f1a471b5d2" prot="protected" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>_queueMutex</name></member>
+      <member refid="class_abstract_core_bound_queue_1ae3052e927bc180940af268739d3cd156" prot="protected" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>_status</name></member>
+      <member refid="class_abstract_core_bound_queue_1a85ec39df5b0715322bd2377d131f61c2" prot="protected" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>_thread</name></member>
+      <member refid="class_abstract_core_bound_queue_1ab10c2fe728ed772291086dd4010f36d8" prot="protected" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>_threadStatusMutex</name></member>
+      <member refid="class_abstract_core_bound_queue_1a2aac4a0e43692ea2810e790d405adde7" prot="protected" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>AbstractCoreBoundQueue</name></member>
+      <member refid="class_abstract_core_bound_queue_1ab10c862a308c1668f13962cf7b68d65e" prot="public" virt="pure-virtual"><scope>AbstractCoreBoundQueue</scope><name>emptyQueue</name></member>
+      <member refid="class_abstract_task_queue_1aecd09a5005f34494694c7c40df1bfd40" prot="public" virt="pure-virtual"><scope>AbstractCoreBoundQueue</scope><name>executeTask</name></member>
+      <member refid="class_abstract_core_bound_queue_1a9ec37ad1ae0f22d1420a2724ffe11ee7" prot="public" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>getCore</name></member>
+      <member refid="class_abstract_core_bound_queue_1a81f5bc3b9ea7aedc2706a9c072096659" prot="public" virt="virtual"><scope>AbstractCoreBoundQueue</scope><name>join</name></member>
+      <member refid="class_abstract_core_bound_queue_1a33d99e5749f26892bb2fc917adc52eef" prot="protected" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>launchThread</name></member>
+      <member refid="class_abstract_core_bound_queue_1aaa808d78eed24b10236611a12baa90c6" prot="protected" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>logger</name></member>
+      <member refid="class_abstract_task_queue_1aed7b0329d177e98b522170e2777b08d0" prot="public" virt="pure-virtual"><scope>AbstractCoreBoundQueue</scope><name>push</name></member>
+      <member refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447" prot="public" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>queue_state</name></member>
+      <member refid="class_abstract_task_queue_1ae23c29958eae1e9a30a39638271432e6" prot="public" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>queue_status_t</name></member>
+      <member refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447abbf46a2afa080c3f9d355c407beaa902" prot="public" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>RUN</name></member>
+      <member refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447adf73f3cfd7d9d951bad5386fb341026e" prot="public" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>RUN_UNTIL_DONE</name></member>
+      <member refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447a34b422f4936efbfaec6b980a8fde370e" prot="public" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>STARTUP</name></member>
+      <member refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447a16003f747b26f2b4d59ec96bdbe5d3ed" prot="public" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>STOPPED</name></member>
+      <member refid="class_abstract_core_bound_queue_1a54462c0fff124727a4cabf46bc9bb11f" prot="public" virt="pure-virtual"><scope>AbstractCoreBoundQueue</scope><name>stopQueue</name></member>
+      <member refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447ab5b55d5fec71f3976fb1767477475a69" prot="public" virt="non-virtual"><scope>AbstractCoreBoundQueue</scope><name>TO_STOP</name></member>
+      <member refid="class_abstract_core_bound_queue_1aa6dfd5d2c2bd4bd1b4bb8415f6b1c4fb" prot="public" virt="virtual"><scope>AbstractCoreBoundQueue</scope><name>~AbstractCoreBoundQueue</name></member>
+      <member refid="class_abstract_task_queue_1af4b704999acefc71422beb78904865bb" prot="public" virt="virtual"><scope>AbstractCoreBoundQueue</scope><name>~AbstractTaskQueue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

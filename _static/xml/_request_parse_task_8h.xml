@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_request_parse_task_8h" kind="file">
+    <compoundname>RequestParseTask.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">memory</includes>
+    <includes refid="epoch_8h" local="yes">helper/epoch.h</includes>
+    <includes refid="_router_8h" local="yes">net/Router.h</includes>
+    <includes refid="_abstract_connection_8h" local="yes">net/AbstractConnection.h</includes>
+    <includedby refid="_request_parse_task_8cpp" local="yes">src/lib/access/system/RequestParseTask.cpp</includedby>
+    <includedby refid="_async_connection_8cpp" local="yes">src/lib/net/AsyncConnection.cpp</includedby>
+    <incdepgraph>
+      <node id="9382">
+        <label>helper/epoch.h</label>
+        <link refid="epoch_8h"/>
+        <childnode refid="9383" relation="include">
+        </childnode>
+      </node>
+      <node id="9383">
+        <label>stdint.h</label>
+      </node>
+      <node id="9380">
+        <label>string</label>
+      </node>
+      <node id="9379">
+        <label>src/lib/access/system/RequestParseTask.h</label>
+        <link refid="RequestParseTask.h"/>
+        <childnode refid="9380" relation="include">
+        </childnode>
+        <childnode refid="9381" relation="include">
+        </childnode>
+        <childnode refid="9382" relation="include">
+        </childnode>
+        <childnode refid="9384" relation="include">
+        </childnode>
+        <childnode refid="9386" relation="include">
+        </childnode>
+      </node>
+      <node id="9384">
+        <label>net/Router.h</label>
+        <link refid="_router_8h"/>
+        <childnode refid="9381" relation="include">
+        </childnode>
+        <childnode refid="9385" relation="include">
+        </childnode>
+        <childnode refid="9380" relation="include">
+        </childnode>
+        <childnode refid="9386" relation="include">
+        </childnode>
+        <childnode refid="9387" relation="include">
+        </childnode>
+      </node>
+      <node id="9390">
+        <label>condition_variable</label>
+      </node>
+      <node id="9388">
+        <label>vector</label>
+      </node>
+      <node id="9385">
+        <label>unordered_map</label>
+      </node>
+      <node id="9389">
+        <label>mutex</label>
+      </node>
+      <node id="9386">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="9380" relation="include">
+        </childnode>
+      </node>
+      <node id="9381">
+        <label>memory</label>
+      </node>
+      <node id="9387">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="9388" relation="include">
+        </childnode>
+        <childnode refid="9389" relation="include">
+        </childnode>
+        <childnode refid="9381" relation="include">
+        </childnode>
+        <childnode refid="9390" relation="include">
+        </childnode>
+        <childnode refid="9380" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9393">
+        <label>src/lib/net/AsyncConnection.cpp</label>
+        <link refid="_async_connection_8cpp"/>
+      </node>
+      <node id="9392">
+        <label>src/lib/access/system/RequestParseTask.cpp</label>
+        <link refid="_request_parse_task_8cpp"/>
+      </node>
+      <node id="9391">
+        <label>src/lib/access/system/RequestParseTask.h</label>
+        <link refid="RequestParseTask.h"/>
+        <childnode refid="9392" relation="include">
+        </childnode>
+        <childnode refid="9393" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhyrise_1_1access_1_1_request_parse_task" prot="public">hyrise::access::RequestParseTask</innerclass>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1access">hyrise::access</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_ACCESS_REQUESTPARSETASK_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_ACCESS_REQUESTPARSETASK_H_</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="epoch_8h" kindref="compound">helper/epoch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_router_8h" kindref="compound">net/Router.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_connection_8h" kindref="compound">net/AbstractConnection.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">access<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ResponseTask;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classhyrise_1_1access_1_1_request_parse_task" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1access_1_1_request_parse_task" kindref="compound">RequestParseTask</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_abstract_request_handler" kindref="compound" tooltip="Base class for request handlers.">net::AbstractRequestHandler</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19" refid="classhyrise_1_1access_1_1_request_parse_task_1aabba0cef49c9ebe24aeda6e01ec66425" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref><sp/>*<ref refid="classhyrise_1_1access_1_1_request_parse_task_1aabba0cef49c9ebe24aeda6e01ec66425" kindref="member">_connection</ref>;</highlight></codeline>
+<codeline lineno="20" refid="classhyrise_1_1access_1_1_request_parse_task_1a232d3c2dd18aaf76b98a984a692d767a" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;ResponseTask&gt;<sp/><ref refid="classhyrise_1_1access_1_1_request_parse_task_1a232d3c2dd18aaf76b98a984a692d767a" kindref="member">_responseTask</ref>;</highlight></codeline>
+<codeline lineno="21" refid="classhyrise_1_1access_1_1_request_parse_task_1a511577fa3cd653879d59b4e24d9a37d6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="epoch_8h_1a18c258fe5c1fdd9c998d1c4bc0d39560" kindref="member">epoch_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_request_parse_task_1a511577fa3cd653879d59b4e24d9a37d6" kindref="member">_queryStart</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_request_parse_task_1a463a08f714adcfe6f3145bf10b6678b8" kindref="member">RequestParseTask</ref>(<ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref><sp/>*connection);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_request_parse_task_1a2a64400c2a41ccbb4f73355e05d56de6" kindref="member">~RequestParseTask</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;ResponseTask&gt;<sp/><ref refid="classhyrise_1_1access_1_1_request_parse_task_1af4a2fbcb6a7812445e07c15e0e7e1335" kindref="member">getResponseTask</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_request_parse_task_1ae9998cfb7a4e562a8e98a630eb3d904d" kindref="member">operator()</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classhyrise_1_1access_1_1_request_parse_task_1a064ed724c36f66d17651a997a568d794" kindref="member">name</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classhyrise_1_1access_1_1_request_parse_task_1af38a2b8411d78ab9cc71bae727182e74" kindref="member">vname</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_ACCESS_REQUESTPARSETASK_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/RequestParseTask.h"/>
+  </compounddef>
+</doxygen>

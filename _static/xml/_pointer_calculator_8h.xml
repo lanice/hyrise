@@ -1,0 +1,750 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_pointer_calculator_8h" kind="file">
+    <compoundname>PointerCalculator.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="types_8h" local="yes">helper/types.h</includes>
+    <includes refid="_shared_factory_8h" local="yes">helper/SharedFactory.h</includes>
+    <includes refid="_abstract_table_8h" local="yes">storage/AbstractTable.h</includes>
+    <includes refid="_mutable_vertical_table_8h" local="yes">storage/MutableVerticalTable.h</includes>
+    <includedby refid="tx__performance_8cpp" local="yes">src/bin/perf_regression/tx_performance.cpp</includedby>
+    <includedby refid="_create_index_8cpp" local="yes">src/lib/access/CreateIndex.cpp</includedby>
+    <includedby refid="_delete_8cpp" local="no">src/lib/access/Delete.cpp</includedby>
+    <includedby refid="_distinct_8cpp" local="yes">src/lib/access/Distinct.cpp</includedby>
+    <includedby refid="lib_2access_2_group_by_scan_8cpp" local="yes">src/lib/access/GroupByScan.cpp</includedby>
+    <includedby refid="_hash_join_probe_8cpp" local="yes">src/lib/access/HashJoinProbe.cpp</includedby>
+    <includedby refid="_hash_value_join_8hpp" local="no">src/lib/access/HashValueJoin.hpp</includedby>
+    <includedby refid="_index_scan_8cpp" local="yes">src/lib/access/IndexScan.cpp</includedby>
+    <includedby refid="_intersect_positions_8cpp" local="yes">src/lib/access/IntersectPositions.cpp</includedby>
+    <includedby refid="lib_2access_2_join_scan_8cpp" local="yes">src/lib/access/JoinScan.cpp</includedby>
+    <includedby refid="_merge_join_8hpp" local="yes">src/lib/access/MergeJoin.hpp</includedby>
+    <includedby refid="_multiply_ref_field_8h" local="yes">src/lib/access/MultiplyRefField.h</includedby>
+    <includedby refid="_pos_update_scan_8cpp" local="yes">src/lib/access/PosUpdateScan.cpp</includedby>
+    <includedby refid="lib_2access_2_projection_scan_8cpp" local="yes">src/lib/access/ProjectionScan.cpp</includedby>
+    <includedby refid="_histogram_8h" local="yes">src/lib/access/radixjoin/Histogram.h</includedby>
+    <includedby refid="_nested_loop_equi_join_8cpp" local="yes">src/lib/access/radixjoin/NestedLoopEquiJoin.cpp</includedby>
+    <includedby refid="_script_operation_8cpp" local="no">src/lib/access/ScriptOperation.cpp</includedby>
+    <includedby refid="_simple_raw_table_scan_8cpp" local="yes">src/lib/access/SimpleRawTableScan.cpp</includedby>
+    <includedby refid="lib_2access_2_simple_table_scan_8cpp" local="yes">src/lib/access/SimpleTableScan.cpp</includedby>
+    <includedby refid="lib_2access_2_sort_scan_8cpp" local="yes">src/lib/access/SortScan.cpp</includedby>
+    <includedby refid="_table_scan_8cpp" local="yes">src/lib/access/TableScan.cpp</includedby>
+    <includedby refid="_validate_positions_8cpp" local="no">src/lib/access/tx/ValidatePositions.cpp</includedby>
+    <includedby refid="_union_all_8cpp" local="yes">src/lib/access/UnionAll.cpp</includedby>
+    <includedby refid="lib_2access_2_union_scan_8cpp" local="yes">src/lib/access/UnionScan.cpp</includedby>
+    <includedby refid="_pointer_calculator_8cpp" local="yes">src/lib/storage/PointerCalculator.cpp</includedby>
+    <includedby refid="storage__types__helper_8h" local="yes">src/lib/storage/storage_types_helper.h</includedby>
+    <includedby refid="storage_8h" local="no">src/lib/storage.h</includedby>
+    <incdepgraph>
+      <node id="16484">
+        <label>atomic</label>
+      </node>
+      <node id="16488">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="16489" relation="include">
+        </childnode>
+        <childnode refid="16492" relation="include">
+        </childnode>
+        <childnode refid="16493" relation="include">
+        </childnode>
+      </node>
+      <node id="16477">
+        <label>limits</label>
+      </node>
+      <node id="16482">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="16483" relation="include">
+        </childnode>
+        <childnode refid="16484" relation="include">
+        </childnode>
+      </node>
+      <node id="16495">
+        <label>boost/iterator/iterator_facade.hpp</label>
+      </node>
+      <node id="16475">
+        <label>cstdint</label>
+      </node>
+      <node id="16490">
+        <label>stdint.h</label>
+      </node>
+      <node id="16506">
+        <label>cmath</label>
+      </node>
+      <node id="16512">
+        <label>cassert</label>
+      </node>
+      <node id="16481">
+        <label>stdexcept</label>
+      </node>
+      <node id="16503">
+        <label>storage/FixedLengthVector.h</label>
+        <link refid="_fixed_length_vector_8h"/>
+        <childnode refid="16504" relation="include">
+        </childnode>
+        <childnode refid="16505" relation="include">
+        </childnode>
+        <childnode refid="16506" relation="include">
+        </childnode>
+        <childnode refid="16484" relation="include">
+        </childnode>
+        <childnode refid="16478" relation="include">
+        </childnode>
+        <childnode refid="16507" relation="include">
+        </childnode>
+        <childnode refid="16476" relation="include">
+        </childnode>
+        <childnode refid="16481" relation="include">
+        </childnode>
+        <childnode refid="16508" relation="include">
+        </childnode>
+        <childnode refid="16509" relation="include">
+        </childnode>
+        <childnode refid="16499" relation="include">
+        </childnode>
+      </node>
+      <node id="16485">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="16475" relation="include">
+        </childnode>
+        <childnode refid="16486" relation="include">
+        </childnode>
+      </node>
+      <node id="16497">
+        <label>storage/Table.h</label>
+        <link refid="_table_8h"/>
+        <childnode refid="16476" relation="include">
+        </childnode>
+        <childnode refid="16473" relation="include">
+        </childnode>
+        <childnode refid="16478" relation="include">
+        </childnode>
+        <childnode refid="16474" relation="include">
+        </childnode>
+        <childnode refid="16498" relation="include">
+        </childnode>
+        <childnode refid="16480" relation="include">
+        </childnode>
+        <childnode refid="16492" relation="include">
+        </childnode>
+        <childnode refid="16499" relation="include">
+        </childnode>
+        <childnode refid="16502" relation="include">
+        </childnode>
+      </node>
+      <node id="16476">
+        <label>string</label>
+      </node>
+      <node id="16472">
+        <label>src/lib/storage/PointerCalculator.h</label>
+        <link refid="PointerCalculator.h"/>
+        <childnode refid="16473" relation="include">
+        </childnode>
+        <childnode refid="16474" relation="include">
+        </childnode>
+        <childnode refid="16479" relation="include">
+        </childnode>
+        <childnode refid="16480" relation="include">
+        </childnode>
+        <childnode refid="16496" relation="include">
+        </childnode>
+      </node>
+      <node id="16496">
+        <label>storage/MutableVerticalTable.h</label>
+        <link refid="_mutable_vertical_table_8h"/>
+        <childnode refid="16473" relation="include">
+        </childnode>
+        <childnode refid="16476" relation="include">
+        </childnode>
+        <childnode refid="16474" relation="include">
+        </childnode>
+        <childnode refid="16497" relation="include">
+        </childnode>
+        <childnode refid="16513" relation="include">
+        </childnode>
+        <childnode refid="16498" relation="include">
+        </childnode>
+        <childnode refid="16480" relation="include">
+        </childnode>
+      </node>
+      <node id="16500">
+        <label>storage/AbstractAttributeVector.h</label>
+        <link refid="_abstract_attribute_vector_8h"/>
+        <childnode refid="16501" relation="include">
+        </childnode>
+      </node>
+      <node id="16491">
+        <label>ostream</label>
+      </node>
+      <node id="16499">
+        <label>storage/BaseAttributeVector.h</label>
+        <link refid="_base_attribute_vector_8h"/>
+        <childnode refid="16478" relation="include">
+        </childnode>
+        <childnode refid="16481" relation="include">
+        </childnode>
+        <childnode refid="16500" relation="include">
+        </childnode>
+      </node>
+      <node id="16489">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="16473" relation="include">
+        </childnode>
+        <childnode refid="16476" relation="include">
+        </childnode>
+        <childnode refid="16481" relation="include">
+        </childnode>
+        <childnode refid="16490" relation="include">
+        </childnode>
+        <childnode refid="16491" relation="include">
+        </childnode>
+      </node>
+      <node id="16493">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="16494" relation="include">
+        </childnode>
+        <childnode refid="16495" relation="include">
+        </childnode>
+      </node>
+      <node id="16513">
+        <label>storage/TableFactory.h</label>
+        <link refid="_table_factory_8h"/>
+        <childnode refid="16478" relation="include">
+        </childnode>
+        <childnode refid="16474" relation="include">
+        </childnode>
+        <childnode refid="16480" relation="include">
+        </childnode>
+        <childnode refid="16497" relation="include">
+        </childnode>
+      </node>
+      <node id="16498">
+        <label>storage/ColumnMetadata.h</label>
+        <link refid="_column_metadata_8h"/>
+        <childnode refid="16489" relation="include">
+        </childnode>
+        <childnode refid="16476" relation="include">
+        </childnode>
+        <childnode refid="16481" relation="include">
+        </childnode>
+      </node>
+      <node id="16502">
+        <label>storage/AttributeVectorFactory.h</label>
+        <link refid="_attribute_vector_factory_8h"/>
+        <childnode refid="16478" relation="include">
+        </childnode>
+        <childnode refid="16499" relation="include">
+        </childnode>
+        <childnode refid="16503" relation="include">
+        </childnode>
+        <childnode refid="16511" relation="include">
+        </childnode>
+      </node>
+      <node id="16494">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="16473">
+        <label>vector</label>
+      </node>
+      <node id="16486">
+        <label>array</label>
+      </node>
+      <node id="16508">
+        <label>sstream</label>
+      </node>
+      <node id="16479">
+        <label>helper/SharedFactory.h</label>
+        <link refid="_shared_factory_8h"/>
+        <childnode refid="16478" relation="include">
+        </childnode>
+      </node>
+      <node id="16504">
+        <label>cerrno</label>
+      </node>
+      <node id="16510">
+        <label>iostream</label>
+      </node>
+      <node id="16501">
+        <label>cstddef</label>
+      </node>
+      <node id="16487">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="16507">
+        <label>mutex</label>
+      </node>
+      <node id="16492">
+        <label>storage/AbstractDictionary.h</label>
+        <link refid="_abstract_dictionary_8h"/>
+        <childnode refid="16473" relation="include">
+        </childnode>
+        <childnode refid="16476" relation="include">
+        </childnode>
+        <childnode refid="16478" relation="include">
+        </childnode>
+        <childnode refid="16489" relation="include">
+        </childnode>
+      </node>
+      <node id="16480">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="16477" relation="include">
+        </childnode>
+        <childnode refid="16478" relation="include">
+        </childnode>
+        <childnode refid="16481" relation="include">
+        </childnode>
+        <childnode refid="16473" relation="include">
+        </childnode>
+        <childnode refid="16476" relation="include">
+        </childnode>
+        <childnode refid="16474" relation="include">
+        </childnode>
+        <childnode refid="16482" relation="include">
+        </childnode>
+        <childnode refid="16485" relation="include">
+        </childnode>
+        <childnode refid="16487" relation="include">
+        </childnode>
+        <childnode refid="16488" relation="include">
+        </childnode>
+        <childnode refid="16489" relation="include">
+        </childnode>
+      </node>
+      <node id="16483">
+        <label>thread</label>
+      </node>
+      <node id="16474">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="16475" relation="include">
+        </childnode>
+        <childnode refid="16476" relation="include">
+        </childnode>
+        <childnode refid="16477" relation="include">
+        </childnode>
+        <childnode refid="16478" relation="include">
+        </childnode>
+        <childnode refid="16473" relation="include">
+        </childnode>
+      </node>
+      <node id="16509">
+        <label>memory/MallocStrategy.h</label>
+        <link refid="_malloc_strategy_8h"/>
+        <childnode refid="16510" relation="include">
+        </childnode>
+        <childnode refid="16475" relation="include">
+        </childnode>
+      </node>
+      <node id="16511">
+        <label>storage/BitCompressedVector.h</label>
+        <link refid="_bit_compressed_vector_8h"/>
+        <childnode refid="16512" relation="include">
+        </childnode>
+        <childnode refid="16506" relation="include">
+        </childnode>
+        <childnode refid="16475" relation="include">
+        </childnode>
+        <childnode refid="16505" relation="include">
+        </childnode>
+        <childnode refid="16507" relation="include">
+        </childnode>
+        <childnode refid="16476" relation="include">
+        </childnode>
+        <childnode refid="16481" relation="include">
+        </childnode>
+        <childnode refid="16509" relation="include">
+        </childnode>
+        <childnode refid="16499" relation="include">
+        </childnode>
+      </node>
+      <node id="16505">
+        <label>cstring</label>
+      </node>
+      <node id="16478">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16525">
+        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
+        <link refid="_hash_value_join_8cpp"/>
+      </node>
+      <node id="16554">
+        <label>src/lib/storage/storage_types_helper.h</label>
+        <link refid="storage__types__helper_8h"/>
+        <childnode refid="16555" relation="include">
+        </childnode>
+        <childnode refid="16556" relation="include">
+        </childnode>
+        <childnode refid="16557" relation="include">
+        </childnode>
+        <childnode refid="16558" relation="include">
+        </childnode>
+      </node>
+      <node id="16516">
+        <label>src/lib/access/CreateIndex.cpp</label>
+        <link refid="_create_index_8cpp"/>
+      </node>
+      <node id="16538">
+        <label>src/lib/access/ProjectionScan.cpp</label>
+        <link refid="lib_2access_2_projection_scan_8cpp"/>
+      </node>
+      <node id="16532">
+        <label>src/lib/access/IntersectPositions.cpp</label>
+        <link refid="_intersect_positions_8cpp"/>
+      </node>
+      <node id="16543">
+        <label>src/lib/access/radixjoin/RadixCluster.cpp</label>
+        <link refid="_radix_cluster_8cpp"/>
+      </node>
+      <node id="16523">
+        <label>src/bin/perf_regression/GroupByScan.cpp</label>
+        <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="16530">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
+      </node>
+      <node id="16546">
+        <label>src/lib/access/SimpleRawTableScan.cpp</label>
+        <link refid="_simple_raw_table_scan_8cpp"/>
+      </node>
+      <node id="16547">
+        <label>src/lib/access/SimpleTableScan.cpp</label>
+        <link refid="lib_2access_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="16531">
+        <label>src/lib/access/IndexScan.cpp</label>
+        <link refid="_index_scan_8cpp"/>
+      </node>
+      <node id="16542">
+        <label>src/lib/access/radixjoin/RadixCluster.h</label>
+        <link refid="_radix_cluster_8h"/>
+        <childnode refid="16543" relation="include">
+        </childnode>
+      </node>
+      <node id="16521">
+        <label>src/lib/access/HashValueJoin.hpp</label>
+        <link refid="_hash_value_join_8hpp"/>
+        <childnode refid="16522" relation="include">
+        </childnode>
+      </node>
+      <node id="16534">
+        <label>src/lib/access/MergeJoin.hpp</label>
+        <link refid="_merge_join_8hpp"/>
+        <childnode refid="16522" relation="include">
+        </childnode>
+      </node>
+      <node id="16544">
+        <label>src/lib/access/radixjoin/NestedLoopEquiJoin.cpp</label>
+        <link refid="_nested_loop_equi_join_8cpp"/>
+      </node>
+      <node id="16517">
+        <label>src/lib/access/Delete.cpp</label>
+        <link refid="_delete_8cpp"/>
+      </node>
+      <node id="16552">
+        <label>src/lib/access/UnionScan.cpp</label>
+        <link refid="lib_2access_2_union_scan_8cpp"/>
+      </node>
+      <node id="16520">
+        <label>src/lib/access/HashJoinProbe.cpp</label>
+        <link refid="_hash_join_probe_8cpp"/>
+      </node>
+      <node id="16514">
+        <label>src/lib/storage/PointerCalculator.h</label>
+        <link refid="PointerCalculator.h"/>
+        <childnode refid="16515" relation="include">
+        </childnode>
+        <childnode refid="16516" relation="include">
+        </childnode>
+        <childnode refid="16517" relation="include">
+        </childnode>
+        <childnode refid="16518" relation="include">
+        </childnode>
+        <childnode refid="16519" relation="include">
+        </childnode>
+        <childnode refid="16520" relation="include">
+        </childnode>
+        <childnode refid="16521" relation="include">
+        </childnode>
+        <childnode refid="16531" relation="include">
+        </childnode>
+        <childnode refid="16532" relation="include">
+        </childnode>
+        <childnode refid="16533" relation="include">
+        </childnode>
+        <childnode refid="16534" relation="include">
+        </childnode>
+        <childnode refid="16535" relation="include">
+        </childnode>
+        <childnode refid="16537" relation="include">
+        </childnode>
+        <childnode refid="16538" relation="include">
+        </childnode>
+        <childnode refid="16539" relation="include">
+        </childnode>
+        <childnode refid="16544" relation="include">
+        </childnode>
+        <childnode refid="16545" relation="include">
+        </childnode>
+        <childnode refid="16546" relation="include">
+        </childnode>
+        <childnode refid="16547" relation="include">
+        </childnode>
+        <childnode refid="16548" relation="include">
+        </childnode>
+        <childnode refid="16549" relation="include">
+        </childnode>
+        <childnode refid="16550" relation="include">
+        </childnode>
+        <childnode refid="16551" relation="include">
+        </childnode>
+        <childnode refid="16552" relation="include">
+        </childnode>
+        <childnode refid="16553" relation="include">
+        </childnode>
+        <childnode refid="16554" relation="include">
+        </childnode>
+        <childnode refid="16559" relation="include">
+        </childnode>
+      </node>
+      <node id="16519">
+        <label>src/lib/access/GroupByScan.cpp</label>
+        <link refid="lib_2access_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="16527">
+        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
+      </node>
+      <node id="16518">
+        <label>src/lib/access/Distinct.cpp</label>
+        <link refid="_distinct_8cpp"/>
+      </node>
+      <node id="16548">
+        <label>src/lib/access/SortScan.cpp</label>
+        <link refid="lib_2access_2_sort_scan_8cpp"/>
+      </node>
+      <node id="16533">
+        <label>src/lib/access/JoinScan.cpp</label>
+        <link refid="lib_2access_2_join_scan_8cpp"/>
+      </node>
+      <node id="16551">
+        <label>src/lib/access/UnionAll.cpp</label>
+        <link refid="_union_all_8cpp"/>
+      </node>
+      <node id="16558">
+        <label>src/lib/storage/storage_types_helper.cpp</label>
+        <link refid="storage__types__helper_8cpp"/>
+      </node>
+      <node id="16556">
+        <label>src/lib/storage/AbstractTable.cpp</label>
+        <link refid="_abstract_table_8cpp"/>
+      </node>
+      <node id="16557">
+        <label>src/lib/storage/GroupValue.cpp</label>
+        <link refid="_group_value_8cpp"/>
+      </node>
+      <node id="16539">
+        <label>src/lib/access/radixjoin/Histogram.h</label>
+        <link refid="_histogram_8h"/>
+        <childnode refid="16540" relation="include">
+        </childnode>
+        <childnode refid="16541" relation="include">
+        </childnode>
+        <childnode refid="16542" relation="include">
+        </childnode>
+      </node>
+      <node id="16528">
+        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
+        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="16537">
+        <label>src/lib/access/PosUpdateScan.cpp</label>
+        <link refid="_pos_update_scan_8cpp"/>
+      </node>
+      <node id="16529">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
+      </node>
+      <node id="16550">
+        <label>src/lib/access/tx/ValidatePositions.cpp</label>
+        <link refid="_validate_positions_8cpp"/>
+      </node>
+      <node id="16524">
+        <label>src/bin/perf_regression/HashJoin.cpp</label>
+        <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="16515">
+        <label>src/bin/perf_regression/tx_performance.cpp</label>
+        <link refid="tx__performance_8cpp"/>
+      </node>
+      <node id="16540">
+        <label>src/lib/access/radixjoin/Histogram.cpp</label>
+        <link refid="_histogram_8cpp"/>
+      </node>
+      <node id="16549">
+        <label>src/lib/access/TableScan.cpp</label>
+        <link refid="_table_scan_8cpp"/>
+      </node>
+      <node id="16526">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="16559">
+        <label>src/lib/storage.h</label>
+        <link refid="storage_8h"/>
+        <childnode refid="16523" relation="include">
+        </childnode>
+        <childnode refid="16524" relation="include">
+        </childnode>
+        <childnode refid="16525" relation="include">
+        </childnode>
+        <childnode refid="16526" relation="include">
+        </childnode>
+        <childnode refid="16527" relation="include">
+        </childnode>
+        <childnode refid="16528" relation="include">
+        </childnode>
+        <childnode refid="16529" relation="include">
+        </childnode>
+        <childnode refid="16530" relation="include">
+        </childnode>
+      </node>
+      <node id="16553">
+        <label>src/lib/storage/PointerCalculator.cpp</label>
+        <link refid="_pointer_calculator_8cpp"/>
+      </node>
+      <node id="16555">
+        <label>src/lib/io/TableDump.cpp</label>
+        <link refid="_table_dump_8cpp"/>
+      </node>
+      <node id="16545">
+        <label>src/lib/access/ScriptOperation.cpp</label>
+        <link refid="_script_operation_8cpp"/>
+      </node>
+      <node id="16522">
+        <label>src/lib/access.h</label>
+        <link refid="access_8h"/>
+        <childnode refid="16523" relation="include">
+        </childnode>
+        <childnode refid="16524" relation="include">
+        </childnode>
+        <childnode refid="16525" relation="include">
+        </childnode>
+        <childnode refid="16526" relation="include">
+        </childnode>
+        <childnode refid="16527" relation="include">
+        </childnode>
+        <childnode refid="16528" relation="include">
+        </childnode>
+        <childnode refid="16529" relation="include">
+        </childnode>
+        <childnode refid="16530" relation="include">
+        </childnode>
+      </node>
+      <node id="16541">
+        <label>src/lib/access/radixjoin/PrefixSum.cpp</label>
+        <link refid="_prefix_sum_8cpp"/>
+      </node>
+      <node id="16535">
+        <label>src/lib/access/MultiplyRefField.h</label>
+        <link refid="_multiply_ref_field_8h"/>
+        <childnode refid="16536" relation="include">
+        </childnode>
+      </node>
+      <node id="16536">
+        <label>src/lib/access/MultiplyRefField.cpp</label>
+        <link refid="_multiply_ref_field_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_pointer_calculator" prot="public">PointerCalculator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_STORAGE_POINTERCALCULATOR_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_STORAGE_POINTERCALCULATOR_H_</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">helper/types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_shared_factory_8h" kindref="compound">helper/SharedFactory.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_table_8h" kindref="compound">storage/AbstractTable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mutable_vertical_table_8h" kindref="compound">storage/MutableVerticalTable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_pointer_calculator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_table" kindref="compound">AbstractTable</ref>,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_shared_factory" kindref="compound">SharedFactory</ref>&lt;PointerCalculator&gt;<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><ref refid="class_pointer_calculator_1a021e0ab6ecef3f167c53fa16f26b5028" kindref="member">PointerCalculator</ref>(<ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">hyrise::storage::c_atable_ptr_t</ref><sp/>t,<sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref><sp/>*pos<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/><ref refid="storage__types_8h_1a36fbc31395a53b7ece189846e4d3253c" kindref="member">field_list_t</ref><sp/>*f<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="class_pointer_calculator_1a021e0ab6ecef3f167c53fa16f26b5028" kindref="member">PointerCalculator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1a582d20194dfa2ff7dbf98455bceed545" kindref="member">~PointerCalculator</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1a815d82d98a040d150c7040cfc07936de" kindref="member">setPositions</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref><sp/>pos);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1a41061e503e0c43feb1425a47904e5387" kindref="member">setFields</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1a36fbc31395a53b7ece189846e4d3253c" kindref="member">field_list_t</ref><sp/>f);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;PointerCalculator&gt;<sp/><ref refid="class_pointer_calculator_1ae09ea05b16fc99093a4c03a69442f9c9" kindref="member">intersect</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;const<sp/>PointerCalculator&gt;&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;PointerCalculator&gt;<sp/><ref refid="class_pointer_calculator_1aa297910421ea0308cd6c355164cf1f14" kindref="member">unite</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;const<sp/>PointerCalculator&gt;&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;PointerCalculator&gt;<sp/><ref refid="class_pointer_calculator_1a3b27cda2c208fbed0c7556f1f8ad8651" kindref="member">concatenate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;const<sp/>PointerCalculator&gt;&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_pointer_calculator_1a117a79caba738a178fdf65e43d8e93a5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;std::shared_ptr&lt;const<sp/>PointerCalculator&gt;<sp/>&gt;<sp/><ref refid="class_pointer_calculator_1a117a79caba738a178fdf65e43d8e93a5" kindref="member">pc_vector</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;const<sp/>PointerCalculator&gt;<sp/><ref refid="class_pointer_calculator_1ab6ea533aa9ab978a180e1140cd029c43" kindref="member">unite_many</ref>(pc_vector::const_iterator<sp/>it,<sp/>pc_vector::const_iterator<sp/>it_end);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;PointerCalculator&gt;<sp/><ref refid="class_pointer_calculator_1a7cfb4ee455555b900213603d71980d6d" kindref="member">concatenate_many</ref>(pc_vector::const_iterator<sp/>it,<sp/>pc_vector::const_iterator<sp/>it_end);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref><sp/>*<ref refid="class_pointer_calculator_1a6f57168d74f28df50b332b47917457ca" kindref="member">getPositions</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref><sp/><ref refid="class_pointer_calculator_1a1d3eab6e902f044fc387c43781b91862" kindref="member">getActualTablePositions</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1a79728be6c875bba8731be2e42253571a" kindref="member">getTableRowForRow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1abca668c527de684e3d4df071934d1da9" kindref="member">getTableColumnForColumn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">hyrise::storage::c_atable_ptr_t</ref><sp/><ref refid="class_pointer_calculator_1aeebfa9bef9ec2989eefa2030abbb4fe3" kindref="member">getTable</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">hyrise::storage::c_atable_ptr_t</ref><sp/><ref refid="class_pointer_calculator_1acbea3ac67f01befefecab60dd8a53bcd" kindref="member">getActualTable</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1a9ec8c22d62384c55a4aa27770d98137a" kindref="member">validate</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">hyrise::tx::transaction_id_t</ref><sp/>tid,<sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">hyrise::tx::transaction_id_t</ref><sp/>cid);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">remove</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref>&amp;<sp/>pl);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>AbstractTable<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref><sp/><ref refid="class_pointer_calculator_1a9682236645d573e4a55fa6a25bb7b76c" kindref="member">copy</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref><sp/><ref refid="class_pointer_calculator_1a60d1d6c937774a1ea6915636b8d74934" kindref="member">copy_structure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1a36fbc31395a53b7ece189846e4d3253c" kindref="member">field_list_t</ref><sp/>*<ref refid="class_pointer_calculator_1a76ce6e192192101c99ec79374eaf661c" kindref="member">fields</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reuse_dict<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>initial_size<sp/>=<sp/>0,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>with_containers<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>compressed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref><sp/>*<ref refid="class_pointer_calculator_1a8b02aaae5e63b1b27d518c57a308ea7b" kindref="member">metadataAt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column_index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row_index<sp/>=<sp/>0,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref><sp/>table_id<sp/>=<sp/>0)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref>&amp;<sp/><ref refid="class_pointer_calculator_1a562260e4503193f2052f6deefb0ca122" kindref="member">dictionaryAt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref><sp/>table_id<sp/>=<sp/>0)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref>&amp;<sp/><ref refid="class_pointer_calculator_1afec8ff877a34cb7d7dd84dcdba2c6053" kindref="member">dictionaryByTableId</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref><sp/>table_id)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1acd845d45bae50032a1dff6209f15099d" kindref="member">setDictionaryAt</ref>(<ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref><sp/>dict,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref><sp/>table_id<sp/>=<sp/>0)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1ac7daa76130599340823242d515b4929c" kindref="member">size</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1a7701458e19eff9c9be5d510974be6905" kindref="member">columnCount</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><ref refid="class_value_id" kindref="compound">ValueId</ref><sp/><ref refid="class_pointer_calculator_1a8d277cfce49eb5655569ce1d131984ef" kindref="member">getValueId</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1a232f2adbbe75c832c399b7fad631db3b" kindref="member">partitionCount</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1a105b02332c4d1468e278249c4652732c" kindref="member">partitionWidth</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>slice)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1ac3e776173bb02f4b6bdfefaf91f952a4" kindref="member">print</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>limit<sp/>=<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)<sp/>-1)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65" refid="class_pointer_calculator_1a55007cc7d49881dad15026eb398112a6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref><sp/><ref refid="class_pointer_calculator_1a55007cc7d49881dad15026eb398112a6" kindref="member">subtableCount</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;<sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1aa1c50ecf298b9d1843de7c8e4e6e4939" kindref="member">debugStructure</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>level=0)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1aafe8c79a4a56ff66a813fb6a817dd47b" kindref="member">updateFieldMapping</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70" refid="class_pointer_calculator_1a1f408af8ac5043755573b931699876b0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">hyrise::storage::c_atable_ptr_t</ref><sp/><ref refid="class_pointer_calculator_1a1f408af8ac5043755573b931699876b0" kindref="member">table</ref>;</highlight></codeline>
+<codeline lineno="71" refid="class_pointer_calculator_1aeefc9c692462aaa827cebde4d89c20b6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref><sp/>*<ref refid="class_pointer_calculator_1aeefc9c692462aaa827cebde4d89c20b6" kindref="member">pos_list</ref>;</highlight></codeline>
+<codeline lineno="72" refid="class_pointer_calculator_1a76ce6e192192101c99ec79374eaf661c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="storage__types_8h_1a36fbc31395a53b7ece189846e4d3253c" kindref="member">field_list_t</ref><sp/>*<ref refid="class_pointer_calculator_1a76ce6e192192101c99ec79374eaf661c" kindref="member">fields</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_pointer_calculator_1ac7f1e2be36bca6fc5119fa3b46231401" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;size_t&gt;<sp/><ref refid="class_pointer_calculator_1ac7f1e2be36bca6fc5119fa3b46231401" kindref="member">slice_for_slice</ref>;</highlight></codeline>
+<codeline lineno="75" refid="class_pointer_calculator_1ab640d0f4071a2d93b6d2936b53483a9f" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;size_t&gt;<sp/><ref refid="class_pointer_calculator_1ab640d0f4071a2d93b6d2936b53483a9f" kindref="member">offset_in_slice</ref>;</highlight></codeline>
+<codeline lineno="76" refid="class_pointer_calculator_1aa095ee7598447699d7c34eaa1c7e4a8f" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;size_t&gt;<sp/><ref refid="class_pointer_calculator_1aa095ee7598447699d7c34eaa1c7e4a8f" kindref="member">width_for_slice</ref>;</highlight></codeline>
+<codeline lineno="77" refid="class_pointer_calculator_1af973df64326820f2f123fd9b1fc357be" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator_1af973df64326820f2f123fd9b1fc357be" kindref="member">slice_count</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_STORAGE_POINTERCALCULATOR_H_</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h"/>
+  </compounddef>
+</doxygen>

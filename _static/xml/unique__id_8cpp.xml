@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="unique__id_8cpp" kind="file">
+    <compoundname>unique_id.cpp</compoundname>
+    <includes refid="unique__id_8h" local="yes">unique_id.h</includes>
+    <includes local="yes">boost/uuid/uuid.hpp</includes>
+    <includes local="yes">boost/uuid/uuid_io.hpp</includes>
+    <includes local="yes">boost/uuid/uuid_generators.hpp</includes>
+    <incdepgraph>
+      <node id="11338">
+        <label>cstdint</label>
+      </node>
+      <node id="11341">
+        <label>boost/uuid/uuid_io.hpp</label>
+      </node>
+      <node id="11337">
+        <label>unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="11338" relation="include">
+        </childnode>
+        <childnode refid="11339" relation="include">
+        </childnode>
+      </node>
+      <node id="11336">
+        <label>src/lib/helper/unique_id.cpp</label>
+        <link refid="unique_id.cpp"/>
+        <childnode refid="11337" relation="include">
+        </childnode>
+        <childnode refid="11340" relation="include">
+        </childnode>
+        <childnode refid="11341" relation="include">
+        </childnode>
+        <childnode refid="11342" relation="include">
+        </childnode>
+      </node>
+      <node id="11342">
+        <label>boost/uuid/uuid_generators.hpp</label>
+      </node>
+      <node id="11339">
+        <label>array</label>
+      </node>
+      <node id="11340">
+        <label>boost/uuid/uuid.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="unique__id_8h" kindref="compound">unique_id.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/uuid/uuid.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/uuid/uuid_io.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/uuid/uuid_generators.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="structunique__id_1a00c57579f691c1b24dd238740b40bf9e" refkind="member"><highlight class="normal"><ref refid="structunique__id_1a5cb3b6c3dc66c693e38146e63ddaa7e3" kindref="member">unique_id::unique_id</ref>(<ref refid="structunique__id_1a0ec25e65b6610478fd7084327a2a7611" kindref="member">type</ref><sp/>val)<sp/>:<sp/>value(val)<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structunique__id_1a0ec25e65b6610478fd7084327a2a7611" kindref="member">unique_id::type</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(boost::uuids::uuid),</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Sizes<sp/>need<sp/>to<sp/>match<sp/>for<sp/>this<sp/>wrapper<sp/>to<sp/>work&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="structunique__id_1a0653330ce13faeb487e05eddcc3fc574" refkind="member"><highlight class="normal"><ref refid="structunique__id" kindref="compound">unique_id</ref><sp/><ref refid="structunique__id_1a0653330ce13faeb487e05eddcc3fc574" kindref="member">unique_id::create</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>uuid<sp/>=<sp/>boost::uuids::random_generator()();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><ref refid="structunique__id_1a0ec25e65b6610478fd7084327a2a7611" kindref="member">type</ref><sp/><ref refid="structunique__id_1a01c87503ac38800bacd81fbaec646937" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>std::copy(uuid.begin(),<sp/>uuid.end(),<sp/>value.begin());</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structunique__id_1a5cb3b6c3dc66c693e38146e63ddaa7e3" kindref="member">unique_id</ref>(value);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="namespacestd" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std<sp/>{</highlight></codeline>
+<codeline lineno="20" refid="namespacestd_1aa2f6c380fda0f127ac99017940bef1e9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacestd_1aa2f6c380fda0f127ac99017940bef1e9" kindref="member">to_string</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structunique__id" kindref="compound">unique_id</ref>&amp;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>as_uuid<sp/>=<sp/>*(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">boost::uuids::uuid*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">.value.data()));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacestd_1aa2f6c380fda0f127ac99017940bef1e9" kindref="member">boost::uuids::to_string</ref>(as_uuid);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/unique_id.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,159 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Code reviews &mdash; HYRISE latest documentation</title>
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/hyrise_template.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/hyrise.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/page-1-attributes.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/page-1.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/breathe.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'latest',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/hyrise.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <link rel="top" title="HYRISE latest documentation" href="../index.html" />
+    <link rel="up" title="Developing with HYRISE" href="../developing.html" />
+    <link rel="next" title="Continuous Integration" href="continuous_integration.html" />
+    <link rel="prev" title="File organization" href="file_organization.html" /> 
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="inner-wrapper">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+      <div class="col-md-3 hyrisesidebar">
+            <p class="logo image">
+              <a href="../index.html">
+                <img class="logo" src="../_static/hyrise.png" alt="Logo"/>
+              </a>
+              <p>
+                ...is a new relational storage engine for main memory database systems. It is built on the premise that enterprise application workloads can benefit from a dedicated main-memory storage engine.
+              </p>
+            </p>
+  
+  <div id="tocWrapper" style="margin-bottom: 20px;">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html">Implementation Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../query_execution.html">HYRISE Query Execution</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../developing.html">Developing with HYRISE</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="git.html">Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build_environment.html">Setup Build Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="building.html">Building the project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="code_style.html">Code style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_organization.html">File organization</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Code reviews</a></li>
+<li class="toctree-l3"><a class="reference internal" href="continuous_integration.html">Continuous Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing_plan_operations.html">Writing plan operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing_performance_regressions.html">Writing Performance Regressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling plan operations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html">HYRISE &amp; Development FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../proposals.html">Proposals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doxygen.html">Doxygen Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+</ul>
+
+  </div>
+
+  
+  <!-- possible but links have to be removed, too..problem: closing tags-->
+  
+  <strong>Previous topic: </strong><a href="file_organization.html" title="previous chapter">File organization</a><br />
+  <strong>Next topic: </strong><a href="continuous_integration.html" title="next chapter">Continuous Integration</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/developing/code_reviews.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <p class="searchtip" style="font-size: 90%">
+      Enter search terms or a module, class or function name.
+    </p>
+    <form class="search form-inline" action="../search.html" method="get" role="form">
+      <div class="form-group">
+        <input type="text" name="q" class="form-control"/>
+      </div>
+      <input type="submit" value="Go" class="btn btn-default"/>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+      </div>
+                        <div class="main col-md-9">
+<div class="row-fluid">
+  <ul class="nav nav-pills pull-left">
+    <li>
+        <a href="../index.html">Home</a>
+    </li>
+    <li>
+      <a href="../documentation.html">Documentation</a>
+    </li>
+    <li>
+      <a href="../people.html">People</a>
+    </li>
+    <li>
+      <a href="../projects.html">Projects</a>
+    </li>
+    <li>
+      <a href="../publications.html">Publications</a>
+    </li>
+  </ul>
+
+    
+    
+</div>
+<div class="clearfix"></div>
+                            <div class="content row-fluid">
+                              
+  <div class="section" id="code-reviews">
+<h1>Code reviews<a class="headerlink" href="#code-reviews" title="Permalink to this headline">¶</a></h1>
+<p>To ensure high contribution quality, important commits will be subject
+to peer code reviews by the stakeholders of the project and other
+contributors.</p>
+</div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- container -->
+        </div> <!-- inner-wrapper -->
+    </div> <!-- wrapper -->
+    <div class="footer">
+        &copy; Copyright 2010-2013, Martin Grund et al.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

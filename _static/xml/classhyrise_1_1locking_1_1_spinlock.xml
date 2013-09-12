@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classhyrise_1_1locking_1_1_spinlock" kind="class" prot="public">
+    <compoundname>hyrise::locking::Spinlock</compoundname>
+    <includes refid="locking_8h" local="no">locking.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classhyrise_1_1locking_1_1_spinlock_1afd5aed4224afdf08520201fc90f8bd93" prot="private" static="no">
+        <name>LockState</name>
+        <enumvalue id="classhyrise_1_1locking_1_1_spinlock_1afd5aed4224afdf08520201fc90f8bd93ab2cf85b7fb3155aeafb97dba0fc17af8" prot="private">
+          <name>Locked</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhyrise_1_1locking_1_1_spinlock_1afd5aed4224afdf08520201fc90f8bd93aaf4eebabda47baf2cef31a55f2a730f4" prot="private">
+          <name>Unlocked</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" line="11" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" bodystart="11" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhyrise_1_1locking_1_1_spinlock_1ae492f60b13bb9d58d87e43e9bc885581" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; <ref refid="classhyrise_1_1locking_1_1_spinlock_1afd5aed4224afdf08520201fc90f8bd93" kindref="member">LockState</ref> &gt;</type>
+        <definition>std::atomic&lt;LockState&gt; hyrise::locking::Spinlock::_state</definition>
+        <argsstring></argsstring>
+        <name>_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" line="12" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhyrise_1_1locking_1_1_spinlock_1acbc61f5c010f38329c5944b3759144c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::locking::Spinlock::Spinlock</definition>
+        <argsstring>()</argsstring>
+        <name>Spinlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" line="15" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1locking_1_1_spinlock_1a30ae90e78cf80d4727517f9a1d08876f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::locking::Spinlock::lock</definition>
+        <argsstring>()</argsstring>
+        <name>lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" line="17" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1locking_1_1_spinlock_1a5b751cba0e9d0c57f33a4eb698f3de3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hyrise::locking::Spinlock::is_locked</definition>
+        <argsstring>()</argsstring>
+        <name>is_locked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" line="23" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1locking_1_1_spinlock_1a853d0e65a9c26ecd9367ccf349679f41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hyrise::locking::Spinlock::try_lock</definition>
+        <argsstring>()</argsstring>
+        <name>try_lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" line="27" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1locking_1_1_spinlock_1a59ddaf0178ef88bb85c04730b4a62b70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::locking::Spinlock::unlock</definition>
+        <argsstring>()</argsstring>
+        <name>unlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" line="33" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" bodystart="33" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3479">
+        <label>hyrise::locking::Spinlock</label>
+        <link refid="classhyrise_1_1locking_1_1_spinlock"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" line="9" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/locking.h" bodystart="9" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classhyrise_1_1locking_1_1_spinlock_1ae492f60b13bb9d58d87e43e9bc885581" prot="private" virt="non-virtual"><scope>hyrise::locking::Spinlock</scope><name>_state</name></member>
+      <member refid="classhyrise_1_1locking_1_1_spinlock_1a5b751cba0e9d0c57f33a4eb698f3de3f" prot="public" virt="non-virtual"><scope>hyrise::locking::Spinlock</scope><name>is_locked</name></member>
+      <member refid="classhyrise_1_1locking_1_1_spinlock_1a30ae90e78cf80d4727517f9a1d08876f" prot="public" virt="non-virtual"><scope>hyrise::locking::Spinlock</scope><name>lock</name></member>
+      <member refid="classhyrise_1_1locking_1_1_spinlock_1afd5aed4224afdf08520201fc90f8bd93ab2cf85b7fb3155aeafb97dba0fc17af8" prot="private" virt="non-virtual"><scope>hyrise::locking::Spinlock</scope><name>Locked</name></member>
+      <member refid="classhyrise_1_1locking_1_1_spinlock_1afd5aed4224afdf08520201fc90f8bd93" prot="private" virt="non-virtual"><scope>hyrise::locking::Spinlock</scope><name>LockState</name></member>
+      <member refid="classhyrise_1_1locking_1_1_spinlock_1acbc61f5c010f38329c5944b3759144c1" prot="public" virt="non-virtual"><scope>hyrise::locking::Spinlock</scope><name>Spinlock</name></member>
+      <member refid="classhyrise_1_1locking_1_1_spinlock_1a853d0e65a9c26ecd9367ccf349679f41" prot="public" virt="non-virtual"><scope>hyrise::locking::Spinlock</scope><name>try_lock</name></member>
+      <member refid="classhyrise_1_1locking_1_1_spinlock_1a59ddaf0178ef88bb85c04730b4a62b70" prot="public" virt="non-virtual"><scope>hyrise::locking::Spinlock</scope><name>unlock</name></member>
+      <member refid="classhyrise_1_1locking_1_1_spinlock_1afd5aed4224afdf08520201fc90f8bd93aaf4eebabda47baf2cef31a55f2a730f4" prot="private" virt="non-virtual"><scope>hyrise::locking::Spinlock</scope><name>Unlocked</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_abstract_core_bound_queue_8cpp" kind="file">
+    <compoundname>AbstractCoreBoundQueue.cpp</compoundname>
+    <includes refid="_abstract_core_bound_queue_8h" local="yes">AbstractCoreBoundQueue.h</includes>
+    <includes local="no">pthread.h</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">errno.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="_hwloc_helper_8h" local="no">helper/HwlocHelper.h</includes>
+    <incdepgraph>
+      <node id="18432">
+        <label>atomic</label>
+      </node>
+      <node id="18426">
+        <label>queue</label>
+      </node>
+      <node id="18435">
+        <label>errno.h</label>
+      </node>
+      <node id="18422">
+        <label>taskscheduler/AbstractTaskQueue.h</label>
+        <link refid="_abstract_task_queue_8h"/>
+        <childnode refid="18423" relation="include">
+        </childnode>
+        <childnode refid="18424" relation="include">
+        </childnode>
+        <childnode refid="18425" relation="include">
+        </childnode>
+        <childnode refid="18426" relation="include">
+        </childnode>
+        <childnode refid="18427" relation="include">
+        </childnode>
+        <childnode refid="18428" relation="include">
+        </childnode>
+        <childnode refid="18429" relation="include">
+        </childnode>
+      </node>
+      <node id="18431">
+        <label>string</label>
+      </node>
+      <node id="18439">
+        <label>hwloc.h</label>
+      </node>
+      <node id="18420">
+        <label>src/lib/taskscheduler/AbstractCoreBoundQueue.cpp</label>
+        <link refid="AbstractCoreBoundQueue.cpp"/>
+        <childnode refid="18421" relation="include">
+        </childnode>
+        <childnode refid="18433" relation="include">
+        </childnode>
+        <childnode refid="18434" relation="include">
+        </childnode>
+        <childnode refid="18435" relation="include">
+        </childnode>
+        <childnode refid="18436" relation="include">
+        </childnode>
+        <childnode refid="18437" relation="include">
+        </childnode>
+        <childnode refid="18438" relation="include">
+        </childnode>
+      </node>
+      <node id="18427">
+        <label>condition_variable</label>
+      </node>
+      <node id="18433">
+        <label>pthread.h</label>
+      </node>
+      <node id="18436">
+        <label>string.h</label>
+      </node>
+      <node id="18430">
+        <label>vector</label>
+      </node>
+      <node id="18421">
+        <label>AbstractCoreBoundQueue.h</label>
+        <link refid="_abstract_core_bound_queue_8h"/>
+        <childnode refid="18422" relation="include">
+        </childnode>
+        <childnode refid="18432" relation="include">
+        </childnode>
+      </node>
+      <node id="18434">
+        <label>cstdlib</label>
+      </node>
+      <node id="18437">
+        <label>iostream</label>
+      </node>
+      <node id="18424">
+        <label>mutex</label>
+      </node>
+      <node id="18425">
+        <label>thread</label>
+      </node>
+      <node id="18438">
+        <label>helper/HwlocHelper.h</label>
+        <link refid="_hwloc_helper_8h"/>
+        <childnode refid="18439" relation="include">
+        </childnode>
+        <childnode refid="18430" relation="include">
+        </childnode>
+      </node>
+      <node id="18428">
+        <label>log4cxx/logger.h</label>
+      </node>
+      <node id="18423">
+        <label>memory</label>
+      </node>
+      <node id="18429">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="18430" relation="include">
+        </childnode>
+        <childnode refid="18424" relation="include">
+        </childnode>
+        <childnode refid="18423" relation="include">
+        </childnode>
+        <childnode refid="18427" relation="include">
+        </childnode>
+        <childnode refid="18431" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>AbstractCoreBoundQueue.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Apr<sp/>4,<sp/>2013</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>jwust</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_core_bound_queue_8h" kindref="compound">AbstractCoreBoundQueue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_abstract_core_bound_queue_8h" kindref="compound">taskscheduler/AbstractCoreBoundQueue.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_hwloc_helper_8h" kindref="compound">helper/HwlocHelper.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">log4cxx::LoggerPtr<sp/><ref refid="class_abstract_core_bound_queue_1aaa808d78eed24b10236611a12baa90c6" kindref="member">AbstractCoreBoundQueue::logger</ref>(log4cxx::Logger::getLogger(</highlight><highlight class="stringliteral">&quot;taskscheduler.AbstractCoreBoundQueue&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_abstract_core_bound_queue_1a2aac4a0e43692ea2810e790d405adde7" refkind="member"><highlight class="normal"><ref refid="class_abstract_core_bound_queue_1a2aac4a0e43692ea2810e790d405adde7" kindref="member">AbstractCoreBoundQueue::AbstractCoreBoundQueue</ref>():<sp/>_status(RUN){</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>constructor<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_abstract_core_bound_queue_1aa6dfd5d2c2bd4bd1b4bb8415f6b1c4fb" refkind="member"><highlight class="normal"><ref refid="class_abstract_core_bound_queue_1aa6dfd5d2c2bd4bd1b4bb8415f6b1c4fb" kindref="member">AbstractCoreBoundQueue::~AbstractCoreBoundQueue</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>destructor<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_abstract_core_bound_queue_1a81f5bc3b9ea7aedc2706a9c072096659" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queue_1a81f5bc3b9ea7aedc2706a9c072096659" kindref="member">AbstractCoreBoundQueue::join</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="class_abstract_core_bound_queue_1ae3052e927bc180940af268739d3cd156" kindref="member">_status</ref><sp/>=<sp/><ref refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447adf73f3cfd7d9d951bad5386fb341026e" kindref="member">RUN_UNTIL_DONE</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="class_abstract_core_bound_queue_1aef36fd9aa88f29f500516395d3160e36" kindref="member">_condition</ref>.notify_one();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="class_abstract_core_bound_queue_1a85ec39df5b0715322bd2377d131f61c2" kindref="member">_thread</ref>-&gt;join();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_abstract_core_bound_queue_1a33d99e5749f26892bb2fc917adc52eef" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queue_1a33d99e5749f26892bb2fc917adc52eef" kindref="member">AbstractCoreBoundQueue::launchThread</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>core)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//get<sp/>the<sp/>number<sp/>of<sp/>cores<sp/>on<sp/>system</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NUM_PROCS<sp/>=<sp/><ref refid="_hwloc_helper_8cpp_1a5852d7c54d41ff6c71f33e4b89a5f059" kindref="member">getNumberOfCoresOnSystem</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(core<sp/>&lt;<sp/>NUM_PROCS)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_abstract_core_bound_queue_1a85ec39df5b0715322bd2377d131f61c2" kindref="member">_thread</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::thread(&amp;<ref refid="class_abstract_task_queue_1aecd09a5005f34494694c7c40df1bfd40" kindref="member">AbstractTaskQueue::executeTask</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>hwloc_cpuset_t<sp/>cpuset;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>hwloc_obj_t<sp/>obj;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>hwloc_topology_t<sp/>topology<sp/>=<sp/><ref refid="_hwloc_helper_8cpp_1ad12145e7aa1fc25a978b719f08b23bb9" kindref="member">getHWTopology</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>obj<sp/>=<sp/>hwloc_get_obj_by_type(topology,<sp/>HWLOC_OBJ_CORE,<sp/>core);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>bitmap<sp/>to<sp/>modify</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>cpuset<sp/>=<sp/>hwloc_bitmap_dup(obj-&gt;cpuset);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>remove<sp/>hyperthreads</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>hwloc_bitmap_singlify(cpuset);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bind</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hwloc_set_thread_cpubind(topology,<sp/><ref refid="class_abstract_core_bound_queue_1a85ec39df5b0715322bd2377d131f61c2" kindref="member">_thread</ref>-&gt;native_handle(),<sp/>cpuset,<sp/>HWLOC_CPUBIND_STRICT<sp/>|<sp/>HWLOC_CPUBIND_NOMEMBIND))<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error<sp/>=<sp/>errno;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>hwloc_bitmap_asprintf(&amp;str,<sp/>obj-&gt;cpuset);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Couldn&apos;t<sp/>bind<sp/>to<sp/>cpuset<sp/>%s:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>str,<sp/>strerror(error));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Continuing<sp/>as<sp/>normal,<sp/>however,<sp/>no<sp/>guarantees\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//throw<sp/>std::runtime_error(strerror(error));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(hwloc_set_membind<sp/>(topology,<sp/>cpuset,<sp/><sp/>HWLOC_MEMBIND_FIRSTTOUCH<sp/>,<sp/>HWLOC_MEMBIND_THREAD<sp/>)){</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error<sp/>=<sp/>errno;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>hwloc_bitmap_asprintf(&amp;str,<sp/>obj-&gt;cpuset);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Couldn&apos;t<sp/>bind<sp/>to<sp/>memory<sp/>%s:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>str,<sp/>strerror(error));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Continuing<sp/>as<sp/>normal,<sp/>however,<sp/>no<sp/>guarantees\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//throw<sp/>std::runtime_error(strerror(error));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>hwloc_bitmap_free(cpuset);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>case<sp/>should<sp/>never<sp/>happen,<sp/>as<sp/>TaskQueue<sp/>is<sp/>only<sp/>initialized<sp/>from<sp/>SimpleTaskScheduler,<sp/>which<sp/>captures<sp/>this<sp/>case</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;CPU<sp/>to<sp/>run<sp/>thread<sp/>on<sp/>is<sp/>larger<sp/>than<sp/>number<sp/>of<sp/>total<sp/>cores;<sp/>seems<sp/>that<sp/>TaskQueue<sp/>was<sp/>initialized<sp/>outside<sp/>of<sp/>SimpleTaskScheduler,<sp/>which<sp/>should<sp/>not<sp/>happen&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueue.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,898 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_bit_compressed_vector_8h" kind="file">
+    <compoundname>BitCompressedVector.h</compoundname>
+    <includes local="no">cassert</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">string</includes>
+    <includes local="no">stdexcept</includes>
+    <includes refid="_malloc_strategy_8h" local="yes">memory/MallocStrategy.h</includes>
+    <includes refid="_base_attribute_vector_8h" local="yes">storage/BaseAttributeVector.h</includes>
+    <includedby refid="_attribute_vector_factory_8h" local="no">src/lib/storage/AttributeVectorFactory.h</includedby>
+    <incdepgraph>
+      <node id="15223">
+        <label>cstdint</label>
+      </node>
+      <node id="15222">
+        <label>cmath</label>
+      </node>
+      <node id="15221">
+        <label>cassert</label>
+      </node>
+      <node id="15227">
+        <label>stdexcept</label>
+      </node>
+      <node id="15226">
+        <label>string</label>
+      </node>
+      <node id="15232">
+        <label>storage/AbstractAttributeVector.h</label>
+        <link refid="_abstract_attribute_vector_8h"/>
+        <childnode refid="15233" relation="include">
+        </childnode>
+      </node>
+      <node id="15230">
+        <label>storage/BaseAttributeVector.h</label>
+        <link refid="_base_attribute_vector_8h"/>
+        <childnode refid="15231" relation="include">
+        </childnode>
+        <childnode refid="15227" relation="include">
+        </childnode>
+        <childnode refid="15232" relation="include">
+        </childnode>
+      </node>
+      <node id="15229">
+        <label>iostream</label>
+      </node>
+      <node id="15233">
+        <label>cstddef</label>
+      </node>
+      <node id="15225">
+        <label>mutex</label>
+      </node>
+      <node id="15228">
+        <label>memory/MallocStrategy.h</label>
+        <link refid="_malloc_strategy_8h"/>
+        <childnode refid="15229" relation="include">
+        </childnode>
+        <childnode refid="15223" relation="include">
+        </childnode>
+      </node>
+      <node id="15220">
+        <label>src/lib/storage/BitCompressedVector.h</label>
+        <link refid="BitCompressedVector.h"/>
+        <childnode refid="15221" relation="include">
+        </childnode>
+        <childnode refid="15222" relation="include">
+        </childnode>
+        <childnode refid="15223" relation="include">
+        </childnode>
+        <childnode refid="15224" relation="include">
+        </childnode>
+        <childnode refid="15225" relation="include">
+        </childnode>
+        <childnode refid="15226" relation="include">
+        </childnode>
+        <childnode refid="15227" relation="include">
+        </childnode>
+        <childnode refid="15228" relation="include">
+        </childnode>
+        <childnode refid="15230" relation="include">
+        </childnode>
+      </node>
+      <node id="15224">
+        <label>cstring</label>
+      </node>
+      <node id="15231">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="15250">
+        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
+        <link refid="_hash_value_join_8cpp"/>
+      </node>
+      <node id="15286">
+        <label>src/lib/storage/storage_types_helper.h</label>
+        <link refid="storage__types__helper_8h"/>
+        <childnode refid="15287" relation="include">
+        </childnode>
+        <childnode refid="15243" relation="include">
+        </childnode>
+        <childnode refid="15244" relation="include">
+        </childnode>
+        <childnode refid="15288" relation="include">
+        </childnode>
+      </node>
+      <node id="15296">
+        <label>src/lib/access/storage/JsonTable.cpp</label>
+        <link refid="_json_table_8cpp"/>
+      </node>
+      <node id="15303">
+        <label>src/lib/storage/Store.cpp</label>
+        <link refid="_store_8cpp"/>
+      </node>
+      <node id="15266">
+        <label>src/lib/access/CreateIndex.cpp</label>
+        <link refid="_create_index_8cpp"/>
+      </node>
+      <node id="15276">
+        <label>src/lib/access/ProjectionScan.cpp</label>
+        <link refid="lib_2access_2_projection_scan_8cpp"/>
+      </node>
+      <node id="15273">
+        <label>src/lib/access/IntersectPositions.cpp</label>
+        <link refid="_intersect_positions_8cpp"/>
+      </node>
+      <node id="15293">
+        <label>src/lib/access/InsertScan.cpp</label>
+        <link refid="_insert_scan_8cpp"/>
+      </node>
+      <node id="15259">
+        <label>src/lib/access/radixjoin/RadixCluster.cpp</label>
+        <link refid="_radix_cluster_8cpp"/>
+      </node>
+      <node id="15297">
+        <label>src/lib/access/storage/TableIO.cpp</label>
+        <link refid="_table_i_o_8cpp"/>
+      </node>
+      <node id="15248">
+        <label>src/bin/perf_regression/GroupByScan.cpp</label>
+        <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="15238">
+        <label>src/lib/access/ExpressionScan.cpp</label>
+        <link refid="_expression_scan_8cpp"/>
+      </node>
+      <node id="15255">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
+      </node>
+      <node id="15261">
+        <label>src/lib/access/SimpleRawTableScan.cpp</label>
+        <link refid="_simple_raw_table_scan_8cpp"/>
+      </node>
+      <node id="15280">
+        <label>src/lib/access/SimpleTableScan.cpp</label>
+        <link refid="lib_2access_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="15272">
+        <label>src/lib/access/IndexScan.cpp</label>
+        <link refid="_index_scan_8cpp"/>
+      </node>
+      <node id="15279">
+        <label>src/lib/access/radixjoin/RadixCluster.h</label>
+        <link refid="_radix_cluster_8h"/>
+        <childnode refid="15259" relation="include">
+        </childnode>
+      </node>
+      <node id="15271">
+        <label>src/lib/access/HashValueJoin.hpp</label>
+        <link refid="_hash_value_join_8hpp"/>
+        <childnode refid="15247" relation="include">
+        </childnode>
+      </node>
+      <node id="15262">
+        <label>src/lib/io/Loader.cpp</label>
+        <link refid="_loader_8cpp"/>
+      </node>
+      <node id="15246">
+        <label>src/lib/access/MergeJoin.hpp</label>
+        <link refid="_merge_join_8hpp"/>
+        <childnode refid="15247" relation="include">
+        </childnode>
+      </node>
+      <node id="15305">
+        <label>src/lib/storage/TableGenerator.cpp</label>
+        <link refid="_table_generator_8cpp"/>
+      </node>
+      <node id="15258">
+        <label>src/lib/access/radixjoin/NestedLoopEquiJoin.cpp</label>
+        <link refid="_nested_loop_equi_join_8cpp"/>
+      </node>
+      <node id="15267">
+        <label>src/lib/access/Delete.cpp</label>
+        <link refid="_delete_8cpp"/>
+      </node>
+      <node id="15295">
+        <label>src/lib/access/MergeTable.cpp</label>
+        <link refid="_merge_table_8cpp"/>
+      </node>
+      <node id="15301">
+        <label>src/lib/io/TransactionManager.cpp</label>
+        <link refid="_transaction_manager_8cpp"/>
+      </node>
+      <node id="15284">
+        <label>src/lib/access/UnionScan.cpp</label>
+        <link refid="lib_2access_2_union_scan_8cpp"/>
+      </node>
+      <node id="15237">
+        <label>src/lib/storage/Table.h</label>
+        <link refid="_table_8h"/>
+        <childnode refid="15238" relation="include">
+        </childnode>
+        <childnode refid="15239" relation="include">
+        </childnode>
+        <childnode refid="15240" relation="include">
+        </childnode>
+        <childnode refid="15241" relation="include">
+        </childnode>
+        <childnode refid="15242" relation="include">
+        </childnode>
+        <childnode refid="15243" relation="include">
+        </childnode>
+        <childnode refid="15244" relation="include">
+        </childnode>
+        <childnode refid="15245" relation="include">
+        </childnode>
+        <childnode refid="15236" relation="include">
+        </childnode>
+        <childnode refid="15304" relation="include">
+        </childnode>
+        <childnode refid="15306" relation="include">
+        </childnode>
+        <childnode refid="15289" relation="include">
+        </childnode>
+      </node>
+      <node id="15270">
+        <label>src/lib/access/HashJoinProbe.cpp</label>
+        <link refid="_hash_join_probe_8cpp"/>
+      </node>
+      <node id="15264">
+        <label>src/lib/storage/PointerCalculator.h</label>
+        <link refid="_pointer_calculator_8h"/>
+        <childnode refid="15265" relation="include">
+        </childnode>
+        <childnode refid="15266" relation="include">
+        </childnode>
+        <childnode refid="15267" relation="include">
+        </childnode>
+        <childnode refid="15268" relation="include">
+        </childnode>
+        <childnode refid="15269" relation="include">
+        </childnode>
+        <childnode refid="15270" relation="include">
+        </childnode>
+        <childnode refid="15271" relation="include">
+        </childnode>
+        <childnode refid="15272" relation="include">
+        </childnode>
+        <childnode refid="15273" relation="include">
+        </childnode>
+        <childnode refid="15274" relation="include">
+        </childnode>
+        <childnode refid="15246" relation="include">
+        </childnode>
+        <childnode refid="15256" relation="include">
+        </childnode>
+        <childnode refid="15275" relation="include">
+        </childnode>
+        <childnode refid="15276" relation="include">
+        </childnode>
+        <childnode refid="15277" relation="include">
+        </childnode>
+        <childnode refid="15258" relation="include">
+        </childnode>
+        <childnode refid="15260" relation="include">
+        </childnode>
+        <childnode refid="15261" relation="include">
+        </childnode>
+        <childnode refid="15280" relation="include">
+        </childnode>
+        <childnode refid="15242" relation="include">
+        </childnode>
+        <childnode refid="15281" relation="include">
+        </childnode>
+        <childnode refid="15282" relation="include">
+        </childnode>
+        <childnode refid="15283" relation="include">
+        </childnode>
+        <childnode refid="15284" relation="include">
+        </childnode>
+        <childnode refid="15285" relation="include">
+        </childnode>
+        <childnode refid="15286" relation="include">
+        </childnode>
+        <childnode refid="15289" relation="include">
+        </childnode>
+      </node>
+      <node id="15245">
+        <label>src/lib/storage/MutableVerticalTable.h</label>
+        <link refid="_mutable_vertical_table_8h"/>
+        <childnode refid="15238" relation="include">
+        </childnode>
+        <childnode refid="15246" relation="include">
+        </childnode>
+        <childnode refid="15256" relation="include">
+        </childnode>
+        <childnode refid="15258" relation="include">
+        </childnode>
+        <childnode refid="15259" relation="include">
+        </childnode>
+        <childnode refid="15260" relation="include">
+        </childnode>
+        <childnode refid="15261" relation="include">
+        </childnode>
+        <childnode refid="15262" relation="include">
+        </childnode>
+        <childnode refid="15243" relation="include">
+        </childnode>
+        <childnode refid="15263" relation="include">
+        </childnode>
+        <childnode refid="15264" relation="include">
+        </childnode>
+        <childnode refid="15290" relation="include">
+        </childnode>
+        <childnode refid="15304" relation="include">
+        </childnode>
+        <childnode refid="15305" relation="include">
+        </childnode>
+        <childnode refid="15289" relation="include">
+        </childnode>
+      </node>
+      <node id="15269">
+        <label>src/lib/access/GroupByScan.cpp</label>
+        <link refid="lib_2access_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="15252">
+        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
+      </node>
+      <node id="15268">
+        <label>src/lib/access/Distinct.cpp</label>
+        <link refid="_distinct_8cpp"/>
+      </node>
+      <node id="15242">
+        <label>src/lib/access/SortScan.cpp</label>
+        <link refid="lib_2access_2_sort_scan_8cpp"/>
+      </node>
+      <node id="15274">
+        <label>src/lib/access/JoinScan.cpp</label>
+        <link refid="lib_2access_2_join_scan_8cpp"/>
+      </node>
+      <node id="15283">
+        <label>src/lib/access/UnionAll.cpp</label>
+        <link refid="_union_all_8cpp"/>
+      </node>
+      <node id="15239">
+        <label>src/lib/access/Layouter.cpp</label>
+        <link refid="_layouter_8cpp"/>
+      </node>
+      <node id="15236">
+        <label>src/lib/storage/Table.cpp</label>
+        <link refid="_table_8cpp"/>
+      </node>
+      <node id="15288">
+        <label>src/lib/storage/storage_types_helper.cpp</label>
+        <link refid="storage__types__helper_8cpp"/>
+      </node>
+      <node id="15243">
+        <label>src/lib/storage/AbstractTable.cpp</label>
+        <link refid="_abstract_table_8cpp"/>
+      </node>
+      <node id="15307">
+        <label>src/lib/storage/TableFactory.cpp</label>
+        <link refid="_table_factory_8cpp"/>
+      </node>
+      <node id="15244">
+        <label>src/lib/storage/GroupValue.cpp</label>
+        <link refid="_group_value_8cpp"/>
+      </node>
+      <node id="15294">
+        <label>src/lib/access/LayoutTable.cpp</label>
+        <link refid="_layout_table_8cpp"/>
+      </node>
+      <node id="15292">
+        <label>src/lib/access/expressions/GenericExpressions.cpp</label>
+        <link refid="_generic_expressions_8cpp"/>
+      </node>
+      <node id="15277">
+        <label>src/lib/access/radixjoin/Histogram.h</label>
+        <link refid="_histogram_8h"/>
+        <childnode refid="15278" relation="include">
+        </childnode>
+        <childnode refid="15241" relation="include">
+        </childnode>
+        <childnode refid="15279" relation="include">
+        </childnode>
+      </node>
+      <node id="15263">
+        <label>src/lib/storage/MutableVerticalTable.cpp</label>
+        <link refid="_mutable_vertical_table_8cpp"/>
+      </node>
+      <node id="15253">
+        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
+        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="15275">
+        <label>src/lib/access/PosUpdateScan.cpp</label>
+        <link refid="_pos_update_scan_8cpp"/>
+      </node>
+      <node id="15254">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
+      </node>
+      <node id="15306">
+        <label>src/lib/storage/TableFactory.h</label>
+        <link refid="_table_factory_8h"/>
+        <childnode refid="15262" relation="include">
+        </childnode>
+        <childnode refid="15245" relation="include">
+        </childnode>
+        <childnode refid="15307" relation="include">
+        </childnode>
+        <childnode refid="15289" relation="include">
+        </childnode>
+      </node>
+      <node id="15300">
+        <label>src/lib/io/shortcuts.cpp</label>
+        <link refid="shortcuts_8cpp"/>
+      </node>
+      <node id="15282">
+        <label>src/lib/access/tx/ValidatePositions.cpp</label>
+        <link refid="_validate_positions_8cpp"/>
+      </node>
+      <node id="15249">
+        <label>src/bin/perf_regression/HashJoin.cpp</label>
+        <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="15235">
+        <label>src/lib/storage/AttributeVectorFactory.h</label>
+        <link refid="_attribute_vector_factory_8h"/>
+        <childnode refid="15236" relation="include">
+        </childnode>
+        <childnode refid="15237" relation="include">
+        </childnode>
+      </node>
+      <node id="15265">
+        <label>src/bin/perf_regression/tx_performance.cpp</label>
+        <link refid="tx__performance_8cpp"/>
+      </node>
+      <node id="15278">
+        <label>src/lib/access/radixjoin/Histogram.cpp</label>
+        <link refid="_histogram_8cpp"/>
+      </node>
+      <node id="15298">
+        <label>src/lib/access/UpdateScan.cpp</label>
+        <link refid="_update_scan_8cpp"/>
+      </node>
+      <node id="15240">
+        <label>src/lib/access/MaterializingScan.cpp</label>
+        <link refid="_materializing_scan_8cpp"/>
+      </node>
+      <node id="15281">
+        <label>src/lib/access/TableScan.cpp</label>
+        <link refid="_table_scan_8cpp"/>
+      </node>
+      <node id="15251">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="15304">
+        <label>src/lib/storage/TableBuilder.cpp</label>
+        <link refid="_table_builder_8cpp"/>
+      </node>
+      <node id="15289">
+        <label>src/lib/storage.h</label>
+        <link refid="storage_8h"/>
+        <childnode refid="15248" relation="include">
+        </childnode>
+        <childnode refid="15249" relation="include">
+        </childnode>
+        <childnode refid="15250" relation="include">
+        </childnode>
+        <childnode refid="15251" relation="include">
+        </childnode>
+        <childnode refid="15252" relation="include">
+        </childnode>
+        <childnode refid="15253" relation="include">
+        </childnode>
+        <childnode refid="15254" relation="include">
+        </childnode>
+        <childnode refid="15255" relation="include">
+        </childnode>
+      </node>
+      <node id="15302">
+        <label>src/lib/storage/PrettyPrinter.cpp</label>
+        <link refid="_pretty_printer_8cpp"/>
+      </node>
+      <node id="15285">
+        <label>src/lib/storage/PointerCalculator.cpp</label>
+        <link refid="_pointer_calculator_8cpp"/>
+      </node>
+      <node id="15287">
+        <label>src/lib/io/TableDump.cpp</label>
+        <link refid="_table_dump_8cpp"/>
+      </node>
+      <node id="15260">
+        <label>src/lib/access/ScriptOperation.cpp</label>
+        <link refid="_script_operation_8cpp"/>
+      </node>
+      <node id="15291">
+        <label>src/lib/access/expressions/GenericExpressions.h</label>
+        <link refid="_generic_expressions_8h"/>
+        <childnode refid="15292" relation="include">
+        </childnode>
+      </node>
+      <node id="15290">
+        <label>src/lib/storage/Store.h</label>
+        <link refid="_store_8h"/>
+        <childnode refid="15265" relation="include">
+        </childnode>
+        <childnode refid="15267" relation="include">
+        </childnode>
+        <childnode refid="15291" relation="include">
+        </childnode>
+        <childnode refid="15293" relation="include">
+        </childnode>
+        <childnode refid="15294" relation="include">
+        </childnode>
+        <childnode refid="15295" relation="include">
+        </childnode>
+        <childnode refid="15275" relation="include">
+        </childnode>
+        <childnode refid="15280" relation="include">
+        </childnode>
+        <childnode refid="15296" relation="include">
+        </childnode>
+        <childnode refid="15297" relation="include">
+        </childnode>
+        <childnode refid="15282" relation="include">
+        </childnode>
+        <childnode refid="15298" relation="include">
+        </childnode>
+        <childnode refid="15262" relation="include">
+        </childnode>
+        <childnode refid="15299" relation="include">
+        </childnode>
+        <childnode refid="15300" relation="include">
+        </childnode>
+        <childnode refid="15287" relation="include">
+        </childnode>
+        <childnode refid="15301" relation="include">
+        </childnode>
+        <childnode refid="15243" relation="include">
+        </childnode>
+        <childnode refid="15285" relation="include">
+        </childnode>
+        <childnode refid="15302" relation="include">
+        </childnode>
+        <childnode refid="15303" relation="include">
+        </childnode>
+        <childnode refid="15289" relation="include">
+        </childnode>
+      </node>
+      <node id="15299">
+        <label>src/lib/io/MPassCSVLoader.cpp</label>
+        <link refid="_m_pass_c_s_v_loader_8cpp"/>
+      </node>
+      <node id="15234">
+        <label>src/lib/storage/BitCompressedVector.h</label>
+        <link refid="BitCompressedVector.h"/>
+        <childnode refid="15235" relation="include">
+        </childnode>
+      </node>
+      <node id="15247">
+        <label>src/lib/access.h</label>
+        <link refid="access_8h"/>
+        <childnode refid="15248" relation="include">
+        </childnode>
+        <childnode refid="15249" relation="include">
+        </childnode>
+        <childnode refid="15250" relation="include">
+        </childnode>
+        <childnode refid="15251" relation="include">
+        </childnode>
+        <childnode refid="15252" relation="include">
+        </childnode>
+        <childnode refid="15253" relation="include">
+        </childnode>
+        <childnode refid="15254" relation="include">
+        </childnode>
+        <childnode refid="15255" relation="include">
+        </childnode>
+      </node>
+      <node id="15241">
+        <label>src/lib/access/radixjoin/PrefixSum.cpp</label>
+        <link refid="_prefix_sum_8cpp"/>
+      </node>
+      <node id="15256">
+        <label>src/lib/access/MultiplyRefField.h</label>
+        <link refid="_multiply_ref_field_8h"/>
+        <childnode refid="15257" relation="include">
+        </childnode>
+      </node>
+      <node id="15257">
+        <label>src/lib/access/MultiplyRefField.cpp</label>
+        <link refid="_multiply_ref_field_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_bit_compressed_vector" prot="public">BitCompressedVector</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_bit_compressed_vector_8h_1a4c8b6e3f5b517ddc1b9f9670ea0ead8f" prot="public" static="no">
+        <name>WORD_LENGTH</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="18" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_STORAGE_BITCOMPRESSEDVECTOR_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_STORAGE_BITCOMPRESSEDVECTOR_H_</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_malloc_strategy_8h" kindref="compound">memory/MallocStrategy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_base_attribute_vector_8h" kindref="compound">storage/BaseAttributeVector.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WORD_LENGTH</highlight></codeline>
+<codeline lineno="18" refid="_bit_compressed_vector_8h_1a4c8b6e3f5b517ddc1b9f9670ea0ead8f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>WORD_LENGTH<sp/>64</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/>can<sp/>only<sp/>save<sp/>positive<sp/>numbers</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="26" refid="class_bit_compressed_vector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bit_compressed_vector" kindref="compound">BitCompressedVector</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_base_attribute_vector" kindref="compound">BaseAttributeVector</ref>&lt;T&gt;<sp/>{</highlight></codeline>
+<codeline lineno="27" refid="class_bit_compressed_vector_1a6d312b12985dba78a8d33725a2c52374" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="class_malloc_strategy" kindref="compound">Strategy</ref><sp/>=<sp/><ref refid="class_malloc_strategy" kindref="compound">MallocStrategy</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Typedef<sp/>for<sp/>the<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref>;</highlight></codeline>
+<codeline lineno="30" refid="class_bit_compressed_vector_1a7d2b87c518d84663c7001317d24032af" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;uint64_t&gt;<sp/><ref refid="class_bit_compressed_vector_1a7d2b87c518d84663c7001317d24032af" kindref="member">bit_size_list_t</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>bits<sp/>per<sp/>storage<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" kindref="member">_bit_width</ref><sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref>)<sp/><sp/>*<sp/>8;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>data,<sp/>aligned<sp/>to<sp/>16<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref><sp/>*_data<sp/><ref refid="class_bit_compressed_vector_1a4a69717062c5334e8eb0b0f19ca4cacb" kindref="member">__attribute__</ref>((aligned(16)));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>tuples</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_bit_compressed_vector_1a241cfd6ea835872148f6ba106018f8a2" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="class_bit_compressed_vector_1a241cfd6ea835872148f6ba106018f8a2" kindref="member">_size</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Variables<sp/>for<sp/>Data<sp/>handling<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>allocated<sp/>blocks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" kindref="member">_allocatedBlocks</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>columns<sp/>in<sp/>this<sp/>block</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_bit_compressed_vector_1a2c13b26b65d51c4e7a1ab9dc80cf7a65" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="class_bit_compressed_vector_1a2c13b26b65d51c4e7a1ab9dc80cf7a65" kindref="member">_columns</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>bits<sp/>used<sp/>for<sp/>each<sp/>column</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_bit_compressed_vector_1a7d2b87c518d84663c7001317d24032af" kindref="member">bit_size_list_t</ref><sp/><ref refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" kindref="member">_bits</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53" refid="class_bit_compressed_vector_1afe496c1b5c79b5ab2aad16d036190f78" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>T<sp/><ref refid="class_bit_compressed_vector_1afe496c1b5c79b5ab2aad16d036190f78" kindref="member">value_type</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_bit_compressed_vector_1a411acab39dbaf7ea0643adc6c0529391" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_bit_compressed_vector_1a411acab39dbaf7ea0643adc6c0529391" kindref="member">BitCompressedVector</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>columns,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>rows,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;uint64_t&gt;<sp/>bits):<sp/>_data(<ref refid="csb__tree_8cpp_1ab979d9d4b4923f7c54d6caa6e1a61936" kindref="member">nullptr</ref>),<sp/><ref refid="class_bit_compressed_vector_1a241cfd6ea835872148f6ba106018f8a2" kindref="member">_size</ref>(0),<sp/><ref refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" kindref="member">_allocatedBlocks</ref>(0),<sp/><ref refid="class_bit_compressed_vector_1a2c13b26b65d51c4e7a1ab9dc80cf7a65" kindref="member">_columns</ref>(columns),<sp/><ref refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" kindref="member">_bits</ref>(bits)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bit_compressed_vector_1a51b1da77bf858ab479f9013b38e5ca65" kindref="member">reserve</ref>(rows);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="class_bit_compressed_vector_1ae6029612906b458fef1c5435a01f565f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1ae6029612906b458fef1c5435a01f565f" kindref="member">~BitCompressedVector</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_malloc_strategy_1ad6e105af6a69d5770c8dc01abee6a0a6" kindref="member">Strategy::deallocate</ref>(_data,<sp/><ref refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" kindref="member">_allocatedBlocks</ref><sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref>));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="class_bit_compressed_vector_1a55b007b4cb0c73c1b10fc3d754c37e4a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="class_bit_compressed_vector_1a55b007b4cb0c73c1b10fc3d754c37e4a" kindref="member">data</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Direct<sp/>data<sp/>access<sp/>not<sp/>allowed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68" refid="class_bit_compressed_vector_1ae7a6a2dc4695e00e4e49de54a8d9542b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1ae7a6a2dc4695e00e4e49de54a8d9542b" kindref="member">setNumRows</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Direct<sp/>data<sp/>access<sp/>not<sp/>allowed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_bit_compressed_vector_1a4c177434065180a1a84bcac41ea0dece" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bit_compressed_vector_1ac665626e87709357922c4f16cbab4349" kindref="member">checkAccess</ref>(column,<sp/>row);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>result;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>offset<sp/>=<sp/><ref refid="class_bit_compressed_vector_1adb0529462b8755c1986e20b1a0b77450" kindref="member">_blockOffset</ref>(row);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>colOffset<sp/>=<sp/><ref refid="class_bit_compressed_vector_1a2610953d69c5fe29d059cb2310dc451d" kindref="member">_offsetForColumn</ref>(column);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>block<sp/>=<sp/><ref refid="class_bit_compressed_vector_1ae0fb796ef9c10ee7a444be5292257196" kindref="member">_blockPosition</ref>(row)<sp/>+<sp/>(offset<sp/>+<sp/>colOffset)<sp/>/<sp/><ref refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" kindref="member">_bit_width</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adjust<sp/>the<sp/>column<sp/>offset<sp/>to<sp/>the<sp/>new<sp/>block</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>colOffset<sp/>=<sp/>(offset<sp/>+<sp/>colOffset)<sp/>%<sp/><ref refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" kindref="member">_bit_width</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>bounds<sp/>=<sp/><ref refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" kindref="member">_bit_width</ref><sp/>-<sp/>colOffset;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>baseMask<sp/>=<sp/>(1ull<sp/>&lt;&lt;<sp/><ref refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" kindref="member">_bits</ref>[column])<sp/>-<sp/>1ull;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>(_data[block]<sp/>&gt;&gt;<sp/>colOffset)<sp/>&amp;<sp/>baseMask;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bounds<sp/>&lt;<sp/><ref refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" kindref="member">_bits</ref>[column])<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>colOffset<sp/>=<sp/><ref refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" kindref="member">_bits</ref>[column]<sp/>-<sp/>bounds;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>baseMask<sp/>=<sp/>(1ull<sp/>&lt;&lt;<sp/>colOffset)<sp/>-<sp/>1ull;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/>(baseMask<sp/>&amp;<sp/>_data[block<sp/>+<sp/>1])<sp/>&lt;&lt;<sp/>bounds;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="class_bit_compressed_vector_1ae7e3b070498f77535154226180c0b35b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row,<sp/>T<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bit_compressed_vector_1ac665626e87709357922c4f16cbab4349" kindref="member">checkAccess</ref>(column,<sp/>row);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>offset<sp/>=<sp/><ref refid="class_bit_compressed_vector_1adb0529462b8755c1986e20b1a0b77450" kindref="member">_blockOffset</ref>(row);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>colOffset<sp/>=<sp/><ref refid="class_bit_compressed_vector_1a2610953d69c5fe29d059cb2310dc451d" kindref="member">_offsetForColumn</ref>(column);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>block<sp/>=<sp/><ref refid="class_bit_compressed_vector_1ae0fb796ef9c10ee7a444be5292257196" kindref="member">_blockPosition</ref>(row)<sp/>+<sp/>(offset<sp/>+<sp/>colOffset)<sp/>/<sp/><ref refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" kindref="member">_bit_width</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adjust<sp/>the<sp/>column<sp/>offset<sp/>to<sp/>the<sp/>new<sp/>block</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>colOffset<sp/>=<sp/>(offset<sp/>+<sp/>colOffset)<sp/>%<sp/><ref refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" kindref="member">_bit_width</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>bounds<sp/>=<sp/><ref refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" kindref="member">_bit_width</ref><sp/>-<sp/>colOffset;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>baseMask<sp/>=<sp/>(1ull<sp/>&lt;&lt;<sp/><ref refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" kindref="member">_bits</ref>[column])<sp/>-<sp/>1ull;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>mask<sp/>=<sp/>~(baseMask<sp/>&lt;&lt;<sp/>colOffset);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>_data[block]<sp/>&amp;=<sp/>mask;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>_data[block]<sp/>|=<sp/>((uint64_t)<sp/>value<sp/>&amp;<sp/>baseMask)<sp/>&lt;&lt;<sp/>colOffset;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bounds<sp/>&lt;<sp/><ref refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" kindref="member">_bits</ref>[column])<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mask<sp/>=<sp/>~(baseMask<sp/>&gt;&gt;<sp/>bounds);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_data[block<sp/>+<sp/>1]<sp/>&amp;=<sp/>mask;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_data[block<sp/>+<sp/>1]<sp/>|=<sp/>((uint64_t)<sp/>value<sp/>&amp;<sp/>baseMask)<sp/>&gt;&gt;<sp/>bounds;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/>Reserve<sp/>memory<sp/>for<sp/>the<sp/>given<sp/>number<sp/>of<sp/>rows.<sp/>memory<sp/>will<sp/>only<sp/>be</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/>allocated<sp/>if<sp/>the<sp/>number<sp/>of<sp/>rows<sp/>requires<sp/>a<sp/>larger<sp/>number<sp/>of<sp/>blocks</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/>than<sp/>before<sp/>and<sp/>it<sp/>can<sp/>only<sp/>be<sp/>incremented.</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="class_bit_compressed_vector_1a51b1da77bf858ab479f9013b38e5ca65" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1a51b1da77bf858ab479f9013b38e5ca65" kindref="member">reserve</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>rows)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rows<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="class_bit_compressed_vector_1a373d428173c2ed9d5e5c127118504732" kindref="member">_blocks</ref>(rows)<sp/>&gt;<sp/><ref refid="class_bit_compressed_vector_1a373d428173c2ed9d5e5c127118504732" kindref="member">_blocks</ref>(<ref refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" kindref="member">_allocatedBlocks</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Allocate<sp/>the<sp/>new<sp/>memory,<sp/>copy<sp/>the<sp/>old<sp/>memory<sp/>and<sp/>swap<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="class_bit_compressed_vector_1a373d428173c2ed9d5e5c127118504732" kindref="member">_blocks</ref>(rows)<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref><sp/>*newMemory<sp/>=<sp/><ref refid="class_bit_compressed_vector_1a9a3af67c5b4dabb2b8c242e60c279c08" kindref="member">_allocate</ref>(<ref refid="class_bit_compressed_vector_1a373d428173c2ed9d5e5c127118504732" kindref="member">_blocks</ref>(rows));</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" kindref="member">_allocatedBlocks</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(newMemory,<sp/>_data,<sp/><ref refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" kindref="member">_allocatedBlocks</ref><sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref>));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(_data,<sp/>newMemory);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>deallocate<sp/>if<sp/>there<sp/>was<sp/>something<sp/>allocated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newMemory<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_malloc_strategy_1ad6e105af6a69d5770c8dc01abee6a0a6" kindref="member">Strategy::deallocate</ref>(newMemory,<sp/><ref refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" kindref="member">_allocatedBlocks</ref><sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref>));</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>new<sp/>allocarted<sp/>blocks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" kindref="member">_allocatedBlocks</ref><sp/>=<sp/><ref refid="class_bit_compressed_vector_1a373d428173c2ed9d5e5c127118504732" kindref="member">_blocks</ref>(rows);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/>Immediately<sp/>resizes<sp/>the<sp/>data<sp/>vector<sp/>to<sp/>0<sp/>and<sp/>frees<sp/>the<sp/>memory</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/>allocated<sp/>by<sp/>the<sp/>vector</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="class_bit_compressed_vector_1ad647a636dfa85b732d4f9f4040d0cc27" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1ad647a636dfa85b732d4f9f4040d0cc27" kindref="member">clear</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bit_compressed_vector_1a241cfd6ea835872148f6ba106018f8a2" kindref="member">_size</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_malloc_strategy_1ad6e105af6a69d5770c8dc01abee6a0a6" kindref="member">Strategy::deallocate</ref>(_data,<sp/><ref refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" kindref="member">_allocatedBlocks</ref><sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref>));</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>_data<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="class_bit_compressed_vector_1a5874b21984072207a752e64ab089114a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1a5874b21984072207a752e64ab089114a" kindref="member">size</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1a241cfd6ea835872148f6ba106018f8a2" kindref="member">_size</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/><sp/><sp/><sp/>Allocate<sp/>memory<sp/>for<sp/>size<sp/>rows<sp/>and<sp/>increase<sp/>the<sp/>size<sp/>of<sp/>the<sp/>data</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/><sp/><sp/><sp/>container<sp/>to<sp/>size</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="class_bit_compressed_vector_1aad4a6a855d5b5841dec1c16bd5c754d7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1aad4a6a855d5b5841dec1c16bd5c754d7" kindref="member">resize</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1a5874b21984072207a752e64ab089114a" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>==<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bit_compressed_vector_1a51b1da77bf858ab479f9013b38e5ca65" kindref="member">reserve</ref>(size);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bit_compressed_vector_1a241cfd6ea835872148f6ba106018f8a2" kindref="member">_size</ref><sp/>=<sp/><ref refid="class_bit_compressed_vector_1a5874b21984072207a752e64ab089114a" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="class_bit_compressed_vector_1a63127f3d8e91918dec52c2dccb29d869" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="class_bit_compressed_vector_1a63127f3d8e91918dec52c2dccb29d869" kindref="member">capacity</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" kindref="member">_allocatedBlocks</ref><sp/>*<sp/><ref refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" kindref="member">_bit_width</ref>)<sp/>/<sp/><ref refid="class_bit_compressed_vector_1a40bcbf0bdadebc20a64f59607ae614cd" kindref="member">_tupleWidth</ref>();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="class_bit_compressed_vector_1ab4ccb165ec86eddf0faa391ff6f8f7ce" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1ab4ccb165ec86eddf0faa391ff6f8f7ce" kindref="member">rewriteColumn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bits)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//uint64_t<sp/>oldBits<sp/>=<sp/>_bits[column];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" kindref="member">_bits</ref>[column]<sp/>=<sp/>bits;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_bit_compressed_vector_1a241cfd6ea835872148f6ba106018f8a2" kindref="member">_size</ref><sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Bad<sp/>rewrite&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="class_bit_compressed_vector_1a505680d45728791d0e0e54df8b738dd1" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;BaseAttributeVector&lt;T&gt;&gt;<sp/><ref refid="class_bit_compressed_vector_1a505680d45728791d0e0e54df8b738dd1" kindref="member">copy</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;BitCompressedVector&gt;<sp/>b<sp/>=<sp/>std::make_shared&lt;BitCompressedVector&gt;(<ref refid="class_bit_compressed_vector_1a2c13b26b65d51c4e7a1ab9dc80cf7a65" kindref="member">_columns</ref>,<sp/><ref refid="class_bit_compressed_vector_1a241cfd6ea835872148f6ba106018f8a2" kindref="member">_size</ref>,<sp/><ref refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" kindref="member">_bits</ref>);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>b-&gt;resize(_size);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>std::memcpy(b-&gt;_data,<sp/>_data,<sp/><ref refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" kindref="member">_allocatedBlocks</ref><sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref>));</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="189" refid="class_bit_compressed_vector_1ac665626e87709357922c4f16cbab4349" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1ac665626e87709357922c4f16cbab4349" kindref="member">checkAccess</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>column,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>rows)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>EXPENSIVE_ASSERTIONS</highlight></codeline>
+<codeline lineno="191"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(column<sp/>&gt;=<sp/><ref refid="class_bit_compressed_vector_1a2c13b26b65d51c4e7a1ab9dc80cf7a65" kindref="member">_columns</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::out_of_range(</highlight><highlight class="stringliteral">&quot;Trying<sp/>to<sp/>access<sp/>column<sp/>&apos;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="namespacestd_1aa2f6c380fda0f127ac99017940bef1e9" kindref="member">std::to_string</ref>(column)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>where<sp/>only<sp/>&apos;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="namespacestd_1aa2f6c380fda0f127ac99017940bef1e9" kindref="member">std::to_string</ref>(<ref refid="class_bit_compressed_vector_1a2c13b26b65d51c4e7a1ab9dc80cf7a65" kindref="member">_columns</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>available&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rows<sp/>&gt;=<sp/><ref refid="class_bit_compressed_vector_1a241cfd6ea835872148f6ba106018f8a2" kindref="member">_size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::out_of_range(</highlight><highlight class="stringliteral">&quot;Trying<sp/>to<sp/>access<sp/>rows<sp/>&apos;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="namespacestd_1aa2f6c380fda0f127ac99017940bef1e9" kindref="member">std::to_string</ref>(rows)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>where<sp/>only<sp/>&apos;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="namespacestd_1aa2f6c380fda0f127ac99017940bef1e9" kindref="member">std::to_string</ref>(<ref refid="class_bit_compressed_vector_1a241cfd6ea835872148f6ba106018f8a2" kindref="member">_size</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>available&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="202"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="205"><highlight class="comment"><sp/><sp/><sp/><sp/>Calculates<sp/>the<sp/>offset<sp/>for<sp/>a<sp/>given<sp/>column<sp/>from<sp/>the<sp/>begining<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="206"><highlight class="comment"><sp/><sp/><sp/><sp/>row<sp/>in<sp/>bits</highlight></codeline>
+<codeline lineno="207"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="class_bit_compressed_vector_1a2610953d69c5fe29d059cb2310dc451d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="class_bit_compressed_vector_1a2610953d69c5fe29d059cb2310dc451d" kindref="member">_offsetForColumn</ref>(uint64_t<sp/>column)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>column;<sp/>++i)</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>offset<sp/>+=<sp/><ref refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" kindref="member">_bits</ref>[i];</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>offset;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="216"><highlight class="comment"><sp/><sp/><sp/><sp/>Calculates<sp/>the<sp/>starting<sp/>block<sp/>for<sp/>the<sp/>row</highlight></codeline>
+<codeline lineno="217"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="class_bit_compressed_vector_1ae0fb796ef9c10ee7a444be5292257196" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="class_bit_compressed_vector_1ae0fb796ef9c10ee7a444be5292257196" kindref="member">_blockPosition</ref>(uint64_t<sp/>row)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="class_bit_compressed_vector_1a40bcbf0bdadebc20a64f59607ae614cd" kindref="member">_tupleWidth</ref>()<sp/>*<sp/>row)<sp/>/<sp/><ref refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" kindref="member">_bit_width</ref>;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"><sp/><sp/><sp/><sp/>Calculates<sp/>the<sp/>offset<sp/>of<sp/>the<sp/>row<sp/>inside<sp/>the<sp/>block</highlight></codeline>
+<codeline lineno="224"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="class_bit_compressed_vector_1adb0529462b8755c1986e20b1a0b77450" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="class_bit_compressed_vector_1adb0529462b8755c1986e20b1a0b77450" kindref="member">_blockOffset</ref>(uint64_t<sp/>row)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="class_bit_compressed_vector_1a40bcbf0bdadebc20a64f59607ae614cd" kindref="member">_tupleWidth</ref>()<sp/>*<sp/>row)<sp/>%<sp/><ref refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" kindref="member">_bit_width</ref>;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>the<sp/>number<sp/>of<sp/>required<sp/>blocks<sp/>for<sp/>the<sp/>number<sp/>of<sp/>rows<sp/>given</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>parameter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="class_bit_compressed_vector_1a373d428173c2ed9d5e5c127118504732" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="class_bit_compressed_vector_1a373d428173c2ed9d5e5c127118504732" kindref="member">_blocks</ref>(uint64_t<sp/>rows)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((rows<sp/>*<sp/><ref refid="class_bit_compressed_vector_1a40bcbf0bdadebc20a64f59607ae614cd" kindref="member">_tupleWidth</ref>())<sp/>+<sp/><ref refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" kindref="member">_bit_width</ref><sp/>-<sp/>1)<sp/>/<sp/><ref refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" kindref="member">_bit_width</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="236"><highlight class="comment"><sp/><sp/><sp/><sp/>Calculate<sp/>the<sp/>number<sp/>of<sp/>required<sp/>bits<sp/>for<sp/>the<sp/>tuple</highlight></codeline>
+<codeline lineno="237"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="class_bit_compressed_vector_1a40bcbf0bdadebc20a64f59607ae614cd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="class_bit_compressed_vector_1a40bcbf0bdadebc20a64f59607ae614cd" kindref="member">_tupleWidth</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="layout__utils_8h_1ade2593c9a1f0314beb0796a5b32a8d70" kindref="member">sum</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sum<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" kindref="member">_bits</ref>.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>+=<sp/><ref refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" kindref="member">_bits</ref>[i];</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="layout__utils_8h_1ade2593c9a1f0314beb0796a5b32a8d70" kindref="member">sum</ref>;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="248"><highlight class="comment"><sp/><sp/>*<sp/>Allocate<sp/>memory<sp/>given<sp/>by<sp/>the<sp/>number<sp/>of<sp/>blocks</highlight></codeline>
+<codeline lineno="249"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="class_bit_compressed_vector_1a9a3af67c5b4dabb2b8c242e60c279c08" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref><sp/>*<ref refid="class_bit_compressed_vector_1a9a3af67c5b4dabb2b8c242e60c279c08" kindref="member">_allocate</ref>(uint64_t<sp/>numBlocks)<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1a55b007b4cb0c73c1b10fc3d754c37e4a" kindref="member">data</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_malloc_strategy_1aed2dafa1ba2aa4c4c13cf0f5675ff1b8" kindref="member">Strategy::allocate</ref>(numBlocks<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref>)));</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_bit_compressed_vector_1a55b007b4cb0c73c1b10fc3d754c37e4a" kindref="member">data</ref><sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_malloc_strategy_1ad6e105af6a69d5770c8dc01abee6a0a6" kindref="member">Strategy::deallocate</ref>(<ref refid="class_bit_compressed_vector_1a55b007b4cb0c73c1b10fc3d754c37e4a" kindref="member">data</ref>,<sp/>numBlocks<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref>));</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::bad_alloc();</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>std::memset(<ref refid="class_bit_compressed_vector_1a55b007b4cb0c73c1b10fc3d754c37e4a" kindref="member">data</ref>,<sp/>0,<sp/>numBlocks<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref>));</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1a55b007b4cb0c73c1b10fc3d754c37e4a" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_STORAGE_BITCOMPRESSEDVECTOR_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h"/>
+  </compounddef>
+</doxygen>

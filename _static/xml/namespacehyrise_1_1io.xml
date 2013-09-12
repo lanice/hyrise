@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="namespacehyrise_1_1io" kind="namespace">
+    <compoundname>hyrise::io</compoundname>
+    <innerclass refid="structhyrise_1_1io_1_1raw__table__cb__data" prot="public">hyrise::io::raw_table_cb_data</innerclass>
+    <innerclass refid="classhyrise_1_1io_1_1_raw_table_loader" prot="public">hyrise::io::RawTableLoader</innerclass>
+    <innerclass refid="classhyrise_1_1io_1_1_resource_manager_exception" prot="public">hyrise::io::ResourceManagerException</innerclass>
+    <innerclass refid="classhyrise_1_1io_1_1_resource_already_exists_exception" prot="public">hyrise::io::ResourceAlreadyExistsException</innerclass>
+    <innerclass refid="classhyrise_1_1io_1_1_resource_not_exists_exception" prot="public">hyrise::io::ResourceNotExistsException</innerclass>
+    <innerclass refid="classhyrise_1_1io_1_1_resource_manager" prot="public">hyrise::io::ResourceManager</innerclass>
+    <innerclass refid="classhyrise_1_1io_1_1_storage_manager" prot="public">hyrise::io::StorageManager</innerclass>
+    <innernamespace refid="namespacehyrise_1_1io_1_1_m_pass_loader">hyrise::io::MPassLoader</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacehyrise_1_1io_1a11dd495cdefa6fd0fb748d2eaf381b65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::io::raw_table_cb_per_field</definition>
+        <argsstring>(char *field_buffer, size_t field_length, struct raw_table_cb_data *data)</argsstring>
+        <name>raw_table_cb_per_field</name>
+        <param>
+          <type>char *</type>
+          <declname>field_buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>field_length</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structhyrise_1_1io_1_1raw__table__cb__data" kindref="compound">raw_table_cb_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/RawTableLoader.cpp" line="21" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/RawTableLoader.cpp" bodystart="21" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1_1io_1a88ee789a63094ee480c0e092dfa75994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::io::raw_table_cb_per_line</definition>
+        <argsstring>(int separator, struct raw_table_cb_data *data)</argsstring>
+        <name>raw_table_cb_per_line</name>
+        <param>
+          <type>int</type>
+          <declname>separator</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structhyrise_1_1io_1_1raw__table__cb__data" kindref="compound">raw_table_cb_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/RawTableLoader.cpp" line="38" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/RawTableLoader.cpp" bodystart="38" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::unique_lock&lt; T &gt;</type>
+        <definition>std::unique_lock&lt;T&gt; hyrise::io::lock_guard</definition>
+        <argsstring>(T &amp;mtx)</argsstring>
+        <name>lock_guard</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>mtx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/ResourceManager.cpp" line="17" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/ResourceManager.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/MPassCSVLoader.cpp" line="30"/>
+  </compounddef>
+</doxygen>

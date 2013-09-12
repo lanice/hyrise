@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_fixed_length_vector" kind="class" prot="public">
+    <compoundname>FixedLengthVector</compoundname>
+    <basecompoundref refid="class_base_attribute_vector" prot="public" virt="non-virtual">BaseAttributeVector&lt; T &gt;</basecompoundref>
+    <includes refid="_fixed_length_vector_8h" local="no">FixedLengthVector.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_fixed_length_vector_1a1a2c331680adc43d523e609aa5ccf7ae" prot="private" static="no">
+        <type><ref refid="class_malloc_strategy" kindref="compound">MallocStrategy</ref></type>
+        <definition>using FixedLengthVector&lt; T &gt;::Strategy =  MallocStrategy</definition>
+        <argsstring></argsstring>
+        <name>Strategy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="29" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_fixed_length_vector_1a88e3cfcb4a91aa942a520471a475393c" prot="public" static="no">
+        <type>T</type>
+        <definition>typedef T FixedLengthVector&lt; T &gt;::value_type</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="31" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fixed_length_vector_1a327f9319104ae12d1019ef8d975ad649" prot="private" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* FixedLengthVector&lt; T &gt;::_values</definition>
+        <argsstring></argsstring>
+        <name>_values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="23" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fixed_length_vector_1a48ad3665f572104e29d1cefa897738a5" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t FixedLengthVector&lt; T &gt;::_rows</definition>
+        <argsstring></argsstring>
+        <name>_rows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="24" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fixed_length_vector_1a01107f13d32b328b8090f67c77bf205a" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t FixedLengthVector&lt; T &gt;::_columns</definition>
+        <argsstring></argsstring>
+        <name>_columns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="25" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fixed_length_vector_1ac731df37deffe912fce046b5b12e7587" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t FixedLengthVector&lt; T &gt;::_allocated_bytes</definition>
+        <argsstring></argsstring>
+        <name>_allocated_bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="26" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fixed_length_vector_1afe3db192d815d3fc968f7baf751448fc" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex FixedLengthVector&lt; T &gt;::_allocate_mtx</definition>
+        <argsstring></argsstring>
+        <name>_allocate_mtx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="28" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fixed_length_vector_1afecfab84f9228305c101ecfcafc76420" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FixedLengthVector&lt; T &gt;::FixedLengthVector</definition>
+        <argsstring>(size_t columns, size_t rows)</argsstring>
+        <name>FixedLengthVector</name>
+        <param>
+          <type>size_t</type>
+          <declname>columns</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="34" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="33" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1adc0379ce3a9d8b0e91c7021eb1c6a7fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual FixedLengthVector&lt; T &gt;::~FixedLengthVector</definition>
+        <argsstring>()</argsstring>
+        <name>~FixedLengthVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="40" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1aed521b7b2e7dc30025f772aeeb22e21e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void *</type>
+        <definition>void* FixedLengthVector&lt; T &gt;::data</definition>
+        <argsstring>()</argsstring>
+        <name>data</name>
+        <reimplements refid="class_abstract_attribute_vector_1aa9b187475305f322958e9e70f5da7b38">data</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="44" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1a400973415e75f35e75dac396e4cdb4fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void FixedLengthVector&lt; T &gt;::setNumRows</definition>
+        <argsstring>(size_t s)</argsstring>
+        <name>setNumRows</name>
+        <reimplements refid="class_abstract_attribute_vector_1ad46f27571b5f25653ae8a5fa95404eff">setNumRows</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="48" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1a1a72f3e46973e00e1be98f8c5da5bc16" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>T</type>
+        <definition>T FixedLengthVector&lt; T &gt;::get</definition>
+        <argsstring>(size_t column, size_t row) const </argsstring>
+        <name>get</name>
+        <reimplements refid="class_base_attribute_vector_1a46402c4cda1e8b0b9f2a4eae283cbc49">get</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="52" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1a3ce51dbb0eae7f0b0a56c8d86bfae41d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; FixedLengthVector&lt; T &gt;::getRef</definition>
+        <argsstring>(size_t column, size_t row) const </argsstring>
+        <name>getRef</name>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="57" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1a3fd9836b7e9fcfa2c563779bee46f4a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void FixedLengthVector&lt; T &gt;::set</definition>
+        <argsstring>(size_t column, size_t row, T value)</argsstring>
+        <name>set</name>
+        <reimplements refid="class_base_attribute_vector_1a9fadea1c74dd07ac58bcf29b5799ab46">set</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="62" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1a9dc912b7034b5a2fc5d46c4bb0300a47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void FixedLengthVector&lt; T &gt;::reserve</definition>
+        <argsstring>(size_t rows)</argsstring>
+        <name>reserve</name>
+        <reimplements refid="class_base_attribute_vector_1a49761020b6ff22ea15e43e846e34e867">reserve</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="67" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1a04059508e86eab53deb3299c0008a963" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void FixedLengthVector&lt; T &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <reimplements refid="class_base_attribute_vector_1a77f5fdb728bbdbef70882e474c6b0a05">clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="71" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1ac787f4d12ef63811082de03f84636e3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t FixedLengthVector&lt; T &gt;::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <reimplements refid="class_base_attribute_vector_1a370a4796980b8bdf5fa252e3f2c63c37">size</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="76" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="76" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1a8717a8f3917b16dd9d27aa350ebb0761" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void FixedLengthVector&lt; T &gt;::resize</definition>
+        <argsstring>(size_t rows)</argsstring>
+        <name>resize</name>
+        <reimplements refid="class_base_attribute_vector_1a5f190deb098511d9de05da0ade39c846">resize</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="80" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1a03d03171253a2e266eff0e5d2d4b9d34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void FixedLengthVector&lt; T &gt;::rewriteColumn</definition>
+        <argsstring>(const size_t column, const size_t bits)</argsstring>
+        <name>rewriteColumn</name>
+        <reimplements refid="class_base_attribute_vector_1a7d4e5e6574e73f49f923ff92a072bca0">rewriteColumn</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>bits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="85" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1aa1f83b451eb267c66c03d65910bf27cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t FixedLengthVector&lt; T &gt;::capacity</definition>
+        <argsstring>()</argsstring>
+        <name>capacity</name>
+        <reimplements refid="class_base_attribute_vector_1ad30d47e2a2f0890875c225d7d0567cd6">capacity</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="88" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1a467b2e24105b054f6f68224503fe2854" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_base_attribute_vector" kindref="compound">BaseAttributeVector</ref>&lt; T &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;BaseAttributeVector&lt;T&gt; &gt; FixedLengthVector&lt; T &gt;::copy</definition>
+        <argsstring>()</argsstring>
+        <name>copy</name>
+        <reimplements refid="class_base_attribute_vector_1aff09a848bc4955f7edd5b3ed7ddd4601">copy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="92" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="92" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1ac0d6d7dbb21b749064929a64b369733f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T FixedLengthVector&lt; T &gt;::inc</definition>
+        <argsstring>(size_t column, size_t row)</argsstring>
+        <name>inc</name>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="101" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1a965306c1f5d0f9ed4d23c62a70dc9a89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T FixedLengthVector&lt; T &gt;::atomic_inc</definition>
+        <argsstring>(size_t column, size_t row)</argsstring>
+        <name>atomic_inc</name>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="107" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1a09f83f76180beb6943677f4be9e9b335" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string FixedLengthVector&lt; T &gt;::print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="113" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="113" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_fixed_length_vector_1af15befd69acf788fbe9c3616c6421433" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FixedLengthVector&lt; T &gt;::allocate</definition>
+        <argsstring>(size_t bytes)</argsstring>
+        <name>allocate</name>
+        <param>
+          <type>size_t</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="129" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="129" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fixed_length_vector_1ae7083d1dfed791d681def603029c4c71" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FixedLengthVector&lt; T &gt;::checkAccess</definition>
+        <argsstring>(const size_t &amp;column, const size_t &amp;rows) const </argsstring>
+        <name>checkAccess</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="149" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="149" bodyend="162"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2041">
+        <label>BaseAttributeVector&lt; T &gt;</label>
+        <link refid="class_base_attribute_vector"/>
+        <childnode refid="2042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2040">
+        <label>FixedLengthVector&lt; T &gt;</label>
+        <link refid="class_fixed_length_vector"/>
+        <childnode refid="2041" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2042">
+        <label>AbstractAttributeVector</label>
+        <link refid="class_abstract_attribute_vector"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2044">
+        <label>BaseAttributeVector&lt; T &gt;</label>
+        <link refid="class_base_attribute_vector"/>
+        <childnode refid="2045" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2043">
+        <label>FixedLengthVector&lt; T &gt;</label>
+        <link refid="class_fixed_length_vector"/>
+        <childnode refid="2044" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2045">
+        <label>AbstractAttributeVector</label>
+        <link refid="class_abstract_attribute_vector"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" line="21" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/FixedLengthVector.h" bodystart="21" bodyend="163"/>
+    <listofallmembers>
+      <member refid="class_fixed_length_vector_1afe3db192d815d3fc968f7baf751448fc" prot="private" virt="non-virtual"><scope>FixedLengthVector</scope><name>_allocate_mtx</name></member>
+      <member refid="class_fixed_length_vector_1ac731df37deffe912fce046b5b12e7587" prot="private" virt="non-virtual"><scope>FixedLengthVector</scope><name>_allocated_bytes</name></member>
+      <member refid="class_fixed_length_vector_1a01107f13d32b328b8090f67c77bf205a" prot="private" virt="non-virtual"><scope>FixedLengthVector</scope><name>_columns</name></member>
+      <member refid="class_fixed_length_vector_1a48ad3665f572104e29d1cefa897738a5" prot="private" virt="non-virtual"><scope>FixedLengthVector</scope><name>_rows</name></member>
+      <member refid="class_fixed_length_vector_1a327f9319104ae12d1019ef8d975ad649" prot="private" virt="non-virtual"><scope>FixedLengthVector</scope><name>_values</name></member>
+      <member refid="class_fixed_length_vector_1af15befd69acf788fbe9c3616c6421433" prot="private" virt="non-virtual"><scope>FixedLengthVector</scope><name>allocate</name></member>
+      <member refid="class_fixed_length_vector_1a965306c1f5d0f9ed4d23c62a70dc9a89" prot="public" virt="non-virtual"><scope>FixedLengthVector</scope><name>atomic_inc</name></member>
+      <member refid="class_fixed_length_vector_1aa1f83b451eb267c66c03d65910bf27cf" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>capacity</name></member>
+      <member refid="class_fixed_length_vector_1ae7083d1dfed791d681def603029c4c71" prot="private" virt="non-virtual"><scope>FixedLengthVector</scope><name>checkAccess</name></member>
+      <member refid="class_fixed_length_vector_1a04059508e86eab53deb3299c0008a963" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>clear</name></member>
+      <member refid="class_fixed_length_vector_1a467b2e24105b054f6f68224503fe2854" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>copy</name></member>
+      <member refid="class_fixed_length_vector_1aed521b7b2e7dc30025f772aeeb22e21e" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>data</name></member>
+      <member refid="class_fixed_length_vector_1afecfab84f9228305c101ecfcafc76420" prot="public" virt="non-virtual"><scope>FixedLengthVector</scope><name>FixedLengthVector</name></member>
+      <member refid="class_fixed_length_vector_1a1a72f3e46973e00e1be98f8c5da5bc16" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>get</name></member>
+      <member refid="class_fixed_length_vector_1a3ce51dbb0eae7f0b0a56c8d86bfae41d" prot="public" virt="non-virtual"><scope>FixedLengthVector</scope><name>getRef</name></member>
+      <member refid="class_fixed_length_vector_1ac0d6d7dbb21b749064929a64b369733f" prot="public" virt="non-virtual"><scope>FixedLengthVector</scope><name>inc</name></member>
+      <member refid="class_fixed_length_vector_1a09f83f76180beb6943677f4be9e9b335" prot="public" virt="non-virtual"><scope>FixedLengthVector</scope><name>print</name></member>
+      <member refid="class_fixed_length_vector_1a9dc912b7034b5a2fc5d46c4bb0300a47" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>reserve</name></member>
+      <member refid="class_fixed_length_vector_1a8717a8f3917b16dd9d27aa350ebb0761" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>resize</name></member>
+      <member refid="class_fixed_length_vector_1a03d03171253a2e266eff0e5d2d4b9d34" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>rewriteColumn</name></member>
+      <member refid="class_fixed_length_vector_1a3fd9836b7e9fcfa2c563779bee46f4a5" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>set</name></member>
+      <member refid="class_fixed_length_vector_1a400973415e75f35e75dac396e4cdb4fa" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>setNumRows</name></member>
+      <member refid="class_fixed_length_vector_1ac787f4d12ef63811082de03f84636e3f" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>size</name></member>
+      <member refid="class_fixed_length_vector_1a1a2c331680adc43d523e609aa5ccf7ae" prot="private" virt="non-virtual"><scope>FixedLengthVector</scope><name>Strategy</name></member>
+      <member refid="class_fixed_length_vector_1a88e3cfcb4a91aa942a520471a475393c" prot="public" virt="non-virtual"><scope>FixedLengthVector</scope><name>value_type</name></member>
+      <member refid="class_abstract_attribute_vector_1aca44301e92f1060f470bf4488592701c" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>~AbstractAttributeVector</name></member>
+      <member refid="class_base_attribute_vector_1a8e9a3b24c3c21480db901b35829cb7cb" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>~BaseAttributeVector</name></member>
+      <member refid="class_fixed_length_vector_1adc0379ce3a9d8b0e91c7021eb1c6a7fe" prot="public" virt="virtual"><scope>FixedLengthVector</scope><name>~FixedLengthVector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

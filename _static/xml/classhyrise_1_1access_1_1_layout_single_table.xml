@@ -1,0 +1,561 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classhyrise_1_1access_1_1_layout_single_table" kind="class" prot="public">
+    <compoundname>hyrise::access::LayoutSingleTable</compoundname>
+    <basecompoundref refid="classhyrise_1_1access_1_1_plan_operation" prot="public" virt="non-virtual">hyrise::access::PlanOperation</basecompoundref>
+    <includes refid="_layouter_8h" local="no">Layouter.h</includes>
+    <innerclass refid="structhyrise_1_1access_1_1_layout_single_table_1_1_base_query" prot="public">hyrise::access::LayoutSingleTable::BaseQuery</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classhyrise_1_1access_1_1_layout_single_table_1a46bd9d83cd41610e08591511eb08e30e" prot="public" static="no">
+        <name>layouter_type</name>
+        <enumvalue id="classhyrise_1_1access_1_1_layout_single_table_1a46bd9d83cd41610e08591511eb08e30eac8739eb325f8e8800f4991cd999d22c3" prot="public">
+          <name>BaseLayouter</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhyrise_1_1access_1_1_layout_single_table_1a46bd9d83cd41610e08591511eb08e30ea39e2708a5818050605d84455a1064ffa" prot="public">
+          <name>CandidateLayouter</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhyrise_1_1access_1_1_layout_single_table_1a46bd9d83cd41610e08591511eb08e30ea3cbb987546084f47cf795f6b10b77d47" prot="public">
+          <name>DivideAndConquerLayouter</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="13" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" bodystart="13" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classhyrise_1_1access_1_1_layout_single_table_1ae3d9bf4bda5298c673b7b4ebcfc9febb" prot="private" static="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>typedef std::vector&lt;std::string&gt; hyrise::access::LayoutSingleTable::names_list_t</definition>
+        <argsstring></argsstring>
+        <name>names_list_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="43" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhyrise_1_1access_1_1_layout_single_table_1a5f8fbd18e793150626119da30f3b0e64" prot="private" static="no">
+        <type>std::vector&lt; unsigned &gt;</type>
+        <definition>typedef std::vector&lt;unsigned&gt; hyrise::access::LayoutSingleTable::size_list_t</definition>
+        <argsstring></argsstring>
+        <name>size_list_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="44" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhyrise_1_1access_1_1_layout_single_table_1ac125cf8c28474dc5e56c8406565a8d61" prot="private" static="no">
+        <type>std::vector&lt; <ref refid="structhyrise_1_1access_1_1_layout_single_table_1_1_base_query" kindref="compound">BaseQuery</ref> &gt;</type>
+        <definition>typedef std::vector&lt;BaseQuery&gt; hyrise::access::LayoutSingleTable::query_list_t</definition>
+        <argsstring></argsstring>
+        <name>query_list_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="45" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_layout_single_table_1ab534738c2373aa1cb87d91de72b55a04" prot="private" static="no" mutable="no">
+        <type><ref refid="classhyrise_1_1access_1_1_layout_single_table_1ae3d9bf4bda5298c673b7b4ebcfc9febb" kindref="member">names_list_t</ref></type>
+        <definition>names_list_t hyrise::access::LayoutSingleTable::_names</definition>
+        <argsstring></argsstring>
+        <name>_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="49" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_layout_single_table_1a5d01cb854c3b45cd65ee4c65ba1da013" prot="private" static="no" mutable="no">
+        <type><ref refid="classhyrise_1_1access_1_1_layout_single_table_1a5f8fbd18e793150626119da30f3b0e64" kindref="member">size_list_t</ref></type>
+        <definition>size_list_t hyrise::access::LayoutSingleTable::_atts</definition>
+        <argsstring></argsstring>
+        <name>_atts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="50" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_layout_single_table_1a1caf48906594f58713aabe87d3426224" prot="private" static="no" mutable="no">
+        <type><ref refid="classhyrise_1_1access_1_1_layout_single_table_1ac125cf8c28474dc5e56c8406565a8d61" kindref="member">query_list_t</ref></type>
+        <definition>query_list_t hyrise::access::LayoutSingleTable::_queries</definition>
+        <argsstring></argsstring>
+        <name>_queries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="51" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_layout_single_table_1a7c409191a76ea7330a75523afe37c866" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hyrise::access::LayoutSingleTable::_numRows</definition>
+        <argsstring></argsstring>
+        <name>_numRows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="52" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_layout_single_table_1ab9bf40818cc9586b62942dc8d3e64593" prot="private" static="no" mutable="no">
+        <type><ref refid="classhyrise_1_1access_1_1_layout_single_table_1a46bd9d83cd41610e08591511eb08e30e" kindref="member">layouter_type</ref></type>
+        <definition>layouter_type hyrise::access::LayoutSingleTable::_layouter</definition>
+        <argsstring></argsstring>
+        <name>_layouter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="53" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_layout_single_table_1ab62a3ad9d308a8de6ef2f5b285bff83a" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hyrise::access::LayoutSingleTable::_maxResults</definition>
+        <argsstring></argsstring>
+        <name>_maxResults</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="54" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_layout_single_table_1a154bd79aee8b307c71a96bb1326e452d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::access::LayoutSingleTable::LayoutSingleTable</definition>
+        <argsstring>()</argsstring>
+        <name>LayoutSingleTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="25" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_layout_single_table_1abf16df12c5c6786d4a58e37291876ad6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>hyrise::access::LayoutSingleTable::~LayoutSingleTable</definition>
+        <argsstring>()</argsstring>
+        <name>~LayoutSingleTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="26" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.cpp" bodystart="21" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_layout_single_table_1a009a48c6bd818d881d474fcc977e5bf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::access::LayoutSingleTable::executePlanOperation</definition>
+        <argsstring>()</argsstring>
+        <name>executePlanOperation</name>
+        <reimplements refid="classhyrise_1_1access_1_1_plan_operation_1a52c7d290ab4637ae1a4ee8a6dfc7a09e">executePlanOperation</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="28" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.cpp" bodystart="24" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_layout_single_table_1a167284d6e06034167bb52d6bd141e10e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const std::string</type>
+        <definition>const std::string hyrise::access::LayoutSingleTable::vname</definition>
+        <argsstring>()</argsstring>
+        <name>vname</name>
+        <reimplements refid="classhyrise_1_1access_1_1_plan_operation_1a9e27b58b694c0b501f18002fe3484767">vname</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="30" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.cpp" bodystart="161" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_layout_single_table_1a1afc7c1233dcac6841aace2736d52721" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::LayoutSingleTable::addFieldName</definition>
+        <argsstring>(const std::string &amp;n)</argsstring>
+        <name>addFieldName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="31" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.cpp" bodystart="165" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_layout_single_table_1a5cfd2a590af6d949725cc3667bbe126a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::LayoutSingleTable::addQuery</definition>
+        <argsstring>(const BaseQuery &amp;q)</argsstring>
+        <name>addQuery</name>
+        <param>
+          <type>const <ref refid="structhyrise_1_1access_1_1_layout_single_table_1_1_base_query" kindref="compound">BaseQuery</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="32" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.cpp" bodystart="172" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_layout_single_table_1aeac2fdee62c37e257f588503e6bc3af5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::LayoutSingleTable::setLayouter</definition>
+        <argsstring>(const layouter_type c)</argsstring>
+        <name>setLayouter</name>
+        <param>
+          <type>const <ref refid="classhyrise_1_1access_1_1_layout_single_table_1a46bd9d83cd41610e08591511eb08e30e" kindref="member">layouter_type</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use the candidate layouter instead of calculating cost for all possible layouts </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="35" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.cpp" bodystart="176" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_layout_single_table_1a13cd50542ec8aaadf7ebd13923c2c7bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::LayoutSingleTable::setNumRows</definition>
+        <argsstring>(const size_t n)</argsstring>
+        <name>setNumRows</name>
+        <param>
+          <type>const size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="36" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.cpp" bodystart="180" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_layout_single_table_1aca0839ce28de44c9d51413717addb05c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::LayoutSingleTable::setMaxResults</definition>
+        <argsstring>(const size_t n)</argsstring>
+        <name>setMaxResults</name>
+        <param>
+          <type>const size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the number of layouts that should be returned from this plan op. All additional layouts are added as new rows to the result table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="40" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.cpp" bodystart="184" bodyend="186"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_layout_single_table_1a6a0765baae64c8570fb1e133acfd85bd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classhyrise_1_1access_1_1_plan_operation" kindref="compound">PlanOperation</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; PlanOperation &gt; hyrise::access::LayoutSingleTable::parse</definition>
+        <argsstring>(Json::Value &amp;data)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>Json::Value &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="29" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.cpp" bodystart="101" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_layout_single_table_1ab79c7af512e461186181b93251049619" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlayouter_1_1_query" kindref="compound">layouter::Query</ref> *</type>
+        <definition>layouter::Query * hyrise::access::LayoutSingleTable::parseQuery</definition>
+        <argsstring>(const BaseQuery &amp;q)</argsstring>
+        <name>parseQuery</name>
+        <param>
+          <type>const <ref refid="structhyrise_1_1access_1_1_layout_single_table_1_1_base_query" kindref="compound">BaseQuery</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="47" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.cpp" bodystart="188" bodyend="197"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2396">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="2392">
+        <label>hyrise::access::LayoutSingleTable</label>
+        <link refid="classhyrise_1_1access_1_1_layout_single_table"/>
+        <childnode refid="2393" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2393">
+        <label>hyrise::access::PlanOperation</label>
+        <link refid="classhyrise_1_1access_1_1_plan_operation"/>
+        <childnode refid="2394" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2394">
+        <label>hyrise::access::OutputTask</label>
+        <link refid="classhyrise_1_1access_1_1_output_task"/>
+        <childnode refid="2395" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2395">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="2396" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2397" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2397">
+        <label>std::enable_shared_from_this&lt; Task &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2402">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="2398">
+        <label>hyrise::access::LayoutSingleTable</label>
+        <link refid="classhyrise_1_1access_1_1_layout_single_table"/>
+        <childnode refid="2399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2399">
+        <label>hyrise::access::PlanOperation</label>
+        <link refid="classhyrise_1_1access_1_1_plan_operation"/>
+        <childnode refid="2400" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2405" relation="usage">
+          <edgelabel>#_txContext</edgelabel>
+        </childnode>
+        <childnode refid="2406" relation="usage">
+          <edgelabel>#output</edgelabel>
+          <edgelabel>#input</edgelabel>
+        </childnode>
+      </node>
+      <node id="2400">
+        <label>hyrise::access::OutputTask</label>
+        <link refid="classhyrise_1_1access_1_1_output_task"/>
+        <childnode refid="2401" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2404" relation="usage">
+          <edgelabel>#_performance_attr</edgelabel>
+        </childnode>
+      </node>
+      <node id="2405">
+        <label>hyrise::tx::TXContext</label>
+        <link refid="structhyrise_1_1tx_1_1_t_x_context"/>
+      </node>
+      <node id="2401">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="2402" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2403" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2406">
+        <label>hyrise::access::OperationData</label>
+        <link refid="classhyrise_1_1access_1_1_operation_data"/>
+      </node>
+      <node id="2403">
+        <label>std::enable_shared_from_this&lt; Task &gt;</label>
+      </node>
+      <node id="2404">
+        <label>hyrise::access::performance_attributes_t</label>
+        <link refid="structhyrise_1_1access_1_1performance__attributes__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" line="11" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/Layouter.h" bodystart="11" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_task_1ae86d264d411c0a0476085734c27a84b0" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_actualNode</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a5d01cb854c3b45cd65ee4c65ba1da013" prot="private" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_atts</name></member>
+      <member refid="class_task_1ab25d10a171c2efc2dcdf4ec7b81d148d" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_dependencies</name></member>
+      <member refid="class_task_1a432b54ea5cdbf8f875c756c70710b69e" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_dependencyWaitCount</name></member>
+      <member refid="class_task_1a10259a6dde7645e32c32262818339c8c" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_depMutex</name></member>
+      <member refid="class_task_1af277c65727e285efbf965633851ec9d8" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_doneObservers</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_field_definition</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a819ad8df6d82f43d7a6deaae6140c2fc" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_generatedKeys</name></member>
+      <member refid="class_task_1a8909ff1653cd9a685af7256976e4e334" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_id</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a7c85412d9b7fec499a1190df85199632" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_indexed_field_definition</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1ab9bf40818cc9586b62942dc8d3e64593" prot="private" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_layouter</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a25c76f53553b99c15676d5fe8211c565" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_limit</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1ab62a3ad9d308a8de6ef2f5b285bff83a" prot="private" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_maxResults</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1afa5b2221e0233ae772ad05796ae00f7e" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_named_field_definition</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1ab534738c2373aa1cb87d91de72b55a04" prot="private" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_names</name></member>
+      <member refid="class_task_1a778ed5c766f4098184c31a656fe471ed" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_notifyMutex</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a7c409191a76ea7330a75523afe37c866" prot="private" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_numRows</name></member>
+      <member refid="class_task_1a6a0d1fa3b37cb2e7896ea23049798b36" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_observerMutex</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1acfa0f3c72eaaaff0cf29e3b45d28f868" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_operatorId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1af57f941216da981aa10f27f72babde5e" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_papiEvent</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1ad35dd50363fffa9aebef19ae050a173a" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_performance_attr</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a2f5443dd7b8eef6e3f207247ba9275cf" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_planId</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a9df7ba63a64cd76895ad0169df925133" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_planOperationName</name></member>
+      <member refid="class_task_1aa7b21c6482b905c04f354c738341beb3" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_preferredCore</name></member>
+      <member refid="class_task_1abeb3d34a483638fad8c93bb3baff50f5" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_preferredNode</name></member>
+      <member refid="class_task_1a6fbb4614f260802e6204e339f4480004" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_priority</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a1caf48906594f58713aabe87d3426224" prot="private" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_queries</name></member>
+      <member refid="class_task_1a7f7f81090a389fd5cf79747e165fe0f4" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_readyObservers</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a491ab51fcf26013df7c400abc5bd8f53" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_responseTask</name></member>
+      <member refid="class_task_1a5515868bfb7db5ad936cafdf6b8e65c7" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_sessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a08eefbff8ae055c461f954276a7d11ae" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_state</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a0848a10fe6fd200110e7da964dbd175a" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>_txContext</name></member>
+      <member refid="class_task_1aa9e65a15e122de040bb914ab144577b8" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>addDependency</name></member>
+      <member refid="class_task_1a0e4ebf7ad5313f027aa16d250685604a" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>addDoneObserver</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1ad237b1647eea22538540d8d77f20f722" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>addField</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1ab3c3b4ad0f0426024d52af0efb55a197" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>addField</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a1afc7c1233dcac6841aace2736d52721" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>addFieldName</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1abd74149ce984cf9e719542d15fb8d724" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>addInput</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1abb7bcc23c5c1a19332474da034d85b8e" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>addNamedField</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a5cfd2a590af6d949725cc3667bbe126a" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>addQuery</name></member>
+      <member refid="class_task_1a9726ca1f4c6712a3516cb05121479f25" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>addReadyObserver</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aac92e842153df9a9ae7e548ac7602009" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>addResult</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a24dbaa436c72ba68ab30d6f58c320ac8" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>allDependenciesSuccessful</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a46bd9d83cd41610e08591511eb08e30eac8739eb325f8e8800f4991cd999d22c3" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>BaseLayouter</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a46bd9d83cd41610e08591511eb08e30ea39e2708a5818050605d84455a1064ffa" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>CandidateLayouter</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a2d64bb49cfe4469bf6665bccab2327eb" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>computeDeferredIndexes</name></member>
+      <member refid="class_task_1afedc05b69ebd406b7fdb42391f4eef2a" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>DEFAULT_PRIORITY</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a46bd9d83cd41610e08591511eb08e30ea3cbb987546084f47cf795f6b10b77d47" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>DivideAndConquerLayouter</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1ade6985b6d6ddfac1ff5876f17f079f38" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>execute</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a009a48c6bd818d881d474fcc977e5bf9" prot="public" virt="virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>executePlanOperation</name></member>
+      <member refid="class_task_1a48d72f6b05c55e6fed32f137d5d17cf6" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getActualNode</name></member>
+      <member refid="class_task_1a75f0a4940cdd338c2ba538200bfcdddf" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getDependencyCount</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a361fb77e7a65e230ffe92f91b9a0e6c4" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getDependencyErrorMessages</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1ab9f31c897dbd058ee9a3140c594c5750" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getEvent</name></member>
+      <member refid="class_task_1a85363a10fc3b2272b30e1c24846ab237" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getId</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aa4857583f3f175825244fb767293f2bd" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getInputHashTable</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a66c9b52d730c2029496abda71ea40b01" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getInputTable</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1afbcbe16ff9a7759e0ae0737c0f38cd57" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getPerformanceData</name></member>
+      <member refid="class_task_1a4a3f6f336369d8e2d6a92fae0690c143" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getPreferredCore</name></member>
+      <member refid="class_task_1ad775abf82380305e56bb9a1847f76ece" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getPreferredNode</name></member>
+      <member refid="class_task_1a4d9b4764c7365be48eee4393e87ca92b" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getPriority</name></member>
+      <member refid="class_task_1a1a5953e7f9dfc732ce1f3d8a914439b4" prot="public" virt="virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getQueryDuration</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a86fef586086822356ac1b1c74689afc1" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getResponseTask</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aa06e9dccef9c7c8dbb8c88c936f43369" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getResultHashTable</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a3f9ee072d27cf5dde038c4bff35cd4a6" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getResultTable</name></member>
+      <member refid="class_task_1a28ea4fab3bbd5b803f9aa7e4b4300820" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getSessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a56507bf7ac791c70f8a5a594998d8af7" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>getState</name></member>
+      <member refid="class_task_1a769a8fb688ddaed2870faeea61d84ca0" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>hasSuccessors</name></member>
+      <member refid="class_task_1afb865392382a2c3f1a13e962d5ba3b1e" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>HIGH_PRIORITY</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>input</name></member>
+      <member refid="class_task_1ab7307de77d5baf3dfec0269996d81543" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>isReady</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a46bd9d83cd41610e08591511eb08e30e" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>layouter_type</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a154bd79aee8b307c71a96bb1326e452d" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>LayoutSingleTable</name></member>
+      <member refid="class_task_1aeb0d741352700686296e742bc21e4362" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>lockForNotifications</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1ae3d9bf4bda5298c673b7b4ebcfc9febb" prot="private" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>names_list_t</name></member>
+      <member refid="class_task_1af0efeb0207f95415ca556e19bc62d60e" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>NO_PREFERRED_CORE</name></member>
+      <member refid="class_task_1a38563fd60f45377e73b8030945f9fdc8" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>NO_PREFERRED_NODE</name></member>
+      <member refid="class_task_1aa729cd30e7135f2851dd625679aa8556" prot="public" virt="virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>notifyDone</name></member>
+      <member refid="class_task_1a82157fda3766f4331966baf74e8206fa" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>notifyDoneObservers</name></member>
+      <member refid="class_task_1a793f3db3f39a9ea7352078f235ee7843" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>notifyReadyObservers</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1abbdaa1c0b1d05c66459d7a94e0f67ca7" prot="public" virt="virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>operator()</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a96126d09e871f139400a393aae9b82e3" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>output</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a6a0765baae64c8570fb1e133acfd85bd" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>parse</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1ab79c7af512e461186181b93251049619" prot="private" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>parseQuery</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a3f3f1273385239af0b7c4b0ba66b37f7" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>planOperationName</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a9ce36d0960826b9dcbe214617dfbd602" prot="protected" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>producesPositions</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1ac125cf8c28474dc5e56c8406565a8d61" prot="private" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>query_list_t</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aa1bc5139142fb38bcdd5432f3b435b76" prot="protected" virt="virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>refreshInput</name></member>
+      <member refid="class_task_1a8df8b7cbdf23d35317488316bba3ebe2" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>SESSION_ID_NOT_SET</name></member>
+      <member refid="class_task_1af9b0b825e5ffb8de9c6a1a71438f4b5b" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setActualNode</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a9425cae50437f4ce3cab4f350d05b6cd" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setErrorMessage</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a70b1271fbca981dce18c847c2209b001" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setEvent</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1ac97c9999eea25d4ef60a348fc66f0113" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setGeneratedKeysData</name></member>
+      <member refid="class_task_1a6c3e7a3b19e50d8fcad5a084ef6b7312" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setId</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1aeac2fdee62c37e257f588503e6bc3af5" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setLayouter</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a015beb547ed761c9f577545bbd69fcae" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setLimit</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1aca0839ce28de44c9d51413717addb05c" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setMaxResults</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a13cd50542ec8aaadf7ebd13923c2c7bb" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setNumRows</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a4d63ee4b09517fbd66ec80d110323369" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setOperatorId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1abc851019f76a754a114eec5d0fbd9949" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setPerformanceData</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a2931efa12fa91e5ef1dbdc887a75b1ca" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setPlanId</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1ab9df68db2049c6a67cc6e2fd030b4fb3" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setPlanOperationName</name></member>
+      <member refid="class_task_1a1b8e520f60e9f41a3c1331e4e9e4b3ca" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setPreferredCore</name></member>
+      <member refid="class_task_1a59960c60425c5d5ed2e8ff52e4538ff2" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setPreferredNode</name></member>
+      <member refid="class_task_1acc93078022eabed8325f164e4eedc37a" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setPriority</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a169fad61f9d02d856883f32b06881a3a" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setProducesPositions</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a21a2eed324cf507a42f4e30f86ed622a" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setResponseTask</name></member>
+      <member refid="class_task_1a688bd7a4f5f659d049667c08fd330cfd" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setSessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a57ed6266bc5cdea32fee00aa69fa2b47" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setState</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a5ab2cd50fb1861224c16e5da42c5ee5a" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setTXContext</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a4b050ce8d9d71f7d9fdde5955496c7c5" prot="protected" virt="virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>setupPlanOperation</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a5f8fbd18e793150626119da30f3b0e64" prot="private" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>size_list_t</name></member>
+      <member refid="class_task_1a0ca53354bdc006762a0fda68c64f7608" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>Task</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a7cf45407329bff78e4d160197f09bae8" prot="protected" virt="virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>teardownPlanOperation</name></member>
+      <member refid="class_task_1a35af9de734c94c39981a2b199790e288" prot="public" virt="non-virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>unlockForNotifications</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1a167284d6e06034167bb52d6bd141e10e" prot="public" virt="virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>vname</name></member>
+      <member refid="classhyrise_1_1access_1_1_layout_single_table_1abf16df12c5c6786d4a58e37291876ad6" prot="public" virt="virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>~LayoutSingleTable</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a0a450a1941e4c6366abbfa3180bf7919" prot="public" virt="virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>~PlanOperation</name></member>
+      <member refid="class_task_1a7bff79cc05fa4511c72048d33591503b" prot="public" virt="virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>~Task</name></member>
+      <member refid="class_task_done_observer_1a9b5fa53c4893dfc998aedca72b8dd278" prot="public" virt="virtual"><scope>hyrise::access::LayoutSingleTable</scope><name>~TaskDoneObserver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

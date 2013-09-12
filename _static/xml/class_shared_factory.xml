@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_shared_factory" kind="class" prot="public">
+    <compoundname>SharedFactory</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; T &gt;</basecompoundref>
+    <includes refid="_shared_factory_8h" local="no">SharedFactory.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shared_factory_1ac72cda135ae2e2f0b9cb9ed8b7afc5d1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>ARGS</declname>
+            <defname>ARGS</defname>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; T &gt;</type>
+        <definition>static std::shared_ptr&lt;T&gt; SharedFactory&lt; T &gt;::create</definition>
+        <argsstring>(ARGS...args)</argsstring>
+        <name>create</name>
+        <param>
+          <type>ARGS...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/SharedFactory.h" line="10" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/SharedFactory.h" bodystart="10" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3321">
+        <label>SharedFactory&lt; PointerCalculator &gt;</label>
+        <link refid="class_shared_factory"/>
+        <childnode refid="3317" relation="template-instance">
+          <edgelabel>&lt; PointerCalculator &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3320">
+        <label>hyrise::storage::TableRangeView</label>
+        <link refid="classhyrise_1_1storage_1_1_table_range_view"/>
+        <childnode refid="3319" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3318">
+        <label>std::enable_shared_from_this&lt; T &gt;</label>
+      </node>
+      <node id="3322">
+        <label>PointerCalculator</label>
+        <link refid="class_pointer_calculator"/>
+        <childnode refid="3321" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3319">
+        <label>SharedFactory&lt; TableRangeView &gt;</label>
+        <link refid="class_shared_factory"/>
+        <childnode refid="3317" relation="template-instance">
+          <edgelabel>&lt; TableRangeView &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3317">
+        <label>SharedFactory&lt; T &gt;</label>
+        <link refid="class_shared_factory"/>
+        <childnode refid="3318" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3324">
+        <label>std::enable_shared_from_this&lt; T &gt;</label>
+      </node>
+      <node id="3323">
+        <label>SharedFactory&lt; T &gt;</label>
+        <link refid="class_shared_factory"/>
+        <childnode refid="3324" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/SharedFactory.h" line="7" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/SharedFactory.h" bodystart="7" bodyend="13"/>
+    <listofallmembers>
+      <member refid="class_shared_factory_1ac72cda135ae2e2f0b9cb9ed8b7afc5d1" prot="public" virt="non-virtual"><scope>SharedFactory</scope><name>create</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

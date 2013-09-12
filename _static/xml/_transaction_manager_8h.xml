@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_transaction_manager_8h" kind="file">
+    <compoundname>TransactionManager.h</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">atomic</includes>
+    <includes local="no">map</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">unordered_map</includes>
+    <includes refid="locking_8h" local="yes">helper/locking.h</includes>
+    <includes refid="_synchronized_8h" local="yes">helper/Synchronized.h</includes>
+    <includes refid="types_8h" local="yes">helper/types.h</includes>
+    <includes refid="_t_x_context_8h" local="yes">io/TXContext.h</includes>
+    <includes refid="storage__types_8h" local="yes">storage/storage_types.h</includes>
+    <includedby refid="tx__performance_8cpp" local="yes">src/bin/perf_regression/tx_performance.cpp</includedby>
+    <includedby refid="_delete_8cpp" local="no">src/lib/access/Delete.cpp</includedby>
+    <includedby refid="_insert_scan_8cpp" local="yes">src/lib/access/InsertScan.cpp</includedby>
+    <includedby refid="_pos_update_scan_8cpp" local="yes">src/lib/access/PosUpdateScan.cpp</includedby>
+    <includedby refid="_json_table_8cpp" local="no">src/lib/access/storage/JsonTable.cpp</includedby>
+    <includedby refid="_request_parse_task_8cpp" local="yes">src/lib/access/system/RequestParseTask.cpp</includedby>
+    <includedby refid="_response_task_8cpp" local="yes">src/lib/access/system/ResponseTask.cpp</includedby>
+    <includedby refid="_commit_8cpp" local="yes">src/lib/access/tx/Commit.cpp</includedby>
+    <includedby refid="_rollback_8cpp" local="yes">src/lib/access/tx/Rollback.cpp</includedby>
+    <includedby refid="_validate_positions_8cpp" local="no">src/lib/access/tx/ValidatePositions.cpp</includedby>
+    <includedby refid="_transaction_manager_8cpp" local="yes">src/lib/io/TransactionManager.cpp</includedby>
+    <includedby refid="_transaction_route_handler_8cpp" local="yes">src/lib/io/TransactionRouteHandler.cpp</includedby>
+    <includedby refid="_store_8cpp" local="no">src/lib/storage/Store.cpp</includedby>
+    <incdepgraph>
+      <node id="12797">
+        <label>atomic</label>
+      </node>
+      <node id="12808">
+        <label>limits</label>
+      </node>
+      <node id="12801">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="12802" relation="include">
+        </childnode>
+        <childnode refid="12797" relation="include">
+        </childnode>
+      </node>
+      <node id="12803">
+        <label>helper/Synchronized.h</label>
+        <link refid="_synchronized_8h"/>
+        <childnode refid="12804" relation="include">
+        </childnode>
+      </node>
+      <node id="12806">
+        <label>cstdint</label>
+      </node>
+      <node id="12814">
+        <label>stdint.h</label>
+      </node>
+      <node id="12813">
+        <label>stdexcept</label>
+      </node>
+      <node id="12807">
+        <label>string</label>
+      </node>
+      <node id="12798">
+        <label>map</label>
+      </node>
+      <node id="12815">
+        <label>ostream</label>
+      </node>
+      <node id="12812">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="12809" relation="include">
+        </childnode>
+        <childnode refid="12807" relation="include">
+        </childnode>
+        <childnode refid="12813" relation="include">
+        </childnode>
+        <childnode refid="12814" relation="include">
+        </childnode>
+        <childnode refid="12815" relation="include">
+        </childnode>
+      </node>
+      <node id="12809">
+        <label>vector</label>
+      </node>
+      <node id="12811">
+        <label>cereal/cereal.hpp</label>
+      </node>
+      <node id="12800">
+        <label>unordered_map</label>
+      </node>
+      <node id="12799">
+        <label>mutex</label>
+      </node>
+      <node id="12802">
+        <label>thread</label>
+      </node>
+      <node id="12805">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="12806" relation="include">
+        </childnode>
+        <childnode refid="12807" relation="include">
+        </childnode>
+        <childnode refid="12808" relation="include">
+        </childnode>
+        <childnode refid="12804" relation="include">
+        </childnode>
+        <childnode refid="12809" relation="include">
+        </childnode>
+      </node>
+      <node id="12796">
+        <label>algorithm</label>
+      </node>
+      <node id="12795">
+        <label>src/lib/io/TransactionManager.h</label>
+        <link refid="TransactionManager.h"/>
+        <childnode refid="12796" relation="include">
+        </childnode>
+        <childnode refid="12797" relation="include">
+        </childnode>
+        <childnode refid="12798" relation="include">
+        </childnode>
+        <childnode refid="12799" relation="include">
+        </childnode>
+        <childnode refid="12800" relation="include">
+        </childnode>
+        <childnode refid="12801" relation="include">
+        </childnode>
+        <childnode refid="12803" relation="include">
+        </childnode>
+        <childnode refid="12805" relation="include">
+        </childnode>
+        <childnode refid="12810" relation="include">
+        </childnode>
+        <childnode refid="12812" relation="include">
+        </childnode>
+      </node>
+      <node id="12804">
+        <label>memory</label>
+      </node>
+      <node id="12810">
+        <label>io/TXContext.h</label>
+        <link refid="_t_x_context_8h"/>
+        <childnode refid="12805" relation="include">
+        </childnode>
+        <childnode refid="12811" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12828">
+        <label>src/lib/io/TransactionRouteHandler.cpp</label>
+        <link refid="_transaction_route_handler_8cpp"/>
+      </node>
+      <node id="12823">
+        <label>src/lib/access/system/ResponseTask.cpp</label>
+        <link refid="_response_task_8cpp"/>
+      </node>
+      <node id="12821">
+        <label>src/lib/access/storage/JsonTable.cpp</label>
+        <link refid="_json_table_8cpp"/>
+      </node>
+      <node id="12829">
+        <label>src/lib/storage/Store.cpp</label>
+        <link refid="_store_8cpp"/>
+      </node>
+      <node id="12819">
+        <label>src/lib/access/InsertScan.cpp</label>
+        <link refid="_insert_scan_8cpp"/>
+      </node>
+      <node id="12818">
+        <label>src/lib/access/Delete.cpp</label>
+        <link refid="_delete_8cpp"/>
+      </node>
+      <node id="12827">
+        <label>src/lib/io/TransactionManager.cpp</label>
+        <link refid="_transaction_manager_8cpp"/>
+      </node>
+      <node id="12824">
+        <label>src/lib/access/tx/Commit.cpp</label>
+        <link refid="_commit_8cpp"/>
+      </node>
+      <node id="12822">
+        <label>src/lib/access/system/RequestParseTask.cpp</label>
+        <link refid="_request_parse_task_8cpp"/>
+      </node>
+      <node id="12820">
+        <label>src/lib/access/PosUpdateScan.cpp</label>
+        <link refid="_pos_update_scan_8cpp"/>
+      </node>
+      <node id="12826">
+        <label>src/lib/access/tx/ValidatePositions.cpp</label>
+        <link refid="_validate_positions_8cpp"/>
+      </node>
+      <node id="12817">
+        <label>src/bin/perf_regression/tx_performance.cpp</label>
+        <link refid="tx__performance_8cpp"/>
+      </node>
+      <node id="12825">
+        <label>src/lib/access/tx/Rollback.cpp</label>
+        <link refid="_rollback_8cpp"/>
+      </node>
+      <node id="12816">
+        <label>src/lib/io/TransactionManager.h</label>
+        <link refid="TransactionManager.h"/>
+        <childnode refid="12817" relation="include">
+        </childnode>
+        <childnode refid="12818" relation="include">
+        </childnode>
+        <childnode refid="12819" relation="include">
+        </childnode>
+        <childnode refid="12820" relation="include">
+        </childnode>
+        <childnode refid="12821" relation="include">
+        </childnode>
+        <childnode refid="12822" relation="include">
+        </childnode>
+        <childnode refid="12823" relation="include">
+        </childnode>
+        <childnode refid="12824" relation="include">
+        </childnode>
+        <childnode refid="12825" relation="include">
+        </childnode>
+        <childnode refid="12826" relation="include">
+        </childnode>
+        <childnode refid="12827" relation="include">
+        </childnode>
+        <childnode refid="12828" relation="include">
+        </childnode>
+        <childnode refid="12829" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhyrise_1_1tx_1_1_t_x_modifications" prot="public">hyrise::tx::TXModifications</innerclass>
+    <innerclass refid="structhyrise_1_1tx_1_1_t_x_data" prot="public">hyrise::tx::TXData</innerclass>
+    <innerclass refid="classhyrise_1_1tx_1_1_transaction_manager" prot="public">hyrise::tx::TransactionManager</innerclass>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1tx">hyrise::tx</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_IO_TRANSACTIONMANAGER_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_IO_TRANSACTIONMANAGER_H_</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atomic&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="locking_8h" kindref="compound">helper/locking.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_synchronized_8h" kindref="compound">helper/Synchronized.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">helper/types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_t_x_context_8h" kindref="compound">io/TXContext.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="storage__types_8h" kindref="compound">storage/storage_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">tx<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Stores<sp/>all<sp/>modifications<sp/>for<sp/>a<sp/>given<sp/>transaction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classhyrise_1_1tx_1_1_t_x_modifications" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1tx_1_1_t_x_modifications" kindref="compound">TXModifications</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Map<sp/>type<sp/>to<sp/>store<sp/>position<sp/>list<sp/>per<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a646b1adbdc16424e97b6fb6ddb5d0b53" kindref="member">map_t</ref><sp/>=<sp/>std::map&lt;std::weak_ptr&lt;const<sp/>AbstractTable&gt;,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref>,</highlight></codeline>
+<codeline lineno="26" refid="classhyrise_1_1tx_1_1_t_x_modifications_1a646b1adbdc16424e97b6fb6ddb5d0b53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::owner_less&lt;std::weak_ptr&lt;const<sp/>AbstractTable&gt;<sp/>&gt;<sp/>&gt;;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TID<sp/>identifier<sp/>for<sp/>the<sp/>context</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classhyrise_1_1tx_1_1_t_x_modifications_1a814094b0cd4e0011f7d39cdf7ae857f2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a814094b0cd4e0011f7d39cdf7ae857f2" kindref="member">tid</ref><sp/>=<sp/><ref refid="namespacehyrise_1_1tx_1a65c8d18e1354a3758fb7fd14f8f13e7b" kindref="member">UNKNOWN</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Map<sp/>to<sp/>store<sp/>the<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classhyrise_1_1tx_1_1_t_x_modifications_1accaccf49ba3215825daeaf22d712c0bf" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a646b1adbdc16424e97b6fb6ddb5d0b53" kindref="member">map_t</ref><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1accaccf49ba3215825daeaf22d712c0bf" kindref="member">inserted</ref>;</highlight></codeline>
+<codeline lineno="33" refid="classhyrise_1_1tx_1_1_t_x_modifications_1a3e502c2ecbf36c7ac537f0fd3587b671" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a646b1adbdc16424e97b6fb6ddb5d0b53" kindref="member">map_t</ref><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a3e502c2ecbf36c7ac537f0fd3587b671" kindref="member">deleted</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classhyrise_1_1tx_1_1_t_x_modifications_1a4eba28e911f8ac7eab00b007c6cf2ca9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a4eba28e911f8ac7eab00b007c6cf2ca9" kindref="member">TXModifications</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classhyrise_1_1tx_1_1_t_x_modifications_1a409fb7bfadb19c00de3b1262530e06a7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a409fb7bfadb19c00de3b1262530e06a7" kindref="member">TXModifications</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>t)<sp/>:<sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a814094b0cd4e0011f7d39cdf7ae857f2" kindref="member">tid</ref>(t)<sp/>{}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Keeps<sp/>track<sp/>of<sp/>all<sp/>inserted<sp/>rows</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a2708a25e3b2f6954ab5272dd85f6b71f" kindref="member">insertPos</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab,<sp/><ref refid="storage__types_8h_1a866dd5ae291f599db49986f6aa5ba77a" kindref="member">pos_t</ref><sp/>pos);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Keeps<sp/>track<sp/>of<sp/>all<sp/>deleted<sp/>rows</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a8972788304fd070e923c9aa5711fc9fc" kindref="member">deletePos</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab,<sp/><ref refid="storage__types_8h_1a866dd5ae291f599db49986f6aa5ba77a" kindref="member">pos_t</ref><sp/>pos);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a8b562f599b416e7a6a5e906eb65afc66" kindref="member">hasDeleted</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1ac829b47c68523f5f4cfe5b37aaf2280c" kindref="member">hasInserted</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref>&amp;<sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1ad91cf5bad65aa3a2853b6cf570e7b9a5" kindref="member">getInserted</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref>&amp;<sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a6c8e015aca3ab849e550e09b0c048db2" kindref="member">getDeleted</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1ae756ab7755d52db4aebf148bc79ee39c" kindref="member">handleCheck</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a646b1adbdc16424e97b6fb6ddb5d0b53" kindref="member">map_t</ref>&amp;<sp/>data,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Abstraction<sp/>to<sp/>the<sp/>specific<sp/>inserted<sp/>and<sp/>deleted<sp/>row<sp/>processes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1aaa2ce5aa0e428bf85f0cc7d6ed3a74b4" kindref="member">_handle</ref>(<ref refid="classhyrise_1_1locking_1_1_spinlock" kindref="compound">locking::Spinlock</ref>&amp;<sp/>mtx,<sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a646b1adbdc16424e97b6fb6ddb5d0b53" kindref="member">map_t</ref>&amp;<sp/>data,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>key,<sp/><ref refid="storage__types_8h_1a866dd5ae291f599db49986f6aa5ba77a" kindref="member">pos_t</ref><sp/>pos);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="structhyrise_1_1tx_1_1_t_x_data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhyrise_1_1tx_1_1_t_x_data" kindref="compound">TXData</ref><sp/>{</highlight></codeline>
+<codeline lineno="60" refid="structhyrise_1_1tx_1_1_t_x_data_1a964a77b5fa8c326c204945065aba3872" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref><sp/><ref refid="structhyrise_1_1tx_1_1_t_x_data_1a964a77b5fa8c326c204945065aba3872" kindref="member">_context</ref>;</highlight></codeline>
+<codeline lineno="61" refid="structhyrise_1_1tx_1_1_t_x_data_1a62ad1171fa789997ee123cb80d573551" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications" kindref="compound">TXModifications</ref><sp/><ref refid="structhyrise_1_1tx_1_1_t_x_data_1a62ad1171fa789997ee123cb80d573551" kindref="member">_modifications</ref>;</highlight></codeline>
+<codeline lineno="62" refid="structhyrise_1_1tx_1_1_t_x_data_1ac97b8209c1d5612f2f40bb7eae79a544" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structhyrise_1_1tx_1_1_t_x_data_1ac97b8209c1d5612f2f40bb7eae79a544" kindref="member">TXData</ref>(<ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref><sp/>ctx)<sp/>:<sp/><ref refid="structhyrise_1_1tx_1_1_t_x_data_1a964a77b5fa8c326c204945065aba3872" kindref="member">_context</ref>(ctx)<sp/>{}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<sp/><ref refid="namespacehyrise_1_1tx_1aa313640015d76af5cb69a00655d4a0cc" kindref="member">TransactionData</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classhyrise_1_1tx_1_1_transaction_manager" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1tx_1_1_transaction_manager" kindref="compound" tooltip="Transaction manager based on transaction contexts.">TransactionManager</ref><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="71"></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref><sp/><ref refid="group___transaction_1gaec6847072bba8cdf2917268d9bb6b43b" kindref="member">beginTransaction</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structhyrise_1_1tx_1_1_t_x_data" kindref="compound">TransactionData</ref>&amp;<sp/><ref refid="group___transaction_1gaa46f17d24ac9a9b29b02da77a401d361" kindref="member">getTransactionData</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref><sp/><ref refid="group___transaction_1gac54ac5e07bfc608be03814bc59725d31" kindref="member">getContext</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref><sp/><ref refid="group___transaction_1gae80579845d1ac3afba69b7d8c91b1adf" kindref="member">commitTransaction</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___transaction_1ga218c1c09962148e64d4438ce8d2239e8" kindref="member">rollbackTransaction</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group___transaction_1gacebb2b31d01217f3c096223e9c3e4fde" kindref="member">isRunningTransaction</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;TXContext&gt;<sp/><ref refid="group___transaction_1ga10e36ee27cd9e7412b57531636d8a135" kindref="member">getRunningTransactionContexts</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Singleton<sp/>Constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager" kindref="compound" tooltip="Transaction manager based on transaction contexts.">TransactionManager</ref>&amp;<sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" kindref="member">getInstance</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>last<sp/>valid<sp/>commit<sp/>id<sp/>for<sp/>visibility</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a196c28d46f96ad76d98066f943d18ae0" kindref="member">getLastCommitId</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/>*<sp/>Builds<sp/>the<sp/>transaction<sp/>context<sp/>by<sp/>fetching<sp/>the<sp/>new<sp/>transaction<sp/>id<sp/>and<sp/>the</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/>*<sp/>last<sp/>commit<sp/>id</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a56c7ecb330f6056e156564356054a8e8" kindref="member">buildContext</ref>();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"></highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Starts<sp/>the<sp/>Synchronized<sp/>Transaction<sp/>Process</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/>*</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/>*<sp/>The<sp/>call<sp/>to<sp/>prepare<sp/>commit<sp/>retrieves<sp/>the<sp/>next<sp/>possible<sp/>commit<sp/>ID<sp/>from<sp/>the</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/>*<sp/>list<sp/>and<sp/>locks<sp/>the<sp/>call<sp/>to<sp/>serialized<sp/>all<sp/>incoming<sp/>transactions.<sp/>We</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/>*<sp/>protect<sp/>this<sp/>method<sp/>using<sp/>a<sp/>spin<sp/>lock.<sp/>The<sp/>lock<sp/>is<sp/>released<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/>*<sp/>@commit()<sp/>method.</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ac1a29999f74509bc3b34fd01f521a748" kindref="member">prepareCommit</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a720ca62cadedeea3133fd476a8311f4a" kindref="member">abort</ref>();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1aa75c20b088d0db31be50e1f4c0540087" kindref="member">tryPrepareCommit</ref>();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/>*<sp/>Returns<sp/>the<sp/>modifications<sp/>set<sp/>for<sp/>the<sp/>given<sp/>transaction<sp/>id</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications" kindref="compound">TXModifications</ref>&amp;<sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a374f0fc04351f9b913c7a253b624432d" kindref="member">operator[]</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref>&amp;<sp/>key);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a00163e75877b19e9bb320879a0510f97" kindref="member">commit</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ad24584829c465c02628035194614acf9" kindref="member">endTransaction</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a9deffa2f04e07a194e0a0f6a204d7fa9" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="147" refid="classhyrise_1_1tx_1_1_transaction_manager_1a64aba8281ee99944aa5c3f3463cfc39b" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic&lt;transaction_id_t&gt;<sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a64aba8281ee99944aa5c3f3463cfc39b" kindref="member">_transactionCount</ref>;</highlight></codeline>
+<codeline lineno="148" refid="classhyrise_1_1tx_1_1_transaction_manager_1a73360e37382124e982ee0376ce05af34" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic&lt;transaction_cid_t&gt;<sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a73360e37382124e982ee0376ce05af34" kindref="member">_commitId</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" kindref="member">map_t</ref><sp/>=<sp/>std::unordered_map&lt;<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref>,</highlight></codeline>
+<codeline lineno="151" refid="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;TransactionData&gt;&gt;;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Keeping<sp/>track<sp/>of<sp/>all<sp/>transactions<sp/>and<sp/>their<sp/>modifications</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="classhyrise_1_1tx_1_1_transaction_manager_1ac322895b69bdec0f4138dbd651f38fcc" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="struct_synchronized" kindref="compound">Synchronized&lt;map_t, locking::Spinlock&gt;</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ac322895b69bdec0f4138dbd651f38fcc" kindref="member">_txData</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Spin<sp/>Lock<sp/>for<sp/>transactions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="classhyrise_1_1tx_1_1_transaction_manager_1aa718a40a00450c3577b2e4b51fcfa18b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1locking_1_1_spinlock" kindref="compound">locking::Spinlock</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1aa718a40a00450c3577b2e4b51fcfa18b" kindref="member">_txLock</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ad488afc2fbd6eeb99c58602b9fd1b53e" kindref="member">TransactionManager</ref>();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>next<sp/>transaction<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4e8596f09fae6189a3734e334e660045" kindref="member">getTransactionId</ref>();</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h"/>
+  </compounddef>
+</doxygen>

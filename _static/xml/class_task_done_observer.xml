@@ -1,0 +1,521 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_task_done_observer" kind="class" prot="public" abstract="yes">
+    <compoundname>TaskDoneObserver</compoundname>
+    <derivedcompoundref refid="class_task" prot="public" virt="non-virtual">Task</derivedcompoundref>
+    <includes refid="_task_8h" local="no">Task.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_task_done_observer_1abf104d20e7cfa1b0fd8a80edab8bc05b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void TaskDoneObserver::notifyDone</definition>
+        <argsstring>(std::shared_ptr&lt; Task &gt; task)=0</argsstring>
+        <name>notifyDone</name>
+        <reimplementedby refid="class_task_1aa729cd30e7135f2851dd625679aa8556">notifyDone</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt;</type>
+          <declname>task</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/Task.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_done_observer_1a9b5fa53c4893dfc998aedca72b8dd278" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual TaskDoneObserver::~TaskDoneObserver</definition>
+        <argsstring>()</argsstring>
+        <name>~TaskDoneObserver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/Task.h" line="36" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/Task.h" bodystart="36" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3806">
+        <label>hyrise::access::TableUnload</label>
+        <link refid="classhyrise_1_1access_1_1_table_unload"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3813">
+        <label>hyrise::net::AbstractRequestHandler</label>
+        <link refid="classhyrise_1_1net_1_1_abstract_request_handler"/>
+        <childnode refid="3747" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3814">
+        <label>hyrise::access::OperationListingHandler</label>
+        <link refid="classhyrise_1_1access_1_1_operation_listing_handler"/>
+        <childnode refid="3813" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3797">
+        <label>hyrise::access::SetTable</label>
+        <link refid="classhyrise_1_1access_1_1_set_table"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3817">
+        <label>hyrise::net::StaticRequestHandler</label>
+        <link refid="classhyrise_1_1net_1_1_static_request_handler"/>
+        <childnode refid="3813" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3822">
+        <label>WaitTask</label>
+        <link refid="class_wait_task"/>
+        <childnode refid="3747" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3783">
+        <label>hyrise::access::HashJoinProbe</label>
+        <link refid="classhyrise_1_1access_1_1_hash_join_probe"/>
+        <childnode refid="3780" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3775">
+        <label>hyrise::access::MergeStore</label>
+        <link refid="classhyrise_1_1access_1_1_merge_store"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3754">
+        <label>hyrise::access::CreateRadixTable</label>
+        <link refid="classhyrise_1_1access_1_1_create_radix_table"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3753">
+        <label>hyrise::access::CreateIndex</label>
+        <link refid="classhyrise_1_1access_1_1_create_index"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3802">
+        <label>hyrise::access::StartProfiling</label>
+        <link refid="classhyrise_1_1access_1_1_start_profiling"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3746">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="3760">
+        <label>hyrise::access::HashValueJoin&lt; T &gt;</label>
+        <link refid="classhyrise_1_1access_1_1_hash_value_join"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3763">
+        <label>hyrise::access::IntersectPositions</label>
+        <link refid="classhyrise_1_1access_1_1_intersect_positions"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3777">
+        <label>hyrise::access::MultiplyRefField</label>
+        <link refid="classhyrise_1_1access_1_1_multiply_ref_field"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3807">
+        <label>hyrise::access::UnionAll</label>
+        <link refid="classhyrise_1_1access_1_1_union_all"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3795">
+        <label>hyrise::access::Rollback</label>
+        <link refid="classhyrise_1_1access_1_1_rollback"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3820">
+        <label>SleepTask</label>
+        <link refid="class_sleep_task"/>
+        <childnode refid="3747" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3779">
+        <label>hyrise::access::NoOp</label>
+        <link refid="classhyrise_1_1access_1_1_no_op"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3789">
+        <label>hyrise::access::RadixCluster2ndPass</label>
+        <link refid="classhyrise_1_1access_1_1_radix_cluster2nd_pass"/>
+        <childnode refid="3780" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3798">
+        <label>hyrise::access::SettingsOperation</label>
+        <link refid="classhyrise_1_1access_1_1_settings_operation"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3785">
+        <label>hyrise::access::Histogram2ndPass</label>
+        <link refid="classhyrise_1_1access_1_1_histogram2nd_pass"/>
+        <childnode refid="3784" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3768">
+        <label>hyrise::access::LoadDumpedTable</label>
+        <link refid="classhyrise_1_1access_1_1_load_dumped_table"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3790">
+        <label>hyrise::access::SimpleTableScan</label>
+        <link refid="classhyrise_1_1access_1_1_simple_table_scan"/>
+        <childnode refid="3780" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3792">
+        <label>hyrise::access::ProjectionScan</label>
+        <link refid="classhyrise_1_1access_1_1_projection_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3816">
+        <label>hyrise::net::RouteRequestHandler</label>
+        <link refid="classhyrise_1_1net_1_1_route_request_handler"/>
+        <childnode refid="3813" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3769">
+        <label>hyrise::access::LoadFile</label>
+        <link refid="classhyrise_1_1access_1_1_load_file"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3765">
+        <label>hyrise::access::LayoutSingleTable</label>
+        <link refid="classhyrise_1_1access_1_1_layout_single_table"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3794">
+        <label>hyrise::access::ReplaceTable</label>
+        <link refid="classhyrise_1_1access_1_1_replace_table"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3766">
+        <label>hyrise::access::LayoutTable</label>
+        <link refid="classhyrise_1_1access_1_1_layout_table"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3762">
+        <label>hyrise::access::InsertScan</label>
+        <link refid="classhyrise_1_1access_1_1_insert_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3759">
+        <label>hyrise::access::GetTable</label>
+        <link refid="classhyrise_1_1access_1_1_get_table"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3780">
+        <label>hyrise::access::ParallelizablePlanOperation</label>
+        <link refid="classhyrise_1_1access_1_1_parallelizable_plan_operation"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3764">
+        <label>hyrise::access::JsonTable</label>
+        <link refid="classhyrise_1_1access_1_1_json_table"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3781">
+        <label>hyrise::access::GroupByScan</label>
+        <link refid="classhyrise_1_1access_1_1_group_by_scan"/>
+        <childnode refid="3780" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3751">
+        <label>hyrise::access::Barrier</label>
+        <link refid="classhyrise_1_1access_1_1_barrier"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3757">
+        <label>hyrise::access::DumpTable</label>
+        <link refid="classhyrise_1_1access_1_1_dump_table"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3812">
+        <label>hyrise::access::ResponseTask</label>
+        <link refid="classhyrise_1_1access_1_1_response_task"/>
+        <childnode refid="3747" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3821">
+        <label>SyncTask</label>
+        <link refid="class_sync_task"/>
+        <childnode refid="3747" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3815">
+        <label>hyrise::access::RequestParseTask</label>
+        <link refid="classhyrise_1_1access_1_1_request_parse_task"/>
+        <childnode refid="3813" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3749">
+        <label>hyrise::access::PlanOperation</label>
+        <link refid="classhyrise_1_1access_1_1_plan_operation"/>
+        <childnode refid="3748" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3748">
+        <label>hyrise::access::OutputTask</label>
+        <link refid="classhyrise_1_1access_1_1_output_task"/>
+        <childnode refid="3747" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3803">
+        <label>hyrise::access::StopProfiling</label>
+        <link refid="classhyrise_1_1access_1_1_stop_profiling"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3778">
+        <label>hyrise::access::NestedLoopEquiJoin</label>
+        <link refid="classhyrise_1_1access_1_1_nested_loop_equi_join"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3774">
+        <label>hyrise::access::MergePrefixSum</label>
+        <link refid="classhyrise_1_1access_1_1_merge_prefix_sum"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3782">
+        <label>hyrise::access::HashBuild</label>
+        <link refid="classhyrise_1_1access_1_1_hash_build"/>
+        <childnode refid="3780" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3755">
+        <label>hyrise::access::DeleteOp</label>
+        <link refid="classhyrise_1_1access_1_1_delete_op"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3771">
+        <label>hyrise::access::MergeHashTables</label>
+        <link refid="classhyrise_1_1access_1_1_merge_hash_tables"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3809">
+        <label>hyrise::access::UnloadAll</label>
+        <link refid="classhyrise_1_1access_1_1_unload_all"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3747">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3805">
+        <label>hyrise::access::TableScan</label>
+        <link refid="classhyrise_1_1access_1_1_table_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3811">
+        <label>hyrise::access::ValidatePositions</label>
+        <link refid="classhyrise_1_1access_1_1_validate_positions"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3799">
+        <label>hyrise::access::SimpleRawTableScan</label>
+        <link refid="classhyrise_1_1access_1_1_simple_raw_table_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3758">
+        <label>hyrise::access::ExpressionScan</label>
+        <link refid="classhyrise_1_1access_1_1_expression_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3801">
+        <label>hyrise::access::SortScan</label>
+        <link refid="classhyrise_1_1access_1_1_sort_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3776">
+        <label>hyrise::access::MergeTable</label>
+        <link refid="classhyrise_1_1access_1_1_merge_table"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3767">
+        <label>hyrise::access::LayoutTableLoad</label>
+        <link refid="classhyrise_1_1access_1_1_layout_table_load"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3787">
+        <label>hyrise::access::PrefixSum</label>
+        <link refid="classhyrise_1_1access_1_1_prefix_sum"/>
+        <childnode refid="3780" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3756">
+        <label>hyrise::access::Distinct</label>
+        <link refid="classhyrise_1_1access_1_1_distinct"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3786">
+        <label>hyrise::access::JoinScan</label>
+        <link refid="classhyrise_1_1access_1_1_join_scan"/>
+        <childnode refid="3780" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3796">
+        <label>hyrise::access::ScriptOperation</label>
+        <link refid="classhyrise_1_1access_1_1_script_operation"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3800">
+        <label>hyrise::access::SmallestTableScan</label>
+        <link refid="classhyrise_1_1access_1_1_smallest_table_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3788">
+        <label>hyrise::access::RadixCluster</label>
+        <link refid="classhyrise_1_1access_1_1_radix_cluster"/>
+        <childnode refid="3780" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3750">
+        <label>hyrise::access::HashValueJoin&lt; int &gt;</label>
+        <link refid="classhyrise_1_1access_1_1_hash_value_join"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3760" relation="template-instance">
+          <edgelabel>&lt; int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3761">
+        <label>hyrise::access::IndexScan</label>
+        <link refid="classhyrise_1_1access_1_1_index_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3818">
+        <label>hyrise::tx::RequestHandler</label>
+        <link refid="classhyrise_1_1tx_1_1_request_handler"/>
+        <childnode refid="3813" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3810">
+        <label>hyrise::access::UpdateScan</label>
+        <link refid="classhyrise_1_1access_1_1_update_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3808">
+        <label>hyrise::access::UnionScan</label>
+        <link refid="classhyrise_1_1access_1_1_union_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3804">
+        <label>hyrise::access::TableLoad</label>
+        <link refid="classhyrise_1_1access_1_1_table_load"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3752">
+        <label>hyrise::access::Commit</label>
+        <link refid="classhyrise_1_1access_1_1_commit"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3784">
+        <label>hyrise::access::Histogram</label>
+        <link refid="classhyrise_1_1access_1_1_histogram"/>
+        <childnode refid="3780" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3819">
+        <label>hyrise::tx::TransactionStatusHandler</label>
+        <link refid="classhyrise_1_1tx_1_1_transaction_status_handler"/>
+        <childnode refid="3818" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3773">
+        <label>hyrise::access::MergeJoin&lt; T &gt;</label>
+        <link refid="classhyrise_1_1access_1_1_merge_join"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3793">
+        <label>hyrise::access::RadixJoin</label>
+        <link refid="classhyrise_1_1access_1_1_radix_join"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3791">
+        <label>hyrise::access::PosUpdateScan</label>
+        <link refid="classhyrise_1_1access_1_1_pos_update_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3770">
+        <label>hyrise::access::MaterializingScan</label>
+        <link refid="classhyrise_1_1access_1_1_materializing_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3772">
+        <label>hyrise::access::MergeIndexScan</label>
+        <link refid="classhyrise_1_1access_1_1_merge_index_scan"/>
+        <childnode refid="3749" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3823">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/Task.h" line="30" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/Task.h" bodystart="30" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_task_done_observer_1abf104d20e7cfa1b0fd8a80edab8bc05b" prot="public" virt="pure-virtual"><scope>TaskDoneObserver</scope><name>notifyDone</name></member>
+      <member refid="class_task_done_observer_1a9b5fa53c4893dfc998aedca72b8dd278" prot="public" virt="virtual"><scope>TaskDoneObserver</scope><name>~TaskDoneObserver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_core_bound_priority_queue_8h" kind="file">
+    <compoundname>CoreBoundPriorityQueue.h</compoundname>
+    <includes refid="_abstract_core_bound_queue_8h" local="yes">AbstractCoreBoundQueue.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">queue</includes>
+    <includes local="yes">tbb/concurrent_priority_queue.h</includes>
+    <includedby refid="_core_bound_priority_queue_8cpp" local="yes">src/lib/taskscheduler/CoreBoundPriorityQueue.cpp</includedby>
+    <includedby refid="_core_bound_priority_queues_scheduler_8h" local="yes">src/lib/taskscheduler/CoreBoundPriorityQueuesScheduler.h</includedby>
+    <incdepgraph>
+      <node id="18720">
+        <label>atomic</label>
+      </node>
+      <node id="18714">
+        <label>queue</label>
+      </node>
+      <node id="18710">
+        <label>taskscheduler/AbstractTaskQueue.h</label>
+        <link refid="_abstract_task_queue_8h"/>
+        <childnode refid="18711" relation="include">
+        </childnode>
+        <childnode refid="18712" relation="include">
+        </childnode>
+        <childnode refid="18713" relation="include">
+        </childnode>
+        <childnode refid="18714" relation="include">
+        </childnode>
+        <childnode refid="18715" relation="include">
+        </childnode>
+        <childnode refid="18716" relation="include">
+        </childnode>
+        <childnode refid="18717" relation="include">
+        </childnode>
+      </node>
+      <node id="18719">
+        <label>string</label>
+      </node>
+      <node id="18721">
+        <label>tbb/concurrent_priority_queue.h</label>
+      </node>
+      <node id="18715">
+        <label>condition_variable</label>
+      </node>
+      <node id="18708">
+        <label>src/lib/taskscheduler/CoreBoundPriorityQueue.h</label>
+        <link refid="CoreBoundPriorityQueue.h"/>
+        <childnode refid="18709" relation="include">
+        </childnode>
+        <childnode refid="18718" relation="include">
+        </childnode>
+        <childnode refid="18714" relation="include">
+        </childnode>
+        <childnode refid="18721" relation="include">
+        </childnode>
+      </node>
+      <node id="18718">
+        <label>vector</label>
+      </node>
+      <node id="18709">
+        <label>AbstractCoreBoundQueue.h</label>
+        <link refid="_abstract_core_bound_queue_8h"/>
+        <childnode refid="18710" relation="include">
+        </childnode>
+        <childnode refid="18720" relation="include">
+        </childnode>
+      </node>
+      <node id="18712">
+        <label>mutex</label>
+      </node>
+      <node id="18713">
+        <label>thread</label>
+      </node>
+      <node id="18716">
+        <label>log4cxx/logger.h</label>
+      </node>
+      <node id="18711">
+        <label>memory</label>
+      </node>
+      <node id="18717">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="18718" relation="include">
+        </childnode>
+        <childnode refid="18712" relation="include">
+        </childnode>
+        <childnode refid="18711" relation="include">
+        </childnode>
+        <childnode refid="18715" relation="include">
+        </childnode>
+        <childnode refid="18719" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18725">
+        <label>src/lib/taskscheduler/CoreBoundPriorityQueuesScheduler.cpp</label>
+        <link refid="_core_bound_priority_queues_scheduler_8cpp"/>
+      </node>
+      <node id="18722">
+        <label>src/lib/taskscheduler/CoreBoundPriorityQueue.h</label>
+        <link refid="CoreBoundPriorityQueue.h"/>
+        <childnode refid="18723" relation="include">
+        </childnode>
+        <childnode refid="18724" relation="include">
+        </childnode>
+      </node>
+      <node id="18723">
+        <label>src/lib/taskscheduler/CoreBoundPriorityQueue.cpp</label>
+        <link refid="_core_bound_priority_queue_8cpp"/>
+      </node>
+      <node id="18724">
+        <label>src/lib/taskscheduler/CoreBoundPriorityQueuesScheduler.h</label>
+        <link refid="_core_bound_priority_queues_scheduler_8h"/>
+        <childnode refid="18725" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_core_bound_priority_queue" prot="public">CoreBoundPriorityQueue</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>CoreBoundPriorityQueue.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Apr<sp/>4,<sp/>2013</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>jwust</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COREBOUNDPRIORITYQUEUE_H_</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COREBOUNDPRIORITYQUEUE_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_core_bound_queue_8h" kindref="compound">AbstractCoreBoundQueue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;tbb/concurrent_priority_queue.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>A<sp/>queue<sp/>with<sp/>a<sp/>dedicated<sp/>worker<sp/>thread;<sp/>used<sp/>by<sp/>SimpleTaskScheduler<sp/>to<sp/>run<sp/>tasks</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_core_bound_priority_queue" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_core_bound_priority_queue" kindref="compound">CoreBoundPriorityQueue</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queue" kindref="compound">AbstractCoreBoundQueue</ref><sp/>{</highlight></codeline>
+<codeline lineno="20" refid="class_core_bound_priority_queue_1acb8f6013cdd474b04c2850f8ed3a1b71" refkind="member"><highlight class="normal"><sp/><sp/>tbb::concurrent_priority_queue&lt;std::shared_ptr&lt;Task&gt;<sp/>,<sp/><ref refid="class_compare_task_ptr" kindref="compound">CompareTaskPtr</ref>&gt;<sp/><ref refid="class_core_bound_priority_queue_1acb8f6013cdd474b04c2850f8ed3a1b71" kindref="member">_runQueue</ref>;</highlight></codeline>
+<codeline lineno="21" refid="class_core_bound_priority_queue_1a01158b703f353404b2403638dc377eb3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_core_bound_priority_queue_1a01158b703f353404b2403638dc377eb3" kindref="member">_blocked</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/>*<sp/>intializes<sp/>a<sp/>task<sp/>queue<sp/>and<sp/>pins<sp/>created<sp/>thread<sp/>to<sp/>given<sp/>core</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><ref refid="class_core_bound_priority_queue_1abfaf0d6f8bf23c305de0cfb01d1924eb" kindref="member">CoreBoundPriorityQueue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>core);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><ref refid="class_core_bound_priority_queue_1a281535c756c53fbe3bc55582bdab3369" kindref="member">~CoreBoundPriorityQueue</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Is<sp/>executed<sp/>by<sp/>dedicated<sp/>thread<sp/>to<sp/>work<sp/>the<sp/>queue</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_core_bound_priority_queue_1a9a2e3accc80e39bb9ef183990db447ad" kindref="member">executeTask</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/>*<sp/>push<sp/>a<sp/>new<sp/>task<sp/>to<sp/>the<sp/>queue,<sp/>tasks<sp/>are<sp/>expected<sp/>to<sp/>have<sp/>no<sp/>unmet<sp/>dependencies</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_core_bound_priority_queue_1a95f08da33da7ca42df868743ce96bc6d" kindref="member">push</ref>(std::shared_ptr&lt;Task&gt;<sp/>task);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/>*<sp/>stop<sp/>queue<sp/>and<sp/>return<sp/>remaining<sp/>tasks;<sp/>allows<sp/>resizing<sp/>the<sp/>number<sp/>of<sp/>threads<sp/>used<sp/>by<sp/>a<sp/>task<sp/>pool</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>std::vector&lt;std::shared_ptr&lt;Task&gt;<sp/>&gt;<sp/><ref refid="class_core_bound_priority_queue_1a425c2ffbc469338374628a3054f9b5df" kindref="member">stopQueue</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>std::vector&lt;std::shared_ptr&lt;Task&gt;<sp/>&gt;<sp/><ref refid="class_core_bound_priority_queue_1ab48b865d617ed792b2febdd18109d5cd" kindref="member">emptyQueue</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/>*<sp/>check<sp/>whether<sp/>queue<sp/>is<sp/>blocked<sp/>/<sp/>queue<sp/>is<sp/>blocked<sp/>if<sp/>it<sp/>is<sp/>currently<sp/>executing<sp/>a<sp/>task</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_core_bound_priority_queue_1ade126a9a03ba9c23f016305dc646aa9c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_core_bound_priority_queue_1ade126a9a03ba9c23f016305dc646aa9c" kindref="member">blocked</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_core_bound_priority_queue_1a01158b703f353404b2403638dc377eb3" kindref="member">_blocked</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>COREBOUNDPRIORITYQUEUE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/CoreBoundPriorityQueue.h"/>
+  </compounddef>
+</doxygen>

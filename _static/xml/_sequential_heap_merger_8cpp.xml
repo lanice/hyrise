@@ -1,0 +1,536 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_sequential_heap_merger_8cpp" kind="file">
+    <compoundname>SequentialHeapMerger.cpp</compoundname>
+    <includes refid="_sequential_heap_merger_8h" local="yes">storage/SequentialHeapMerger.h</includes>
+    <includes local="no">queue</includes>
+    <includes refid="vector__helpers_8h" local="yes">helper/vector_helpers.h</includes>
+    <includes refid="_dictionary_iterator_8h" local="yes">storage/DictionaryIterator.h</includes>
+    <includes refid="_column_metadata_8h" local="yes">storage/ColumnMetadata.h</includes>
+    <incdepgraph>
+      <node id="16759">
+        <label>storage/OrderPreservingDictionary.h</label>
+        <link refid="_order_preserving_dictionary_8h"/>
+        <childnode refid="16760" relation="include">
+        </childnode>
+        <childnode refid="16761" relation="include">
+        </childnode>
+        <childnode refid="16762" relation="include">
+        </childnode>
+        <childnode refid="16763" relation="include">
+        </childnode>
+        <childnode refid="16772" relation="include">
+        </childnode>
+        <childnode refid="16771" relation="include">
+        </childnode>
+        <childnode refid="16764" relation="include">
+        </childnode>
+      </node>
+      <node id="16784">
+        <label>atomic</label>
+      </node>
+      <node id="16763">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="16764" relation="include">
+        </childnode>
+        <childnode refid="16770" relation="include">
+        </childnode>
+        <childnode refid="16771" relation="include">
+        </childnode>
+      </node>
+      <node id="16794">
+        <label>functional</label>
+      </node>
+      <node id="16791">
+        <label>queue</label>
+      </node>
+      <node id="16779">
+        <label>limits</label>
+      </node>
+      <node id="16782">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="16783" relation="include">
+        </childnode>
+        <childnode refid="16784" relation="include">
+        </childnode>
+      </node>
+      <node id="16760">
+        <label>assert.h</label>
+      </node>
+      <node id="16796">
+        <label>iterator</label>
+      </node>
+      <node id="16774">
+        <label>storage/OrderIndifferentDictionary.h</label>
+        <link refid="_order_indifferent_dictionary_8h"/>
+        <childnode refid="16775" relation="include">
+        </childnode>
+        <childnode refid="16765" relation="include">
+        </childnode>
+        <childnode refid="16776" relation="include">
+        </childnode>
+        <childnode refid="16762" relation="include">
+        </childnode>
+        <childnode refid="16777" relation="include">
+        </childnode>
+        <childnode refid="16764" relation="include">
+        </childnode>
+        <childnode refid="16763" relation="include">
+        </childnode>
+        <childnode refid="16771" relation="include">
+        </childnode>
+      </node>
+      <node id="16773">
+        <label>boost/iterator/iterator_facade.hpp</label>
+      </node>
+      <node id="16781">
+        <label>cstdint</label>
+      </node>
+      <node id="16758">
+        <label>storage/ValueIdMap.hpp</label>
+        <link refid="_value_id_map_8hpp"/>
+        <childnode refid="16759" relation="include">
+        </childnode>
+        <childnode refid="16774" relation="include">
+        </childnode>
+      </node>
+      <node id="16768">
+        <label>stdint.h</label>
+      </node>
+      <node id="16767">
+        <label>stdexcept</label>
+      </node>
+      <node id="16795">
+        <label>numeric</label>
+      </node>
+      <node id="16785">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="16781" relation="include">
+        </childnode>
+        <childnode refid="16786" relation="include">
+        </childnode>
+      </node>
+      <node id="16766">
+        <label>string</label>
+      </node>
+      <node id="16776">
+        <label>map</label>
+      </node>
+      <node id="16757">
+        <label>storage/SequentialHeapMerger.h</label>
+        <link refid="_sequential_heap_merger_8h"/>
+        <childnode refid="16758" relation="include">
+        </childnode>
+        <childnode refid="16778" relation="include">
+        </childnode>
+        <childnode refid="16788" relation="include">
+        </childnode>
+      </node>
+      <node id="16775">
+        <label>exception</label>
+      </node>
+      <node id="16769">
+        <label>ostream</label>
+      </node>
+      <node id="16777">
+        <label>limits.h</label>
+      </node>
+      <node id="16792">
+        <label>helper/vector_helpers.h</label>
+        <link refid="vector__helpers_8h"/>
+        <childnode refid="16793" relation="include">
+        </childnode>
+        <childnode refid="16794" relation="include">
+        </childnode>
+        <childnode refid="16795" relation="include">
+        </childnode>
+        <childnode refid="16796" relation="include">
+        </childnode>
+      </node>
+      <node id="16764">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="16765" relation="include">
+        </childnode>
+        <childnode refid="16766" relation="include">
+        </childnode>
+        <childnode refid="16767" relation="include">
+        </childnode>
+        <childnode refid="16768" relation="include">
+        </childnode>
+        <childnode refid="16769" relation="include">
+        </childnode>
+      </node>
+      <node id="16771">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="16772" relation="include">
+        </childnode>
+        <childnode refid="16773" relation="include">
+        </childnode>
+      </node>
+      <node id="16797">
+        <label>storage/ColumnMetadata.h</label>
+        <link refid="_column_metadata_8h"/>
+        <childnode refid="16764" relation="include">
+        </childnode>
+        <childnode refid="16766" relation="include">
+        </childnode>
+        <childnode refid="16767" relation="include">
+        </childnode>
+      </node>
+      <node id="16790">
+        <label>storage/TableUtils.h</label>
+        <link refid="_table_utils_8h"/>
+        <childnode refid="16762" relation="include">
+        </childnode>
+        <childnode refid="16789" relation="include">
+        </childnode>
+      </node>
+      <node id="16772">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="16765">
+        <label>vector</label>
+      </node>
+      <node id="16788">
+        <label>storage/AbstractMerger.h</label>
+        <link refid="_abstract_merger_8h"/>
+        <childnode refid="16765" relation="include">
+        </childnode>
+        <childnode refid="16789" relation="include">
+        </childnode>
+        <childnode refid="16780" relation="include">
+        </childnode>
+        <childnode refid="16778" relation="include">
+        </childnode>
+        <childnode refid="16790" relation="include">
+        </childnode>
+      </node>
+      <node id="16756">
+        <label>src/lib/storage/SequentialHeapMerger.cpp</label>
+        <link refid="SequentialHeapMerger.cpp"/>
+        <childnode refid="16757" relation="include">
+        </childnode>
+        <childnode refid="16791" relation="include">
+        </childnode>
+        <childnode refid="16792" relation="include">
+        </childnode>
+        <childnode refid="16771" relation="include">
+        </childnode>
+        <childnode refid="16797" relation="include">
+        </childnode>
+      </node>
+      <node id="16786">
+        <label>array</label>
+      </node>
+      <node id="16761">
+        <label>iostream</label>
+      </node>
+      <node id="16789">
+        <label>unordered_map</label>
+      </node>
+      <node id="16787">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="16770">
+        <label>storage/AbstractDictionary.h</label>
+        <link refid="_abstract_dictionary_8h"/>
+        <childnode refid="16765" relation="include">
+        </childnode>
+        <childnode refid="16766" relation="include">
+        </childnode>
+        <childnode refid="16762" relation="include">
+        </childnode>
+        <childnode refid="16764" relation="include">
+        </childnode>
+      </node>
+      <node id="16778">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="16779" relation="include">
+        </childnode>
+        <childnode refid="16762" relation="include">
+        </childnode>
+        <childnode refid="16767" relation="include">
+        </childnode>
+        <childnode refid="16765" relation="include">
+        </childnode>
+        <childnode refid="16766" relation="include">
+        </childnode>
+        <childnode refid="16780" relation="include">
+        </childnode>
+        <childnode refid="16782" relation="include">
+        </childnode>
+        <childnode refid="16785" relation="include">
+        </childnode>
+        <childnode refid="16787" relation="include">
+        </childnode>
+        <childnode refid="16763" relation="include">
+        </childnode>
+        <childnode refid="16764" relation="include">
+        </childnode>
+      </node>
+      <node id="16783">
+        <label>thread</label>
+      </node>
+      <node id="16780">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="16781" relation="include">
+        </childnode>
+        <childnode refid="16766" relation="include">
+        </childnode>
+        <childnode refid="16779" relation="include">
+        </childnode>
+        <childnode refid="16762" relation="include">
+        </childnode>
+        <childnode refid="16765" relation="include">
+        </childnode>
+      </node>
+      <node id="16793">
+        <label>algorithm</label>
+      </node>
+      <node id="16762">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_dict_merge_helper" prot="public">DictMergeHelper</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sequential_heap_merger_8h" kindref="compound">storage/SequentialHeapMerger.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vector__helpers_8h" kindref="compound">helper/vector_helpers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_dictionary_iterator_8h" kindref="compound">storage/DictionaryIterator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_column_metadata_8h" kindref="compound">storage/ColumnMetadata.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_sequential_heap_merger_1a28ffc0fb9b7556f51235ae4535b4c877" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sequential_heap_merger_1a28ffc0fb9b7556f51235ae4535b4c877" kindref="member">SequentialHeapMerger::mergeValues</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;hyrise::storage::c_atable_ptr_t<sp/>&gt;<sp/>&amp;input_tables,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref><sp/>merged_table,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a8addaea8b5301cc30c8f8f634b531127" kindref="member">hyrise::storage::column_mapping_t</ref><sp/>&amp;column_mapping,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/>newSize,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>useValid,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;bool&gt;&amp;<sp/>valid)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//if<sp/>(input_tables.size<sp/>()<sp/>!=<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>throw<sp/>std::runtime_error(&quot;Merging<sp/>more<sp/>than<sp/>2<sp/>tables<sp/>is<sp/>not<sp/>supported<sp/>with<sp/>this<sp/>merger...&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>std::vector&lt;value_id_mapping_t&gt;<sp/>mappingPerAtrtibute(input_tables[0]-&gt;columnCount());</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>kv:<sp/>column_mapping)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;source<sp/>=<sp/>kv.first;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;destination<sp/>=<sp/>kv.second;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(merged_table-&gt;metadataAt(destination)-&gt;getType())<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1ad8ed01ff3ff33333d8e19db4d2818bb6a90453dde1506c63dbaaa7a1a363a06a9" kindref="member">IntegerType</ref>:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mergeValues&lt;hyrise_int_t&gt;(input_tables,<sp/>source,<sp/>merged_table,<sp/>destination,<sp/>mappingPerAtrtibute[source],<sp/>useValid,<sp/>valid);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1ad8ed01ff3ff33333d8e19db4d2818bb6a866d24e407b4ee66d3efe59486be6db4" kindref="member">FloatType</ref>:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mergeValues&lt;hyrise_float_t&gt;(input_tables,<sp/>source,<sp/>merged_table,<sp/>destination,<sp/>mappingPerAtrtibute[source],<sp/>useValid,<sp/>valid);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1ad8ed01ff3ff33333d8e19db4d2818bb6a83ccab8dfcfc3a9e8656224313fb61f3" kindref="member">StringType</ref>:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mergeValues&lt;hyrise_string_t&gt;(input_tables,<sp/>source,<sp/>merged_table,<sp/>destination,<sp/>mappingPerAtrtibute[source],<sp/>useValid,<sp/>valid);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>merged_table-&gt;resize(newSize);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>after<sp/>the<sp/>dictionaries<sp/>are<sp/>merged<sp/>copy<sp/>the<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>kv:<sp/>column_mapping)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;source<sp/>=<sp/>kv.first;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;destination<sp/>=<sp/>kv.second;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>the<sp/>actual<sp/>values<sp/>and<sp/>apply<sp/>mapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sequential_heap_merger_1a2b14bd9dca9cb2c3658685e59343a297" kindref="member">copyValues</ref>(input_tables,<sp/>source,<sp/>merged_table,<sp/>destination,<sp/>mappingPerAtrtibute[source],<sp/>useValid,<sp/>valid);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="56" refid="class_sequential_heap_merger_1ae27395f4e0e650922934fda309724f9a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sequential_heap_merger_1a28ffc0fb9b7556f51235ae4535b4c877" kindref="member">SequentialHeapMerger::mergeValues</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;hyrise::storage::c_atable_ptr_t<sp/>&gt;<sp/>&amp;input_tables,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>source_column_index,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref><sp/>merged_table,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>destination_column_index,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sequential_heap_merger_1a4e7cb331dfb367e2a1d479f833d4b1db" kindref="member">value_id_mapping_t</ref><sp/>&amp;value_id_mapping,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>useValid,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;bool&gt;&amp;<sp/>valid)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>std::vector&lt;AbstractTable::SharedDictionaryPtr<sp/>&gt;<sp/>value_id_maps;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref><sp/>new_dict;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>shortcut<sp/>for<sp/>dicts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>value_id_maps.reserve(input_tables.size());</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>table<sp/>=<sp/>0;<sp/>table<sp/>&lt;<sp/>input_tables.size();<sp/>table++)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((merged_table-&gt;metadataAt(destination_column_index)-&gt;getType()<sp/>!=</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_tables[table]-&gt;metadataAt(source_column_index)-&gt;getType()))<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Dictionary<sp/>types<sp/>don&apos;t<sp/>match&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dict<sp/>=<sp/>std::dynamic_pointer_cast&lt;<ref refid="class_base_dictionary" kindref="compound">BaseDictionary&lt;T&gt;</ref>&gt;(input_tables[table]-&gt;dictionaryAt(source_column_index));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>value_id_maps.push_back(dict);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>new<sp/>BaseDictionary<sp/>-<sp/>shrink<sp/>when<sp/>merge<sp/>finished?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>new_dict<sp/>=<sp/>createNewDict&lt;T&gt;(input_tables,<sp/>value_id_maps,<sp/>value_id_mapping,<sp/>source_column_index,<sp/>useValid,<sp/>valid);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>new<sp/>value<sp/>id<sp/>map<sp/>for<sp/>column</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>merged_table-&gt;setDictionaryAt(new_dict,<sp/>destination_column_index);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="86" refid="struct_dict_merge_helper" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_dict_merge_helper" kindref="compound">DictMergeHelper</ref><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="struct_dict_merge_helper_1a435e00f7ce05b52ad9e116261084f2a7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="struct_dict_merge_helper_1a435e00f7ce05b52ad9e116261084f2a7" kindref="member">tab_index</ref>;</highlight></codeline>
+<codeline lineno="89" refid="struct_dict_merge_helper_1aa2c7e2966fc412095da91d41d7b5e9a9" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;bool&gt;<sp/><ref refid="struct_dict_merge_helper_1aa2c7e2966fc412095da91d41d7b5e9a9" kindref="member">ref</ref>;</highlight></codeline>
+<codeline lineno="90" refid="struct_dict_merge_helper_1aefc3529ca8cef3a28eb9f2010a316830" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_dictionary_iterator" kindref="compound">DictionaryIterator&lt;T&gt;</ref><sp/><ref refid="struct_dict_merge_helper_1aefc3529ca8cef3a28eb9f2010a316830" kindref="member">it</ref>;</highlight></codeline>
+<codeline lineno="91" refid="struct_dict_merge_helper_1a81a52291a568e07b6e1d95c2b6fd26ec" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_dictionary_iterator" kindref="compound">DictionaryIterator&lt;T&gt;</ref><sp/><ref refid="struct_dict_merge_helper_1a81a52291a568e07b6e1d95c2b6fd26ec" kindref="member">end</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="struct_dict_merge_helper_1aff01ed1135f7c737c11e56f32ee2c34d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_dict_merge_helper_1aff01ed1135f7c737c11e56f32ee2c34d" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_dict_merge_helper" kindref="compound">DictMergeHelper</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="struct_dict_merge_helper_1aefc3529ca8cef3a28eb9f2010a316830" kindref="member">it</ref><sp/>&gt;<sp/>*(other.<ref refid="struct_dict_merge_helper_1aefc3529ca8cef3a28eb9f2010a316830" kindref="member">it</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="struct_dict_merge_helper_1a74e8257f6c5924abdbb5cd6b0988a928" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_dict_merge_helper_1a74e8257f6c5924abdbb5cd6b0988a928" kindref="member">next</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_dict_merge_helper_1aefc3529ca8cef3a28eb9f2010a316830" kindref="member">it</ref>++;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="struct_dict_merge_helper_1a4ee8ca270346951ec3892bbbb1a34bda" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_dict_merge_helper_1a4ee8ca270346951ec3892bbbb1a34bda" kindref="member">valid</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>vid<sp/>=<sp/><ref refid="struct_dict_merge_helper_1aefc3529ca8cef3a28eb9f2010a316830" kindref="member">it</ref>.getValueId();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_dict_merge_helper_1aa2c7e2966fc412095da91d41d7b5e9a9" kindref="member">ref</ref>[vid];</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="struct_dict_merge_helper_1ab29287f504789bf5a1f064ab95f25d88" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_dict_merge_helper_1ab29287f504789bf5a1f064ab95f25d88" kindref="member">done</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_dict_merge_helper_1aefc3529ca8cef3a28eb9f2010a316830" kindref="member">it</ref><sp/>==<sp/><ref refid="struct_dict_merge_helper_1a81a52291a568e07b6e1d95c2b6fd26ec" kindref="member">end</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="struct_dict_merge_helper_1a42d60949a0ef99a6e3d8fd7e0b0b9a46" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_dict_merge_helper_1a42d60949a0ef99a6e3d8fd7e0b0b9a46" kindref="member">print</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/><ref refid="struct_dict_merge_helper_1a435e00f7ce05b52ad9e116261084f2a7" kindref="member">tab_index</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>*<ref refid="struct_dict_merge_helper_1aefc3529ca8cef3a28eb9f2010a316830" kindref="member">it</ref><sp/>&lt;&lt;<sp/>std::boolalpha<sp/>&lt;&lt;<sp/><ref refid="struct_dict_merge_helper_1a4ee8ca270346951ec3892bbbb1a34bda" kindref="member">valid</ref>()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="117" refid="class_sequential_heap_merger_1af44914066803ef749b542705f9efafee" refkind="member"><highlight class="normal"><ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref><sp/><ref refid="class_sequential_heap_merger_1af44914066803ef749b542705f9efafee" kindref="member">SequentialHeapMerger::createNewDict</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;hyrise::storage::c_atable_ptr_t<sp/>&gt;<sp/>&amp;input_tables,<sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;AbstractTable::SharedDictionaryPtr<sp/>&gt;<sp/>&amp;value_id_maps,<sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;value_id_t&gt;<sp/>&gt;<sp/>&amp;value_id_mapping,<sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column_index,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>useValid,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;bool&gt;&amp;<sp/>valid)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Heap<sp/>Queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>std::priority_queue&lt;DictMergeHelper&lt;T&gt;&gt;<sp/>queue;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>value_id_mapping.resize(input_tables.size());</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>part_counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>p=0,<sp/>stop=input_tables.size();<sp/>p<sp/>&lt;<sp/>stop;<sp/>++p)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dict<sp/>=<sp/>std::dynamic_pointer_cast&lt;<ref refid="class_base_dictionary" kindref="compound">BaseDictionary&lt;T&gt;</ref>&gt;(value_id_maps[p]);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>value_id_mapping[p].resize(value_id_maps[p]-&gt;size());</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_dict_merge_helper" kindref="compound">DictMergeHelper&lt;T&gt;</ref><sp/>helper;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>helper.<ref refid="struct_dict_merge_helper_1aefc3529ca8cef3a28eb9f2010a316830" kindref="member">it</ref><sp/>=<sp/>dict-&gt;begin();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>helper.<ref refid="struct_dict_merge_helper_1a81a52291a568e07b6e1d95c2b6fd26ec" kindref="member">end</ref><sp/>=<sp/>dict-&gt;end();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>helper.<ref refid="struct_dict_merge_helper_1a435e00f7ce05b52ad9e116261084f2a7" kindref="member">tab_index</ref><sp/>=<sp/>p;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(useValid)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>helper.<ref refid="struct_dict_merge_helper_1aa2c7e2966fc412095da91d41d7b5e9a9" kindref="member">ref</ref>.resize(dict-&gt;size(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=0,<sp/>tabs<sp/>=<sp/>input_tables[p]-&gt;size();<sp/>i<sp/>&lt;<sp/>tabs;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(valid[part_counter<sp/>+<sp/>i])<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>helper.<ref refid="struct_dict_merge_helper_1aa2c7e2966fc412095da91d41d7b5e9a9" kindref="member">ref</ref>[input_tables[p]-&gt;getValueId(column_index,<sp/>i).valueId]<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>helper.<ref refid="struct_dict_merge_helper_1aa2c7e2966fc412095da91d41d7b5e9a9" kindref="member">ref</ref>.resize(dict-&gt;size(),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!helper.<ref refid="struct_dict_merge_helper_1ab29287f504789bf5a1f064ab95f25d88" kindref="member">done</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>queue.push(helper);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>the<sp/>row<sp/>counter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>part_counter<sp/>+=<sp/>input_tables[p]-&gt;size();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>new<sp/>Dict</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>first<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>assigned<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>T<sp/>last_value;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>new_dict<sp/>=<sp/>std::make_shared&lt;OrderPreservingDictionary&lt;T&gt;&gt;(<sp/><ref refid="namespacehyrise_1_1functional_1aa5a5d6518ef70d11b4f8a77ee8c6b767" kindref="member">hyrise::functional::sum</ref>(value_id_mapping,<sp/>0ul,<sp/>[](std::vector&lt;value_id_t&gt;&amp;<sp/>v){<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v.size();<sp/>}));</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!queue.empty())<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>element<sp/>=<sp/>queue.top();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>curr_val<sp/>=<sp/>*(element.it);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>queue.pop();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(first<sp/>||<sp/>!assigned<sp/>||<sp/>(last_value<sp/>!=<sp/>curr_val))<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(element.valid())<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_dict-&gt;addValue(curr_val);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(element.valid())<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>value_id_mapping[element.tab_index][element.it.getValueId()]<sp/>=<sp/>new_dict-&gt;size()<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>last_value<sp/>=<sp/>curr_val;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>assigned<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>element.next();</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!element.done())<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>queue.push(element);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>first<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>new_dict-&gt;shrink();</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>new_dict;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="class_sequential_heap_merger_1a2b14bd9dca9cb2c3658685e59343a297" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sequential_heap_merger_1a2b14bd9dca9cb2c3658685e59343a297" kindref="member">SequentialHeapMerger::copyValues</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;hyrise::storage::c_atable_ptr_t<sp/>&gt;<sp/>&amp;input_tables,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>source_column_index,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref><sp/>&amp;merged_table,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>destination_column_index,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;value_id_t&gt;<sp/>&gt;<sp/>&amp;value_id_mapping,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>useValid,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;bool&gt;&amp;<sp/>valid)<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><ref refid="class_value_id" kindref="compound">ValueId</ref><sp/>value_id;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>all<sp/>value<sp/>ids<sp/>to<sp/>the<sp/>new<sp/>doc<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>apply<sp/>value<sp/>id<sp/>mapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>merged_table_row<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>part_counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>table<sp/>=<sp/>0;<sp/>table<sp/>&lt;<sp/>input_tables.size();<sp/>table++)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0;<sp/>row<sp/>&lt;<sp/>input_tables[table]-&gt;size();<sp/>row++)<sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!useValid<sp/>||<sp/>(useValid<sp/>&amp;&amp;<sp/>valid[part_counter<sp/>+<sp/>row]))<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value_id.<ref refid="class_value_id_1aba4b7fbd1c7acac6ae904e2e5862c7af" kindref="member">valueId</ref><sp/>=<sp/>input_tables[table]-&gt;getValueId(source_column_index,<sp/>row).valueId;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value_id.<ref refid="class_value_id_1aba4b7fbd1c7acac6ae904e2e5862c7af" kindref="member">valueId</ref><sp/>=<sp/>value_id_mapping[table][value_id.<ref refid="class_value_id_1aba4b7fbd1c7acac6ae904e2e5862c7af" kindref="member">valueId</ref>];<sp/></highlight><highlight class="comment">//<sp/>translate<sp/>value<sp/>id<sp/>to<sp/>new<sp/>dict</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>merged_table-&gt;setValueId(destination_column_index,<sp/>merged_table_row,<sp/>value_id);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>merged_table_row++;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>part_counter<sp/>+=<sp/>input_tables[table]-&gt;size();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="class_sequential_heap_merger_1ad36db87cfd64e6f44baa329cca58cafc" refkind="member"><highlight class="normal"><ref refid="class_abstract_merger" kindref="compound">AbstractMerger</ref><sp/>*<ref refid="class_sequential_heap_merger_1ad36db87cfd64e6f44baa329cca58cafc" kindref="member">SequentialHeapMerger::copy</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_sequential_heap_merger" kindref="compound">SequentialHeapMerger</ref>();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/SequentialHeapMerger.cpp"/>
+  </compounddef>
+</doxygen>

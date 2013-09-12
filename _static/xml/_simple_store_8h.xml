@@ -1,0 +1,484 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_simple_store_8h" kind="file">
+    <compoundname>SimpleStore.h</compoundname>
+    <includes refid="types_8h" local="no">helper/types.h</includes>
+    <includes refid="_abstract_table_8h" local="yes">storage/AbstractTable.h</includes>
+    <includes refid="_raw_table_8h" local="yes">storage/RawTable.h</includes>
+    <includes refid="storage__types_8h" local="yes">storage/storage_types.h</includes>
+    <includes refid="_table_merger_8h" local="yes">storage/TableMerger.h</includes>
+    <includedby refid="_response_task_8cpp" local="yes">src/lib/access/system/ResponseTask.cpp</includedby>
+    <includedby refid="_loader_8cpp" local="yes">src/lib/io/Loader.cpp</includedby>
+    <includedby refid="_simple_store_8cpp" local="yes">src/lib/storage/SimpleStore.cpp</includedby>
+    <includedby refid="_simple_store_merger_8cpp" local="yes">src/lib/storage/SimpleStoreMerger.cpp</includedby>
+    <includedby refid="storage_8h" local="no">src/lib/storage.h</includedby>
+    <incdepgraph>
+      <node id="16930">
+        <label>atomic</label>
+      </node>
+      <node id="16934">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="16935" relation="include">
+        </childnode>
+        <childnode refid="16938" relation="include">
+        </childnode>
+        <childnode refid="16939" relation="include">
+        </childnode>
+      </node>
+      <node id="16949">
+        <label>functional</label>
+      </node>
+      <node id="16919">
+        <label>src/lib/storage/SimpleStore.h</label>
+        <link refid="SimpleStore.h"/>
+        <childnode refid="16920" relation="include">
+        </childnode>
+        <childnode refid="16926" relation="include">
+        </childnode>
+        <childnode refid="16942" relation="include">
+        </childnode>
+        <childnode refid="16935" relation="include">
+        </childnode>
+        <childnode refid="16945" relation="include">
+        </childnode>
+      </node>
+      <node id="16923">
+        <label>limits</label>
+      </node>
+      <node id="16928">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="16929" relation="include">
+        </childnode>
+        <childnode refid="16930" relation="include">
+        </childnode>
+      </node>
+      <node id="16951">
+        <label>iterator</label>
+      </node>
+      <node id="16941">
+        <label>boost/iterator/iterator_facade.hpp</label>
+      </node>
+      <node id="16921">
+        <label>cstdint</label>
+      </node>
+      <node id="16936">
+        <label>stdint.h</label>
+      </node>
+      <node id="16927">
+        <label>stdexcept</label>
+      </node>
+      <node id="16950">
+        <label>numeric</label>
+      </node>
+      <node id="16931">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="16921" relation="include">
+        </childnode>
+        <childnode refid="16932" relation="include">
+        </childnode>
+      </node>
+      <node id="16922">
+        <label>string</label>
+      </node>
+      <node id="16937">
+        <label>ostream</label>
+      </node>
+      <node id="16947">
+        <label>helper/vector_helpers.h</label>
+        <link refid="vector__helpers_8h"/>
+        <childnode refid="16948" relation="include">
+        </childnode>
+        <childnode refid="16949" relation="include">
+        </childnode>
+        <childnode refid="16950" relation="include">
+        </childnode>
+        <childnode refid="16951" relation="include">
+        </childnode>
+      </node>
+      <node id="16935">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="16925" relation="include">
+        </childnode>
+        <childnode refid="16922" relation="include">
+        </childnode>
+        <childnode refid="16927" relation="include">
+        </childnode>
+        <childnode refid="16936" relation="include">
+        </childnode>
+        <childnode refid="16937" relation="include">
+        </childnode>
+      </node>
+      <node id="16939">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="16940" relation="include">
+        </childnode>
+        <childnode refid="16941" relation="include">
+        </childnode>
+      </node>
+      <node id="16944">
+        <label>storage/ColumnMetadata.h</label>
+        <link refid="_column_metadata_8h"/>
+        <childnode refid="16935" relation="include">
+        </childnode>
+        <childnode refid="16922" relation="include">
+        </childnode>
+        <childnode refid="16927" relation="include">
+        </childnode>
+      </node>
+      <node id="16954">
+        <label>storage/TableUtils.h</label>
+        <link refid="_table_utils_8h"/>
+        <childnode refid="16924" relation="include">
+        </childnode>
+        <childnode refid="16953" relation="include">
+        </childnode>
+      </node>
+      <node id="16940">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="16925">
+        <label>vector</label>
+      </node>
+      <node id="16952">
+        <label>storage/AbstractMerger.h</label>
+        <link refid="_abstract_merger_8h"/>
+        <childnode refid="16925" relation="include">
+        </childnode>
+        <childnode refid="16953" relation="include">
+        </childnode>
+        <childnode refid="16920" relation="include">
+        </childnode>
+        <childnode refid="16926" relation="include">
+        </childnode>
+        <childnode refid="16954" relation="include">
+        </childnode>
+      </node>
+      <node id="16932">
+        <label>array</label>
+      </node>
+      <node id="16945">
+        <label>storage/TableMerger.h</label>
+        <link refid="_table_merger_8h"/>
+        <childnode refid="16925" relation="include">
+        </childnode>
+        <childnode refid="16920" relation="include">
+        </childnode>
+        <childnode refid="16926" relation="include">
+        </childnode>
+        <childnode refid="16946" relation="include">
+        </childnode>
+        <childnode refid="16952" relation="include">
+        </childnode>
+      </node>
+      <node id="16953">
+        <label>unordered_map</label>
+      </node>
+      <node id="16933">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="16938">
+        <label>storage/AbstractDictionary.h</label>
+        <link refid="_abstract_dictionary_8h"/>
+        <childnode refid="16925" relation="include">
+        </childnode>
+        <childnode refid="16922" relation="include">
+        </childnode>
+        <childnode refid="16924" relation="include">
+        </childnode>
+        <childnode refid="16935" relation="include">
+        </childnode>
+      </node>
+      <node id="16926">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="16923" relation="include">
+        </childnode>
+        <childnode refid="16924" relation="include">
+        </childnode>
+        <childnode refid="16927" relation="include">
+        </childnode>
+        <childnode refid="16925" relation="include">
+        </childnode>
+        <childnode refid="16922" relation="include">
+        </childnode>
+        <childnode refid="16920" relation="include">
+        </childnode>
+        <childnode refid="16928" relation="include">
+        </childnode>
+        <childnode refid="16931" relation="include">
+        </childnode>
+        <childnode refid="16933" relation="include">
+        </childnode>
+        <childnode refid="16934" relation="include">
+        </childnode>
+        <childnode refid="16935" relation="include">
+        </childnode>
+      </node>
+      <node id="16942">
+        <label>storage/RawTable.h</label>
+        <link refid="_raw_table_8h"/>
+        <childnode refid="16943" relation="include">
+        </childnode>
+        <childnode refid="16921" relation="include">
+        </childnode>
+        <childnode refid="16927" relation="include">
+        </childnode>
+        <childnode refid="16925" relation="include">
+        </childnode>
+        <childnode refid="16935" relation="include">
+        </childnode>
+        <childnode refid="16926" relation="include">
+        </childnode>
+        <childnode refid="16944" relation="include">
+        </childnode>
+      </node>
+      <node id="16929">
+        <label>thread</label>
+      </node>
+      <node id="16920">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="16921" relation="include">
+        </childnode>
+        <childnode refid="16922" relation="include">
+        </childnode>
+        <childnode refid="16923" relation="include">
+        </childnode>
+        <childnode refid="16924" relation="include">
+        </childnode>
+        <childnode refid="16925" relation="include">
+        </childnode>
+      </node>
+      <node id="16946">
+        <label>storage/AbstractMergeStrategy.h</label>
+        <link refid="_abstract_merge_strategy_8h"/>
+        <childnode refid="16925" relation="include">
+        </childnode>
+        <childnode refid="16926" relation="include">
+        </childnode>
+        <childnode refid="16947" relation="include">
+        </childnode>
+      </node>
+      <node id="16948">
+        <label>algorithm</label>
+      </node>
+      <node id="16943">
+        <label>cstring</label>
+      </node>
+      <node id="16924">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16956">
+        <label>src/lib/access/system/ResponseTask.cpp</label>
+        <link refid="_response_task_8cpp"/>
+      </node>
+      <node id="16963">
+        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
+        <link refid="_hash_value_join_8cpp"/>
+      </node>
+      <node id="16955">
+        <label>src/lib/storage/SimpleStore.h</label>
+        <link refid="SimpleStore.h"/>
+        <childnode refid="16956" relation="include">
+        </childnode>
+        <childnode refid="16957" relation="include">
+        </childnode>
+        <childnode refid="16958" relation="include">
+        </childnode>
+        <childnode refid="16959" relation="include">
+        </childnode>
+        <childnode refid="16960" relation="include">
+        </childnode>
+      </node>
+      <node id="16961">
+        <label>src/bin/perf_regression/GroupByScan.cpp</label>
+        <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="16968">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
+      </node>
+      <node id="16957">
+        <label>src/lib/io/Loader.cpp</label>
+        <link refid="_loader_8cpp"/>
+      </node>
+      <node id="16965">
+        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
+      </node>
+      <node id="16959">
+        <label>src/lib/storage/SimpleStoreMerger.cpp</label>
+        <link refid="_simple_store_merger_8cpp"/>
+      </node>
+      <node id="16966">
+        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
+        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="16967">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
+      </node>
+      <node id="16962">
+        <label>src/bin/perf_regression/HashJoin.cpp</label>
+        <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="16964">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="16960">
+        <label>src/lib/storage.h</label>
+        <link refid="storage_8h"/>
+        <childnode refid="16961" relation="include">
+        </childnode>
+        <childnode refid="16962" relation="include">
+        </childnode>
+        <childnode refid="16963" relation="include">
+        </childnode>
+        <childnode refid="16964" relation="include">
+        </childnode>
+        <childnode refid="16965" relation="include">
+        </childnode>
+        <childnode refid="16966" relation="include">
+        </childnode>
+        <childnode refid="16967" relation="include">
+        </childnode>
+        <childnode refid="16968" relation="include">
+        </childnode>
+      </node>
+      <node id="16958">
+        <label>src/lib/storage/SimpleStore.cpp</label>
+        <link refid="_simple_store_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhyrise_1_1storage_1_1_simple_store" prot="public">hyrise::storage::SimpleStore</innerclass>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1storage">hyrise::storage</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_STORAGE_SIMPLESTORE_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_STORAGE_SIMPLESTORE_H_</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="types_8h" kindref="compound">helper/types.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_table_8h" kindref="compound">storage/AbstractTable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_raw_table_8h" kindref="compound">storage/RawTable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="storage__types_8h" kindref="compound">storage/storage_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_table_merger_8h" kindref="compound">storage/TableMerger.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">storage<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classhyrise_1_1storage_1_1_simple_store" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1storage_1_1_simple_store" kindref="compound">SimpleStore</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_table" kindref="compound">AbstractTable</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classhyrise_1_1storage_1_1_simple_store_1a02a793bf9164b29c44a98f339313a6ce" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a02a793bf9164b29c44a98f339313a6ce" kindref="member">_main</ref>;</highlight></codeline>
+<codeline lineno="19" refid="classhyrise_1_1storage_1_1_simple_store_1a3ddc4346c5a8f621a8bde5376d3971a0" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;RawTable&gt;<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a3ddc4346c5a8f621a8bde5376d3971a0" kindref="member">_delta</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classhyrise_1_1storage_1_1_simple_store_1a799c62c65580c7d3319a909e62cf4a06" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_raw_table" kindref="compound">RawTable</ref><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a799c62c65580c7d3319a909e62cf4a06" kindref="member">delta_table_t</ref>;</highlight></codeline>
+<codeline lineno="24" refid="classhyrise_1_1storage_1_1_simple_store_1a16abce8ae71f807b56495851c0bd358a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_abstract_table" kindref="compound">AbstractTable</ref><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a16abce8ae71f807b56495851c0bd358a" kindref="member">main_table_t</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a75afd6cde8cab89760cd4fa24ccb8308" kindref="member">SimpleStore</ref>(<ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref><sp/>t);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classhyrise_1_1storage_1_1_simple_store_1ac83e35b300b00752aeb4943caec3a5f7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1ac83e35b300b00752aeb4943caec3a5f7" kindref="member">~SimpleStore</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1aac60eebabc154fadd77d2b1eae49e4e2" kindref="member">columnCount</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a2e8a3b054c6cfd99a5b970870823380e" kindref="member">size</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classhyrise_1_1storage_1_1_simple_store_1a14d67dbdaf5635c9470590519644ce19" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a14d67dbdaf5635c9470590519644ce19" kindref="member">subtableCount</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;<sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classhyrise_1_1storage_1_1_simple_store_1aab14539cc8f384c354d1b10ff63c62f2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref>*<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1aab14539cc8f384c354d1b10ff63c62f2" kindref="member">metadataAt</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>c,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>r,<sp/><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref><sp/>t)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a02a793bf9164b29c44a98f339313a6ce" kindref="member">_main</ref>-&gt;metadataAt(c,r,t);<sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classhyrise_1_1storage_1_1_simple_store_1aabafdeebf9458fbdcd917c00479dc07e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1aabafdeebf9458fbdcd917c00479dc07e" kindref="member">copy_structure_modifiable</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1aa2c4369081de5fd9f081ba05ae7531f7" kindref="member">field_list_t</ref><sp/>*fields<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>initial_size<sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>with_containers<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;RawTable<sp/>(&quot;</highlight><highlight class="normal">+<sp/><ref refid="storage__types_8h_1ab7143516abfc846814d6de7c212cc5c7" kindref="member">STORAGE_DEBUG_WHERE_WHAT</ref>(__FILE__,<sp/>__LINE__)<sp/>+</highlight><highlight class="stringliteral">&quot;)<sp/>does<sp/>not<sp/>support<sp/>copy<sp/>structure<sp/>modifiable&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="60" refid="classhyrise_1_1storage_1_1_simple_store_1ae449c9db44cadd5d4120856fc8f9b0ac" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1ae449c9db44cadd5d4120856fc8f9b0ac" kindref="member">setValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>column,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>row,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(row<sp/>&lt;<sp/>_main-&gt;<ref refid="classhyrise_1_1storage_1_1_simple_store_1a2e8a3b054c6cfd99a5b970870823380e" kindref="member">size</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a02a793bf9164b29c44a98f339313a6ce" kindref="member">_main</ref>-&gt;template<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1ae449c9db44cadd5d4120856fc8f9b0ac" kindref="member">setValue</ref>(column,<sp/>row,<sp/>value);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>delta_row<sp/>=<sp/>row<sp/>-<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a02a793bf9164b29c44a98f339313a6ce" kindref="member">_main</ref>-&gt;size();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a3ddc4346c5a8f621a8bde5376d3971a0" kindref="member">_delta</ref>-&gt;template<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1ae449c9db44cadd5d4120856fc8f9b0ac" kindref="member">setValue</ref>(column,<sp/>delta_row,<sp/>value);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="70" refid="classhyrise_1_1storage_1_1_simple_store_1a5e8704607538f7222f991684a93d4eb4" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a5e8704607538f7222f991684a93d4eb4" kindref="member">getValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>column,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>row)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(row<sp/>&lt;<sp/>_main-&gt;<ref refid="classhyrise_1_1storage_1_1_simple_store_1a2e8a3b054c6cfd99a5b970870823380e" kindref="member">size</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a02a793bf9164b29c44a98f339313a6ce" kindref="member">_main</ref>-&gt;template<sp/>getValue&lt;T&gt;(column,<sp/>row);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>delta_row<sp/>=<sp/>row<sp/>-<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a02a793bf9164b29c44a98f339313a6ce" kindref="member">_main</ref>-&gt;size();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a3ddc4346c5a8f621a8bde5376d3971a0" kindref="member">_delta</ref>-&gt;template<sp/>getValue&lt;T&gt;(column,<sp/>delta_row);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="class_value_id" kindref="compound">ValueId</ref><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a988d95545a47b56ad9f3eb560bf1756c" kindref="member">getValueId</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a99c4d0b57761231933baef127b97337e" kindref="member">setValueId</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_value_id" kindref="compound">ValueId</ref><sp/>valueId);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a3b1cbce6fc67883e62894434272060a9" kindref="member">partitionWidth</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>slice)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref>&amp;<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a886c94c965280985eb4dfcdb6e65c10f" kindref="member">dictionaryAt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref><sp/>table_id<sp/>=<sp/>0)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref>&amp;<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1affe55ed8a3d5fbab52cce5457344c41a" kindref="member">dictionaryByTableId</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref><sp/>table_id)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a14b32151f2728839601cd62c548007be" kindref="member">setDictionaryAt</ref>(<ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref><sp/>dict,<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref><sp/>table_id<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1addc1af4ae70ab87603f3c62f254245f7" kindref="member">partitionCount</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classhyrise_1_1storage_1_1_simple_store_1aaa3485814afde550da1163bb5059d265" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;delta_table_t&gt;<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1aaa3485814afde550da1163bb5059d265" kindref="member">getDelta</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a3ddc4346c5a8f621a8bde5376d3971a0" kindref="member">_delta</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="118" refid="classhyrise_1_1storage_1_1_simple_store_1ac9ecf81bb102579db538c86ab2a382cb" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;main_table_t&gt;<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1ac9ecf81bb102579db538c86ab2a382cb" kindref="member">getMain</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a02a793bf9164b29c44a98f339313a6ce" kindref="member">_main</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a542554a914a1ef379f9c4172f4676a41" kindref="member">copy</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classhyrise_1_1storage_1_1_simple_store_1aecf3f597b161a4750901206edce9ca0e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1aecf3f597b161a4750901206edce9ca0e" kindref="member">copy_structure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1aa2c4369081de5fd9f081ba05ae7531f7" kindref="member">field_list_t</ref><sp/>*fields<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reuse_dict<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>initial_size<sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>with_containers<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>compressed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="storage__types_8h_1ace3f9b37ccb74a8e75ffd7e8c564a0d0" kindref="member">STORAGE_NOT_IMPLEMENTED</ref>(<ref refid="classhyrise_1_1storage_1_1_simple_store" kindref="compound">SimpleStore</ref>,<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1aecf3f597b161a4750901206edce9ca0e" kindref="member">copy_structure</ref>());</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a5b17a8ec8af1166bba51ce5e7248d1bf" kindref="member">merge</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a97c8911ba5b7d5d895a54a1fc94af43d" kindref="member">mergeWith</ref>(std::unique_ptr&lt;TableMerger&gt;<sp/>merger);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a25465773b2ade0b731684630f0113a69" kindref="member">print</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>limit<sp/>=<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)<sp/>-1)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1aa6181dddf27e89aa0110e09667ab9940" kindref="member">debugStructure</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>level=0)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1a0432f5337e50e5950f6a8434e9b112cd" kindref="member">createDelta</ref>();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="classhyrise_1_1storage_1_1_simple_store_1ab3bf3741ce726bb157c0612844c92b4d" refkind="member"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;TableMerger&gt;<sp/><ref refid="classhyrise_1_1storage_1_1_simple_store_1ab3bf3741ce726bb157c0612844c92b4d" kindref="member">_merger</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//SRC_LIB_STORAGE_SIMPLESTORE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/SimpleStore.h"/>
+  </compounddef>
+</doxygen>

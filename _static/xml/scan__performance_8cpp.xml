@@ -1,0 +1,755 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="scan__performance_8cpp" kind="file">
+    <compoundname>scan_performance.cpp</compoundname>
+    <includes local="no">gtest/gtest-bench.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">random</includes>
+    <includes local="no">cstdint</includes>
+    <includes refid="types_8h" local="yes">helper/types.h</includes>
+    <includes refid="storage__types_8h" local="yes">storage/storage_types.h</includes>
+    <includes refid="_table_scan_8h" local="yes">access/TableScan.h</includes>
+    <includes refid="pred___equals_expression_8h" local="yes">access/expressions/pred_EqualsExpression.h</includes>
+    <includes refid="_vector_loader_8h" local="yes">io/VectorLoader.h</includes>
+    <includes refid="_string_loader_8h" local="yes">io/StringLoader.h</includes>
+    <includes refid="_loader_8h" local="yes">io/Loader.h</includes>
+    <includes refid="make__unique_8h" local="yes">helper/make_unique.h</includes>
+    <includes refid="_abstract_table_8h" local="yes">storage/AbstractTable.h</includes>
+    <includes refid="_example_expression_8h" local="yes">access/expressions/ExampleExpression.h</includes>
+    <incdepgraph>
+      <node id="1251">
+        <label>access/system/QueryParser.h</label>
+        <link refid="_query_parser_8h"/>
+        <childnode refid="1244" relation="include">
+        </childnode>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1233" relation="include">
+        </childnode>
+        <childnode refid="1237" relation="include">
+        </childnode>
+        <childnode refid="1248" relation="include">
+        </childnode>
+        <childnode refid="1252" relation="include">
+        </childnode>
+        <childnode refid="1253" relation="include">
+        </childnode>
+      </node>
+      <node id="1272">
+        <label>storage/OrderPreservingDictionary.h</label>
+        <link refid="_order_preserving_dictionary_8h"/>
+        <childnode refid="1273" relation="include">
+        </childnode>
+        <childnode refid="1274" relation="include">
+        </childnode>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1263" relation="include">
+        </childnode>
+        <childnode refid="1266" relation="include">
+        </childnode>
+        <childnode refid="1265" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+      </node>
+      <node id="1259">
+        <label>atomic</label>
+      </node>
+      <node id="1263">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="1236" relation="include">
+        </childnode>
+        <childnode refid="1264" relation="include">
+        </childnode>
+        <childnode refid="1265" relation="include">
+        </childnode>
+      </node>
+      <node id="1293">
+        <label>access/expressions/ExampleExpression.h</label>
+        <link refid="_example_expression_8h"/>
+        <childnode refid="1252" relation="include">
+        </childnode>
+        <childnode refid="1281" relation="include">
+        </childnode>
+        <childnode refid="1232" relation="include">
+        </childnode>
+        <childnode refid="1294" relation="include">
+        </childnode>
+        <childnode refid="1272" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+      </node>
+      <node id="1241">
+        <label>access/system/PlanOperation.h</label>
+        <link refid="_plan_operation_8h"/>
+        <childnode refid="1242" relation="include">
+        </childnode>
+        <childnode refid="1250" relation="include">
+        </childnode>
+        <childnode refid="1251" relation="include">
+        </childnode>
+        <childnode refid="1254" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+        <childnode refid="1232" relation="include">
+        </childnode>
+        <childnode refid="1256" relation="include">
+        </childnode>
+        <childnode refid="1252" relation="include">
+        </childnode>
+      </node>
+      <node id="1234">
+        <label>limits</label>
+      </node>
+      <node id="1279">
+        <label>join_predicates.h</label>
+        <link refid="join__predicates_8h"/>
+        <childnode refid="1232" relation="include">
+        </childnode>
+        <childnode refid="1278" relation="include">
+        </childnode>
+      </node>
+      <node id="1246">
+        <label>helper/epoch.h</label>
+        <link refid="epoch_8h"/>
+        <childnode refid="1238" relation="include">
+        </childnode>
+      </node>
+      <node id="1257">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="1258" relation="include">
+        </childnode>
+        <childnode refid="1259" relation="include">
+        </childnode>
+      </node>
+      <node id="1273">
+        <label>assert.h</label>
+      </node>
+      <node id="1280">
+        <label>pred_SimpleExpression.h</label>
+        <link refid="pred___simple_expression_8h"/>
+        <childnode refid="1236" relation="include">
+        </childnode>
+        <childnode refid="1232" relation="include">
+        </childnode>
+        <childnode refid="1281" relation="include">
+        </childnode>
+      </node>
+      <node id="1275">
+        <label>storage/OrderIndifferentDictionary.h</label>
+        <link refid="_order_indifferent_dictionary_8h"/>
+        <childnode refid="1276" relation="include">
+        </childnode>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1244" relation="include">
+        </childnode>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1277" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+        <childnode refid="1263" relation="include">
+        </childnode>
+        <childnode refid="1265" relation="include">
+        </childnode>
+      </node>
+      <node id="1267">
+        <label>boost/iterator/iterator_facade.hpp</label>
+      </node>
+      <node id="1287">
+        <label>io/AbstractLoader.h</label>
+        <link refid="_abstract_loader_8h"/>
+        <childnode refid="1288" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+        <childnode refid="1232" relation="include">
+        </childnode>
+      </node>
+      <node id="1231">
+        <label>cstdint</label>
+      </node>
+      <node id="1271">
+        <label>storage/ValueIdMap.hpp</label>
+        <link refid="_value_id_map_8hpp"/>
+        <childnode refid="1272" relation="include">
+        </childnode>
+        <childnode refid="1275" relation="include">
+        </childnode>
+      </node>
+      <node id="1238">
+        <label>stdint.h</label>
+      </node>
+      <node id="1288">
+        <label>io/Loader.h</label>
+        <link refid="_loader_8h"/>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1233" relation="include">
+        </childnode>
+        <childnode refid="1232" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+        <childnode refid="1289" relation="include">
+        </childnode>
+      </node>
+      <node id="1296">
+        <label>cmath</label>
+      </node>
+      <node id="1237">
+        <label>stdexcept</label>
+      </node>
+      <node id="1294">
+        <label>storage/FixedLengthVector.h</label>
+        <link refid="_fixed_length_vector_8h"/>
+        <childnode refid="1295" relation="include">
+        </childnode>
+        <childnode refid="1284" relation="include">
+        </childnode>
+        <childnode refid="1296" relation="include">
+        </childnode>
+        <childnode refid="1259" relation="include">
+        </childnode>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1248" relation="include">
+        </childnode>
+        <childnode refid="1233" relation="include">
+        </childnode>
+        <childnode refid="1237" relation="include">
+        </childnode>
+        <childnode refid="1297" relation="include">
+        </childnode>
+        <childnode refid="1298" relation="include">
+        </childnode>
+        <childnode refid="1299" relation="include">
+        </childnode>
+      </node>
+      <node id="1260">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="1231" relation="include">
+        </childnode>
+        <childnode refid="1261" relation="include">
+        </childnode>
+      </node>
+      <node id="1233">
+        <label>string</label>
+      </node>
+      <node id="1291">
+        <label>helper/make_unique.h</label>
+        <link refid="make__unique_8h"/>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1292" relation="include">
+        </childnode>
+        <childnode refid="1245" relation="include">
+        </childnode>
+      </node>
+      <node id="1244">
+        <label>map</label>
+      </node>
+      <node id="1300">
+        <label>storage/AbstractAttributeVector.h</label>
+        <link refid="_abstract_attribute_vector_8h"/>
+        <childnode refid="1301" relation="include">
+        </childnode>
+      </node>
+      <node id="1276">
+        <label>exception</label>
+      </node>
+      <node id="1239">
+        <label>ostream</label>
+      </node>
+      <node id="1252">
+        <label>json.h</label>
+      </node>
+      <node id="1277">
+        <label>limits.h</label>
+      </node>
+      <node id="1242">
+        <label>access/system/OutputTask.h</label>
+        <link refid="_output_task_8h"/>
+        <childnode refid="1238" relation="include">
+        </childnode>
+        <childnode refid="1243" relation="include">
+        </childnode>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1244" relation="include">
+        </childnode>
+        <childnode refid="1245" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+        <childnode refid="1246" relation="include">
+        </childnode>
+        <childnode refid="1247" relation="include">
+        </childnode>
+      </node>
+      <node id="1269">
+        <label>pred_common.h</label>
+        <link refid="pred__common_8h"/>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1237" relation="include">
+        </childnode>
+        <childnode refid="1270" relation="include">
+        </childnode>
+        <childnode refid="1232" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+        <childnode refid="1256" relation="include">
+        </childnode>
+        <childnode refid="1271" relation="include">
+        </childnode>
+        <childnode refid="1278" relation="include">
+        </childnode>
+        <childnode refid="1279" relation="include">
+        </childnode>
+        <childnode refid="1280" relation="include">
+        </childnode>
+        <childnode refid="1282" relation="include">
+        </childnode>
+      </node>
+      <node id="1230">
+        <label>random</label>
+      </node>
+      <node id="1240">
+        <label>access/TableScan.h</label>
+        <link refid="_table_scan_8h"/>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1241" relation="include">
+        </childnode>
+      </node>
+      <node id="1249">
+        <label>condition_variable</label>
+      </node>
+      <node id="1299">
+        <label>storage/BaseAttributeVector.h</label>
+        <link refid="_base_attribute_vector_8h"/>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1237" relation="include">
+        </childnode>
+        <childnode refid="1300" relation="include">
+        </childnode>
+      </node>
+      <node id="1236">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1233" relation="include">
+        </childnode>
+        <childnode refid="1237" relation="include">
+        </childnode>
+        <childnode refid="1238" relation="include">
+        </childnode>
+        <childnode refid="1239" relation="include">
+        </childnode>
+      </node>
+      <node id="1265">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="1266" relation="include">
+        </childnode>
+        <childnode refid="1267" relation="include">
+        </childnode>
+      </node>
+      <node id="1285">
+        <label>storage/ColumnMetadata.h</label>
+        <link refid="_column_metadata_8h"/>
+        <childnode refid="1236" relation="include">
+        </childnode>
+        <childnode refid="1233" relation="include">
+        </childnode>
+        <childnode refid="1237" relation="include">
+        </childnode>
+      </node>
+      <node id="1289">
+        <label>parameters.inc</label>
+        <link refid="parameters_8inc"/>
+      </node>
+      <node id="1266">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="1229">
+        <label>vector</label>
+      </node>
+      <node id="1290">
+        <label>io/StringLoader.h</label>
+        <link refid="_string_loader_8h"/>
+        <childnode refid="1287" relation="include">
+        </childnode>
+      </node>
+      <node id="1245">
+        <label>utility</label>
+      </node>
+      <node id="1261">
+        <label>array</label>
+      </node>
+      <node id="1297">
+        <label>sstream</label>
+      </node>
+      <node id="1255">
+        <label>cereal/cereal.hpp</label>
+      </node>
+      <node id="1243">
+        <label>time.h</label>
+      </node>
+      <node id="1282">
+        <label>pred_SimpleFieldExpression.h</label>
+        <link refid="pred___simple_field_expression_8h"/>
+        <childnode refid="1232" relation="include">
+        </childnode>
+        <childnode refid="1269" relation="include">
+        </childnode>
+      </node>
+      <node id="1295">
+        <label>cerrno</label>
+      </node>
+      <node id="1227">
+        <label>src/bin/perf_regression/scan_performance.cpp</label>
+        <link refid="scan_performance.cpp"/>
+        <childnode refid="1228" relation="include">
+        </childnode>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1230" relation="include">
+        </childnode>
+        <childnode refid="1231" relation="include">
+        </childnode>
+        <childnode refid="1232" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+        <childnode refid="1240" relation="include">
+        </childnode>
+        <childnode refid="1268" relation="include">
+        </childnode>
+        <childnode refid="1286" relation="include">
+        </childnode>
+        <childnode refid="1290" relation="include">
+        </childnode>
+        <childnode refid="1288" relation="include">
+        </childnode>
+        <childnode refid="1291" relation="include">
+        </childnode>
+        <childnode refid="1256" relation="include">
+        </childnode>
+        <childnode refid="1293" relation="include">
+        </childnode>
+      </node>
+      <node id="1268">
+        <label>access/expressions/pred_EqualsExpression.h</label>
+        <link refid="pred___equals_expression_8h"/>
+        <childnode refid="1232" relation="include">
+        </childnode>
+        <childnode refid="1269" relation="include">
+        </childnode>
+        <childnode refid="1283" relation="include">
+        </childnode>
+      </node>
+      <node id="1274">
+        <label>iostream</label>
+      </node>
+      <node id="1301">
+        <label>cstddef</label>
+      </node>
+      <node id="1250">
+        <label>access/system/OperationData.h</label>
+        <link refid="_operation_data_8h"/>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1232" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+      </node>
+      <node id="1278">
+        <label>expression_types.h</label>
+        <link refid="expression__types_8h"/>
+        <childnode refid="1244" relation="include">
+        </childnode>
+        <childnode refid="1233" relation="include">
+        </childnode>
+        <childnode refid="1252" relation="include">
+        </childnode>
+      </node>
+      <node id="1262">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="1253">
+        <label>access/system/BasicParser.h</label>
+        <link refid="_basic_parser_8h"/>
+        <childnode refid="1237" relation="include">
+        </childnode>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1252" relation="include">
+        </childnode>
+      </node>
+      <node id="1248">
+        <label>mutex</label>
+      </node>
+      <node id="1264">
+        <label>storage/AbstractDictionary.h</label>
+        <link refid="_abstract_dictionary_8h"/>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1233" relation="include">
+        </childnode>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+      </node>
+      <node id="1256">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="1234" relation="include">
+        </childnode>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1237" relation="include">
+        </childnode>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1233" relation="include">
+        </childnode>
+        <childnode refid="1232" relation="include">
+        </childnode>
+        <childnode refid="1257" relation="include">
+        </childnode>
+        <childnode refid="1260" relation="include">
+        </childnode>
+        <childnode refid="1262" relation="include">
+        </childnode>
+        <childnode refid="1263" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+      </node>
+      <node id="1283">
+        <label>storage/RawTable.h</label>
+        <link refid="_raw_table_8h"/>
+        <childnode refid="1284" relation="include">
+        </childnode>
+        <childnode refid="1231" relation="include">
+        </childnode>
+        <childnode refid="1237" relation="include">
+        </childnode>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1236" relation="include">
+        </childnode>
+        <childnode refid="1256" relation="include">
+        </childnode>
+        <childnode refid="1285" relation="include">
+        </childnode>
+      </node>
+      <node id="1286">
+        <label>io/VectorLoader.h</label>
+        <link refid="_vector_loader_8h"/>
+        <childnode refid="1287" relation="include">
+        </childnode>
+      </node>
+      <node id="1258">
+        <label>thread</label>
+      </node>
+      <node id="1232">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="1231" relation="include">
+        </childnode>
+        <childnode refid="1233" relation="include">
+        </childnode>
+        <childnode refid="1234" relation="include">
+        </childnode>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1229" relation="include">
+        </childnode>
+      </node>
+      <node id="1298">
+        <label>memory/MallocStrategy.h</label>
+        <link refid="_malloc_strategy_8h"/>
+        <childnode refid="1274" relation="include">
+        </childnode>
+        <childnode refid="1231" relation="include">
+        </childnode>
+      </node>
+      <node id="1281">
+        <label>access/expressions/AbstractExpression.h</label>
+        <link refid="_abstract_expression_8h"/>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1232" relation="include">
+        </childnode>
+      </node>
+      <node id="1292">
+        <label>type_traits</label>
+      </node>
+      <node id="1228">
+        <label>gtest/gtest-bench.h</label>
+      </node>
+      <node id="1270">
+        <label>stdio.h</label>
+      </node>
+      <node id="1284">
+        <label>cstring</label>
+      </node>
+      <node id="1235">
+        <label>memory</label>
+      </node>
+      <node id="1247">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1248" relation="include">
+        </childnode>
+        <childnode refid="1235" relation="include">
+        </childnode>
+        <childnode refid="1249" relation="include">
+        </childnode>
+        <childnode refid="1233" relation="include">
+        </childnode>
+      </node>
+      <node id="1254">
+        <label>io/TXContext.h</label>
+        <link refid="_t_x_context_8h"/>
+        <childnode refid="1232" relation="include">
+        </childnode>
+        <childnode refid="1255" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classhyrise_1_1_scan_bench" prot="public">hyrise::ScanBench</innerclass>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtest/gtest-bench.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">helper/types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="storage__types_8h" kindref="compound">storage/storage_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_table_scan_8h" kindref="compound">access/TableScan.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pred___equals_expression_8h" kindref="compound">access/expressions/pred_EqualsExpression.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_vector_loader_8h" kindref="compound">io/VectorLoader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_string_loader_8h" kindref="compound">io/StringLoader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_loader_8h" kindref="compound">io/Loader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="make__unique_8h" kindref="compound">helper/make_unique.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_table_8h" kindref="compound">storage/AbstractTable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_example_expression_8h" kindref="compound">access/expressions/ExampleExpression.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;gperftools/profiler.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">access;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="namespacehyrise_1a6693a98baa21320742e6dd41b439297e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1a6693a98baa21320742e6dd41b439297e" kindref="member">BNUM_VALUES</ref><sp/>=<sp/>10000000;</highlight></codeline>
+<codeline lineno="28" refid="namespacehyrise_1aac22711c3b10a994192360832e51701d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1aac22711c3b10a994192360832e51701d" kindref="member">DISTINCT_VALUES</ref><sp/>=<sp/><ref refid="namespacehyrise_1a6693a98baa21320742e6dd41b439297e" kindref="member">BNUM_VALUES</ref>/100;</highlight></codeline>
+<codeline lineno="29" refid="classhyrise_1_1_scan_bench" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1_scan_bench" kindref="compound">ScanBench</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>::testing::Benchmark<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="classhyrise_1_1_scan_bench_1a31d950410b87941d19fc61856aaf5d0d" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::uint64_t&gt;<sp/><ref refid="classhyrise_1_1_scan_bench_1a31d950410b87941d19fc61856aaf5d0d" kindref="member">_data</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classhyrise_1_1_scan_bench_1ae227f9640770480ea30b611fcff969c9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">storage::atable_ptr_t</ref><sp/><ref refid="classhyrise_1_1_scan_bench_1ae227f9640770480ea30b611fcff969c9" kindref="member">_table</ref>;</highlight></codeline>
+<codeline lineno="33" refid="classhyrise_1_1_scan_bench_1abe952766f3284fccdb25a48a89400d80" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;TableScan&gt;<sp/><ref refid="classhyrise_1_1_scan_bench_1abe952766f3284fccdb25a48a89400d80" kindref="member">_tablescanNormal</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classhyrise_1_1_scan_bench_1a9f44aed15b9af09b93f50866f2767ec5" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;TableScan&gt;<sp/><ref refid="classhyrise_1_1_scan_bench_1a9f44aed15b9af09b93f50866f2767ec5" kindref="member">_tablescanSpecial</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classhyrise_1_1_scan_bench_1a65c072bc36869ac35ee996a58ba6a1ab" refkind="member"><highlight class="normal"><sp/><sp/>std::uint64_t<sp/><ref refid="classhyrise_1_1_scan_bench_1a65c072bc36869ac35ee996a58ba6a1ab" kindref="member">_value</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classhyrise_1_1_scan_bench_1a6a5d0dbb3f91ea171fa44d30ec7b1ede" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::uint64_t&gt;<sp/><ref refid="classhyrise_1_1_scan_bench_1a6a5d0dbb3f91ea171fa44d30ec7b1ede" kindref="member">_dict</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classhyrise_1_1_scan_bench_1a43033efd6cabb634842fc81ecad4d819" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1_scan_bench_1a43033efd6cabb634842fc81ecad4d819" kindref="member">init_data</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>_data.reserve(<ref refid="namespacehyrise_1a6693a98baa21320742e6dd41b439297e" kindref="member">BNUM_VALUES</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>std::mt19937<sp/>gen(0);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uniform_int_distribution&lt;std::uint64_t&gt;<sp/>dis(0,<sp/><ref refid="namespacehyrise_1aac22711c3b10a994192360832e51701d" kindref="member">DISTINCT_VALUES</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/><ref refid="namespacehyrise_1a6693a98baa21320742e6dd41b439297e" kindref="member">BNUM_VALUES</ref>;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_data.push_back(dis(gen));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>_dict.resize(<ref refid="namespacehyrise_1aac22711c3b10a994192360832e51701d" kindref="member">DISTINCT_VALUES</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/><ref refid="namespacehyrise_1aac22711c3b10a994192360832e51701d" kindref="member">DISTINCT_VALUES</ref>;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_dict[i]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classhyrise_1_1_scan_bench_1ae5704f892f61a676ac2b533b87d768e9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1_scan_bench_1ae5704f892f61a676ac2b533b87d768e9" kindref="member">ScanBench</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>SetNumIterations(10);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>SetWarmUp(2);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>init_data();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/><ref refid="class_loader_1_1params" kindref="compound">Loader::params</ref>()</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="class_loader_1_1params_1ae15c0a2850566717b84eb89310f15da0" kindref="member">setInput</ref>(<ref refid="class_vector_input" kindref="compound">VectorInput</ref>({_data}))</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="class_loader_1_1params_1a2689b03528610b0191689ac2d2dfd11c" kindref="member">setHeader</ref>(<ref refid="class_string_header" kindref="compound">StringHeader</ref>(</highlight><highlight class="stringliteral">&quot;col1\nINTEGER\n0_R&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>_table<sp/>=<sp/><ref refid="namespace_loader_1a371700be700b02ac0f08306734213028" kindref="member">Loader::load</ref>(p);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>_value<sp/>=<sp/>_data[_data.size()-1];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="classhyrise_1_1_scan_bench_1a3fc25b3d5a142576c710c56b02f83cce" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1_scan_bench_1a3fc25b3d5a142576c710c56b02f83cce" kindref="member">BenchmarkSetUp</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>_tablescanNormal<sp/>=<sp/>std::make_shared&lt;TableScan&gt;(make_unique&lt;EqualsExpression&lt;hyrise_int_t&gt;&gt;(0,<sp/>0,<sp/>_value));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>_tablescanNormal-&gt;setEvent(</highlight><highlight class="stringliteral">&quot;NO_PAPI&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>_tablescanNormal-&gt;addInput(_table);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>_tablescanSpecial<sp/>=<sp/>std::make_shared&lt;TableScan&gt;(make_unique&lt;ExampleExpression&gt;(0,<sp/>_value));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>_tablescanSpecial-&gt;setEvent(</highlight><highlight class="stringliteral">&quot;NO_PAPI&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>_tablescanSpecial-&gt;addInput(_table);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classhyrise_1_1_scan_bench_1ab7390008d857e2cf1862ee11ab0af057" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1_scan_bench_1ab7390008d857e2cf1862ee11ab0af057" kindref="member">BenchmarkTearDown</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="namespacehyrise_1a4fb172f1a0cd0a194eecdde5ba84681e" refkind="member"><highlight class="normal"><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref><sp/><ref refid="namespacehyrise_1a4fb172f1a0cd0a194eecdde5ba84681e" kindref="member">scan</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::uint64_t&gt;&amp;<sp/>data,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::uint64_t&gt;&amp;<sp/>dict,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::uint64_t<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref><sp/>positions;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>std::uint64_t<sp/>valueid<sp/>=<sp/>dict[value];</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index=0,<sp/>end=data.size();<sp/>index<sp/>&lt;<sp/>end;<sp/>++index)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data[index]<sp/>==<sp/>valueid)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>positions.push_back(index);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>positions;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="namespacehyrise_1a3121629c506a542a401b1adfb00c30a1" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1access_1aecc6008a4475d66defc3bef735f9d2ae" kindref="member">BENCHMARK_F</ref>(<ref refid="classhyrise_1_1_scan_bench" kindref="compound">ScanBench</ref>,<sp/>CMP_scanperformance_vector_seq)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1a4fb172f1a0cd0a194eecdde5ba84681e" kindref="member">scan</ref>(_data,<sp/>_dict,<sp/>_value).size();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="namespacehyrise_1a359a41e5da381d835692295b8541ca2a" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1access_1aecc6008a4475d66defc3bef735f9d2ae" kindref="member">BENCHMARK_F</ref>(<ref refid="classhyrise_1_1_scan_bench" kindref="compound">ScanBench</ref>,<sp/>CMP_scanperformance_hyriseDefault)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>_tablescanNormal-&gt;execute();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="namespacehyrise_1a7448c7696e0f45c9b6a3268f2549b33a" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1access_1aecc6008a4475d66defc3bef735f9d2ae" kindref="member">BENCHMARK_F</ref>(<ref refid="classhyrise_1_1_scan_bench" kindref="compound">ScanBench</ref>,<sp/>CMP_scanperformance_hyriseSpecial)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>_tablescanSpecial-&gt;execute();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp"/>
+  </compounddef>
+</doxygen>

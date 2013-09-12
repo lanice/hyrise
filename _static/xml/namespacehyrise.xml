@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="namespacehyrise" kind="namespace">
+    <compoundname>hyrise</compoundname>
+    <innerclass refid="classhyrise_1_1_scan_bench" prot="public">hyrise::ScanBench</innerclass>
+    <innerclass refid="classhyrise_1_1_test" prot="public">hyrise::Test</innerclass>
+    <innerclass refid="classhyrise_1_1_storage_manager_test" prot="public">hyrise::StorageManagerTest</innerclass>
+    <innernamespace refid="namespacehyrise_1_1access">hyrise::access</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1functional">hyrise::functional</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1helper">hyrise::helper</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1index">hyrise::index</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1io">hyrise::io</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1locking">hyrise::locking</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1net">hyrise::net</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1storage">hyrise::storage</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1testing">hyrise::testing</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1tx">hyrise::tx</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1types">hyrise::types</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacehyrise_1a6693a98baa21320742e6dd41b439297e" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t hyrise::BNUM_VALUES</definition>
+        <argsstring></argsstring>
+        <name>BNUM_VALUES</name>
+        <initializer>= 10000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp" line="27" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehyrise_1aac22711c3b10a994192360832e51701d" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t hyrise::DISTINCT_VALUES</definition>
+        <argsstring></argsstring>
+        <name>DISTINCT_VALUES</name>
+        <initializer>= <ref refid="namespacehyrise_1a6693a98baa21320742e6dd41b439297e" kindref="member">BNUM_VALUES</ref>/100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp" line="28" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacehyrise_1a4fb172f1a0cd0a194eecdde5ba84681e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref></type>
+        <definition>pos_list_t hyrise::scan</definition>
+        <argsstring>(const std::vector&lt; std::uint64_t &gt; &amp;data, const std::vector&lt; std::uint64_t &gt; &amp;dict, const std::uint64_t value)</argsstring>
+        <name>scan</name>
+        <param>
+          <type>const std::vector&lt; std::uint64_t &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::uint64_t &gt; &amp;</type>
+          <declname>dict</declname>
+        </param>
+        <param>
+          <type>const std::uint64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp" line="79" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp" bodystart="79" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1a3121629c506a542a401b1adfb00c30a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::BENCHMARK_F</definition>
+        <argsstring>(ScanBench, CMP_scanperformance_vector_seq)</argsstring>
+        <name>BENCHMARK_F</name>
+        <param>
+          <type><ref refid="classhyrise_1_1_scan_bench" kindref="compound">ScanBench</ref></type>
+        </param>
+        <param>
+          <type>CMP_scanperformance_vector_seq</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp" line="90" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1a359a41e5da381d835692295b8541ca2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::BENCHMARK_F</definition>
+        <argsstring>(ScanBench, CMP_scanperformance_hyriseDefault)</argsstring>
+        <name>BENCHMARK_F</name>
+        <param>
+          <type><ref refid="classhyrise_1_1_scan_bench" kindref="compound">ScanBench</ref></type>
+        </param>
+        <param>
+          <type>CMP_scanperformance_hyriseDefault</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp" line="94" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1a7448c7696e0f45c9b6a3268f2549b33a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::BENCHMARK_F</definition>
+        <argsstring>(ScanBench, CMP_scanperformance_hyriseSpecial)</argsstring>
+        <name>BENCHMARK_F</name>
+        <param>
+          <type><ref refid="classhyrise_1_1_scan_bench" kindref="compound">ScanBench</ref></type>
+        </param>
+        <param>
+          <type>CMP_scanperformance_hyriseSpecial</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp" line="98" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/scan_performance.cpp" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1ae2a34577049f3e44e2258a8dd7d7ac07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string hyrise::to_string</definition>
+        <argsstring>(T val)</argsstring>
+        <name>to_string</name>
+        <param>
+          <type>T</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" line="71" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1aec58f00f171c12aa4ef29682158b9fc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string hyrise::to_string</definition>
+        <argsstring>(const std::string &amp;val)</argsstring>
+        <name>to_string</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" line="76" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1aa5586c1f440cd9c7f29acde264d8a811" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string hyrise::to_string</definition>
+        <argsstring>(std::string &amp;val)</argsstring>
+        <name>to_string</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" line="78" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1a245164bd4474150df50a9b479b4ab02e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string hyrise::to_string</definition>
+        <argsstring>(std::string val)</argsstring>
+        <name>to_string</name>
+        <param>
+          <type>std::string</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" line="80" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="80" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This module implements a request parser registration facility for the ebb based server implemented in <computeroutput><ref refid="_async_connection_8h" kindref="compound">AsyncConnection.h</ref></computeroutput>. </para>    </detaileddescription>
+    <location file="/home/captain/HPI/aepic/hyrise/src/bin/perf_regression/GroupByScan.cpp" line="10"/>
+  </compounddef>
+</doxygen>

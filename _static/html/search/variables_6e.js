@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['n_5fstring_5fchar',['n_string_char',['../common_8cpp.html#a953adcc83d063be5d82a9d31f995fe66',1,'common.cpp']]],
+  ['name',['name',['../structhyrise_1_1access_1_1performance__attributes__t.html#ab751d5f261dd6c6fd934839b159b2672',1,'hyrise::access::performance_attributes_t::name()'],['../class_column_metadata.html#a437ff3b0df583ac2a00ceb9b24fb06b7',1,'ColumnMetadata::name()'],['../structhyrise_1_1storage_1_1_table_builder_1_1param.html#ac137ec016c9d43c1ad91b57b244b5f9f',1,'hyrise::storage::TableBuilder::param::name()']]],
+  ['nbattributes',['nbAttributes',['../classlayouter_1_1_schema.html#a42edf8cfb82aecc5827980be5d5a5205',1,'layouter::Schema']]],
+  ['nblayouts',['nbLayouts',['../classlayouter_1_1_base_layouter.html#ab092b7f07c99e88e6b7d9689caef70fe',1,'layouter::BaseLayouter']]],
+  ['nbtuples',['nbTuples',['../classlayouter_1_1_schema.html#aa8ed5bd128984e76303d6230f1c9b5b6',1,'layouter::Schema']]],
+  ['new_5forder',['new_order',['../uniontransaction__data__t.html#aa94bb2d7f55eedc8fcd58e9cc37ecc9e',1,'transaction_data_t']]],
+  ['new_5forder_5flayout',['new_order_layout',['../datagen_8h.html#a685238039ff705e739072b13df0aee8e',1,'datagen.h']]],
+  ['new_5forders',['new_orders',['../structtable__cardinality__t.html#ad564976335ebcce6cddaa59e342e06b0',1,'table_cardinality_t::new_orders()'],['../datagen_8cpp.html#a543d6d68688aede719640c6f0ac42975',1,'new_orders():&#160;datagen.cpp']]],
+  ['next',['next',['../structhyrise_1_1index_1_1_c_s_b_leaf_node_u_i.html#a0d6515ffa7b097a96a8734d9966b99ff',1,'hyrise::index::CSBLeafNodeUI']]],
+  ['no',['no',['../uniondata__pointer__t.html#adf77d0e7b7afcc0ca02b0d24b609b1c8',1,'data_pointer_t']]],
+  ['no_5fpreferred_5fcore',['NO_PREFERRED_CORE',['../class_task.html#af0efeb0207f95415ca556e19bc62d60e',1,'Task']]],
+  ['no_5fpreferred_5fnode',['NO_PREFERRED_NODE',['../class_task.html#a38563fd60f45377e73b8030945f9fdc8',1,'Task']]],
+  ['node',['node',['../structhyrise_1_1index_1_1_c_s_b_tree_1_1__node__id.html#abd5f60c48050139abc9028dfd65fe64b',1,'hyrise::index::CSBTree::_node_id']]],
+  ['null_5fstr',['null_str',['../datagen_8cpp.html#a84ec1662bf9def13c87cd5229a26aac5',1,'datagen.cpp']]],
+  ['num_5fkeys',['num_keys',['../structhyrise_1_1index_1_1_c_s_b_node_u_i.html#a569a442ad5227e84e4d9652bf3d40da5',1,'hyrise::index::CSBNodeUI::num_keys()'],['../structhyrise_1_1index_1_1_c_s_b_leaf_node_u_i.html#a0df34f644afebd6a0ba5ef2e38adb316',1,'hyrise::index::CSBLeafNodeUI::num_keys()']]],
+  ['number_5fleaf_5fvalues',['number_leaf_values',['../namespacehyrise_1_1index.html#aefb1510614bcbdcfbd5825541537fe40',1,'hyrise::index']]],
+  ['number_5fpossible_5fkeys',['number_possible_keys',['../namespacehyrise_1_1index.html#acd8c45650f994d5cbd31636cc1a4b497',1,'hyrise::index']]],
+  ['numcuts',['numCuts',['../classlayouter_1_1_divide_and_conquer_layouter.html#a1e6be75adc37970062e3a82c723c3e36',1,'layouter::DivideAndConquerLayouter']]]
+];

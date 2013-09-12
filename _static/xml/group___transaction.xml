@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="group___transaction" kind="group">
+    <compoundname>Transaction</compoundname>
+    <title>Control Mechanism</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___transaction_1gaec6847072bba8cdf2917268d9bb6b43b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TXContext</type>
+        <definition>TXContext hyrise::tx::TransactionManager::beginTransaction</definition>
+        <argsstring>()</argsstring>
+        <name>beginTransaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts a new transaction context, creates TransactionData object to be accessed through the returned context&apos;s <computeroutput>tid</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="74" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="group___transaction_1gaa46f17d24ac9a9b29b02da77a401d361" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TransactionData &amp;</type>
+        <definition>TransactionData &amp; hyrise::tx::TransactionManager::getTransactionData</definition>
+        <argsstring>(transaction_id_t tid)</argsstring>
+        <name>getTransactionData</name>
+        <param>
+          <type>transaction_id_t</type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns transaction data reference for modification <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transaction id </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="78" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="158" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="group___transaction_1gac54ac5e07bfc608be03814bc59725d31" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TXContext</type>
+        <definition>TXContext hyrise::tx::TransactionManager::getContext</definition>
+        <argsstring>(transaction_id_t tid)</argsstring>
+        <name>getContext</name>
+        <param>
+          <type>transaction_id_t</type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns context for tid <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transaction id </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="81" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="152" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="group___transaction_1gae80579845d1ac3afba69b7d8c91b1adf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>transaction_cid_t</type>
+        <definition>transaction_cid_t hyrise::tx::TransactionManager::commitTransaction</definition>
+        <argsstring>(transaction_id_t tid)</argsstring>
+        <name>commitTransaction</name>
+        <param>
+          <type>transaction_id_t</type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make all changes visible to other transaction, ending the lifetime of the transaction context identified by tid <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transaction id to commit </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>commit id on success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="87" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="192" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="group___transaction_1ga218c1c09962148e64d4438ce8d2239e8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::tx::TransactionManager::rollbackTransaction</definition>
+        <argsstring>(transaction_id_t tid)</argsstring>
+        <name>rollbackTransaction</name>
+        <param>
+          <type>transaction_id_t</type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ends a transaction by leaving all changes invisible <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transaction id to abort </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="91" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="177" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="group___transaction_1gacebb2b31d01217f3c096223e9c3e4fde" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hyrise::tx::TransactionManager::isRunningTransaction</definition>
+        <argsstring>(transaction_id_t tid)</argsstring>
+        <name>isRunningTransaction</name>
+        <param>
+          <type>transaction_id_t</type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check validity of a transaction <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transaction id under investigation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="95" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="146" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="group___transaction_1ga10e36ee27cd9e7412b57531636d8a135" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; TXContext &gt;</type>
+        <definition>std::vector&lt; TXContext &gt; hyrise::tx::TransactionManager::getRunningTransactionContexts</definition>
+        <argsstring>()</argsstring>
+        <name>getRunningTransactionContexts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="96" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="136" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Use these methods to control transactions </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

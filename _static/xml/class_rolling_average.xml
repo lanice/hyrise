@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_rolling_average" kind="class" prot="public">
+    <compoundname>RollingAverage</compoundname>
+    <includes refid="_rolling_average_8h" local="no">RollingAverage.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rolling_average_1aea9e796362ca7e6900cd572441438d1d" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t RollingAverage&lt; T &gt;::_sample_size</definition>
+        <argsstring></argsstring>
+        <name>_sample_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" line="9" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rolling_average_1a023cfebcd3ef5e94b22cbbf8afc537b7" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t RollingAverage&lt; T &gt;::_oldest</definition>
+        <argsstring></argsstring>
+        <name>_oldest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" line="10" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rolling_average_1a2428aa9c0f92b9ba244548234580e565" prot="private" static="no" mutable="no">
+        <type>T</type>
+        <definition>T RollingAverage&lt; T &gt;::_total</definition>
+        <argsstring></argsstring>
+        <name>_total</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" line="11" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt;T&gt; RollingAverage&lt; T &gt;::_sample</definition>
+        <argsstring></argsstring>
+        <name>_sample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" line="12" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rolling_average_1a29cb8c21c1d28963ccee373eb85b4bc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RollingAverage&lt; T &gt;::RollingAverage</definition>
+        <argsstring>(int sample)</argsstring>
+        <name>RollingAverage</name>
+        <param>
+          <type>int</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" line="14" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" bodystart="14" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rolling_average_1a30cf0a9ddfc36e6fd30271eeb72465c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T RollingAverage&lt; T &gt;::add</definition>
+        <argsstring>(T value)</argsstring>
+        <name>add</name>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" line="16" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" bodystart="16" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rolling_average_1af3be1d837f7397a5a59f2c94fcf365d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RollingAverage&lt; T &gt;::set</definition>
+        <argsstring>(T value)</argsstring>
+        <name>set</name>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" line="28" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rolling_average_1afbeb00b376be8cb5b58cd116898758e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RollingAverage&lt; T &gt;::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" line="33" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rolling_average_1a1361ed59f6a4aa4326414c9dc59505c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RollingAverage&lt; T &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" line="39" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" bodystart="39" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rolling_average_1a288ec4f021d1cf4117173c595b3f602e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T RollingAverage&lt; T &gt;::getAverage</definition>
+        <argsstring>() const </argsstring>
+        <name>getAverage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" line="44" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" bodystart="44" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3221">
+        <label>RollingAverage&lt; T &gt;</label>
+        <link refid="class_rolling_average"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" line="8" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h" bodystart="8" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_rolling_average_1a023cfebcd3ef5e94b22cbbf8afc537b7" prot="private" virt="non-virtual"><scope>RollingAverage</scope><name>_oldest</name></member>
+      <member refid="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" prot="private" virt="non-virtual"><scope>RollingAverage</scope><name>_sample</name></member>
+      <member refid="class_rolling_average_1aea9e796362ca7e6900cd572441438d1d" prot="private" virt="non-virtual"><scope>RollingAverage</scope><name>_sample_size</name></member>
+      <member refid="class_rolling_average_1a2428aa9c0f92b9ba244548234580e565" prot="private" virt="non-virtual"><scope>RollingAverage</scope><name>_total</name></member>
+      <member refid="class_rolling_average_1a30cf0a9ddfc36e6fd30271eeb72465c2" prot="public" virt="non-virtual"><scope>RollingAverage</scope><name>add</name></member>
+      <member refid="class_rolling_average_1a1361ed59f6a4aa4326414c9dc59505c0" prot="public" virt="non-virtual"><scope>RollingAverage</scope><name>clear</name></member>
+      <member refid="class_rolling_average_1a288ec4f021d1cf4117173c595b3f602e" prot="public" virt="non-virtual"><scope>RollingAverage</scope><name>getAverage</name></member>
+      <member refid="class_rolling_average_1afbeb00b376be8cb5b58cd116898758e6" prot="public" virt="non-virtual"><scope>RollingAverage</scope><name>reset</name></member>
+      <member refid="class_rolling_average_1a29cb8c21c1d28963ccee373eb85b4bc5" prot="public" virt="non-virtual"><scope>RollingAverage</scope><name>RollingAverage</name></member>
+      <member refid="class_rolling_average_1af3be1d837f7397a5a59f2c94fcf365d3" prot="public" virt="non-virtual"><scope>RollingAverage</scope><name>set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

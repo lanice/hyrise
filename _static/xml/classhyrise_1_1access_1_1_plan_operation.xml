@@ -1,0 +1,1364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classhyrise_1_1access_1_1_plan_operation" kind="class" prot="public" abstract="yes">
+    <compoundname>hyrise::access::PlanOperation</compoundname>
+    <basecompoundref refid="classhyrise_1_1access_1_1_output_task" prot="public" virt="non-virtual">hyrise::access::OutputTask</basecompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_hash_value_join" prot="public" virt="non-virtual">hyrise::access::HashValueJoin&lt; int &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_barrier" prot="public" virt="non-virtual">hyrise::access::Barrier</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_commit" prot="public" virt="non-virtual">hyrise::access::Commit</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_create_index" prot="public" virt="non-virtual">hyrise::access::CreateIndex</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_create_radix_table" prot="public" virt="non-virtual">hyrise::access::CreateRadixTable</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_delete_op" prot="public" virt="non-virtual">hyrise::access::DeleteOp</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_distinct" prot="public" virt="non-virtual">hyrise::access::Distinct</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_dump_table" prot="public" virt="non-virtual">hyrise::access::DumpTable</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_expression_scan" prot="public" virt="non-virtual">hyrise::access::ExpressionScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_get_table" prot="public" virt="non-virtual">hyrise::access::GetTable</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_hash_value_join" prot="public" virt="non-virtual">hyrise::access::HashValueJoin&lt; T &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_index_scan" prot="public" virt="non-virtual">hyrise::access::IndexScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_insert_scan" prot="public" virt="non-virtual">hyrise::access::InsertScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_intersect_positions" prot="public" virt="non-virtual">hyrise::access::IntersectPositions</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_json_table" prot="public" virt="non-virtual">hyrise::access::JsonTable</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_layout_single_table" prot="public" virt="non-virtual">hyrise::access::LayoutSingleTable</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_layout_table" prot="public" virt="non-virtual">hyrise::access::LayoutTable</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_layout_table_load" prot="public" virt="non-virtual">hyrise::access::LayoutTableLoad</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_load_dumped_table" prot="public" virt="non-virtual">hyrise::access::LoadDumpedTable</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_load_file" prot="public" virt="non-virtual">hyrise::access::LoadFile</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_materializing_scan" prot="public" virt="non-virtual">hyrise::access::MaterializingScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_merge_hash_tables" prot="public" virt="non-virtual">hyrise::access::MergeHashTables</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_merge_index_scan" prot="public" virt="non-virtual">hyrise::access::MergeIndexScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_merge_join" prot="public" virt="non-virtual">hyrise::access::MergeJoin&lt; T &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_merge_prefix_sum" prot="public" virt="non-virtual">hyrise::access::MergePrefixSum</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_merge_store" prot="public" virt="non-virtual">hyrise::access::MergeStore</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_merge_table" prot="public" virt="non-virtual">hyrise::access::MergeTable</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_multiply_ref_field" prot="public" virt="non-virtual">hyrise::access::MultiplyRefField</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_nested_loop_equi_join" prot="public" virt="non-virtual">hyrise::access::NestedLoopEquiJoin</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_no_op" prot="public" virt="non-virtual">hyrise::access::NoOp</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_parallelizable_plan_operation" prot="public" virt="non-virtual">hyrise::access::ParallelizablePlanOperation</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_pos_update_scan" prot="public" virt="non-virtual">hyrise::access::PosUpdateScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_projection_scan" prot="public" virt="non-virtual">hyrise::access::ProjectionScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_radix_join" prot="public" virt="non-virtual">hyrise::access::RadixJoin</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_replace_table" prot="public" virt="non-virtual">hyrise::access::ReplaceTable</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_rollback" prot="public" virt="non-virtual">hyrise::access::Rollback</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_script_operation" prot="public" virt="non-virtual">hyrise::access::ScriptOperation</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_set_table" prot="public" virt="non-virtual">hyrise::access::SetTable</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_settings_operation" prot="public" virt="non-virtual">hyrise::access::SettingsOperation</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_simple_raw_table_scan" prot="public" virt="non-virtual">hyrise::access::SimpleRawTableScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_smallest_table_scan" prot="public" virt="non-virtual">hyrise::access::SmallestTableScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_sort_scan" prot="public" virt="non-virtual">hyrise::access::SortScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_start_profiling" prot="public" virt="non-virtual">hyrise::access::StartProfiling</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_stop_profiling" prot="public" virt="non-virtual">hyrise::access::StopProfiling</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_table_load" prot="public" virt="non-virtual">hyrise::access::TableLoad</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_table_scan" prot="public" virt="non-virtual">hyrise::access::TableScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_table_unload" prot="public" virt="non-virtual">hyrise::access::TableUnload</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_union_all" prot="public" virt="non-virtual">hyrise::access::UnionAll</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_union_scan" prot="public" virt="non-virtual">hyrise::access::UnionScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_unload_all" prot="public" virt="non-virtual">hyrise::access::UnloadAll</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_update_scan" prot="public" virt="non-virtual">hyrise::access::UpdateScan</derivedcompoundref>
+    <derivedcompoundref refid="classhyrise_1_1access_1_1_validate_positions" prot="public" virt="non-virtual">hyrise::access::ValidatePositions</derivedcompoundref>
+    <includes refid="_plan_operation_8h" local="no">PlanOperation.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" prot="protected" static="no" mutable="no">
+        <type><ref refid="classhyrise_1_1access_1_1_operation_data" kindref="compound">access::OperationData</ref></type>
+        <definition>access::OperationData hyrise::access::PlanOperation::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+<para>Containers to store and handle input/output or rather result data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="81" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_plan_operation_1a96126d09e871f139400a393aae9b82e3" prot="protected" static="no" mutable="no">
+        <type><ref refid="classhyrise_1_1access_1_1_operation_data" kindref="compound">access::OperationData</ref></type>
+        <definition>access::OperationData hyrise::access::PlanOperation::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="82" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_plan_operation_1a25c76f53553b99c15676d5fe8211c565" prot="protected" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t hyrise::access::PlanOperation::_limit</definition>
+        <argsstring></argsstring>
+        <name>_limit</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Limits the number of rows read. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="85" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" prot="protected" static="no" mutable="no">
+        <type><ref refid="storage__types_8h_1a36fbc31395a53b7ece189846e4d3253c" kindref="member">field_list_t</ref></type>
+        <definition>field_list_t hyrise::access::PlanOperation::_field_definition</definition>
+        <argsstring></argsstring>
+        <name>_field_definition</name>
+        <briefdescription>
+<para>Transaction number. </para>        </briefdescription>
+        <detaileddescription>
+<para>The fields used in the projection etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="90" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_plan_operation_1afa5b2221e0233ae772ad05796ae00f7e" prot="protected" static="no" mutable="no">
+        <type><ref refid="storage__types_8h_1aa3f52f6d55495211cc3aa95bcd3113a3" kindref="member">field_name_list_t</ref></type>
+        <definition>field_name_list_t hyrise::access::PlanOperation::_named_field_definition</definition>
+        <argsstring></argsstring>
+        <name>_named_field_definition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="91" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_plan_operation_1a7c85412d9b7fec499a1190df85199632" prot="protected" static="no" mutable="no">
+        <type><ref refid="storage__types_8h_1a36fbc31395a53b7ece189846e4d3253c" kindref="member">field_list_t</ref></type>
+        <definition>field_list_t hyrise::access::PlanOperation::_indexed_field_definition</definition>
+        <argsstring></argsstring>
+        <name>_indexed_field_definition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="92" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_plan_operation_1a491ab51fcf26013df7c400abc5bd8f53" prot="protected" static="no" mutable="no">
+        <type>std::weak_ptr&lt; <ref refid="classhyrise_1_1access_1_1_response_task" kindref="compound">access::ResponseTask</ref> &gt;</type>
+        <definition>std::weak_ptr&lt;access::ResponseTask&gt; hyrise::access::PlanOperation::_responseTask</definition>
+        <argsstring></argsstring>
+        <name>_responseTask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="94" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_plan_operation_1a9ce36d0960826b9dcbe214617dfbd602" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hyrise::access::PlanOperation::producesPositions</definition>
+        <argsstring></argsstring>
+        <name>producesPositions</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="96" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_plan_operation_1a2f5443dd7b8eef6e3f207247ba9275cf" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hyrise::access::PlanOperation::_planId</definition>
+        <argsstring></argsstring>
+        <name>_planId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="98" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_plan_operation_1acfa0f3c72eaaaff0cf29e3b45d28f868" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hyrise::access::PlanOperation::_operatorId</definition>
+        <argsstring></argsstring>
+        <name>_operatorId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="99" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_plan_operation_1a9df7ba63a64cd76895ad0169df925133" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hyrise::access::PlanOperation::_planOperationName</definition>
+        <argsstring></argsstring>
+        <name>_planOperationName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="100" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_plan_operation_1a0848a10fe6fd200110e7da964dbd175a" prot="protected" static="no" mutable="no">
+        <type><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">tx::TXContext</ref></type>
+        <definition>tx::TXContext hyrise::access::PlanOperation::_txContext</definition>
+        <argsstring></argsstring>
+        <name>_txContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="102" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1aac92e842153df9a9ae7e548ac7602009" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::addResult</definition>
+        <argsstring>(storage::c_aresource_ptr_t result)</argsstring>
+        <name>addResult</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1ae32c63e285e8cb5a8a3aac08dcd8d49a" kindref="member">storage::c_aresource_ptr_t</ref></type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="29" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a2d64bb49cfe4469bf6665bccab2327eb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::computeDeferredIndexes</definition>
+        <argsstring>()</argsstring>
+        <name>computeDeferredIndexes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="31" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="86" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1aa1bc5139142fb38bcdd5432f3b435b76" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::refreshInput</definition>
+        <argsstring>()</argsstring>
+        <name>refreshInput</name>
+        <reimplementedby refid="classhyrise_1_1access_1_1_parallelizable_plan_operation_1a4abca8f2a1495db8628c127473837432">refreshInput</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fetches output data of dependencies as input data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="36" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="108" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a4b050ce8d9d71f7d9fdde5955496c7c5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::setupPlanOperation</definition>
+        <argsstring>()</argsstring>
+        <name>setupPlanOperation</name>
+        <reimplementedby refid="classhyrise_1_1access_1_1_projection_scan_1a6cfdfde3f5ea57823ee0277e51354c60">setupPlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_smallest_table_scan_1acd60c89c87e815c9667bf52fb2ff55a8">setupPlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_materializing_scan_1aff0033e4cd850c2a413555e210725a7e">setupPlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_group_by_scan_1a9dc17ae6190c37fc7208b63735e7a685">setupPlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_simple_table_scan_1a7880487455256d8e673a84d24e472b60">setupPlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_simple_raw_table_scan_1aa8ec413b1aad7e80a253fd4ff93b1bf5">setupPlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_hash_join_probe_1a28dbd7c84ce678513f6748b6cced7c22">setupPlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_table_scan_1a74105cc37106cac66e079deced6fd8c4">setupPlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_join_scan_1a872fa61d4fe5e8a64f0d223e2f1a1f14">setupPlanOperation</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="38" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a52c7d290ab4637ae1a4ee8a6dfc7a09e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void hyrise::access::PlanOperation::executePlanOperation</definition>
+        <argsstring>()=0</argsstring>
+        <name>executePlanOperation</name>
+        <reimplementedby refid="classhyrise_1_1access_1_1_union_all_1aa5e3f8d1d73c419757f08f01b51709ba">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_rollback_1a0b4904126a7d0c9d1bb184ec77bd9b2a">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_start_profiling_1a9a1a3f20c5ad3a4788c51938c20f5693">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_union_scan_1a7f0572417fb61f7848233c54ac5cdf19">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_radix_join_1ae0e10659b937b75496fba576d52bd2b7">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_barrier_1ad169c1e04b990a5d717d854782970513">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_validate_positions_1aeb9490884c884a4197491fcd9c86c6d4">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_commit_1a77c48b03a7ab5265bd39146b53c3b171">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_projection_scan_1a2abb726fa85c698df381025ace0b0dd8">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_merge_hash_tables_1af7c5deac906ba543fc6af48669bd18c8">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_delete_op_1a9dcce88bdb4cbf77f21429b83697c721">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_stop_profiling_1ac93df6f746de90d4bc991f8b93aec05a">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_unload_all_1a463b6d0f08ece075f935a8214f682f07">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_table_unload_1a71b33dcfeaf50c02cf0aff8e7d0df0d4">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_sort_scan_1a27c4f9dda35fba77090505d817ea733e">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_create_radix_table_1a426517c57be34ba21377fc3d17b7e896">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_prefix_sum_1a8664f3d32ac86ce68b650ef47fc0784a">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_merge_table_1ae1ce268f1f8e28284ae56200bd79bdf0">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_layout_table_load_1a2f3e87df9af13681b88c59916c685cd3">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_insert_scan_1aed354de121870954f693029cec567663">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_hash_build_1a0f7635e73215ce74bc4d9df15aaf64dc">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_create_index_1a1642b8486a531c18de916f70ffa3890a">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_load_file_1a1e4d67d8d7c4b6f482c3849c47db997a">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_smallest_table_scan_1a9178311bc67f515c4a605ebb5cee02d7">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_replace_table_1ab7857d3d704ac3f01bbe0fd9df44a0e8">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_materializing_scan_1a29bfbcd80a3c65b0ecbe8c28782d3d55">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_group_by_scan_1aababec4357ba8d0c10e3f5fbc7278ce1">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_settings_operation_1af6f08116c83f3dd1160343a79090b442">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_dump_table_1ae1ba40c5f4f573c848389e09ded48aba">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_set_table_1a4482775195711cb92e5e08d84cdc2044">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_get_table_1aa517d23b29106f5a4e45a49049d35c32">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_simple_table_scan_1a254d6ff5601450fb2ac08a87beb9b52f">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_layout_table_1aa6b81c1571dce1f85dbb803ca9306a1a">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_distinct_1acdc99d6e7221f3f2e12727a60063e11b">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_simple_raw_table_scan_1a945235fd2fcc2463edbfb87a31cdfbd0">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_no_op_1a5f6b3d433f67960fbf73505cd92e65cf">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_hash_join_probe_1a38fb8f801a258048e9dfb387e665860c">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_table_load_1a7efc2c957423268cb88dde6610ecf52b">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_merge_join_1a13810b1d1e95f6337b9ff91dc235c9d8">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_pos_update_scan_1ae6e8d52f9fca0f2e9bbc2a262f65dc8f">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_merge_store_1aca386fac293b2440a9c441f9c818d4e9">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_table_scan_1af72fbfebb7cdfffa533072d2fb8dfea7">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_intersect_positions_1af03be14b37591725454116063b6485b2">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_multiply_ref_field_1a63873650fa2a6afe919c00a9fc6af669">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_index_scan_1abe0f7a1140b2ae143e941d8fdafc3b3e">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_radix_cluster_1aa2144b6b45e640ef6920f815c1ad9ee3">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_nested_loop_equi_join_1ade39fde17f19068c23fcf55bc4f6a5bb">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_layout_single_table_1a009a48c6bd818d881d474fcc977e5bf9">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_load_dumped_table_1a3d6a4fa4609b4d60b35d9d3d379e43cd">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_script_operation_1aff8cc8a610fb4e44f643bdd6bec7073d">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_merge_prefix_sum_1abf9184633bb40ac46c5e0a8b3b074b71">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_hash_value_join_1a245a4687454d58457cb1635b1705c08a">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_hash_value_join_1a245a4687454d58457cb1635b1705c08a">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_json_table_1a9694aaf2aa6808fa3508826c22868b6c">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_join_scan_1a82b323bf721de97dd21d7bd8fc45590a">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_histogram_1ad1da82eb00898239db07331458ba2302">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_merge_index_scan_1a78a131cacf2ff71cdb9b370f075aece9">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_expression_scan_1a9f986791d7645c2ce2672cd35f853967">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_update_scan_1a2fb86b7183d40006e83ee9be59da6496">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_histogram2nd_pass_1aac4901a291af9fde938c9277c0f05fc6">executePlanOperation</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_radix_cluster2nd_pass_1a70c6fbbd084add82c46e6cf5e8a93c10">executePlanOperation</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a7cf45407329bff78e4d160197f09bae8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void hyrise::access::PlanOperation::teardownPlanOperation</definition>
+        <argsstring>()</argsstring>
+        <name>teardownPlanOperation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="40" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a24dbaa436c72ba68ab30d6f58c320ac8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hyrise::access::PlanOperation::allDependenciesSuccessful</definition>
+        <argsstring>()</argsstring>
+        <name>allDependenciesSuccessful</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="43" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a361fb77e7a65e230ffe92f91b9a0e6c4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string hyrise::access::PlanOperation::getDependencyErrorMessages</definition>
+        <argsstring>()</argsstring>
+        <name>getDependencyErrorMessages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a0a450a1941e4c6366abbfa3180bf7919" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>hyrise::access::PlanOperation::~PlanOperation</definition>
+        <argsstring>()</argsstring>
+        <name>~PlanOperation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a015beb547ed761c9f577545bbd69fcae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::setLimit</definition>
+        <argsstring>(uint64_t l)</argsstring>
+        <name>setLimit</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="51" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="165" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a169fad61f9d02d856883f32b06881a3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::setProducesPositions</definition>
+        <argsstring>(bool p)</argsstring>
+        <name>setProducesPositions</name>
+        <param>
+          <type>bool</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="52" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a5ab2cd50fb1861224c16e5da42c5ee5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::setTXContext</definition>
+        <argsstring>(tx::TXContext ctx)</argsstring>
+        <name>setTXContext</name>
+        <param>
+          <type><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">tx::TXContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="54" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="173" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1abd74149ce984cf9e719542d15fb8d724" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::addInput</definition>
+        <argsstring>(storage::c_aresource_ptr_t t)</argsstring>
+        <name>addInput</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1ae32c63e285e8cb5a8a3aac08dcd8d49a" kindref="member">storage::c_aresource_ptr_t</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="56" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="177" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a66c9b52d730c2029496abda71ea40b01" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref></type>
+        <definition>const storage::c_atable_ptr_t hyrise::access::PlanOperation::getInputTable</definition>
+        <argsstring>(size_t index=0) const </argsstring>
+        <name>getInputTable</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="58" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a3f9ee072d27cf5dde038c4bff35cd4a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref></type>
+        <definition>const storage::c_atable_ptr_t hyrise::access::PlanOperation::getResultTable</definition>
+        <argsstring>(size_t index=0) const </argsstring>
+        <name>getResultTable</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="59" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="35" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1aa4857583f3f175825244fb767293f2bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a53a798623aa803822a0edaef21f4d608" kindref="member">storage::c_ahashtable_ptr_t</ref></type>
+        <definition>storage::c_ahashtable_ptr_t hyrise::access::PlanOperation::getInputHashTable</definition>
+        <argsstring>(size_t index=0) const </argsstring>
+        <name>getInputHashTable</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="60" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1aa06e9dccef9c7c8dbb8c88c936f43369" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a53a798623aa803822a0edaef21f4d608" kindref="member">storage::c_ahashtable_ptr_t</ref></type>
+        <definition>storage::c_ahashtable_ptr_t hyrise::access::PlanOperation::getResultHashTable</definition>
+        <argsstring>(size_t index=0) const </argsstring>
+        <name>getResultHashTable</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="61" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1ad237b1647eea22538540d8d77f20f722" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::addField</definition>
+        <argsstring>(field_t field)</argsstring>
+        <name>addField</name>
+        <param>
+          <type><ref refid="storage__types_8h_1a5ce4ecb27464dc24ba394527510dd89b" kindref="member">field_t</ref></type>
+          <declname>field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="63" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1ab3c3b4ad0f0426024d52af0efb55a197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::addField</definition>
+        <argsstring>(const Json::Value &amp;field)</argsstring>
+        <name>addField</name>
+        <param>
+          <type>const Json::Value &amp;</type>
+          <declname>field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="64" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="78" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1abb7bcc23c5c1a19332474da034d85b8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::addNamedField</definition>
+        <argsstring>(const field_name_t &amp;field)</argsstring>
+        <name>addNamedField</name>
+        <param>
+          <type>const <ref refid="storage__types_8h_1ad64b8c8026a86f643d173acbb694b4f8" kindref="member">field_name_t</ref> &amp;</type>
+          <declname>field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="65" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a2931efa12fa91e5ef1dbdc887a75b1ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::setPlanId</definition>
+        <argsstring>(std::string i)</argsstring>
+        <name>setPlanId</name>
+        <param>
+          <type>std::string</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="67" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="181" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a4d63ee4b09517fbd66ec80d110323369" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::setOperatorId</definition>
+        <argsstring>(std::string i)</argsstring>
+        <name>setOperatorId</name>
+        <param>
+          <type>std::string</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="68" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="184" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a3f3f1273385239af0b7c4b0ba66b37f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; hyrise::access::PlanOperation::planOperationName</definition>
+        <argsstring>() const </argsstring>
+        <name>planOperationName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="69" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="188" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1ab9df68db2049c6a67cc6e2fd030b4fb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::setPlanOperationName</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>setPlanOperationName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="70" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="191" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1abbdaa1c0b1d05c66459d7a94e0f67ca7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::operator()</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>operator()</name>
+        <reimplements refid="class_task_1ae3a87b98fa47e03ab2f48b53aa257b69">operator()</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="72" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="121" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a9e27b58b694c0b501f18002fe3484767" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const std::string</type>
+        <definition>const std::string hyrise::access::PlanOperation::vname</definition>
+        <argsstring>()</argsstring>
+        <name>vname</name>
+        <reimplements refid="class_task_1a091bff6c1c11bfc202e53280b5af62e7">vname</reimplements>
+        <reimplementedby refid="classhyrise_1_1access_1_1_radix_join_1a16fd091c38d05aeb6ace10ba420a61ab">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_barrier_1a81a0a1fc40d6c2dc15887faf3897eb63">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_projection_scan_1aa07cf7b35fcc21c9976ec36ccc0d887b">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_merge_hash_tables_1a53d63b5530ce6a3d9e0cb7cd7c2cec88">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_unload_all_1a08a44316d3b2aa19f9cfb9061289546f">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_table_unload_1a889c6fad7b68e0869cd0ee5c943b630d">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_sort_scan_1a30639736823f361d93e1a6fea636418b">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_create_radix_table_1a8e8c8482473370b920dee430a646c3f7">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_prefix_sum_1a9c6ab0e23aa10cb042c362e3ccfdf305">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_merge_table_1a9f9e6890dbf4227898188430fabb9414">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_layout_table_load_1ac6e33aa67b47c4c159e94f560e766008">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_replace_table_1abcec25dcf29be25eef118907c35bf747">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_load_file_1a267e4b3e3f938f29cdfe1aa15306079c">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_smallest_table_scan_1adabe3bdaa5118947e566ebaf5b232d94">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_materializing_scan_1a5fc661aa0ade646cb773ae586ff437d0">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_settings_operation_1a36623757e01797ba93e1ebc767c6728f">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_set_table_1a9057707c0418b2c033c6191acbaf34a1">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_get_table_1a446c1cf188722c01ac927f519e6e70d3">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_distinct_1a0de57169832458856dc08c97c43ade4e">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_table_scan_1a34715439538cebd07c72150da466bde6">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_simple_raw_table_scan_1a9d5b748cc01f2d46351d1aa3bf6c6cec">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_simple_table_scan_1aa65dcb40c824cdeb0c6a7151a454127d">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_no_op_1ae63b3fd97cb322b1b76f0159c68cec5e">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_layout_table_1ae12ddc8d8394a80528c2ab5341e4fe54">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_table_load_1a322287a70239ec6f7ed0a06fb31a8d96">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_intersect_positions_1a406430e70dcbbb8ac2552e82f54b1b87">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_index_scan_1aa368e43a0dda88a5e792aec38b7737cf">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_radix_cluster_1afafbac487407d0789412a58a654ddbef">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_nested_loop_equi_join_1afad5334d444177f5d2a8f51ab3e8b0cf">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_layout_single_table_1a167284d6e06034167bb52d6bd141e10e">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_hash_build_1ab4796b44557f92bb6b4b368bd97e9e1d">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_merge_prefix_sum_1a6ab4f0ebd84fb649333107aaf650a380">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_multiply_ref_field_1a6ab919e78c5732b3370261626072bd61">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_join_scan_1a36cf27adb59e3b65b9889260e91cc89a">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_group_by_scan_1a4c5eff0de829ab0665c38c18693acd0d">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_histogram_1ab7868a9f22654d90599c6f9a6f19647d">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_hash_join_probe_1a54e429e7f9aef4422a93348bc536aa87">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_merge_index_scan_1acc649bca69471145e20c29687e98dbad">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_expression_scan_1ad7edf973544afa99b7d2c553ee359f74">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_update_scan_1a60a70e820110ee1d2a7112f7ccb37269">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_merge_join_1a3b3b1ee43edca5b11e00bfcb4017e48a">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_hash_value_join_1adfd83d85e62fbdea52cdc89e38c08c74">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_hash_value_join_1adfd83d85e62fbdea52cdc89e38c08c74">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_histogram2nd_pass_1a8da236ddb9e626b00bdddd215338ea1c">vname</reimplementedby>
+        <reimplementedby refid="classhyrise_1_1access_1_1_radix_cluster2nd_pass_1ab8a668db9f820c550e60704f80227327">vname</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="73" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="195" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1ade6985b6d6ddfac1ff5876f17f079f38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classhyrise_1_1access_1_1_plan_operation" kindref="compound">PlanOperation</ref> *</type>
+        <definition>const PlanOperation * hyrise::access::PlanOperation::execute</definition>
+        <argsstring>()</argsstring>
+        <name>execute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="74" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="136" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a9425cae50437f4ce3cab4f350d05b6cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::setErrorMessage</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>setErrorMessage</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="76" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a21a2eed324cf507a42f4e30f86ed622a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PlanOperation::setResponseTask</definition>
+        <argsstring>(const std::shared_ptr&lt; access::ResponseTask &gt; &amp;responseTask)</argsstring>
+        <name>setResponseTask</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classhyrise_1_1access_1_1_response_task" kindref="compound">access::ResponseTask</ref> &gt; &amp;</type>
+          <declname>responseTask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="77" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="199" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_plan_operation_1a86fef586086822356ac1b1c74689afc1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classhyrise_1_1access_1_1_response_task" kindref="compound">access::ResponseTask</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; access::ResponseTask &gt; hyrise::access::PlanOperation::getResponseTask</definition>
+        <argsstring>() const </argsstring>
+        <name>getResponseTask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="78" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp" bodystart="203" bodyend="205"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the default interface for a plan operation. Our basic assumption is that a plan operation has multiple input data structures and exactly one output data structure. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2922">
+        <label>hyrise::access::TableUnload</label>
+        <link refid="classhyrise_1_1access_1_1_table_unload"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2913">
+        <label>hyrise::access::SetTable</label>
+        <link refid="classhyrise_1_1access_1_1_set_table"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2899">
+        <label>hyrise::access::HashJoinProbe</label>
+        <link refid="classhyrise_1_1access_1_1_hash_join_probe"/>
+        <childnode refid="2896" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2891">
+        <label>hyrise::access::MergeStore</label>
+        <link refid="classhyrise_1_1access_1_1_merge_store"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2870">
+        <label>hyrise::access::CreateRadixTable</label>
+        <link refid="classhyrise_1_1access_1_1_create_radix_table"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2869">
+        <label>hyrise::access::CreateIndex</label>
+        <link refid="classhyrise_1_1access_1_1_create_index"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2918">
+        <label>hyrise::access::StartProfiling</label>
+        <link refid="classhyrise_1_1access_1_1_start_profiling"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2864">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="2876">
+        <label>hyrise::access::HashValueJoin&lt; T &gt;</label>
+        <link refid="classhyrise_1_1access_1_1_hash_value_join"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2879">
+        <label>hyrise::access::IntersectPositions</label>
+        <link refid="classhyrise_1_1access_1_1_intersect_positions"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2893">
+        <label>hyrise::access::MultiplyRefField</label>
+        <link refid="classhyrise_1_1access_1_1_multiply_ref_field"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2923">
+        <label>hyrise::access::UnionAll</label>
+        <link refid="classhyrise_1_1access_1_1_union_all"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2911">
+        <label>hyrise::access::Rollback</label>
+        <link refid="classhyrise_1_1access_1_1_rollback"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2895">
+        <label>hyrise::access::NoOp</label>
+        <link refid="classhyrise_1_1access_1_1_no_op"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2905">
+        <label>hyrise::access::RadixCluster2ndPass</label>
+        <link refid="classhyrise_1_1access_1_1_radix_cluster2nd_pass"/>
+        <childnode refid="2896" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2914">
+        <label>hyrise::access::SettingsOperation</label>
+        <link refid="classhyrise_1_1access_1_1_settings_operation"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2901">
+        <label>hyrise::access::Histogram2ndPass</label>
+        <link refid="classhyrise_1_1access_1_1_histogram2nd_pass"/>
+        <childnode refid="2900" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2884">
+        <label>hyrise::access::LoadDumpedTable</label>
+        <link refid="classhyrise_1_1access_1_1_load_dumped_table"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2906">
+        <label>hyrise::access::SimpleTableScan</label>
+        <link refid="classhyrise_1_1access_1_1_simple_table_scan"/>
+        <childnode refid="2896" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2908">
+        <label>hyrise::access::ProjectionScan</label>
+        <link refid="classhyrise_1_1access_1_1_projection_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2885">
+        <label>hyrise::access::LoadFile</label>
+        <link refid="classhyrise_1_1access_1_1_load_file"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2881">
+        <label>hyrise::access::LayoutSingleTable</label>
+        <link refid="classhyrise_1_1access_1_1_layout_single_table"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2910">
+        <label>hyrise::access::ReplaceTable</label>
+        <link refid="classhyrise_1_1access_1_1_replace_table"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2882">
+        <label>hyrise::access::LayoutTable</label>
+        <link refid="classhyrise_1_1access_1_1_layout_table"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2878">
+        <label>hyrise::access::InsertScan</label>
+        <link refid="classhyrise_1_1access_1_1_insert_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2875">
+        <label>hyrise::access::GetTable</label>
+        <link refid="classhyrise_1_1access_1_1_get_table"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2896">
+        <label>hyrise::access::ParallelizablePlanOperation</label>
+        <link refid="classhyrise_1_1access_1_1_parallelizable_plan_operation"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2880">
+        <label>hyrise::access::JsonTable</label>
+        <link refid="classhyrise_1_1access_1_1_json_table"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2897">
+        <label>hyrise::access::GroupByScan</label>
+        <link refid="classhyrise_1_1access_1_1_group_by_scan"/>
+        <childnode refid="2896" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2867">
+        <label>hyrise::access::Barrier</label>
+        <link refid="classhyrise_1_1access_1_1_barrier"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2873">
+        <label>hyrise::access::DumpTable</label>
+        <link refid="classhyrise_1_1access_1_1_dump_table"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2861">
+        <label>hyrise::access::PlanOperation</label>
+        <link refid="classhyrise_1_1access_1_1_plan_operation"/>
+        <childnode refid="2862" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2862">
+        <label>hyrise::access::OutputTask</label>
+        <link refid="classhyrise_1_1access_1_1_output_task"/>
+        <childnode refid="2863" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2919">
+        <label>hyrise::access::StopProfiling</label>
+        <link refid="classhyrise_1_1access_1_1_stop_profiling"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2894">
+        <label>hyrise::access::NestedLoopEquiJoin</label>
+        <link refid="classhyrise_1_1access_1_1_nested_loop_equi_join"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2890">
+        <label>hyrise::access::MergePrefixSum</label>
+        <link refid="classhyrise_1_1access_1_1_merge_prefix_sum"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2898">
+        <label>hyrise::access::HashBuild</label>
+        <link refid="classhyrise_1_1access_1_1_hash_build"/>
+        <childnode refid="2896" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2871">
+        <label>hyrise::access::DeleteOp</label>
+        <link refid="classhyrise_1_1access_1_1_delete_op"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2887">
+        <label>hyrise::access::MergeHashTables</label>
+        <link refid="classhyrise_1_1access_1_1_merge_hash_tables"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2925">
+        <label>hyrise::access::UnloadAll</label>
+        <link refid="classhyrise_1_1access_1_1_unload_all"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2863">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="2864" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2865" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2921">
+        <label>hyrise::access::TableScan</label>
+        <link refid="classhyrise_1_1access_1_1_table_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2927">
+        <label>hyrise::access::ValidatePositions</label>
+        <link refid="classhyrise_1_1access_1_1_validate_positions"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2915">
+        <label>hyrise::access::SimpleRawTableScan</label>
+        <link refid="classhyrise_1_1access_1_1_simple_raw_table_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2874">
+        <label>hyrise::access::ExpressionScan</label>
+        <link refid="classhyrise_1_1access_1_1_expression_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2917">
+        <label>hyrise::access::SortScan</label>
+        <link refid="classhyrise_1_1access_1_1_sort_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2892">
+        <label>hyrise::access::MergeTable</label>
+        <link refid="classhyrise_1_1access_1_1_merge_table"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2883">
+        <label>hyrise::access::LayoutTableLoad</label>
+        <link refid="classhyrise_1_1access_1_1_layout_table_load"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2903">
+        <label>hyrise::access::PrefixSum</label>
+        <link refid="classhyrise_1_1access_1_1_prefix_sum"/>
+        <childnode refid="2896" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2872">
+        <label>hyrise::access::Distinct</label>
+        <link refid="classhyrise_1_1access_1_1_distinct"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2902">
+        <label>hyrise::access::JoinScan</label>
+        <link refid="classhyrise_1_1access_1_1_join_scan"/>
+        <childnode refid="2896" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2912">
+        <label>hyrise::access::ScriptOperation</label>
+        <link refid="classhyrise_1_1access_1_1_script_operation"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2916">
+        <label>hyrise::access::SmallestTableScan</label>
+        <link refid="classhyrise_1_1access_1_1_smallest_table_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2904">
+        <label>hyrise::access::RadixCluster</label>
+        <link refid="classhyrise_1_1access_1_1_radix_cluster"/>
+        <childnode refid="2896" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2866">
+        <label>hyrise::access::HashValueJoin&lt; int &gt;</label>
+        <link refid="classhyrise_1_1access_1_1_hash_value_join"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2876" relation="template-instance">
+          <edgelabel>&lt; int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2877">
+        <label>hyrise::access::IndexScan</label>
+        <link refid="classhyrise_1_1access_1_1_index_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2865">
+        <label>std::enable_shared_from_this&lt; Task &gt;</label>
+      </node>
+      <node id="2926">
+        <label>hyrise::access::UpdateScan</label>
+        <link refid="classhyrise_1_1access_1_1_update_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2924">
+        <label>hyrise::access::UnionScan</label>
+        <link refid="classhyrise_1_1access_1_1_union_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2920">
+        <label>hyrise::access::TableLoad</label>
+        <link refid="classhyrise_1_1access_1_1_table_load"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2868">
+        <label>hyrise::access::Commit</label>
+        <link refid="classhyrise_1_1access_1_1_commit"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2900">
+        <label>hyrise::access::Histogram</label>
+        <link refid="classhyrise_1_1access_1_1_histogram"/>
+        <childnode refid="2896" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2889">
+        <label>hyrise::access::MergeJoin&lt; T &gt;</label>
+        <link refid="classhyrise_1_1access_1_1_merge_join"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2909">
+        <label>hyrise::access::RadixJoin</label>
+        <link refid="classhyrise_1_1access_1_1_radix_join"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2907">
+        <label>hyrise::access::PosUpdateScan</label>
+        <link refid="classhyrise_1_1access_1_1_pos_update_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2886">
+        <label>hyrise::access::MaterializingScan</label>
+        <link refid="classhyrise_1_1access_1_1_materializing_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2888">
+        <label>hyrise::access::MergeIndexScan</label>
+        <link refid="classhyrise_1_1access_1_1_merge_index_scan"/>
+        <childnode refid="2861" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2931">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="2928">
+        <label>hyrise::access::PlanOperation</label>
+        <link refid="classhyrise_1_1access_1_1_plan_operation"/>
+        <childnode refid="2929" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2934" relation="usage">
+          <edgelabel>#_txContext</edgelabel>
+        </childnode>
+        <childnode refid="2935" relation="usage">
+          <edgelabel>#output</edgelabel>
+          <edgelabel>#input</edgelabel>
+        </childnode>
+      </node>
+      <node id="2929">
+        <label>hyrise::access::OutputTask</label>
+        <link refid="classhyrise_1_1access_1_1_output_task"/>
+        <childnode refid="2930" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2933" relation="usage">
+          <edgelabel>#_performance_attr</edgelabel>
+        </childnode>
+      </node>
+      <node id="2934">
+        <label>hyrise::tx::TXContext</label>
+        <link refid="structhyrise_1_1tx_1_1_t_x_context"/>
+      </node>
+      <node id="2930">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="2931" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2932" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2935">
+        <label>hyrise::access::OperationData</label>
+        <link refid="classhyrise_1_1access_1_1_operation_data"/>
+      </node>
+      <node id="2932">
+        <label>std::enable_shared_from_this&lt; Task &gt;</label>
+      </node>
+      <node id="2933">
+        <label>hyrise::access::performance_attributes_t</label>
+        <link refid="structhyrise_1_1access_1_1performance__attributes__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" line="27" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.h" bodystart="27" bodyend="104"/>
+    <listofallmembers>
+      <member refid="class_task_1ae86d264d411c0a0476085734c27a84b0" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_actualNode</name></member>
+      <member refid="class_task_1ab25d10a171c2efc2dcdf4ec7b81d148d" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_dependencies</name></member>
+      <member refid="class_task_1a432b54ea5cdbf8f875c756c70710b69e" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_dependencyWaitCount</name></member>
+      <member refid="class_task_1a10259a6dde7645e32c32262818339c8c" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_depMutex</name></member>
+      <member refid="class_task_1af277c65727e285efbf965633851ec9d8" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_doneObservers</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_field_definition</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a819ad8df6d82f43d7a6deaae6140c2fc" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_generatedKeys</name></member>
+      <member refid="class_task_1a8909ff1653cd9a685af7256976e4e334" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_id</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a7c85412d9b7fec499a1190df85199632" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_indexed_field_definition</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a25c76f53553b99c15676d5fe8211c565" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_limit</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1afa5b2221e0233ae772ad05796ae00f7e" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_named_field_definition</name></member>
+      <member refid="class_task_1a778ed5c766f4098184c31a656fe471ed" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_notifyMutex</name></member>
+      <member refid="class_task_1a6a0d1fa3b37cb2e7896ea23049798b36" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_observerMutex</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1acfa0f3c72eaaaff0cf29e3b45d28f868" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_operatorId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1af57f941216da981aa10f27f72babde5e" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_papiEvent</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1ad35dd50363fffa9aebef19ae050a173a" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_performance_attr</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a2f5443dd7b8eef6e3f207247ba9275cf" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_planId</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a9df7ba63a64cd76895ad0169df925133" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_planOperationName</name></member>
+      <member refid="class_task_1aa7b21c6482b905c04f354c738341beb3" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_preferredCore</name></member>
+      <member refid="class_task_1abeb3d34a483638fad8c93bb3baff50f5" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_preferredNode</name></member>
+      <member refid="class_task_1a6fbb4614f260802e6204e339f4480004" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_priority</name></member>
+      <member refid="class_task_1a7f7f81090a389fd5cf79747e165fe0f4" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_readyObservers</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a491ab51fcf26013df7c400abc5bd8f53" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_responseTask</name></member>
+      <member refid="class_task_1a5515868bfb7db5ad936cafdf6b8e65c7" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_sessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a08eefbff8ae055c461f954276a7d11ae" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_state</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a0848a10fe6fd200110e7da964dbd175a" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>_txContext</name></member>
+      <member refid="class_task_1aa9e65a15e122de040bb914ab144577b8" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>addDependency</name></member>
+      <member refid="class_task_1a0e4ebf7ad5313f027aa16d250685604a" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>addDoneObserver</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1ad237b1647eea22538540d8d77f20f722" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>addField</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1ab3c3b4ad0f0426024d52af0efb55a197" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>addField</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1abd74149ce984cf9e719542d15fb8d724" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>addInput</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1abb7bcc23c5c1a19332474da034d85b8e" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>addNamedField</name></member>
+      <member refid="class_task_1a9726ca1f4c6712a3516cb05121479f25" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>addReadyObserver</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aac92e842153df9a9ae7e548ac7602009" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>addResult</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a24dbaa436c72ba68ab30d6f58c320ac8" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>allDependenciesSuccessful</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a2d64bb49cfe4469bf6665bccab2327eb" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>computeDeferredIndexes</name></member>
+      <member refid="class_task_1afedc05b69ebd406b7fdb42391f4eef2a" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>DEFAULT_PRIORITY</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1ade6985b6d6ddfac1ff5876f17f079f38" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>execute</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a52c7d290ab4637ae1a4ee8a6dfc7a09e" prot="protected" virt="pure-virtual"><scope>hyrise::access::PlanOperation</scope><name>executePlanOperation</name></member>
+      <member refid="class_task_1a48d72f6b05c55e6fed32f137d5d17cf6" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getActualNode</name></member>
+      <member refid="class_task_1a75f0a4940cdd338c2ba538200bfcdddf" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getDependencyCount</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a361fb77e7a65e230ffe92f91b9a0e6c4" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getDependencyErrorMessages</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1ab9f31c897dbd058ee9a3140c594c5750" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getEvent</name></member>
+      <member refid="class_task_1a85363a10fc3b2272b30e1c24846ab237" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getId</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aa4857583f3f175825244fb767293f2bd" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getInputHashTable</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a66c9b52d730c2029496abda71ea40b01" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getInputTable</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1afbcbe16ff9a7759e0ae0737c0f38cd57" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getPerformanceData</name></member>
+      <member refid="class_task_1a4a3f6f336369d8e2d6a92fae0690c143" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getPreferredCore</name></member>
+      <member refid="class_task_1ad775abf82380305e56bb9a1847f76ece" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getPreferredNode</name></member>
+      <member refid="class_task_1a4d9b4764c7365be48eee4393e87ca92b" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getPriority</name></member>
+      <member refid="class_task_1a1a5953e7f9dfc732ce1f3d8a914439b4" prot="public" virt="virtual"><scope>hyrise::access::PlanOperation</scope><name>getQueryDuration</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a86fef586086822356ac1b1c74689afc1" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getResponseTask</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aa06e9dccef9c7c8dbb8c88c936f43369" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getResultHashTable</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a3f9ee072d27cf5dde038c4bff35cd4a6" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getResultTable</name></member>
+      <member refid="class_task_1a28ea4fab3bbd5b803f9aa7e4b4300820" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getSessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a56507bf7ac791c70f8a5a594998d8af7" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>getState</name></member>
+      <member refid="class_task_1a769a8fb688ddaed2870faeea61d84ca0" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>hasSuccessors</name></member>
+      <member refid="class_task_1afb865392382a2c3f1a13e962d5ba3b1e" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>HIGH_PRIORITY</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>input</name></member>
+      <member refid="class_task_1ab7307de77d5baf3dfec0269996d81543" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>isReady</name></member>
+      <member refid="class_task_1aeb0d741352700686296e742bc21e4362" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>lockForNotifications</name></member>
+      <member refid="class_task_1af0efeb0207f95415ca556e19bc62d60e" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>NO_PREFERRED_CORE</name></member>
+      <member refid="class_task_1a38563fd60f45377e73b8030945f9fdc8" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>NO_PREFERRED_NODE</name></member>
+      <member refid="class_task_1aa729cd30e7135f2851dd625679aa8556" prot="public" virt="virtual"><scope>hyrise::access::PlanOperation</scope><name>notifyDone</name></member>
+      <member refid="class_task_1a82157fda3766f4331966baf74e8206fa" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>notifyDoneObservers</name></member>
+      <member refid="class_task_1a793f3db3f39a9ea7352078f235ee7843" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>notifyReadyObservers</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1abbdaa1c0b1d05c66459d7a94e0f67ca7" prot="public" virt="virtual"><scope>hyrise::access::PlanOperation</scope><name>operator()</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a96126d09e871f139400a393aae9b82e3" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>output</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a3f3f1273385239af0b7c4b0ba66b37f7" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>planOperationName</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a9ce36d0960826b9dcbe214617dfbd602" prot="protected" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>producesPositions</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aa1bc5139142fb38bcdd5432f3b435b76" prot="protected" virt="virtual"><scope>hyrise::access::PlanOperation</scope><name>refreshInput</name></member>
+      <member refid="class_task_1a8df8b7cbdf23d35317488316bba3ebe2" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>SESSION_ID_NOT_SET</name></member>
+      <member refid="class_task_1af9b0b825e5ffb8de9c6a1a71438f4b5b" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setActualNode</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a9425cae50437f4ce3cab4f350d05b6cd" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setErrorMessage</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a70b1271fbca981dce18c847c2209b001" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setEvent</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1ac97c9999eea25d4ef60a348fc66f0113" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setGeneratedKeysData</name></member>
+      <member refid="class_task_1a6c3e7a3b19e50d8fcad5a084ef6b7312" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setId</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a015beb547ed761c9f577545bbd69fcae" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setLimit</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a4d63ee4b09517fbd66ec80d110323369" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setOperatorId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1abc851019f76a754a114eec5d0fbd9949" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setPerformanceData</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a2931efa12fa91e5ef1dbdc887a75b1ca" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setPlanId</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1ab9df68db2049c6a67cc6e2fd030b4fb3" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setPlanOperationName</name></member>
+      <member refid="class_task_1a1b8e520f60e9f41a3c1331e4e9e4b3ca" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setPreferredCore</name></member>
+      <member refid="class_task_1a59960c60425c5d5ed2e8ff52e4538ff2" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setPreferredNode</name></member>
+      <member refid="class_task_1acc93078022eabed8325f164e4eedc37a" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setPriority</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a169fad61f9d02d856883f32b06881a3a" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setProducesPositions</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a21a2eed324cf507a42f4e30f86ed622a" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setResponseTask</name></member>
+      <member refid="class_task_1a688bd7a4f5f659d049667c08fd330cfd" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setSessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a57ed6266bc5cdea32fee00aa69fa2b47" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setState</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a5ab2cd50fb1861224c16e5da42c5ee5a" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>setTXContext</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a4b050ce8d9d71f7d9fdde5955496c7c5" prot="protected" virt="virtual"><scope>hyrise::access::PlanOperation</scope><name>setupPlanOperation</name></member>
+      <member refid="class_task_1a0ca53354bdc006762a0fda68c64f7608" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>Task</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a7cf45407329bff78e4d160197f09bae8" prot="protected" virt="virtual"><scope>hyrise::access::PlanOperation</scope><name>teardownPlanOperation</name></member>
+      <member refid="class_task_1a35af9de734c94c39981a2b199790e288" prot="public" virt="non-virtual"><scope>hyrise::access::PlanOperation</scope><name>unlockForNotifications</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a9e27b58b694c0b501f18002fe3484767" prot="public" virt="virtual"><scope>hyrise::access::PlanOperation</scope><name>vname</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a0a450a1941e4c6366abbfa3180bf7919" prot="public" virt="virtual"><scope>hyrise::access::PlanOperation</scope><name>~PlanOperation</name></member>
+      <member refid="class_task_1a7bff79cc05fa4511c72048d33591503b" prot="public" virt="virtual"><scope>hyrise::access::PlanOperation</scope><name>~Task</name></member>
+      <member refid="class_task_done_observer_1a9b5fa53c4893dfc998aedca72b8dd278" prot="public" virt="virtual"><scope>hyrise::access::PlanOperation</scope><name>~TaskDoneObserver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

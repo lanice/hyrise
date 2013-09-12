@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_core_bound_queues_scheduler_8h" kind="file">
+    <compoundname>CoreBoundQueuesScheduler.h</compoundname>
+    <includes refid="_task_8h" local="yes">taskscheduler/Task.h</includes>
+    <includes refid="_core_bound_queue_8h" local="yes">taskscheduler/CoreBoundQueue.h</includes>
+    <includes refid="_abstract_core_bound_queues_scheduler_8h" local="yes">taskscheduler/AbstractCoreBoundQueuesScheduler.h</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">unordered_set</includes>
+    <includes local="no">log4cxx/logger.h</includes>
+    <includedby refid="_core_bound_queues_scheduler_8cpp" local="yes">src/lib/taskscheduler/CoreBoundQueuesScheduler.cpp</includedby>
+    <incdepgraph>
+      <node id="18848">
+        <label>atomic</label>
+      </node>
+      <node id="18846">
+        <label>queue</label>
+      </node>
+      <node id="18842">
+        <label>taskscheduler/CoreBoundQueue.h</label>
+        <link refid="_core_bound_queue_8h"/>
+        <childnode refid="18843" relation="include">
+        </childnode>
+        <childnode refid="18837" relation="include">
+        </childnode>
+        <childnode refid="18846" relation="include">
+        </childnode>
+      </node>
+      <node id="18835">
+        <label>src/lib/taskscheduler/CoreBoundQueuesScheduler.h</label>
+        <link refid="CoreBoundQueuesScheduler.h"/>
+        <childnode refid="18836" relation="include">
+        </childnode>
+        <childnode refid="18842" relation="include">
+        </childnode>
+        <childnode refid="18849" relation="include">
+        </childnode>
+        <childnode refid="18839" relation="include">
+        </childnode>
+        <childnode refid="18851" relation="include">
+        </childnode>
+        <childnode refid="18847" relation="include">
+        </childnode>
+      </node>
+      <node id="18850">
+        <label>AbstractTaskScheduler.h</label>
+        <link refid="_abstract_task_scheduler_8h"/>
+        <childnode refid="18836" relation="include">
+        </childnode>
+        <childnode refid="18844" relation="include">
+        </childnode>
+        <childnode refid="18839" relation="include">
+        </childnode>
+        <childnode refid="18851" relation="include">
+        </childnode>
+        <childnode refid="18852" relation="include">
+        </childnode>
+        <childnode refid="18847" relation="include">
+        </childnode>
+        <childnode refid="18853" relation="include">
+        </childnode>
+      </node>
+      <node id="18844">
+        <label>taskscheduler/AbstractTaskQueue.h</label>
+        <link refid="_abstract_task_queue_8h"/>
+        <childnode refid="18839" relation="include">
+        </childnode>
+        <childnode refid="18838" relation="include">
+        </childnode>
+        <childnode refid="18845" relation="include">
+        </childnode>
+        <childnode refid="18846" relation="include">
+        </childnode>
+        <childnode refid="18840" relation="include">
+        </childnode>
+        <childnode refid="18847" relation="include">
+        </childnode>
+        <childnode refid="18836" relation="include">
+        </childnode>
+      </node>
+      <node id="18841">
+        <label>string</label>
+      </node>
+      <node id="18851">
+        <label>unordered_set</label>
+      </node>
+      <node id="18854">
+        <label>hwloc.h</label>
+      </node>
+      <node id="18840">
+        <label>condition_variable</label>
+      </node>
+      <node id="18837">
+        <label>vector</label>
+      </node>
+      <node id="18843">
+        <label>AbstractCoreBoundQueue.h</label>
+        <link refid="_abstract_core_bound_queue_8h"/>
+        <childnode refid="18844" relation="include">
+        </childnode>
+        <childnode refid="18848" relation="include">
+        </childnode>
+      </node>
+      <node id="18849">
+        <label>taskscheduler/AbstractCoreBoundQueuesScheduler.h</label>
+        <link refid="_abstract_core_bound_queues_scheduler_8h"/>
+        <childnode refid="18850" relation="include">
+        </childnode>
+        <childnode refid="18843" relation="include">
+        </childnode>
+        <childnode refid="18848" relation="include">
+        </childnode>
+      </node>
+      <node id="18852">
+        <label>iostream</label>
+      </node>
+      <node id="18838">
+        <label>mutex</label>
+      </node>
+      <node id="18845">
+        <label>thread</label>
+      </node>
+      <node id="18853">
+        <label>helper/HwlocHelper.h</label>
+        <link refid="_hwloc_helper_8h"/>
+        <childnode refid="18854" relation="include">
+        </childnode>
+        <childnode refid="18837" relation="include">
+        </childnode>
+      </node>
+      <node id="18847">
+        <label>log4cxx/logger.h</label>
+      </node>
+      <node id="18839">
+        <label>memory</label>
+      </node>
+      <node id="18836">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="18837" relation="include">
+        </childnode>
+        <childnode refid="18838" relation="include">
+        </childnode>
+        <childnode refid="18839" relation="include">
+        </childnode>
+        <childnode refid="18840" relation="include">
+        </childnode>
+        <childnode refid="18841" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18855">
+        <label>src/lib/taskscheduler/CoreBoundQueuesScheduler.h</label>
+        <link refid="CoreBoundQueuesScheduler.h"/>
+        <childnode refid="18856" relation="include">
+        </childnode>
+      </node>
+      <node id="18856">
+        <label>src/lib/taskscheduler/CoreBoundQueuesScheduler.cpp</label>
+        <link refid="_core_bound_queues_scheduler_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_core_bound_queues_scheduler" prot="public">CoreBoundQueuesScheduler</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>CoreBoundQueuesScheduler.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Apr<sp/>4,<sp/>2013</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>jwust</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COREBOUNDQUEUESSCHEDULER_H_</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COREBOUNDQUEUESSCHEDULER_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_task_8h" kindref="compound">taskscheduler/Task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_core_bound_queue_8h" kindref="compound">taskscheduler/CoreBoundQueue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_core_bound_queues_scheduler_8h" kindref="compound">taskscheduler/AbstractCoreBoundQueuesScheduler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;log4cxx/logger.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_core_bound_queues_scheduler" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_core_bound_queues_scheduler" kindref="compound">CoreBoundQueuesScheduler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queues_scheduler" kindref="compound">AbstractCoreBoundQueuesScheduler</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_core_bound_queues_scheduler_1a20f2b6d2611c99babf5dcbfd8184b097" kindref="member">pushToQueue</ref>(std::shared_ptr&lt;Task&gt;<sp/>task);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>create<sp/>a<sp/>new<sp/>task<sp/>queue</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queue" kindref="compound">task_queue_t</ref><sp/>*<ref refid="class_core_bound_queues_scheduler_1a58e2125eedb17467f7552a598670689c" kindref="member">createTaskQueue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>core);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><ref refid="class_core_bound_queues_scheduler_1a6c6ba71ea6760e41cb70d98785ba9e1b" kindref="member">CoreBoundQueuesScheduler</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>queues<sp/>=<sp/><ref refid="_hwloc_helper_8cpp_1a5852d7c54d41ff6c71f33e4b89a5f059" kindref="member">getNumberOfCoresOnSystem</ref>());</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_core_bound_queues_scheduler_1af0155c0d91a83833317a0ab2942fc474" kindref="member">~CoreBoundQueuesScheduler</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>COREBOUNDQUEUESSCHEDULER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/CoreBoundQueuesScheduler.h"/>
+  </compounddef>
+</doxygen>

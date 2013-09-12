@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classhyrise_1_1tx_1_1_transaction_manager" kind="class" prot="public">
+    <compoundname>hyrise::tx::TransactionManager</compoundname>
+    <includes refid="_transaction_manager_8h" local="no">TransactionManager.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" prot="private" static="no">
+        <type>std::unordered_map&lt; <ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref>, std::unique_ptr&lt; <ref refid="namespacehyrise_1_1tx_1aa313640015d76af5cb69a00655d4a0cc" kindref="member">TransactionData</ref> &gt;&gt;</type>
+        <definition>using hyrise::tx::TransactionManager::map_t =  std::unordered_map&lt;transaction_id_t, std::unique_ptr&lt;TransactionData&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>map_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="150" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhyrise_1_1tx_1_1_transaction_manager_1a64aba8281ee99944aa5c3f3463cfc39b" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; <ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref> &gt;</type>
+        <definition>std::atomic&lt;transaction_id_t&gt; hyrise::tx::TransactionManager::_transactionCount</definition>
+        <argsstring></argsstring>
+        <name>_transactionCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="147" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1tx_1_1_transaction_manager_1a73360e37382124e982ee0376ce05af34" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; <ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref> &gt;</type>
+        <definition>std::atomic&lt;transaction_cid_t&gt; hyrise::tx::TransactionManager::_commitId</definition>
+        <argsstring></argsstring>
+        <name>_commitId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="148" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1tx_1_1_transaction_manager_1ac322895b69bdec0f4138dbd651f38fcc" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_synchronized" kindref="compound">Synchronized</ref>&lt; <ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" kindref="member">map_t</ref>, <ref refid="classhyrise_1_1locking_1_1_spinlock" kindref="compound">locking::Spinlock</ref> &gt;</type>
+        <definition>Synchronized&lt;map_t, locking::Spinlock&gt; hyrise::tx::TransactionManager::_txData</definition>
+        <argsstring></argsstring>
+        <name>_txData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="154" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1tx_1_1_transaction_manager_1aa718a40a00450c3577b2e4b51fcfa18b" prot="private" static="no" mutable="no">
+        <type><ref refid="classhyrise_1_1locking_1_1_spinlock" kindref="compound">locking::Spinlock</ref></type>
+        <definition>locking::Spinlock hyrise::tx::TransactionManager::_txLock</definition>
+        <argsstring></argsstring>
+        <name>_txLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="158" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="group___transaction_1gaec6847072bba8cdf2917268d9bb6b43b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref></type>
+        <definition>TXContext hyrise::tx::TransactionManager::beginTransaction</definition>
+        <argsstring>()</argsstring>
+        <name>beginTransaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts a new transaction context, creates TransactionData object to be accessed through the returned context&apos;s <computeroutput>tid</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="74" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="group___transaction_1gaa46f17d24ac9a9b29b02da77a401d361" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1tx_1aa313640015d76af5cb69a00655d4a0cc" kindref="member">TransactionData</ref> &amp;</type>
+        <definition>TransactionData &amp; hyrise::tx::TransactionManager::getTransactionData</definition>
+        <argsstring>(transaction_id_t tid)</argsstring>
+        <name>getTransactionData</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns transaction data reference for modification <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transaction id </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="78" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="158" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="group___transaction_1gac54ac5e07bfc608be03814bc59725d31" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref></type>
+        <definition>TXContext hyrise::tx::TransactionManager::getContext</definition>
+        <argsstring>(transaction_id_t tid)</argsstring>
+        <name>getContext</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns context for tid <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transaction id </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="81" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="152" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="group___transaction_1gae80579845d1ac3afba69b7d8c91b1adf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref></type>
+        <definition>transaction_cid_t hyrise::tx::TransactionManager::commitTransaction</definition>
+        <argsstring>(transaction_id_t tid)</argsstring>
+        <name>commitTransaction</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make all changes visible to other transaction, ending the lifetime of the transaction context identified by tid <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transaction id to commit </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>commit id on success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="87" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="192" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="group___transaction_1ga218c1c09962148e64d4438ce8d2239e8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::tx::TransactionManager::rollbackTransaction</definition>
+        <argsstring>(transaction_id_t tid)</argsstring>
+        <name>rollbackTransaction</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ends a transaction by leaving all changes invisible <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transaction id to abort </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="91" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="177" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="group___transaction_1gacebb2b31d01217f3c096223e9c3e4fde" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hyrise::tx::TransactionManager::isRunningTransaction</definition>
+        <argsstring>(transaction_id_t tid)</argsstring>
+        <name>isRunningTransaction</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check validity of a transaction <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transaction id under investigation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="95" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="146" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="group___transaction_1ga10e36ee27cd9e7412b57531636d8a135" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref> &gt;</type>
+        <definition>std::vector&lt; TXContext &gt; hyrise::tx::TransactionManager::getRunningTransactionContexts</definition>
+        <argsstring>()</argsstring>
+        <name>getRunningTransactionContexts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="96" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="136" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhyrise_1_1tx_1_1_transaction_manager" kindref="compound">TransactionManager</ref> &amp;</type>
+        <definition>TransactionManager &amp; hyrise::tx::TransactionManager::getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="100" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_transaction_manager_1a196c28d46f96ad76d98066f943d18ae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+        <definition>transaction_cid_t hyrise::tx::TransactionManager::getLastCommitId</definition>
+        <argsstring>()</argsstring>
+        <name>getLastCommitId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="103" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_transaction_manager_1a56c7ecb330f6056e156564356054a8e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref></type>
+        <definition>TXContext hyrise::tx::TransactionManager::buildContext</definition>
+        <argsstring>()</argsstring>
+        <name>buildContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="109" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="77" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_transaction_manager_1ac1a29999f74509bc3b34fd01f521a748" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref></type>
+        <definition>transaction_cid_t hyrise::tx::TransactionManager::prepareCommit</definition>
+        <argsstring>()</argsstring>
+        <name>prepareCommit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="120" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="86" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_transaction_manager_1a720ca62cadedeea3133fd476a8311f4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::tx::TransactionManager::abort</definition>
+        <argsstring>()</argsstring>
+        <name>abort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="122" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="94" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_transaction_manager_1aa75c20b088d0db31be50e1f4c0540087" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref></type>
+        <definition>transaction_cid_t hyrise::tx::TransactionManager::tryPrepareCommit</definition>
+        <argsstring>()</argsstring>
+        <name>tryPrepareCommit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tries to acquire the spin lock for the prepare commit call and returns <ref refid="namespacehyrise_1_1tx_1a65c8d18e1354a3758fb7fd14f8f13e7b" kindref="member">hyrise::tx::UNKNOWN</ref> in case of failure or the next commit ID in case of success </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="128" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_transaction_manager_1a374f0fc04351f9b913c7a253b624432d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhyrise_1_1tx_1_1_t_x_modifications" kindref="compound">TXModifications</ref> &amp;</type>
+        <definition>TXModifications &amp; hyrise::tx::TransactionManager::operator[]</definition>
+        <argsstring>(const transaction_id_t &amp;key)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="133" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="105" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_transaction_manager_1a00163e75877b19e9bb320879a0510f97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::tx::TransactionManager::commit</definition>
+        <argsstring>(transaction_id_t tid)</argsstring>
+        <name>commit</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This call relases the prepare commit lock and increments the commit ID counter; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="139" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="116" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_transaction_manager_1ad24584829c465c02628035194614acf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::tx::TransactionManager::endTransaction</definition>
+        <argsstring>(transaction_id_t tid)</argsstring>
+        <name>endTransaction</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="141" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="169" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_transaction_manager_1a9deffa2f04e07a194e0a0f6a204d7fa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::tx::TransactionManager::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="143" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="126" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_transaction_manager_1ad488afc2fbd6eeb99c58602b9fd1b53e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::tx::TransactionManager::TransactionManager</definition>
+        <argsstring>()</argsstring>
+        <name>TransactionManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="160" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_transaction_manager_1a4e8596f09fae6189a3734e334e660045" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+        <definition>transaction_id_t hyrise::tx::TransactionManager::getTransactionId</definition>
+        <argsstring>()</argsstring>
+        <name>getTransactionId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="163" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="65" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Transaction manager based on transaction contexts. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3868">
+        <label>hyrise::locking::Spinlock</label>
+        <link refid="classhyrise_1_1locking_1_1_spinlock"/>
+      </node>
+      <node id="3869">
+        <label>Synchronized&lt; map_t, locking::Spinlock &gt;</label>
+        <link refid="struct_synchronized"/>
+        <childnode refid="3868" relation="usage">
+          <edgelabel>-_mtx</edgelabel>
+        </childnode>
+        <childnode refid="3870" relation="template-instance">
+          <edgelabel>&lt; map_t, locking::Spinlock &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3870">
+        <label>Synchronized&lt; T, LockT &gt;</label>
+        <link refid="struct_synchronized"/>
+      </node>
+      <node id="3867">
+        <label>hyrise::tx::TransactionManager</label>
+        <link refid="classhyrise_1_1tx_1_1_transaction_manager"/>
+        <childnode refid="3868" relation="usage">
+          <edgelabel>-_txLock</edgelabel>
+        </childnode>
+        <childnode refid="3869" relation="usage">
+          <edgelabel>-_txData</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="66" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" bodystart="66" bodyend="164"/>
+    <listofallmembers>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1a73360e37382124e982ee0376ce05af34" prot="private" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>_commitId</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1a64aba8281ee99944aa5c3f3463cfc39b" prot="private" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>_transactionCount</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1ac322895b69bdec0f4138dbd651f38fcc" prot="private" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>_txData</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1aa718a40a00450c3577b2e4b51fcfa18b" prot="private" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>_txLock</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1a720ca62cadedeea3133fd476a8311f4a" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>abort</name></member>
+      <member refid="group___transaction_1gaec6847072bba8cdf2917268d9bb6b43b" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>beginTransaction</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1a56c7ecb330f6056e156564356054a8e8" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>buildContext</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1a00163e75877b19e9bb320879a0510f97" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>commit</name></member>
+      <member refid="group___transaction_1gae80579845d1ac3afba69b7d8c91b1adf" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>commitTransaction</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1ad24584829c465c02628035194614acf9" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>endTransaction</name></member>
+      <member refid="group___transaction_1gac54ac5e07bfc608be03814bc59725d31" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>getContext</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>getInstance</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1a196c28d46f96ad76d98066f943d18ae0" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>getLastCommitId</name></member>
+      <member refid="group___transaction_1ga10e36ee27cd9e7412b57531636d8a135" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>getRunningTransactionContexts</name></member>
+      <member refid="group___transaction_1gaa46f17d24ac9a9b29b02da77a401d361" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>getTransactionData</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1a4e8596f09fae6189a3734e334e660045" prot="private" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>getTransactionId</name></member>
+      <member refid="group___transaction_1gacebb2b31d01217f3c096223e9c3e4fde" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>isRunningTransaction</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" prot="private" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>map_t</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1a374f0fc04351f9b913c7a253b624432d" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>operator[]</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1ac1a29999f74509bc3b34fd01f521a748" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>prepareCommit</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1a9deffa2f04e07a194e0a0f6a204d7fa9" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>reset</name></member>
+      <member refid="group___transaction_1ga218c1c09962148e64d4438ce8d2239e8" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>rollbackTransaction</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1ad488afc2fbd6eeb99c58602b9fd1b53e" prot="private" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>TransactionManager</name></member>
+      <member refid="classhyrise_1_1tx_1_1_transaction_manager_1aa75c20b088d0db31be50e1f4c0540087" prot="public" virt="non-virtual"><scope>hyrise::tx::TransactionManager</scope><name>tryPrepareCommit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

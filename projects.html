@@ -1,0 +1,106 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Projects &mdash; HYRISE latest documentation</title>
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/hyrise_template.css" type="text/css" />
+    <link rel="stylesheet" href="_static/hyrise.css" type="text/css" />
+    <link rel="stylesheet" href="_static/page-1-attributes.css" type="text/css" />
+    <link rel="stylesheet" href="_static/page-1.css" type="text/css" />
+    <link rel="stylesheet" href="_static/breathe.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     'latest',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/hyrise.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <link rel="top" title="HYRISE latest documentation" href="index.html" />
+    <link rel="next" title="Publications" href="publications.html" />
+    <link rel="prev" title="People" href="people.html" /> 
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="inner-wrapper">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+      <div class="col-md-3 hyrisesidebar">
+            <p class="logo image">
+              <a href="index.html">
+                <img class="logo" src="_static/hyrise.png" alt="Logo"/>
+              </a>
+              <p>
+                ...is a new relational storage engine for main memory database systems. It is built on the premise that enterprise application workloads can benefit from a dedicated main-memory storage engine.
+              </p>
+            </p>
+      </div>
+                        <div class="main col-md-9">
+<div class="row-fluid">
+  <ul class="nav nav-pills pull-left">
+    <li>
+        <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="documentation.html">Documentation</a>
+    </li>
+    <li>
+      <a href="people.html">People</a>
+    </li>
+    <li class="active">
+      <a href="#">Projects</a>
+    </li>
+    <li>
+      <a href="publications.html">Publications</a>
+    </li>
+  </ul>
+
+    
+    
+</div>
+<div class="clearfix"></div>
+                            <div class="content row-fluid">
+                              
+  <div class="section" id="projects">
+<h1>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="layouting">
+<h2>Layouting<a class="headerlink" href="#layouting" title="Permalink to this headline">¶</a></h2>
+<p>To support a dynamic and incremental layout calculation we need to:</p>
+<p>Identify affected partitions
+Identify affected queries
+Layout sub-partitions accordingly
+Implement performance improvements of 2 orders of magnitude for wide enterprise tables
+The goal is to quickly adapt the physical table layout to a changed workload, without blocking system resources by too frequent changes. The change manager needs to identify if it is viable to perform a transition from one layout to another. HYRISE implements a regret-based amortization process. The change manager is triggered each epoch (a distinct period of time) and calculates if the workload changed and if the accumulated regret is large enough to trigger a layout change. In addition to accumulating over previous epochs, we increase the weight during each epoch that a new layout was better. The transition from one layout to another performs a costly reorganization operation. So the challenge is to redesign and enhance the re-compression process in HYRISE to perform arbitrary column transformations.</p>
+</div>
+</div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- container -->
+        </div> <!-- inner-wrapper -->
+    </div> <!-- wrapper -->
+    <div class="footer">
+        &copy; Copyright 2010-2013, Martin Grund et al.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_task_executor" kind="class" prot="public">
+    <compoundname>TaskExecutor</compoundname>
+    <includes refid="_thread_per_task_scheduler_8h" local="no">ThreadPerTaskScheduler.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_task_executor_1a8c06308b64ef1e40eb211ed6f715380a" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Task&gt; TaskExecutor::_task</definition>
+        <argsstring></argsstring>
+        <name>_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/ThreadPerTaskScheduler.h" line="21" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/ThreadPerTaskScheduler.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_task_executor_1a3a7c811e2e46d5e0f1bd6f1679110832" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TaskExecutor::TaskExecutor</definition>
+        <argsstring>(std::shared_ptr&lt; Task &gt; task)</argsstring>
+        <name>TaskExecutor</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt;</type>
+          <declname>task</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/ThreadPerTaskScheduler.h" line="23" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/ThreadPerTaskScheduler.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_executor_1a6b76b4b15e06bdfe4e76f9fdf8e90c5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TaskExecutor::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/ThreadPerTaskScheduler.h" line="24" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/ThreadPerTaskScheduler.h" bodystart="24" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3825">
+        <label>TaskExecutor</label>
+        <link refid="class_task_executor"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/ThreadPerTaskScheduler.h" line="20" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/ThreadPerTaskScheduler.h" bodystart="20" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_task_executor_1a8c06308b64ef1e40eb211ed6f715380a" prot="private" virt="non-virtual"><scope>TaskExecutor</scope><name>_task</name></member>
+      <member refid="class_task_executor_1a6b76b4b15e06bdfe4e76f9fdf8e90c5d" prot="public" virt="non-virtual"><scope>TaskExecutor</scope><name>operator()</name></member>
+      <member refid="class_task_executor_1a3a7c811e2e46d5e0f1bd6f1679110832" prot="public" virt="non-virtual"><scope>TaskExecutor</scope><name>TaskExecutor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

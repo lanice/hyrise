@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_w_s_core_bound_priority_queue_8h" kind="file">
+    <compoundname>WSCoreBoundPriorityQueue.h</compoundname>
+    <includes refid="_w_s_core_bound_priority_queues_scheduler_8h" local="yes">WSCoreBoundPriorityQueuesScheduler.h</includes>
+    <includes refid="_abstract_core_bound_queue_8h" local="yes">AbstractCoreBoundQueue.h</includes>
+    <includes local="yes">tbb/concurrent_priority_queue.h</includes>
+    <includedby refid="_w_s_core_bound_priority_queue_8cpp" local="yes">src/lib/taskscheduler/WSCoreBoundPriorityQueue.cpp</includedby>
+    <includedby refid="_w_s_core_bound_priority_queues_scheduler_8cpp" local="yes">src/lib/taskscheduler/WSCoreBoundPriorityQueuesScheduler.cpp</includedby>
+    <incdepgraph>
+      <node id="19161">
+        <label>atomic</label>
+      </node>
+      <node id="19154">
+        <label>queue</label>
+      </node>
+      <node id="19145">
+        <label>AbstractTaskScheduler.h</label>
+        <link refid="_abstract_task_scheduler_8h"/>
+        <childnode refid="19146" relation="include">
+        </childnode>
+        <childnode refid="19152" relation="include">
+        </childnode>
+        <childnode refid="19149" relation="include">
+        </childnode>
+        <childnode refid="19156" relation="include">
+        </childnode>
+        <childnode refid="19157" relation="include">
+        </childnode>
+        <childnode refid="19155" relation="include">
+        </childnode>
+        <childnode refid="19158" relation="include">
+        </childnode>
+      </node>
+      <node id="19152">
+        <label>taskscheduler/AbstractTaskQueue.h</label>
+        <link refid="_abstract_task_queue_8h"/>
+        <childnode refid="19149" relation="include">
+        </childnode>
+        <childnode refid="19148" relation="include">
+        </childnode>
+        <childnode refid="19153" relation="include">
+        </childnode>
+        <childnode refid="19154" relation="include">
+        </childnode>
+        <childnode refid="19150" relation="include">
+        </childnode>
+        <childnode refid="19155" relation="include">
+        </childnode>
+        <childnode refid="19146" relation="include">
+        </childnode>
+      </node>
+      <node id="19151">
+        <label>string</label>
+      </node>
+      <node id="19162">
+        <label>tbb/concurrent_priority_queue.h</label>
+      </node>
+      <node id="19156">
+        <label>unordered_set</label>
+      </node>
+      <node id="19159">
+        <label>hwloc.h</label>
+      </node>
+      <node id="19142">
+        <label>src/lib/taskscheduler/WSCoreBoundPriorityQueue.h</label>
+        <link refid="WSCoreBoundPriorityQueue.h"/>
+        <childnode refid="19143" relation="include">
+        </childnode>
+        <childnode refid="19160" relation="include">
+        </childnode>
+        <childnode refid="19162" relation="include">
+        </childnode>
+      </node>
+      <node id="19143">
+        <label>WSCoreBoundPriorityQueuesScheduler.h</label>
+        <link refid="_w_s_core_bound_priority_queues_scheduler_8h"/>
+        <childnode refid="19144" relation="include">
+        </childnode>
+        <childnode refid="19160" relation="include">
+        </childnode>
+      </node>
+      <node id="19150">
+        <label>condition_variable</label>
+      </node>
+      <node id="19147">
+        <label>vector</label>
+      </node>
+      <node id="19160">
+        <label>AbstractCoreBoundQueue.h</label>
+        <link refid="_abstract_core_bound_queue_8h"/>
+        <childnode refid="19152" relation="include">
+        </childnode>
+        <childnode refid="19161" relation="include">
+        </childnode>
+      </node>
+      <node id="19144">
+        <label>AbstractCoreBoundQueuesScheduler.h</label>
+        <link refid="_abstract_core_bound_queues_scheduler_8h"/>
+        <childnode refid="19145" relation="include">
+        </childnode>
+        <childnode refid="19160" relation="include">
+        </childnode>
+        <childnode refid="19161" relation="include">
+        </childnode>
+      </node>
+      <node id="19157">
+        <label>iostream</label>
+      </node>
+      <node id="19148">
+        <label>mutex</label>
+      </node>
+      <node id="19153">
+        <label>thread</label>
+      </node>
+      <node id="19158">
+        <label>helper/HwlocHelper.h</label>
+        <link refid="_hwloc_helper_8h"/>
+        <childnode refid="19159" relation="include">
+        </childnode>
+        <childnode refid="19147" relation="include">
+        </childnode>
+      </node>
+      <node id="19155">
+        <label>log4cxx/logger.h</label>
+      </node>
+      <node id="19149">
+        <label>memory</label>
+      </node>
+      <node id="19146">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="19147" relation="include">
+        </childnode>
+        <childnode refid="19148" relation="include">
+        </childnode>
+        <childnode refid="19149" relation="include">
+        </childnode>
+        <childnode refid="19150" relation="include">
+        </childnode>
+        <childnode refid="19151" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="19164">
+        <label>src/lib/taskscheduler/WSCoreBoundPriorityQueue.cpp</label>
+        <link refid="_w_s_core_bound_priority_queue_8cpp"/>
+      </node>
+      <node id="19163">
+        <label>src/lib/taskscheduler/WSCoreBoundPriorityQueue.h</label>
+        <link refid="WSCoreBoundPriorityQueue.h"/>
+        <childnode refid="19164" relation="include">
+        </childnode>
+        <childnode refid="19165" relation="include">
+        </childnode>
+      </node>
+      <node id="19165">
+        <label>src/lib/taskscheduler/WSCoreBoundPriorityQueuesScheduler.cpp</label>
+        <link refid="_w_s_core_bound_priority_queues_scheduler_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_w_s_core_bound_priority_queue" prot="public">WSCoreBoundPriorityQueue</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>WSCoreBoundPriorityQueue.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Apr<sp/>4,<sp/>2013</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>jwust</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WSCOREBOUNDPRIORITYQUEUE_H_</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>WSCOREBOUNDPRIORITYQUEUE_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_w_s_core_bound_priority_queues_scheduler_8h" kindref="compound">WSCoreBoundPriorityQueuesScheduler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_core_bound_queue_8h" kindref="compound">AbstractCoreBoundQueue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;tbb/concurrent_priority_queue.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_w_s_core_bound_priority_queues_scheduler" kindref="compound">WSCoreBoundPriorityQueuesScheduler</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_w_s_core_bound_priority_queue" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_w_s_core_bound_priority_queue" kindref="compound">WSCoreBoundPriorityQueue</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queue" kindref="compound">AbstractCoreBoundQueue</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_w_s_core_bound_priority_queue_1aafd79c94edcf9bf36ab6f59ed21ebbe4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>tbb::concurrent_priority_queue&lt;std::shared_ptr&lt;Task&gt;<sp/>,<sp/><ref refid="class_compare_task_ptr" kindref="compound">CompareTaskPtr</ref>&gt;<sp/><ref refid="class_w_s_core_bound_priority_queue_1aafd79c94edcf9bf36ab6f59ed21ebbe4" kindref="member">run_queue_t</ref>;</highlight></codeline>
+<codeline lineno="20" refid="class_w_s_core_bound_priority_queue_1abc119071619569e197f74fe737d91f77" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_w_s_core_bound_priority_queue_1aafd79c94edcf9bf36ab6f59ed21ebbe4" kindref="member">run_queue_t</ref><sp/><ref refid="class_w_s_core_bound_priority_queue_1abc119071619569e197f74fe737d91f77" kindref="member">_runQueue</ref>;</highlight></codeline>
+<codeline lineno="21" refid="class_w_s_core_bound_priority_queue_1a24e599c4e6532922cec0f403c9324353" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_w_s_core_bound_priority_queues_scheduler" kindref="compound">WSCoreBoundPriorityQueuesScheduler</ref><sp/>*<sp/><ref refid="class_w_s_core_bound_priority_queue_1a24e599c4e6532922cec0f403c9324353" kindref="member">_scheduler</ref>;</highlight></codeline>
+<codeline lineno="22" refid="class_w_s_core_bound_priority_queue_1ae238b5da9e2fe198367d2564cf3958b7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;AbstractCoreBoundQueue<sp/>*&gt;<sp/>*<sp/><ref refid="class_w_s_core_bound_priority_queue_1ae238b5da9e2fe198367d2564cf3958b7" kindref="member">_allQueues</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;Task&gt;<sp/><ref refid="class_w_s_core_bound_priority_queue_1a71c327d1a207caeef99f09b60ace3b91" kindref="member">stealTasks</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><ref refid="class_w_s_core_bound_priority_queue_1a1eac25b463a493e5c1dcf34f21970a0f" kindref="member">WSCoreBoundPriorityQueue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>core,<sp/><ref refid="class_w_s_core_bound_priority_queues_scheduler" kindref="compound">WSCoreBoundPriorityQueuesScheduler</ref><sp/>*scheduler);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_w_s_core_bound_priority_queue_1accccb2847bdb1a9794f502817a2eff6e" kindref="member">~WSCoreBoundPriorityQueue</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Is<sp/>executed<sp/>by<sp/>dedicated<sp/>thread<sp/>to<sp/>work<sp/>the<sp/>queue</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_w_s_core_bound_priority_queue_1a3153f8da9b6ae0a48ca5eedc662f9615" kindref="member">executeTask</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/>*<sp/>push<sp/>a<sp/>new<sp/>task<sp/>to<sp/>the<sp/>queue,<sp/>tasks<sp/>are<sp/>expected<sp/>to<sp/>have<sp/>no<sp/>unmet<sp/>dependencies</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_w_s_core_bound_priority_queue_1a300e57139b5897f3de4223192492adc7" kindref="member">push</ref>(std::shared_ptr&lt;Task&gt;<sp/>task);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/>*<sp/>stop<sp/>queue<sp/>and<sp/>return<sp/>remaining<sp/>tasks;<sp/>allows<sp/>resizing<sp/>the<sp/>number<sp/>of<sp/>threads<sp/>used<sp/>by<sp/>a<sp/>task<sp/>pool</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>std::vector&lt;std::shared_ptr&lt;Task&gt;<sp/>&gt;<sp/><ref refid="class_w_s_core_bound_priority_queue_1af1c1025c2741d5fbce2b279a043810fa" kindref="member">stopQueue</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>std::vector&lt;std::shared_ptr&lt;Task&gt;<sp/>&gt;<sp/><ref refid="class_w_s_core_bound_priority_queue_1a11e4af1025112f005fb71c2dbc6b9d56" kindref="member">emptyQueue</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/>*<sp/>steal<sp/>Task</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;Task&gt;<sp/><ref refid="class_w_s_core_bound_priority_queue_1a1971b359a4924aab93c3b5c4f2dc5374" kindref="member">stealTask</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/>*<sp/>set<sp/>Task<sp/>Queues</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_w_s_core_bound_priority_queue_1a9d35e6f3bc6a66914d1ed4ccb4b72bca" kindref="member">refreshQueues</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WSCOREBOUNDPRIORITYQUEUE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h"/>
+  </compounddef>
+</doxygen>

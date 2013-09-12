@@ -1,0 +1,1066 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_pointer_calculator" kind="class" prot="public">
+    <compoundname>PointerCalculator</compoundname>
+    <basecompoundref refid="class_abstract_table" prot="public" virt="non-virtual">AbstractTable</basecompoundref>
+    <basecompoundref refid="class_shared_factory" prot="public" virt="non-virtual">SharedFactory&lt; PointerCalculator &gt;</basecompoundref>
+    <includes refid="_pointer_calculator_8h" local="no">PointerCalculator.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_pointer_calculator_1a117a79caba738a178fdf65e43d8e93a5" prot="public" static="no">
+        <type>std::vector&lt; std::shared_ptr&lt; const <ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref> &gt; &gt;</type>
+        <definition>typedef std::vector&lt;std::shared_ptr&lt;const PointerCalculator&gt; &gt; PointerCalculator::pc_vector</definition>
+        <argsstring></argsstring>
+        <name>pc_vector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="28" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pointer_calculator_1a1f408af8ac5043755573b931699876b0" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">hyrise::storage::c_atable_ptr_t</ref></type>
+        <definition>hyrise::storage::c_atable_ptr_t PointerCalculator::table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="70" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pointer_calculator_1aeefc9c692462aaa827cebde4d89c20b6" prot="private" static="no" mutable="no">
+        <type><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref> *</type>
+        <definition>pos_list_t* PointerCalculator::pos_list</definition>
+        <argsstring></argsstring>
+        <name>pos_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="71" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pointer_calculator_1a76ce6e192192101c99ec79374eaf661c" prot="private" static="no" mutable="no">
+        <type><ref refid="storage__types_8h_1a36fbc31395a53b7ece189846e4d3253c" kindref="member">field_list_t</ref> *</type>
+        <definition>field_list_t* PointerCalculator::fields</definition>
+        <argsstring></argsstring>
+        <name>fields</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="72" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pointer_calculator_1ac7f1e2be36bca6fc5119fa3b46231401" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt;size_t&gt; PointerCalculator::slice_for_slice</definition>
+        <argsstring></argsstring>
+        <name>slice_for_slice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="74" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pointer_calculator_1ab640d0f4071a2d93b6d2936b53483a9f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt;size_t&gt; PointerCalculator::offset_in_slice</definition>
+        <argsstring></argsstring>
+        <name>offset_in_slice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="75" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pointer_calculator_1aa095ee7598447699d7c34eaa1c7e4a8f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt;size_t&gt; PointerCalculator::width_for_slice</definition>
+        <argsstring></argsstring>
+        <name>width_for_slice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="76" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pointer_calculator_1af973df64326820f2f123fd9b1fc357be" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t PointerCalculator::slice_count</definition>
+        <argsstring></argsstring>
+        <name>slice_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="77" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pointer_calculator_1a021e0ab6ecef3f167c53fa16f26b5028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PointerCalculator::PointerCalculator</definition>
+        <argsstring>(hyrise::storage::c_atable_ptr_t t, pos_list_t *pos=nullptr, field_list_t *f=nullptr)</argsstring>
+        <name>PointerCalculator</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">hyrise::storage::c_atable_ptr_t</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref> *</type>
+          <declname>pos</declname>
+          <defval><ref refid="csb__tree_8cpp_1ab979d9d4b4923f7c54d6caa6e1a61936" kindref="member">nullptr</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1aa2c4369081de5fd9f081ba05ae7531f7" kindref="member">field_list_t</ref> *</type>
+          <declname>f</declname>
+          <defval><ref refid="csb__tree_8cpp_1ab979d9d4b4923f7c54d6caa6e1a61936" kindref="member">nullptr</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="16" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="22" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a70ba3d2ef7f8adec96a665c90fd7639f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PointerCalculator::PointerCalculator</definition>
+        <argsstring>(const PointerCalculator &amp;other)</argsstring>
+        <name>PointerCalculator</name>
+        <param>
+          <type>const <ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="17" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a582d20194dfa2ff7dbf98455bceed545" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>PointerCalculator::~PointerCalculator</definition>
+        <argsstring>()</argsstring>
+        <name>~PointerCalculator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="19" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a815d82d98a040d150c7040cfc07936de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PointerCalculator::setPositions</definition>
+        <argsstring>(const pos_list_t pos)</argsstring>
+        <name>setPositions</name>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="21" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="109" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a41061e503e0c43feb1425a47904e5387" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PointerCalculator::setFields</definition>
+        <argsstring>(const field_list_t f)</argsstring>
+        <name>setFields</name>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1aa2c4369081de5fd9f081ba05ae7531f7" kindref="member">field_list_t</ref></type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="22" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1ae09ea05b16fc99093a4c03a69442f9c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; PointerCalculator &gt; PointerCalculator::intersect</definition>
+        <argsstring>(const std::shared_ptr&lt; const PointerCalculator &gt; &amp;other) const </argsstring>
+        <name>intersect</name>
+        <param>
+          <type>const std::shared_ptr&lt; const <ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref> &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="24" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="319" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1aa297910421ea0308cd6c355164cf1f14" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; PointerCalculator &gt; PointerCalculator::unite</definition>
+        <argsstring>(const std::shared_ptr&lt; const PointerCalculator &gt; &amp;other) const </argsstring>
+        <name>unite</name>
+        <param>
+          <type>const std::shared_ptr&lt; const <ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref> &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="25" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="331" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a3b27cda2c208fbed0c7556f1f8ad8651" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; PointerCalculator &gt; PointerCalculator::concatenate</definition>
+        <argsstring>(const std::shared_ptr&lt; const PointerCalculator &gt; &amp;other) const </argsstring>
+        <name>concatenate</name>
+        <param>
+          <type>const std::shared_ptr&lt; const <ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref> &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="26" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="348" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a6f57168d74f28df50b332b47917457ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref> *</type>
+        <definition>const pos_list_t * PointerCalculator::getPositions</definition>
+        <argsstring>() const </argsstring>
+        <name>getPositions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="32" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="265" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a1d3eab6e902f044fc387c43781b91862" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref></type>
+        <definition>pos_list_t PointerCalculator::getActualTablePositions</definition>
+        <argsstring>() const </argsstring>
+        <name>getActualTablePositions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="33" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="269" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a79728be6c875bba8731be2e42253571a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t PointerCalculator::getTableRowForRow</definition>
+        <argsstring>(const size_t row) const </argsstring>
+        <name>getTableRowForRow</name>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="35" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="218" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1abca668c527de684e3d4df071934d1da9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t PointerCalculator::getTableColumnForColumn</definition>
+        <argsstring>(const size_t column) const </argsstring>
+        <name>getTableColumnForColumn</name>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="36" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="235" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1aeebfa9bef9ec2989eefa2030abbb4fe3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">hyrise::storage::c_atable_ptr_t</ref></type>
+        <definition>hyrise::storage::c_atable_ptr_t PointerCalculator::getTable</definition>
+        <argsstring>() const </argsstring>
+        <name>getTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="38" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="251" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1acbea3ac67f01befefecab60dd8a53bcd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">hyrise::storage::c_atable_ptr_t</ref></type>
+        <definition>hyrise::storage::c_atable_ptr_t PointerCalculator::getActualTable</definition>
+        <argsstring>() const </argsstring>
+        <name>getActualTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="39" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="255" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a9ec8c22d62384c55a4aa27770d98137a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PointerCalculator::validate</definition>
+        <argsstring>(hyrise::tx::transaction_id_t tid, hyrise::tx::transaction_id_t cid)</argsstring>
+        <name>validate</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">hyrise::tx::transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">hyrise::tx::transaction_id_t</ref></type>
+          <declname>cid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks the internal table of the pointer calculator to only contain valid positions.</para><para>If the PC is used for projections it will create a new position list with all valid positions and if positions are provided will use those positions to validate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="48" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="392" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a58904d5904a49f0cabb26b09b8ce0967" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PointerCalculator::remove</definition>
+        <argsstring>(const pos_list_t &amp;pl)</argsstring>
+        <name>remove</name>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref> &amp;</type>
+          <declname>pl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="50" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="401" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a9682236645d573e4a55fa6a25bb7b76c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref></type>
+        <definition>hyrise::storage::atable_ptr_t PointerCalculator::copy</definition>
+        <argsstring>() const override</argsstring>
+        <name>copy</name>
+        <reimplements refid="class_abstract_table_1a87134964b75abb36c49d0c44455d23e2">copy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create of copy of this table. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="53" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a60d1d6c937774a1ea6915636b8d74934" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref></type>
+        <definition>hyrise::storage::atable_ptr_t PointerCalculator::copy_structure</definition>
+        <argsstring>(const field_list_t *fields=nullptr, const bool reuse_dict=false, const size_t initial_size=0, const bool with_containers=true, const bool compressed=false) const override</argsstring>
+        <name>copy_structure</name>
+        <reimplements refid="class_abstract_table_1a435f72c573988b1438935fe0519da3a7">copy_structure</reimplements>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1aa2c4369081de5fd9f081ba05ae7531f7" kindref="member">field_list_t</ref> *</type>
+          <declname>fields</declname>
+          <defval><ref refid="csb__tree_8cpp_1ab979d9d4b4923f7c54d6caa6e1a61936" kindref="member">nullptr</ref></defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>reuse_dict</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>initial_size</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>with_containers</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>compressed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy the table&apos;s structure. Returns a pointer to an <ref refid="class_abstract_table" kindref="compound">AbstractTable</ref> with a copy of the current table&apos;s structure, containing all fields specified in the first parameter or all if left empty, as well as the current table&apos;s dictionary for those fields in case reuse_dict is set to true.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of fields to be copied (all if empty or nullptr). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reuse_dict</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Also copy the table&apos;s dictionary (default=false). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initial_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial size of the returned table (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>with_containers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Only used by derived classes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>compressed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets the compressed storage for the new table </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="54" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="288" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a8b02aaae5e63b1b27d518c57a308ea7b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref> *</type>
+        <definition>const ColumnMetadata * PointerCalculator::metadataAt</definition>
+        <argsstring>(const size_t column_index, const size_t row_index=0, const table_id_t table_id=0) const override</argsstring>
+        <name>metadataAt</name>
+        <reimplements refid="class_abstract_table_1a4d4d85fd352353254fe01a72a9635a64">metadataAt</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the metadata for a certain column. Returns a pointer to a <ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref> object for a specified column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column for which to return the metadata. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="55" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="120" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a562260e4503193f2052f6deefb0ca122" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref> &amp;</type>
+        <definition>const AbstractTable::SharedDictionaryPtr &amp; PointerCalculator::dictionaryAt</definition>
+        <argsstring>(const size_t column, const size_t row=0, const table_id_t table_id=0) const override</argsstring>
+        <name>dictionaryAt</name>
+        <reimplements refid="class_abstract_table_1ad20e4bbda0d8f1d257cbb62f4c0be91c">dictionaryAt</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the dictionary for a certain column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column from which to extract the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="56" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="136" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1afec8ff877a34cb7d7dd84dcdba2c6053" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref> &amp;</type>
+        <definition>const AbstractTable::SharedDictionaryPtr &amp; PointerCalculator::dictionaryByTableId</definition>
+        <argsstring>(const size_t column, const table_id_t table_id) const override</argsstring>
+        <name>dictionaryByTableId</name>
+        <reimplements refid="class_abstract_table_1a619607163a0f93d8bc90c3f3a66822ff">dictionaryByTableId</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the dictionary for a certain column by table ID. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column from which to extract the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="57" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="154" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1acd845d45bae50032a1dff6209f15099d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PointerCalculator::setDictionaryAt</definition>
+        <argsstring>(AbstractTable::SharedDictionaryPtr dict, const size_t column, const size_t row=0, const table_id_t table_id=0) override</argsstring>
+        <name>setDictionaryAt</name>
+        <reimplements refid="class_abstract_table_1a0acc1fa146aef09f9de31768e67dfa72">setDictionaryAt</reimplements>
+        <param>
+          <type><ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref></type>
+          <declname>dict</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the dictionary for a certain column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dict</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dictionary to be used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column for which to set the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="58" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1ac7daa76130599340823242d515b4929c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t PointerCalculator::size</definition>
+        <argsstring>() const override</argsstring>
+        <name>size</name>
+        <reimplements refid="class_abstract_table_1a2b3fde5fb0c70f288eda47c4c66bb151">size</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of rows in the table <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="59" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="166" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a7701458e19eff9c9be5d510974be6905" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t PointerCalculator::columnCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>columnCount</name>
+        <reimplements refid="class_abstract_table_1a9ba326d4ed695ff02dcdc0dd125fd16c">columnCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of columns. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="60" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="174" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a8d277cfce49eb5655569ce1d131984ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_value_id" kindref="compound">ValueId</ref></type>
+        <definition>ValueId PointerCalculator::getValueId</definition>
+        <argsstring>(const size_t column, const size_t row) const override</argsstring>
+        <name>getValueId</name>
+        <reimplements refid="class_abstract_table_1ae717cc86960b6488a8585d920a5f3b3d">getValueId</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value-ID of a cell. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row number of the cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="61" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="182" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a232f2adbbe75c832c399b7fad631db3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned</type>
+        <definition>unsigned PointerCalculator::partitionCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>partitionCount</name>
+        <reimplements refid="class_abstract_table_1a53bb2089cbb287804e3160abe893e657">partitionCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of partitions in this table. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="62" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="200" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a105b02332c4d1468e278249c4652732c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t PointerCalculator::partitionWidth</definition>
+        <argsstring>(const size_t slice) const override</argsstring>
+        <name>partitionWidth</name>
+        <reimplements refid="class_abstract_table_1ac89c7ce56dca98bdfdd67263a4165447">partitionWidth</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>slice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the width of a specified partition in number of attributes. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>slice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slice of interest. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="63" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="204" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1ac3e776173bb02f4b6bdfefaf91f952a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PointerCalculator::print</definition>
+        <argsstring>(const size_t limit=(size_t)-1) const override</argsstring>
+        <name>print</name>
+        <reimplements refid="class_abstract_table_1a7646e80f6c075dd018bd73a70751113a">print</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>limit</declname>
+          <defval>(size_t)-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints the table </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="64" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="214" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a55007cc7d49881dad15026eb398112a6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref></type>
+        <definition>table_id_t PointerCalculator::subtableCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>subtableCount</name>
+        <reimplements refid="class_abstract_table_1af5330c0a617946ad538cacea21ba7639">subtableCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of horizontal subtables. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="65" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1aa1c50ecf298b9d1843de7c8e4e6e4939" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PointerCalculator::debugStructure</definition>
+        <argsstring>(size_t level=0) const override</argsstring>
+        <name>debugStructure</name>
+        <reimplements refid="class_abstract_table_1a4262181544d5392b71735518088631ff">debugStructure</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="66" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="386" bodyend="389"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_pointer_calculator_1ab6ea533aa9ab978a180e1140cd029c43" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; const <ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; const PointerCalculator &gt; PointerCalculator::unite_many</definition>
+        <argsstring>(pc_vector::const_iterator it, pc_vector::const_iterator it_end)</argsstring>
+        <name>unite_many</name>
+        <param>
+          <type>pc_vector::const_iterator</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>pc_vector::const_iterator</type>
+          <declname>it_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="29" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="354" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pointer_calculator_1a7cfb4ee455555b900213603d71980d6d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; PointerCalculator &gt; PointerCalculator::concatenate_many</definition>
+        <argsstring>(pc_vector::const_iterator it, pc_vector::const_iterator it_end)</argsstring>
+        <name>concatenate_many</name>
+        <param>
+          <type>pc_vector::const_iterator</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>pc_vector::const_iterator</type>
+          <declname>it_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="30" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="362" bodyend="384"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_pointer_calculator_1aafe8c79a4a56ff66a813fb6a817dd47b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PointerCalculator::updateFieldMapping</definition>
+        <argsstring>()</argsstring>
+        <name>updateFieldMapping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="68" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.cpp" bodystart="68" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2939">
+        <label>SharedFactory&lt; PointerCalculator &gt;</label>
+        <link refid="class_shared_factory"/>
+        <childnode refid="2940" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2941" relation="template-instance">
+          <edgelabel>&lt; PointerCalculator &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2937">
+        <label>AbstractTable</label>
+        <link refid="class_abstract_table"/>
+        <childnode refid="2938" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2938">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+      <node id="2942">
+        <label>std::enable_shared_from_this&lt; T &gt;</label>
+      </node>
+      <node id="2936">
+        <label>PointerCalculator</label>
+        <link refid="class_pointer_calculator"/>
+        <childnode refid="2937" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2939" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2940">
+        <label>std::enable_shared_from_this&lt; PointerCalculator &gt;</label>
+      </node>
+      <node id="2941">
+        <label>SharedFactory&lt; T &gt;</label>
+        <link refid="class_shared_factory"/>
+        <childnode refid="2942" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2947">
+        <label>SharedFactory&lt; PointerCalculator &gt;</label>
+        <link refid="class_shared_factory"/>
+        <childnode refid="2948" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2949" relation="template-instance">
+          <edgelabel>&lt; PointerCalculator &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2944">
+        <label>AbstractTable</label>
+        <link refid="class_abstract_table"/>
+        <childnode refid="2945" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2946" relation="usage">
+          <edgelabel>-_uuid</edgelabel>
+        </childnode>
+      </node>
+      <node id="2945">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+      <node id="2950">
+        <label>std::enable_shared_from_this&lt; T &gt;</label>
+      </node>
+      <node id="2946">
+        <label>unique_id</label>
+        <link refid="structunique__id"/>
+      </node>
+      <node id="2943">
+        <label>PointerCalculator</label>
+        <link refid="class_pointer_calculator"/>
+        <childnode refid="2944" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2947" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2948">
+        <label>std::enable_shared_from_this&lt; PointerCalculator &gt;</label>
+      </node>
+      <node id="2949">
+        <label>SharedFactory&lt; T &gt;</label>
+        <link refid="class_shared_factory"/>
+        <childnode refid="2950" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" line="14" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/PointerCalculator.h" bodystart="13" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_pointer_calculator_1a7701458e19eff9c9be5d510974be6905" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>columnCount</name></member>
+      <member refid="class_pointer_calculator_1a3b27cda2c208fbed0c7556f1f8ad8651" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>concatenate</name></member>
+      <member refid="class_pointer_calculator_1a7cfb4ee455555b900213603d71980d6d" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>concatenate_many</name></member>
+      <member refid="class_abstract_table_1af716c04f38a6ab47b277911baf050c9d" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>contentEquals</name></member>
+      <member refid="class_pointer_calculator_1a9682236645d573e4a55fa6a25bb7b76c" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>copy</name></member>
+      <member refid="class_pointer_calculator_1a60d1d6c937774a1ea6915636b8d74934" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>copy_structure</name></member>
+      <member refid="class_abstract_table_1aca6d9c647c92a66bd658c4c58250c715" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>copy_structure_modifiable</name></member>
+      <member refid="class_abstract_table_1ad4973d95d29deb5142d6e6b308346a42" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>copyRowFrom</name></member>
+      <member refid="class_abstract_table_1a4361f683288a0d1360227b309ca625f6" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1a2f6d1df59bdb78f8454ea8c06c89216d" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1a06029159a39fac33676c09daa3f7f849" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1aea155de835135df953603e9dcbb731c3" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>copyValueIds</name></member>
+      <member refid="class_shared_factory_1ac72cda135ae2e2f0b9cb9ed8b7afc5d1" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>create</name></member>
+      <member refid="class_pointer_calculator_1aa1c50ecf298b9d1843de7c8e4e6e4939" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>debugStructure</name></member>
+      <member refid="class_abstract_table_1ab1d04fdc926954e4027fb883abab1d73" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>dictionaries</name></member>
+      <member refid="class_pointer_calculator_1a562260e4503193f2052f6deefb0ca122" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>dictionaryAt</name></member>
+      <member refid="class_pointer_calculator_1afec8ff877a34cb7d7dd84dcdba2c6053" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>dictionaryByTableId</name></member>
+      <member refid="class_pointer_calculator_1a76ce6e192192101c99ec79374eaf661c" prot="private" virt="non-virtual"><scope>PointerCalculator</scope><name>fields</name></member>
+      <member refid="class_pointer_calculator_1acbea3ac67f01befefecab60dd8a53bcd" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>getActualTable</name></member>
+      <member refid="class_pointer_calculator_1a1d3eab6e902f044fc387c43781b91862" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>getActualTablePositions</name></member>
+      <member refid="class_abstract_table_1a3467bc6159aa361db993c3fc56584789" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>getAttributeVectors</name></member>
+      <member refid="class_pointer_calculator_1a6f57168d74f28df50b332b47917457ca" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>getPositions</name></member>
+      <member refid="class_pointer_calculator_1aeebfa9bef9ec2989eefa2030abbb4fe3" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>getTable</name></member>
+      <member refid="class_pointer_calculator_1abca668c527de684e3d4df071934d1da9" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>getTableColumnForColumn</name></member>
+      <member refid="class_pointer_calculator_1a79728be6c875bba8731be2e42253571a" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>getTableRowForRow</name></member>
+      <member refid="class_abstract_table_1af820249fa63adfdd1e678572555f6886" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>getUuid</name></member>
+      <member refid="class_abstract_table_1a6648aba614a398c3243a60b18d5d7dbf" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>getValue</name></member>
+      <member refid="class_abstract_table_1aac6e3940c4b756a4c627ece2c008782c" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>getValue</name></member>
+      <member refid="class_abstract_table_1af380b8fd7715abe5988f53b885920e0c" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>getValueForValueId</name></member>
+      <member refid="class_pointer_calculator_1a8d277cfce49eb5655569ce1d131984ef" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>getValueId</name></member>
+      <member refid="class_abstract_table_1a21786cf05c9871539e32e583b1e717c4" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>getValueIdForValue</name></member>
+      <member refid="class_abstract_table_1acd7ea07c9b1605ca53c7608c7c3b2ea5" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>getValueIdForValueByTableId</name></member>
+      <member refid="class_pointer_calculator_1ae09ea05b16fc99093a4c03a69442f9c9" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>intersect</name></member>
+      <member refid="class_abstract_table_1a8b854b19026e75eebc02942499a82a21" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>metadata</name></member>
+      <member refid="class_pointer_calculator_1a8b02aaae5e63b1b27d518c57a308ea7b" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>metadataAt</name></member>
+      <member refid="class_abstract_table_1af8c5434b261abfcab191852f575b4c5a" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>nameOfColumn</name></member>
+      <member refid="class_abstract_table_1aaea606e4fd8c92a43febced405de1c6c" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>numberOfColumn</name></member>
+      <member refid="class_pointer_calculator_1ab640d0f4071a2d93b6d2936b53483a9f" prot="private" virt="non-virtual"><scope>PointerCalculator</scope><name>offset_in_slice</name></member>
+      <member refid="class_pointer_calculator_1a232f2adbbe75c832c399b7fad631db3b" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>partitionCount</name></member>
+      <member refid="class_pointer_calculator_1a105b02332c4d1468e278249c4652732c" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>partitionWidth</name></member>
+      <member refid="class_pointer_calculator_1a117a79caba738a178fdf65e43d8e93a5" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>pc_vector</name></member>
+      <member refid="class_pointer_calculator_1a021e0ab6ecef3f167c53fa16f26b5028" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>PointerCalculator</name></member>
+      <member refid="class_pointer_calculator_1a70ba3d2ef7f8adec96a665c90fd7639f" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>PointerCalculator</name></member>
+      <member refid="class_pointer_calculator_1aeefc9c692462aaa827cebde4d89c20b6" prot="private" virt="non-virtual"><scope>PointerCalculator</scope><name>pos_list</name></member>
+      <member refid="class_pointer_calculator_1ac3e776173bb02f4b6bdfefaf91f952a4" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>print</name></member>
+      <member refid="class_abstract_table_1a67489daa606ed64ce9874b509451e3d9" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>printValue</name></member>
+      <member refid="class_pointer_calculator_1a58904d5904a49f0cabb26b09b8ce0967" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>remove</name></member>
+      <member refid="class_abstract_table_1a019861d7ed5abee8c15a0511c3cbf051" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>reserve</name></member>
+      <member refid="class_abstract_table_1a92d707d52cdeabfc3cf254693b913a81" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>resize</name></member>
+      <member refid="class_pointer_calculator_1acd845d45bae50032a1dff6209f15099d" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>setDictionaryAt</name></member>
+      <member refid="class_pointer_calculator_1a41061e503e0c43feb1425a47904e5387" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>setFields</name></member>
+      <member refid="class_pointer_calculator_1a815d82d98a040d150c7040cfc07936de" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>setPositions</name></member>
+      <member refid="class_abstract_table_1ade4da17f60dbde2148f25b849528f624" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>setUuid</name></member>
+      <member refid="class_abstract_table_1a0aa362f5b907b4d79c2fb43889a8970b" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>setValue</name></member>
+      <member refid="class_abstract_table_1a2be48affbc5a0060e2d17128be9e91b9" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>setValueId</name></member>
+      <member refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>SharedDictionaryPtr</name></member>
+      <member refid="class_pointer_calculator_1ac7daa76130599340823242d515b4929c" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>size</name></member>
+      <member refid="class_pointer_calculator_1af973df64326820f2f123fd9b1fc357be" prot="private" virt="non-virtual"><scope>PointerCalculator</scope><name>slice_count</name></member>
+      <member refid="class_pointer_calculator_1ac7f1e2be36bca6fc5119fa3b46231401" prot="private" virt="non-virtual"><scope>PointerCalculator</scope><name>slice_for_slice</name></member>
+      <member refid="class_pointer_calculator_1a55007cc7d49881dad15026eb398112a6" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>subtableCount</name></member>
+      <member refid="class_pointer_calculator_1a1f408af8ac5043755573b931699876b0" prot="private" virt="non-virtual"><scope>PointerCalculator</scope><name>table</name></member>
+      <member refid="class_abstract_table_1a50b40ae8ca0b789dd8ded3fc51a6f5fd" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>typeOfColumn</name></member>
+      <member refid="class_pointer_calculator_1aa297910421ea0308cd6c355164cf1f14" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>unite</name></member>
+      <member refid="class_pointer_calculator_1ab6ea533aa9ab978a180e1140cd029c43" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>unite_many</name></member>
+      <member refid="class_pointer_calculator_1aafe8c79a4a56ff66a813fb6a817dd47b" prot="protected" virt="non-virtual"><scope>PointerCalculator</scope><name>updateFieldMapping</name></member>
+      <member refid="class_pointer_calculator_1a9ec8c22d62384c55a4aa27770d98137a" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>validate</name></member>
+      <member refid="class_abstract_table_1a55de3a5a31acf6898fb9ddd287b760e3" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>valueExists</name></member>
+      <member refid="class_pointer_calculator_1aa095ee7598447699d7c34eaa1c7e4a8f" prot="private" virt="non-virtual"><scope>PointerCalculator</scope><name>width_for_slice</name></member>
+      <member refid="class_abstract_table_1a8e1d6f1b61390fc3e6954fbaa1f7745f" prot="public" virt="non-virtual"><scope>PointerCalculator</scope><name>write</name></member>
+      <member refid="class_abstract_resource_1acbf6801fec7bf1acf0d90a4fb5d5c706" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>~AbstractResource</name></member>
+      <member refid="class_pointer_calculator_1a582d20194dfa2ff7dbf98455bceed545" prot="public" virt="virtual"><scope>PointerCalculator</scope><name>~PointerCalculator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

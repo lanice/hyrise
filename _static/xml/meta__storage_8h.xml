@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="meta__storage_8h" kind="file">
+    <compoundname>meta_storage.h</compoundname>
+    <includes local="no">stdexcept</includes>
+    <includes local="yes">boost/mpl/at.hpp</includes>
+    <includes local="yes">boost/mpl/int.hpp</includes>
+    <includes local="yes">boost/mpl/size.hpp</includes>
+    <includes refid="storage__types_8h" local="yes">storage/storage_types.h</includes>
+    <includes local="yes">boost/mpl/vector.hpp</includes>
+    <includedby refid="_aggregate_functions_8cpp" local="no">src/lib/access/AggregateFunctions.cpp</includedby>
+    <includedby refid="_create_index_8cpp" local="yes">src/lib/access/CreateIndex.cpp</includedby>
+    <includedby refid="pred__build_expression_8cpp" local="yes">src/lib/access/expressions/pred_buildExpression.cpp</includedby>
+    <includedby refid="lib_2access_2_group_by_scan_8cpp" local="yes">src/lib/access/GroupByScan.cpp</includedby>
+    <includedby refid="_index_scan_8cpp" local="yes">src/lib/access/IndexScan.cpp</includedby>
+    <includedby refid="_insert_scan_8cpp" local="yes">src/lib/access/InsertScan.cpp</includedby>
+    <includedby refid="_pos_update_scan_8cpp" local="yes">src/lib/access/PosUpdateScan.cpp</includedby>
+    <includedby refid="_simple_raw_table_scan_8cpp" local="yes">src/lib/access/SimpleRawTableScan.cpp</includedby>
+    <includedby refid="_json_table_8cpp" local="no">src/lib/access/storage/JsonTable.cpp</includedby>
+    <includedby refid="_response_task_8cpp" local="yes">src/lib/access/system/ResponseTask.cpp</includedby>
+    <includedby refid="_m_pass_c_s_v_loader_8cpp" local="yes">src/lib/io/MPassCSVLoader.cpp</includedby>
+    <includedby refid="_table_dump_8cpp" local="yes">src/lib/io/TableDump.cpp</includedby>
+    <includedby refid="_group_value_8cpp" local="yes">src/lib/storage/GroupValue.cpp</includedby>
+    <includedby refid="_hash_table_8cpp" local="yes">src/lib/storage/HashTable.cpp</includedby>
+    <includedby refid="_raw_table_8cpp" local="yes">src/lib/storage/RawTable.cpp</includedby>
+    <includedby refid="_simple_store_merger_8cpp" local="yes">src/lib/storage/SimpleStoreMerger.cpp</includedby>
+    <includedby refid="storage__types__helper_8h" local="yes">src/lib/storage/storage_types_helper.h</includedby>
+    <includedby refid="_table_diff_8cpp" local="no">src/lib/storage/TableDiff.cpp</includedby>
+    <incdepgraph>
+      <node id="16069">
+        <label>boost/mpl/size.hpp</label>
+      </node>
+      <node id="16075">
+        <label>boost/mpl/vector.hpp</label>
+      </node>
+      <node id="16073">
+        <label>stdint.h</label>
+      </node>
+      <node id="16066">
+        <label>stdexcept</label>
+      </node>
+      <node id="16072">
+        <label>string</label>
+      </node>
+      <node id="16067">
+        <label>boost/mpl/at.hpp</label>
+      </node>
+      <node id="16074">
+        <label>ostream</label>
+      </node>
+      <node id="16070">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="16071" relation="include">
+        </childnode>
+        <childnode refid="16072" relation="include">
+        </childnode>
+        <childnode refid="16066" relation="include">
+        </childnode>
+        <childnode refid="16073" relation="include">
+        </childnode>
+        <childnode refid="16074" relation="include">
+        </childnode>
+      </node>
+      <node id="16071">
+        <label>vector</label>
+      </node>
+      <node id="16068">
+        <label>boost/mpl/int.hpp</label>
+      </node>
+      <node id="16065">
+        <label>src/lib/storage/meta_storage.h</label>
+        <link refid="meta_storage.h"/>
+        <childnode refid="16066" relation="include">
+        </childnode>
+        <childnode refid="16067" relation="include">
+        </childnode>
+        <childnode refid="16068" relation="include">
+        </childnode>
+        <childnode refid="16069" relation="include">
+        </childnode>
+        <childnode refid="16070" relation="include">
+        </childnode>
+        <childnode refid="16075" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16086">
+        <label>src/lib/access/system/ResponseTask.cpp</label>
+        <link refid="_response_task_8cpp"/>
+      </node>
+      <node id="16079">
+        <label>src/lib/access/expressions/pred_buildExpression.cpp</label>
+        <link refid="pred__build_expression_8cpp"/>
+      </node>
+      <node id="16093">
+        <label>src/lib/storage/storage_types_helper.h</label>
+        <link refid="storage__types__helper_8h"/>
+        <childnode refid="16088" relation="include">
+        </childnode>
+        <childnode refid="16094" relation="include">
+        </childnode>
+        <childnode refid="16089" relation="include">
+        </childnode>
+        <childnode refid="16095" relation="include">
+        </childnode>
+      </node>
+      <node id="16085">
+        <label>src/lib/access/storage/JsonTable.cpp</label>
+        <link refid="_json_table_8cpp"/>
+      </node>
+      <node id="16078">
+        <label>src/lib/access/CreateIndex.cpp</label>
+        <link refid="_create_index_8cpp"/>
+      </node>
+      <node id="16082">
+        <label>src/lib/access/InsertScan.cpp</label>
+        <link refid="_insert_scan_8cpp"/>
+      </node>
+      <node id="16084">
+        <label>src/lib/access/SimpleRawTableScan.cpp</label>
+        <link refid="_simple_raw_table_scan_8cpp"/>
+      </node>
+      <node id="16081">
+        <label>src/lib/access/IndexScan.cpp</label>
+        <link refid="_index_scan_8cpp"/>
+      </node>
+      <node id="16080">
+        <label>src/lib/access/GroupByScan.cpp</label>
+        <link refid="lib_2access_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="16092">
+        <label>src/lib/storage/SimpleStoreMerger.cpp</label>
+        <link refid="_simple_store_merger_8cpp"/>
+      </node>
+      <node id="16095">
+        <label>src/lib/storage/storage_types_helper.cpp</label>
+        <link refid="storage__types__helper_8cpp"/>
+      </node>
+      <node id="16094">
+        <label>src/lib/storage/AbstractTable.cpp</label>
+        <link refid="_abstract_table_8cpp"/>
+      </node>
+      <node id="16089">
+        <label>src/lib/storage/GroupValue.cpp</label>
+        <link refid="_group_value_8cpp"/>
+      </node>
+      <node id="16083">
+        <label>src/lib/access/PosUpdateScan.cpp</label>
+        <link refid="_pos_update_scan_8cpp"/>
+      </node>
+      <node id="16090">
+        <label>src/lib/storage/HashTable.cpp</label>
+        <link refid="_hash_table_8cpp"/>
+      </node>
+      <node id="16077">
+        <label>src/lib/access/AggregateFunctions.cpp</label>
+        <link refid="_aggregate_functions_8cpp"/>
+      </node>
+      <node id="16091">
+        <label>src/lib/storage/RawTable.cpp</label>
+        <link refid="_raw_table_8cpp"/>
+      </node>
+      <node id="16088">
+        <label>src/lib/io/TableDump.cpp</label>
+        <link refid="_table_dump_8cpp"/>
+      </node>
+      <node id="16087">
+        <label>src/lib/io/MPassCSVLoader.cpp</label>
+        <link refid="_m_pass_c_s_v_loader_8cpp"/>
+      </node>
+      <node id="16076">
+        <label>src/lib/storage/meta_storage.h</label>
+        <link refid="meta_storage.h"/>
+        <childnode refid="16077" relation="include">
+        </childnode>
+        <childnode refid="16078" relation="include">
+        </childnode>
+        <childnode refid="16079" relation="include">
+        </childnode>
+        <childnode refid="16080" relation="include">
+        </childnode>
+        <childnode refid="16081" relation="include">
+        </childnode>
+        <childnode refid="16082" relation="include">
+        </childnode>
+        <childnode refid="16083" relation="include">
+        </childnode>
+        <childnode refid="16084" relation="include">
+        </childnode>
+        <childnode refid="16085" relation="include">
+        </childnode>
+        <childnode refid="16086" relation="include">
+        </childnode>
+        <childnode refid="16087" relation="include">
+        </childnode>
+        <childnode refid="16088" relation="include">
+        </childnode>
+        <childnode refid="16089" relation="include">
+        </childnode>
+        <childnode refid="16090" relation="include">
+        </childnode>
+        <childnode refid="16091" relation="include">
+        </childnode>
+        <childnode refid="16092" relation="include">
+        </childnode>
+        <childnode refid="16093" relation="include">
+        </childnode>
+        <childnode refid="16096" relation="include">
+        </childnode>
+      </node>
+      <node id="16096">
+        <label>src/lib/storage/TableDiff.cpp</label>
+        <link refid="_table_diff_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structhyrise_1_1storage_1_1type__switch" prot="public">hyrise::storage::type_switch</innerclass>
+    <innerclass refid="structhyrise_1_1storage_1_1type__switch" prot="public">hyrise::storage::type_switch</innerclass>
+    <innerclass refid="structhyrise_1_1storage_1_1type__switch_3_01_l_00_01_n_00_01true_01_4" prot="public">hyrise::storage::type_switch&lt; L, N, true &gt;</innerclass>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1storage">hyrise::storage</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="meta__storage_8h_1a39c874e8e107e23aa7e7782c1ee1b35c" prot="public" static="no">
+        <type>boost::mpl::vector&lt; <ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref>, <ref refid="storage__types_8h_1ae1d9f03fd6d4a12d5c63accb4233a2ec" kindref="member">hyrise_float_t</ref>, <ref refid="storage__types_8h_1af37c27a8a9ec58aee21fbec32a793509" kindref="member">hyrise_string_t</ref> &gt;</type>
+        <definition>typedef boost::mpl::vector&lt;hyrise_int_t, hyrise_float_t, hyrise_string_t&gt; hyrise_basic_types</definition>
+        <argsstring></argsstring>
+        <name>hyrise_basic_types</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/meta_storage.h" line="18" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/meta_storage.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_STORAGE_META_STORAGE_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_STORAGE_META_STORAGE_H_</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/mpl/at.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/mpl/int.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/mpl/size.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="storage__types_8h" kindref="compound">storage/storage_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/mpl/vector.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;boost/mpl/map.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>are<sp/>the<sp/>basic<sp/>types<sp/>used<sp/>in<sp/>HYRISE,<sp/>the<sp/>enum<sp/>above<sp/>can</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>be<sp/>used<sp/>to<sp/>directly<sp/>offset<sp/>into<sp/>the<sp/>list<sp/>at<sp/>compile<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="meta__storage_8h_1a39c874e8e107e23aa7e7782c1ee1b35c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::mpl::vector&lt;hyrise_int_t,<sp/>hyrise_float_t,<sp/>hyrise_string_t&gt;<sp/><ref refid="meta__storage_8h_1a39c874e8e107e23aa7e7782c1ee1b35c" kindref="member">hyrise_basic_types</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">storage<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="namespacehyrise_1_1storage_1aaafea9a51b6e901f07461e5c641bfe9a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><sp/>boost::mpl::size&lt;hyrise_basic_types&gt;<sp/><ref refid="namespacehyrise_1_1storage_1aaafea9a51b6e901f07461e5c641bfe9a" kindref="member">basic_types_size</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/>This<sp/>is<sp/>a<sp/>simple<sp/>implementation<sp/>of<sp/>a<sp/>list<sp/>based<sp/>type<sp/>switch.<sp/>Based<sp/>on<sp/>the<sp/>main</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/>defintion<sp/>of<sp/>all<sp/>available<sp/>types<sp/>this<sp/>template<sp/>defintion<sp/>recurses<sp/>through<sp/>to</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/>find<sp/>the<sp/>correct<sp/>type<sp/>and<sp/>based<sp/>on<sp/>this<sp/>type<sp/>call<sp/>the<sp/>functor</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="structhyrise_1_1storage_1_1type__switch" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>L,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Stop<sp/>=<sp/>(N<sp/>==<sp/>basic_types_size::value)&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhyrise_1_1storage_1_1type__switch" kindref="compound">type_switch</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>L,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Stop&gt;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhyrise_1_1storage_1_1type__switch" kindref="compound">type_switch</ref><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>F&gt;</highlight></codeline>
+<codeline lineno="37" refid="structhyrise_1_1storage_1_1type__switch_1a38ea5d16307f09266efea24475fdff62" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F::value_type<sp/><ref refid="structhyrise_1_1storage_1_1type__switch_1a38ea5d16307f09266efea24475fdff62" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i,<sp/>F<sp/>&amp;f)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>N)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>f.template<sp/>operator()&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>boost::mpl::at_c&lt;<sp/>hyrise_basic_types,<sp/>N&gt;::type&gt;();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhyrise_1_1storage_1_1type__switch" kindref="compound">type_switch &lt; L, N + 1 &gt;</ref><sp/>next;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>next(i,<sp/>f);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>L,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N&gt;</highlight></codeline>
+<codeline lineno="48" refid="structhyrise_1_1storage_1_1type__switch_3_01_l_00_01_n_00_01true_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhyrise_1_1storage_1_1type__switch" kindref="compound">type_switch</ref>&lt;L,<sp/>N,<sp/>true&gt;<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>F&gt;</highlight></codeline>
+<codeline lineno="50" refid="structhyrise_1_1storage_1_1type__switch_3_01_l_00_01_n_00_01true_01_4_1a79d262ddb383f08fc8b7342bc462752e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F::value_type<sp/><ref refid="structhyrise_1_1storage_1_1type__switch_3_01_l_00_01_n_00_01true_01_4_1a79d262ddb383f08fc8b7342bc462752e" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i,<sp/>F<sp/>&amp;f)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Type<sp/>does<sp/>not<sp/>exist&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_STORAGE_META_STORAGE_H_</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/meta_storage.h"/>
+  </compounddef>
+</doxygen>

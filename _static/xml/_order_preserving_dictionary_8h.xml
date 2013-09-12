@@ -1,0 +1,761 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_order_preserving_dictionary_8h" kind="file">
+    <compoundname>OrderPreservingDictionary.h</compoundname>
+    <includes local="no">assert.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">memory</includes>
+    <includes refid="_base_dictionary_8h" local="yes">storage/BaseDictionary.h</includes>
+    <includes refid="_base_iterator_8h" local="yes">storage/BaseIterator.h</includes>
+    <includes refid="_dictionary_iterator_8h" local="yes">storage/DictionaryIterator.h</includes>
+    <includes refid="storage__types_8h" local="yes">storage/storage_types.h</includes>
+    <includedby refid="_example_expression_8h" local="yes">src/lib/access/expressions/ExampleExpression.h</includedby>
+    <includedby refid="_histogram_8h" local="yes">src/lib/access/radixjoin/Histogram.h</includedby>
+    <includedby refid="_m_pass_c_s_v_loader_8cpp" local="yes">src/lib/io/MPassCSVLoader.cpp</includedby>
+    <includedby refid="_simple_store_merger_8cpp" local="yes">src/lib/storage/SimpleStoreMerger.cpp</includedby>
+    <includedby refid="_value_id_map_8hpp" local="no">src/lib/storage/ValueIdMap.hpp</includedby>
+    <incdepgraph>
+      <node id="16322">
+        <label>src/lib/storage/OrderPreservingDictionary.h</label>
+        <link refid="OrderPreservingDictionary.h"/>
+        <childnode refid="16323" relation="include">
+        </childnode>
+        <childnode refid="16324" relation="include">
+        </childnode>
+        <childnode refid="16325" relation="include">
+        </childnode>
+        <childnode refid="16326" relation="include">
+        </childnode>
+        <childnode refid="16335" relation="include">
+        </childnode>
+        <childnode refid="16334" relation="include">
+        </childnode>
+        <childnode refid="16327" relation="include">
+        </childnode>
+      </node>
+      <node id="16326">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="16327" relation="include">
+        </childnode>
+        <childnode refid="16333" relation="include">
+        </childnode>
+        <childnode refid="16334" relation="include">
+        </childnode>
+      </node>
+      <node id="16323">
+        <label>assert.h</label>
+      </node>
+      <node id="16336">
+        <label>boost/iterator/iterator_facade.hpp</label>
+      </node>
+      <node id="16331">
+        <label>stdint.h</label>
+      </node>
+      <node id="16330">
+        <label>stdexcept</label>
+      </node>
+      <node id="16329">
+        <label>string</label>
+      </node>
+      <node id="16332">
+        <label>ostream</label>
+      </node>
+      <node id="16327">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="16328" relation="include">
+        </childnode>
+        <childnode refid="16329" relation="include">
+        </childnode>
+        <childnode refid="16330" relation="include">
+        </childnode>
+        <childnode refid="16331" relation="include">
+        </childnode>
+        <childnode refid="16332" relation="include">
+        </childnode>
+      </node>
+      <node id="16334">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="16335" relation="include">
+        </childnode>
+        <childnode refid="16336" relation="include">
+        </childnode>
+      </node>
+      <node id="16335">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="16328">
+        <label>vector</label>
+      </node>
+      <node id="16324">
+        <label>iostream</label>
+      </node>
+      <node id="16333">
+        <label>storage/AbstractDictionary.h</label>
+        <link refid="_abstract_dictionary_8h"/>
+        <childnode refid="16328" relation="include">
+        </childnode>
+        <childnode refid="16329" relation="include">
+        </childnode>
+        <childnode refid="16325" relation="include">
+        </childnode>
+        <childnode refid="16327" relation="include">
+        </childnode>
+      </node>
+      <node id="16325">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16337">
+        <label>src/lib/storage/OrderPreservingDictionary.h</label>
+        <link refid="OrderPreservingDictionary.h"/>
+        <childnode refid="16338" relation="include">
+        </childnode>
+        <childnode refid="16342" relation="include">
+        </childnode>
+        <childnode refid="16347" relation="include">
+        </childnode>
+        <childnode refid="16348" relation="include">
+        </childnode>
+        <childnode refid="16349" relation="include">
+        </childnode>
+      </node>
+      <node id="16338">
+        <label>src/lib/access/expressions/ExampleExpression.h</label>
+        <link refid="_example_expression_8h"/>
+        <childnode refid="16339" relation="include">
+        </childnode>
+        <childnode refid="16340" relation="include">
+        </childnode>
+        <childnode refid="16341" relation="include">
+        </childnode>
+      </node>
+      <node id="16353">
+        <label>src/lib/access/expressions/pred_buildExpression.cpp</label>
+        <link refid="pred__build_expression_8cpp"/>
+      </node>
+      <node id="16360">
+        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
+        <link refid="_hash_value_join_8cpp"/>
+      </node>
+      <node id="16375">
+        <label>src/lib/access/expressions/pred_GreaterThanExpression.h</label>
+        <link refid="pred___greater_than_expression_8h"/>
+        <childnode refid="16352" relation="include">
+        </childnode>
+      </node>
+      <node id="16389">
+        <label>src/lib/access/storage/JsonTable.cpp</label>
+        <link refid="_json_table_8cpp"/>
+      </node>
+      <node id="16399">
+        <label>src/lib/storage/Store.cpp</label>
+        <link refid="_store_8cpp"/>
+      </node>
+      <node id="16386">
+        <label>src/lib/access/InsertScan.cpp</label>
+        <link refid="_insert_scan_8cpp"/>
+      </node>
+      <node id="16346">
+        <label>src/lib/access/radixjoin/RadixCluster.cpp</label>
+        <link refid="_radix_cluster_8cpp"/>
+      </node>
+      <node id="16390">
+        <label>src/lib/access/storage/TableIO.cpp</label>
+        <link refid="_table_i_o_8cpp"/>
+      </node>
+      <node id="16349">
+        <label>src/lib/storage/ValueIdMap.hpp</label>
+        <link refid="_value_id_map_8hpp"/>
+        <childnode refid="16350" relation="include">
+        </childnode>
+        <childnode refid="16377" relation="include">
+        </childnode>
+        <childnode refid="16402" relation="include">
+        </childnode>
+        <childnode refid="16400" relation="include">
+        </childnode>
+      </node>
+      <node id="16358">
+        <label>src/bin/perf_regression/GroupByScan.cpp</label>
+        <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="16365">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
+      </node>
+      <node id="16369">
+        <label>src/lib/access/SimpleRawTableScan.cpp</label>
+        <link refid="_simple_raw_table_scan_8cpp"/>
+      </node>
+      <node id="16370">
+        <label>src/lib/access/SimpleTableScan.cpp</label>
+        <link refid="lib_2access_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="16345">
+        <label>src/lib/access/radixjoin/RadixCluster.h</label>
+        <link refid="_radix_cluster_8h"/>
+        <childnode refid="16346" relation="include">
+        </childnode>
+      </node>
+      <node id="16379">
+        <label>src/lib/io/Loader.cpp</label>
+        <link refid="_loader_8cpp"/>
+      </node>
+      <node id="16366">
+        <label>src/lib/access/MergeJoin.hpp</label>
+        <link refid="_merge_join_8hpp"/>
+        <childnode refid="16357" relation="include">
+        </childnode>
+      </node>
+      <node id="16401">
+        <label>src/lib/storage/TableGenerator.cpp</label>
+        <link refid="_table_generator_8cpp"/>
+      </node>
+      <node id="16383">
+        <label>src/lib/access/Delete.cpp</label>
+        <link refid="_delete_8cpp"/>
+      </node>
+      <node id="16355">
+        <label>src/lib/access/JoinScan.h</label>
+        <link refid="_join_scan_8h"/>
+        <childnode refid="16356" relation="include">
+        </childnode>
+        <childnode refid="16357" relation="include">
+        </childnode>
+      </node>
+      <node id="16387">
+        <label>src/lib/access/MergeTable.cpp</label>
+        <link refid="_merge_table_8cpp"/>
+      </node>
+      <node id="16373">
+        <label>src/lib/access/expressions/pred_PredicateBuilder.cpp</label>
+        <link refid="pred___predicate_builder_8cpp"/>
+      </node>
+      <node id="16395">
+        <label>src/lib/io/TransactionManager.cpp</label>
+        <link refid="_transaction_manager_8cpp"/>
+      </node>
+      <node id="16376">
+        <label>src/lib/access/expressions/pred_LessThanExpression.h</label>
+        <link refid="pred___less_than_expression_8h"/>
+        <childnode refid="16352" relation="include">
+        </childnode>
+      </node>
+      <node id="16377">
+        <label>src/lib/storage/SequentialHeapMerger.h</label>
+        <link refid="_sequential_heap_merger_8h"/>
+        <childnode refid="16378" relation="include">
+        </childnode>
+        <childnode refid="16379" relation="include">
+        </childnode>
+        <childnode refid="16380" relation="include">
+        </childnode>
+        <childnode refid="16381" relation="include">
+        </childnode>
+        <childnode refid="16401" relation="include">
+        </childnode>
+        <childnode refid="16400" relation="include">
+        </childnode>
+      </node>
+      <node id="16362">
+        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
+      </node>
+      <node id="16348">
+        <label>src/lib/storage/SimpleStoreMerger.cpp</label>
+        <link refid="_simple_store_merger_8cpp"/>
+      </node>
+      <node id="16356">
+        <label>src/lib/access/JoinScan.cpp</label>
+        <link refid="lib_2access_2_join_scan_8cpp"/>
+      </node>
+      <node id="16351">
+        <label>src/lib/access/expressions/pred_BetweenOperation.h</label>
+        <link refid="pred___between_operation_8h"/>
+        <childnode refid="16352" relation="include">
+        </childnode>
+      </node>
+      <node id="16402">
+        <label>src/lib/storage/Table.cpp</label>
+        <link refid="_table_8cpp"/>
+      </node>
+      <node id="16350">
+        <label>src/lib/access/expressions/pred_common.h</label>
+        <link refid="pred__common_8h"/>
+        <childnode refid="16351" relation="include">
+        </childnode>
+        <childnode refid="16367" relation="include">
+        </childnode>
+        <childnode refid="16368" relation="include">
+        </childnode>
+        <childnode refid="16371" relation="include">
+        </childnode>
+        <childnode refid="16374" relation="include">
+        </childnode>
+        <childnode refid="16375" relation="include">
+        </childnode>
+        <childnode refid="16376" relation="include">
+        </childnode>
+        <childnode refid="16372" relation="include">
+        </childnode>
+      </node>
+      <node id="16396">
+        <label>src/lib/storage/AbstractTable.cpp</label>
+        <link refid="_abstract_table_8cpp"/>
+      </node>
+      <node id="16378">
+        <label>src/lib/access/LayoutTable.cpp</label>
+        <link refid="_layout_table_8cpp"/>
+      </node>
+      <node id="16385">
+        <label>src/lib/access/expressions/GenericExpressions.cpp</label>
+        <link refid="_generic_expressions_8cpp"/>
+      </node>
+      <node id="16342">
+        <label>src/lib/access/radixjoin/Histogram.h</label>
+        <link refid="_histogram_8h"/>
+        <childnode refid="16343" relation="include">
+        </childnode>
+        <childnode refid="16344" relation="include">
+        </childnode>
+        <childnode refid="16345" relation="include">
+        </childnode>
+      </node>
+      <node id="16340">
+        <label>src/lib/access/expressions/ExampleExpression.cpp</label>
+        <link refid="_example_expression_8cpp"/>
+      </node>
+      <node id="16363">
+        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
+        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="16388">
+        <label>src/lib/access/PosUpdateScan.cpp</label>
+        <link refid="_pos_update_scan_8cpp"/>
+      </node>
+      <node id="16364">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
+      </node>
+      <node id="16393">
+        <label>src/lib/io/shortcuts.cpp</label>
+        <link refid="shortcuts_8cpp"/>
+      </node>
+      <node id="16391">
+        <label>src/lib/access/tx/ValidatePositions.cpp</label>
+        <link refid="_validate_positions_8cpp"/>
+      </node>
+      <node id="16359">
+        <label>src/bin/perf_regression/HashJoin.cpp</label>
+        <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="16372">
+        <label>src/lib/access/expressions/pred_PredicateBuilder.h</label>
+        <link refid="pred___predicate_builder_8h"/>
+        <childnode refid="16352" relation="include">
+        </childnode>
+        <childnode refid="16373" relation="include">
+        </childnode>
+      </node>
+      <node id="16371">
+        <label>src/lib/access/expressions/pred_CompoundExpression.h</label>
+        <link refid="pred___compound_expression_8h"/>
+        <childnode refid="16352" relation="include">
+        </childnode>
+        <childnode refid="16372" relation="include">
+        </childnode>
+      </node>
+      <node id="16380">
+        <label>src/lib/storage/SequentialHeapMerger.cpp</label>
+        <link refid="_sequential_heap_merger_8cpp"/>
+      </node>
+      <node id="16382">
+        <label>src/bin/perf_regression/tx_performance.cpp</label>
+        <link refid="tx__performance_8cpp"/>
+      </node>
+      <node id="16343">
+        <label>src/lib/access/radixjoin/Histogram.cpp</label>
+        <link refid="_histogram_8cpp"/>
+      </node>
+      <node id="16392">
+        <label>src/lib/access/UpdateScan.cpp</label>
+        <link refid="_update_scan_8cpp"/>
+      </node>
+      <node id="16368">
+        <label>src/lib/access/expressions/pred_buildExpression.h</label>
+        <link refid="pred__build_expression_8h"/>
+        <childnode refid="16353" relation="include">
+        </childnode>
+        <childnode refid="16352" relation="include">
+        </childnode>
+        <childnode refid="16369" relation="include">
+        </childnode>
+        <childnode refid="16370" relation="include">
+        </childnode>
+      </node>
+      <node id="16367">
+        <label>src/lib/access/expressions/pred_SimpleFieldExpression.h</label>
+        <link refid="pred___simple_field_expression_8h"/>
+        <childnode refid="16350" relation="include">
+        </childnode>
+        <childnode refid="16352" relation="include">
+        </childnode>
+      </node>
+      <node id="16339">
+        <label>src/bin/perf_regression/scan_performance.cpp</label>
+        <link refid="scan__performance_8cpp"/>
+      </node>
+      <node id="16374">
+        <label>src/lib/access/expressions/pred_EqualsExpression.h</label>
+        <link refid="pred___equals_expression_8h"/>
+        <childnode refid="16339" relation="include">
+        </childnode>
+        <childnode refid="16352" relation="include">
+        </childnode>
+      </node>
+      <node id="16341">
+        <label>src/lib/access/TableScan.cpp</label>
+        <link refid="_table_scan_8cpp"/>
+      </node>
+      <node id="16354">
+        <label>src/lib/access/expressions/pred_expression_factory.h</label>
+        <link refid="pred__expression__factory_8h"/>
+        <childnode refid="16352" relation="include">
+        </childnode>
+        <childnode refid="16353" relation="include">
+        </childnode>
+      </node>
+      <node id="16361">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="16400">
+        <label>src/lib/storage.h</label>
+        <link refid="storage_8h"/>
+        <childnode refid="16358" relation="include">
+        </childnode>
+        <childnode refid="16359" relation="include">
+        </childnode>
+        <childnode refid="16360" relation="include">
+        </childnode>
+        <childnode refid="16361" relation="include">
+        </childnode>
+        <childnode refid="16362" relation="include">
+        </childnode>
+        <childnode refid="16363" relation="include">
+        </childnode>
+        <childnode refid="16364" relation="include">
+        </childnode>
+        <childnode refid="16365" relation="include">
+        </childnode>
+      </node>
+      <node id="16398">
+        <label>src/lib/storage/PrettyPrinter.cpp</label>
+        <link refid="_pretty_printer_8cpp"/>
+      </node>
+      <node id="16352">
+        <label>src/lib/access/expressions/predicates.h</label>
+        <link refid="predicates_8h"/>
+        <childnode refid="16353" relation="include">
+        </childnode>
+        <childnode refid="16354" relation="include">
+        </childnode>
+        <childnode refid="16355" relation="include">
+        </childnode>
+        <childnode refid="16366" relation="include">
+        </childnode>
+        <childnode refid="16357" relation="include">
+        </childnode>
+      </node>
+      <node id="16397">
+        <label>src/lib/storage/PointerCalculator.cpp</label>
+        <link refid="_pointer_calculator_8cpp"/>
+      </node>
+      <node id="16394">
+        <label>src/lib/io/TableDump.cpp</label>
+        <link refid="_table_dump_8cpp"/>
+      </node>
+      <node id="16384">
+        <label>src/lib/access/expressions/GenericExpressions.h</label>
+        <link refid="_generic_expressions_8h"/>
+        <childnode refid="16385" relation="include">
+        </childnode>
+      </node>
+      <node id="16381">
+        <label>src/lib/storage/Store.h</label>
+        <link refid="_store_8h"/>
+        <childnode refid="16382" relation="include">
+        </childnode>
+        <childnode refid="16383" relation="include">
+        </childnode>
+        <childnode refid="16384" relation="include">
+        </childnode>
+        <childnode refid="16386" relation="include">
+        </childnode>
+        <childnode refid="16378" relation="include">
+        </childnode>
+        <childnode refid="16387" relation="include">
+        </childnode>
+        <childnode refid="16388" relation="include">
+        </childnode>
+        <childnode refid="16370" relation="include">
+        </childnode>
+        <childnode refid="16389" relation="include">
+        </childnode>
+        <childnode refid="16390" relation="include">
+        </childnode>
+        <childnode refid="16391" relation="include">
+        </childnode>
+        <childnode refid="16392" relation="include">
+        </childnode>
+        <childnode refid="16379" relation="include">
+        </childnode>
+        <childnode refid="16347" relation="include">
+        </childnode>
+        <childnode refid="16393" relation="include">
+        </childnode>
+        <childnode refid="16394" relation="include">
+        </childnode>
+        <childnode refid="16395" relation="include">
+        </childnode>
+        <childnode refid="16396" relation="include">
+        </childnode>
+        <childnode refid="16397" relation="include">
+        </childnode>
+        <childnode refid="16398" relation="include">
+        </childnode>
+        <childnode refid="16399" relation="include">
+        </childnode>
+        <childnode refid="16400" relation="include">
+        </childnode>
+      </node>
+      <node id="16347">
+        <label>src/lib/io/MPassCSVLoader.cpp</label>
+        <link refid="_m_pass_c_s_v_loader_8cpp"/>
+      </node>
+      <node id="16357">
+        <label>src/lib/access.h</label>
+        <link refid="access_8h"/>
+        <childnode refid="16358" relation="include">
+        </childnode>
+        <childnode refid="16359" relation="include">
+        </childnode>
+        <childnode refid="16360" relation="include">
+        </childnode>
+        <childnode refid="16361" relation="include">
+        </childnode>
+        <childnode refid="16362" relation="include">
+        </childnode>
+        <childnode refid="16363" relation="include">
+        </childnode>
+        <childnode refid="16364" relation="include">
+        </childnode>
+        <childnode refid="16365" relation="include">
+        </childnode>
+      </node>
+      <node id="16344">
+        <label>src/lib/access/radixjoin/PrefixSum.cpp</label>
+        <link refid="_prefix_sum_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_order_preserving_dictionary_iterator" prot="public">OrderPreservingDictionaryIterator</innerclass>
+    <innerclass refid="class_order_preserving_dictionary" prot="public">OrderPreservingDictionary</innerclass>
+    <innerclass refid="class_order_preserving_dictionary_iterator" prot="public">OrderPreservingDictionaryIterator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_STORAGE_ORDERPRESERVINGDICTIONARY_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_STORAGE_ORDERPRESERVINGDICTIONARY_H_</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_base_dictionary_8h" kindref="compound">storage/BaseDictionary.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_base_iterator_8h" kindref="compound">storage/BaseIterator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_dictionary_iterator_8h" kindref="compound">storage/DictionaryIterator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="storage__types_8h" kindref="compound">storage/storage_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="15" refid="class_order_preserving_dictionary_iterator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_order_preserving_dictionary_iterator" kindref="compound">OrderPreservingDictionaryIterator</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="18" refid="class_order_preserving_dictionary" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_order_preserving_dictionary" kindref="compound">OrderPreservingDictionary</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_base_dictionary" kindref="compound">BaseDictionary</ref>&lt;T&gt;<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20" refid="class_order_preserving_dictionary_1ad1897f3c1bc1dc9c2f53cac6c12b8239" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;<sp/><ref refid="class_order_preserving_dictionary_1ad1897f3c1bc1dc9c2f53cac6c12b8239" kindref="member">vector_type</ref>;</highlight></codeline>
+<codeline lineno="21" refid="class_order_preserving_dictionary_1af924044abc50170da3c8f38996f620f5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;vector_type&gt;<sp/><ref refid="class_order_preserving_dictionary_1af924044abc50170da3c8f38996f620f5" kindref="member">shared_vector_type</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23" refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_order_preserving_dictionary_1af924044abc50170da3c8f38996f620f5" kindref="member">shared_vector_type</ref><sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>constructor<sp/>is<sp/>only<sp/>used<sp/>for<sp/>copying<sp/>purposes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_order_preserving_dictionary_1ad3a3c79ddd46159bc9347e5794c45376" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1ad3a3c79ddd46159bc9347e5794c45376" kindref="member">OrderPreservingDictionary</ref>(<ref refid="class_order_preserving_dictionary_1ad1897f3c1bc1dc9c2f53cac6c12b8239" kindref="member">vector_type</ref><sp/>values)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref><sp/>=<sp/>std::make_shared&lt;vector_type&gt;();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::copy(values.begin(),<sp/>values.end(),<sp/>values-&gt;begin());</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_order_preserving_dictionary_1a64515ccb7929b663e60a8edbe921bdad" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_order_preserving_dictionary_1a64515ccb7929b663e60a8edbe921bdad" kindref="member">OrderPreservingDictionary</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref><sp/>=<sp/>std::make_shared&lt;vector_type&gt;();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="class_order_preserving_dictionary_1ac97f094521a7fd1bbc85492e2711d519" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1ac97f094521a7fd1bbc85492e2711d519" kindref="member">OrderPreservingDictionary</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1a4abd1e4ca0563037db079568fa8da9ab" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref><sp/>=<sp/>std::make_shared&lt;vector_type&gt;();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;reserve(size);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_order_preserving_dictionary_1a004cc6599dca113fcde24513e827a9ae" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1a004cc6599dca113fcde24513e827a9ae" kindref="member">~OrderPreservingDictionary</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_order_preserving_dictionary_1a4ef1275067a7cfddfc3fbc413b2dbee4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1a4ef1275067a7cfddfc3fbc413b2dbee4" kindref="member">shrink</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;shrink_to_fit();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_order_preserving_dictionary_1a3ae2ec89eae76475d7290db5461f9585" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref><sp/><ref refid="class_order_preserving_dictionary_1a3ae2ec89eae76475d7290db5461f9585" kindref="member">addValue</ref>(T<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>EXPENSIVE_ASSERTIONS</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;size()<sp/>&gt;<sp/>0)<sp/>&amp;&amp;<sp/>(value<sp/>&lt;=<sp/>_values-&gt;back()))</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>insert<sp/>value<sp/>smaller<sp/>than<sp/>last<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;push_back(value);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;size()<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_order_preserving_dictionary_1ab2e802740110b89bb7a790c0b21bc8a2" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/><ref refid="class_order_preserving_dictionary_1ab2e802740110b89bb7a790c0b21bc8a2" kindref="member">getValueForValueId</ref>(<ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref><sp/>value_id)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>EXPENSIVE_ASSERTIONS</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value_id<sp/>&gt;=<sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;size())</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Trying<sp/>to<sp/>access<sp/>value_id<sp/>larger<sp/>than<sp/>available<sp/>values&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>)[value_id];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="class_order_preserving_dictionary_1a7233233982665548d11d9af28bfd403c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref><sp/><ref refid="class_order_preserving_dictionary_1a7233233982665548d11d9af28bfd403c" kindref="member">getValueIdForValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;value)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>binary_search<sp/>=<sp/>lower_bound(<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;begin(),<sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;end(),<sp/>value);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>binary_search<sp/>-<sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;begin();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>index;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="class_order_preserving_dictionary_1a14f7e52cd61b734452f544b70672a687" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref><sp/><ref refid="class_order_preserving_dictionary_1a14f7e52cd61b734452f544b70672a687" kindref="member">getValueIdForValueSmaller</ref>(T<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>binary_search<sp/>=<sp/>lower_bound(<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;begin(),<sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;end(),<sp/>other);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>binary_search<sp/>-<sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;begin();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(index<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>index<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_order_preserving_dictionary_1aab39f455e0fc653e03de0115f12550d4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref><sp/><ref refid="class_order_preserving_dictionary_1aab39f455e0fc653e03de0115f12550d4" kindref="member">getValueIdForValueGreater</ref>(T<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>binary_search<sp/>=<sp/>upper_bound(<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;begin(),<sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;end(),<sp/>other);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>binary_search<sp/>-<sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;begin();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>index;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_order_preserving_dictionary_1a9970eb329dc1126b0cad7cc50681edff" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/><ref refid="class_order_preserving_dictionary_1a9970eb329dc1126b0cad7cc50681edff" kindref="member">getSmallestValue</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;size()<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>)[0];</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105" refid="class_order_preserving_dictionary_1af53ab2a859a7ff4aa5c69e3419abcc8a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/><ref refid="class_order_preserving_dictionary_1af53ab2a859a7ff4aa5c69e3419abcc8a" kindref="member">getGreatestValue</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;size()<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>)[<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;size()<sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="class_order_preserving_dictionary_1a6d282b438080510dec7072197afda95a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1a6d282b438080510dec7072197afda95a" kindref="member">isValueIdValid</ref>(<ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref><sp/>value_id)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value_id<sp/>&lt;<sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;size();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="class_order_preserving_dictionary_1adfa41324fb937901d4c4ffc74d08f685" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1adfa41324fb937901d4c4ffc74d08f685" kindref="member">valueExists</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;value)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>binary_search(<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;begin(),<sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;end(),<sp/>value);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="class_order_preserving_dictionary_1afa33c39fbe9c596c67b103b9cf3fabda" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1afa33c39fbe9c596c67b103b9cf3fabda" kindref="member">reserve</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1a4abd1e4ca0563037db079568fa8da9ab" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;reserve(size);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="122" refid="class_order_preserving_dictionary_1a4abd1e4ca0563037db079568fa8da9ab" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1a4abd1e4ca0563037db079568fa8da9ab" kindref="member">size</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;size();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="class_order_preserving_dictionary_1a16d6530f39cf210e5f355d6114ffef0e" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;AbstractDictionary&gt;<sp/><ref refid="class_order_preserving_dictionary_1a16d6530f39cf210e5f355d6114ffef0e" kindref="member">copy</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Dictionaries<sp/>cannot<sp/>be<sp/>copied&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="class_order_preserving_dictionary_1ae6269aacb09bbcbaa88217e3a1f23265" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;AbstractDictionary&gt;<sp/><ref refid="class_order_preserving_dictionary_1ae6269aacb09bbcbaa88217e3a1f23265" kindref="member">copy_empty</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_shared&lt;OrderPreservingDictionary&lt;T&gt;<sp/>&gt;();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="134" refid="class_order_preserving_dictionary_1a1c33369d4bf44d27aec5a680f22f50a8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1a1c33369d4bf44d27aec5a680f22f50a8" kindref="member">isOrdered</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="class_order_preserving_dictionary_1ad64748a15316f46e935dc74a87a7c2ee" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_dictionary_iterator" kindref="compound">DictionaryIterator&lt;T&gt;</ref><sp/><ref refid="class_order_preserving_dictionary_1ad64748a15316f46e935dc74a87a7c2ee" kindref="member">iterator</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="class_order_preserving_dictionary_1aa1896a108b85fd1b4c5df7959a41f88e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_dictionary_iterator" kindref="compound">iterator</ref><sp/><ref refid="class_order_preserving_dictionary_1aa1896a108b85fd1b4c5df7959a41f88e" kindref="member">begin</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1ad64748a15316f46e935dc74a87a7c2ee" kindref="member">iterator</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_iterator" kindref="compound">OrderPreservingDictionaryIterator&lt;T&gt;</ref>(<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>,<sp/>0));</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="class_order_preserving_dictionary_1a91b302db945f479fcd48814163327f19" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_dictionary_iterator" kindref="compound">iterator</ref><sp/><ref refid="class_order_preserving_dictionary_1a91b302db945f479fcd48814163327f19" kindref="member">end</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1ad64748a15316f46e935dc74a87a7c2ee" kindref="member">iterator</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_iterator" kindref="compound">OrderPreservingDictionaryIterator&lt;T&gt;</ref>(<ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>,<sp/><ref refid="class_order_preserving_dictionary_1a0c99786b06b1603c0f76d3ef55fed4cd" kindref="member">_values</ref>-&gt;size()));</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>the<sp/>Iterator<sp/>class<sp/>that<sp/>is<sp/>used<sp/>by<sp/>the<sp/>dictionary.<sp/>It<sp/>has<sp/>a</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/>*<sp/>shared<sp/>public<sp/>interface<sp/>to<sp/>be<sp/>able<sp/>to<sp/>differentiate<sp/>between<sp/>the</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/>*<sp/>different<sp/>dictionary<sp/>types<sp/>and<sp/>to<sp/>abstract<sp/>from<sp/>data<sp/>types.</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_order_preserving_dictionary_iterator" kindref="compound">OrderPreservingDictionaryIterator</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_base_iterator" kindref="compound">BaseIterator</ref>&lt;T&gt;<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="class_order_preserving_dictionary_iterator_1aec9d2fe75b627f656082809a15611a21" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary" kindref="compound">OrderPreservingDictionary&lt;T&gt;</ref><sp/><ref refid="class_order_preserving_dictionary_iterator_1aec9d2fe75b627f656082809a15611a21" kindref="member">dictionary_type</ref>;</highlight></codeline>
+<codeline lineno="160" refid="class_order_preserving_dictionary_iterator_1a8a9907c54fc347e98bdad35ef748d235" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_1af924044abc50170da3c8f38996f620f5" kindref="member">dictionary_type::shared_vector_type</ref><sp/><ref refid="class_order_preserving_dictionary_iterator_1a8a9907c54fc347e98bdad35ef748d235" kindref="member">vector_type</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="163" refid="class_order_preserving_dictionary_iterator_1a27050d42f42f323bcb565e334d66b3a5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_order_preserving_dictionary_iterator_1a8a9907c54fc347e98bdad35ef748d235" kindref="member">vector_type</ref><sp/><ref refid="class_order_preserving_dictionary_iterator_1a27050d42f42f323bcb565e334d66b3a5" kindref="member">_values</ref>;</highlight></codeline>
+<codeline lineno="164" refid="class_order_preserving_dictionary_iterator_1a1f01d90bbc377812f72fe73e5c93aa2a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_iterator_1a1f01d90bbc377812f72fe73e5c93aa2a" kindref="member">_index</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="class_order_preserving_dictionary_iterator_1a3d43519726169209183d01ee4f312fa7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_iterator_1a3d43519726169209183d01ee4f312fa7" kindref="member">OrderPreservingDictionaryIterator</ref>(<ref refid="class_order_preserving_dictionary_iterator_1a8a9907c54fc347e98bdad35ef748d235" kindref="member">vector_type</ref><sp/>values):<sp/><ref refid="class_order_preserving_dictionary_iterator_1a27050d42f42f323bcb565e334d66b3a5" kindref="member">_values</ref>(values),<sp/><ref refid="class_order_preserving_dictionary_iterator_1a1f01d90bbc377812f72fe73e5c93aa2a" kindref="member">_index</ref>(0)<sp/>{}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="class_order_preserving_dictionary_iterator_1ac6df8b9878c59f7a0b53f7dd1f36fd9f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_order_preserving_dictionary_iterator_1ac6df8b9878c59f7a0b53f7dd1f36fd9f" kindref="member">OrderPreservingDictionaryIterator</ref>(<ref refid="class_order_preserving_dictionary_iterator_1a8a9907c54fc347e98bdad35ef748d235" kindref="member">vector_type</ref><sp/>values,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index):<sp/><ref refid="class_order_preserving_dictionary_iterator_1a27050d42f42f323bcb565e334d66b3a5" kindref="member">_values</ref>(values),<sp/><ref refid="class_order_preserving_dictionary_iterator_1a1f01d90bbc377812f72fe73e5c93aa2a" kindref="member">_index</ref>(index)<sp/>{}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="class_order_preserving_dictionary_iterator_1a25e81d44a562180285e55b68937312ce" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_iterator_1a25e81d44a562180285e55b68937312ce" kindref="member">~OrderPreservingDictionaryIterator</ref>()<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="class_order_preserving_dictionary_iterator_1adbd9c2df82de640b76596632893006ae" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_iterator_1adbd9c2df82de640b76596632893006ae" kindref="member">increment</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>++<ref refid="class_order_preserving_dictionary_iterator_1a1f01d90bbc377812f72fe73e5c93aa2a" kindref="member">_index</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="class_order_preserving_dictionary_iterator_1a19f720f5a234871b6253c226e65a4609" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_iterator_1a19f720f5a234871b6253c226e65a4609" kindref="member">equal</ref>(<ref refid="class_base_iterator" kindref="compound">BaseIterator&lt;T&gt;</ref><sp/>*other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_order_preserving_dictionary_iterator_1a27050d42f42f323bcb565e334d66b3a5" kindref="member">_values</ref>.get()<sp/>==<sp/>((<ref refid="class_order_preserving_dictionary_iterator" kindref="compound">OrderPreservingDictionaryIterator&lt;T&gt;</ref><sp/>*)<sp/>other)-&gt;_values.get()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_order_preserving_dictionary_iterator_1a1f01d90bbc377812f72fe73e5c93aa2a" kindref="member">_index</ref><sp/><sp/>==<sp/>((<ref refid="class_order_preserving_dictionary_iterator" kindref="compound">OrderPreservingDictionaryIterator&lt;T&gt;</ref><sp/>*)<sp/>other)-&gt;_index;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="class_order_preserving_dictionary_iterator_1af9ac369b4afcb027774b8d2cef2695aa" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/>&amp;<ref refid="class_order_preserving_dictionary_iterator_1af9ac369b4afcb027774b8d2cef2695aa" kindref="member">dereference</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*<ref refid="class_order_preserving_dictionary_iterator_1a27050d42f42f323bcb565e334d66b3a5" kindref="member">_values</ref>)[<ref refid="class_order_preserving_dictionary_iterator_1a1f01d90bbc377812f72fe73e5c93aa2a" kindref="member">_index</ref>];</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="class_order_preserving_dictionary_iterator_1a3dcef8ff027cc5270ae15ee7f546de9b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref><sp/><ref refid="class_order_preserving_dictionary_iterator_1a3dcef8ff027cc5270ae15ee7f546de9b" kindref="member">getValueId</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_iterator_1a1f01d90bbc377812f72fe73e5c93aa2a" kindref="member">_index</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="class_order_preserving_dictionary_iterator_1a7af92e17343bacadafd08af6fd53e495" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_base_iterator" kindref="compound">BaseIterator&lt;T&gt;</ref><sp/>*<ref refid="class_order_preserving_dictionary_iterator_1a7af92e17343bacadafd08af6fd53e495" kindref="member">clone</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_order_preserving_dictionary_iterator" kindref="compound">OrderPreservingDictionaryIterator&lt;T&gt;</ref>(*this);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_STORAGE_ORDERPRESERVINGDICTIONARY_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/OrderPreservingDictionary.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_serial_8h" kind="file">
+    <compoundname>Serial.h</compoundname>
+    <includes refid="_abstract_resource_8h" local="yes">AbstractResource.h</includes>
+    <includes local="no">atomic</includes>
+    <includedby refid="_insert_scan_8cpp" local="yes">src/lib/access/InsertScan.cpp</includedby>
+    <includedby refid="_json_table_8cpp" local="no">src/lib/access/storage/JsonTable.cpp</includedby>
+    <includedby refid="_serial_8cpp" local="yes">src/lib/storage/Serial.cpp</includedby>
+    <incdepgraph>
+      <node id="16875">
+        <label>atomic</label>
+      </node>
+      <node id="16873">
+        <label>src/lib/storage/Serial.h</label>
+        <link refid="Serial.h"/>
+        <childnode refid="16874" relation="include">
+        </childnode>
+        <childnode refid="16875" relation="include">
+        </childnode>
+      </node>
+      <node id="16874">
+        <label>AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16878">
+        <label>src/lib/access/storage/JsonTable.cpp</label>
+        <link refid="_json_table_8cpp"/>
+      </node>
+      <node id="16877">
+        <label>src/lib/access/InsertScan.cpp</label>
+        <link refid="_insert_scan_8cpp"/>
+      </node>
+      <node id="16876">
+        <label>src/lib/storage/Serial.h</label>
+        <link refid="Serial.h"/>
+        <childnode refid="16877" relation="include">
+        </childnode>
+        <childnode refid="16878" relation="include">
+        </childnode>
+        <childnode refid="16879" relation="include">
+        </childnode>
+      </node>
+      <node id="16879">
+        <label>src/lib/storage/Serial.cpp</label>
+        <link refid="_serial_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_serial" prot="public">Serial</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_STORAGE_SERIAL_H_</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_STORAGE_SERIAL_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_resource_8h" kindref="compound">AbstractResource.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atomic&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">//tables.<sp/>For<sp/>each<sp/>column<sp/>a<sp/>serial<sp/>will<sp/>be<sp/>stored<sp/>in<sp/>the<sp/>resource<sp/>manager</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_serial" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_serial" kindref="compound" tooltip="A Serial class that can be used to define auto_increment columns for.">Serial</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_resource" kindref="compound">AbstractResource</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_serial_1a7c321529dfc31d9b47e11433ac67e50f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_serial_1a7c321529dfc31d9b47e11433ac67e50f" kindref="member">serial_t</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_serial_1a3ad7ab38ef82a4b25c55b19535fbbdac" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic&lt;serial_t&gt;<sp/><ref refid="class_serial_1a3ad7ab38ef82a4b25c55b19535fbbdac" kindref="member">_serial</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_serial_1abb48c4786082f1086d86daa2918ed590" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_serial_1abb48c4786082f1086d86daa2918ed590" kindref="member">~Serial</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><ref refid="class_serial_1a3667c3137f2df94716b5193f9fb736ab" kindref="member">Serial</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_serial_1a661232cf0e74d391daf3f63d19715a7c" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="class_serial_1a7c321529dfc31d9b47e11433ac67e50f" kindref="member">serial_t</ref><sp/><ref refid="class_serial_1a5a718e775c6da7597da2e314136456e8" kindref="member">next</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.h"/>
+  </compounddef>
+</doxygen>

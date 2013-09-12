@@ -1,0 +1,679 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_hash_join_probe_8cpp" kind="file">
+    <compoundname>HashJoinProbe.cpp</compoundname>
+    <includes refid="_hash_join_probe_8h" local="yes">access/HashJoinProbe.h</includes>
+    <includes refid="_query_parser_8h" local="yes">access/system/QueryParser.h</includes>
+    <includes refid="_hash_table_8h" local="yes">storage/HashTable.h</includes>
+    <includes refid="_pointer_calculator_8h" local="yes">storage/PointerCalculator.h</includes>
+    <includes local="no">log4cxx/logger.h</includes>
+    <incdepgraph>
+      <node id="4205">
+        <label>access/system/QueryParser.h</label>
+        <link refid="_query_parser_8h"/>
+        <childnode refid="4190" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4198" relation="include">
+        </childnode>
+        <childnode refid="4206" relation="include">
+        </childnode>
+        <childnode refid="4207" relation="include">
+        </childnode>
+      </node>
+      <node id="4213">
+        <label>atomic</label>
+      </node>
+      <node id="4217">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="4192" relation="include">
+        </childnode>
+        <childnode refid="4218" relation="include">
+        </childnode>
+        <childnode refid="4219" relation="include">
+        </childnode>
+      </node>
+      <node id="4226">
+        <label>helper/checked_cast.h</label>
+        <link refid="checked__cast_8h"/>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+      </node>
+      <node id="4185">
+        <label>access/system/PlanOperation.h</label>
+        <link refid="_plan_operation_8h"/>
+        <childnode refid="4186" relation="include">
+        </childnode>
+        <childnode refid="4201" relation="include">
+        </childnode>
+        <childnode refid="4205" relation="include">
+        </childnode>
+        <childnode refid="4208" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+        <childnode refid="4206" relation="include">
+        </childnode>
+      </node>
+      <node id="4204">
+        <label>limits</label>
+      </node>
+      <node id="4196">
+        <label>helper/epoch.h</label>
+        <link refid="epoch_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+      </node>
+      <node id="4211">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="4212" relation="include">
+        </childnode>
+        <childnode refid="4213" relation="include">
+        </childnode>
+      </node>
+      <node id="4221">
+        <label>boost/iterator/iterator_facade.hpp</label>
+      </node>
+      <node id="4203">
+        <label>cstdint</label>
+      </node>
+      <node id="4222">
+        <label>storage/HashTable.h</label>
+        <link refid="_hash_table_8h"/>
+        <childnode refid="4213" relation="include">
+        </childnode>
+        <childnode refid="4223" relation="include">
+        </childnode>
+        <childnode refid="4224" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4225" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4226" relation="include">
+        </childnode>
+        <childnode refid="4227" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4187">
+        <label>stdint.h</label>
+      </node>
+      <node id="4240">
+        <label>cmath</label>
+      </node>
+      <node id="4244">
+        <label>cassert</label>
+      </node>
+      <node id="4194">
+        <label>stdexcept</label>
+      </node>
+      <node id="4237">
+        <label>storage/FixedLengthVector.h</label>
+        <link refid="_fixed_length_vector_8h"/>
+        <childnode refid="4238" relation="include">
+        </childnode>
+        <childnode refid="4239" relation="include">
+        </childnode>
+        <childnode refid="4240" relation="include">
+        </childnode>
+        <childnode refid="4213" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4198" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4225" relation="include">
+        </childnode>
+        <childnode refid="4241" relation="include">
+        </childnode>
+        <childnode refid="4233" relation="include">
+        </childnode>
+      </node>
+      <node id="4214">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4215" relation="include">
+        </childnode>
+      </node>
+      <node id="4231">
+        <label>storage/Table.h</label>
+        <link refid="_table_8h"/>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4232" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+        <childnode refid="4218" relation="include">
+        </childnode>
+        <childnode refid="4233" relation="include">
+        </childnode>
+        <childnode refid="4236" relation="include">
+        </childnode>
+      </node>
+      <node id="4193">
+        <label>string</label>
+      </node>
+      <node id="4182">
+        <label>src/lib/access/HashJoinProbe.cpp</label>
+        <link refid="HashJoinProbe.cpp"/>
+        <childnode refid="4183" relation="include">
+        </childnode>
+        <childnode refid="4205" relation="include">
+        </childnode>
+        <childnode refid="4222" relation="include">
+        </childnode>
+        <childnode refid="4228" relation="include">
+        </childnode>
+        <childnode refid="4246" relation="include">
+        </childnode>
+      </node>
+      <node id="4228">
+        <label>storage/PointerCalculator.h</label>
+        <link refid="_pointer_calculator_8h"/>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4229" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+        <childnode refid="4230" relation="include">
+        </childnode>
+      </node>
+      <node id="4230">
+        <label>storage/MutableVerticalTable.h</label>
+        <link refid="_mutable_vertical_table_8h"/>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4231" relation="include">
+        </childnode>
+        <childnode refid="4245" relation="include">
+        </childnode>
+        <childnode refid="4232" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+      </node>
+      <node id="4190">
+        <label>map</label>
+      </node>
+      <node id="4234">
+        <label>storage/AbstractAttributeVector.h</label>
+        <link refid="_abstract_attribute_vector_8h"/>
+        <childnode refid="4235" relation="include">
+        </childnode>
+      </node>
+      <node id="4195">
+        <label>ostream</label>
+      </node>
+      <node id="4206">
+        <label>json.h</label>
+      </node>
+      <node id="4227">
+        <label>storage/AbstractHashTable.h</label>
+        <link refid="_abstract_hash_table_8h"/>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4216" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4186">
+        <label>access/system/OutputTask.h</label>
+        <link refid="_output_task_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4190" relation="include">
+        </childnode>
+        <childnode refid="4191" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+        <childnode refid="4196" relation="include">
+        </childnode>
+        <childnode refid="4197" relation="include">
+        </childnode>
+      </node>
+      <node id="4200">
+        <label>condition_variable</label>
+      </node>
+      <node id="4233">
+        <label>storage/BaseAttributeVector.h</label>
+        <link refid="_base_attribute_vector_8h"/>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4234" relation="include">
+        </childnode>
+      </node>
+      <node id="4192">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4195" relation="include">
+        </childnode>
+      </node>
+      <node id="4219">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="4220" relation="include">
+        </childnode>
+        <childnode refid="4221" relation="include">
+        </childnode>
+      </node>
+      <node id="4184">
+        <label>access/system/ParallelizablePlanOperation.h</label>
+        <link refid="_parallelizable_plan_operation_8h"/>
+        <childnode refid="4185" relation="include">
+        </childnode>
+      </node>
+      <node id="4245">
+        <label>storage/TableFactory.h</label>
+        <link refid="_table_factory_8h"/>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+        <childnode refid="4231" relation="include">
+        </childnode>
+      </node>
+      <node id="4232">
+        <label>storage/ColumnMetadata.h</label>
+        <link refid="_column_metadata_8h"/>
+        <childnode refid="4192" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+      </node>
+      <node id="4236">
+        <label>storage/AttributeVectorFactory.h</label>
+        <link refid="_attribute_vector_factory_8h"/>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4233" relation="include">
+        </childnode>
+        <childnode refid="4237" relation="include">
+        </childnode>
+        <childnode refid="4243" relation="include">
+        </childnode>
+      </node>
+      <node id="4220">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="4189">
+        <label>vector</label>
+      </node>
+      <node id="4191">
+        <label>utility</label>
+      </node>
+      <node id="4215">
+        <label>array</label>
+      </node>
+      <node id="4225">
+        <label>sstream</label>
+      </node>
+      <node id="4229">
+        <label>helper/SharedFactory.h</label>
+        <link refid="_shared_factory_8h"/>
+        <childnode refid="4199" relation="include">
+        </childnode>
+      </node>
+      <node id="4209">
+        <label>cereal/cereal.hpp</label>
+      </node>
+      <node id="4188">
+        <label>time.h</label>
+      </node>
+      <node id="4238">
+        <label>cerrno</label>
+      </node>
+      <node id="4242">
+        <label>iostream</label>
+      </node>
+      <node id="4235">
+        <label>cstddef</label>
+      </node>
+      <node id="4201">
+        <label>access/system/OperationData.h</label>
+        <link refid="_operation_data_8h"/>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4224">
+        <label>unordered_map</label>
+      </node>
+      <node id="4216">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="4207">
+        <label>access/system/BasicParser.h</label>
+        <link refid="_basic_parser_8h"/>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4206" relation="include">
+        </childnode>
+      </node>
+      <node id="4198">
+        <label>mutex</label>
+      </node>
+      <node id="4218">
+        <label>storage/AbstractDictionary.h</label>
+        <link refid="_abstract_dictionary_8h"/>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4210">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="4204" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4211" relation="include">
+        </childnode>
+        <childnode refid="4214" relation="include">
+        </childnode>
+        <childnode refid="4216" relation="include">
+        </childnode>
+        <childnode refid="4217" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4212">
+        <label>thread</label>
+      </node>
+      <node id="4202">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4204" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+      </node>
+      <node id="4241">
+        <label>memory/MallocStrategy.h</label>
+        <link refid="_malloc_strategy_8h"/>
+        <childnode refid="4242" relation="include">
+        </childnode>
+        <childnode refid="4203" relation="include">
+        </childnode>
+      </node>
+      <node id="4223">
+        <label>set</label>
+      </node>
+      <node id="4243">
+        <label>storage/BitCompressedVector.h</label>
+        <link refid="_bit_compressed_vector_8h"/>
+        <childnode refid="4244" relation="include">
+        </childnode>
+        <childnode refid="4240" relation="include">
+        </childnode>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4239" relation="include">
+        </childnode>
+        <childnode refid="4198" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4241" relation="include">
+        </childnode>
+        <childnode refid="4233" relation="include">
+        </childnode>
+      </node>
+      <node id="4183">
+        <label>access/HashJoinProbe.h</label>
+        <link refid="_hash_join_probe_8h"/>
+        <childnode refid="4184" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+      </node>
+      <node id="4246">
+        <label>log4cxx/logger.h</label>
+      </node>
+      <node id="4239">
+        <label>cstring</label>
+      </node>
+      <node id="4199">
+        <label>memory</label>
+      </node>
+      <node id="4197">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4198" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4200" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+      </node>
+      <node id="4208">
+        <label>io/TXContext.h</label>
+        <link refid="_t_x_context_8h"/>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4209" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1access">hyrise::access</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_hash_join_probe_8h" kindref="compound">access/HashJoinProbe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_query_parser_8h" kindref="compound">access/system/QueryParser.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_hash_table_8h" kindref="compound">storage/HashTable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_pointer_calculator_8h" kindref="compound">storage/PointerCalculator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;log4cxx/logger.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">access<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>_<sp/>=<sp/>QueryParser::registerPlanOperation&lt;HashJoinProbe&gt;(</highlight><highlight class="stringliteral">&quot;HashJoinProbe&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>log4cxx::LoggerPtr<sp/><ref refid="bin_2hyrise_2main_8cpp_1a1f643aeca905220d975e69578154a71d" kindref="member">logger</ref>(log4cxx::Logger::getLogger(</highlight><highlight class="stringliteral">&quot;access.plan.PlanOperation&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classhyrise_1_1access_1_1_hash_join_probe_1a7e67ec89f4e437220184043bf8e018eb" refkind="member"><highlight class="normal"><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a7e67ec89f4e437220184043bf8e018eb" kindref="member">HashJoinProbe::HashJoinProbe</ref>()<sp/>:<sp/>_selfjoin(false)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classhyrise_1_1access_1_1_hash_join_probe_1a5638a3e5708f3a6fb7e88704f7515e10" refkind="member"><highlight class="normal"><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a5638a3e5708f3a6fb7e88704f7515e10" kindref="member">HashJoinProbe::~HashJoinProbe</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classhyrise_1_1access_1_1_hash_join_probe_1a28dbd7c84ce678513f6748b6cced7c22" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a28dbd7c84ce678513f6748b6cced7c22" kindref="member">HashJoinProbe::setupPlanOperation</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a4b050ce8d9d71f7d9fdde5955496c7c5" kindref="member">PlanOperation::setupPlanOperation</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a03dcdda51bbc2dab55e5d4bec3d4b4cd" kindref="member">setBuildTable</ref>(<ref refid="classhyrise_1_1access_1_1_plan_operation_1aa4857583f3f175825244fb767293f2bd" kindref="member">getInputHashTable</ref>()-&gt;getTable());</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classhyrise_1_1access_1_1_hash_join_probe_1a38fb8f801a258048e9dfb387e665860c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a38fb8f801a258048e9dfb387e665860c" kindref="member">HashJoinProbe::executePlanOperation</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref><sp/>*buildTablePosList<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref><sp/>*probeTablePosList<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1access_1_1_hash_join_probe_1af758fc81721fb1c650a3704ba71976f9" kindref="member">_selfjoin</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref>.size()<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fetchPositions&lt;SingleAggregateHashTable&gt;(buildTablePosList,<sp/>probeTablePosList);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fetchPositions&lt;AggregateHashTable&gt;(buildTablePosList,<sp/>probeTablePosList);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref>.size()<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fetchPositions&lt;SingleJoinHashTable&gt;(buildTablePosList,<sp/>probeTablePosList);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fetchPositions&lt;JoinHashTable&gt;(buildTablePosList,<sp/>probeTablePosList);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aac92e842153df9a9ae7e548ac7602009" kindref="member">addResult</ref>(<ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a763341dd15061fb56edc240acf3239ac" kindref="member" tooltip="Constructs resulting table from given build and probe tables&amp;#39; rows.">buildResultTable</ref>(buildTablePosList,<sp/>probeTablePosList));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classhyrise_1_1access_1_1_hash_join_probe_1a564f43c504373899a3263e648169f197" refkind="member"><highlight class="normal">std::shared_ptr&lt;PlanOperation&gt;<sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a564f43c504373899a3263e648169f197" kindref="member">HashJoinProbe::parse</ref>(Json::Value<sp/>&amp;data)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;HashJoinProbe&gt;<sp/>instance<sp/>=<sp/>std::make_shared&lt;HashJoinProbe&gt;();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data.isMember(</highlight><highlight class="stringliteral">&quot;fields&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>data[</highlight><highlight class="stringliteral">&quot;fields&quot;</highlight><highlight class="normal">].size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>instance-&gt;addField(data[</highlight><highlight class="stringliteral">&quot;fields&quot;</highlight><highlight class="normal">][i]);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>instance-&gt;_selfjoin<sp/>=<sp/>data[</highlight><highlight class="stringliteral">&quot;selfjoin&quot;</highlight><highlight class="normal">].asBool();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>instance;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classhyrise_1_1access_1_1_hash_join_probe_1a54e429e7f9aef4422a93348bc536aa87" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a54e429e7f9aef4422a93348bc536aa87" kindref="member">HashJoinProbe::vname</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;HashJoinProbe&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classhyrise_1_1access_1_1_hash_join_probe_1a03dcdda51bbc2dab55e5d4bec3d4b4cd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a03dcdda51bbc2dab55e5d4bec3d4b4cd" kindref="member">HashJoinProbe::setBuildTable</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref><sp/>&amp;table)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1ad4433735abfaf1e6afa28bcdf59f72ed" kindref="member">_buildTable</ref><sp/>=<sp/>table;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classhyrise_1_1access_1_1_hash_join_probe_1a67d4bdf5c43d767aa0d3869cd3164a88" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a67d4bdf5c43d767aa0d3869cd3164a88" kindref="member">HashJoinProbe::getBuildTable</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1ad4433735abfaf1e6afa28bcdf59f72ed" kindref="member">_buildTable</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classhyrise_1_1access_1_1_hash_join_probe_1a0f2698817a868542946eea4c4c4640d4" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a0f2698817a868542946eea4c4c4640d4" kindref="member">HashJoinProbe::getProbeTable</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a66c9b52d730c2029496abda71ea40b01" kindref="member">getInputTable</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>HashTable&gt;</highlight></codeline>
+<codeline lineno="77" refid="classhyrise_1_1access_1_1_hash_join_probe_1ae2dea0749245a8ba07f9c004634a8b22" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1ae2dea0749245a8ba07f9c004634a8b22" kindref="member">HashJoinProbe::fetchPositions</ref>(<ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref><sp/>*buildTablePosList,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref><sp/>*probeTablePosList)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>probeTable<sp/>=<sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a0f2698817a868542946eea4c4c4640d4" kindref="member">getProbeTable</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>hash_table<sp/>=<sp/>std::dynamic_pointer_cast&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_hash_table" kindref="compound" tooltip="HashTable based on a map; key specifies the key for the given map.">HashTable</ref>&gt;(<ref refid="classhyrise_1_1access_1_1_plan_operation_1aa4857583f3f175825244fb767293f2bd" kindref="member">getInputHashTable</ref>(0));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>assert(hash_table<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>LOG4CXX_DEBUG(<ref refid="bin_2hyrise_2main_8cpp_1a1f643aeca905220d975e69578154a71d" kindref="member">logger</ref>,<sp/>hash_table-&gt;stats());</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>LOG4CXX_DEBUG(<ref refid="bin_2hyrise_2main_8cpp_1a1f643aeca905220d975e69578154a71d" kindref="member">logger</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Probe<sp/>Table<sp/>Size:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>probeTable-&gt;size());</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>LOG4CXX_DEBUG(<ref refid="bin_2hyrise_2main_8cpp_1a1f643aeca905220d975e69578154a71d" kindref="member">logger</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Hash<sp/>Table<sp/>Size:<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hash_table-&gt;size());</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="storage__types_8h_1a866dd5ae291f599db49986f6aa5ba77a" kindref="member">pos_t</ref><sp/>probeTableRow<sp/>=<sp/>0;<sp/>probeTableRow<sp/>&lt;<sp/>probeTable-&gt;size();<sp/>++probeTableRow)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref><sp/>matchingRows(hash_table-&gt;get(probeTable,<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref>,<sp/>probeTableRow));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!matchingRows.empty())<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buildTablePosList-&gt;insert(buildTablePosList-&gt;end(),<sp/>matchingRows.begin(),<sp/>matchingRows.end());</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>probeTablePosList-&gt;insert(probeTablePosList-&gt;end(),<sp/>matchingRows.size(),<sp/>probeTableRow);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>LOG4CXX_DEBUG(<ref refid="bin_2hyrise_2main_8cpp_1a1f643aeca905220d975e69578154a71d" kindref="member">logger</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Done<sp/>Probing&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classhyrise_1_1access_1_1_hash_join_probe_1a763341dd15061fb56edc240acf3239ac" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">storage::atable_ptr_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a763341dd15061fb56edc240acf3239ac" kindref="member" tooltip="Constructs resulting table from given build and probe tables&amp;#39; rows.">HashJoinProbe::buildResultTable</ref>(<ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref><sp/>*buildTablePosList,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref><sp/>*probeTablePosList)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>std::vector&lt;storage::atable_ptr_t&gt;<sp/>parts;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>buildTableRows<sp/>=<sp/><ref refid="class_shared_factory_1ac72cda135ae2e2f0b9cb9ed8b7afc5d1" kindref="member">PointerCalculator::create</ref>(<ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a67d4bdf5c43d767aa0d3869cd3164a88" kindref="member">getBuildTable</ref>(),<sp/>buildTablePosList);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>probeTableRows<sp/>=<sp/><ref refid="class_shared_factory_1ac72cda135ae2e2f0b9cb9ed8b7afc5d1" kindref="member">PointerCalculator::create</ref>(<ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a0f2698817a868542946eea4c4c4640d4" kindref="member">getProbeTable</ref>(),<sp/>probeTablePosList);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>parts.push_back(probeTableRows);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>parts.push_back(buildTableRows);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">storage::atable_ptr_t</ref><sp/>result<sp/>=<sp/>std::make_shared&lt;storage::MutableVerticalTable&gt;(parts);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/HashJoinProbe.cpp"/>
+  </compounddef>
+</doxygen>

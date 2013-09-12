@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classhyrise_1_1access_1_1_response_task" kind="class" prot="public">
+    <compoundname>hyrise::access::ResponseTask</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="_response_task_8h" local="no">ResponseTask.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_response_task_1a7117627a706b8872164794175e7e5fc4" prot="private" static="no" mutable="no">
+        <type><ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref> *</type>
+        <definition>net::AbstractConnection* hyrise::access::ResponseTask::connection</definition>
+        <argsstring></argsstring>
+        <name>connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="20" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_response_task_1a0abad40f4049a39eb8863d5373d65d06" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hyrise::access::ResponseTask::_transmitLimit</definition>
+        <argsstring></argsstring>
+        <name>_transmitLimit</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="22" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_response_task_1ad560f349211ac0638870310ca175f61f" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hyrise::access::ResponseTask::_transmitOffset</definition>
+        <argsstring></argsstring>
+        <name>_transmitOffset</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="23" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_response_task_1a4c5de70e94a01a653db98ad6d566dce8" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; unsigned long &gt;</type>
+        <definition>std::atomic&lt;unsigned long&gt; hyrise::access::ResponseTask::_affectedRows</definition>
+        <argsstring></argsstring>
+        <name>_affectedRows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="25" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_response_task_1a355d6a4ab42e95af891fd15f0fedf0fb" prot="private" static="no" mutable="no">
+        <type><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">tx::TXContext</ref></type>
+        <definition>tx::TXContext hyrise::access::ResponseTask::_txContext</definition>
+        <argsstring></argsstring>
+        <name>_txContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="26" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_response_task_1a586b132f9836f0d670dd5b78949b6995" prot="private" static="no" mutable="no">
+        <type><ref refid="epoch_8h_1a18c258fe5c1fdd9c998d1c4bc0d39560" kindref="member">epoch_t</ref></type>
+        <definition>epoch_t hyrise::access::ResponseTask::queryStart</definition>
+        <argsstring></argsstring>
+        <name>queryStart</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="27" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_response_task_1ab7d38e341b9beef10fa004082d229bd1" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacehyrise_1_1access_1af01db0da7e53cf5aa2d79438bd03e4a4" kindref="member">performance_vector_t</ref></type>
+        <definition>performance_vector_t hyrise::access::ResponseTask::performance_data</definition>
+        <argsstring></argsstring>
+        <name>performance_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="28" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_response_task_1a9b21ab4ab34506022eb0c31888316144" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; std::vector&lt; <ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref> &gt; &gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;std::vector&lt;hyrise_int_t&gt; &gt; &gt; hyrise::access::ResponseTask::_generatedKeyRefs</definition>
+        <argsstring></argsstring>
+        <name>_generatedKeyRefs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="31" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_response_task_1ace91324a3a265ef0194a650beb79046e" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex hyrise::access::ResponseTask::perfMutex</definition>
+        <argsstring></argsstring>
+        <name>perfMutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="33" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_response_task_1af4db521f652ee840b9ae74880e16ed1c" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex hyrise::access::ResponseTask::errorMutex</definition>
+        <argsstring></argsstring>
+        <name>errorMutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="34" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_response_task_1a783a0fa312c3706ef5d37e9931429285" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; hyrise::access::ResponseTask::_error_messages</definition>
+        <argsstring></argsstring>
+        <name>_error_messages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="35" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1a85bda4189177bac5b92c8af45690ff04" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::access::ResponseTask::ResponseTask</definition>
+        <argsstring>(net::AbstractConnection *connection)</argsstring>
+        <name>ResponseTask</name>
+        <param>
+          <type><ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref> *</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="38" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1ad02e2a1a31b2c04a74a8302591b1853e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual hyrise::access::ResponseTask::~ResponseTask</definition>
+        <argsstring>()</argsstring>
+        <name>~ResponseTask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="42" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1af970af7fef8deccf059fd6bc2f7310c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const std::string</type>
+        <definition>const std::string hyrise::access::ResponseTask::vname</definition>
+        <argsstring>()</argsstring>
+        <name>vname</name>
+        <reimplements refid="class_task_1a091bff6c1c11bfc202e53280b5af62e7">vname</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="44" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.cpp" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1ab1aae04cd875aec3ee1862cc94a9c21e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="epoch_8h_1a18c258fe5c1fdd9c998d1c4bc0d39560" kindref="member">epoch_t</ref></type>
+        <definition>epoch_t hyrise::access::ResponseTask::getQueryStart</definition>
+        <argsstring>()</argsstring>
+        <name>getQueryStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="46" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1ae174d914351da3ea768c0f6be7469dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::ResponseTask::registerPlanOperation</definition>
+        <argsstring>(const std::shared_ptr&lt; PlanOperation &gt; &amp;planOp)</argsstring>
+        <name>registerPlanOperation</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classhyrise_1_1access_1_1_plan_operation" kindref="compound">PlanOperation</ref> &gt; &amp;</type>
+          <declname>planOp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="50" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.cpp" bodystart="85" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1ab0d93f5e60741e29fd9a44f2309a84f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::ResponseTask::addErrorMessage</definition>
+        <argsstring>(std::string message)</argsstring>
+        <name>addErrorMessage</name>
+        <param>
+          <type>std::string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="52" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1a3788ba2f89546f350eab0ec6bb0e4838" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; hyrise::access::ResponseTask::getErrorMessages</definition>
+        <argsstring>() const </argsstring>
+        <name>getErrorMessages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="57" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="57" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1a1f042ffefb393ebddcd6a3dadc32b9da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::ResponseTask::setTxContext</definition>
+        <argsstring>(tx::TXContext t)</argsstring>
+        <name>setTxContext</name>
+        <param>
+          <type><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">tx::TXContext</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="61" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1a009fed47e811efa0a2cf7e7eca5d4122" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::ResponseTask::setQueryStart</definition>
+        <argsstring>(epoch_t start)</argsstring>
+        <name>setQueryStart</name>
+        <param>
+          <type><ref refid="epoch_8h_1a18c258fe5c1fdd9c998d1c4bc0d39560" kindref="member">epoch_t</ref></type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="65" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1a653a87b80234090315fec0cf0ff1a5b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::ResponseTask::setTransmitLimit</definition>
+        <argsstring>(size_t l)</argsstring>
+        <name>setTransmitLimit</name>
+        <param>
+          <type>size_t</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="69" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1a3d88b4f10fc69aa0d7f53973f3e43e45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::ResponseTask::setTransmitOffset</definition>
+        <argsstring>(size_t o)</argsstring>
+        <name>setTransmitOffset</name>
+        <param>
+          <type>size_t</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="73" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1a9d605345ae5a4370d62e3615db7162c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::ResponseTask::incAffectedRows</definition>
+        <argsstring>(unsigned long inc)</argsstring>
+        <name>incAffectedRows</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>inc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="77" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1a858121e97243ec5b91704fdc86246afb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1access_1af01db0da7e53cf5aa2d79438bd03e4a4" kindref="member">performance_vector_t</ref> &amp;</type>
+        <definition>performance_vector_t&amp; hyrise::access::ResponseTask::getPerformanceData</definition>
+        <argsstring>()</argsstring>
+        <name>getPerformanceData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="81" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1ae328ee60f1b1fb1e90df493b8b6d7516" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1access_1a06dfec12b1bcee8435455d6a17aa6e9a" kindref="member">task_states_t</ref></type>
+        <definition>task_states_t hyrise::access::ResponseTask::getState</definition>
+        <argsstring>() const </argsstring>
+        <name>getState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="85" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.cpp" bodystart="110" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1a051aacb255ecb84b8348b7b853156a7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classhyrise_1_1access_1_1_plan_operation" kindref="compound">PlanOperation</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; PlanOperation &gt; hyrise::access::ResponseTask::getResultTask</definition>
+        <argsstring>()</argsstring>
+        <name>getResultTask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="87" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.cpp" bodystart="102" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_response_task_1a104128290c6abeaae5a94d71bb46c68f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::access::ResponseTask::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <reimplements refid="class_task_1ae3a87b98fa47e03ab2f48b53aa257b69">operator()</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="89" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.cpp" bodystart="119" bodyend="202"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3192">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="3190">
+        <label>hyrise::access::ResponseTask</label>
+        <link refid="classhyrise_1_1access_1_1_response_task"/>
+        <childnode refid="3191" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3191">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3192" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3193" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3193">
+        <label>std::enable_shared_from_this&lt; Task &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3196">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="3194">
+        <label>hyrise::access::ResponseTask</label>
+        <link refid="classhyrise_1_1access_1_1_response_task"/>
+        <childnode refid="3195" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3198" relation="usage">
+          <edgelabel>-_txContext</edgelabel>
+        </childnode>
+        <childnode refid="3199" relation="usage">
+          <edgelabel>-connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="3199">
+        <label>hyrise::net::AbstractConnection</label>
+        <link refid="classhyrise_1_1net_1_1_abstract_connection"/>
+      </node>
+      <node id="3198">
+        <label>hyrise::tx::TXContext</label>
+        <link refid="structhyrise_1_1tx_1_1_t_x_context"/>
+      </node>
+      <node id="3195">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3196" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3197" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3197">
+        <label>std::enable_shared_from_this&lt; Task &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" line="18" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h" bodystart="18" bodyend="90"/>
+    <listofallmembers>
+      <member refid="class_task_1ae86d264d411c0a0476085734c27a84b0" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_actualNode</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a4c5de70e94a01a653db98ad6d566dce8" prot="private" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_affectedRows</name></member>
+      <member refid="class_task_1ab25d10a171c2efc2dcdf4ec7b81d148d" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_dependencies</name></member>
+      <member refid="class_task_1a432b54ea5cdbf8f875c756c70710b69e" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_dependencyWaitCount</name></member>
+      <member refid="class_task_1a10259a6dde7645e32c32262818339c8c" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_depMutex</name></member>
+      <member refid="class_task_1af277c65727e285efbf965633851ec9d8" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_doneObservers</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a783a0fa312c3706ef5d37e9931429285" prot="private" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_error_messages</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a9b21ab4ab34506022eb0c31888316144" prot="private" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_generatedKeyRefs</name></member>
+      <member refid="class_task_1a8909ff1653cd9a685af7256976e4e334" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_id</name></member>
+      <member refid="class_task_1a778ed5c766f4098184c31a656fe471ed" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_notifyMutex</name></member>
+      <member refid="class_task_1a6a0d1fa3b37cb2e7896ea23049798b36" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_observerMutex</name></member>
+      <member refid="class_task_1aa7b21c6482b905c04f354c738341beb3" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_preferredCore</name></member>
+      <member refid="class_task_1abeb3d34a483638fad8c93bb3baff50f5" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_preferredNode</name></member>
+      <member refid="class_task_1a6fbb4614f260802e6204e339f4480004" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_priority</name></member>
+      <member refid="class_task_1a7f7f81090a389fd5cf79747e165fe0f4" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_readyObservers</name></member>
+      <member refid="class_task_1a5515868bfb7db5ad936cafdf6b8e65c7" prot="protected" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_sessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a0abad40f4049a39eb8863d5373d65d06" prot="private" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_transmitLimit</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1ad560f349211ac0638870310ca175f61f" prot="private" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_transmitOffset</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a355d6a4ab42e95af891fd15f0fedf0fb" prot="private" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>_txContext</name></member>
+      <member refid="class_task_1aa9e65a15e122de040bb914ab144577b8" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>addDependency</name></member>
+      <member refid="class_task_1a0e4ebf7ad5313f027aa16d250685604a" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>addDoneObserver</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1ab0d93f5e60741e29fd9a44f2309a84f8" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>addErrorMessage</name></member>
+      <member refid="class_task_1a9726ca1f4c6712a3516cb05121479f25" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>addReadyObserver</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a7117627a706b8872164794175e7e5fc4" prot="private" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>connection</name></member>
+      <member refid="class_task_1afedc05b69ebd406b7fdb42391f4eef2a" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>DEFAULT_PRIORITY</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1af4db521f652ee840b9ae74880e16ed1c" prot="private" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>errorMutex</name></member>
+      <member refid="class_task_1a48d72f6b05c55e6fed32f137d5d17cf6" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>getActualNode</name></member>
+      <member refid="class_task_1a75f0a4940cdd338c2ba538200bfcdddf" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>getDependencyCount</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a3788ba2f89546f350eab0ec6bb0e4838" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>getErrorMessages</name></member>
+      <member refid="class_task_1a85363a10fc3b2272b30e1c24846ab237" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>getId</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a858121e97243ec5b91704fdc86246afb" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>getPerformanceData</name></member>
+      <member refid="class_task_1a4a3f6f336369d8e2d6a92fae0690c143" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>getPreferredCore</name></member>
+      <member refid="class_task_1ad775abf82380305e56bb9a1847f76ece" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>getPreferredNode</name></member>
+      <member refid="class_task_1a4d9b4764c7365be48eee4393e87ca92b" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>getPriority</name></member>
+      <member refid="class_task_1a1a5953e7f9dfc732ce1f3d8a914439b4" prot="public" virt="virtual"><scope>hyrise::access::ResponseTask</scope><name>getQueryDuration</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1ab1aae04cd875aec3ee1862cc94a9c21e" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>getQueryStart</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a051aacb255ecb84b8348b7b853156a7e" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>getResultTask</name></member>
+      <member refid="class_task_1a28ea4fab3bbd5b803f9aa7e4b4300820" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>getSessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1ae328ee60f1b1fb1e90df493b8b6d7516" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>getState</name></member>
+      <member refid="class_task_1a769a8fb688ddaed2870faeea61d84ca0" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>hasSuccessors</name></member>
+      <member refid="class_task_1afb865392382a2c3f1a13e962d5ba3b1e" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>HIGH_PRIORITY</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a9d605345ae5a4370d62e3615db7162c3" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>incAffectedRows</name></member>
+      <member refid="class_task_1ab7307de77d5baf3dfec0269996d81543" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>isReady</name></member>
+      <member refid="class_task_1aeb0d741352700686296e742bc21e4362" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>lockForNotifications</name></member>
+      <member refid="class_task_1af0efeb0207f95415ca556e19bc62d60e" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>NO_PREFERRED_CORE</name></member>
+      <member refid="class_task_1a38563fd60f45377e73b8030945f9fdc8" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>NO_PREFERRED_NODE</name></member>
+      <member refid="class_task_1aa729cd30e7135f2851dd625679aa8556" prot="public" virt="virtual"><scope>hyrise::access::ResponseTask</scope><name>notifyDone</name></member>
+      <member refid="class_task_1a82157fda3766f4331966baf74e8206fa" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>notifyDoneObservers</name></member>
+      <member refid="class_task_1a793f3db3f39a9ea7352078f235ee7843" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>notifyReadyObservers</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a104128290c6abeaae5a94d71bb46c68f" prot="public" virt="virtual"><scope>hyrise::access::ResponseTask</scope><name>operator()</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1ace91324a3a265ef0194a650beb79046e" prot="private" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>perfMutex</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1ab7d38e341b9beef10fa004082d229bd1" prot="private" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>performance_data</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a586b132f9836f0d670dd5b78949b6995" prot="private" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>queryStart</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1ae174d914351da3ea768c0f6be7469dd2" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>registerPlanOperation</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a85bda4189177bac5b92c8af45690ff04" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>ResponseTask</name></member>
+      <member refid="class_task_1a8df8b7cbdf23d35317488316bba3ebe2" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>SESSION_ID_NOT_SET</name></member>
+      <member refid="class_task_1af9b0b825e5ffb8de9c6a1a71438f4b5b" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>setActualNode</name></member>
+      <member refid="class_task_1a6c3e7a3b19e50d8fcad5a084ef6b7312" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>setId</name></member>
+      <member refid="class_task_1a1b8e520f60e9f41a3c1331e4e9e4b3ca" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>setPreferredCore</name></member>
+      <member refid="class_task_1a59960c60425c5d5ed2e8ff52e4538ff2" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>setPreferredNode</name></member>
+      <member refid="class_task_1acc93078022eabed8325f164e4eedc37a" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>setPriority</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a009fed47e811efa0a2cf7e7eca5d4122" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>setQueryStart</name></member>
+      <member refid="class_task_1a688bd7a4f5f659d049667c08fd330cfd" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>setSessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a653a87b80234090315fec0cf0ff1a5b9" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>setTransmitLimit</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a3d88b4f10fc69aa0d7f53973f3e43e45" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>setTransmitOffset</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1a1f042ffefb393ebddcd6a3dadc32b9da" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>setTxContext</name></member>
+      <member refid="class_task_1a0ca53354bdc006762a0fda68c64f7608" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>Task</name></member>
+      <member refid="class_task_1a35af9de734c94c39981a2b199790e288" prot="public" virt="non-virtual"><scope>hyrise::access::ResponseTask</scope><name>unlockForNotifications</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1af970af7fef8deccf059fd6bc2f7310c0" prot="public" virt="virtual"><scope>hyrise::access::ResponseTask</scope><name>vname</name></member>
+      <member refid="classhyrise_1_1access_1_1_response_task_1ad02e2a1a31b2c04a74a8302591b1853e" prot="public" virt="virtual"><scope>hyrise::access::ResponseTask</scope><name>~ResponseTask</name></member>
+      <member refid="class_task_1a7bff79cc05fa4511c72048d33591503b" prot="public" virt="virtual"><scope>hyrise::access::ResponseTask</scope><name>~Task</name></member>
+      <member refid="class_task_done_observer_1a9b5fa53c4893dfc998aedca72b8dd278" prot="public" virt="virtual"><scope>hyrise::access::ResponseTask</scope><name>~TaskDoneObserver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

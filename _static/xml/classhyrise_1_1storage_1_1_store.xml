@@ -1,0 +1,1089 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classhyrise_1_1storage_1_1_store" kind="class" prot="public">
+    <compoundname>hyrise::storage::Store</compoundname>
+    <basecompoundref refid="class_abstract_table" prot="public" virt="non-virtual">AbstractTable</basecompoundref>
+    <includes refid="_store_8h" local="no">Store.h</includes>
+    <innerclass refid="structhyrise_1_1storage_1_1_store_1_1table__offset__idx__t" prot="private">hyrise::storage::Store::table_offset_idx_t</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhyrise_1_1storage_1_1_store_1a276a4183342b5ea1f290341ac7609b0e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">atable_ptr_t</ref> &gt;</type>
+        <definition>std::vector&lt; atable_ptr_t &gt; hyrise::storage::Store::main_tables</definition>
+        <argsstring></argsstring>
+        <name>main_tables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="92" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1storage_1_1_store_1a8c0119fd03a42fa083490921528abdb8" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">atable_ptr_t</ref></type>
+        <definition>atable_ptr_t hyrise::storage::Store::delta</definition>
+        <argsstring></argsstring>
+        <name>delta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="95" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1storage_1_1_store_1a9df7fdc293499f269795d69bcbf1f33e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_table_merger" kindref="compound">TableMerger</ref> *</type>
+        <definition>TableMerger* hyrise::storage::Store::merger</definition>
+        <argsstring></argsstring>
+        <name>merger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="98" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1storage_1_1_store_1acd6c5d170390e1c686d5428e850407dc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref> &gt;</type>
+        <definition>std::vector&lt;tx::transaction_id_t&gt; hyrise::storage::Store::_cidBeginVector</definition>
+        <argsstring></argsstring>
+        <name>_cidBeginVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="105" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1storage_1_1_store_1aae9ea1eeb77580067c10b03fc3e6da65" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref> &gt;</type>
+        <definition>std::vector&lt;tx::transaction_id_t&gt; hyrise::storage::Store::_cidEndVector</definition>
+        <argsstring></argsstring>
+        <name>_cidEndVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="107" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1storage_1_1_store_1a9c02b50cbb0345c614ef8b197156244b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref> &gt;</type>
+        <definition>std::vector&lt;tx::transaction_id_t&gt; hyrise::storage::Store::_tidVector</definition>
+        <argsstring></argsstring>
+        <name>_tidVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="109" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhyrise_1_1storage_1_1_store_1ad69cbfb52e20cfa1ce7a0cc4ca28c584" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class PrettyPrinter</definition>
+        <argsstring></argsstring>
+        <name>PrettyPrinter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="110" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a4c81b586a14e1238412446e56fb1007e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::storage::Store::Store</definition>
+        <argsstring>()</argsstring>
+        <name>Store</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="32" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a0234c0c367f3f7c6c2499f2a3c6fd870" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::storage::Store::Store</definition>
+        <argsstring>(atable_ptr_t main_table)</argsstring>
+        <name>Store</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">atable_ptr_t</ref></type>
+          <declname>main_table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="33" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="25" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a4be59e1991fdb7db5eb5cf56847393f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>hyrise::storage::Store::~Store</definition>
+        <argsstring>()</argsstring>
+        <name>~Store</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="34" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1af3b35fbd8816352b901a3b7aa289886c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">atable_ptr_t</ref> &gt;</type>
+        <definition>std::vector&lt; atable_ptr_t &gt; hyrise::storage::Store::getMainTables</definition>
+        <argsstring>() const </argsstring>
+        <name>getMainTables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="36" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a89d030cd8e22b27cd65bf262749060a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::Store::setDelta</definition>
+        <argsstring>(atable_ptr_t _delta)</argsstring>
+        <name>setDelta</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">atable_ptr_t</ref></type>
+          <declname>_delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="37" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="209" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a54097b516b7ddb4ee2843a7ea6a330f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">atable_ptr_t</ref></type>
+        <definition>atable_ptr_t hyrise::storage::Store::getDeltaTable</definition>
+        <argsstring>() const </argsstring>
+        <name>getDeltaTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="38" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1af090a648bf0ec5cb7b3a15a2ce4df32d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t hyrise::storage::Store::deltaOffset</definition>
+        <argsstring>() const </argsstring>
+        <name>deltaOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="39" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="182" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1ae0fb99e5bd2c8199f8e09c73c858f4d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::Store::merge</definition>
+        <argsstring>()</argsstring>
+        <name>merge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="40" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="40" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a0ad42d8c4d8e5a0f63f71ffa4c31040f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::Store::setMerger</definition>
+        <argsstring>(TableMerger *_merger)</argsstring>
+        <name>setMerger</name>
+        <param>
+          <type><ref refid="class_table_merger" kindref="compound">TableMerger</ref> *</type>
+          <declname>_merger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Replaces the merger used for merging main tables with delta. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_merger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a merger instance. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="44" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="204" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a272e7f44ca1ec60e0120b676643f62d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; size_t, size_t &gt;</type>
+        <definition>std::pair&lt; size_t, size_t &gt; hyrise::storage::Store::resizeDelta</definition>
+        <argsstring>(size_t num)</argsstring>
+        <name>resizeDelta</name>
+        <param>
+          <type>size_t</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resize the current delta size atomically to new size and return a pair of start and end for the resized delta that can be used as a write area that is safe to use </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="49" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="306" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a8dff21a74ffbd2907783fb13057a90bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; size_t, size_t &gt;</type>
+        <definition>std::pair&lt; size_t, size_t &gt; hyrise::storage::Store::appendToDelta</definition>
+        <argsstring>(size_t num)</argsstring>
+        <name>appendToDelta</name>
+        <param>
+          <type>size_t</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="50" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="311" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a9dfe0417bf8466b07a7ae182ccff3a1f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hyrise::storage::Store::isVisibleForTransaction</definition>
+        <argsstring>(pos_t pos, tx::transaction_cid_t last_commit_id, tx::transaction_id_t tid) const </argsstring>
+        <name>isVisibleForTransaction</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1adf2f7735f8bc6e8bd84d1242ae680cf0" kindref="member">pos_t</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">tx::transaction_cid_t</ref></type>
+          <declname>last_commit_id</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="52" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="253" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a39d01b18628007ebdb35c6a3e9956e9d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::Store::validatePositions</definition>
+        <argsstring>(pos_list_t &amp;pos, tx::transaction_cid_t last_commit_id, tx::transaction_id_t tid) const </argsstring>
+        <name>validatePositions</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">tx::transaction_cid_t</ref></type>
+          <declname>last_commit_id</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+<para>This method validates a list of positions to check if it is valid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="55" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="284" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a511dd165cc867c52148b5bb7fa512f21" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref></type>
+        <definition>pos_list_t hyrise::storage::Store::buildValidPositions</definition>
+        <argsstring>(tx::transaction_cid_t last_commit_id, tx::transaction_id_t tid) const </argsstring>
+        <name>buildValidPositions</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">tx::transaction_cid_t</ref></type>
+          <declname>last_commit_id</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="56" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="298" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1ab8363f76dfa1fc45072c969f99210f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::Store::copyRowToDelta</definition>
+        <argsstring>(const c_atable_ptr_t &amp;source, size_t src_row, size_t dst_row, tx::transaction_id_t tid)</argsstring>
+        <name>copyRowToDelta</name>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">c_atable_ptr_t</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>src_row</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dst_row</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copies a new row to the delta table, sets the validity and the tx id accordingly. May need to resize delta. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="60" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="330" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a191fb9be0a79ade8c6b7f3ba298cf123" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1tx_1ae309e968fd5cd0c9bc4b27e82d78c74c" kindref="member">tx::TX_CODE</ref></type>
+        <definition>tx::TX_CODE hyrise::storage::Store::commitPositions</definition>
+        <argsstring>(const pos_list_t &amp;pos, const tx::transaction_cid_t cid, bool valid)</argsstring>
+        <name>commitPositions</name>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">tx::transaction_cid_t</ref></type>
+          <declname>cid</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>valid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="62" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="339" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a23aefced824df6f151f6cc8c24c343d5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref></type>
+        <definition>tx::transaction_id_t hyrise::storage::Store::tid</definition>
+        <argsstring>(size_t row) const </argsstring>
+        <name>tid</name>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="65" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a37bbdd8d7b7f34e7d97b06693ffaf510" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::Store::setTid</definition>
+        <argsstring>(size_t row, tx::transaction_id_t tid)</argsstring>
+        <name>setTid</name>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="66" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1ae51f678391e39140d9b67fa7b9a3415b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1tx_1ae309e968fd5cd0c9bc4b27e82d78c74c" kindref="member">tx::TX_CODE</ref></type>
+        <definition>tx::TX_CODE hyrise::storage::Store::checkForConcurrentCommit</definition>
+        <argsstring>(const pos_list_t &amp;pos, tx::transaction_id_t tid) const </argsstring>
+        <name>checkForConcurrentCommit</name>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="67" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="351" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1ab632af42a47cc16f455fb565a37e9803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1tx_1ae309e968fd5cd0c9bc4b27e82d78c74c" kindref="member">tx::TX_CODE</ref></type>
+        <definition>tx::TX_CODE hyrise::storage::Store::markForDeletion</definition>
+        <argsstring>(pos_t pos, tx::transaction_id_t tid)</argsstring>
+        <name>markForDeletion</name>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1adf2f7735f8bc6e8bd84d1242ae680cf0" kindref="member">pos_t</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="68" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="359" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1af2b216cfd132da5ba3f1af4586fde29c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1tx_1ae309e968fd5cd0c9bc4b27e82d78c74c" kindref="member">tx::TX_CODE</ref></type>
+        <definition>tx::TX_CODE hyrise::storage::Store::unmarkForDeletion</definition>
+        <argsstring>(const pos_list_t &amp;pos, tx::transaction_id_t tid)</argsstring>
+        <name>unmarkForDeletion</name>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref></type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="69" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="367" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a42b86a67e914cf6b2a2f0a61c722aba6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref> *</type>
+        <definition>const ColumnMetadata * hyrise::storage::Store::metadataAt</definition>
+        <argsstring>(size_t column_index, size_t row_index=0, table_id_t table_id=0) const override</argsstring>
+        <name>metadataAt</name>
+        <reimplements refid="class_abstract_table_1a4d4d85fd352353254fe01a72a9635a64">metadataAt</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column_index</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row_index</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_abstract_table" kindref="compound">AbstractTable</ref> interface. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="72" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="78" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a860030016eb93f2585f93665a0d50504" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::Store::setDictionaryAt</definition>
+        <argsstring>(AbstractTable::SharedDictionaryPtr dict, size_t column, size_t row=0, table_id_t table_id=0) override</argsstring>
+        <name>setDictionaryAt</name>
+        <reimplements refid="class_abstract_table_1a0acc1fa146aef09f9de31768e67dfa72">setDictionaryAt</reimplements>
+        <param>
+          <type><ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref></type>
+          <declname>dict</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the dictionary for a certain column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dict</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dictionary to be used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column for which to set the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="73" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="92" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1aeb97a977a531969f6d4eac66b695b8c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref> &amp;</type>
+        <definition>const AbstractTable::SharedDictionaryPtr &amp; hyrise::storage::Store::dictionaryAt</definition>
+        <argsstring>(size_t column, size_t row=0, table_id_t table_id=0) const override</argsstring>
+        <name>dictionaryAt</name>
+        <reimplements refid="class_abstract_table_1ad20e4bbda0d8f1d257cbb62f4c0be91c">dictionaryAt</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the dictionary for a certain column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column from which to extract the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="74" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="107" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1aefae310dd013419d63adf33dad9ea13d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref> &amp;</type>
+        <definition>const AbstractTable::SharedDictionaryPtr &amp; hyrise::storage::Store::dictionaryByTableId</definition>
+        <argsstring>(size_t column, table_id_t table_id) const override</argsstring>
+        <name>dictionaryByTableId</name>
+        <reimplements refid="class_abstract_table_1a619607163a0f93d8bc90c3f3a66822ff">dictionaryByTableId</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the dictionary for a certain column by table ID. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column from which to extract the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="75" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="133" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a1c8eb8d8dd8585277452dd2ffbf49283" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_value_id" kindref="compound">ValueId</ref></type>
+        <definition>ValueId hyrise::storage::Store::getValueId</definition>
+        <argsstring>(size_t column, size_t row) const override</argsstring>
+        <name>getValueId</name>
+        <reimplements refid="class_abstract_table_1ae717cc86960b6488a8585d920a5f3b3d">getValueId</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value-ID of a cell. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row number of the cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="76" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="168" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1af47e8e9bff335b9040548fb48e7dcac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::Store::setValueId</definition>
+        <argsstring>(size_t column, size_t row, ValueId vid) override</argsstring>
+        <name>setValueId</name>
+        <reimplements refid="class_abstract_table_1a2be48affbc5a0060e2d17128be9e91b9">setValueId</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_value_id" kindref="compound">ValueId</ref></type>
+          <declname>valueId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the value ID of a cell. <simplesect kind="note"><para>Should be implemented in derived classes or throws runtime error!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valueId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New value-ID of the cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="77" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a5e1c2e4d60e386be7b36a357911ea4e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t hyrise::storage::Store::size</definition>
+        <argsstring>() const override</argsstring>
+        <name>size</name>
+        <reimplements refid="class_abstract_table_1a2b3fde5fb0c70f288eda47c4c66bb151">size</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of rows in the table <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="78" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="176" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a9aa8038cd2f12844b006f675d9ae7547" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t hyrise::storage::Store::columnCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>columnCount</name>
+        <reimplements refid="class_abstract_table_1a9ba326d4ed695ff02dcdc0dd125fd16c">columnCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of columns. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="79" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="186" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1ae62bcfaedba68c3b7a30ec66bf7e63b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned</type>
+        <definition>unsigned hyrise::storage::Store::partitionCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>partitionCount</name>
+        <reimplements refid="class_abstract_table_1a53bb2089cbb287804e3160abe893e657">partitionCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of partitions in this table. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="80" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="190" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1abc91f16bc62697823b643d0a1cdfe587" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t hyrise::storage::Store::partitionWidth</definition>
+        <argsstring>(size_t slice) const override</argsstring>
+        <name>partitionWidth</name>
+        <reimplements refid="class_abstract_table_1ac89c7ce56dca98bdfdd67263a4165447">partitionWidth</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>slice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the width of a specified partition in number of attributes. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>slice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slice of interest. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="81" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a8d223a57ea5e103ba44c9326807540e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::Store::print</definition>
+        <argsstring>(size_t limit=(size_t)-1) const override</argsstring>
+        <name>print</name>
+        <reimplements refid="class_abstract_table_1a7646e80f6c075dd018bd73a70751113a">print</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>limit</declname>
+          <defval>(size_t)-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints the table </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="82" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="200" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1aacfdb44faa6e7c76b8698c19fe581c7c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+        <definition>table_id_t hyrise::storage::Store::subtableCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>subtableCount</name>
+        <reimplements refid="class_abstract_table_1af5330c0a617946ad538cacea21ba7639">subtableCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of horizontal subtables. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="83" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a643a2342a8e73fafd8d2bd68d2f5c141" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">atable_ptr_t</ref></type>
+        <definition>atable_ptr_t hyrise::storage::Store::copy</definition>
+        <argsstring>() const override</argsstring>
+        <name>copy</name>
+        <reimplements refid="class_abstract_table_1a87134964b75abb36c49d0c44455d23e2">copy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create of copy of this table. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="86" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="213" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1a39bc1cf482300b9d92d16ebe3e78040a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="_abstract_table_8h_1ae3a004c859daed205eb7639b1e993ce4" kindref="member">attr_vectors_t</ref></type>
+        <definition>const attr_vectors_t hyrise::storage::Store::getAttributeVectors</definition>
+        <argsstring>(size_t column) const override</argsstring>
+        <name>getAttributeVectors</name>
+        <reimplements refid="class_abstract_table_1a3467bc6159aa361db993c3fc56584789">getAttributeVectors</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get underlying attribute vectors for column</para><para>This method returns a struct containing the reference to the attribute vector and the offset of the attribut in this vector. This allows a direct access to the memory and keeping the high-level data structures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="87" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="232" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1aeefceb701251fc593f8872a89b6ead8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::Store::debugStructure</definition>
+        <argsstring>(size_t level=0) const override</argsstring>
+        <name>debugStructure</name>
+        <reimplements refid="class_abstract_table_1a4262181544d5392b71735518088631ff">debugStructure</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="88" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="243" bodyend="251"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_store_1ad80c9760a44dbc8264605923270e5a23" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structhyrise_1_1storage_1_1_store_1_1table__offset__idx__t" kindref="compound">table_offset_idx_t</ref></type>
+        <definition>Store::table_offset_idx_t hyrise::storage::Store::responsibleTable</definition>
+        <argsstring>(size_t row) const </argsstring>
+        <name>responsibleTable</name>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="101" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.cpp" bodystart="143" bodyend="161"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classhyrise_1_1storage_1_1_store" kindref="compound">Store</ref> consists of one or more main tables and a delta store and is the only entity capable of modifying the content of the table(s) after initialization via the delta store. It can be merged into the main tables using a to-be-set merger. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3538">
+        <label>AbstractTable</label>
+        <link refid="class_abstract_table"/>
+        <childnode refid="3539" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3539">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+      <node id="3537">
+        <label>hyrise::storage::Store</label>
+        <link refid="classhyrise_1_1storage_1_1_store"/>
+        <childnode refid="3538" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3541">
+        <label>AbstractTable</label>
+        <link refid="class_abstract_table"/>
+        <childnode refid="3542" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3543" relation="usage">
+          <edgelabel>-_uuid</edgelabel>
+        </childnode>
+      </node>
+      <node id="3546">
+        <label>AbstractMerger</label>
+        <link refid="class_abstract_merger"/>
+      </node>
+      <node id="3542">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+      <node id="3545">
+        <label>AbstractMergeStrategy</label>
+        <link refid="class_abstract_merge_strategy"/>
+      </node>
+      <node id="3543">
+        <label>unique_id</label>
+        <link refid="structunique__id"/>
+      </node>
+      <node id="3540">
+        <label>hyrise::storage::Store</label>
+        <link refid="classhyrise_1_1storage_1_1_store"/>
+        <childnode refid="3541" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3544" relation="usage">
+          <edgelabel>-merger</edgelabel>
+        </childnode>
+      </node>
+      <node id="3544">
+        <label>TableMerger</label>
+        <link refid="class_table_merger"/>
+        <childnode refid="3545" relation="usage">
+          <edgelabel>-_strategy</edgelabel>
+        </childnode>
+        <childnode refid="3546" relation="usage">
+          <edgelabel>-_merger</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" line="30" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Store.h" bodystart="30" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classhyrise_1_1storage_1_1_store_1acd6c5d170390e1c686d5428e850407dc" prot="private" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>_cidBeginVector</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1aae9ea1eeb77580067c10b03fc3e6da65" prot="private" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>_cidEndVector</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a9c02b50cbb0345c614ef8b197156244b" prot="private" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>_tidVector</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a8dff21a74ffbd2907783fb13057a90bc" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>appendToDelta</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a511dd165cc867c52148b5bb7fa512f21" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>buildValidPositions</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1ae51f678391e39140d9b67fa7b9a3415b" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>checkForConcurrentCommit</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a9aa8038cd2f12844b006f675d9ae7547" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>columnCount</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a191fb9be0a79ade8c6b7f3ba298cf123" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>commitPositions</name></member>
+      <member refid="class_abstract_table_1af716c04f38a6ab47b277911baf050c9d" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>contentEquals</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a643a2342a8e73fafd8d2bd68d2f5c141" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>copy</name></member>
+      <member refid="class_abstract_table_1a435f72c573988b1438935fe0519da3a7" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>copy_structure</name></member>
+      <member refid="class_abstract_table_1aca6d9c647c92a66bd658c4c58250c715" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>copy_structure_modifiable</name></member>
+      <member refid="class_abstract_table_1ad4973d95d29deb5142d6e6b308346a42" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>copyRowFrom</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1ab8363f76dfa1fc45072c969f99210f4d" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>copyRowToDelta</name></member>
+      <member refid="class_abstract_table_1a4361f683288a0d1360227b309ca625f6" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1a2f6d1df59bdb78f8454ea8c06c89216d" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1a06029159a39fac33676c09daa3f7f849" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1aea155de835135df953603e9dcbb731c3" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>copyValueIds</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1aeefceb701251fc593f8872a89b6ead8d" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>debugStructure</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a8c0119fd03a42fa083490921528abdb8" prot="private" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>delta</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1af090a648bf0ec5cb7b3a15a2ce4df32d" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>deltaOffset</name></member>
+      <member refid="class_abstract_table_1ab1d04fdc926954e4027fb883abab1d73" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>dictionaries</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1aeb97a977a531969f6d4eac66b695b8c4" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>dictionaryAt</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1aefae310dd013419d63adf33dad9ea13d" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>dictionaryByTableId</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a39bc1cf482300b9d92d16ebe3e78040a" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>getAttributeVectors</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a54097b516b7ddb4ee2843a7ea6a330f7" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>getDeltaTable</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1af3b35fbd8816352b901a3b7aa289886c" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>getMainTables</name></member>
+      <member refid="class_abstract_table_1af820249fa63adfdd1e678572555f6886" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>getUuid</name></member>
+      <member refid="class_abstract_table_1a6648aba614a398c3243a60b18d5d7dbf" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>getValue</name></member>
+      <member refid="class_abstract_table_1aac6e3940c4b756a4c627ece2c008782c" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>getValue</name></member>
+      <member refid="class_abstract_table_1af380b8fd7715abe5988f53b885920e0c" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>getValueForValueId</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a1c8eb8d8dd8585277452dd2ffbf49283" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>getValueId</name></member>
+      <member refid="class_abstract_table_1a21786cf05c9871539e32e583b1e717c4" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>getValueIdForValue</name></member>
+      <member refid="class_abstract_table_1acd7ea07c9b1605ca53c7608c7c3b2ea5" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>getValueIdForValueByTableId</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a9dfe0417bf8466b07a7ae182ccff3a1f" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>isVisibleForTransaction</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a276a4183342b5ea1f290341ac7609b0e" prot="private" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>main_tables</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1ab632af42a47cc16f455fb565a37e9803" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>markForDeletion</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1ae0fb99e5bd2c8199f8e09c73c858f4d2" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>merge</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a9df7fdc293499f269795d69bcbf1f33e" prot="private" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>merger</name></member>
+      <member refid="class_abstract_table_1a8b854b19026e75eebc02942499a82a21" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>metadata</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a42b86a67e914cf6b2a2f0a61c722aba6" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>metadataAt</name></member>
+      <member refid="class_abstract_table_1af8c5434b261abfcab191852f575b4c5a" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>nameOfColumn</name></member>
+      <member refid="class_abstract_table_1aaea606e4fd8c92a43febced405de1c6c" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>numberOfColumn</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1ae62bcfaedba68c3b7a30ec66bf7e63b0" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>partitionCount</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1abc91f16bc62697823b643d0a1cdfe587" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>partitionWidth</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1ad69cbfb52e20cfa1ce7a0cc4ca28c584" prot="private" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>PrettyPrinter</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a8d223a57ea5e103ba44c9326807540e5" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>print</name></member>
+      <member refid="class_abstract_table_1a67489daa606ed64ce9874b509451e3d9" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>printValue</name></member>
+      <member refid="class_abstract_table_1a019861d7ed5abee8c15a0511c3cbf051" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>reserve</name></member>
+      <member refid="class_abstract_table_1a92d707d52cdeabfc3cf254693b913a81" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>resize</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a272e7f44ca1ec60e0120b676643f62d9" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>resizeDelta</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1ad80c9760a44dbc8264605923270e5a23" prot="private" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>responsibleTable</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a89d030cd8e22b27cd65bf262749060a6" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>setDelta</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a860030016eb93f2585f93665a0d50504" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>setDictionaryAt</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a0ad42d8c4d8e5a0f63f71ffa4c31040f" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>setMerger</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a37bbdd8d7b7f34e7d97b06693ffaf510" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>setTid</name></member>
+      <member refid="class_abstract_table_1ade4da17f60dbde2148f25b849528f624" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>setUuid</name></member>
+      <member refid="class_abstract_table_1a0aa362f5b907b4d79c2fb43889a8970b" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>setValue</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1af47e8e9bff335b9040548fb48e7dcac7" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>setValueId</name></member>
+      <member refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>SharedDictionaryPtr</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a5e1c2e4d60e386be7b36a357911ea4e1" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>size</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a4c81b586a14e1238412446e56fb1007e" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>Store</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a0234c0c367f3f7c6c2499f2a3c6fd870" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>Store</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1aacfdb44faa6e7c76b8698c19fe581c7c" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>subtableCount</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a23aefced824df6f151f6cc8c24c343d5" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>tid</name></member>
+      <member refid="class_abstract_table_1a50b40ae8ca0b789dd8ded3fc51a6f5fd" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>typeOfColumn</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1af2b216cfd132da5ba3f1af4586fde29c" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>unmarkForDeletion</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a39d01b18628007ebdb35c6a3e9956e9d" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>validatePositions</name></member>
+      <member refid="class_abstract_table_1a55de3a5a31acf6898fb9ddd287b760e3" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>valueExists</name></member>
+      <member refid="class_abstract_table_1a8e1d6f1b61390fc3e6954fbaa1f7745f" prot="public" virt="non-virtual"><scope>hyrise::storage::Store</scope><name>write</name></member>
+      <member refid="class_abstract_resource_1acbf6801fec7bf1acf0d90a4fb5d5c706" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>~AbstractResource</name></member>
+      <member refid="classhyrise_1_1storage_1_1_store_1a4be59e1991fdb7db5eb5cf56847393f6" prot="public" virt="virtual"><scope>hyrise::storage::Store</scope><name>~Store</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

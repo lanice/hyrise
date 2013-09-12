@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_base_dictionary" kind="class" prot="public" abstract="yes">
+    <compoundname>BaseDictionary</compoundname>
+    <basecompoundref refid="class_abstract_dictionary" prot="public" virt="non-virtual">AbstractDictionary</basecompoundref>
+    <derivedcompoundref refid="class_order_indifferent_dictionary" prot="public" virt="non-virtual">OrderIndifferentDictionary&lt; T &gt;</derivedcompoundref>
+    <derivedcompoundref refid="class_order_preserving_dictionary" prot="public" virt="non-virtual">OrderPreservingDictionary&lt; T &gt;</derivedcompoundref>
+    <includes refid="_base_dictionary_8h" local="no">BaseDictionary.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_base_dictionary_1a281b6dcb1f909d44ab7eb8b3718694d2" prot="public" static="no">
+        <type><ref refid="class_dictionary_iterator" kindref="compound">DictionaryIterator</ref>&lt; T &gt;</type>
+        <definition>typedef DictionaryIterator&lt;T&gt; BaseDictionary&lt; T &gt;::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="41" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_base_dictionary_1a6dc6677f03d2432c0d00d7bcf9d3b58d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref></type>
+        <definition>virtual value_id_t BaseDictionary&lt; T &gt;::addValue</definition>
+        <argsstring>(T value)=0</argsstring>
+        <name>addValue</name>
+        <reimplementedby refid="class_order_preserving_dictionary_1a3ae2ec89eae76475d7290db5461f9585">addValue</reimplementedby>
+        <reimplementedby refid="class_order_indifferent_dictionary_1a1224180360438665bb50861b9faf5185">addValue</reimplementedby>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1aac9adb0a35bc6fd101daaeaa8413d02e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>T</type>
+        <definition>virtual T BaseDictionary&lt; T &gt;::getValueForValueId</definition>
+        <argsstring>(value_id_t value_id)=0</argsstring>
+        <name>getValueForValueId</name>
+        <reimplementedby refid="class_order_preserving_dictionary_1ab2e802740110b89bb7a790c0b21bc8a2">getValueForValueId</reimplementedby>
+        <reimplementedby refid="class_order_indifferent_dictionary_1a61c9fb4cc9a17d48e41f654daab1b004">getValueForValueId</reimplementedby>
+        <param>
+          <type><ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref></type>
+          <declname>value_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1a10968f793c177bf112e075806801fcda" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref></type>
+        <definition>virtual value_id_t BaseDictionary&lt; T &gt;::getValueIdForValue</definition>
+        <argsstring>(const T &amp;value) const =0</argsstring>
+        <name>getValueIdForValue</name>
+        <reimplementedby refid="class_order_preserving_dictionary_1a7233233982665548d11d9af28bfd403c">getValueIdForValue</reimplementedby>
+        <reimplementedby refid="class_order_indifferent_dictionary_1ae758d5a5fbdb843266e800dd67fe1910">getValueIdForValue</reimplementedby>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1a1e342e5bf2086c71b04c4315467137f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref></type>
+        <definition>virtual value_id_t BaseDictionary&lt; T &gt;::getValueIdForValueSmaller</definition>
+        <argsstring>(T other)=0</argsstring>
+        <name>getValueIdForValueSmaller</name>
+        <reimplementedby refid="class_order_preserving_dictionary_1a14f7e52cd61b734452f544b70672a687">getValueIdForValueSmaller</reimplementedby>
+        <reimplementedby refid="class_order_indifferent_dictionary_1a4d8cf722c32ee340967cf968b137167a">getValueIdForValueSmaller</reimplementedby>
+        <param>
+          <type>T</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1a54690a4f2e564a84b79e1d26f04f5e7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref></type>
+        <definition>virtual value_id_t BaseDictionary&lt; T &gt;::getValueIdForValueGreater</definition>
+        <argsstring>(T other)=0</argsstring>
+        <name>getValueIdForValueGreater</name>
+        <reimplementedby refid="class_order_preserving_dictionary_1aab39f455e0fc653e03de0115f12550d4">getValueIdForValueGreater</reimplementedby>
+        <reimplementedby refid="class_order_indifferent_dictionary_1a236679031df47e8176ea17d1d7172b77">getValueIdForValueGreater</reimplementedby>
+        <param>
+          <type>T</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1a9039e0936f936561754300eea075ddc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const T</type>
+        <definition>virtual const T BaseDictionary&lt; T &gt;::getSmallestValue</definition>
+        <argsstring>()=0</argsstring>
+        <name>getSmallestValue</name>
+        <reimplementedby refid="class_order_preserving_dictionary_1a9970eb329dc1126b0cad7cc50681edff">getSmallestValue</reimplementedby>
+        <reimplementedby refid="class_order_indifferent_dictionary_1acf1e9beb4cd45569ada328f94e38b79e">getSmallestValue</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1ab90f493d26980c624f773d7cad05a3d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const T</type>
+        <definition>virtual const T BaseDictionary&lt; T &gt;::getGreatestValue</definition>
+        <argsstring>()=0</argsstring>
+        <name>getGreatestValue</name>
+        <reimplementedby refid="class_order_preserving_dictionary_1af53ab2a859a7ff4aa5c69e3419abcc8a">getGreatestValue</reimplementedby>
+        <reimplementedby refid="class_order_indifferent_dictionary_1a969777ba99060d121c719be0ec9f0c00">getGreatestValue</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1a738cb5130f6e458c0107df6b508e05a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool BaseDictionary&lt; T &gt;::isValueIdValid</definition>
+        <argsstring>(value_id_t value_id)=0</argsstring>
+        <name>isValueIdValid</name>
+        <reimplementedby refid="class_order_preserving_dictionary_1a6d282b438080510dec7072197afda95a">isValueIdValid</reimplementedby>
+        <reimplementedby refid="class_order_indifferent_dictionary_1a9966be9830cbee0dea6c0696654d8885">isValueIdValid</reimplementedby>
+        <param>
+          <type><ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref></type>
+          <declname>value_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1abdeceaa40e819367debaebaff293a463" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool BaseDictionary&lt; T &gt;::valueExists</definition>
+        <argsstring>(const T &amp;value) const =0</argsstring>
+        <name>valueExists</name>
+        <reimplementedby refid="class_order_preserving_dictionary_1adfa41324fb937901d4c4ffc74d08f685">valueExists</reimplementedby>
+        <reimplementedby refid="class_order_indifferent_dictionary_1a82edcb7ee5ded240a845d0629f74ff46">valueExists</reimplementedby>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1ae3c53d970ee95b00169dd6b784902174" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void BaseDictionary&lt; T &gt;::reserve</definition>
+        <argsstring>(size_t size)=0</argsstring>
+        <name>reserve</name>
+        <reimplements refid="class_abstract_dictionary_1a2ea90fb9b1d7b19399f03d4f3e1d0c95">reserve</reimplements>
+        <reimplementedby refid="class_order_indifferent_dictionary_1a8898c55335cfedb7dcc0b6ed1c59b112">reserve</reimplementedby>
+        <reimplementedby refid="class_order_preserving_dictionary_1afa33c39fbe9c596c67b103b9cf3fabda">reserve</reimplementedby>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1a335a2ad8aff598b74704829f35adbfc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t BaseDictionary&lt; T &gt;::size</definition>
+        <argsstring>()=0</argsstring>
+        <name>size</name>
+        <reimplements refid="class_abstract_dictionary_1a2146dedbe62e66b1bcdec23945e869d1">size</reimplements>
+        <reimplementedby refid="class_order_indifferent_dictionary_1a273d54f1dbaf3e99019d6e2ae7888d65">size</reimplementedby>
+        <reimplementedby refid="class_order_preserving_dictionary_1a4abd1e4ca0563037db079568fa8da9ab">size</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1af5993ae21b2e5b32fa8e4c6c2387d889" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_abstract_dictionary" kindref="compound">AbstractDictionary</ref> &gt;</type>
+        <definition>virtual std::shared_ptr&lt;AbstractDictionary&gt; BaseDictionary&lt; T &gt;::copy</definition>
+        <argsstring>()=0</argsstring>
+        <name>copy</name>
+        <reimplements refid="class_abstract_dictionary_1a6f760b80be9b9139e2f089cbd4042d0b">copy</reimplements>
+        <reimplementedby refid="class_order_indifferent_dictionary_1ae4e0a298d80959522d1e7ffb70f3f557">copy</reimplementedby>
+        <reimplementedby refid="class_order_preserving_dictionary_1a16d6530f39cf210e5f355d6114ffef0e">copy</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1a3c7dd2234656fbda5531fa9de29ffc81" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool BaseDictionary&lt; T &gt;::isOrdered</definition>
+        <argsstring>()=0</argsstring>
+        <name>isOrdered</name>
+        <reimplements refid="class_abstract_dictionary_1ad3a7a25c73742760c643d189cdf269e7">isOrdered</reimplements>
+        <reimplementedby refid="class_order_indifferent_dictionary_1a47b4c1454359dad109eea36bee1397fa">isOrdered</reimplementedby>
+        <reimplementedby refid="class_order_preserving_dictionary_1a1c33369d4bf44d27aec5a680f22f50a8">isOrdered</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1af295f8b12e4c22aba395c23d4df71ef5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_dictionary_iterator" kindref="compound">DictionaryIterator</ref>&lt; T &gt;</type>
+        <definition>virtual DictionaryIterator&lt;T&gt; BaseDictionary&lt; T &gt;::begin</definition>
+        <argsstring>()=0</argsstring>
+        <name>begin</name>
+        <reimplementedby refid="class_order_preserving_dictionary_1aa1896a108b85fd1b4c5df7959a41f88e">begin</reimplementedby>
+        <reimplementedby refid="class_order_indifferent_dictionary_1a26e21b6478641094226d4dc7e64900d3">begin</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_dictionary_1a61461dc90085108337b8930923755870" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_dictionary_iterator" kindref="compound">DictionaryIterator</ref>&lt; T &gt;</type>
+        <definition>virtual DictionaryIterator&lt;T&gt; BaseDictionary&lt; T &gt;::end</definition>
+        <argsstring>()=0</argsstring>
+        <name>end</name>
+        <reimplementedby refid="class_order_preserving_dictionary_1a91b302db945f479fcd48814163327f19">end</reimplementedby>
+        <reimplementedby refid="class_order_indifferent_dictionary_1aed09a8a4d215037f307bd62a36f97871">end</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1610">
+        <label>AbstractDictionary</label>
+        <link refid="class_abstract_dictionary"/>
+      </node>
+      <node id="1609">
+        <label>BaseDictionary&lt; T &gt;</label>
+        <link refid="class_base_dictionary"/>
+        <childnode refid="1610" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1611">
+        <label>OrderIndifferentDictionary&lt; T &gt;</label>
+        <link refid="class_order_indifferent_dictionary"/>
+        <childnode refid="1609" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1612">
+        <label>OrderPreservingDictionary&lt; T &gt;</label>
+        <link refid="class_order_preserving_dictionary"/>
+        <childnode refid="1609" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1614">
+        <label>AbstractDictionary</label>
+        <link refid="class_abstract_dictionary"/>
+      </node>
+      <node id="1613">
+        <label>BaseDictionary&lt; T &gt;</label>
+        <link refid="class_base_dictionary"/>
+        <childnode refid="1614" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" line="10" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BaseDictionary.h" bodystart="10" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_base_dictionary_1a6dc6677f03d2432c0d00d7bcf9d3b58d" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>addValue</name></member>
+      <member refid="class_base_dictionary_1af295f8b12e4c22aba395c23d4df71ef5" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>begin</name></member>
+      <member refid="class_base_dictionary_1af5993ae21b2e5b32fa8e4c6c2387d889" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>copy</name></member>
+      <member refid="class_abstract_dictionary_1ad2dcfff13a96812365cd3144b966be92" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>copy_empty</name></member>
+      <member refid="class_abstract_dictionary_1a051863f8c78b2312e92705eb3554f156" prot="public" virt="non-virtual"><scope>BaseDictionary</scope><name>dictionaryWithType</name></member>
+      <member refid="class_base_dictionary_1a61461dc90085108337b8930923755870" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>end</name></member>
+      <member refid="class_base_dictionary_1ab90f493d26980c624f773d7cad05a3d5" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>getGreatestValue</name></member>
+      <member refid="class_base_dictionary_1a9039e0936f936561754300eea075ddc4" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>getSmallestValue</name></member>
+      <member refid="class_base_dictionary_1aac9adb0a35bc6fd101daaeaa8413d02e" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>getValueForValueId</name></member>
+      <member refid="class_base_dictionary_1a10968f793c177bf112e075806801fcda" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>getValueIdForValue</name></member>
+      <member refid="class_base_dictionary_1a54690a4f2e564a84b79e1d26f04f5e7a" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>getValueIdForValueGreater</name></member>
+      <member refid="class_base_dictionary_1a1e342e5bf2086c71b04c4315467137f7" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>getValueIdForValueSmaller</name></member>
+      <member refid="class_base_dictionary_1a3c7dd2234656fbda5531fa9de29ffc81" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>isOrdered</name></member>
+      <member refid="class_base_dictionary_1a738cb5130f6e458c0107df6b508e05a9" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>isValueIdValid</name></member>
+      <member refid="class_base_dictionary_1a281b6dcb1f909d44ab7eb8b3718694d2" prot="public" virt="non-virtual"><scope>BaseDictionary</scope><name>iterator</name></member>
+      <member refid="class_base_dictionary_1ae3c53d970ee95b00169dd6b784902174" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>reserve</name></member>
+      <member refid="class_abstract_dictionary_1acce31627df9551d83eab518366ea7cc8" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>shrink</name></member>
+      <member refid="class_base_dictionary_1a335a2ad8aff598b74704829f35adbfc6" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>size</name></member>
+      <member refid="class_base_dictionary_1abdeceaa40e819367debaebaff293a463" prot="public" virt="pure-virtual"><scope>BaseDictionary</scope><name>valueExists</name></member>
+      <member refid="class_abstract_dictionary_1a9a9216aed0689529a55c572b3ef69bcf" prot="public" virt="virtual"><scope>BaseDictionary</scope><name>~AbstractDictionary</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

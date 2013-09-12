@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_abstract_task_scheduler" kind="class" prot="public" abstract="yes">
+    <compoundname>AbstractTaskScheduler</compoundname>
+    <derivedcompoundref refid="class_abstract_core_bound_queues_scheduler" prot="public" virt="non-virtual">AbstractCoreBoundQueuesScheduler</derivedcompoundref>
+    <derivedcompoundref refid="class_central_priority_scheduler" prot="public" virt="non-virtual">CentralPriorityScheduler</derivedcompoundref>
+    <derivedcompoundref refid="class_central_scheduler" prot="public" virt="non-virtual">CentralScheduler</derivedcompoundref>
+    <derivedcompoundref refid="class_thread_per_task_scheduler" prot="public" virt="non-virtual">ThreadPerTaskScheduler</derivedcompoundref>
+    <includes refid="_abstract_task_scheduler_8h" local="no">AbstractTaskScheduler.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575ce" prot="public" static="no">
+        <name>scheduler_state</name>
+        <enumvalue id="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575ceab354aeccc361021b0cd6f83128272195" prot="public">
+          <name>START_UP</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575ceaea3b5199c163f0f07b405316ab54a8f1" prot="public">
+          <name>RUN</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575cead388263b6602dd95e1103f91c31d1ca0" prot="public">
+          <name>RESIZING</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575cea4f8b67680c71fec19412d8ab89ac503a" prot="public">
+          <name>TO_STOP</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575cea5f5af486bf8b0c99d4906d1bf159ff43" prot="public">
+          <name>STOPPED</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" line="30" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" bodystart="30" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_abstract_task_scheduler_1a8d6f6a94cb6592ae0113336467cee05f" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int AbstractTaskScheduler::scheduler_status_t</definition>
+        <argsstring></argsstring>
+        <name>scheduler_status_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" line="37" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_abstract_task_scheduler_1a3fccfec8db07f7306dd0d3efae36283e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual AbstractTaskScheduler::~AbstractTaskScheduler</definition>
+        <argsstring>()</argsstring>
+        <name>~AbstractTaskScheduler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" line="39" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_task_scheduler_1a5302dc48bb09b4ec0caddf22101cfadf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AbstractTaskScheduler::schedule</definition>
+        <argsstring>(std::shared_ptr&lt; Task &gt; task)=0</argsstring>
+        <name>schedule</name>
+        <reimplementedby refid="class_thread_per_task_scheduler_1a3f4d8059aa5d1ed2f544616ea32d60f8">schedule</reimplementedby>
+        <reimplementedby refid="class_abstract_core_bound_queues_scheduler_1a33648fb855936832e2788c9f573c179e">schedule</reimplementedby>
+        <reimplementedby refid="class_central_scheduler_1a80f23e7945838c4feb91beb19bb102db">schedule</reimplementedby>
+        <reimplementedby refid="class_central_priority_scheduler_1a602921c69c0ea074e686ca04e6090a20">schedule</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt;</type>
+          <declname>task</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_task_scheduler_1a008b53e58434001807b129d68dad7c6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void AbstractTaskScheduler::scheduleQuery</definition>
+        <argsstring>(std::vector&lt; std::shared_ptr&lt; Task &gt; &gt; tasks)</argsstring>
+        <name>scheduleQuery</name>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt; &gt;</type>
+          <declname>tasks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" line="47" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" bodystart="47" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_task_scheduler_1a2be53dd1c0676d50f2fd4cc97bce4406" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AbstractTaskScheduler::shutdown</definition>
+        <argsstring>()=0</argsstring>
+        <name>shutdown</name>
+        <reimplementedby refid="class_thread_per_task_scheduler_1ac4b075112110a106af152c1029bd56e3">shutdown</reimplementedby>
+        <reimplementedby refid="class_central_scheduler_1a92ee69fcefd7f40983e4f4d2159dd518">shutdown</reimplementedby>
+        <reimplementedby refid="class_central_priority_scheduler_1a9db03b67047eb3abe9f67f893a45dde1">shutdown</reimplementedby>
+        <reimplementedby refid="class_abstract_core_bound_queues_scheduler_1ae28fd97dc7367b2f67c0256890f1c52f">shutdown</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_task_scheduler_1ab444b0fed6674af950078b6a06ab2487" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t AbstractTaskScheduler::getNumberOfWorker</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getNumberOfWorker</name>
+        <reimplementedby refid="class_thread_per_task_scheduler_1a5ecf42eed627cf97a0377487cd02f6db">getNumberOfWorker</reimplementedby>
+        <reimplementedby refid="class_central_scheduler_1a25293fa231eb88b4dff8c6adb8982820">getNumberOfWorker</reimplementedby>
+        <reimplementedby refid="class_central_priority_scheduler_1a3963ca6bad7e66ef039dbaf08f0724d8">getNumberOfWorker</reimplementedby>
+        <reimplementedby refid="class_abstract_core_bound_queues_scheduler_1a6933c27d1db1a24466606b66103511d2">getNumberOfWorker</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get number of worker </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1541">
+        <label>CoreBoundQueuesScheduler</label>
+        <link refid="class_core_bound_queues_scheduler"/>
+        <childnode refid="1539" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1539">
+        <label>AbstractCoreBoundQueuesScheduler</label>
+        <link refid="class_abstract_core_bound_queues_scheduler"/>
+        <childnode refid="1538" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1543">
+        <label>WSCoreBoundQueuesScheduler</label>
+        <link refid="class_w_s_core_bound_queues_scheduler"/>
+        <childnode refid="1539" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1544">
+        <label>CentralPriorityScheduler</label>
+        <link refid="class_central_priority_scheduler"/>
+        <childnode refid="1538" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1542">
+        <label>WSCoreBoundPriorityQueuesScheduler</label>
+        <link refid="class_w_s_core_bound_priority_queues_scheduler"/>
+        <childnode refid="1539" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1538">
+        <label>AbstractTaskScheduler</label>
+        <link refid="class_abstract_task_scheduler"/>
+      </node>
+      <node id="1546">
+        <label>ThreadPerTaskScheduler</label>
+        <link refid="class_thread_per_task_scheduler"/>
+        <childnode refid="1538" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1540">
+        <label>CoreBoundPriorityQueuesScheduler</label>
+        <link refid="class_core_bound_priority_queues_scheduler"/>
+        <childnode refid="1539" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1545">
+        <label>CentralScheduler</label>
+        <link refid="class_central_scheduler"/>
+        <childnode refid="1538" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1547">
+        <label>AbstractTaskScheduler</label>
+        <link refid="class_abstract_task_scheduler"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" line="25" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractTaskScheduler.h" bodystart="25" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_abstract_task_scheduler_1ab444b0fed6674af950078b6a06ab2487" prot="public" virt="pure-virtual"><scope>AbstractTaskScheduler</scope><name>getNumberOfWorker</name></member>
+      <member refid="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575cead388263b6602dd95e1103f91c31d1ca0" prot="public" virt="non-virtual"><scope>AbstractTaskScheduler</scope><name>RESIZING</name></member>
+      <member refid="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575ceaea3b5199c163f0f07b405316ab54a8f1" prot="public" virt="non-virtual"><scope>AbstractTaskScheduler</scope><name>RUN</name></member>
+      <member refid="class_abstract_task_scheduler_1a5302dc48bb09b4ec0caddf22101cfadf" prot="public" virt="pure-virtual"><scope>AbstractTaskScheduler</scope><name>schedule</name></member>
+      <member refid="class_abstract_task_scheduler_1a008b53e58434001807b129d68dad7c6a" prot="public" virt="virtual"><scope>AbstractTaskScheduler</scope><name>scheduleQuery</name></member>
+      <member refid="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575ce" prot="public" virt="non-virtual"><scope>AbstractTaskScheduler</scope><name>scheduler_state</name></member>
+      <member refid="class_abstract_task_scheduler_1a8d6f6a94cb6592ae0113336467cee05f" prot="public" virt="non-virtual"><scope>AbstractTaskScheduler</scope><name>scheduler_status_t</name></member>
+      <member refid="class_abstract_task_scheduler_1a2be53dd1c0676d50f2fd4cc97bce4406" prot="public" virt="pure-virtual"><scope>AbstractTaskScheduler</scope><name>shutdown</name></member>
+      <member refid="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575ceab354aeccc361021b0cd6f83128272195" prot="public" virt="non-virtual"><scope>AbstractTaskScheduler</scope><name>START_UP</name></member>
+      <member refid="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575cea5f5af486bf8b0c99d4906d1bf159ff43" prot="public" virt="non-virtual"><scope>AbstractTaskScheduler</scope><name>STOPPED</name></member>
+      <member refid="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575cea4f8b67680c71fec19412d8ab89ac503a" prot="public" virt="non-virtual"><scope>AbstractTaskScheduler</scope><name>TO_STOP</name></member>
+      <member refid="class_abstract_task_scheduler_1a3fccfec8db07f7306dd0d3efae36283e" prot="public" virt="virtual"><scope>AbstractTaskScheduler</scope><name>~AbstractTaskScheduler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

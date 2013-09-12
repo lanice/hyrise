@@ -1,0 +1,1036 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_raw_table" kind="class" prot="public">
+    <compoundname>RawTable</compoundname>
+    <basecompoundref refid="class_abstract_table" prot="public" virt="non-virtual">AbstractTable</basecompoundref>
+    <includes refid="_raw_table_8h" local="no">RawTable.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_raw_table_1ad78945f072fcf167d8ef81ee5665dec8" prot="private" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char RawTable::byte</definition>
+        <argsstring></argsstring>
+        <name>byte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="75" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_raw_table_1a266b98c7241f01debeecc561c88fd0ac" prot="private" static="no">
+        <type><ref refid="storage__types_8h_1a8776c82cf4ebeb0f86f0e83709870655" kindref="member">metadata_vec_t</ref></type>
+        <definition>typedef metadata_vec_t RawTable::MetadataVector</definition>
+        <argsstring></argsstring>
+        <name>MetadataVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="76" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_raw_table_1a699d7387d15419136fcb1dae037a27ac" prot="private" static="no" mutable="no">
+        <type><ref refid="class_raw_table_1a266b98c7241f01debeecc561c88fd0ac" kindref="member">MetadataVector</ref></type>
+        <definition>MetadataVector RawTable::_metadata</definition>
+        <argsstring></argsstring>
+        <name>_metadata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="79" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_raw_table_1a7faf4e4a831b9819a1f987b2ae997cab" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t RawTable::_width</definition>
+        <argsstring></argsstring>
+        <name>_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="82" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_raw_table_1ab85b2188ce89a7eecce908ae67dd3616" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t RawTable::_size</definition>
+        <argsstring></argsstring>
+        <name>_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="85" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_raw_table_1ad8e06ae496c02d6d76ece62ae3dbc23a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt;size_t&gt; RawTable::_offsets</definition>
+        <argsstring></argsstring>
+        <name>_offsets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="89" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_raw_table_1aa589dae0b680267399bc5893b3102c9c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_raw_table_1ad78945f072fcf167d8ef81ee5665dec8" kindref="member">byte</ref> *</type>
+        <definition>byte* RawTable::_data</definition>
+        <argsstring></argsstring>
+        <name>_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="92" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_raw_table_1a150dd3eba5196ef18e712b975d19825c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_raw_table_1ad78945f072fcf167d8ef81ee5665dec8" kindref="member">byte</ref> *</type>
+        <definition>byte* RawTable::_endOfData</definition>
+        <argsstring></argsstring>
+        <name>_endOfData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="93" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_raw_table_1ae5a9cae8d0d9e8c5b0412160812b7848" prot="private" static="no" mutable="no">
+        <type><ref refid="class_raw_table_1ad78945f072fcf167d8ef81ee5665dec8" kindref="member">byte</ref> *</type>
+        <definition>byte* RawTable::_endOfStorage</definition>
+        <argsstring></argsstring>
+        <name>_endOfStorage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="94" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_raw_table_1ac46fd155e0e61fe1f5c3eacaac34ac5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RawTable::RawTable</definition>
+        <argsstring>(const metadata_vec_t &amp;m, size_t initial_size=0)</argsstring>
+        <name>RawTable</name>
+        <param>
+          <type>const <ref refid="storage__types_8h_1a8776c82cf4ebeb0f86f0e83709870655" kindref="member">metadata_vec_t</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>initial_size</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="98" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="84" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a8a1d383e50f9176581a74a0204426c3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>RawTable::~RawTable</definition>
+        <argsstring>()</argsstring>
+        <name>~RawTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="100" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a21078f3425fb3e155b2f454bbc49be6e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t RawTable::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <reimplements refid="class_abstract_table_1a2b3fde5fb0c70f288eda47c4c66bb151">size</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of rows in the table <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="102" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1acfc8ef42e5efe91846c74d4d331a8d9c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t RawTable::columnCount</definition>
+        <argsstring>() const </argsstring>
+        <name>columnCount</name>
+        <reimplements refid="class_abstract_table_1a9ba326d4ed695ff02dcdc0dd125fd16c">columnCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of columns. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="104" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a70dfd7302ccf2f5111a0f6afa4666232" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RawTable::reserve</definition>
+        <argsstring>(const size_t nr_of_values)</argsstring>
+        <name>reserve</name>
+        <reimplements refid="class_abstract_table_1a019861d7ed5abee8c15a0511c3cbf051">reserve</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>nr_of_values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reorganizes the bit vector of a certain column. <simplesect kind="warning"><para>Throws runtime error if not implemented!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nr_of_values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of values that must fit. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="106" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a4c947d70e2ba5b3b2d7309db499ed33d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RawTable::resize</definition>
+        <argsstring>(const size_t nr_of_values)</argsstring>
+        <name>resize</name>
+        <reimplements refid="class_abstract_table_1a92d707d52cdeabfc3cf254693b913a81">resize</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resize the table to the given number of rows based on the parameter <simplesect kind="warning"><para>Throws runtime error if not implemented</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new number of rows in this table </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="108" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a8e05295f2073cda22da23201c9047cda" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref> *</type>
+        <definition>const ColumnMetadata * RawTable::metadataAt</definition>
+        <argsstring>(const size_t column, const size_t row=0, const table_id_t table_id=0) const </argsstring>
+        <name>metadataAt</name>
+        <reimplements refid="class_abstract_table_1a4d4d85fd352353254fe01a72a9635a64">metadataAt</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the metadata for a certain column. Returns a pointer to a <ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref> object for a specified column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column for which to return the metadata. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="112" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a7a742fd0d8f450efbacb3c7e6c0549c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned</type>
+        <definition>unsigned RawTable::partitionCount</definition>
+        <argsstring>() const </argsstring>
+        <name>partitionCount</name>
+        <reimplements refid="class_abstract_table_1a53bb2089cbb287804e3160abe893e657">partitionCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of partitions in this table. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="114" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a662f974833f302a2014b30ceb099a88d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref></type>
+        <definition>table_id_t RawTable::subtableCount</definition>
+        <argsstring>() const </argsstring>
+        <name>subtableCount</name>
+        <reimplements refid="class_abstract_table_1af5330c0a617946ad538cacea21ba7639">subtableCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of horizontal subtables. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="116" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="117" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a33d1e6ccd93af0e6c26d4f4961879285" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref></type>
+        <definition>hyrise::storage::atable_ptr_t RawTable::copy</definition>
+        <argsstring>() const </argsstring>
+        <name>copy</name>
+        <reimplements refid="class_abstract_table_1a87134964b75abb36c49d0c44455d23e2">copy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create of copy of this table. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="118" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="121" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a768adee7f0b4191470be553c27d158e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_raw_table_1ad78945f072fcf167d8ef81ee5665dec8" kindref="member">byte</ref> *</type>
+        <definition>RawTable::byte * RawTable::computePosition</definition>
+        <argsstring>(const size_t &amp;column, const size_t &amp;row) const </argsstring>
+        <name>computePosition</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="120" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="125" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1ad3d23c8905d4c5821aa5c73e0d8d028f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T RawTable::getValue</definition>
+        <argsstring>(const size_t column, const size_t row) const </argsstring>
+        <name>getValue</name>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="123" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1ab7f08ba6ba6ca6fb324230be5e82536e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void RawTable::setValue</definition>
+        <argsstring>(const size_t column, const size_t row, const T &amp;value)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="130" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a3a888cba6d8d188c0b3ab7bb084f74bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RawTable::setValue</definition>
+        <argsstring>(const size_t, const size_t, const std::string &amp;)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>const size_t</type>
+        </param>
+        <param>
+          <type>const size_t</type>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="135" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="135" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a4cd772493afe4e9185ee249e12e700ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string RawTable::printValue</definition>
+        <argsstring>(const size_t col, const size_t row) const </argsstring>
+        <name>printValue</name>
+        <param>
+          <type>const size_t</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="140" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="159" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a138f95f664413b2be0ca61d307dbfab3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_raw_table_1ad78945f072fcf167d8ef81ee5665dec8" kindref="member">byte</ref> *</type>
+        <definition>RawTable::byte * RawTable::getRow</definition>
+        <argsstring>(size_t index) const </argsstring>
+        <name>getRow</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the row from the table based on the index, this will return a pointer to the actual values, which cannot be modified and the ownership will not be transferred. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="147" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="165" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a88229000c87228c79220684e30772717" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RawTable::appendRow</definition>
+        <argsstring>(byte *tuple)</argsstring>
+        <name>appendRow</name>
+        <param>
+          <type><ref refid="class_raw_table_1ad78945f072fcf167d8ef81ee5665dec8" kindref="member">byte</ref> *</type>
+          <declname>tuple</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append a new row to the end of the storage, in case this means we do not have sufficient space we will reallocate space accordingly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="154" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="173" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a6499f81876a152316aceabb67314bb3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RawTable::appendRows</definition>
+        <argsstring>(const hyrise::storage::atable_ptr_t &amp;rows)</argsstring>
+        <name>appendRows</name>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref> &amp;</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="157" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.cpp" bodystart="208" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a349e0eb48d675835737135ee0090968d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RawTable::debugStructure</definition>
+        <argsstring>(size_t level=0) const </argsstring>
+        <name>debugStructure</name>
+        <reimplements refid="class_abstract_table_1a4262181544d5392b71735518088631ff">debugStructure</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="159" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="159" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a7c4ecf556c9057a303ff12a85c4b1f2e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref></type>
+        <definition>virtual hyrise::storage::atable_ptr_t RawTable::copy_structure</definition>
+        <argsstring>(const field_list_t *fields=nullptr, const bool reuse_dict=false, const size_t initial_size=0, const bool with_containers=true, const bool compressed=false) const </argsstring>
+        <name>copy_structure</name>
+        <reimplements refid="class_abstract_table_1a435f72c573988b1438935fe0519da3a7">copy_structure</reimplements>
+        <param>
+          <type>const <ref refid="storage__types_8h_1a36fbc31395a53b7ece189846e4d3253c" kindref="member">field_list_t</ref> *</type>
+          <declname>fields</declname>
+          <defval><ref refid="csb__tree_8cpp_1ab979d9d4b4923f7c54d6caa6e1a61936" kindref="member">nullptr</ref></defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>reuse_dict</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>initial_size</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>with_containers</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>compressed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy the table&apos;s structure. Returns a pointer to an <ref refid="class_abstract_table" kindref="compound">AbstractTable</ref> with a copy of the current table&apos;s structure, containing all fields specified in the first parameter or all if left empty, as well as the current table&apos;s dictionary for those fields in case reuse_dict is set to true.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of fields to be copied (all if empty or nullptr). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reuse_dict</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Also copy the table&apos;s dictionary (default=false). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initial_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial size of the returned table (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>with_containers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Only used by derived classes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>compressed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets the compressed storage for the new table </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="171" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="167" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1ae9ca0c7f7691e95c3edb8748c897a3cc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref></type>
+        <definition>virtual hyrise::storage::atable_ptr_t RawTable::copy_structure_modifiable</definition>
+        <argsstring>(const field_list_t *fields=nullptr, const size_t initial_size=0, const bool with_containers=true) const </argsstring>
+        <name>copy_structure_modifiable</name>
+        <reimplements refid="class_abstract_table_1aca6d9c647c92a66bd658c4c58250c715">copy_structure_modifiable</reimplements>
+        <param>
+          <type>const <ref refid="storage__types_8h_1a36fbc31395a53b7ece189846e4d3253c" kindref="member">field_list_t</ref> *</type>
+          <declname>fields</declname>
+          <defval><ref refid="csb__tree_8cpp_1ab979d9d4b4923f7c54d6caa6e1a61936" kindref="member">nullptr</ref></defval>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>initial_size</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>with_containers</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy the table&apos;s structure modifiable. Returns a pointer to an <ref refid="class_abstract_table" kindref="compound">AbstractTable</ref> with a copy of the current table&apos;s structure, containing all fields specified in the first parameter or all if left empty, as well as the current table&apos;s dictionary-type for each field, without values for future modification.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of fields to be copied (all if empty or nullptr). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initial_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial size of the returned table (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>with_containers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Only used by derived classes. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="177" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="175" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a5d4eca8f65f2209c0356f427d16952c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_value_id" kindref="compound">ValueId</ref></type>
+        <definition>ValueId RawTable::getValueId</definition>
+        <argsstring>(const size_t column, const size_t row) const </argsstring>
+        <name>getValueId</name>
+        <reimplements refid="class_abstract_table_1ae717cc86960b6488a8585d920a5f3b3d">getValueId</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value-ID of a cell. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row number of the cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="182" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="182" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1ade953dcd93ad8d2466e49897fbbf4d56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void RawTable::setValueId</definition>
+        <argsstring>(const size_t column, const size_t row, const ValueId valueId)</argsstring>
+        <name>setValueId</name>
+        <reimplements refid="class_abstract_table_1a2be48affbc5a0060e2d17128be9e91b9">setValueId</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_value_id" kindref="compound">ValueId</ref></type>
+          <declname>valueId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the value ID of a cell. <simplesect kind="note"><para>Should be implemented in derived classes or throws runtime error!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valueId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New value-ID of the cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="186" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="186" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1ad5db7b2c999a1726916adb1c07e9a020" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t RawTable::partitionWidth</definition>
+        <argsstring>(const size_t slice) const </argsstring>
+        <name>partitionWidth</name>
+        <reimplements refid="class_abstract_table_1ac89c7ce56dca98bdfdd67263a4165447">partitionWidth</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>slice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the width of a specified partition in number of attributes. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>slice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slice of interest. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="190" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="190" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1ae327763bb17cde7ffd1d3ba43add989b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref> &amp;</type>
+        <definition>virtual const AbstractTable::SharedDictionaryPtr&amp; RawTable::dictionaryAt</definition>
+        <argsstring>(const size_t column, const size_t row=0, const table_id_t table_id=0) const </argsstring>
+        <name>dictionaryAt</name>
+        <reimplements refid="class_abstract_table_1ad20e4bbda0d8f1d257cbb62f4c0be91c">dictionaryAt</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the dictionary for a certain column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column from which to extract the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="196" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="194" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1a18745b268b68daf43a79aaf127b0b4c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref> &amp;</type>
+        <definition>virtual const AbstractTable::SharedDictionaryPtr&amp; RawTable::dictionaryByTableId</definition>
+        <argsstring>(const size_t column, const table_id_t table_id) const </argsstring>
+        <name>dictionaryByTableId</name>
+        <reimplements refid="class_abstract_table_1a619607163a0f93d8bc90c3f3a66822ff">dictionaryByTableId</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const <ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the dictionary for a certain column by table ID. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column from which to extract the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="201" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="200" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_raw_table_1ab94c80351fdc0913d50c2f2b527a8f55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RawTable::setDictionaryAt</definition>
+        <argsstring>(AbstractTable::SharedDictionaryPtr dict, const size_t column, const size_t row=0, const table_id_t table_id=0)</argsstring>
+        <name>setDictionaryAt</name>
+        <reimplements refid="class_abstract_table_1a0acc1fa146aef09f9de31768e67dfa72">setDictionaryAt</reimplements>
+        <param>
+          <type><ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref></type>
+          <declname>dict</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the dictionary for a certain column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dict</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dictionary to be used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column for which to set the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="206" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="205" bodyend="208"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3113">
+        <label>AbstractTable</label>
+        <link refid="class_abstract_table"/>
+        <childnode refid="3114" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3114">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+      <node id="3112">
+        <label>RawTable</label>
+        <link refid="class_raw_table"/>
+        <childnode refid="3113" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3116">
+        <label>AbstractTable</label>
+        <link refid="class_abstract_table"/>
+        <childnode refid="3117" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3118" relation="usage">
+          <edgelabel>-_uuid</edgelabel>
+        </childnode>
+      </node>
+      <node id="3117">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+      <node id="3118">
+        <label>unique_id</label>
+        <link refid="structunique__id"/>
+      </node>
+      <node id="3115">
+        <label>RawTable</label>
+        <link refid="class_raw_table"/>
+        <childnode refid="3116" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" line="74" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/RawTable.h" bodystart="74" bodyend="211"/>
+    <listofallmembers>
+      <member refid="class_raw_table_1aa589dae0b680267399bc5893b3102c9c" prot="private" virt="non-virtual"><scope>RawTable</scope><name>_data</name></member>
+      <member refid="class_raw_table_1a150dd3eba5196ef18e712b975d19825c" prot="private" virt="non-virtual"><scope>RawTable</scope><name>_endOfData</name></member>
+      <member refid="class_raw_table_1ae5a9cae8d0d9e8c5b0412160812b7848" prot="private" virt="non-virtual"><scope>RawTable</scope><name>_endOfStorage</name></member>
+      <member refid="class_raw_table_1a699d7387d15419136fcb1dae037a27ac" prot="private" virt="non-virtual"><scope>RawTable</scope><name>_metadata</name></member>
+      <member refid="class_raw_table_1ad8e06ae496c02d6d76ece62ae3dbc23a" prot="private" virt="non-virtual"><scope>RawTable</scope><name>_offsets</name></member>
+      <member refid="class_raw_table_1ab85b2188ce89a7eecce908ae67dd3616" prot="private" virt="non-virtual"><scope>RawTable</scope><name>_size</name></member>
+      <member refid="class_raw_table_1a7faf4e4a831b9819a1f987b2ae997cab" prot="private" virt="non-virtual"><scope>RawTable</scope><name>_width</name></member>
+      <member refid="class_raw_table_1a88229000c87228c79220684e30772717" prot="public" virt="non-virtual"><scope>RawTable</scope><name>appendRow</name></member>
+      <member refid="class_raw_table_1a6499f81876a152316aceabb67314bb3d" prot="public" virt="non-virtual"><scope>RawTable</scope><name>appendRows</name></member>
+      <member refid="class_raw_table_1ad78945f072fcf167d8ef81ee5665dec8" prot="private" virt="non-virtual"><scope>RawTable</scope><name>byte</name></member>
+      <member refid="class_raw_table_1acfc8ef42e5efe91846c74d4d331a8d9c" prot="public" virt="virtual"><scope>RawTable</scope><name>columnCount</name></member>
+      <member refid="class_raw_table_1a768adee7f0b4191470be553c27d158e8" prot="public" virt="non-virtual"><scope>RawTable</scope><name>computePosition</name></member>
+      <member refid="class_abstract_table_1af716c04f38a6ab47b277911baf050c9d" prot="public" virt="non-virtual"><scope>RawTable</scope><name>contentEquals</name></member>
+      <member refid="class_raw_table_1a33d1e6ccd93af0e6c26d4f4961879285" prot="public" virt="virtual"><scope>RawTable</scope><name>copy</name></member>
+      <member refid="class_raw_table_1a7c4ecf556c9057a303ff12a85c4b1f2e" prot="public" virt="virtual"><scope>RawTable</scope><name>copy_structure</name></member>
+      <member refid="class_raw_table_1ae9ca0c7f7691e95c3edb8748c897a3cc" prot="public" virt="virtual"><scope>RawTable</scope><name>copy_structure_modifiable</name></member>
+      <member refid="class_abstract_table_1ad4973d95d29deb5142d6e6b308346a42" prot="public" virt="non-virtual"><scope>RawTable</scope><name>copyRowFrom</name></member>
+      <member refid="class_abstract_table_1a4361f683288a0d1360227b309ca625f6" prot="public" virt="non-virtual"><scope>RawTable</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1a2f6d1df59bdb78f8454ea8c06c89216d" prot="public" virt="non-virtual"><scope>RawTable</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1a06029159a39fac33676c09daa3f7f849" prot="public" virt="non-virtual"><scope>RawTable</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1aea155de835135df953603e9dcbb731c3" prot="public" virt="non-virtual"><scope>RawTable</scope><name>copyValueIds</name></member>
+      <member refid="class_raw_table_1a349e0eb48d675835737135ee0090968d" prot="public" virt="virtual"><scope>RawTable</scope><name>debugStructure</name></member>
+      <member refid="class_abstract_table_1ab1d04fdc926954e4027fb883abab1d73" prot="public" virt="non-virtual"><scope>RawTable</scope><name>dictionaries</name></member>
+      <member refid="class_raw_table_1ae327763bb17cde7ffd1d3ba43add989b" prot="public" virt="virtual"><scope>RawTable</scope><name>dictionaryAt</name></member>
+      <member refid="class_raw_table_1a18745b268b68daf43a79aaf127b0b4c9" prot="public" virt="virtual"><scope>RawTable</scope><name>dictionaryByTableId</name></member>
+      <member refid="class_abstract_table_1a3467bc6159aa361db993c3fc56584789" prot="public" virt="virtual"><scope>RawTable</scope><name>getAttributeVectors</name></member>
+      <member refid="class_raw_table_1a138f95f664413b2be0ca61d307dbfab3" prot="public" virt="non-virtual"><scope>RawTable</scope><name>getRow</name></member>
+      <member refid="class_abstract_table_1af820249fa63adfdd1e678572555f6886" prot="public" virt="non-virtual"><scope>RawTable</scope><name>getUuid</name></member>
+      <member refid="class_raw_table_1ad3d23c8905d4c5821aa5c73e0d8d028f" prot="public" virt="non-virtual"><scope>RawTable</scope><name>getValue</name></member>
+      <member refid="class_abstract_table_1aac6e3940c4b756a4c627ece2c008782c" prot="public" virt="non-virtual" ambiguityscope="AbstractTable::"><scope>RawTable</scope><name>getValue</name></member>
+      <member refid="class_abstract_table_1af380b8fd7715abe5988f53b885920e0c" prot="public" virt="non-virtual"><scope>RawTable</scope><name>getValueForValueId</name></member>
+      <member refid="class_raw_table_1a5d4eca8f65f2209c0356f427d16952c9" prot="public" virt="virtual"><scope>RawTable</scope><name>getValueId</name></member>
+      <member refid="class_abstract_table_1a21786cf05c9871539e32e583b1e717c4" prot="public" virt="non-virtual"><scope>RawTable</scope><name>getValueIdForValue</name></member>
+      <member refid="class_abstract_table_1acd7ea07c9b1605ca53c7608c7c3b2ea5" prot="public" virt="non-virtual"><scope>RawTable</scope><name>getValueIdForValueByTableId</name></member>
+      <member refid="class_abstract_table_1a8b854b19026e75eebc02942499a82a21" prot="public" virt="non-virtual"><scope>RawTable</scope><name>metadata</name></member>
+      <member refid="class_raw_table_1a8e05295f2073cda22da23201c9047cda" prot="public" virt="virtual"><scope>RawTable</scope><name>metadataAt</name></member>
+      <member refid="class_raw_table_1a266b98c7241f01debeecc561c88fd0ac" prot="private" virt="non-virtual"><scope>RawTable</scope><name>MetadataVector</name></member>
+      <member refid="class_abstract_table_1af8c5434b261abfcab191852f575b4c5a" prot="public" virt="non-virtual"><scope>RawTable</scope><name>nameOfColumn</name></member>
+      <member refid="class_abstract_table_1aaea606e4fd8c92a43febced405de1c6c" prot="public" virt="non-virtual"><scope>RawTable</scope><name>numberOfColumn</name></member>
+      <member refid="class_raw_table_1a7a742fd0d8f450efbacb3c7e6c0549c6" prot="public" virt="virtual"><scope>RawTable</scope><name>partitionCount</name></member>
+      <member refid="class_raw_table_1ad5db7b2c999a1726916adb1c07e9a020" prot="public" virt="virtual"><scope>RawTable</scope><name>partitionWidth</name></member>
+      <member refid="class_abstract_table_1a7646e80f6c075dd018bd73a70751113a" prot="public" virt="virtual"><scope>RawTable</scope><name>print</name></member>
+      <member refid="class_raw_table_1a4cd772493afe4e9185ee249e12e700ee" prot="public" virt="non-virtual"><scope>RawTable</scope><name>printValue</name></member>
+      <member refid="class_raw_table_1ac46fd155e0e61fe1f5c3eacaac34ac5f" prot="public" virt="non-virtual"><scope>RawTable</scope><name>RawTable</name></member>
+      <member refid="class_raw_table_1a70dfd7302ccf2f5111a0f6afa4666232" prot="public" virt="virtual"><scope>RawTable</scope><name>reserve</name></member>
+      <member refid="class_raw_table_1a4c947d70e2ba5b3b2d7309db499ed33d" prot="public" virt="virtual"><scope>RawTable</scope><name>resize</name></member>
+      <member refid="class_raw_table_1ab94c80351fdc0913d50c2f2b527a8f55" prot="public" virt="virtual"><scope>RawTable</scope><name>setDictionaryAt</name></member>
+      <member refid="class_abstract_table_1ade4da17f60dbde2148f25b849528f624" prot="public" virt="non-virtual"><scope>RawTable</scope><name>setUuid</name></member>
+      <member refid="class_raw_table_1ab7f08ba6ba6ca6fb324230be5e82536e" prot="public" virt="non-virtual"><scope>RawTable</scope><name>setValue</name></member>
+      <member refid="class_raw_table_1a3a888cba6d8d188c0b3ab7bb084f74bc" prot="public" virt="non-virtual"><scope>RawTable</scope><name>setValue</name></member>
+      <member refid="class_raw_table_1ade953dcd93ad8d2466e49897fbbf4d56" prot="public" virt="virtual"><scope>RawTable</scope><name>setValueId</name></member>
+      <member refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" prot="public" virt="non-virtual"><scope>RawTable</scope><name>SharedDictionaryPtr</name></member>
+      <member refid="class_raw_table_1a21078f3425fb3e155b2f454bbc49be6e" prot="public" virt="virtual"><scope>RawTable</scope><name>size</name></member>
+      <member refid="class_raw_table_1a662f974833f302a2014b30ceb099a88d" prot="public" virt="virtual"><scope>RawTable</scope><name>subtableCount</name></member>
+      <member refid="class_abstract_table_1a50b40ae8ca0b789dd8ded3fc51a6f5fd" prot="public" virt="non-virtual"><scope>RawTable</scope><name>typeOfColumn</name></member>
+      <member refid="class_abstract_table_1a55de3a5a31acf6898fb9ddd287b760e3" prot="public" virt="non-virtual"><scope>RawTable</scope><name>valueExists</name></member>
+      <member refid="class_abstract_table_1a8e1d6f1b61390fc3e6954fbaa1f7745f" prot="public" virt="non-virtual"><scope>RawTable</scope><name>write</name></member>
+      <member refid="class_abstract_resource_1acbf6801fec7bf1acf0d90a4fb5d5c706" prot="public" virt="virtual"><scope>RawTable</scope><name>~AbstractResource</name></member>
+      <member refid="class_raw_table_1a8a1d383e50f9176581a74a0204426c3b" prot="public" virt="virtual"><scope>RawTable</scope><name>~RawTable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

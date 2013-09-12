@@ -1,0 +1,959 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_table" kind="class" prot="public">
+    <compoundname>Table</compoundname>
+    <basecompoundref refid="class_abstract_table" prot="public" virt="non-virtual">AbstractTable</basecompoundref>
+    <includes refid="_table_8h" local="no">Table.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_table_1a4992ea7e90e1b7a5bacec2a7f2efd5f8" prot="private" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_abstract_dictionary" kindref="compound">AbstractDictionary</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;AbstractDictionary&gt; Table::SharedDictionary</definition>
+        <argsstring></argsstring>
+        <name>SharedDictionary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="33" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_table_1a5e67dde370ac566084d9492af6a5980d" prot="private" static="no">
+        <type>std::vector&lt; <ref refid="class_table_1a4992ea7e90e1b7a5bacec2a7f2efd5f8" kindref="member">SharedDictionary</ref> &gt;</type>
+        <definition>typedef std::vector&lt;SharedDictionary&gt; Table::DictionaryVector</definition>
+        <argsstring></argsstring>
+        <name>DictionaryVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="34" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_table_1a95fecf8a10d5f6469cf06c4cbcaabf41" prot="private" static="no">
+        <type><ref refid="class_table" kindref="compound">Table</ref></type>
+        <definition>typedef Table Table::table_type</definition>
+        <argsstring></argsstring>
+        <name>table_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="36" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_table_1a281a73527064a8fa68affb4babb02d61" prot="private" static="no">
+        <type>std::vector&lt; const <ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref> * &gt;</type>
+        <definition>typedef std::vector&lt;const ColumnMetadata *&gt; Table::MetadataVector</definition>
+        <argsstring></argsstring>
+        <name>MetadataVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="37" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_table_1a21193174516b1cda7aaa0d7c54d25d81" prot="private" static="no">
+        <type><ref refid="class_base_attribute_vector" kindref="compound">BaseAttributeVector</ref>&lt; <ref refid="storage__types_8h_1a2552a37cd3427c39d92cb8fd23c90408" kindref="member">value_id_t</ref> &gt;</type>
+        <definition>typedef BaseAttributeVector&lt;value_id_t&gt; Table::AttributeVector</definition>
+        <argsstring></argsstring>
+        <name>AttributeVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="41" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_table_1a6c0360848d539fb4c4eb78e08c261fe8" prot="private" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_table_1a21193174516b1cda7aaa0d7c54d25d81" kindref="member">AttributeVector</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;AttributeVector&gt; Table::SharedAttributeVector</definition>
+        <argsstring></argsstring>
+        <name>SharedAttributeVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="42" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_table_1a7e46936441a3164733d0f3fefb593d4e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_table_1a6c0360848d539fb4c4eb78e08c261fe8" kindref="member">SharedAttributeVector</ref></type>
+        <definition>SharedAttributeVector Table::tuples</definition>
+        <argsstring></argsstring>
+        <name>tuples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="46" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_table_1a7bb1126eda583a961d96c9068eb39b49" prot="private" static="no" mutable="no">
+        <type><ref refid="class_table_1a281a73527064a8fa68affb4babb02d61" kindref="member">MetadataVector</ref></type>
+        <definition>MetadataVector Table::_metadata</definition>
+        <argsstring></argsstring>
+        <name>_metadata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="49" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_table_1a24fae698a1f1a38a4cf904164512b4e6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_table_1a5e67dde370ac566084d9492af6a5980d" kindref="member">DictionaryVector</ref></type>
+        <definition>DictionaryVector Table::_dictionaries</definition>
+        <argsstring></argsstring>
+        <name>_dictionaries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="52" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_table_1abde7f89bc1bd5e141ffa1b3814ae8031" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Table::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="55" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_table_1aa13816dae934f8101d3acc4f2a6d52d3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Table::_compressed</definition>
+        <argsstring></argsstring>
+        <name>_compressed</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="57" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_table_1af3e19afbe12592b74542d415b7f6e147" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Table::Table</definition>
+        <argsstring>(metadata_list *m, std::vector&lt; SharedDictionary &gt; *d=nullptr, size_t initial_size=0, bool sorted=true, bool compressed=true)</argsstring>
+        <name>Table</name>
+        <param>
+          <type><ref refid="storage__types_8h_1a1fdf1e5706e9554bbc2a1ca574162026" kindref="member">metadata_list</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="class_table_1a4992ea7e90e1b7a5bacec2a7f2efd5f8" kindref="member">SharedDictionary</ref> &gt; *</type>
+          <declname>d</declname>
+          <defval><ref refid="csb__tree_8cpp_1ab979d9d4b4923f7c54d6caa6e1a61936" kindref="member">nullptr</ref></defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>initial_size</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>sorted</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>compressed</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Build the attribute vector </para>        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="71" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="10" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1a9a559f2e7beb37b511ee9f88873164f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Table::~Table</definition>
+        <argsstring>()</argsstring>
+        <name>~Table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="73" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="121" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1a4f91a50448df40f79c8077378b06ac6e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t Table::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <reimplements refid="class_abstract_table_1a2b3fde5fb0c70f288eda47c4c66bb151">size</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of rows in the table <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="75" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1a4a09938a2928bb5765700bcb2fd98d8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t Table::columnCount</definition>
+        <argsstring>() const </argsstring>
+        <name>columnCount</name>
+        <reimplements refid="class_abstract_table_1a9ba326d4ed695ff02dcdc0dd125fd16c">columnCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of columns. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="77" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="134" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1af101f8e71447639c3ab7833a13886ab9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_value_id" kindref="compound">ValueId</ref></type>
+        <definition>ValueId Table::getValueId</definition>
+        <argsstring>(const size_t column, const size_t row) const </argsstring>
+        <name>getValueId</name>
+        <reimplements refid="class_abstract_table_1ae717cc86960b6488a8585d920a5f3b3d">getValueId</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value-ID of a cell. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row number of the cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="79" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="139" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1af7ee2349ecdb06c7b0d26ce8a6d0bc5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Table::setValueId</definition>
+        <argsstring>(const size_t column, const size_t row, const ValueId valueId)</argsstring>
+        <name>setValueId</name>
+        <reimplements refid="class_abstract_table_1a2be48affbc5a0060e2d17128be9e91b9">setValueId</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_value_id" kindref="compound">ValueId</ref></type>
+          <declname>valueId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the value ID of a cell. <simplesect kind="note"><para>Should be implemented in derived classes or throws runtime error!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valueId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New value-ID of the cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="81" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1a41968edd4b3878f6fb899efc6ec61d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Table::reserve</definition>
+        <argsstring>(const size_t nr_of_values)</argsstring>
+        <name>reserve</name>
+        <reimplements refid="class_abstract_table_1a019861d7ed5abee8c15a0511c3cbf051">reserve</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>nr_of_values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reorganizes the bit vector of a certain column. <simplesect kind="warning"><para>Throws runtime error if not implemented!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nr_of_values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of values that must fit. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="83" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1a2a48728158c6b6ecb0bcae58be4895c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Table::resize</definition>
+        <argsstring>(const size_t nr_of_values)</argsstring>
+        <name>resize</name>
+        <reimplements refid="class_abstract_table_1a92d707d52cdeabfc3cf254693b913a81">resize</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resize the table to the given number of rows based on the parameter <simplesect kind="warning"><para>Throws runtime error if not implemented</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new number of rows in this table </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="85" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1a73cdae68558b55149d278b49a34b99c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref> *</type>
+        <definition>const ColumnMetadata * Table::metadataAt</definition>
+        <argsstring>(const size_t column, const size_t row=0, const table_id_t table_id=0) const </argsstring>
+        <name>metadataAt</name>
+        <reimplements refid="class_abstract_table_1a4d4d85fd352353254fe01a72a9635a64">metadataAt</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the metadata for a certain column. Returns a pointer to a <ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref> object for a specified column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column for which to return the metadata. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="87" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="165" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1a19611a08af12ca41ae65c5d7ed7f1317" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref> &amp;</type>
+        <definition>const AbstractTable::SharedDictionaryPtr &amp; Table::dictionaryAt</definition>
+        <argsstring>(const size_t column, const size_t row=0, const table_id_t table_id=0) const </argsstring>
+        <name>dictionaryAt</name>
+        <reimplements refid="class_abstract_table_1ad20e4bbda0d8f1d257cbb62f4c0be91c">dictionaryAt</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the dictionary for a certain column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column from which to extract the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="89" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="170" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1a4aee66485c27b931387601b18d53a5d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref> &amp;</type>
+        <definition>const AbstractTable::SharedDictionaryPtr &amp; Table::dictionaryByTableId</definition>
+        <argsstring>(const size_t column, const table_id_t table_id) const </argsstring>
+        <name>dictionaryByTableId</name>
+        <reimplements refid="class_abstract_table_1a619607163a0f93d8bc90c3f3a66822ff">dictionaryByTableId</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const <ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the dictionary for a certain column by table ID. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column from which to extract the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="91" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="175" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1a0c60535f5231afeef6066fc74df32e1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Table::setDictionaryAt</definition>
+        <argsstring>(AbstractTable::SharedDictionaryPtr dict, const size_t column, const size_t row=0, const table_id_t table_id=0)</argsstring>
+        <name>setDictionaryAt</name>
+        <reimplements refid="class_abstract_table_1a0acc1fa146aef09f9de31768e67dfa72">setDictionaryAt</reimplements>
+        <param>
+          <type><ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref></type>
+          <declname>dict</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the dictionary for a certain column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dict</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dictionary to be used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column for which to set the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="93" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="180" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1ac8659d11a2cf7d0662311b7e0067b4a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref></type>
+        <definition>hyrise::storage::atable_ptr_t Table::copy_structure</definition>
+        <argsstring>(const field_list_t *fields=nullptr, const bool reuse_dict=false, const size_t initial_size=0, const bool with_containers=true, const bool compressed=false) const </argsstring>
+        <name>copy_structure</name>
+        <reimplements refid="class_abstract_table_1a435f72c573988b1438935fe0519da3a7">copy_structure</reimplements>
+        <param>
+          <type>const <ref refid="storage__types_8h_1a36fbc31395a53b7ece189846e4d3253c" kindref="member">field_list_t</ref> *</type>
+          <declname>fields</declname>
+          <defval><ref refid="csb__tree_8cpp_1ab979d9d4b4923f7c54d6caa6e1a61936" kindref="member">nullptr</ref></defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>reuse_dict</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>initial_size</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>with_containers</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>compressed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy the table&apos;s structure. Returns a pointer to an <ref refid="class_abstract_table" kindref="compound">AbstractTable</ref> with a copy of the current table&apos;s structure, containing all fields specified in the first parameter or all if left empty, as well as the current table&apos;s dictionary for those fields in case reuse_dict is set to true.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of fields to be copied (all if empty or nullptr). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reuse_dict</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Also copy the table&apos;s dictionary (default=false). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initial_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial size of the returned table (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>with_containers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Only used by derived classes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>compressed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets the compressed storage for the new table </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="95" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="61" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1ab65a5c456748e558a4066992fa055f84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref></type>
+        <definition>hyrise::storage::atable_ptr_t Table::copy_structure_modifiable</definition>
+        <argsstring>(const field_list_t *fields=nullptr, const size_t initial_size=0, const bool with_containers=true) const </argsstring>
+        <name>copy_structure_modifiable</name>
+        <reimplements refid="class_abstract_table_1aca6d9c647c92a66bd658c4c58250c715">copy_structure_modifiable</reimplements>
+        <param>
+          <type>const <ref refid="storage__types_8h_1a36fbc31395a53b7ece189846e4d3253c" kindref="member">field_list_t</ref> *</type>
+          <declname>fields</declname>
+          <defval><ref refid="csb__tree_8cpp_1ab979d9d4b4923f7c54d6caa6e1a61936" kindref="member">nullptr</ref></defval>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>initial_size</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>with_containers</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy the table&apos;s structure modifiable. Returns a pointer to an <ref refid="class_abstract_table" kindref="compound">AbstractTable</ref> with a copy of the current table&apos;s structure, containing all fields specified in the first parameter or all if left empty, as well as the current table&apos;s dictionary-type for each field, without values for future modification.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of fields to be copied (all if empty or nullptr). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initial_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial size of the returned table (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>with_containers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Only used by derived classes. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="97" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="95" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1ac0f70171f03d81c2eb1ae18497e15bac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Table::setAttributes</definition>
+        <argsstring>(SharedAttributeVector b)</argsstring>
+        <name>setAttributes</name>
+        <param>
+          <type><ref refid="class_table_1a6c0360848d539fb4c4eb78e08c261fe8" kindref="member">SharedAttributeVector</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="100" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="192" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1a86a8548c8b311536e41b45096261b58c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned</type>
+        <definition>unsigned Table::partitionCount</definition>
+        <argsstring>() const </argsstring>
+        <name>partitionCount</name>
+        <reimplements refid="class_abstract_table_1a53bb2089cbb287804e3160abe893e657">partitionCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of partitions in this table. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="102" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1aaef6c4697755acbb35d1dcb05cc38905" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="storage__types_8h_1ab1b21fbdc9fcb935021666db9c910755" kindref="member">table_id_t</ref></type>
+        <definition>virtual table_id_t Table::subtableCount</definition>
+        <argsstring>() const </argsstring>
+        <name>subtableCount</name>
+        <reimplements refid="class_abstract_table_1af5330c0a617946ad538cacea21ba7639">subtableCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of horizontal subtables. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="106" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1aa719106b71b721f8c4e9eae292ca9275" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t Table::partitionWidth</definition>
+        <argsstring>(const size_t slice) const </argsstring>
+        <name>partitionWidth</name>
+        <reimplements refid="class_abstract_table_1ac89c7ce56dca98bdfdd67263a4165447">partitionWidth</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>slice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the width of a specified partition in number of attributes. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>slice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slice of interest. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="110" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="110" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1abac05af8a4b561c460b82c6562c5f458" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref></type>
+        <definition>hyrise::storage::atable_ptr_t Table::copy</definition>
+        <argsstring>() const </argsstring>
+        <name>copy</name>
+        <reimplements refid="class_abstract_table_1a87134964b75abb36c49d0c44455d23e2">copy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create of copy of this table. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="114" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.cpp" bodystart="197" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1ac1da0de9121a1c85636d925fe7c4cd3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Table::setNumRows</definition>
+        <argsstring>(size_t s)</argsstring>
+        <name>setNumRows</name>
+        <param>
+          <type>size_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="116" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1a67a078932297b90aba2aeb12a675faea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="_abstract_table_8h_1ae3a004c859daed205eb7639b1e993ce4" kindref="member">attr_vectors_t</ref></type>
+        <definition>virtual const attr_vectors_t Table::getAttributeVectors</definition>
+        <argsstring>(size_t column) const </argsstring>
+        <name>getAttributeVectors</name>
+        <reimplements refid="class_abstract_table_1a3467bc6159aa361db993c3fc56584789">getAttributeVectors</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get underlying attribute vectors for column</para><para>This method returns a struct containing the reference to the attribute vector and the offset of the attribut in this vector. This allows a direct access to the memory and keeping the high-level data structures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="120" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="120" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_table_1a1259e9256ea0f37a264eb43c2e215835" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Table::debugStructure</definition>
+        <argsstring>(size_t level=0) const </argsstring>
+        <name>debugStructure</name>
+        <reimplements refid="class_abstract_table_1a4262181544d5392b71735518088631ff">debugStructure</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="126" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="126" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_table" kindref="compound">Table</ref> is the innermost entity in the table structure. It stores the actual values like a regular table and cannot be splitted further. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3570">
+        <label>Table</label>
+        <link refid="class_table"/>
+        <childnode refid="3571" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3571">
+        <label>AbstractTable</label>
+        <link refid="class_abstract_table"/>
+        <childnode refid="3572" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3572">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3573">
+        <label>Table</label>
+        <link refid="class_table"/>
+        <childnode refid="3574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3574">
+        <label>AbstractTable</label>
+        <link refid="class_abstract_table"/>
+        <childnode refid="3575" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3576" relation="usage">
+          <edgelabel>-_uuid</edgelabel>
+        </childnode>
+      </node>
+      <node id="3575">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+      <node id="3576">
+        <label>unique_id</label>
+        <link refid="structunique__id"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" line="29" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Table.h" bodystart="29" bodyend="129"/>
+    <listofallmembers>
+      <member refid="class_table_1aa13816dae934f8101d3acc4f2a6d52d3" prot="private" virt="non-virtual"><scope>Table</scope><name>_compressed</name></member>
+      <member refid="class_table_1a24fae698a1f1a38a4cf904164512b4e6" prot="private" virt="non-virtual"><scope>Table</scope><name>_dictionaries</name></member>
+      <member refid="class_table_1a7bb1126eda583a961d96c9068eb39b49" prot="private" virt="non-virtual"><scope>Table</scope><name>_metadata</name></member>
+      <member refid="class_table_1a21193174516b1cda7aaa0d7c54d25d81" prot="private" virt="non-virtual"><scope>Table</scope><name>AttributeVector</name></member>
+      <member refid="class_table_1a4a09938a2928bb5765700bcb2fd98d8f" prot="public" virt="virtual"><scope>Table</scope><name>columnCount</name></member>
+      <member refid="class_abstract_table_1af716c04f38a6ab47b277911baf050c9d" prot="public" virt="non-virtual"><scope>Table</scope><name>contentEquals</name></member>
+      <member refid="class_table_1abac05af8a4b561c460b82c6562c5f458" prot="public" virt="virtual"><scope>Table</scope><name>copy</name></member>
+      <member refid="class_table_1ac8659d11a2cf7d0662311b7e0067b4a9" prot="public" virt="virtual"><scope>Table</scope><name>copy_structure</name></member>
+      <member refid="class_table_1ab65a5c456748e558a4066992fa055f84" prot="public" virt="virtual"><scope>Table</scope><name>copy_structure_modifiable</name></member>
+      <member refid="class_abstract_table_1ad4973d95d29deb5142d6e6b308346a42" prot="public" virt="non-virtual"><scope>Table</scope><name>copyRowFrom</name></member>
+      <member refid="class_abstract_table_1a4361f683288a0d1360227b309ca625f6" prot="public" virt="non-virtual"><scope>Table</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1a2f6d1df59bdb78f8454ea8c06c89216d" prot="public" virt="non-virtual"><scope>Table</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1a06029159a39fac33676c09daa3f7f849" prot="public" virt="non-virtual"><scope>Table</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1aea155de835135df953603e9dcbb731c3" prot="public" virt="non-virtual"><scope>Table</scope><name>copyValueIds</name></member>
+      <member refid="class_table_1a1259e9256ea0f37a264eb43c2e215835" prot="public" virt="virtual"><scope>Table</scope><name>debugStructure</name></member>
+      <member refid="class_abstract_table_1ab1d04fdc926954e4027fb883abab1d73" prot="public" virt="non-virtual"><scope>Table</scope><name>dictionaries</name></member>
+      <member refid="class_table_1a19611a08af12ca41ae65c5d7ed7f1317" prot="public" virt="virtual"><scope>Table</scope><name>dictionaryAt</name></member>
+      <member refid="class_table_1a4aee66485c27b931387601b18d53a5d9" prot="public" virt="virtual"><scope>Table</scope><name>dictionaryByTableId</name></member>
+      <member refid="class_table_1a5e67dde370ac566084d9492af6a5980d" prot="private" virt="non-virtual"><scope>Table</scope><name>DictionaryVector</name></member>
+      <member refid="class_table_1a67a078932297b90aba2aeb12a675faea" prot="public" virt="virtual"><scope>Table</scope><name>getAttributeVectors</name></member>
+      <member refid="class_abstract_table_1af820249fa63adfdd1e678572555f6886" prot="public" virt="non-virtual"><scope>Table</scope><name>getUuid</name></member>
+      <member refid="class_abstract_table_1a6648aba614a398c3243a60b18d5d7dbf" prot="public" virt="non-virtual"><scope>Table</scope><name>getValue</name></member>
+      <member refid="class_abstract_table_1aac6e3940c4b756a4c627ece2c008782c" prot="public" virt="non-virtual"><scope>Table</scope><name>getValue</name></member>
+      <member refid="class_abstract_table_1af380b8fd7715abe5988f53b885920e0c" prot="public" virt="non-virtual"><scope>Table</scope><name>getValueForValueId</name></member>
+      <member refid="class_table_1af101f8e71447639c3ab7833a13886ab9" prot="public" virt="virtual"><scope>Table</scope><name>getValueId</name></member>
+      <member refid="class_abstract_table_1a21786cf05c9871539e32e583b1e717c4" prot="public" virt="non-virtual"><scope>Table</scope><name>getValueIdForValue</name></member>
+      <member refid="class_abstract_table_1acd7ea07c9b1605ca53c7608c7c3b2ea5" prot="public" virt="non-virtual"><scope>Table</scope><name>getValueIdForValueByTableId</name></member>
+      <member refid="class_abstract_table_1a8b854b19026e75eebc02942499a82a21" prot="public" virt="non-virtual"><scope>Table</scope><name>metadata</name></member>
+      <member refid="class_table_1a73cdae68558b55149d278b49a34b99c3" prot="public" virt="virtual"><scope>Table</scope><name>metadataAt</name></member>
+      <member refid="class_table_1a281a73527064a8fa68affb4babb02d61" prot="private" virt="non-virtual"><scope>Table</scope><name>MetadataVector</name></member>
+      <member refid="class_abstract_table_1af8c5434b261abfcab191852f575b4c5a" prot="public" virt="non-virtual"><scope>Table</scope><name>nameOfColumn</name></member>
+      <member refid="class_abstract_table_1aaea606e4fd8c92a43febced405de1c6c" prot="public" virt="non-virtual"><scope>Table</scope><name>numberOfColumn</name></member>
+      <member refid="class_table_1a86a8548c8b311536e41b45096261b58c" prot="public" virt="virtual"><scope>Table</scope><name>partitionCount</name></member>
+      <member refid="class_table_1aa719106b71b721f8c4e9eae292ca9275" prot="public" virt="virtual"><scope>Table</scope><name>partitionWidth</name></member>
+      <member refid="class_abstract_table_1a7646e80f6c075dd018bd73a70751113a" prot="public" virt="virtual"><scope>Table</scope><name>print</name></member>
+      <member refid="class_abstract_table_1a67489daa606ed64ce9874b509451e3d9" prot="public" virt="non-virtual"><scope>Table</scope><name>printValue</name></member>
+      <member refid="class_table_1a41968edd4b3878f6fb899efc6ec61d22" prot="public" virt="virtual"><scope>Table</scope><name>reserve</name></member>
+      <member refid="class_table_1a2a48728158c6b6ecb0bcae58be4895c2" prot="public" virt="virtual"><scope>Table</scope><name>resize</name></member>
+      <member refid="class_table_1ac0f70171f03d81c2eb1ae18497e15bac" prot="public" virt="non-virtual"><scope>Table</scope><name>setAttributes</name></member>
+      <member refid="class_table_1a0c60535f5231afeef6066fc74df32e1e" prot="public" virt="virtual"><scope>Table</scope><name>setDictionaryAt</name></member>
+      <member refid="class_table_1ac1da0de9121a1c85636d925fe7c4cd3e" prot="public" virt="non-virtual"><scope>Table</scope><name>setNumRows</name></member>
+      <member refid="class_abstract_table_1ade4da17f60dbde2148f25b849528f624" prot="public" virt="non-virtual"><scope>Table</scope><name>setUuid</name></member>
+      <member refid="class_abstract_table_1a0aa362f5b907b4d79c2fb43889a8970b" prot="public" virt="non-virtual"><scope>Table</scope><name>setValue</name></member>
+      <member refid="class_table_1af7ee2349ecdb06c7b0d26ce8a6d0bc5c" prot="public" virt="virtual"><scope>Table</scope><name>setValueId</name></member>
+      <member refid="class_table_1a6c0360848d539fb4c4eb78e08c261fe8" prot="private" virt="non-virtual"><scope>Table</scope><name>SharedAttributeVector</name></member>
+      <member refid="class_table_1a4992ea7e90e1b7a5bacec2a7f2efd5f8" prot="private" virt="non-virtual"><scope>Table</scope><name>SharedDictionary</name></member>
+      <member refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" prot="public" virt="non-virtual"><scope>Table</scope><name>SharedDictionaryPtr</name></member>
+      <member refid="class_table_1a4f91a50448df40f79c8077378b06ac6e" prot="public" virt="virtual"><scope>Table</scope><name>size</name></member>
+      <member refid="class_table_1aaef6c4697755acbb35d1dcb05cc38905" prot="public" virt="virtual"><scope>Table</scope><name>subtableCount</name></member>
+      <member refid="class_table_1af3e19afbe12592b74542d415b7f6e147" prot="public" virt="non-virtual"><scope>Table</scope><name>Table</name></member>
+      <member refid="class_table_1a95fecf8a10d5f6469cf06c4cbcaabf41" prot="private" virt="non-virtual"><scope>Table</scope><name>table_type</name></member>
+      <member refid="class_table_1a7e46936441a3164733d0f3fefb593d4e" prot="private" virt="non-virtual"><scope>Table</scope><name>tuples</name></member>
+      <member refid="class_abstract_table_1a50b40ae8ca0b789dd8ded3fc51a6f5fd" prot="public" virt="non-virtual"><scope>Table</scope><name>typeOfColumn</name></member>
+      <member refid="class_abstract_table_1a55de3a5a31acf6898fb9ddd287b760e3" prot="public" virt="non-virtual"><scope>Table</scope><name>valueExists</name></member>
+      <member refid="class_table_1abde7f89bc1bd5e141ffa1b3814ae8031" prot="private" virt="non-virtual"><scope>Table</scope><name>width</name></member>
+      <member refid="class_abstract_table_1a8e1d6f1b61390fc3e6954fbaa1f7745f" prot="public" virt="non-virtual"><scope>Table</scope><name>write</name></member>
+      <member refid="class_abstract_resource_1acbf6801fec7bf1acf0d90a4fb5d5c706" prot="public" virt="virtual"><scope>Table</scope><name>~AbstractResource</name></member>
+      <member refid="class_table_1a9a559f2e7beb37b511ee9f88873164f8" prot="public" virt="non-virtual"><scope>Table</scope><name>~Table</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

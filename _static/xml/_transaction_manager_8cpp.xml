@@ -1,0 +1,845 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_transaction_manager_8cpp" kind="file">
+    <compoundname>TransactionManager.cpp</compoundname>
+    <includes refid="_transaction_manager_8h" local="yes">io/TransactionManager.h</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">map</includes>
+    <includes refid="make__unique_8h" local="yes">helper/make_unique.h</includes>
+    <includes refid="checked__cast_8h" local="yes">helper/checked_cast.h</includes>
+    <includes refid="vector__helpers_8h" local="yes">helper/vector_helpers.h</includes>
+    <includes refid="_store_8h" local="yes">storage/Store.h</includes>
+    <incdepgraph>
+      <node id="12786">
+        <label>storage/OrderPreservingDictionary.h</label>
+        <link refid="_order_preserving_dictionary_8h"/>
+        <childnode refid="12787" relation="include">
+        </childnode>
+        <childnode refid="12777" relation="include">
+        </childnode>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12762" relation="include">
+        </childnode>
+        <childnode refid="12765" relation="include">
+        </childnode>
+        <childnode refid="12764" relation="include">
+        </childnode>
+        <childnode refid="12741" relation="include">
+        </childnode>
+      </node>
+      <node id="12726">
+        <label>atomic</label>
+      </node>
+      <node id="12762">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="12741" relation="include">
+        </childnode>
+        <childnode refid="12763" relation="include">
+        </childnode>
+        <childnode refid="12764" relation="include">
+        </childnode>
+      </node>
+      <node id="12751">
+        <label>functional</label>
+      </node>
+      <node id="12749">
+        <label>helper/checked_cast.h</label>
+        <link refid="checked__cast_8h"/>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12742" relation="include">
+        </childnode>
+      </node>
+      <node id="12737">
+        <label>limits</label>
+      </node>
+      <node id="12730">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="12731" relation="include">
+        </childnode>
+        <childnode refid="12726" relation="include">
+        </childnode>
+      </node>
+      <node id="12787">
+        <label>assert.h</label>
+      </node>
+      <node id="12753">
+        <label>iterator</label>
+      </node>
+      <node id="12791">
+        <label>storage/PrettyPrinter.h</label>
+        <link refid="_pretty_printer_8h"/>
+        <childnode refid="12734" relation="include">
+        </childnode>
+        <childnode refid="12792" relation="include">
+        </childnode>
+        <childnode refid="12793" relation="include">
+        </childnode>
+      </node>
+      <node id="12788">
+        <label>storage/OrderIndifferentDictionary.h</label>
+        <link refid="_order_indifferent_dictionary_8h"/>
+        <childnode refid="12789" relation="include">
+        </childnode>
+        <childnode refid="12738" relation="include">
+        </childnode>
+        <childnode refid="12727" relation="include">
+        </childnode>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12790" relation="include">
+        </childnode>
+        <childnode refid="12741" relation="include">
+        </childnode>
+        <childnode refid="12762" relation="include">
+        </childnode>
+        <childnode refid="12764" relation="include">
+        </childnode>
+      </node>
+      <node id="12732">
+        <label>helper/Synchronized.h</label>
+        <link refid="_synchronized_8h"/>
+        <childnode refid="12733" relation="include">
+        </childnode>
+      </node>
+      <node id="12766">
+        <label>boost/iterator/iterator_facade.hpp</label>
+      </node>
+      <node id="12735">
+        <label>cstdint</label>
+      </node>
+      <node id="12785">
+        <label>storage/ValueIdMap.hpp</label>
+        <link refid="_value_id_map_8hpp"/>
+        <childnode refid="12786" relation="include">
+        </childnode>
+        <childnode refid="12788" relation="include">
+        </childnode>
+      </node>
+      <node id="12743">
+        <label>stdint.h</label>
+      </node>
+      <node id="12774">
+        <label>cmath</label>
+      </node>
+      <node id="12745">
+        <label>cassert</label>
+      </node>
+      <node id="12742">
+        <label>stdexcept</label>
+      </node>
+      <node id="12752">
+        <label>numeric</label>
+      </node>
+      <node id="12723">
+        <label>src/lib/io/TransactionManager.cpp</label>
+        <link refid="TransactionManager.cpp"/>
+        <childnode refid="12724" relation="include">
+        </childnode>
+        <childnode refid="12745" relation="include">
+        </childnode>
+        <childnode refid="12737" relation="include">
+        </childnode>
+        <childnode refid="12742" relation="include">
+        </childnode>
+        <childnode refid="12727" relation="include">
+        </childnode>
+        <childnode refid="12746" relation="include">
+        </childnode>
+        <childnode refid="12749" relation="include">
+        </childnode>
+        <childnode refid="12750" relation="include">
+        </childnode>
+        <childnode refid="12754" relation="include">
+        </childnode>
+      </node>
+      <node id="12771">
+        <label>storage/FixedLengthVector.h</label>
+        <link refid="_fixed_length_vector_8h"/>
+        <childnode refid="12772" relation="include">
+        </childnode>
+        <childnode refid="12773" relation="include">
+        </childnode>
+        <childnode refid="12774" relation="include">
+        </childnode>
+        <childnode refid="12726" relation="include">
+        </childnode>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12728" relation="include">
+        </childnode>
+        <childnode refid="12736" relation="include">
+        </childnode>
+        <childnode refid="12742" relation="include">
+        </childnode>
+        <childnode refid="12775" relation="include">
+        </childnode>
+        <childnode refid="12776" relation="include">
+        </childnode>
+        <childnode refid="12767" relation="include">
+        </childnode>
+      </node>
+      <node id="12759">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="12735" relation="include">
+        </childnode>
+        <childnode refid="12760" relation="include">
+        </childnode>
+      </node>
+      <node id="12756">
+        <label>storage/Table.h</label>
+        <link refid="_table_8h"/>
+        <childnode refid="12736" relation="include">
+        </childnode>
+        <childnode refid="12738" relation="include">
+        </childnode>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12734" relation="include">
+        </childnode>
+        <childnode refid="12757" relation="include">
+        </childnode>
+        <childnode refid="12758" relation="include">
+        </childnode>
+        <childnode refid="12763" relation="include">
+        </childnode>
+        <childnode refid="12767" relation="include">
+        </childnode>
+        <childnode refid="12770" relation="include">
+        </childnode>
+      </node>
+      <node id="12736">
+        <label>string</label>
+      </node>
+      <node id="12746">
+        <label>helper/make_unique.h</label>
+        <link refid="make__unique_8h"/>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12747" relation="include">
+        </childnode>
+        <childnode refid="12748" relation="include">
+        </childnode>
+      </node>
+      <node id="12755">
+        <label>storage/MutableVerticalTable.h</label>
+        <link refid="_mutable_vertical_table_8h"/>
+        <childnode refid="12738" relation="include">
+        </childnode>
+        <childnode refid="12736" relation="include">
+        </childnode>
+        <childnode refid="12734" relation="include">
+        </childnode>
+        <childnode refid="12756" relation="include">
+        </childnode>
+        <childnode refid="12779" relation="include">
+        </childnode>
+        <childnode refid="12757" relation="include">
+        </childnode>
+        <childnode refid="12758" relation="include">
+        </childnode>
+      </node>
+      <node id="12727">
+        <label>map</label>
+      </node>
+      <node id="12784">
+        <label>storage/SequentialHeapMerger.h</label>
+        <link refid="_sequential_heap_merger_8h"/>
+        <childnode refid="12785" relation="include">
+        </childnode>
+        <childnode refid="12758" relation="include">
+        </childnode>
+        <childnode refid="12782" relation="include">
+        </childnode>
+      </node>
+      <node id="12768">
+        <label>storage/AbstractAttributeVector.h</label>
+        <link refid="_abstract_attribute_vector_8h"/>
+        <childnode refid="12769" relation="include">
+        </childnode>
+      </node>
+      <node id="12789">
+        <label>exception</label>
+      </node>
+      <node id="12744">
+        <label>ostream</label>
+      </node>
+      <node id="12790">
+        <label>limits.h</label>
+      </node>
+      <node id="12750">
+        <label>helper/vector_helpers.h</label>
+        <link refid="vector__helpers_8h"/>
+        <childnode refid="12725" relation="include">
+        </childnode>
+        <childnode refid="12751" relation="include">
+        </childnode>
+        <childnode refid="12752" relation="include">
+        </childnode>
+        <childnode refid="12753" relation="include">
+        </childnode>
+      </node>
+      <node id="12767">
+        <label>storage/BaseAttributeVector.h</label>
+        <link refid="_base_attribute_vector_8h"/>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12742" relation="include">
+        </childnode>
+        <childnode refid="12768" relation="include">
+        </childnode>
+      </node>
+      <node id="12741">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="12738" relation="include">
+        </childnode>
+        <childnode refid="12736" relation="include">
+        </childnode>
+        <childnode refid="12742" relation="include">
+        </childnode>
+        <childnode refid="12743" relation="include">
+        </childnode>
+        <childnode refid="12744" relation="include">
+        </childnode>
+      </node>
+      <node id="12764">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="12765" relation="include">
+        </childnode>
+        <childnode refid="12766" relation="include">
+        </childnode>
+      </node>
+      <node id="12779">
+        <label>storage/TableFactory.h</label>
+        <link refid="_table_factory_8h"/>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12734" relation="include">
+        </childnode>
+        <childnode refid="12758" relation="include">
+        </childnode>
+        <childnode refid="12756" relation="include">
+        </childnode>
+      </node>
+      <node id="12757">
+        <label>storage/ColumnMetadata.h</label>
+        <link refid="_column_metadata_8h"/>
+        <childnode refid="12741" relation="include">
+        </childnode>
+        <childnode refid="12736" relation="include">
+        </childnode>
+        <childnode refid="12742" relation="include">
+        </childnode>
+      </node>
+      <node id="12783">
+        <label>storage/TableUtils.h</label>
+        <link refid="_table_utils_8h"/>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12729" relation="include">
+        </childnode>
+      </node>
+      <node id="12770">
+        <label>storage/AttributeVectorFactory.h</label>
+        <link refid="_attribute_vector_factory_8h"/>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12767" relation="include">
+        </childnode>
+        <childnode refid="12771" relation="include">
+        </childnode>
+        <childnode refid="12778" relation="include">
+        </childnode>
+      </node>
+      <node id="12765">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="12738">
+        <label>vector</label>
+      </node>
+      <node id="12782">
+        <label>storage/AbstractMerger.h</label>
+        <link refid="_abstract_merger_8h"/>
+        <childnode refid="12738" relation="include">
+        </childnode>
+        <childnode refid="12729" relation="include">
+        </childnode>
+        <childnode refid="12734" relation="include">
+        </childnode>
+        <childnode refid="12758" relation="include">
+        </childnode>
+        <childnode refid="12783" relation="include">
+        </childnode>
+      </node>
+      <node id="12748">
+        <label>utility</label>
+      </node>
+      <node id="12760">
+        <label>array</label>
+      </node>
+      <node id="12775">
+        <label>sstream</label>
+      </node>
+      <node id="12780">
+        <label>storage/TableMerger.h</label>
+        <link refid="_table_merger_8h"/>
+        <childnode refid="12738" relation="include">
+        </childnode>
+        <childnode refid="12734" relation="include">
+        </childnode>
+        <childnode refid="12758" relation="include">
+        </childnode>
+        <childnode refid="12781" relation="include">
+        </childnode>
+        <childnode refid="12782" relation="include">
+        </childnode>
+      </node>
+      <node id="12740">
+        <label>cereal/cereal.hpp</label>
+      </node>
+      <node id="12772">
+        <label>cerrno</label>
+      </node>
+      <node id="12777">
+        <label>iostream</label>
+      </node>
+      <node id="12769">
+        <label>cstddef</label>
+      </node>
+      <node id="12729">
+        <label>unordered_map</label>
+      </node>
+      <node id="12761">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="12728">
+        <label>mutex</label>
+      </node>
+      <node id="12763">
+        <label>storage/AbstractDictionary.h</label>
+        <link refid="_abstract_dictionary_8h"/>
+        <childnode refid="12738" relation="include">
+        </childnode>
+        <childnode refid="12736" relation="include">
+        </childnode>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12741" relation="include">
+        </childnode>
+      </node>
+      <node id="12758">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="12737" relation="include">
+        </childnode>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12742" relation="include">
+        </childnode>
+        <childnode refid="12738" relation="include">
+        </childnode>
+        <childnode refid="12736" relation="include">
+        </childnode>
+        <childnode refid="12734" relation="include">
+        </childnode>
+        <childnode refid="12730" relation="include">
+        </childnode>
+        <childnode refid="12759" relation="include">
+        </childnode>
+        <childnode refid="12761" relation="include">
+        </childnode>
+        <childnode refid="12762" relation="include">
+        </childnode>
+        <childnode refid="12741" relation="include">
+        </childnode>
+      </node>
+      <node id="12793">
+        <label>helper/RangeIter.h</label>
+        <link refid="_range_iter_8h"/>
+      </node>
+      <node id="12731">
+        <label>thread</label>
+      </node>
+      <node id="12734">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="12735" relation="include">
+        </childnode>
+        <childnode refid="12736" relation="include">
+        </childnode>
+        <childnode refid="12737" relation="include">
+        </childnode>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12738" relation="include">
+        </childnode>
+      </node>
+      <node id="12776">
+        <label>memory/MallocStrategy.h</label>
+        <link refid="_malloc_strategy_8h"/>
+        <childnode refid="12777" relation="include">
+        </childnode>
+        <childnode refid="12735" relation="include">
+        </childnode>
+      </node>
+      <node id="12747">
+        <label>type_traits</label>
+      </node>
+      <node id="12781">
+        <label>storage/AbstractMergeStrategy.h</label>
+        <link refid="_abstract_merge_strategy_8h"/>
+        <childnode refid="12738" relation="include">
+        </childnode>
+        <childnode refid="12758" relation="include">
+        </childnode>
+        <childnode refid="12750" relation="include">
+        </childnode>
+      </node>
+      <node id="12754">
+        <label>storage/Store.h</label>
+        <link refid="_store_8h"/>
+        <childnode refid="12755" relation="include">
+        </childnode>
+        <childnode refid="12758" relation="include">
+        </childnode>
+        <childnode refid="12780" relation="include">
+        </childnode>
+        <childnode refid="12781" relation="include">
+        </childnode>
+        <childnode refid="12784" relation="include">
+        </childnode>
+        <childnode refid="12791" relation="include">
+        </childnode>
+        <childnode refid="12734" relation="include">
+        </childnode>
+      </node>
+      <node id="12778">
+        <label>storage/BitCompressedVector.h</label>
+        <link refid="_bit_compressed_vector_8h"/>
+        <childnode refid="12745" relation="include">
+        </childnode>
+        <childnode refid="12774" relation="include">
+        </childnode>
+        <childnode refid="12735" relation="include">
+        </childnode>
+        <childnode refid="12773" relation="include">
+        </childnode>
+        <childnode refid="12728" relation="include">
+        </childnode>
+        <childnode refid="12736" relation="include">
+        </childnode>
+        <childnode refid="12742" relation="include">
+        </childnode>
+        <childnode refid="12776" relation="include">
+        </childnode>
+        <childnode refid="12767" relation="include">
+        </childnode>
+      </node>
+      <node id="12792">
+        <label>ftprinter/FTPrinter.h</label>
+      </node>
+      <node id="12725">
+        <label>algorithm</label>
+      </node>
+      <node id="12773">
+        <label>cstring</label>
+      </node>
+      <node id="12724">
+        <label>io/TransactionManager.h</label>
+        <link refid="_transaction_manager_8h"/>
+        <childnode refid="12725" relation="include">
+        </childnode>
+        <childnode refid="12726" relation="include">
+        </childnode>
+        <childnode refid="12727" relation="include">
+        </childnode>
+        <childnode refid="12728" relation="include">
+        </childnode>
+        <childnode refid="12729" relation="include">
+        </childnode>
+        <childnode refid="12730" relation="include">
+        </childnode>
+        <childnode refid="12732" relation="include">
+        </childnode>
+        <childnode refid="12734" relation="include">
+        </childnode>
+        <childnode refid="12739" relation="include">
+        </childnode>
+        <childnode refid="12741" relation="include">
+        </childnode>
+      </node>
+      <node id="12733">
+        <label>memory</label>
+      </node>
+      <node id="12739">
+        <label>io/TXContext.h</label>
+        <link refid="_t_x_context_8h"/>
+        <childnode refid="12734" relation="include">
+        </childnode>
+        <childnode refid="12740" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1tx">hyrise::tx</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_transaction_manager_8h" kindref="compound">io/TransactionManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="make__unique_8h" kindref="compound">helper/make_unique.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="checked__cast_8h" kindref="compound">helper/checked_cast.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vector__helpers_8h" kindref="compound">helper/vector_helpers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_store_8h" kindref="compound">storage/Store.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">tx<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classhyrise_1_1tx_1_1_t_x_modifications_1a2708a25e3b2f6954ab5272dd85f6b71f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a2708a25e3b2f6954ab5272dd85f6b71f" kindref="member">TXModifications::insertPos</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab,<sp/><ref refid="storage__types_8h_1a866dd5ae291f599db49986f6aa5ba77a" kindref="member">pos_t</ref><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1locking_1_1_spinlock" kindref="compound">locking::Spinlock</ref><sp/>_mtx;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1aaa2ce5aa0e428bf85f0cc7d6ed3a74b4" kindref="member">_handle</ref>(_mtx,<sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1accaccf49ba3215825daeaf22d712c0bf" kindref="member">inserted</ref>,<sp/>tab,<sp/>pos);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classhyrise_1_1tx_1_1_t_x_modifications_1a8972788304fd070e923c9aa5711fc9fc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a8972788304fd070e923c9aa5711fc9fc" kindref="member">TXModifications::deletePos</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab,<sp/><ref refid="storage__types_8h_1a866dd5ae291f599db49986f6aa5ba77a" kindref="member">pos_t</ref><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1locking_1_1_spinlock" kindref="compound">locking::Spinlock</ref><sp/>_mtx;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1aaa2ce5aa0e428bf85f0cc7d6ed3a74b4" kindref="member">_handle</ref>(_mtx,<sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a3e502c2ecbf36c7ac537f0fd3587b671" kindref="member">deleted</ref>,<sp/>tab,<sp/>pos);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classhyrise_1_1tx_1_1_t_x_modifications_1a8b562f599b416e7a6a5e906eb65afc66" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a8b562f599b416e7a6a5e906eb65afc66" kindref="member">TXModifications::hasDeleted</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1ae756ab7755d52db4aebf148bc79ee39c" kindref="member">handleCheck</ref>(<ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a3e502c2ecbf36c7ac537f0fd3587b671" kindref="member">deleted</ref>,<sp/>tab);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classhyrise_1_1tx_1_1_t_x_modifications_1ac829b47c68523f5f4cfe5b37aaf2280c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1ac829b47c68523f5f4cfe5b37aaf2280c" kindref="member">TXModifications::hasInserted</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1ae756ab7755d52db4aebf148bc79ee39c" kindref="member">handleCheck</ref>(<ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1accaccf49ba3215825daeaf22d712c0bf" kindref="member">inserted</ref>,<sp/>tab);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classhyrise_1_1tx_1_1_t_x_modifications_1ad91cf5bad65aa3a2853b6cf570e7b9a5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref>&amp;<sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1ad91cf5bad65aa3a2853b6cf570e7b9a5" kindref="member">TXModifications::getInserted</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1accaccf49ba3215825daeaf22d712c0bf" kindref="member">inserted</ref>.at(tab);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classhyrise_1_1tx_1_1_t_x_modifications_1a6c8e015aca3ab849e550e09b0c048db2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref>&amp;<sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a6c8e015aca3ab849e550e09b0c048db2" kindref="member">TXModifications::getDeleted</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a3e502c2ecbf36c7ac537f0fd3587b671" kindref="member">deleted</ref>.at(tab);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classhyrise_1_1tx_1_1_t_x_modifications_1ae756ab7755d52db4aebf148bc79ee39c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1ae756ab7755d52db4aebf148bc79ee39c" kindref="member">TXModifications::handleCheck</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a646b1adbdc16424e97b6fb6ddb5d0b53" kindref="member">map_t</ref>&amp;<sp/>data,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>tab)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>data.find(tab);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>data.end()<sp/>&amp;&amp;<sp/>it-&gt;second.size()<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classhyrise_1_1tx_1_1_t_x_modifications_1aaa2ce5aa0e428bf85f0cc7d6ed3a74b4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1aaa2ce5aa0e428bf85f0cc7d6ed3a74b4" kindref="member">TXModifications::_handle</ref>(<ref refid="classhyrise_1_1locking_1_1_spinlock" kindref="compound">locking::Spinlock</ref>&amp;<sp/>mtx,<sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications_1a646b1adbdc16424e97b6fb6ddb5d0b53" kindref="member">map_t</ref>&amp;<sp/>data,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>key,<sp/><ref refid="storage__types_8h_1a866dd5ae291f599db49986f6aa5ba77a" kindref="member">pos_t</ref><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>std::lock_guard&lt;locking::Spinlock&gt;<sp/>lck(mtx);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(data.find(key)<sp/>==<sp/>data.end())<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>data[key]<sp/>=<sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>data[key].push_back(pos);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classhyrise_1_1tx_1_1_transaction_manager_1ad488afc2fbd6eeb99c58602b9fd1b53e" refkind="member"><highlight class="normal"><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ad488afc2fbd6eeb99c58602b9fd1b53e" kindref="member">TransactionManager::TransactionManager</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>_transactionCount(ATOMIC_VAR_INIT(tx::<ref refid="namespacehyrise_1_1tx_1a5ae28da55b0a12b788a793d3f85a1e3c" kindref="member">START_TID</ref>)),</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>_commitId(ATOMIC_VAR_INIT(tx::<ref refid="namespacehyrise_1_1tx_1a98d0e59aad5eb78822e01e096032d3e6" kindref="member">UNKNOWN_CID</ref>))<sp/>{}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" refkind="member"><highlight class="normal"><ref refid="classhyrise_1_1tx_1_1_transaction_manager" kindref="compound" tooltip="Transaction manager based on transaction contexts.">TransactionManager</ref>&amp;<sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" kindref="member">TransactionManager::getInstance</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager" kindref="compound" tooltip="Transaction manager based on transaction contexts.">TransactionManager</ref><sp/>tm;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tm;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classhyrise_1_1tx_1_1_transaction_manager_1a4e8596f09fae6189a3734e334e660045" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4e8596f09fae6189a3734e334e660045" kindref="member">TransactionManager::getTransactionId</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a64aba8281ee99944aa5c3f3463cfc39b" kindref="member">_transactionCount</ref><sp/>==<sp/>std::numeric_limits&lt;transaction_id_t&gt;::max())<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Out<sp/>of<sp/>transaction<sp/>ids<sp/>-<sp/>reached<sp/>maximum&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>++<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a64aba8281ee99944aa5c3f3463cfc39b" kindref="member">_transactionCount</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classhyrise_1_1tx_1_1_transaction_manager_1a196c28d46f96ad76d98066f943d18ae0" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a196c28d46f96ad76d98066f943d18ae0" kindref="member">TransactionManager::getLastCommitId</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a73360e37382124e982ee0376ce05af34" kindref="member">_commitId</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classhyrise_1_1tx_1_1_transaction_manager_1a56c7ecb330f6056e156564356054a8e8" refkind="member"><highlight class="normal"><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a56c7ecb330f6056e156564356054a8e8" kindref="member">TransactionManager::buildContext</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref><sp/>ctx(<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4e8596f09fae6189a3734e334e660045" kindref="member">getTransactionId</ref>(),<sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a196c28d46f96ad76d98066f943d18ae0" kindref="member">getLastCommitId</ref>());</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ac322895b69bdec0f4138dbd651f38fcc" kindref="member">_txData</ref>([&amp;ctx](<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" kindref="member">map_t</ref>&amp;<sp/>txData)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>txData[ctx.<ref refid="structhyrise_1_1tx_1_1_t_x_context_1adc6aab9c88094904a353b4355f876e24" kindref="member">tid</ref>]<sp/>=<sp/>make_unique&lt;TransactionData&gt;(ctx);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::move(ctx);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classhyrise_1_1tx_1_1_transaction_manager_1ac1a29999f74509bc3b34fd01f521a748" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ac1a29999f74509bc3b34fd01f521a748" kindref="member">TransactionManager::prepareCommit</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>result;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">((result<sp/>=<sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1aa75c20b088d0db31be50e1f4c0540087" kindref="member">tryPrepareCommit</ref>())<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>std::this_thread::yield();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classhyrise_1_1tx_1_1_transaction_manager_1a720ca62cadedeea3133fd476a8311f4a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a720ca62cadedeea3133fd476a8311f4a" kindref="member">TransactionManager::abort</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1aa718a40a00450c3577b2e4b51fcfa18b" kindref="member">_txLock</ref>.<ref refid="classhyrise_1_1locking_1_1_spinlock_1a5b751cba0e9d0c57f33a4eb698f3de3f" kindref="member">is_locked</ref>())</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Cannot<sp/>abort<sp/>a<sp/>not<sp/>running<sp/>transaction.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1aa718a40a00450c3577b2e4b51fcfa18b" kindref="member">_txLock</ref>.<ref refid="classhyrise_1_1locking_1_1_spinlock_1a59ddaf0178ef88bb85c04730b4a62b70" kindref="member">unlock</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classhyrise_1_1tx_1_1_transaction_manager_1aa75c20b088d0db31be50e1f4c0540087" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1aa75c20b088d0db31be50e1f4c0540087" kindref="member">TransactionManager::tryPrepareCommit</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1aa718a40a00450c3577b2e4b51fcfa18b" kindref="member">_txLock</ref>.<ref refid="classhyrise_1_1locking_1_1_spinlock_1a30ae90e78cf80d4727517f9a1d08876f" kindref="member">lock</ref>();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a196c28d46f96ad76d98066f943d18ae0" kindref="member">getLastCommitId</ref>()<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classhyrise_1_1tx_1_1_transaction_manager_1a374f0fc04351f9b913c7a253b624432d" refkind="member"><highlight class="normal"><ref refid="classhyrise_1_1tx_1_1_t_x_modifications" kindref="compound">TXModifications</ref>&amp;<sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a374f0fc04351f9b913c7a253b624432d" kindref="member">TransactionManager::operator[]</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref>&amp;<sp/>key)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ac322895b69bdec0f4138dbd651f38fcc" kindref="member">_txData</ref>([&amp;key]<sp/>(<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" kindref="member">map_t</ref>&amp;<sp/>txData)<sp/>-&gt;<sp/><ref refid="classhyrise_1_1tx_1_1_t_x_modifications" kindref="compound">TXModifications</ref>&amp;<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>EXPENSIVE_ASSERTIONS</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(txData.find(key)<sp/>==<sp/>txData.end())<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Retrieving<sp/>Modification<sp/>Set<sp/>without<sp/>initializing<sp/>it<sp/>first.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>txData[key]-&gt;_modifications;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="classhyrise_1_1tx_1_1_transaction_manager_1a00163e75877b19e9bb320879a0510f97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a00163e75877b19e9bb320879a0510f97" kindref="member">TransactionManager::commit</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1aa718a40a00450c3577b2e4b51fcfa18b" kindref="member">_txLock</ref>.<ref refid="classhyrise_1_1locking_1_1_spinlock_1a5b751cba0e9d0c57f33a4eb698f3de3f" kindref="member">is_locked</ref>())</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Double<sp/>commit<sp/>detected,<sp/>possible<sp/>TX<sp/>corruption&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>++<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a73360e37382124e982ee0376ce05af34" kindref="member">_commitId</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1aa718a40a00450c3577b2e4b51fcfa18b" kindref="member">_txLock</ref>.<ref refid="classhyrise_1_1locking_1_1_spinlock_1a59ddaf0178ef88bb85c04730b4a62b70" kindref="member">unlock</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ad24584829c465c02628035194614acf9" kindref="member">endTransaction</ref>(tid);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classhyrise_1_1tx_1_1_transaction_manager_1a9deffa2f04e07a194e0a0f6a204d7fa9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a9deffa2f04e07a194e0a0f6a204d7fa9" kindref="member">TransactionManager::reset</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a64aba8281ee99944aa5c3f3463cfc39b" kindref="member">_transactionCount</ref><sp/>=<sp/><ref refid="namespacehyrise_1_1tx_1a5ae28da55b0a12b788a793d3f85a1e3c" kindref="member">START_TID</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a73360e37382124e982ee0376ce05af34" kindref="member">_commitId</ref><sp/>=<sp/><ref refid="namespacehyrise_1_1tx_1a98d0e59aad5eb78822e01e096032d3e6" kindref="member">UNKNOWN_CID</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ac322895b69bdec0f4138dbd651f38fcc" kindref="member">_txData</ref>([]<sp/>(<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" kindref="member">map_t</ref>&amp;<sp/>txData)<sp/>{<sp/>txData.clear();<sp/>});</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="group___transaction_1gaec6847072bba8cdf2917268d9bb6b43b" refkind="member"><highlight class="normal"><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref><sp/><ref refid="group___transaction_1gaec6847072bba8cdf2917268d9bb6b43b" kindref="member">TransactionManager::beginTransaction</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" kindref="member">getInstance</ref>().<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a56c7ecb330f6056e156564356054a8e8" kindref="member">buildContext</ref>();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="group___transaction_1ga10e36ee27cd9e7412b57531636d8a135" refkind="member"><highlight class="normal">std::vector&lt;TXContext&gt;<sp/><ref refid="group___transaction_1ga10e36ee27cd9e7412b57531636d8a135" kindref="member">TransactionManager::getRunningTransactionContexts</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" kindref="member">getInstance</ref>().<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ac322895b69bdec0f4138dbd651f38fcc" kindref="member">_txData</ref>([]<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" kindref="member">map_t</ref>&amp;<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;TXContext&gt;<sp/>result;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>kv:<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.push_back(kv.second-&gt;_context);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="group___transaction_1gacebb2b31d01217f3c096223e9c3e4fde" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group___transaction_1gacebb2b31d01217f3c096223e9c3e4fde" kindref="member">TransactionManager::isRunningTransaction</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" kindref="member">getInstance</ref>().<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ac322895b69bdec0f4138dbd651f38fcc" kindref="member">_txData</ref>([&amp;]<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" kindref="member">map_t</ref>&amp;<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data.find(tid)<sp/>!=<sp/>data.end();</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="group___transaction_1gac54ac5e07bfc608be03814bc59725d31" refkind="member"><highlight class="normal"><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref><sp/><ref refid="group___transaction_1gac54ac5e07bfc608be03814bc59725d31" kindref="member">TransactionManager::getContext</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" kindref="member">getInstance</ref>().<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ac322895b69bdec0f4138dbd651f38fcc" kindref="member">_txData</ref>([&amp;tid]<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" kindref="member">map_t</ref>&amp;<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data.at(tid)-&gt;_context;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="group___transaction_1gaa46f17d24ac9a9b29b02da77a401d361" refkind="member"><highlight class="normal"><ref refid="structhyrise_1_1tx_1_1_t_x_data" kindref="compound">TransactionData</ref>&amp;<sp/><ref refid="group___transaction_1gaa46f17d24ac9a9b29b02da77a401d361" kindref="member">TransactionManager::getTransactionData</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" kindref="member">getInstance</ref>().<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ac322895b69bdec0f4138dbd651f38fcc" kindref="member">_txData</ref>([&amp;]<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" kindref="member">map_t</ref>&amp;<sp/>txData)<sp/>-&gt;<sp/><ref refid="structhyrise_1_1tx_1_1_t_x_data" kindref="compound">TransactionData</ref>&amp;<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*txData.at(tid).get();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="namespacehyrise_1_1tx_1a5a4967bb268e63f8b37f87f6f331a25b" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1storage_1a567b68bb9a070f6b7b74bff6b21b7bf0" kindref="member">storage::store_ptr_t</ref><sp/><ref refid="namespacehyrise_1_1tx_1a5a4967bb268e63f8b37f87f6f331a25b" kindref="member">getStore</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref>&amp;<sp/>table)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::const_pointer_cast&lt;<ref refid="classhyrise_1_1storage_1_1_store" kindref="compound">storage::Store</ref>&gt;(</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="checked__cast_8h_1ab1a6688a6284640c3040705ab0ff138c" kindref="member">checked_pointer_cast</ref>&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_store" kindref="compound">storage::Store</ref>&gt;(table));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="classhyrise_1_1tx_1_1_transaction_manager_1ad24584829c465c02628035194614acf9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ad24584829c465c02628035194614acf9" kindref="member">TransactionManager::endTransaction</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>all<sp/>relevant<sp/>data<sp/>for<sp/>this<sp/>transaction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ac322895b69bdec0f4138dbd651f38fcc" kindref="member">_txData</ref>([&amp;tid]<sp/>(<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a4c7e688a58a9057beed60c247be7e0ab" kindref="member">map_t</ref>&amp;<sp/>txData)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/>erased<sp/>=<sp/>txData.erase(tid);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>assert(erased<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="group___transaction_1ga218c1c09962148e64d4438ce8d2239e8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___transaction_1ga218c1c09962148e64d4438ce8d2239e8" kindref="member">TransactionManager::rollbackTransaction</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="group___transaction_1gacebb2b31d01217f3c096223e9c3e4fde" kindref="member">isRunningTransaction</ref>(tid))<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Transaction<sp/>is<sp/>not<sp/>currently<sp/>running&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>unmark<sp/>positions<sp/>previously<sp/>marked<sp/>for<sp/>delete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>txData<sp/>=<sp/><ref refid="group___transaction_1gaa46f17d24ac9a9b29b02da77a401d361" kindref="member">getTransactionData</ref>(tid);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>kv<sp/>:<sp/>txData._modifications.deleted)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>store<sp/>=<sp/><ref refid="namespacehyrise_1_1tx_1a5a4967bb268e63f8b37f87f6f331a25b" kindref="member">getStore</ref>(kv.first.lock());</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>store-&gt;unmarkForDeletion(kv.second,<sp/>tid);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" kindref="member">getInstance</ref>().<ref refid="classhyrise_1_1tx_1_1_transaction_manager_1ad24584829c465c02628035194614acf9" kindref="member">endTransaction</ref>(tid);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="group___transaction_1gae80579845d1ac3afba69b7d8c91b1adf" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref><sp/><ref refid="group___transaction_1gae80579845d1ac3afba69b7d8c91b1adf" kindref="member">TransactionManager::commitTransaction</ref>(<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/>tid)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="group___transaction_1gacebb2b31d01217f3c096223e9c3e4fde" kindref="member">isRunningTransaction</ref>(tid))<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Transaction<sp/>is<sp/>not<sp/>currently<sp/>running&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>txmgr<sp/>=<sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" kindref="member">getInstance</ref>();</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>tx_data<sp/>=<sp/><ref refid="group___transaction_1gaa46f17d24ac9a9b29b02da77a401d361" kindref="member">getTransactionData</ref>(tid);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>_txContext<sp/>=<sp/>tx_data._context;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>modifications<sp/>=<sp/>tx_data._modifications;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>_txContext.cid<sp/>=<sp/>txmgr.prepareCommit();</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>update<sp/>the<sp/>required<sp/>positions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>kv:<sp/>modifications.deleted)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>weak_table<sp/>=<sp/>kv.first;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>deleted<sp/>records<sp/>have<sp/>to<sp/>be<sp/>checked<sp/>for<sp/>validity<sp/>as<sp/>newly<sp/>inserted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>records<sp/>will<sp/>be<sp/>always<sp/>only<sp/>written<sp/>by<sp/>us</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>store<sp/>=<sp/><ref refid="namespacehyrise_1_1tx_1a5a4967bb268e63f8b37f87f6f331a25b" kindref="member">getStore</ref>(weak_table.lock()))<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tx::TX_CODE::TX_OK<sp/>!=<sp/>store-&gt;checkForConcurrentCommit(kv.second,<sp/>tid))<sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txmgr.abort();</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Aborted<sp/>TX<sp/>with<sp/>Last<sp/>Commit<sp/>ID<sp/>!=<sp/>New<sp/>Commit<sp/>ID&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>kv:<sp/>modifications.inserted)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>weak_table<sp/>=<sp/>kv.first;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>store<sp/>=<sp/><ref refid="namespacehyrise_1_1tx_1a5a4967bb268e63f8b37f87f6f331a25b" kindref="member">getStore</ref>(weak_table.lock()))<sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>store-&gt;commitPositions(kv.second,<sp/>_txContext.cid,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>!=<sp/>TX_CODE::TX_OK)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txmgr.abort();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Aborted<sp/>TX<sp/>with<sp/>&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>at<sp/>return<sp/>code<sp/>to<sp/>error<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>kv:<sp/>modifications.deleted)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>weak_table<sp/>=<sp/>kv.first;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>store<sp/>=<sp/><ref refid="namespacehyrise_1_1tx_1a5a4967bb268e63f8b37f87f6f331a25b" kindref="member">getStore</ref>(weak_table.lock()))<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>store-&gt;commitPositions(kv.second,<sp/>_txContext.cid,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>!=<sp/>TX_CODE::TX_OK)<sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txmgr.abort();</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Aborted<sp/>TX<sp/>with<sp/>&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>at<sp/>return<sp/>code<sp/>to<sp/>error<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>txmgr.commit(_txContext.tid);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_txContext.cid;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal">}}</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp"/>
+  </compounddef>
+</doxygen>

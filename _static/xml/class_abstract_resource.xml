@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_abstract_resource" kind="class" prot="public">
+    <compoundname>AbstractResource</compoundname>
+    <derivedcompoundref refid="class_abstract_hash_table" prot="public" virt="non-virtual">AbstractHashTable</derivedcompoundref>
+    <derivedcompoundref refid="class_abstract_index" prot="public" virt="non-virtual">AbstractIndex</derivedcompoundref>
+    <derivedcompoundref refid="class_abstract_table" prot="public" virt="non-virtual">AbstractTable</derivedcompoundref>
+    <derivedcompoundref refid="class_serial" prot="public" virt="non-virtual">Serial</derivedcompoundref>
+    <includes refid="_abstract_resource_8h" local="no">AbstractResource.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_abstract_resource_1acbf6801fec7bf1acf0d90a4fb5d5c706" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>AbstractResource::~AbstractResource</definition>
+        <argsstring>()</argsstring>
+        <name>~AbstractResource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/AbstractResource.h" line="8" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/AbstractResource.cpp" bodystart="3" bodyend="3"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for all storable resources to be used in plans. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1499">
+        <label>AbstractHashTable</label>
+        <link refid="class_abstract_hash_table"/>
+        <childnode refid="1498" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1503">
+        <label>InvertedIndex&lt; T &gt;</label>
+        <link refid="class_inverted_index"/>
+        <childnode refid="1502" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1509">
+        <label>hyrise::storage::TableRangeView</label>
+        <link refid="classhyrise_1_1storage_1_1_table_range_view"/>
+        <childnode refid="1504" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1501">
+        <label>HashTableView&lt; MAP, KEY &gt;</label>
+        <link refid="class_hash_table_view"/>
+        <childnode refid="1499" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1505">
+        <label>hyrise::storage::HorizontalTable</label>
+        <link refid="classhyrise_1_1storage_1_1_horizontal_table"/>
+        <childnode refid="1504" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1500">
+        <label>HashTable&lt; MAP, KEY &gt;</label>
+        <link refid="class_hash_table"/>
+        <childnode refid="1499" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1512">
+        <label>Table</label>
+        <link refid="class_table"/>
+        <childnode refid="1504" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1504">
+        <label>AbstractTable</label>
+        <link refid="class_abstract_table"/>
+        <childnode refid="1498" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1506">
+        <label>hyrise::storage::MutableVerticalTable</label>
+        <link refid="classhyrise_1_1storage_1_1_mutable_vertical_table"/>
+        <childnode refid="1504" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1498">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+      <node id="1508">
+        <label>hyrise::storage::Store</label>
+        <link refid="classhyrise_1_1storage_1_1_store"/>
+        <childnode refid="1504" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1513">
+        <label>Serial</label>
+        <link refid="class_serial"/>
+        <childnode refid="1498" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1510">
+        <label>PointerCalculator</label>
+        <link refid="class_pointer_calculator"/>
+        <childnode refid="1504" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1507">
+        <label>hyrise::storage::SimpleStore</label>
+        <link refid="classhyrise_1_1storage_1_1_simple_store"/>
+        <childnode refid="1504" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1511">
+        <label>RawTable</label>
+        <link refid="class_raw_table"/>
+        <childnode refid="1504" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1502">
+        <label>AbstractIndex</label>
+        <link refid="class_abstract_index"/>
+        <childnode refid="1498" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1514">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/AbstractResource.h" line="6" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/AbstractResource.h" bodystart="6" bodyend="9"/>
+    <listofallmembers>
+      <member refid="class_abstract_resource_1acbf6801fec7bf1acf0d90a4fb5d5c706" prot="public" virt="virtual"><scope>AbstractResource</scope><name>~AbstractResource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

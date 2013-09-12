@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_serial_8cpp" kind="file">
+    <compoundname>Serial.cpp</compoundname>
+    <includes refid="_serial_8h" local="yes">Serial.h</includes>
+    <incdepgraph>
+      <node id="16871">
+        <label>atomic</label>
+      </node>
+      <node id="16869">
+        <label>Serial.h</label>
+        <link refid="_serial_8h"/>
+        <childnode refid="16870" relation="include">
+        </childnode>
+        <childnode refid="16871" relation="include">
+        </childnode>
+      </node>
+      <node id="16870">
+        <label>AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="16868">
+        <label>src/lib/storage/Serial.cpp</label>
+        <link refid="Serial.cpp"/>
+        <childnode refid="16869" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_serial_8h" kindref="compound">Serial.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_serial_1a3667c3137f2df94716b5193f9fb736ab" refkind="member"><highlight class="normal"><ref refid="class_serial_1a3667c3137f2df94716b5193f9fb736ab" kindref="member">Serial::Serial</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><ref refid="class_serial_1a661232cf0e74d391daf3f63d19715a7c" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_serial_1a661232cf0e74d391daf3f63d19715a7c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_serial_1a661232cf0e74d391daf3f63d19715a7c" kindref="member">Serial::reset</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><ref refid="class_serial_1a3ad7ab38ef82a4b25c55b19535fbbdac" kindref="member">_serial</ref><sp/>=<sp/>1ul;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_serial_1a5a718e775c6da7597da2e314136456e8" refkind="member"><highlight class="normal"><ref refid="class_serial_1a7c321529dfc31d9b47e11433ac67e50f" kindref="member">Serial::serial_t</ref><sp/><ref refid="class_serial_1a5a718e775c6da7597da2e314136456e8" kindref="member">Serial::next</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_serial_1a3ad7ab38ef82a4b25c55b19535fbbdac" kindref="member">_serial</ref>++;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.cpp"/>
+  </compounddef>
+</doxygen>

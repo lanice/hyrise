@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_synchronized_8h" kind="file">
+    <compoundname>Synchronized.h</compoundname>
+    <includes local="no">memory</includes>
+    <includedby refid="_transaction_manager_8h" local="yes">src/lib/io/TransactionManager.h</includedby>
+    <incdepgraph>
+      <node id="11068">
+        <label>src/lib/helper/Synchronized.h</label>
+        <link refid="Synchronized.h"/>
+        <childnode refid="11069" relation="include">
+        </childnode>
+      </node>
+      <node id="11069">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11083">
+        <label>src/lib/io/TransactionRouteHandler.cpp</label>
+        <link refid="_transaction_route_handler_8cpp"/>
+      </node>
+      <node id="11078">
+        <label>src/lib/access/system/ResponseTask.cpp</label>
+        <link refid="_response_task_8cpp"/>
+      </node>
+      <node id="11076">
+        <label>src/lib/access/storage/JsonTable.cpp</label>
+        <link refid="_json_table_8cpp"/>
+      </node>
+      <node id="11084">
+        <label>src/lib/storage/Store.cpp</label>
+        <link refid="_store_8cpp"/>
+      </node>
+      <node id="11070">
+        <label>src/lib/helper/Synchronized.h</label>
+        <link refid="Synchronized.h"/>
+        <childnode refid="11071" relation="include">
+        </childnode>
+      </node>
+      <node id="11074">
+        <label>src/lib/access/InsertScan.cpp</label>
+        <link refid="_insert_scan_8cpp"/>
+      </node>
+      <node id="11073">
+        <label>src/lib/access/Delete.cpp</label>
+        <link refid="_delete_8cpp"/>
+      </node>
+      <node id="11082">
+        <label>src/lib/io/TransactionManager.cpp</label>
+        <link refid="_transaction_manager_8cpp"/>
+      </node>
+      <node id="11079">
+        <label>src/lib/access/tx/Commit.cpp</label>
+        <link refid="_commit_8cpp"/>
+      </node>
+      <node id="11077">
+        <label>src/lib/access/system/RequestParseTask.cpp</label>
+        <link refid="_request_parse_task_8cpp"/>
+      </node>
+      <node id="11075">
+        <label>src/lib/access/PosUpdateScan.cpp</label>
+        <link refid="_pos_update_scan_8cpp"/>
+      </node>
+      <node id="11081">
+        <label>src/lib/access/tx/ValidatePositions.cpp</label>
+        <link refid="_validate_positions_8cpp"/>
+      </node>
+      <node id="11072">
+        <label>src/bin/perf_regression/tx_performance.cpp</label>
+        <link refid="tx__performance_8cpp"/>
+      </node>
+      <node id="11080">
+        <label>src/lib/access/tx/Rollback.cpp</label>
+        <link refid="_rollback_8cpp"/>
+      </node>
+      <node id="11071">
+        <label>src/lib/io/TransactionManager.h</label>
+        <link refid="_transaction_manager_8h"/>
+        <childnode refid="11072" relation="include">
+        </childnode>
+        <childnode refid="11073" relation="include">
+        </childnode>
+        <childnode refid="11074" relation="include">
+        </childnode>
+        <childnode refid="11075" relation="include">
+        </childnode>
+        <childnode refid="11076" relation="include">
+        </childnode>
+        <childnode refid="11077" relation="include">
+        </childnode>
+        <childnode refid="11078" relation="include">
+        </childnode>
+        <childnode refid="11079" relation="include">
+        </childnode>
+        <childnode refid="11080" relation="include">
+        </childnode>
+        <childnode refid="11081" relation="include">
+        </childnode>
+        <childnode refid="11082" relation="include">
+        </childnode>
+        <childnode refid="11083" relation="include">
+        </childnode>
+        <childnode refid="11084" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_synchronized" prot="public">Synchronized</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SYNCHRONIZED_H_</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYNCHRONIZED_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>LockT&gt;</highlight></codeline>
+<codeline lineno="7" refid="struct_synchronized" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_synchronized" kindref="compound">Synchronized</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9" refid="struct_synchronized_1a7054998061619dba78dcb56f5fce3c1a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>T<sp/><ref refid="struct_synchronized_1a7054998061619dba78dcb56f5fce3c1a" kindref="member">_t</ref>;</highlight></codeline>
+<codeline lineno="10" refid="struct_synchronized_1ad22c657bc41af3945b67401a5a4f95b3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>LockT<sp/><ref refid="struct_synchronized_1ad22c657bc41af3945b67401a5a4f95b3" kindref="member">_mtx</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12" refid="struct_synchronized_1a9d9d1cc84db37c030daedc4f6dbc69f8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="struct_synchronized_1a9d9d1cc84db37c030daedc4f6dbc69f8" kindref="member">Synchronized</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="13" refid="struct_synchronized_1a748a967ec6bfe7770d3a4209d128ea34" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="struct_synchronized_1a748a967ec6bfe7770d3a4209d128ea34" kindref="member">Synchronized</ref>(T<sp/>t)<sp/>:<sp/><ref refid="struct_synchronized_1a7054998061619dba78dcb56f5fce3c1a" kindref="member">_t</ref>(t)<sp/>{}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Functor&gt;</highlight></codeline>
+<codeline lineno="16" refid="struct_synchronized_1a0f9d23c9c9598f1089761a9e2b7a189f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="struct_synchronized_1a0f9d23c9c9598f1089761a9e2b7a189f" kindref="member">operator()</ref>(<sp/>Functor&amp;&amp;<sp/>f<sp/>)<sp/>const<sp/>-&gt;<sp/>decltype(f(<ref refid="struct_synchronized_1a7054998061619dba78dcb56f5fce3c1a" kindref="member">_t</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;LockT&gt;<sp/>guard(<ref refid="struct_synchronized_1ad22c657bc41af3945b67401a5a4f95b3" kindref="member">_mtx</ref>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>f(_t);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><ref refid="struct_synchronized" kindref="compound">Synchronized</ref>&amp;<sp/><ref refid="struct_synchronized_1a103c0327c2a2a283bdeaa68b502a0b6d" kindref="member">operator=</ref>(<ref refid="struct_synchronized" kindref="compound">Synchronized</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="struct_synchronized" kindref="compound">Synchronized</ref>&amp;<sp/><ref refid="struct_synchronized_1a103c0327c2a2a283bdeaa68b502a0b6d" kindref="member">operator=</ref>(<ref refid="struct_synchronized" kindref="compound">Synchronized</ref><sp/>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="struct_synchronized_1a9d9d1cc84db37c030daedc4f6dbc69f8" kindref="member">Synchronized</ref>(<ref refid="struct_synchronized" kindref="compound">Synchronized</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="struct_synchronized_1a9d9d1cc84db37c030daedc4f6dbc69f8" kindref="member">Synchronized</ref>(<ref refid="struct_synchronized" kindref="compound">Synchronized</ref><sp/>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/Synchronized.h"/>
+  </compounddef>
+</doxygen>

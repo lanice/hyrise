@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classhyrise_1_1tx_1_1_request_handler" kind="class" prot="public" abstract="yes">
+    <compoundname>hyrise::tx::RequestHandler</compoundname>
+    <basecompoundref refid="classhyrise_1_1net_1_1_abstract_request_handler" prot="public" virt="non-virtual">hyrise::net::AbstractRequestHandler</basecompoundref>
+    <derivedcompoundref refid="classhyrise_1_1tx_1_1_transaction_status_handler" prot="public" virt="non-virtual">hyrise::tx::TransactionStatusHandler</derivedcompoundref>
+    <includes refid="_transaction_route_handler_8h" local="no">TransactionRouteHandler.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classhyrise_1_1tx_1_1_request_handler_1ab8b579b4a0fbdab35d2bc3ae2720fd22" prot="protected" static="no" mutable="no">
+        <type><ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref> *</type>
+        <definition>net::AbstractConnection* hyrise::tx::RequestHandler::_connection</definition>
+        <argsstring></argsstring>
+        <name>_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionRouteHandler.h" line="18" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionRouteHandler.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_request_handler_1a3d474ba35e2ed3c4398f81e2a9edef05" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::tx::RequestHandler::RequestHandler</definition>
+        <argsstring>(net::AbstractConnection *c)</argsstring>
+        <name>RequestHandler</name>
+        <param>
+          <type><ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionRouteHandler.h" line="14" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionRouteHandler.h" bodystart="13" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_request_handler_1af504b2ed3c56d7e368ef80b2216f79b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::tx::RequestHandler::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <reimplements refid="class_task_1ae3a87b98fa47e03ab2f48b53aa257b69">operator()</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionRouteHandler.h" line="15" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionRouteHandler.cpp" bodystart="18" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1tx_1_1_request_handler_1af197f892626b70f8540e56a552d1aa47" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string hyrise::tx::RequestHandler::processRequest</definition>
+        <argsstring>()=0</argsstring>
+        <name>processRequest</name>
+        <reimplementedby refid="classhyrise_1_1tx_1_1_transaction_status_handler_1a8bcb9b3ccca1618ecfc101668073719c">processRequest</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionRouteHandler.h" line="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3143">
+        <label>hyrise::net::AbstractRequestHandler</label>
+        <link refid="classhyrise_1_1net_1_1_abstract_request_handler"/>
+        <childnode refid="3144" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3145">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="3144">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3145" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3146" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3146">
+        <label>std::enable_shared_from_this&lt; Task &gt;</label>
+      </node>
+      <node id="3142">
+        <label>hyrise::tx::RequestHandler</label>
+        <link refid="classhyrise_1_1tx_1_1_request_handler"/>
+        <childnode refid="3143" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3147">
+        <label>hyrise::tx::TransactionStatusHandler</label>
+        <link refid="classhyrise_1_1tx_1_1_transaction_status_handler"/>
+        <childnode refid="3142" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3149">
+        <label>hyrise::net::AbstractRequestHandler</label>
+        <link refid="classhyrise_1_1net_1_1_abstract_request_handler"/>
+        <childnode refid="3150" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3151">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="3153">
+        <label>hyrise::net::AbstractConnection</label>
+        <link refid="classhyrise_1_1net_1_1_abstract_connection"/>
+      </node>
+      <node id="3150">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3151" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3152" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3152">
+        <label>std::enable_shared_from_this&lt; Task &gt;</label>
+      </node>
+      <node id="3148">
+        <label>hyrise::tx::RequestHandler</label>
+        <link refid="classhyrise_1_1tx_1_1_request_handler"/>
+        <childnode refid="3149" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3153" relation="usage">
+          <edgelabel>#_connection</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionRouteHandler.h" line="11" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionRouteHandler.h" bodystart="11" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_task_1ae86d264d411c0a0476085734c27a84b0" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_actualNode</name></member>
+      <member refid="classhyrise_1_1tx_1_1_request_handler_1ab8b579b4a0fbdab35d2bc3ae2720fd22" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_connection</name></member>
+      <member refid="class_task_1ab25d10a171c2efc2dcdf4ec7b81d148d" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_dependencies</name></member>
+      <member refid="class_task_1a432b54ea5cdbf8f875c756c70710b69e" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_dependencyWaitCount</name></member>
+      <member refid="class_task_1a10259a6dde7645e32c32262818339c8c" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_depMutex</name></member>
+      <member refid="class_task_1af277c65727e285efbf965633851ec9d8" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_doneObservers</name></member>
+      <member refid="class_task_1a8909ff1653cd9a685af7256976e4e334" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_id</name></member>
+      <member refid="class_task_1a778ed5c766f4098184c31a656fe471ed" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_notifyMutex</name></member>
+      <member refid="class_task_1a6a0d1fa3b37cb2e7896ea23049798b36" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_observerMutex</name></member>
+      <member refid="class_task_1aa7b21c6482b905c04f354c738341beb3" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_preferredCore</name></member>
+      <member refid="class_task_1abeb3d34a483638fad8c93bb3baff50f5" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_preferredNode</name></member>
+      <member refid="class_task_1a6fbb4614f260802e6204e339f4480004" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_priority</name></member>
+      <member refid="class_task_1a7f7f81090a389fd5cf79747e165fe0f4" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_readyObservers</name></member>
+      <member refid="class_task_1a5515868bfb7db5ad936cafdf6b8e65c7" prot="protected" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>_sessionId</name></member>
+      <member refid="class_task_1aa9e65a15e122de040bb914ab144577b8" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>addDependency</name></member>
+      <member refid="class_task_1a0e4ebf7ad5313f027aa16d250685604a" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>addDoneObserver</name></member>
+      <member refid="class_task_1a9726ca1f4c6712a3516cb05121479f25" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>addReadyObserver</name></member>
+      <member refid="class_task_1afedc05b69ebd406b7fdb42391f4eef2a" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>DEFAULT_PRIORITY</name></member>
+      <member refid="class_task_1a48d72f6b05c55e6fed32f137d5d17cf6" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>getActualNode</name></member>
+      <member refid="class_task_1a75f0a4940cdd338c2ba538200bfcdddf" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>getDependencyCount</name></member>
+      <member refid="class_task_1a85363a10fc3b2272b30e1c24846ab237" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>getId</name></member>
+      <member refid="class_task_1a4a3f6f336369d8e2d6a92fae0690c143" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>getPreferredCore</name></member>
+      <member refid="class_task_1ad775abf82380305e56bb9a1847f76ece" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>getPreferredNode</name></member>
+      <member refid="class_task_1a4d9b4764c7365be48eee4393e87ca92b" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>getPriority</name></member>
+      <member refid="class_task_1a1a5953e7f9dfc732ce1f3d8a914439b4" prot="public" virt="virtual"><scope>hyrise::tx::RequestHandler</scope><name>getQueryDuration</name></member>
+      <member refid="class_task_1a28ea4fab3bbd5b803f9aa7e4b4300820" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>getSessionId</name></member>
+      <member refid="class_task_1a769a8fb688ddaed2870faeea61d84ca0" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>hasSuccessors</name></member>
+      <member refid="class_task_1afb865392382a2c3f1a13e962d5ba3b1e" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>HIGH_PRIORITY</name></member>
+      <member refid="class_task_1ab7307de77d5baf3dfec0269996d81543" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>isReady</name></member>
+      <member refid="class_task_1aeb0d741352700686296e742bc21e4362" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>lockForNotifications</name></member>
+      <member refid="class_task_1af0efeb0207f95415ca556e19bc62d60e" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>NO_PREFERRED_CORE</name></member>
+      <member refid="class_task_1a38563fd60f45377e73b8030945f9fdc8" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>NO_PREFERRED_NODE</name></member>
+      <member refid="class_task_1aa729cd30e7135f2851dd625679aa8556" prot="public" virt="virtual"><scope>hyrise::tx::RequestHandler</scope><name>notifyDone</name></member>
+      <member refid="class_task_1a82157fda3766f4331966baf74e8206fa" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>notifyDoneObservers</name></member>
+      <member refid="class_task_1a793f3db3f39a9ea7352078f235ee7843" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>notifyReadyObservers</name></member>
+      <member refid="classhyrise_1_1tx_1_1_request_handler_1af504b2ed3c56d7e368ef80b2216f79b1" prot="public" virt="virtual"><scope>hyrise::tx::RequestHandler</scope><name>operator()</name></member>
+      <member refid="classhyrise_1_1tx_1_1_request_handler_1af197f892626b70f8540e56a552d1aa47" prot="public" virt="pure-virtual"><scope>hyrise::tx::RequestHandler</scope><name>processRequest</name></member>
+      <member refid="classhyrise_1_1tx_1_1_request_handler_1a3d474ba35e2ed3c4398f81e2a9edef05" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>RequestHandler</name></member>
+      <member refid="class_task_1a8df8b7cbdf23d35317488316bba3ebe2" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>SESSION_ID_NOT_SET</name></member>
+      <member refid="class_task_1af9b0b825e5ffb8de9c6a1a71438f4b5b" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>setActualNode</name></member>
+      <member refid="class_task_1a6c3e7a3b19e50d8fcad5a084ef6b7312" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>setId</name></member>
+      <member refid="class_task_1a1b8e520f60e9f41a3c1331e4e9e4b3ca" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>setPreferredCore</name></member>
+      <member refid="class_task_1a59960c60425c5d5ed2e8ff52e4538ff2" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>setPreferredNode</name></member>
+      <member refid="class_task_1acc93078022eabed8325f164e4eedc37a" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>setPriority</name></member>
+      <member refid="class_task_1a688bd7a4f5f659d049667c08fd330cfd" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>setSessionId</name></member>
+      <member refid="classhyrise_1_1net_1_1_abstract_request_handler_1a22c7c6e6ea6e7cedb23196f5871b5aca" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>SharedPtr</name></member>
+      <member refid="class_task_1a0ca53354bdc006762a0fda68c64f7608" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>Task</name></member>
+      <member refid="class_task_1a35af9de734c94c39981a2b199790e288" prot="public" virt="non-virtual"><scope>hyrise::tx::RequestHandler</scope><name>unlockForNotifications</name></member>
+      <member refid="class_task_1a091bff6c1c11bfc202e53280b5af62e7" prot="public" virt="pure-virtual"><scope>hyrise::tx::RequestHandler</scope><name>vname</name></member>
+      <member refid="classhyrise_1_1net_1_1_abstract_request_handler_1afe4d99aa43e91ffd9df791076cde3741" prot="public" virt="virtual"><scope>hyrise::tx::RequestHandler</scope><name>~AbstractRequestHandler</name></member>
+      <member refid="class_task_1a7bff79cc05fa4511c72048d33591503b" prot="public" virt="virtual"><scope>hyrise::tx::RequestHandler</scope><name>~Task</name></member>
+      <member refid="class_task_done_observer_1a9b5fa53c4893dfc998aedca72b8dd278" prot="public" virt="virtual"><scope>hyrise::tx::RequestHandler</scope><name>~TaskDoneObserver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

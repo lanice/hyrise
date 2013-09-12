@@ -1,0 +1,772 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_generic_expressions_8h" kind="file">
+    <compoundname>GenericExpressions.h</compoundname>
+    <includes local="yes">json.h</includes>
+    <includes refid="_abstract_expression_8h" local="yes">access/expressions/AbstractExpression.h</includes>
+    <includes refid="_generic_expressions_8inc" local="yes">access/expressions/GenericExpressions.inc</includes>
+    <includes refid="_fixed_length_vector_8h" local="yes">storage/FixedLengthVector.h</includes>
+    <includes refid="_store_8h" local="yes">storage/Store.h</includes>
+    <includes refid="storage__types_8h" local="yes">storage/storage_types.h</includes>
+    <includes refid="types_8h" local="yes">helper/types.h</includes>
+    <includes refid="make__unique_8h" local="yes">helper/make_unique.h</includes>
+    <includes refid="vector__helpers_8h" local="yes">helper/vector_helpers.h</includes>
+    <includedby refid="_generic_expressions_8cpp" local="yes">src/lib/access/expressions/GenericExpressions.cpp</includedby>
+    <incdepgraph>
+      <node id="3050">
+        <label>storage/OrderPreservingDictionary.h</label>
+        <link refid="_order_preserving_dictionary_8h"/>
+        <childnode refid="3051" relation="include">
+        </childnode>
+        <childnode refid="3012" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3032" relation="include">
+        </childnode>
+        <childnode refid="3031" relation="include">
+        </childnode>
+        <childnode refid="3020" relation="include">
+        </childnode>
+      </node>
+      <node id="3007">
+        <label>atomic</label>
+      </node>
+      <node id="3029">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="3020" relation="include">
+        </childnode>
+        <childnode refid="3030" relation="include">
+        </childnode>
+        <childnode refid="3031" relation="include">
+        </childnode>
+      </node>
+      <node id="3042">
+        <label>functional</label>
+      </node>
+      <node id="3000">
+        <label>limits</label>
+      </node>
+      <node id="3024">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="3025" relation="include">
+        </childnode>
+        <childnode refid="3007" relation="include">
+        </childnode>
+      </node>
+      <node id="3051">
+        <label>assert.h</label>
+      </node>
+      <node id="3044">
+        <label>iterator</label>
+      </node>
+      <node id="3056">
+        <label>storage/PrettyPrinter.h</label>
+        <link refid="_pretty_printer_8h"/>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="3057" relation="include">
+        </childnode>
+        <childnode refid="3058" relation="include">
+        </childnode>
+      </node>
+      <node id="3052">
+        <label>storage/OrderIndifferentDictionary.h</label>
+        <link refid="_order_indifferent_dictionary_8h"/>
+        <childnode refid="3053" relation="include">
+        </childnode>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="3054" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3055" relation="include">
+        </childnode>
+        <childnode refid="3020" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3031" relation="include">
+        </childnode>
+      </node>
+      <node id="3033">
+        <label>boost/iterator/iterator_facade.hpp</label>
+      </node>
+      <node id="2998">
+        <label>cstdint</label>
+      </node>
+      <node id="3049">
+        <label>storage/ValueIdMap.hpp</label>
+        <link refid="_value_id_map_8hpp"/>
+        <childnode refid="3050" relation="include">
+        </childnode>
+        <childnode refid="3052" relation="include">
+        </childnode>
+      </node>
+      <node id="3021">
+        <label>stdint.h</label>
+      </node>
+      <node id="3006">
+        <label>cmath</label>
+      </node>
+      <node id="3036">
+        <label>cassert</label>
+      </node>
+      <node id="3009">
+        <label>stdexcept</label>
+      </node>
+      <node id="3043">
+        <label>numeric</label>
+      </node>
+      <node id="3003">
+        <label>storage/FixedLengthVector.h</label>
+        <link refid="_fixed_length_vector_8h"/>
+        <childnode refid="3004" relation="include">
+        </childnode>
+        <childnode refid="3005" relation="include">
+        </childnode>
+        <childnode refid="3006" relation="include">
+        </childnode>
+        <childnode refid="3007" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3008" relation="include">
+        </childnode>
+        <childnode refid="2999" relation="include">
+        </childnode>
+        <childnode refid="3009" relation="include">
+        </childnode>
+        <childnode refid="3010" relation="include">
+        </childnode>
+        <childnode refid="3011" relation="include">
+        </childnode>
+        <childnode refid="3013" relation="include">
+        </childnode>
+      </node>
+      <node id="3026">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="2998" relation="include">
+        </childnode>
+        <childnode refid="3027" relation="include">
+        </childnode>
+      </node>
+      <node id="3018">
+        <label>storage/Table.h</label>
+        <link refid="_table_8h"/>
+        <childnode refid="2999" relation="include">
+        </childnode>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="3019" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+        <childnode refid="3030" relation="include">
+        </childnode>
+        <childnode refid="3013" relation="include">
+        </childnode>
+        <childnode refid="3034" relation="include">
+        </childnode>
+      </node>
+      <node id="2999">
+        <label>string</label>
+      </node>
+      <node id="3059">
+        <label>helper/make_unique.h</label>
+        <link refid="make__unique_8h"/>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3060" relation="include">
+        </childnode>
+        <childnode refid="3061" relation="include">
+        </childnode>
+      </node>
+      <node id="3017">
+        <label>storage/MutableVerticalTable.h</label>
+        <link refid="_mutable_vertical_table_8h"/>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="2999" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="3018" relation="include">
+        </childnode>
+        <childnode refid="3037" relation="include">
+        </childnode>
+        <childnode refid="3019" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+      </node>
+      <node id="3054">
+        <label>map</label>
+      </node>
+      <node id="3048">
+        <label>storage/SequentialHeapMerger.h</label>
+        <link refid="_sequential_heap_merger_8h"/>
+        <childnode refid="3049" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+        <childnode refid="3045" relation="include">
+        </childnode>
+      </node>
+      <node id="3014">
+        <label>storage/AbstractAttributeVector.h</label>
+        <link refid="_abstract_attribute_vector_8h"/>
+        <childnode refid="3015" relation="include">
+        </childnode>
+      </node>
+      <node id="3053">
+        <label>exception</label>
+      </node>
+      <node id="3022">
+        <label>ostream</label>
+      </node>
+      <node id="2994">
+        <label>json.h</label>
+      </node>
+      <node id="3055">
+        <label>limits.h</label>
+      </node>
+      <node id="3040">
+        <label>helper/vector_helpers.h</label>
+        <link refid="vector__helpers_8h"/>
+        <childnode refid="3041" relation="include">
+        </childnode>
+        <childnode refid="3042" relation="include">
+        </childnode>
+        <childnode refid="3043" relation="include">
+        </childnode>
+        <childnode refid="3044" relation="include">
+        </childnode>
+      </node>
+      <node id="3013">
+        <label>storage/BaseAttributeVector.h</label>
+        <link refid="_base_attribute_vector_8h"/>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3009" relation="include">
+        </childnode>
+        <childnode refid="3014" relation="include">
+        </childnode>
+      </node>
+      <node id="3020">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="2999" relation="include">
+        </childnode>
+        <childnode refid="3009" relation="include">
+        </childnode>
+        <childnode refid="3021" relation="include">
+        </childnode>
+        <childnode refid="3022" relation="include">
+        </childnode>
+      </node>
+      <node id="3031">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="3032" relation="include">
+        </childnode>
+        <childnode refid="3033" relation="include">
+        </childnode>
+      </node>
+      <node id="3037">
+        <label>storage/TableFactory.h</label>
+        <link refid="_table_factory_8h"/>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+        <childnode refid="3018" relation="include">
+        </childnode>
+      </node>
+      <node id="3002">
+        <label>access/expressions/GenericExpressions.inc</label>
+        <link refid="_generic_expressions_8inc"/>
+      </node>
+      <node id="3019">
+        <label>storage/ColumnMetadata.h</label>
+        <link refid="_column_metadata_8h"/>
+        <childnode refid="3020" relation="include">
+        </childnode>
+        <childnode refid="2999" relation="include">
+        </childnode>
+        <childnode refid="3009" relation="include">
+        </childnode>
+      </node>
+      <node id="3047">
+        <label>storage/TableUtils.h</label>
+        <link refid="_table_utils_8h"/>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3046" relation="include">
+        </childnode>
+      </node>
+      <node id="3034">
+        <label>storage/AttributeVectorFactory.h</label>
+        <link refid="_attribute_vector_factory_8h"/>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3013" relation="include">
+        </childnode>
+        <childnode refid="3003" relation="include">
+        </childnode>
+        <childnode refid="3035" relation="include">
+        </childnode>
+      </node>
+      <node id="3032">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="2996">
+        <label>vector</label>
+      </node>
+      <node id="3045">
+        <label>storage/AbstractMerger.h</label>
+        <link refid="_abstract_merger_8h"/>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="3046" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+        <childnode refid="3047" relation="include">
+        </childnode>
+      </node>
+      <node id="3061">
+        <label>utility</label>
+      </node>
+      <node id="3027">
+        <label>array</label>
+      </node>
+      <node id="3010">
+        <label>sstream</label>
+      </node>
+      <node id="3038">
+        <label>storage/TableMerger.h</label>
+        <link refid="_table_merger_8h"/>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+        <childnode refid="3039" relation="include">
+        </childnode>
+        <childnode refid="3045" relation="include">
+        </childnode>
+      </node>
+      <node id="3004">
+        <label>cerrno</label>
+      </node>
+      <node id="3012">
+        <label>iostream</label>
+      </node>
+      <node id="3015">
+        <label>cstddef</label>
+      </node>
+      <node id="3046">
+        <label>unordered_map</label>
+      </node>
+      <node id="3028">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="3008">
+        <label>mutex</label>
+      </node>
+      <node id="3030">
+        <label>storage/AbstractDictionary.h</label>
+        <link refid="_abstract_dictionary_8h"/>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="2999" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3020" relation="include">
+        </childnode>
+      </node>
+      <node id="3023">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="3000" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3009" relation="include">
+        </childnode>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="2999" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="3024" relation="include">
+        </childnode>
+        <childnode refid="3026" relation="include">
+        </childnode>
+        <childnode refid="3028" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3020" relation="include">
+        </childnode>
+      </node>
+      <node id="3058">
+        <label>helper/RangeIter.h</label>
+        <link refid="_range_iter_8h"/>
+      </node>
+      <node id="3025">
+        <label>thread</label>
+      </node>
+      <node id="2997">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2998" relation="include">
+        </childnode>
+        <childnode refid="2999" relation="include">
+        </childnode>
+        <childnode refid="3000" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="2996" relation="include">
+        </childnode>
+      </node>
+      <node id="3011">
+        <label>memory/MallocStrategy.h</label>
+        <link refid="_malloc_strategy_8h"/>
+        <childnode refid="3012" relation="include">
+        </childnode>
+        <childnode refid="2998" relation="include">
+        </childnode>
+      </node>
+      <node id="2993">
+        <label>src/lib/access/expressions/GenericExpressions.h</label>
+        <link refid="GenericExpressions.h"/>
+        <childnode refid="2994" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+        <childnode refid="3002" relation="include">
+        </childnode>
+        <childnode refid="3003" relation="include">
+        </childnode>
+        <childnode refid="3016" relation="include">
+        </childnode>
+        <childnode refid="3020" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3040" relation="include">
+        </childnode>
+      </node>
+      <node id="2995">
+        <label>access/expressions/AbstractExpression.h</label>
+        <link refid="_abstract_expression_8h"/>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+      </node>
+      <node id="3060">
+        <label>type_traits</label>
+      </node>
+      <node id="3039">
+        <label>storage/AbstractMergeStrategy.h</label>
+        <link refid="_abstract_merge_strategy_8h"/>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+        <childnode refid="3040" relation="include">
+        </childnode>
+      </node>
+      <node id="3016">
+        <label>storage/Store.h</label>
+        <link refid="_store_8h"/>
+        <childnode refid="3017" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+        <childnode refid="3038" relation="include">
+        </childnode>
+        <childnode refid="3039" relation="include">
+        </childnode>
+        <childnode refid="3048" relation="include">
+        </childnode>
+        <childnode refid="3056" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+      </node>
+      <node id="3035">
+        <label>storage/BitCompressedVector.h</label>
+        <link refid="_bit_compressed_vector_8h"/>
+        <childnode refid="3036" relation="include">
+        </childnode>
+        <childnode refid="3006" relation="include">
+        </childnode>
+        <childnode refid="2998" relation="include">
+        </childnode>
+        <childnode refid="3005" relation="include">
+        </childnode>
+        <childnode refid="3008" relation="include">
+        </childnode>
+        <childnode refid="2999" relation="include">
+        </childnode>
+        <childnode refid="3009" relation="include">
+        </childnode>
+        <childnode refid="3011" relation="include">
+        </childnode>
+        <childnode refid="3013" relation="include">
+        </childnode>
+      </node>
+      <node id="3057">
+        <label>ftprinter/FTPrinter.h</label>
+      </node>
+      <node id="3041">
+        <label>algorithm</label>
+      </node>
+      <node id="3005">
+        <label>cstring</label>
+      </node>
+      <node id="3001">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3063">
+        <label>src/lib/access/expressions/GenericExpressions.cpp</label>
+        <link refid="_generic_expressions_8cpp"/>
+      </node>
+      <node id="3062">
+        <label>src/lib/access/expressions/GenericExpressions.h</label>
+        <link refid="GenericExpressions.h"/>
+        <childnode refid="3063" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structhyrise_1_1access_1_1_generic_expressions_helper" prot="public">hyrise::access::GenericExpressionsHelper</innerclass>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1access">hyrise::access</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_generic_expressions_8h_1a875140be564ed13020df4560982aef90" prot="public" static="no">
+        <name>FLD_1</name>
+        <initializer>(f1)(<ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref>)(==)(asUInt64)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" line="57" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_generic_expressions_8h_1abdbf2d0d1db33f03293d8bbf6a63352d" prot="public" static="no">
+        <name>FLD_2</name>
+        <initializer>(f2)(<ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref>)(==)(asUInt64)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" line="58" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_generic_expressions_8h_1a208308d05c5f0dc9e75fa527c89cc02e" prot="public" static="no">
+        <name>FLD_3</name>
+        <initializer>(f3)(<ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref>)(==)(asUInt64)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" line="59" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_generic_expressions_8h_1a7fe32cd94f7a758b2eb50dfeec77bd79" prot="public" static="no">
+        <name>STORE_THREE_FIELD_SEQ</name>
+        <initializer>(<ref refid="_generic_expressions_8h_1a875140be564ed13020df4560982aef90" kindref="member">FLD_1</ref>)(<ref refid="_generic_expressions_8h_1abdbf2d0d1db33f03293d8bbf6a63352d" kindref="member">FLD_2</ref>)(<ref refid="_generic_expressions_8h_1a208308d05c5f0dc9e75fa527c89cc02e" kindref="member">FLD_3</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" line="61" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_generic_expressions_8h_1a4ad290dc60c2cace151fb8c72393bfec" prot="public" static="no">
+        <name>STORE_THREE_FIELD_LOG</name>
+        <initializer>()(&amp;&amp;)(&amp;&amp;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" line="63" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_generic_expressions_8h_1a7982be2007450f2c1b40c025defe8552" prot="public" static="no">
+        <name>STORE_ONE_FIELD_SEQ</name>
+        <initializer>((f1)(<ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref>)(==)(asUInt64))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" line="74" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_generic_expressions_8h_1ae4429c5f4aef9a951167260909bb7faf" prot="public" static="no">
+        <name>STORE_TWO_FIELD_SEQ_FLD1</name>
+        <initializer>(f1)(<ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref>)(==)(asUInt64)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" line="80" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_generic_expressions_8h_1acf03bdc9faaf263d48f30ee3d86b1655" prot="public" static="no">
+        <name>STORE_TWO_FIELD_SEQ_FLD2</name>
+        <initializer>(f2)(<ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref>)(==)(asUInt64)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" line="81" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_generic_expressions_8h_1a1239ed729f84711e257b2546688994ac" prot="public" static="no">
+        <name>STORE_TWO_FIELD_SEQ</name>
+        <initializer>(<ref refid="_generic_expressions_8h_1ae4429c5f4aef9a951167260909bb7faf" kindref="member">STORE_TWO_FIELD_SEQ_FLD1</ref>)(<ref refid="_generic_expressions_8h_1acf03bdc9faaf263d48f30ee3d86b1655" kindref="member">STORE_TWO_FIELD_SEQ_FLD2</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" line="82" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_ACCESS_EXPRESSIONS_GENERICEXPRESSIONS_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_ACCESS_EXPRESSIONS_GENERICEXPRESSIONS_H_</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;json.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_expression_8h" kindref="compound">access/expressions/AbstractExpression.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_generic_expressions_8inc" kindref="compound">access/expressions/GenericExpressions.inc</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_fixed_length_vector_8h" kindref="compound">storage/FixedLengthVector.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_store_8h" kindref="compound">storage/Store.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="storage__types_8h" kindref="compound">storage/storage_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">helper/types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="make__unique_8h" kindref="compound">helper/make_unique.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vector__helpers_8h" kindref="compound">helper/vector_helpers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">access<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>Defining<sp/>Generic<sp/>Expressions</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>This<sp/>module<sp/>is<sp/>the<sp/>place<sp/>to<sp/>define<sp/>custom<sp/>expressions<sp/>as<sp/>you<sp/>need<sp/>them<sp/>for</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>query<sp/>execution<sp/>in<sp/>the<sp/>TableScan<sp/>plan<sp/>operation.<sp/>Expressions<sp/>are<sp/>basically</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>a<sp/>class<sp/>that<sp/>provides<sp/>a<sp/>match<sp/>method<sp/>that<sp/>is<sp/>called<sp/>for<sp/>every<sp/>row<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>source<sp/>tables.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>The<sp/>two<sp/>most<sp/>important<sp/>macros<sp/>are:</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/><sp/>-<sp/>DEFINE_EXPRESSION_CLASS(<sp/>name,<sp/>field_sequence,<sp/>logic_sequence)</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/><sp/>-<sp/>REGISTER_EXPRESSION_CLASS(<sp/>name<sp/>)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>The<sp/>first<sp/>defines<sp/>and<sp/>implements<sp/>the<sp/>ncessary<sp/>methods<sp/>for<sp/>a<sp/>given<sp/>field</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/>definitino.<sp/>A<sp/>field<sp/>definition<sp/>is<sp/>a<sp/>sequnce<sp/>in<sp/>terms<sp/>of<sp/>C++<sp/>macros<sp/>and<sp/>has</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>exactly<sp/>4<sp/>values.<sp/>The<sp/>field<sp/>name,<sp/>the<sp/>type,<sp/>the<sp/>comparison<sp/>operator<sp/>and<sp/>the</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>method<sp/>name<sp/>used<sp/>to<sp/>extract<sp/>from<sp/>json.</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>An<sp/>example<sp/>for<sp/>such<sp/>a<sp/>sequence<sp/>is:</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>(f1)(hyrise_int_t)(==)(asUInt)</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>The<sp/>parentheses<sp/>are<sp/>extremeley<sp/>important.<sp/>Now<sp/>the<sp/>paremter<sp/>to<sp/>the<sp/>define</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>macro<sp/>is<sp/>bascially<sp/>a<sp/>sequence<sp/>of<sp/>sequences<sp/>so<sp/>it<sp/>must<sp/>be<sp/>defined<sp/>as</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>(seq1...)(seq2...)(seqn..)</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>The<sp/>logical<sp/>operators<sp/>are<sp/>defined<sp/>in<sp/>the<sp/>same<sp/>way<sp/>as<sp/>a<sp/>sequence<sp/>of<sp/>operations:</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>()(&amp;&amp;)(||)</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>The<sp/>first<sp/>parameter<sp/>is<sp/>always<sp/>empty<sp/>and<sp/>used<sp/>as<sp/>a<sp/>placeholder<sp/>in<sp/>the<sp/>code</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>generation.<sp/>Please<sp/>keep<sp/>the<sp/>evaluation<sp/>order<sp/>and<sp/>operator<sp/>precedence<sp/>in</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/>mind.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structhyrise_1_1access_1_1_generic_expressions_helper" refkind="compound"><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhyrise_1_1access_1_1_generic_expressions_helper" kindref="compound">GenericExpressionsHelper</ref>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="_generic_expressions_8h_1a875140be564ed13020df4560982aef90" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLD_1<sp/>(f1)(hyrise_int_t)(==)(asUInt64)</highlight></codeline>
+<codeline lineno="58" refid="_generic_expressions_8h_1abdbf2d0d1db33f03293d8bbf6a63352d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FLD_2<sp/>(f2)(hyrise_int_t)(==)(asUInt64)</highlight></codeline>
+<codeline lineno="59" refid="_generic_expressions_8h_1a208308d05c5f0dc9e75fa527c89cc02e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FLD_3<sp/>(f3)(hyrise_int_t)(==)(asUInt64)</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="_generic_expressions_8h_1a7fe32cd94f7a758b2eb50dfeec77bd79" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STORE_THREE_FIELD_SEQ<sp/>(FLD_1)(FLD_2)(FLD_3)</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="_generic_expressions_8h_1a4ad290dc60c2cace151fb8c72393bfec" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STORE_THREE_FIELD_LOG<sp/>()(&amp;&amp;)(&amp;&amp;)</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="namespacehyrise_1_1access_1a7c39bbd3bd09b2a667ab7df7108db83e" kindref="member">DEFINE_EXPRESSION_CLASS</ref>(Store_FLV_F1_EQ_INT_AND_F2_EQ_INT_AND_F3_EQ_INT,<sp/><ref refid="_generic_expressions_8h_1a7fe32cd94f7a758b2eb50dfeec77bd79" kindref="member">STORE_THREE_FIELD_SEQ</ref>,<sp/><ref refid="_generic_expressions_8h_1a4ad290dc60c2cace151fb8c72393bfec" kindref="member">STORE_THREE_FIELD_LOG</ref>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="namespacehyrise_1_1access_1a7c39bbd3bd09b2a667ab7df7108db83e" kindref="member">DEFINE_EXPRESSION_CLASS</ref>(Store_FLV_F1_EQ_INT_AND_F2_EQ_INT_AND_F3_EQ_INT_AND_F4_GTE_INT_AND_F5_LTE_INT,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>((f1)(<ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref>)(==)(asUInt64))((f2)(<ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref>)(==)(asUInt64))((f3)(<ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref>)(==)(asUInt64))((f4)(<ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref>)(&gt;=)(asUInt64))((f5)(<ref refid="storage__types_8h_1a72c5f9ba0685142ffc747d0a586a5d8a" kindref="member">hyrise_int_t</ref>)(&lt;=)(asUInt64)),</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>()(&amp;&amp;)(&amp;&amp;)(&amp;&amp;)(&amp;&amp;));</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="_generic_expressions_8h_1a7982be2007450f2c1b40c025defe8552" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STORE_ONE_FIELD_SEQ<sp/>((f1)(hyrise_int_t)(==)(asUInt64))</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"></highlight><highlight class="normal"><ref refid="namespacehyrise_1_1access_1a7c39bbd3bd09b2a667ab7df7108db83e" kindref="member">DEFINE_EXPRESSION_CLASS</ref>(Store_FLV_F1_EQ_INT,<sp/><ref refid="_generic_expressions_8h_1a7982be2007450f2c1b40c025defe8552" kindref="member">STORE_ONE_FIELD_SEQ</ref>,<sp/>());</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><ref refid="namespacehyrise_1_1access_1a7c39bbd3bd09b2a667ab7df7108db83e" kindref="member">DEFINE_EXPRESSION_CLASS</ref>(Store_FLV_F1_EQ_STRING,<sp/>((f1)(<ref refid="storage__types_8h_1af37c27a8a9ec58aee21fbec32a793509" kindref="member">hyrise_string_t</ref>)(==)(asString)),<sp/>());</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><ref refid="namespacehyrise_1_1access_1a7c39bbd3bd09b2a667ab7df7108db83e" kindref="member">DEFINE_EXPRESSION_CLASS</ref>(Store_FLV_F1_EQ_STRING_OR_F2_NEQ_FLOAT,<sp/>((f1)(<ref refid="storage__types_8h_1af37c27a8a9ec58aee21fbec32a793509" kindref="member">hyrise_string_t</ref>)(==)(asString))((f2)(<ref refid="storage__types_8h_1ae1d9f03fd6d4a12d5c63accb4233a2ec" kindref="member">hyrise_float_t</ref>)(!=)(asFloat)),<sp/>()(||));</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="_generic_expressions_8h_1ae4429c5f4aef9a951167260909bb7faf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STORE_TWO_FIELD_SEQ_FLD1<sp/>(f1)(hyrise_int_t)(==)(asUInt64)</highlight></codeline>
+<codeline lineno="81" refid="_generic_expressions_8h_1acf03bdc9faaf263d48f30ee3d86b1655" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>STORE_TWO_FIELD_SEQ_FLD2<sp/>(f2)(hyrise_int_t)(==)(asUInt64)</highlight></codeline>
+<codeline lineno="82" refid="_generic_expressions_8h_1a1239ed729f84711e257b2546688994ac" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>STORE_TWO_FIELD_SEQ<sp/>(STORE_TWO_FIELD_SEQ_FLD1)(STORE_TWO_FIELD_SEQ_FLD2)</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><ref refid="namespacehyrise_1_1access_1a7c39bbd3bd09b2a667ab7df7108db83e" kindref="member">DEFINE_EXPRESSION_CLASS</ref>(Store_FLV_F1_EQ_INT_AND_F2_EQ_INT,<sp/><ref refid="_generic_expressions_8h_1a1239ed729f84711e257b2546688994ac" kindref="member">STORE_TWO_FIELD_SEQ</ref>,<sp/>()(&amp;&amp;));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SRC_LIB_ACCESS_EXPRESSIONS_GENERICEXPRESSIONS_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_w_s_core_bound_priority_queue" kind="class" prot="public">
+    <compoundname>WSCoreBoundPriorityQueue</compoundname>
+    <basecompoundref refid="class_abstract_core_bound_queue" prot="public" virt="non-virtual">AbstractCoreBoundQueue</basecompoundref>
+    <includes refid="_w_s_core_bound_priority_queue_8h" local="no">WSCoreBoundPriorityQueue.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_w_s_core_bound_priority_queue_1aafd79c94edcf9bf36ab6f59ed21ebbe4" prot="private" static="no">
+        <type>tbb::concurrent_priority_queue&lt; std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt;, <ref refid="class_compare_task_ptr" kindref="compound">CompareTaskPtr</ref> &gt;</type>
+        <definition>typedef tbb::concurrent_priority_queue&lt;std::shared_ptr&lt;Task&gt; , CompareTaskPtr&gt; WSCoreBoundPriorityQueue::run_queue_t</definition>
+        <argsstring></argsstring>
+        <name>run_queue_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="19" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_w_s_core_bound_priority_queue_1abc119071619569e197f74fe737d91f77" prot="private" static="no" mutable="no">
+        <type><ref refid="class_w_s_core_bound_priority_queue_1aafd79c94edcf9bf36ab6f59ed21ebbe4" kindref="member">run_queue_t</ref></type>
+        <definition>run_queue_t WSCoreBoundPriorityQueue::_runQueue</definition>
+        <argsstring></argsstring>
+        <name>_runQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="20" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_w_s_core_bound_priority_queue_1a24e599c4e6532922cec0f403c9324353" prot="private" static="no" mutable="no">
+        <type><ref refid="class_w_s_core_bound_priority_queues_scheduler" kindref="compound">WSCoreBoundPriorityQueuesScheduler</ref> *</type>
+        <definition>WSCoreBoundPriorityQueuesScheduler* WSCoreBoundPriorityQueue::_scheduler</definition>
+        <argsstring></argsstring>
+        <name>_scheduler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="21" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_w_s_core_bound_priority_queue_1ae238b5da9e2fe198367d2564cf3958b7" prot="private" static="no" mutable="no">
+        <type>const std::vector&lt; <ref refid="class_abstract_core_bound_queue" kindref="compound">AbstractCoreBoundQueue</ref> * &gt; *</type>
+        <definition>const std::vector&lt;AbstractCoreBoundQueue *&gt;* WSCoreBoundPriorityQueue::_allQueues</definition>
+        <argsstring></argsstring>
+        <name>_allQueues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="22" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_w_s_core_bound_priority_queue_1a71c327d1a207caeef99f09b60ace3b91" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Task &gt; WSCoreBoundPriorityQueue::stealTasks</definition>
+        <argsstring>()</argsstring>
+        <name>stealTasks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="26" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.cpp" bodystart="60" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_w_s_core_bound_priority_queue_1a1eac25b463a493e5c1dcf34f21970a0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WSCoreBoundPriorityQueue::WSCoreBoundPriorityQueue</definition>
+        <argsstring>(int core, WSCoreBoundPriorityQueuesScheduler *scheduler)</argsstring>
+        <name>WSCoreBoundPriorityQueue</name>
+        <param>
+          <type>int</type>
+          <declname>core</declname>
+        </param>
+        <param>
+          <type><ref refid="class_w_s_core_bound_priority_queues_scheduler" kindref="compound">WSCoreBoundPriorityQueuesScheduler</ref> *</type>
+          <declname>scheduler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="29" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.cpp" bodystart="10" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_s_core_bound_priority_queue_1accccb2847bdb1a9794f502817a2eff6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>WSCoreBoundPriorityQueue::~WSCoreBoundPriorityQueue</definition>
+        <argsstring>()</argsstring>
+        <name>~WSCoreBoundPriorityQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="30" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_s_core_bound_priority_queue_1a3153f8da9b6ae0a48ca5eedc662f9615" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WSCoreBoundPriorityQueue::executeTask</definition>
+        <argsstring>()</argsstring>
+        <name>executeTask</name>
+        <reimplements refid="class_abstract_task_queue_1aecd09a5005f34494694c7c40df1bfd40">executeTask</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="35" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.cpp" bodystart="20" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_s_core_bound_priority_queue_1a300e57139b5897f3de4223192492adc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WSCoreBoundPriorityQueue::push</definition>
+        <argsstring>(std::shared_ptr&lt; Task &gt; task)</argsstring>
+        <name>push</name>
+        <reimplements refid="class_abstract_task_queue_1aed7b0329d177e98b522170e2777b08d0">push</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt;</type>
+          <declname>task</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="39" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.cpp" bodystart="92" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_s_core_bound_priority_queue_1af1c1025c2741d5fbce2b279a043810fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt; &gt;</type>
+        <definition>std::vector&lt; std::shared_ptr&lt; Task &gt; &gt; WSCoreBoundPriorityQueue::stopQueue</definition>
+        <argsstring>()</argsstring>
+        <name>stopQueue</name>
+        <reimplements refid="class_abstract_core_bound_queue_1a54462c0fff124727a4cabf46bc9bb11f">stopQueue</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="43" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.cpp" bodystart="99" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_s_core_bound_priority_queue_1a11e4af1025112f005fb71c2dbc6b9d56" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt; &gt;</type>
+        <definition>std::vector&lt; std::shared_ptr&lt; Task &gt; &gt; WSCoreBoundPriorityQueue::emptyQueue</definition>
+        <argsstring>()</argsstring>
+        <name>emptyQueue</name>
+        <reimplements refid="class_abstract_core_bound_queue_1ab10c862a308c1668f13962cf7b68d65e">emptyQueue</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>empty queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="48" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.cpp" bodystart="118" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_s_core_bound_priority_queue_1a1971b359a4924aab93c3b5c4f2dc5374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Task &gt; WSCoreBoundPriorityQueue::stealTask</definition>
+        <argsstring>()</argsstring>
+        <name>stealTask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="52" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.cpp" bodystart="80" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_s_core_bound_priority_queue_1a9d35e6f3bc6a66914d1ed4ccb4b72bca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WSCoreBoundPriorityQueue::refreshQueues</definition>
+        <argsstring>()</argsstring>
+        <name>refreshQueues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="56" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.cpp" bodystart="128" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4032">
+        <label>WSCoreBoundPriorityQueue</label>
+        <link refid="class_w_s_core_bound_priority_queue"/>
+        <childnode refid="4033" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4034">
+        <label>AbstractTaskQueue</label>
+        <link refid="class_abstract_task_queue"/>
+      </node>
+      <node id="4033">
+        <label>AbstractCoreBoundQueue</label>
+        <link refid="class_abstract_core_bound_queue"/>
+        <childnode refid="4034" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4039">
+        <label>AbstractCoreBoundQueuesScheduler</label>
+        <link refid="class_abstract_core_bound_queues_scheduler"/>
+        <childnode refid="4040" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4041" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4035">
+        <label>WSCoreBoundPriorityQueue</label>
+        <link refid="class_w_s_core_bound_priority_queue"/>
+        <childnode refid="4036" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4038" relation="usage">
+          <edgelabel>-_scheduler</edgelabel>
+        </childnode>
+      </node>
+      <node id="4038">
+        <label>WSCoreBoundPriorityQueuesScheduler</label>
+        <link refid="class_w_s_core_bound_priority_queues_scheduler"/>
+        <childnode refid="4039" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4037">
+        <label>AbstractTaskQueue</label>
+        <link refid="class_abstract_task_queue"/>
+      </node>
+      <node id="4040">
+        <label>AbstractTaskScheduler</label>
+        <link refid="class_abstract_task_scheduler"/>
+      </node>
+      <node id="4041">
+        <label>TaskReadyObserver</label>
+        <link refid="class_task_ready_observer"/>
+      </node>
+      <node id="4036">
+        <label>AbstractCoreBoundQueue</label>
+        <link refid="class_abstract_core_bound_queue"/>
+        <childnode refid="4037" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" line="17" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundPriorityQueue.h" bodystart="17" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_w_s_core_bound_priority_queue_1ae238b5da9e2fe198367d2564cf3958b7" prot="private" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>_allQueues</name></member>
+      <member refid="class_abstract_core_bound_queue_1aef36fd9aa88f29f500516395d3160e36" prot="protected" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>_condition</name></member>
+      <member refid="class_abstract_core_bound_queue_1ac95d664429941c1498f375e957646137" prot="protected" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>_core</name></member>
+      <member refid="class_abstract_core_bound_queue_1ab57cf781e1daa5985057b5f1a471b5d2" prot="protected" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>_queueMutex</name></member>
+      <member refid="class_w_s_core_bound_priority_queue_1abc119071619569e197f74fe737d91f77" prot="private" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>_runQueue</name></member>
+      <member refid="class_w_s_core_bound_priority_queue_1a24e599c4e6532922cec0f403c9324353" prot="private" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>_scheduler</name></member>
+      <member refid="class_abstract_core_bound_queue_1ae3052e927bc180940af268739d3cd156" prot="protected" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>_status</name></member>
+      <member refid="class_abstract_core_bound_queue_1a85ec39df5b0715322bd2377d131f61c2" prot="protected" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>_thread</name></member>
+      <member refid="class_abstract_core_bound_queue_1ab10c2fe728ed772291086dd4010f36d8" prot="protected" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>_threadStatusMutex</name></member>
+      <member refid="class_abstract_core_bound_queue_1a2aac4a0e43692ea2810e790d405adde7" prot="protected" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>AbstractCoreBoundQueue</name></member>
+      <member refid="class_w_s_core_bound_priority_queue_1a11e4af1025112f005fb71c2dbc6b9d56" prot="public" virt="virtual"><scope>WSCoreBoundPriorityQueue</scope><name>emptyQueue</name></member>
+      <member refid="class_w_s_core_bound_priority_queue_1a3153f8da9b6ae0a48ca5eedc662f9615" prot="public" virt="virtual"><scope>WSCoreBoundPriorityQueue</scope><name>executeTask</name></member>
+      <member refid="class_abstract_core_bound_queue_1a9ec37ad1ae0f22d1420a2724ffe11ee7" prot="public" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>getCore</name></member>
+      <member refid="class_abstract_core_bound_queue_1a81f5bc3b9ea7aedc2706a9c072096659" prot="public" virt="virtual"><scope>WSCoreBoundPriorityQueue</scope><name>join</name></member>
+      <member refid="class_abstract_core_bound_queue_1a33d99e5749f26892bb2fc917adc52eef" prot="protected" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>launchThread</name></member>
+      <member refid="class_abstract_core_bound_queue_1aaa808d78eed24b10236611a12baa90c6" prot="protected" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>logger</name></member>
+      <member refid="class_w_s_core_bound_priority_queue_1a300e57139b5897f3de4223192492adc7" prot="public" virt="virtual"><scope>WSCoreBoundPriorityQueue</scope><name>push</name></member>
+      <member refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447" prot="public" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>queue_state</name></member>
+      <member refid="class_abstract_task_queue_1ae23c29958eae1e9a30a39638271432e6" prot="public" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>queue_status_t</name></member>
+      <member refid="class_w_s_core_bound_priority_queue_1a9d35e6f3bc6a66914d1ed4ccb4b72bca" prot="public" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>refreshQueues</name></member>
+      <member refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447abbf46a2afa080c3f9d355c407beaa902" prot="public" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>RUN</name></member>
+      <member refid="class_w_s_core_bound_priority_queue_1aafd79c94edcf9bf36ab6f59ed21ebbe4" prot="private" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>run_queue_t</name></member>
+      <member refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447adf73f3cfd7d9d951bad5386fb341026e" prot="public" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>RUN_UNTIL_DONE</name></member>
+      <member refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447a34b422f4936efbfaec6b980a8fde370e" prot="public" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>STARTUP</name></member>
+      <member refid="class_w_s_core_bound_priority_queue_1a1971b359a4924aab93c3b5c4f2dc5374" prot="public" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>stealTask</name></member>
+      <member refid="class_w_s_core_bound_priority_queue_1a71c327d1a207caeef99f09b60ace3b91" prot="private" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>stealTasks</name></member>
+      <member refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447a16003f747b26f2b4d59ec96bdbe5d3ed" prot="public" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>STOPPED</name></member>
+      <member refid="class_w_s_core_bound_priority_queue_1af1c1025c2741d5fbce2b279a043810fa" prot="public" virt="virtual"><scope>WSCoreBoundPriorityQueue</scope><name>stopQueue</name></member>
+      <member refid="class_abstract_task_queue_1a181ee22624d1fe15e03534b049ca7447ab5b55d5fec71f3976fb1767477475a69" prot="public" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>TO_STOP</name></member>
+      <member refid="class_w_s_core_bound_priority_queue_1a1eac25b463a493e5c1dcf34f21970a0f" prot="public" virt="non-virtual"><scope>WSCoreBoundPriorityQueue</scope><name>WSCoreBoundPriorityQueue</name></member>
+      <member refid="class_abstract_core_bound_queue_1aa6dfd5d2c2bd4bd1b4bb8415f6b1c4fb" prot="public" virt="virtual"><scope>WSCoreBoundPriorityQueue</scope><name>~AbstractCoreBoundQueue</name></member>
+      <member refid="class_abstract_task_queue_1af4b704999acefc71422beb78904865bb" prot="public" virt="virtual"><scope>WSCoreBoundPriorityQueue</scope><name>~AbstractTaskQueue</name></member>
+      <member refid="class_w_s_core_bound_priority_queue_1accccb2847bdb1a9794f502817a2eff6e" prot="public" virt="virtual"><scope>WSCoreBoundPriorityQueue</scope><name>~WSCoreBoundPriorityQueue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

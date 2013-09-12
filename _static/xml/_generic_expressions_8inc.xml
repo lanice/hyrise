@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_generic_expressions_8inc" kind="file">
+    <compoundname>GenericExpressions.inc</compoundname>
+    <includedby refid="_generic_expressions_8h" local="yes">src/lib/access/expressions/GenericExpressions.h</includedby>
+    <invincdepgraph>
+      <node id="3067">
+        <label>src/lib/access/expressions/GenericExpressions.cpp</label>
+        <link refid="_generic_expressions_8cpp"/>
+      </node>
+      <node id="3065">
+        <label>src/lib/access/expressions/GenericExpressions.inc</label>
+        <link refid="GenericExpressions.inc"/>
+        <childnode refid="3066" relation="include">
+        </childnode>
+      </node>
+      <node id="3066">
+        <label>src/lib/access/expressions/GenericExpressions.h</label>
+        <link refid="_generic_expressions_8h"/>
+        <childnode refid="3067" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_ACCESS_EXPRESSIONS_GENERICEXPRESSIONS_INC_</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_ACCESS_EXPRESSIONS_GENERICEXPRESSIONS_INC_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/preprocessor.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/preprocessor/seq/elem.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/preprocessor/seq/for_each_i.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPRESSION_ADD_REFERENCE_FIELD(r,<sp/>data,<sp/>seq_field)<sp/>\</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"><sp/><sp/>std::vector&lt;SharedVectorType&gt;<sp/>BOOST_PP_CAT(_vector_,<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>seq_field));<sp/><sp/>\</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"><sp/><sp/>std::vector&lt;size_t&gt;<sp/>BOOST_PP_CAT(_of_,<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>seq_field));\</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"><sp/><sp/>field_t<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>seq_field);\</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"><sp/><sp/>BOOST_PP_SEQ_ELEM(1,<sp/>seq_field)<sp/>BOOST_PP_CAT(v_,<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>seq_field));</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPRESSION_EXTRACT_AV_AND_OFFSET(r,<sp/>data,<sp/>name)<sp/>\</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"><sp/><sp/>const<sp/>auto&amp;<sp/>BOOST_PP_CAT(tmp,<sp/>name)<sp/>=<sp/>_store-&gt;getAttributeVectors(name);<sp/>\</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"><sp/><sp/>BOOST_PP_CAT(_vector_,name)<sp/>=<sp/>hyrise::functional::collect(BOOST_PP_CAT(tmp,<sp/>name),<sp/>[](const<sp/>attr_vector_offset_t&amp;<sp/>v)<sp/>{<sp/>return<sp/>std::dynamic_pointer_cast&lt;VectorType&gt;(v.attribute_vector);<sp/>});<sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"><sp/><sp/>BOOST_PP_CAT(_of_,<sp/>name)<sp/>=<sp/>hyrise::functional::collect(BOOST_PP_CAT(tmp,<sp/>name),<sp/>[](const<sp/>attr_vector_offset_t&amp;<sp/>v)<sp/>{<sp/>return<sp/>v.attribute_offset;<sp/>});</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPR_DATA_VECTOR_NAME(name)<sp/>BOOST_PP_CAT(_vector_,<sp/>name)</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPR_VALUE_VAR_NAME(name)<sp/>BOOST_PP_CAT(v_,name)</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPR_EXTRACT_VID_AND_MAP(r,<sp/>data,<sp/>seq_field)<sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/>auto<sp/>BOOST_PP_CAT(vid_v_,<sp/>BOOST_PP_SEQ_ELEM(0,seq_field))<sp/>=<sp/>_store-&gt;getValueIdForValue&lt;<sp/>BOOST_PP_SEQ_ELEM(1,seq_field)<sp/>&gt;(<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>seq_field),<sp/>BOOST_PP_CAT(v_,<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>seq_field)),<sp/>false,<sp/>part).valueId;<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/>auto<sp/>BOOST_PP_CAT(o,<sp/>BOOST_PP_SEQ_ELEM(0,seq_field))<sp/>=<sp/>BOOST_PP_CAT(_of_,<sp/>BOOST_PP_SEQ_ELEM(0,seq_field))[part];<sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/>auto<sp/>BOOST_PP_CAT(ve_,<sp/>BOOST_PP_SEQ_ELEM(0,seq_field))<sp/>=<sp/>EXPR_DATA_VECTOR_NAME(BOOST_PP_SEQ_ELEM(0,seq_field))[part];</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPR_COMPARE_FIELD(name,<sp/>cmp,<sp/>row)<sp/>BOOST_PP_CAT(vid_v_,name)<sp/>cmp<sp/>BOOST_PP_CAT(ve_,name)-&gt;getRef(BOOST_PP_CAT(o,name),<sp/>row)</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPR_LOGICAL_TWO(op,<sp/>left,<sp/>right)<sp/>(left<sp/>op<sp/>right)</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPR_FIELD_VAL(seq_of_fields,<sp/>i)<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>BOOST_PP_SEQ_ELEM(i,seq_of_fields))</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPR_GET_EXPRESSION(r,<sp/>data,<sp/>i<sp/>,<sp/>seq_field)<sp/>BOOST_PP_SEQ_ELEM(i,<sp/>data)<sp/>EXPR_COMPARE_FIELD(<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>seq_field),<sp/>BOOST_PP_SEQ_ELEM(2,<sp/>seq_field)<sp/>,<sp/>row)</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPR_BUILD_LOOP(pl,<sp/>seq_of_fields,<sp/>seq_logic)<sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/>auto<sp/>pl<sp/>=<sp/>new<sp/>pos_list_t;<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/>size_t<sp/>lower<sp/>=<sp/>0;<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/>pl-&gt;clear();<sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/>const<sp/>auto&amp;<sp/>first_vector<sp/>=<sp/>EXPR_DATA_VECTOR_NAME(EXPR_FIELD_VAL(seq_of_fields,<sp/>0));<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/>size_t<sp/>part_size<sp/>=<sp/>first_vector.size();\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/>part_size<sp/>-=<sp/>_with_delta<sp/>?<sp/>0<sp/>:<sp/>1;\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/>for(size_t<sp/>part<sp/>=0;<sp/>part<sp/>&lt;<sp/>part_size;<sp/>++part)<sp/>{\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>auto<sp/>rows_in_part<sp/>=<sp/>first_vector[part]-&gt;size();<sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>BOOST_PP_SEQ_FOR_EACH(EXPR_EXTRACT_VID_AND_MAP,,<sp/>seq_of_fields);\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(stop<sp/>&lt;<sp/>(rows_in_part<sp/>+<sp/>lower))<sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>rows_in_part<sp/>=<sp/>stop<sp/>+<sp/>lower;<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>for(size_t<sp/>row=0;<sp/>row<sp/>&lt;<sp/>rows_in_part<sp/>;<sp/>++row){\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(<sp/>BOOST_PP_SEQ_FOR_EACH_I(EXPR_GET_EXPRESSION,<sp/>seq_logic,<sp/>seq_of_fields)<sp/>)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pl-&gt;push_back(lower<sp/>+<sp/>row);\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>}\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPR_EXTRACT_FFROM_JSON(r,<sp/>data,<sp/>seq_field)<sp/>\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/>data-&gt;BOOST_PP_SEQ_ELEM(0,<sp/>seq_field)<sp/>=<sp/>val[BOOST_PP_STRINGIZE(BOOST_PP_SEQ_ELEM(0,<sp/>seq_field))].asUInt();\</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"><sp/><sp/>data-&gt;BOOST_PP_CAT(v_,<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>seq_field))<sp/>=<sp/>val[&quot;v_&quot;<sp/>BOOST_PP_STRINGIZE(BOOST_PP_SEQ_ELEM(0,<sp/>seq_field))<sp/>].BOOST_PP_SEQ_ELEM(3,<sp/>seq_field)();\</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>EXPR_TRANSFORM_FIELD_NAMES(s,<sp/>data,<sp/>elem)<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>elem)</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_EXPRESSION_CLASS(name)\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/>namespace<sp/>{<sp/>auto<sp/>BOOST_PP_CAT(reg_,<sp/>name)<sp/>=<sp/>Expressions::add&lt;name&gt;(&quot;hyrise::&quot;<sp/>BOOST_PP_STRINGIZE(name)<sp/>);<sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IMPLEMENT_EXPRESSION_CLASS(name,<sp/>seq_of_fields,<sp/>seq_logic)<sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/>name::name(){}\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/>pos_list_t*<sp/>name::match(const<sp/>size_t<sp/>start,<sp/>const<sp/>size_t<sp/>stop)<sp/>{\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>EXPR_BUILD_LOOP(the_result,<sp/>seq_of_fields,<sp/>seq_logic<sp/>);\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return<sp/>the_result;\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/>}\</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/>void<sp/>name::walk(const<sp/>std::vector&lt;hyrise::storage::c_atable_ptr_t&gt;<sp/>&amp;l)<sp/>{\</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>_store<sp/>=<sp/>std::dynamic_pointer_cast&lt;const<sp/>storage::Store&gt;(l[0]);\</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>BOOST_PP_SEQ_FOR_EACH(EXPRESSION_EXTRACT_AV_AND_OFFSET,,BOOST_PP_SEQ_TRANSFORM(EXPR_TRANSFORM_FIELD_NAMES,,seq_of_fields));\</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"><sp/><sp/>}\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/>std::unique_ptr&lt;name&gt;<sp/>name::parse(const<sp/>Json::Value&amp;<sp/>val)<sp/>{\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>auto<sp/>res<sp/>=<sp/>make_unique&lt;name&gt;();\</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(val.isMember(&quot;withDelta&quot;))<sp/>res-&gt;_with_delta<sp/>=<sp/>val[&quot;withDelta&quot;].asBool();\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>BOOST_PP_SEQ_FOR_EACH(EXPR_EXTRACT_FFROM_JSON,<sp/>res,<sp/>seq_of_fields);\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return<sp/>res;\</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/>}\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DEFINE_EXPRESSION_CLASS(name,<sp/>seq_of_fields,seq_logic)<sp/>\</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/>class<sp/>name<sp/>:<sp/>public<sp/>AbstractExpression<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>VectorType<sp/>=<sp/>FixedLengthVector&lt;value_id_t&gt;;\</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>SharedVectorType<sp/>=<sp/>std::shared_ptr&lt;VectorType&gt;;\</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>hyrise::storage::c_store_ptr_t<sp/>_store;\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>bool<sp/>_with_delta=true;\</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>BOOST_PP_SEQ_FOR_EACH(EXPRESSION_ADD_REFERENCE_FIELD,,seq_of_fields);\</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"><sp/><sp/>public:\</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>name();<sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>virtual<sp/>pos_list_t*<sp/>match(const<sp/>size_t<sp/>start,<sp/>const<sp/>size_t<sp/>stop);\</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>virtual<sp/>void<sp/>walk(const<sp/>std::vector&lt;hyrise::storage::c_atable_ptr_t&gt;<sp/>&amp;l);<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>std::unique_ptr&lt;name&gt;<sp/>parse(const<sp/>Json::Value&amp;<sp/>data);\</highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor"><sp/><sp/>};\</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/>IMPLEMENT_EXPRESSION_CLASS(name,<sp/>seq_of_fields,<sp/>seq_logic);\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SRC_LIB_ACCESS_EXPRESSIONS_GENERICEXPRESSIONS_INC_</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/GenericExpressions.inc"/>
+  </compounddef>
+</doxygen>

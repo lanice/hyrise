@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_table_factory" kind="class" prot="public">
+    <compoundname>TableFactory</compoundname>
+    <basecompoundref refid="class_abstract_table_factory" prot="public" virt="non-virtual">AbstractTableFactory</basecompoundref>
+    <includes refid="_table_factory_8h" local="no">TableFactory.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_table_factory_1af6503d0a6be0c364f155cdcbc2d413ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">hyrise::storage::atable_ptr_t</ref></type>
+        <definition>hyrise::storage::atable_ptr_t TableFactory::generate</definition>
+        <argsstring>(std::vector&lt; const ColumnMetadata * &gt; *m, std::vector&lt; AbstractTable::SharedDictionaryPtr &gt; *d=nullptr, size_t initial_size=0, bool sorted=true, bool compressed=true)</argsstring>
+        <name>generate</name>
+        <reimplements refid="class_abstract_table_factory_1aaf7e39a2c8692abcd7f4dc0afbc11b50">generate</reimplements>
+        <param>
+          <type>std::vector&lt; const <ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref> * &gt; *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref> &gt; *</type>
+          <declname>d</declname>
+          <defval><ref refid="csb__tree_8cpp_1ab979d9d4b4923f7c54d6caa6e1a61936" kindref="member">nullptr</ref></defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>initial_size</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>sorted</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>compressed</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/TableFactory.h" line="28" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/TableFactory.h" bodystart="24" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3595">
+        <label>TableFactory</label>
+        <link refid="class_table_factory"/>
+        <childnode refid="3596" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3596">
+        <label>AbstractTableFactory</label>
+        <link refid="class_abstract_table_factory"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3597">
+        <label>TableFactory</label>
+        <link refid="class_table_factory"/>
+        <childnode refid="3598" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3598">
+        <label>AbstractTableFactory</label>
+        <link refid="class_abstract_table_factory"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/TableFactory.h" line="22" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/TableFactory.h" bodystart="22" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_table_factory_1af6503d0a6be0c364f155cdcbc2d413ec" prot="public" virt="virtual"><scope>TableFactory</scope><name>generate</name></member>
+      <member refid="class_abstract_table_factory_1ad6fe88375433943ff15789c29cd6e7c9" prot="public" virt="virtual"><scope>TableFactory</scope><name>~AbstractTableFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_central_scheduler_8h" kind="file">
+    <compoundname>CentralScheduler.h</compoundname>
+    <includes refid="_abstract_task_scheduler_8h" local="yes">AbstractTaskScheduler.h</includes>
+    <includes refid="_hwloc_helper_8h" local="yes">helper/HwlocHelper.h</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">thread</includes>
+    <includes local="no">queue</includes>
+    <includes local="no">condition_variable</includes>
+    <includes refid="_shared_scheduler_8h" local="no">taskscheduler/SharedScheduler.h</includes>
+    <includedby refid="_central_scheduler_8cpp" local="yes">src/lib/taskscheduler/CentralScheduler.cpp</includedby>
+    <incdepgraph>
+      <node id="18677">
+        <label>queue</label>
+      </node>
+      <node id="18667">
+        <label>src/lib/taskscheduler/CentralScheduler.h</label>
+        <link refid="CentralScheduler.h"/>
+        <childnode refid="18668" relation="include">
+        </childnode>
+        <childnode refid="18681" relation="include">
+        </childnode>
+        <childnode refid="18672" relation="include">
+        </childnode>
+        <childnode refid="18671" relation="include">
+        </childnode>
+        <childnode refid="18676" relation="include">
+        </childnode>
+        <childnode refid="18677" relation="include">
+        </childnode>
+        <childnode refid="18673" relation="include">
+        </childnode>
+        <childnode refid="18683" relation="include">
+        </childnode>
+      </node>
+      <node id="18668">
+        <label>AbstractTaskScheduler.h</label>
+        <link refid="_abstract_task_scheduler_8h"/>
+        <childnode refid="18669" relation="include">
+        </childnode>
+        <childnode refid="18675" relation="include">
+        </childnode>
+        <childnode refid="18672" relation="include">
+        </childnode>
+        <childnode refid="18679" relation="include">
+        </childnode>
+        <childnode refid="18680" relation="include">
+        </childnode>
+        <childnode refid="18678" relation="include">
+        </childnode>
+        <childnode refid="18681" relation="include">
+        </childnode>
+      </node>
+      <node id="18675">
+        <label>taskscheduler/AbstractTaskQueue.h</label>
+        <link refid="_abstract_task_queue_8h"/>
+        <childnode refid="18672" relation="include">
+        </childnode>
+        <childnode refid="18671" relation="include">
+        </childnode>
+        <childnode refid="18676" relation="include">
+        </childnode>
+        <childnode refid="18677" relation="include">
+        </childnode>
+        <childnode refid="18673" relation="include">
+        </childnode>
+        <childnode refid="18678" relation="include">
+        </childnode>
+        <childnode refid="18669" relation="include">
+        </childnode>
+      </node>
+      <node id="18684">
+        <label>stdexcept</label>
+      </node>
+      <node id="18674">
+        <label>string</label>
+      </node>
+      <node id="18679">
+        <label>unordered_set</label>
+      </node>
+      <node id="18682">
+        <label>hwloc.h</label>
+      </node>
+      <node id="18673">
+        <label>condition_variable</label>
+      </node>
+      <node id="18670">
+        <label>vector</label>
+      </node>
+      <node id="18680">
+        <label>iostream</label>
+      </node>
+      <node id="18671">
+        <label>mutex</label>
+      </node>
+      <node id="18683">
+        <label>taskscheduler/SharedScheduler.h</label>
+        <link refid="_shared_scheduler_8h"/>
+        <childnode refid="18668" relation="include">
+        </childnode>
+        <childnode refid="18684" relation="include">
+        </childnode>
+      </node>
+      <node id="18676">
+        <label>thread</label>
+      </node>
+      <node id="18681">
+        <label>helper/HwlocHelper.h</label>
+        <link refid="_hwloc_helper_8h"/>
+        <childnode refid="18682" relation="include">
+        </childnode>
+        <childnode refid="18670" relation="include">
+        </childnode>
+      </node>
+      <node id="18678">
+        <label>log4cxx/logger.h</label>
+      </node>
+      <node id="18672">
+        <label>memory</label>
+      </node>
+      <node id="18669">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="18670" relation="include">
+        </childnode>
+        <childnode refid="18671" relation="include">
+        </childnode>
+        <childnode refid="18672" relation="include">
+        </childnode>
+        <childnode refid="18673" relation="include">
+        </childnode>
+        <childnode refid="18674" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18685">
+        <label>src/lib/taskscheduler/CentralScheduler.h</label>
+        <link refid="CentralScheduler.h"/>
+        <childnode refid="18686" relation="include">
+        </childnode>
+      </node>
+      <node id="18686">
+        <label>src/lib/taskscheduler/CentralScheduler.cpp</label>
+        <link refid="_central_scheduler_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_worker_thread" prot="public">WorkerThread</innerclass>
+    <innerclass refid="class_central_scheduler" prot="public">CentralScheduler</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>CentralScheduler.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Mar<sp/>20,<sp/>2013</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>jwust</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CENTRALSCHEDULER_H_</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CENTRALSCHEDULER_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_task_scheduler_8h" kindref="compound">AbstractTaskScheduler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_hwloc_helper_8h" kindref="compound">helper/HwlocHelper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;condition_variable&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_shared_scheduler_8h" kindref="compound">taskscheduler/SharedScheduler.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_central_scheduler" kindref="compound">CentralScheduler</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>our<sp/>worker<sp/>thread<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_worker_thread" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_worker_thread" kindref="compound">WorkerThread</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25" refid="class_worker_thread_1a8570985365f0d5dc92e459eb4f0f1916" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_central_scheduler" kindref="compound">CentralScheduler</ref><sp/>&amp;<ref refid="class_worker_thread_1a8570985365f0d5dc92e459eb4f0f1916" kindref="member">scheduler</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27" refid="class_worker_thread_1a770c15dc5ae9c8eb831eb3ea16525111" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_worker_thread_1a770c15dc5ae9c8eb831eb3ea16525111" kindref="member">WorkerThread</ref>(<ref refid="class_central_scheduler" kindref="compound">CentralScheduler</ref><sp/>&amp;s)<sp/>:<sp/><ref refid="class_worker_thread_1a8570985365f0d5dc92e459eb4f0f1916" kindref="member">scheduler</ref>(s)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_worker_thread_1af0446a5a9c3331f4a25cd0a769e1d9fa" kindref="member">operator()</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_central_scheduler" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_central_scheduler" kindref="compound">CentralScheduler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_task_scheduler" kindref="compound">AbstractTaskScheduler</ref>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task_ready_observer" kindref="compound">TaskReadyObserver</ref><sp/>{</highlight></codeline>
+<codeline lineno="36" refid="class_central_scheduler_1a5cd181bfe09cfad66e8f3d87feef1439" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_worker_thread" kindref="compound">WorkerThread</ref>;</highlight></codeline>
+<codeline lineno="37" refid="class_central_scheduler_1a60b9318e3f70d1b8e52b1337ab088555" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::unordered_set&lt;std::shared_ptr&lt;Task&gt;<sp/>&gt;<sp/><ref refid="class_central_scheduler_1a60b9318e3f70d1b8e52b1337ab088555" kindref="member">waiting_tasks_t</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>for<sp/>tasks<sp/>with<sp/>open<sp/>dependencies</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_central_scheduler_1ae2001ebde9e595f9cf03af348c33aea9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_central_scheduler_1a60b9318e3f70d1b8e52b1337ab088555" kindref="member">waiting_tasks_t</ref><sp/><ref refid="class_central_scheduler_1ae2001ebde9e595f9cf03af348c33aea9" kindref="member">_waitSet</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>mutex<sp/>to<sp/>protect<sp/>waitset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_central_scheduler_1a795888aff7880bbb0d958b84044cd299" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="class_central_scheduler_1a795888aff7880bbb0d958b84044cd299" kindref="member">_setMutex</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>queue<sp/>of<sp/>tasks<sp/>that<sp/>are<sp/>ready<sp/>to<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_central_scheduler_1ae0fbf1a445092c13a9827851fe7d63fb" refkind="member"><highlight class="normal"><sp/><sp/>std::queue&lt;std::shared_ptr&lt;Task&gt;<sp/>&gt;<sp/><ref refid="class_central_scheduler_1ae0fbf1a445092c13a9827851fe7d63fb" kindref="member">_runQueue</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>mutex<sp/>to<sp/>protect<sp/>ready<sp/>queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_central_scheduler_1a1a34526706c272e13742a15b9befb48f" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="class_central_scheduler_1a1a34526706c272e13742a15b9befb48f" kindref="member">_queueMutex</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>vector<sp/>of<sp/>worker<sp/>threads</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_central_scheduler_1ad9964e9e6b56edbf7c51d5bfa5621d35" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::thread<sp/>*&gt;<sp/><ref refid="class_central_scheduler_1ad9964e9e6b56edbf7c51d5bfa5621d35" kindref="member">_worker_threads</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>condition<sp/>variable<sp/>to<sp/>wake<sp/>up<sp/>workers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_central_scheduler_1a2d2d5d9d77ffbf3f9136a2c0d7865d81" refkind="member"><highlight class="normal"><sp/><sp/>std::condition_variable<sp/><ref refid="class_central_scheduler_1a2d2d5d9d77ffbf3f9136a2c0d7865d81" kindref="member">_condition</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>scheduler<sp/>status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_central_scheduler_1a1ad848e0be4259aa030cff53f2c41124" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_abstract_task_scheduler_1a8d6f6a94cb6592ae0113336467cee05f" kindref="member">scheduler_status_t</ref><sp/><ref refid="class_central_scheduler_1a1ad848e0be4259aa030cff53f2c41124" kindref="member">_status</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>mutex<sp/>to<sp/>protect<sp/>status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_central_scheduler_1a743e526a449845faa4ca5f351b8b90a1" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="class_central_scheduler_1a743e526a449845faa4ca5f351b8b90a1" kindref="member">_statusMutex</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_central_scheduler_1a2531f6be723316096b31f8eb48883ee0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>log4cxx::LoggerPtr<sp/><ref refid="class_central_scheduler_1a2531f6be723316096b31f8eb48883ee0" kindref="member">_logger</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><ref refid="class_central_scheduler_1abef7fc3df00352bbc23ffd74a07058bd" kindref="member">CentralScheduler</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>threads<sp/>=<sp/><ref refid="_hwloc_helper_8cpp_1a5852d7c54d41ff6c71f33e4b89a5f059" kindref="member">getNumberOfCoresOnSystem</ref>());</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_central_scheduler_1ac16124777c44aa0cc2d215ed00d59d9f" kindref="member">~CentralScheduler</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_central_scheduler_1a5140aa2735cea743cbde6ea18acea296" kindref="member">worker_loop</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/>*<sp/>schedule<sp/>a<sp/>task<sp/>for<sp/>execution</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_central_scheduler_1a80f23e7945838c4feb91beb19bb102db" kindref="member">schedule</ref>(std::shared_ptr&lt;Task&gt;<sp/>task);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/>*<sp/>shutdown<sp/>task<sp/>scheduler;<sp/>makes<sp/>sure<sp/>all<sp/>underlying<sp/>threads<sp/>are<sp/>stopped</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_central_scheduler_1a92ee69fcefd7f40983e4f4d2159dd518" kindref="member">shutdown</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_central_scheduler_1a25293fa231eb88b4dff8c6adb8982820" kindref="member">getNumberOfWorker</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_central_scheduler_1a99523aa901c2e9dc1eddf406c5878e9b" kindref="member">notifyReady</ref>(std::shared_ptr&lt;Task&gt;<sp/>task);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CENTRALSCHEDULER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/CentralScheduler.h"/>
+  </compounddef>
+</doxygen>

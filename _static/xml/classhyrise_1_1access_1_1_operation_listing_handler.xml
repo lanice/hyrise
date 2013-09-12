@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classhyrise_1_1access_1_1_operation_listing_handler" kind="class" prot="public">
+    <compoundname>hyrise::access::OperationListingHandler</compoundname>
+    <basecompoundref refid="classhyrise_1_1net_1_1_abstract_request_handler" prot="public" virt="non-virtual">hyrise::net::AbstractRequestHandler</basecompoundref>
+    <includes refid="_operation_listing_handler_8h" local="no">OperationListingHandler.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_operation_listing_handler_1a309cbc0cdbdfe54dd634733fd6b817ee" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool hyrise::access::OperationListingHandler::registered</definition>
+        <argsstring></argsstring>
+        <name>registered</name>
+        <initializer>=
+    <ref refid="classhyrise_1_1net_1_1_router_1a847346a8882c7d5e3ed7f2bc8d1acbae" kindref="member">net::Router::registerRoute</ref>&lt;<ref refid="classhyrise_1_1access_1_1_operation_listing_handler" kindref="compound">OperationListingHandler</ref>&gt;(&quot;/operations/&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.h" line="11" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_operation_listing_handler_1aac308a19c56a9e9fb475ec28a6ca4d34" prot="private" static="no" mutable="no">
+        <type><ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref> *</type>
+        <definition>net::AbstractConnection* hyrise::access::OperationListingHandler::_connection_data</definition>
+        <argsstring></argsstring>
+        <name>_connection_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.h" line="12" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_operation_listing_handler_1acae302111b69259c6e971c1671ef58f5" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::access::OperationListingHandler::OperationListingHandler</definition>
+        <argsstring>(net::AbstractConnection *data)</argsstring>
+        <name>OperationListingHandler</name>
+        <param>
+          <type><ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.h" line="14" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.cpp" bodystart="14" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_operation_listing_handler_1ab1612f34909e4a18ad5ac8b9e95299a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string hyrise::access::OperationListingHandler::constructResponse</definition>
+        <argsstring>()</argsstring>
+        <name>constructResponse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.h" line="15" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.cpp" bodystart="25" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_operation_listing_handler_1ac8ea8199de6f2e86b610666917593457" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::access::OperationListingHandler::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <reimplements refid="class_task_1ae3a87b98fa47e03ab2f48b53aa257b69">operator()</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.h" line="16" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_operation_listing_handler_1a7b0e3b83f248195e5f670d05abd8c223" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const std::string</type>
+        <definition>const std::string hyrise::access::OperationListingHandler::vname</definition>
+        <argsstring>()</argsstring>
+        <name>vname</name>
+        <reimplements refid="class_task_1a091bff6c1c11bfc202e53280b5af62e7">vname</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.h" line="18" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_operation_listing_handler_1ae608d418c5fd30dd289142f58374272c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string hyrise::access::OperationListingHandler::name</definition>
+        <argsstring>()</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.h" line="17" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2689">
+        <label>hyrise::net::AbstractRequestHandler</label>
+        <link refid="classhyrise_1_1net_1_1_abstract_request_handler"/>
+        <childnode refid="2690" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2688">
+        <label>hyrise::access::OperationListingHandler</label>
+        <link refid="classhyrise_1_1access_1_1_operation_listing_handler"/>
+        <childnode refid="2689" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2691">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="2690">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="2691" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2692" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2692">
+        <label>std::enable_shared_from_this&lt; Task &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2694">
+        <label>hyrise::net::AbstractRequestHandler</label>
+        <link refid="classhyrise_1_1net_1_1_abstract_request_handler"/>
+        <childnode refid="2695" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2693">
+        <label>hyrise::access::OperationListingHandler</label>
+        <link refid="classhyrise_1_1access_1_1_operation_listing_handler"/>
+        <childnode refid="2694" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2698" relation="usage">
+          <edgelabel>-_connection_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="2696">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="2698">
+        <label>hyrise::net::AbstractConnection</label>
+        <link refid="classhyrise_1_1net_1_1_abstract_connection"/>
+      </node>
+      <node id="2695">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="2696" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2697" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2697">
+        <label>std::enable_shared_from_this&lt; Task &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.h" line="10" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.h" bodystart="10" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_task_1ae86d264d411c0a0476085734c27a84b0" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_actualNode</name></member>
+      <member refid="classhyrise_1_1access_1_1_operation_listing_handler_1aac308a19c56a9e9fb475ec28a6ca4d34" prot="private" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_connection_data</name></member>
+      <member refid="class_task_1ab25d10a171c2efc2dcdf4ec7b81d148d" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_dependencies</name></member>
+      <member refid="class_task_1a432b54ea5cdbf8f875c756c70710b69e" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_dependencyWaitCount</name></member>
+      <member refid="class_task_1a10259a6dde7645e32c32262818339c8c" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_depMutex</name></member>
+      <member refid="class_task_1af277c65727e285efbf965633851ec9d8" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_doneObservers</name></member>
+      <member refid="class_task_1a8909ff1653cd9a685af7256976e4e334" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_id</name></member>
+      <member refid="class_task_1a778ed5c766f4098184c31a656fe471ed" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_notifyMutex</name></member>
+      <member refid="class_task_1a6a0d1fa3b37cb2e7896ea23049798b36" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_observerMutex</name></member>
+      <member refid="class_task_1aa7b21c6482b905c04f354c738341beb3" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_preferredCore</name></member>
+      <member refid="class_task_1abeb3d34a483638fad8c93bb3baff50f5" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_preferredNode</name></member>
+      <member refid="class_task_1a6fbb4614f260802e6204e339f4480004" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_priority</name></member>
+      <member refid="class_task_1a7f7f81090a389fd5cf79747e165fe0f4" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_readyObservers</name></member>
+      <member refid="class_task_1a5515868bfb7db5ad936cafdf6b8e65c7" prot="protected" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>_sessionId</name></member>
+      <member refid="class_task_1aa9e65a15e122de040bb914ab144577b8" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>addDependency</name></member>
+      <member refid="class_task_1a0e4ebf7ad5313f027aa16d250685604a" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>addDoneObserver</name></member>
+      <member refid="class_task_1a9726ca1f4c6712a3516cb05121479f25" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>addReadyObserver</name></member>
+      <member refid="classhyrise_1_1access_1_1_operation_listing_handler_1ab1612f34909e4a18ad5ac8b9e95299a6" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>constructResponse</name></member>
+      <member refid="class_task_1afedc05b69ebd406b7fdb42391f4eef2a" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>DEFAULT_PRIORITY</name></member>
+      <member refid="class_task_1a48d72f6b05c55e6fed32f137d5d17cf6" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>getActualNode</name></member>
+      <member refid="class_task_1a75f0a4940cdd338c2ba538200bfcdddf" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>getDependencyCount</name></member>
+      <member refid="class_task_1a85363a10fc3b2272b30e1c24846ab237" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>getId</name></member>
+      <member refid="class_task_1a4a3f6f336369d8e2d6a92fae0690c143" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>getPreferredCore</name></member>
+      <member refid="class_task_1ad775abf82380305e56bb9a1847f76ece" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>getPreferredNode</name></member>
+      <member refid="class_task_1a4d9b4764c7365be48eee4393e87ca92b" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>getPriority</name></member>
+      <member refid="class_task_1a1a5953e7f9dfc732ce1f3d8a914439b4" prot="public" virt="virtual"><scope>hyrise::access::OperationListingHandler</scope><name>getQueryDuration</name></member>
+      <member refid="class_task_1a28ea4fab3bbd5b803f9aa7e4b4300820" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>getSessionId</name></member>
+      <member refid="class_task_1a769a8fb688ddaed2870faeea61d84ca0" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>hasSuccessors</name></member>
+      <member refid="class_task_1afb865392382a2c3f1a13e962d5ba3b1e" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>HIGH_PRIORITY</name></member>
+      <member refid="class_task_1ab7307de77d5baf3dfec0269996d81543" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>isReady</name></member>
+      <member refid="class_task_1aeb0d741352700686296e742bc21e4362" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>lockForNotifications</name></member>
+      <member refid="classhyrise_1_1access_1_1_operation_listing_handler_1ae608d418c5fd30dd289142f58374272c" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>name</name></member>
+      <member refid="class_task_1af0efeb0207f95415ca556e19bc62d60e" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>NO_PREFERRED_CORE</name></member>
+      <member refid="class_task_1a38563fd60f45377e73b8030945f9fdc8" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>NO_PREFERRED_NODE</name></member>
+      <member refid="class_task_1aa729cd30e7135f2851dd625679aa8556" prot="public" virt="virtual"><scope>hyrise::access::OperationListingHandler</scope><name>notifyDone</name></member>
+      <member refid="class_task_1a82157fda3766f4331966baf74e8206fa" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>notifyDoneObservers</name></member>
+      <member refid="class_task_1a793f3db3f39a9ea7352078f235ee7843" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>notifyReadyObservers</name></member>
+      <member refid="classhyrise_1_1access_1_1_operation_listing_handler_1acae302111b69259c6e971c1671ef58f5" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>OperationListingHandler</name></member>
+      <member refid="classhyrise_1_1access_1_1_operation_listing_handler_1ac8ea8199de6f2e86b610666917593457" prot="public" virt="virtual"><scope>hyrise::access::OperationListingHandler</scope><name>operator()</name></member>
+      <member refid="classhyrise_1_1access_1_1_operation_listing_handler_1a309cbc0cdbdfe54dd634733fd6b817ee" prot="private" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>registered</name></member>
+      <member refid="class_task_1a8df8b7cbdf23d35317488316bba3ebe2" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>SESSION_ID_NOT_SET</name></member>
+      <member refid="class_task_1af9b0b825e5ffb8de9c6a1a71438f4b5b" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>setActualNode</name></member>
+      <member refid="class_task_1a6c3e7a3b19e50d8fcad5a084ef6b7312" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>setId</name></member>
+      <member refid="class_task_1a1b8e520f60e9f41a3c1331e4e9e4b3ca" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>setPreferredCore</name></member>
+      <member refid="class_task_1a59960c60425c5d5ed2e8ff52e4538ff2" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>setPreferredNode</name></member>
+      <member refid="class_task_1acc93078022eabed8325f164e4eedc37a" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>setPriority</name></member>
+      <member refid="class_task_1a688bd7a4f5f659d049667c08fd330cfd" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>setSessionId</name></member>
+      <member refid="classhyrise_1_1net_1_1_abstract_request_handler_1a22c7c6e6ea6e7cedb23196f5871b5aca" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>SharedPtr</name></member>
+      <member refid="class_task_1a0ca53354bdc006762a0fda68c64f7608" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>Task</name></member>
+      <member refid="class_task_1a35af9de734c94c39981a2b199790e288" prot="public" virt="non-virtual"><scope>hyrise::access::OperationListingHandler</scope><name>unlockForNotifications</name></member>
+      <member refid="classhyrise_1_1access_1_1_operation_listing_handler_1a7b0e3b83f248195e5f670d05abd8c223" prot="public" virt="virtual"><scope>hyrise::access::OperationListingHandler</scope><name>vname</name></member>
+      <member refid="classhyrise_1_1net_1_1_abstract_request_handler_1afe4d99aa43e91ffd9df791076cde3741" prot="public" virt="virtual"><scope>hyrise::access::OperationListingHandler</scope><name>~AbstractRequestHandler</name></member>
+      <member refid="class_task_1a7bff79cc05fa4511c72048d33591503b" prot="public" virt="virtual"><scope>hyrise::access::OperationListingHandler</scope><name>~Task</name></member>
+      <member refid="class_task_done_observer_1a9b5fa53c4893dfc998aedca72b8dd278" prot="public" virt="virtual"><scope>hyrise::access::OperationListingHandler</scope><name>~TaskDoneObserver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

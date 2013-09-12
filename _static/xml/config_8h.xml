@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="config_8h" kind="file">
+    <compoundname>config.h</compoundname>
+    <includedby refid="layouter_2base_8h" local="yes">src/lib/layouter/base.h</includedby>
+    <invincdepgraph>
+      <node id="13097">
+        <label>src/lib/layouter/incremental.h</label>
+        <link refid="incremental_8h"/>
+        <childnode refid="13098" relation="include">
+        </childnode>
+        <childnode refid="13096" relation="include">
+        </childnode>
+      </node>
+      <node id="13103">
+        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
+        <link refid="_hash_value_join_8cpp"/>
+      </node>
+      <node id="13098">
+        <label>src/lib/access/Layouter.h</label>
+        <link refid="_layouter_8h"/>
+        <childnode refid="13099" relation="include">
+        </childnode>
+        <childnode refid="13100" relation="include">
+        </childnode>
+      </node>
+      <node id="13101">
+        <label>src/bin/perf_regression/GroupByScan.cpp</label>
+        <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="13108">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
+      </node>
+      <node id="13105">
+        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
+      </node>
+      <node id="13093">
+        <label>src/lib/layouter/config.h</label>
+        <link refid="config.h"/>
+        <childnode refid="13094" relation="include">
+        </childnode>
+      </node>
+      <node id="13099">
+        <label>src/lib/access/Layouter.cpp</label>
+        <link refid="_layouter_8cpp"/>
+      </node>
+      <node id="13106">
+        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
+        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="13107">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
+      </node>
+      <node id="13095">
+        <label>src/lib/layouter/base.cpp</label>
+        <link refid="base_8cpp"/>
+      </node>
+      <node id="13102">
+        <label>src/bin/perf_regression/HashJoin.cpp</label>
+        <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="13104">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="13096">
+        <label>src/lib/layouter/incremental.cpp</label>
+        <link refid="incremental_8cpp"/>
+      </node>
+      <node id="13100">
+        <label>src/lib/access.h</label>
+        <link refid="access_8h"/>
+        <childnode refid="13101" relation="include">
+        </childnode>
+        <childnode refid="13102" relation="include">
+        </childnode>
+        <childnode refid="13103" relation="include">
+        </childnode>
+        <childnode refid="13104" relation="include">
+        </childnode>
+        <childnode refid="13105" relation="include">
+        </childnode>
+        <childnode refid="13106" relation="include">
+        </childnode>
+        <childnode refid="13107" relation="include">
+        </childnode>
+        <childnode refid="13108" relation="include">
+        </childnode>
+      </node>
+      <node id="13094">
+        <label>src/lib/layouter/base.h</label>
+        <link refid="layouter_2base_8h"/>
+        <childnode refid="13095" relation="include">
+        </childnode>
+        <childnode refid="13096" relation="include">
+        </childnode>
+        <childnode refid="13097" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlayouter_1_1_layouter_configuration" prot="public">layouter::LayouterConfiguration</innerclass>
+    <innernamespace refid="namespacelayouter">layouter</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="config_8h_1af89f60b07247176687889ade776c8e10" prot="public" static="no">
+        <name>CACHE_LINE_SIZE</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/layouter/config.h" line="5" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/layouter/config.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1a8ff5142b8f9e0750772cdf9b00a8ea7c" prot="public" static="no">
+        <name>HYRISE_COST</name>
+        <initializer>&quot;HYRISECost&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/layouter/config.h" line="6" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/layouter/config.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1a0e9c0c29eacb7a3c52b78a4f08e55891" prot="public" static="no">
+        <name>ROW_COST</name>
+        <initializer>&quot;RowCost&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/layouter/config.h" line="7" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/layouter/config.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1ac349b1745933aeb7cfcbfb7a034f211c" prot="public" static="no">
+        <name>COL_COST</name>
+        <initializer>&quot;ColumnCost&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/layouter/config.h" line="8" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/layouter/config.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_LAYOUTER_CONFIG_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_LAYOUTER_CONFIG_H_</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="config_8h_1af89f60b07247176687889ade776c8e10" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CACHE_LINE_SIZE<sp/>64</highlight></codeline>
+<codeline lineno="6" refid="config_8h_1a8ff5142b8f9e0750772cdf9b00a8ea7c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>HYRISE_COST<sp/>&quot;HYRISECost&quot;</highlight></codeline>
+<codeline lineno="7" refid="config_8h_1a0e9c0c29eacb7a3c52b78a4f08e55891" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ROW_COST<sp/>&quot;RowCost&quot;</highlight></codeline>
+<codeline lineno="8" refid="config_8h_1ac349b1745933aeb7cfcbfb7a034f211c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COL_COST<sp/>&quot;ColumnCost&quot;</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">layouter<sp/>{</highlight></codeline>
+<codeline lineno="11" refid="structlayouter_1_1_layouter_configuration" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlayouter_1_1_layouter_configuration" kindref="compound">LayouterConfiguration</ref><sp/>{</highlight></codeline>
+<codeline lineno="12" refid="structlayouter_1_1_layouter_configuration_1ad72467c5f13875107a7397ce19ec1bfe" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="13" refid="structlayouter_1_1_layouter_configuration_1ad72467c5f13875107a7397ce19ec1bfeae654ec3bf230a3adf142b018f9e88a8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlayouter_1_1_layouter_configuration_1ad72467c5f13875107a7397ce19ec1bfeae654ec3bf230a3adf142b018f9e88a8d" kindref="member">access_type_fullprojection</ref>,</highlight></codeline>
+<codeline lineno="14" refid="structlayouter_1_1_layouter_configuration_1ad72467c5f13875107a7397ce19ec1bfea8a71501b39100f0efaf5839a295869ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlayouter_1_1_layouter_configuration_1ad72467c5f13875107a7397ce19ec1bfea8a71501b39100f0efaf5839a295869ba" kindref="member">access_type_outoforder</ref>,</highlight></codeline>
+<codeline lineno="15" refid="structlayouter_1_1_layouter_configuration_1ad72467c5f13875107a7397ce19ec1bfea49b542bfe963b17e717a50a6e0a2b0ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlayouter_1_1_layouter_configuration_1ad72467c5f13875107a7397ce19ec1bfea49b542bfe963b17e717a50a6e0a2b0ef" kindref="member">access_type_default</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>}<sp/><ref refid="structlayouter_1_1_layouter_configuration_1ad72467c5f13875107a7397ce19ec1bfe" kindref="member">access_type_t</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_LAYOUTER_CONFIG_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/layouter/config.h"/>
+  </compounddef>
+</doxygen>

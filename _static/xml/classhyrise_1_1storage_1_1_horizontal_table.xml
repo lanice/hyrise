@@ -1,0 +1,623 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classhyrise_1_1storage_1_1_horizontal_table" kind="class" prot="public">
+    <compoundname>hyrise::storage::HorizontalTable</compoundname>
+    <basecompoundref refid="class_abstract_table" prot="public" virt="non-virtual">AbstractTable</basecompoundref>
+    <includes refid="_horizontal_table_8h" local="no">HorizontalTable.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhyrise_1_1storage_1_1_horizontal_table_1aa62a70cbe61e5fdaca237b6384754029" prot="private" static="no" mutable="no">
+        <type>const std::vector&lt; <ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">c_atable_ptr_t</ref> &gt;</type>
+        <definition>const std::vector&lt;c_atable_ptr_t &gt; hyrise::storage::HorizontalTable::_parts</definition>
+        <argsstring></argsstring>
+        <name>_parts</name>
+        <briefdescription>
+<para>subtables </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="42" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1storage_1_1_horizontal_table_1a9ee4c7a81099045c24ad190cf17183b4" prot="private" static="no" mutable="no">
+        <type>const std::vector&lt; size_t &gt;</type>
+        <definition>const std::vector&lt;size_t&gt; hyrise::storage::HorizontalTable::_offsets</definition>
+        <argsstring></argsstring>
+        <name>_offsets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="43" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhyrise_1_1storage_1_1_horizontal_table_1adf6a68ee7933d1a524eadc9e89db5a16" prot="private" static="no" mutable="no">
+        <type>const std::vector&lt; <ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref> &gt;</type>
+        <definition>const std::vector&lt;table_id_t&gt; hyrise::storage::HorizontalTable::_table_id_offsets</definition>
+        <argsstring></argsstring>
+        <name>_table_id_offsets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="44" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1ae04cfdae18fa122d58453b7a7fd30867" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::storage::HorizontalTable::HorizontalTable</definition>
+        <argsstring>(std::vector&lt; c_atable_ptr_t &gt; parts)</argsstring>
+        <name>HorizontalTable</name>
+        <param>
+          <type>std::vector&lt; <ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">c_atable_ptr_t</ref> &gt;</type>
+          <declname>parts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="23" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1a6055fc45ef5d15719684c5630ea3ab4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>hyrise::storage::HorizontalTable::~HorizontalTable</definition>
+        <argsstring>()</argsstring>
+        <name>~HorizontalTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1a9b98c3f38b1a70142c56e9ea4a9fd72e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref> *</type>
+        <definition>const ColumnMetadata * hyrise::storage::HorizontalTable::metadataAt</definition>
+        <argsstring>(size_t column_index, size_t row_index=0, table_id_t table_id=0) const override</argsstring>
+        <name>metadataAt</name>
+        <reimplements refid="class_abstract_table_1a4d4d85fd352353254fe01a72a9635a64">metadataAt</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the metadata for a certain column. Returns a pointer to a <ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref> object for a specified column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column for which to return the metadata. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="25" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1ae7f59e9b7ea9a405b3d3b0a21b6e0df1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="namespacehyrise_1_1storage_1a01eda760635c2be6edd1e18de98fd827" kindref="member">adict_ptr_t</ref> &amp;</type>
+        <definition>const adict_ptr_t &amp; hyrise::storage::HorizontalTable::dictionaryAt</definition>
+        <argsstring>(size_t column, size_t row=0, table_id_t table_id=0) const override</argsstring>
+        <name>dictionaryAt</name>
+        <reimplements refid="class_abstract_table_1ad20e4bbda0d8f1d257cbb62f4c0be91c">dictionaryAt</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the dictionary for a certain column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column from which to extract the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="26" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1aab2d74ccf11679ee5f1bf77bbef34550" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="namespacehyrise_1_1storage_1a01eda760635c2be6edd1e18de98fd827" kindref="member">adict_ptr_t</ref> &amp;</type>
+        <definition>const adict_ptr_t &amp; hyrise::storage::HorizontalTable::dictionaryByTableId</definition>
+        <argsstring>(size_t column, table_id_t table_id) const override</argsstring>
+        <name>dictionaryByTableId</name>
+        <reimplements refid="class_abstract_table_1a619607163a0f93d8bc90c3f3a66822ff">dictionaryByTableId</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the dictionary for a certain column by table ID. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column from which to extract the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table from which to extract. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="27" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1a2ff3549ce85aa9f6aaec72a6ec0f0b3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::HorizontalTable::setDictionaryAt</definition>
+        <argsstring>(adict_ptr_t dict, size_t column, size_t row=0, table_id_t table_id=0) override</argsstring>
+        <name>setDictionaryAt</name>
+        <reimplements refid="class_abstract_table_1a0acc1fa146aef09f9de31768e67dfa72">setDictionaryAt</reimplements>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a01eda760635c2be6edd1e18de98fd827" kindref="member">adict_ptr_t</ref></type>
+          <declname>dict</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+          <declname>table_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the dictionary for a certain column. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dict</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dictionary to be used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column for which to set the dictionary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row in that column (default=0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the table (default=0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="28" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1ab9a3113bf5e1c67f039b2b8c4ce358c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t hyrise::storage::HorizontalTable::size</definition>
+        <argsstring>() const override</argsstring>
+        <name>size</name>
+        <reimplements refid="class_abstract_table_1a2b3fde5fb0c70f288eda47c4c66bb151">size</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of rows in the table <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="29" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1ab5dec23fb5a4728d56fce0377df2327b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t hyrise::storage::HorizontalTable::columnCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>columnCount</name>
+        <reimplements refid="class_abstract_table_1a9ba326d4ed695ff02dcdc0dd125fd16c">columnCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of columns. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="30" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1ad140eea8bd82bfdd62285c3445ebcecb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_value_id" kindref="compound">ValueId</ref></type>
+        <definition>ValueId hyrise::storage::HorizontalTable::getValueId</definition>
+        <argsstring>(size_t column, size_t row) const override</argsstring>
+        <name>getValueId</name>
+        <reimplements refid="class_abstract_table_1ae717cc86960b6488a8585d920a5f3b3d">getValueId</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value-ID of a cell. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row number of the cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="31" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="70" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1acab29a1dc52a179fcdf503518824e297" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::HorizontalTable::setValueId</definition>
+        <argsstring>(size_t column, size_t row, const ValueId valueId) override</argsstring>
+        <name>setValueId</name>
+        <reimplements refid="class_abstract_table_1a2be48affbc5a0060e2d17128be9e91b9">setValueId</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_value_id" kindref="compound">ValueId</ref></type>
+          <declname>valueId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the value ID of a cell. <simplesect kind="note"><para>Should be implemented in derived classes or throws runtime error!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row number of the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valueId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New value-ID of the cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="32" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1a5fbcde9e97162287b0749ed46d10f93a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned</type>
+        <definition>unsigned hyrise::storage::HorizontalTable::partitionCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>partitionCount</name>
+        <reimplements refid="class_abstract_table_1a53bb2089cbb287804e3160abe893e657">partitionCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of partitions in this table. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="33" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1a52f3379727b74492647a3a8f57e57f18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t hyrise::storage::HorizontalTable::partitionWidth</definition>
+        <argsstring>(size_t slice) const override</argsstring>
+        <name>partitionWidth</name>
+        <reimplements refid="class_abstract_table_1ac89c7ce56dca98bdfdd67263a4165447">partitionWidth</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>slice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the width of a specified partition in number of attributes. <simplesect kind="note"><para>Must be implemented by any derived class!</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>slice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slice of interest. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="34" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1a0302034e49dbcb14da017788e27b6bf1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref></type>
+        <definition>table_id_t hyrise::storage::HorizontalTable::subtableCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>subtableCount</name>
+        <reimplements refid="class_abstract_table_1af5330c0a617946ad538cacea21ba7639">subtableCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of horizontal subtables. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="35" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1a1027f0c9d70a1b7a37c1566bcf50d3b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">atable_ptr_t</ref></type>
+        <definition>hyrise::storage::atable_ptr_t hyrise::storage::HorizontalTable::copy</definition>
+        <argsstring>() const override</argsstring>
+        <name>copy</name>
+        <reimplements refid="class_abstract_table_1a87134964b75abb36c49d0c44455d23e2">copy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create of copy of this table. <simplesect kind="note"><para>Must be implemented by any derived class! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="36" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1ae73480e3e69f186a35adf8c95c63d02b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::storage::HorizontalTable::debugStructure</definition>
+        <argsstring>(size_t level=0) const override</argsstring>
+        <name>debugStructure</name>
+        <reimplements refid="class_abstract_table_1a4262181544d5392b71735518088631ff">debugStructure</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="37" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="97" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1a0d34d7612d7bf96dbd273892ad464c23" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t hyrise::storage::HorizontalTable::partForRow</definition>
+        <argsstring>(size_t row) const </argsstring>
+        <name>partForRow</name>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="39" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="39" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1storage_1_1_horizontal_table_1a746451cba51a11d58d8bc39ce7ec219b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t hyrise::storage::HorizontalTable::computeSize</definition>
+        <argsstring>() const </argsstring>
+        <name>computeSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="40" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.cpp" bodystart="104" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2259">
+        <label>hyrise::storage::HorizontalTable</label>
+        <link refid="classhyrise_1_1storage_1_1_horizontal_table"/>
+        <childnode refid="2260" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2260">
+        <label>AbstractTable</label>
+        <link refid="class_abstract_table"/>
+        <childnode refid="2261" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2261">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2262">
+        <label>hyrise::storage::HorizontalTable</label>
+        <link refid="classhyrise_1_1storage_1_1_horizontal_table"/>
+        <childnode refid="2263" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2263">
+        <label>AbstractTable</label>
+        <link refid="class_abstract_table"/>
+        <childnode refid="2264" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2265" relation="usage">
+          <edgelabel>-_uuid</edgelabel>
+        </childnode>
+      </node>
+      <node id="2264">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+      <node id="2265">
+        <label>unique_id</label>
+        <link refid="structunique__id"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" line="21" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/HorizontalTable.h" bodystart="21" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1a9ee4c7a81099045c24ad190cf17183b4" prot="private" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>_offsets</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1aa62a70cbe61e5fdaca237b6384754029" prot="private" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>_parts</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1adf6a68ee7933d1a524eadc9e89db5a16" prot="private" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>_table_id_offsets</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1ab5dec23fb5a4728d56fce0377df2327b" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>columnCount</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1a746451cba51a11d58d8bc39ce7ec219b" prot="private" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>computeSize</name></member>
+      <member refid="class_abstract_table_1af716c04f38a6ab47b277911baf050c9d" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>contentEquals</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1a1027f0c9d70a1b7a37c1566bcf50d3b2" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>copy</name></member>
+      <member refid="class_abstract_table_1a435f72c573988b1438935fe0519da3a7" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>copy_structure</name></member>
+      <member refid="class_abstract_table_1aca6d9c647c92a66bd658c4c58250c715" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>copy_structure_modifiable</name></member>
+      <member refid="class_abstract_table_1ad4973d95d29deb5142d6e6b308346a42" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>copyRowFrom</name></member>
+      <member refid="class_abstract_table_1a4361f683288a0d1360227b309ca625f6" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1a2f6d1df59bdb78f8454ea8c06c89216d" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1a06029159a39fac33676c09daa3f7f849" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>copyValueFrom</name></member>
+      <member refid="class_abstract_table_1aea155de835135df953603e9dcbb731c3" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>copyValueIds</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1ae73480e3e69f186a35adf8c95c63d02b" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>debugStructure</name></member>
+      <member refid="class_abstract_table_1ab1d04fdc926954e4027fb883abab1d73" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>dictionaries</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1ae7f59e9b7ea9a405b3d3b0a21b6e0df1" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>dictionaryAt</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1aab2d74ccf11679ee5f1bf77bbef34550" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>dictionaryByTableId</name></member>
+      <member refid="class_abstract_table_1a3467bc6159aa361db993c3fc56584789" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>getAttributeVectors</name></member>
+      <member refid="class_abstract_table_1af820249fa63adfdd1e678572555f6886" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>getUuid</name></member>
+      <member refid="class_abstract_table_1a6648aba614a398c3243a60b18d5d7dbf" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>getValue</name></member>
+      <member refid="class_abstract_table_1aac6e3940c4b756a4c627ece2c008782c" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>getValue</name></member>
+      <member refid="class_abstract_table_1af380b8fd7715abe5988f53b885920e0c" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>getValueForValueId</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1ad140eea8bd82bfdd62285c3445ebcecb" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>getValueId</name></member>
+      <member refid="class_abstract_table_1a21786cf05c9871539e32e583b1e717c4" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>getValueIdForValue</name></member>
+      <member refid="class_abstract_table_1acd7ea07c9b1605ca53c7608c7c3b2ea5" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>getValueIdForValueByTableId</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1ae04cfdae18fa122d58453b7a7fd30867" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>HorizontalTable</name></member>
+      <member refid="class_abstract_table_1a8b854b19026e75eebc02942499a82a21" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>metadata</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1a9b98c3f38b1a70142c56e9ea4a9fd72e" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>metadataAt</name></member>
+      <member refid="class_abstract_table_1af8c5434b261abfcab191852f575b4c5a" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>nameOfColumn</name></member>
+      <member refid="class_abstract_table_1aaea606e4fd8c92a43febced405de1c6c" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>numberOfColumn</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1a0d34d7612d7bf96dbd273892ad464c23" prot="private" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>partForRow</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1a5fbcde9e97162287b0749ed46d10f93a" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>partitionCount</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1a52f3379727b74492647a3a8f57e57f18" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>partitionWidth</name></member>
+      <member refid="class_abstract_table_1a7646e80f6c075dd018bd73a70751113a" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>print</name></member>
+      <member refid="class_abstract_table_1a67489daa606ed64ce9874b509451e3d9" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>printValue</name></member>
+      <member refid="class_abstract_table_1a019861d7ed5abee8c15a0511c3cbf051" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>reserve</name></member>
+      <member refid="class_abstract_table_1a92d707d52cdeabfc3cf254693b913a81" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>resize</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1a2ff3549ce85aa9f6aaec72a6ec0f0b3c" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>setDictionaryAt</name></member>
+      <member refid="class_abstract_table_1ade4da17f60dbde2148f25b849528f624" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>setUuid</name></member>
+      <member refid="class_abstract_table_1a0aa362f5b907b4d79c2fb43889a8970b" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>setValue</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1acab29a1dc52a179fcdf503518824e297" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>setValueId</name></member>
+      <member refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>SharedDictionaryPtr</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1ab9a3113bf5e1c67f039b2b8c4ce358c9" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>size</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1a0302034e49dbcb14da017788e27b6bf1" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>subtableCount</name></member>
+      <member refid="class_abstract_table_1a50b40ae8ca0b789dd8ded3fc51a6f5fd" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>typeOfColumn</name></member>
+      <member refid="class_abstract_table_1a55de3a5a31acf6898fb9ddd287b760e3" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>valueExists</name></member>
+      <member refid="class_abstract_table_1a8e1d6f1b61390fc3e6954fbaa1f7745f" prot="public" virt="non-virtual"><scope>hyrise::storage::HorizontalTable</scope><name>write</name></member>
+      <member refid="class_abstract_resource_1acbf6801fec7bf1acf0d90a4fb5d5c706" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>~AbstractResource</name></member>
+      <member refid="classhyrise_1_1storage_1_1_horizontal_table_1a6055fc45ef5d15719684c5630ea3ab4b" prot="public" virt="virtual"><scope>hyrise::storage::HorizontalTable</scope><name>~HorizontalTable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

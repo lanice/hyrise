@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_static_request_handler_8cpp" kind="file">
+    <compoundname>StaticRequestHandler.cpp</compoundname>
+    <includes refid="_static_request_handler_8h" local="yes">net/StaticRequestHandler.h</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">fstream</includes>
+    <includes refid="fs_8h" local="yes">helper/fs.h</includes>
+    <includes refid="_async_connection_8h" local="yes">net/AsyncConnection.h</includes>
+    <includes local="yes">boost/algorithm/string.hpp</includes>
+    <includes local="yes">boost/filesystem.hpp</includes>
+    <includes local="yes">log4cxx/logger.h</includes>
+    <incdepgraph>
+      <node id="13454">
+        <label>boost/algorithm/string.hpp</label>
+      </node>
+      <node id="13449">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="13435">
+        <label>src/lib/net/StaticRequestHandler.cpp</label>
+        <link refid="StaticRequestHandler.cpp"/>
+        <childnode refid="13436" relation="include">
+        </childnode>
+        <childnode refid="13440" relation="include">
+        </childnode>
+        <childnode refid="13446" relation="include">
+        </childnode>
+        <childnode refid="13447" relation="include">
+        </childnode>
+        <childnode refid="13448" relation="include">
+        </childnode>
+        <childnode refid="13454" relation="include">
+        </childnode>
+        <childnode refid="13455" relation="include">
+        </childnode>
+        <childnode refid="13456" relation="include">
+        </childnode>
+      </node>
+      <node id="13447">
+        <label>helper/fs.h</label>
+        <link refid="fs_8h"/>
+        <childnode refid="13437" relation="include">
+        </childnode>
+      </node>
+      <node id="13437">
+        <label>string</label>
+      </node>
+      <node id="13436">
+        <label>net/StaticRequestHandler.h</label>
+        <link refid="_static_request_handler_8h"/>
+        <childnode refid="13437" relation="include">
+        </childnode>
+        <childnode refid="13438" relation="include">
+        </childnode>
+        <childnode refid="13439" relation="include">
+        </childnode>
+      </node>
+      <node id="13446">
+        <label>fstream</label>
+      </node>
+      <node id="13439">
+        <label>net/Router.h</label>
+        <link refid="_router_8h"/>
+        <childnode refid="13438" relation="include">
+        </childnode>
+        <childnode refid="13440" relation="include">
+        </childnode>
+        <childnode refid="13437" relation="include">
+        </childnode>
+        <childnode refid="13441" relation="include">
+        </childnode>
+        <childnode refid="13442" relation="include">
+        </childnode>
+      </node>
+      <node id="13445">
+        <label>condition_variable</label>
+      </node>
+      <node id="13453">
+        <label>ebb/ebb.h</label>
+      </node>
+      <node id="13443">
+        <label>vector</label>
+      </node>
+      <node id="13455">
+        <label>boost/filesystem.hpp</label>
+      </node>
+      <node id="13448">
+        <label>net/AsyncConnection.h</label>
+        <link refid="_async_connection_8h"/>
+        <childnode refid="13449" relation="include">
+        </childnode>
+        <childnode refid="13450" relation="include">
+        </childnode>
+        <childnode refid="13451" relation="include">
+        </childnode>
+        <childnode refid="13452" relation="include">
+        </childnode>
+        <childnode refid="13437" relation="include">
+        </childnode>
+        <childnode refid="13441" relation="include">
+        </childnode>
+        <childnode refid="13453" relation="include">
+        </childnode>
+      </node>
+      <node id="13451">
+        <label>cstdlib</label>
+      </node>
+      <node id="13450">
+        <label>sys/time.h</label>
+      </node>
+      <node id="13452">
+        <label>ev.h</label>
+      </node>
+      <node id="13440">
+        <label>unordered_map</label>
+      </node>
+      <node id="13444">
+        <label>mutex</label>
+      </node>
+      <node id="13441">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="13437" relation="include">
+        </childnode>
+      </node>
+      <node id="13456">
+        <label>log4cxx/logger.h</label>
+      </node>
+      <node id="13438">
+        <label>memory</label>
+      </node>
+      <node id="13442">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="13443" relation="include">
+        </childnode>
+        <childnode refid="13444" relation="include">
+        </childnode>
+        <childnode refid="13438" relation="include">
+        </childnode>
+        <childnode refid="13445" relation="include">
+        </childnode>
+        <childnode refid="13437" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1net">hyrise::net</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_static_request_handler_8h" kindref="compound">net/StaticRequestHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="fs_8h" kindref="compound">helper/fs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_async_connection_8h" kindref="compound">net/AsyncConnection.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/algorithm/string.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/filesystem.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;log4cxx/logger.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">net<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{<sp/>log4cxx::LoggerPtr<sp/><ref refid="bin_2hyrise_2main_8cpp_1a1f643aeca905220d975e69578154a71d" kindref="member">logger</ref>(log4cxx::Logger::getLogger(</highlight><highlight class="stringliteral">&quot;access.plan.PlanOperation&quot;</highlight><highlight class="normal">));<sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_static_request_handler_1a404a55bf8c66477156ad80b21147ec77" kindref="member">StaticRequestHandler::_registered</ref><sp/>=<sp/>Router::registerRoute&lt;StaticRequestHandler&gt;(</highlight><highlight class="stringliteral">&quot;/static/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classhyrise_1_1net_1_1_static_request_handler_1af68af5d91ab058bff4ea12af564a3aa4" refkind="member"><highlight class="normal"><ref refid="classhyrise_1_1net_1_1_static_request_handler_1af68af5d91ab058bff4ea12af564a3aa4" kindref="member">StaticRequestHandler::StaticRequestHandler</ref>(<ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref><sp/>*connection):<sp/>_connection(connection)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Whats<sp/>the<sp/>root<sp/>path<sp/>of<sp/>the<sp/>system</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data_path;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>data_path<sp/>=<sp/>getenv(</highlight><highlight class="stringliteral">&quot;HYRISE_STATIC_PATH&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data_path<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1net_1_1_static_request_handler_1acc8fb8db4c626c3dc826256c5be1843f" kindref="member">_rootPath</ref><sp/>=<sp/>std::string(data_path)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1net_1_1_static_request_handler_1acc8fb8db4c626c3dc826256c5be1843f" kindref="member">_rootPath</ref><sp/>=<sp/><ref refid="namespacehyrise_1_1helper_1ac306f944f80aa3a0caaae8f965f81893" kindref="member">hyrise::helper::sys_getcwd</ref>()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/static/&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="namespacehyrise_1_1net_1a18036be02abd1bafaf30dc3d93621fc8" refkind="member"><highlight class="normal">std::unordered_map&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="namespacehyrise_1_1net_1a18036be02abd1bafaf30dc3d93621fc8" kindref="member">parseMimeTypes</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;std::string,<sp/>std::string&gt;<sp/>result;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>std::ifstream<sp/>infile(</highlight><highlight class="stringliteral">&quot;./third_party/mime/mime.types&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(infile.good())<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>buffer;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(infile.good())<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::getline(infile,<sp/>buffer);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Handle<sp/>Comments</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(buffer[0]==</highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal"><sp/>||<sp/>buffer.size()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Split<sp/>and<sp/>parse<sp/>the<sp/>rest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>space_pos<sp/>=<sp/>buffer.find_first_of(</highlight><highlight class="stringliteral">&quot;<sp/>\t&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mime_type<sp/>=<sp/>buffer.substr(0,<sp/>space_pos);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>extensions<sp/>=<sp/>buffer.substr(space_pos);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>allKinds;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>boost::algorithm::split(allKinds,<sp/>extensions,<sp/>boost::is_any_of(</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>boost::algorithm::trim(mime_type);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>t<sp/>:<sp/>allKinds)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>strip<sp/>the<sp/>types<sp/>to<sp/>get<sp/>rid<sp/>of<sp/>extra<sp/>spaces</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result[boost::algorithm::trim_copy(t)]<sp/>=<sp/>mime_type;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;application/binary&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classhyrise_1_1net_1_1_static_request_handler_1ab5bff0a1f49e8bfc47fd4008a895bdc7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_static_request_handler_1ab5bff0a1f49e8bfc47fd4008a895bdc7" kindref="member">StaticRequestHandler::operator()</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>all<sp/>mime<sp/>types<sp/>once<sp/>and<sp/>for<sp/>all</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mimeTypes<sp/>=<sp/><ref refid="namespacehyrise_1_1net_1a18036be02abd1bafaf30dc3d93621fc8" kindref="member">parseMimeTypes</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>the<sp/>static<sp/>part<sp/>of<sp/>the<sp/>URI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>std::string<sp/>path(<ref refid="classhyrise_1_1net_1_1_static_request_handler_1aa5f3a0d3a773a69229b63d8739cb8d22" kindref="member">_connection</ref>-&gt;<ref refid="classhyrise_1_1net_1_1_abstract_connection_1a06093a01f8e304c1023a327f286d9cd6" kindref="member">getPath</ref>().substr(8));</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>complete_path<sp/>=<sp/><ref refid="classhyrise_1_1net_1_1_static_request_handler_1acc8fb8db4c626c3dc826256c5be1843f" kindref="member">_rootPath</ref><sp/>+<sp/>path;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!boost::filesystem::is_regular_file(complete_path))<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1net_1_1_static_request_handler_1aa5f3a0d3a773a69229b63d8739cb8d22" kindref="member">_connection</ref>-&gt;<ref refid="classhyrise_1_1net_1_1_abstract_connection_1a5a81423c8555d550b89758550d4c5e6f" kindref="member">respond</ref>(</highlight><highlight class="stringliteral">&quot;404<sp/>-<sp/>path<sp/>is<sp/>not<sp/>a<sp/>file:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>complete_path,<sp/>404);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>File<sp/>exists<sp/>and<sp/>load<sp/>the<sp/>content<sp/>write<sp/>to<sp/>the<sp/>conneciton<sp/>buffer<sp/>and<sp/>exit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>std::ifstream<sp/>infile(complete_path);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(infile.good())<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>contents<sp/>{<sp/>std::istreambuf_iterator&lt;char&gt;(infile),</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::istreambuf_iterator&lt;char&gt;()<sp/>};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dotPos<sp/>=<sp/>path.rfind(</highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1net_1_1_static_request_handler_1aa5f3a0d3a773a69229b63d8739cb8d22" kindref="member">_connection</ref>-&gt;<ref refid="classhyrise_1_1net_1_1_abstract_connection_1a5a81423c8555d550b89758550d4c5e6f" kindref="member">respond</ref>(contents,<sp/>200,<sp/>mimeTypes[path.substr(dotPos+1)]);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1net_1_1_static_request_handler_1aa5f3a0d3a773a69229b63d8739cb8d22" kindref="member">_connection</ref>-&gt;<ref refid="classhyrise_1_1net_1_1_abstract_connection_1a5a81423c8555d550b89758550d4c5e6f" kindref="member">respond</ref>(</highlight><highlight class="stringliteral">&quot;404<sp/>-<sp/>could<sp/>not<sp/>open<sp/>file:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>complete_path,<sp/>404);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}}</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/net/StaticRequestHandler.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="structhyrise_1_1tx_1_1_t_x_data" kind="struct" prot="public">
+    <compoundname>hyrise::tx::TXData</compoundname>
+    <includes refid="_transaction_manager_8h" local="no">TransactionManager.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhyrise_1_1tx_1_1_t_x_data_1a964a77b5fa8c326c204945065aba3872" prot="public" static="no" mutable="no">
+        <type><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref></type>
+        <definition>TXContext hyrise::tx::TXData::_context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="60" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhyrise_1_1tx_1_1_t_x_data_1a62ad1171fa789997ee123cb80d573551" prot="public" static="no" mutable="no">
+        <type><ref refid="classhyrise_1_1tx_1_1_t_x_modifications" kindref="compound">TXModifications</ref></type>
+        <definition>TXModifications hyrise::tx::TXData::_modifications</definition>
+        <argsstring></argsstring>
+        <name>_modifications</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="61" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhyrise_1_1tx_1_1_t_x_data_1ac97b8209c1d5612f2f40bb7eae79a544" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::tx::TXData::TXData</definition>
+        <argsstring>(TXContext ctx)</argsstring>
+        <name>TXData</name>
+        <param>
+          <type><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="62" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3893">
+        <label>hyrise::tx::TXModifications</label>
+        <link refid="classhyrise_1_1tx_1_1_t_x_modifications"/>
+      </node>
+      <node id="3891">
+        <label>hyrise::tx::TXData</label>
+        <link refid="structhyrise_1_1tx_1_1_t_x_data"/>
+        <childnode refid="3892" relation="usage">
+          <edgelabel>+_context</edgelabel>
+        </childnode>
+        <childnode refid="3893" relation="usage">
+          <edgelabel>+_modifications</edgelabel>
+        </childnode>
+      </node>
+      <node id="3892">
+        <label>hyrise::tx::TXContext</label>
+        <link refid="structhyrise_1_1tx_1_1_t_x_context"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="59" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" bodystart="59" bodyend="63"/>
+    <listofallmembers>
+      <member refid="structhyrise_1_1tx_1_1_t_x_data_1a964a77b5fa8c326c204945065aba3872" prot="public" virt="non-virtual"><scope>hyrise::tx::TXData</scope><name>_context</name></member>
+      <member refid="structhyrise_1_1tx_1_1_t_x_data_1a62ad1171fa789997ee123cb80d573551" prot="public" virt="non-virtual"><scope>hyrise::tx::TXData</scope><name>_modifications</name></member>
+      <member refid="structhyrise_1_1tx_1_1_t_x_data_1ac97b8209c1d5612f2f40bb7eae79a544" prot="public" virt="non-virtual"><scope>hyrise::tx::TXData</scope><name>TXData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

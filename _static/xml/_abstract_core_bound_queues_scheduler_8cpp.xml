@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_abstract_core_bound_queues_scheduler_8cpp" kind="file">
+    <compoundname>AbstractCoreBoundQueuesScheduler.cpp</compoundname>
+    <includes refid="_abstract_core_bound_queues_scheduler_8h" local="yes">AbstractCoreBoundQueuesScheduler.h</includes>
+    <incdepgraph>
+      <node id="18491">
+        <label>atomic</label>
+      </node>
+      <node id="18484">
+        <label>queue</label>
+      </node>
+      <node id="18475">
+        <label>AbstractTaskScheduler.h</label>
+        <link refid="_abstract_task_scheduler_8h"/>
+        <childnode refid="18476" relation="include">
+        </childnode>
+        <childnode refid="18482" relation="include">
+        </childnode>
+        <childnode refid="18479" relation="include">
+        </childnode>
+        <childnode refid="18486" relation="include">
+        </childnode>
+        <childnode refid="18487" relation="include">
+        </childnode>
+        <childnode refid="18485" relation="include">
+        </childnode>
+        <childnode refid="18488" relation="include">
+        </childnode>
+      </node>
+      <node id="18482">
+        <label>taskscheduler/AbstractTaskQueue.h</label>
+        <link refid="_abstract_task_queue_8h"/>
+        <childnode refid="18479" relation="include">
+        </childnode>
+        <childnode refid="18478" relation="include">
+        </childnode>
+        <childnode refid="18483" relation="include">
+        </childnode>
+        <childnode refid="18484" relation="include">
+        </childnode>
+        <childnode refid="18480" relation="include">
+        </childnode>
+        <childnode refid="18485" relation="include">
+        </childnode>
+        <childnode refid="18476" relation="include">
+        </childnode>
+      </node>
+      <node id="18481">
+        <label>string</label>
+      </node>
+      <node id="18486">
+        <label>unordered_set</label>
+      </node>
+      <node id="18489">
+        <label>hwloc.h</label>
+      </node>
+      <node id="18473">
+        <label>src/lib/taskscheduler/AbstractCoreBoundQueuesScheduler.cpp</label>
+        <link refid="AbstractCoreBoundQueuesScheduler.cpp"/>
+        <childnode refid="18474" relation="include">
+        </childnode>
+      </node>
+      <node id="18480">
+        <label>condition_variable</label>
+      </node>
+      <node id="18477">
+        <label>vector</label>
+      </node>
+      <node id="18490">
+        <label>AbstractCoreBoundQueue.h</label>
+        <link refid="_abstract_core_bound_queue_8h"/>
+        <childnode refid="18482" relation="include">
+        </childnode>
+        <childnode refid="18491" relation="include">
+        </childnode>
+      </node>
+      <node id="18474">
+        <label>AbstractCoreBoundQueuesScheduler.h</label>
+        <link refid="_abstract_core_bound_queues_scheduler_8h"/>
+        <childnode refid="18475" relation="include">
+        </childnode>
+        <childnode refid="18490" relation="include">
+        </childnode>
+        <childnode refid="18491" relation="include">
+        </childnode>
+      </node>
+      <node id="18487">
+        <label>iostream</label>
+      </node>
+      <node id="18478">
+        <label>mutex</label>
+      </node>
+      <node id="18483">
+        <label>thread</label>
+      </node>
+      <node id="18488">
+        <label>helper/HwlocHelper.h</label>
+        <link refid="_hwloc_helper_8h"/>
+        <childnode refid="18489" relation="include">
+        </childnode>
+        <childnode refid="18477" relation="include">
+        </childnode>
+      </node>
+      <node id="18485">
+        <label>log4cxx/logger.h</label>
+      </node>
+      <node id="18479">
+        <label>memory</label>
+      </node>
+      <node id="18476">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="18477" relation="include">
+        </childnode>
+        <childnode refid="18478" relation="include">
+        </childnode>
+        <childnode refid="18479" relation="include">
+        </childnode>
+        <childnode refid="18480" relation="include">
+        </childnode>
+        <childnode refid="18481" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>AbstractCoreBoundQueuesScheduler.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Apr<sp/>4,<sp/>2013</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>jwust</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_core_bound_queues_scheduler_8h" kindref="compound">AbstractCoreBoundQueuesScheduler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">log4cxx::LoggerPtr<sp/><ref refid="class_abstract_core_bound_queues_scheduler_1ae1f42638dea16e2bdcc71d41266fb66f" kindref="member">AbstractCoreBoundQueuesScheduler::_logger</ref><sp/>=<sp/>log4cxx::Logger::getLogger(</highlight><highlight class="stringliteral">&quot;taskscheduler.AbstractCoreBoundQueuesScheduler&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_abstract_core_bound_queues_scheduler_1aec38648b381ed9991c98135ddf8f6472" refkind="member"><highlight class="normal"><ref refid="class_abstract_core_bound_queues_scheduler_1aec38648b381ed9991c98135ddf8f6472" kindref="member">AbstractCoreBoundQueuesScheduler::AbstractCoreBoundQueuesScheduler</ref>():<sp/>_queues(0),<sp/>_status(START_UP),<sp/>_nextQueue(0)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_abstract_core_bound_queues_scheduler_1a784efcfc661e85802a7104da452d7fca" refkind="member"><highlight class="normal"><ref refid="class_abstract_core_bound_queues_scheduler_1a784efcfc661e85802a7104da452d7fca" kindref="member">AbstractCoreBoundQueuesScheduler::~AbstractCoreBoundQueuesScheduler</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>destructor<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_abstract_core_bound_queues_scheduler_1a2942be2fae11ee3cdb01ce1c545995eb" refkind="member"><highlight class="normal"><ref refid="class_abstract_task_scheduler_1a8d6f6a94cb6592ae0113336467cee05f" kindref="member">AbstractCoreBoundQueuesScheduler::scheduler_status_t</ref><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a2942be2fae11ee3cdb01ce1c545995eb" kindref="member">AbstractCoreBoundQueuesScheduler::getSchedulerStatus</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a88f05262e420842518b0ae5517d1dac8" kindref="member">_status</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>schedule<sp/>a<sp/>given<sp/>task</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_abstract_core_bound_queues_scheduler_1a33648fb855936832e2788c9f573c179e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a33648fb855936832e2788c9f573c179e" kindref="member">AbstractCoreBoundQueuesScheduler::schedule</ref>(std::shared_ptr&lt;Task&gt;<sp/>task)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>simple<sp/>strategy:<sp/>check<sp/>if<sp/>task<sp/>is<sp/>ready<sp/>to<sp/>run<sp/>-&gt;<sp/>then<sp/>move<sp/>to<sp/>next<sp/>taskqueue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>otherwise<sp/>store<sp/>in<sp/>wait<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>lock<sp/>the<sp/>task<sp/>-<sp/>otherwise,<sp/>a<sp/>notify<sp/>might<sp/>happen<sp/>prior<sp/>to<sp/>the<sp/>task<sp/>being<sp/>added<sp/>to<sp/>the<sp/>wait<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>task-&gt;lockForNotifications();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(task-&gt;isReady())</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1af8e1b08a6c6a960674dfe465dd660623" kindref="member">pushToQueue</ref>(task);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>task-&gt;addReadyObserver(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lk(<ref refid="class_abstract_core_bound_queues_scheduler_1a42daca96a5f90a29b2a51f65549dc9a2" kindref="member">_setMutex</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1aad5f93bbb4ba8bf6b2bf1f62f1baeefb" kindref="member">_waitSet</ref>.insert(task);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG4CXX_DEBUG(<ref refid="class_abstract_core_bound_queues_scheduler_1ae1f42638dea16e2bdcc71d41266fb66f" kindref="member">_logger</ref>,<sp/><sp/></highlight><highlight class="stringliteral">&quot;Task<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::hex<sp/>&lt;&lt;<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)task.get()<sp/>&lt;&lt;<sp/>std::dec<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>inserted<sp/>in<sp/>wait<sp/>queue&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>task-&gt;unlockForNotifications();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>schedule<sp/>a<sp/>task<sp/>for<sp/>execution<sp/>on<sp/>a<sp/>given<sp/>core</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_abstract_core_bound_queues_scheduler_1a0297967a101c0fd6b6b248412b35fd39" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a33648fb855936832e2788c9f573c179e" kindref="member">AbstractCoreBoundQueuesScheduler::schedule</ref>(std::shared_ptr&lt;Task&gt;<sp/>task,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>core)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>task-&gt;setPreferredCore(core);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a33648fb855936832e2788c9f573c179e" kindref="member">schedule</ref>(task);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>notify<sp/>scheduler<sp/>that<sp/>a<sp/>given<sp/>task<sp/>is<sp/>ready</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_abstract_core_bound_queues_scheduler_1af9445868f76aca1d664083fa23773ee1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1af9445868f76aca1d664083fa23773ee1" kindref="member">AbstractCoreBoundQueuesScheduler::notifyReady</ref>(std::shared_ptr&lt;Task&gt;<sp/>task)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>remove<sp/>task<sp/>from<sp/>wait<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a42daca96a5f90a29b2a51f65549dc9a2" kindref="member">_setMutex</ref>.lock();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tmp<sp/>=<sp/><ref refid="class_abstract_core_bound_queues_scheduler_1aad5f93bbb4ba8bf6b2bf1f62f1baeefb" kindref="member">_waitSet</ref>.erase(task);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a42daca96a5f90a29b2a51f65549dc9a2" kindref="member">_setMutex</ref>.unlock();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>task<sp/>was<sp/>found<sp/>in<sp/>wait<sp/>set,<sp/>schedule<sp/>task<sp/>to<sp/>next<sp/>queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmp<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG4CXX_DEBUG(<ref refid="class_abstract_core_bound_queues_scheduler_1ae1f42638dea16e2bdcc71d41266fb66f" kindref="member">_logger</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Task<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::hex<sp/>&lt;&lt;<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)task.get()<sp/>&lt;&lt;<sp/>std::dec<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>ready<sp/>to<sp/>run&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1af8e1b08a6c6a960674dfe465dd660623" kindref="member">pushToQueue</ref>(task);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>should<sp/>never<sp/>happen,<sp/>but<sp/>check<sp/>to<sp/>identify<sp/>potential<sp/>race<sp/>conditions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG4CXX_ERROR(<ref refid="class_abstract_core_bound_queues_scheduler_1ae1f42638dea16e2bdcc71d41266fb66f" kindref="member">_logger</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Task<sp/>that<sp/>notified<sp/>to<sp/>be<sp/>ready<sp/>to<sp/>run<sp/>was<sp/>not<sp/>found<sp/>/<sp/>found<sp/>more<sp/>than<sp/>once<sp/>in<sp/>waitSet!<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespacestd_1aa2f6c380fda0f127ac99017940bef1e9" kindref="member">std::to_string</ref>(tmp));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/>*<sp/>waits<sp/>for<sp/>all<sp/>tasks<sp/>to<sp/>finish</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_abstract_core_bound_queues_scheduler_1a4ff96e84a952300c7b730b68dfdb50ad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a4ff96e84a952300c7b730b68dfdb50ad" kindref="member">AbstractCoreBoundQueuesScheduler::wait</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a451eed981d9b37e521f1f347a4972d53" kindref="member">_taskQueues</ref>.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a451eed981d9b37e521f1f347a4972d53" kindref="member">_taskQueues</ref>[i]-&gt;join();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_abstract_core_bound_queues_scheduler_1a6933c27d1db1a24466606b66103511d2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a6933c27d1db1a24466606b66103511d2" kindref="member">AbstractCoreBoundQueuesScheduler::getNumberOfWorker</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1ac3aa34b724c695b203456774cd0eac75" kindref="member">_queues</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="class_abstract_core_bound_queues_scheduler_1ae28fd97dc7367b2f67c0256890f1c52f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1ae28fd97dc7367b2f67c0256890f1c52f" kindref="member">AbstractCoreBoundQueuesScheduler::shutdown</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a88f05262e420842518b0ae5517d1dac8" kindref="member">_status</ref><sp/>=<sp/><ref refid="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575cea4f8b67680c71fec19412d8ab89ac503a" kindref="member">TO_STOP</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a451eed981d9b37e521f1f347a4972d53" kindref="member">_taskQueues</ref>.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a451eed981d9b37e521f1f347a4972d53" kindref="member">_taskQueues</ref>[i]-&gt;stopQueue();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><ref refid="class_abstract_core_bound_queues_scheduler_1a88f05262e420842518b0ae5517d1dac8" kindref="member">_status</ref><sp/>=<sp/><ref refid="class_abstract_task_scheduler_1a3c169cdc3c29ab03d0c5c41a707575cea5f5af486bf8b0c99d4906d1bf159ff43" kindref="member">STOPPED</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueuesScheduler.cpp"/>
+  </compounddef>
+</doxygen>

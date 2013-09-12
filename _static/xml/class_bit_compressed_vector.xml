@@ -1,0 +1,585 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_bit_compressed_vector" kind="class" prot="public">
+    <compoundname>BitCompressedVector</compoundname>
+    <basecompoundref refid="class_base_attribute_vector" prot="public" virt="non-virtual">BaseAttributeVector&lt; T &gt;</basecompoundref>
+    <includes refid="_bit_compressed_vector_8h" local="no">BitCompressedVector.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_bit_compressed_vector_1a6d312b12985dba78a8d33725a2c52374" prot="private" static="no">
+        <type><ref refid="class_malloc_strategy" kindref="compound">MallocStrategy</ref></type>
+        <definition>using BitCompressedVector&lt; T &gt;::Strategy =  MallocStrategy</definition>
+        <argsstring></argsstring>
+        <name>Strategy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="27" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" prot="private" static="no">
+        <type>uint64_t</type>
+        <definition>typedef uint64_t BitCompressedVector&lt; T &gt;::storage_t</definition>
+        <argsstring></argsstring>
+        <name>storage_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="29" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_bit_compressed_vector_1a7d2b87c518d84663c7001317d24032af" prot="private" static="no">
+        <type>std::vector&lt; uint64_t &gt;</type>
+        <definition>typedef std::vector&lt;uint64_t&gt; BitCompressedVector&lt; T &gt;::bit_size_list_t</definition>
+        <argsstring></argsstring>
+        <name>bit_size_list_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="30" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_bit_compressed_vector_1afe496c1b5c79b5ab2aad16d036190f78" prot="public" static="no">
+        <type>T</type>
+        <definition>typedef T BitCompressedVector&lt; T &gt;::value_type</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="53" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" prot="private" static="yes" mutable="no">
+        <type>const uint64_t</type>
+        <definition>const uint64_t BitCompressedVector&lt; T &gt;::_bit_width</definition>
+        <argsstring></argsstring>
+        <name>_bit_width</name>
+        <initializer>= sizeof(<ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref>)  * 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="33" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bit_compressed_vector_1a241cfd6ea835872148f6ba106018f8a2" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t BitCompressedVector&lt; T &gt;::_size</definition>
+        <argsstring></argsstring>
+        <name>_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="39" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t BitCompressedVector&lt; T &gt;::_allocatedBlocks</definition>
+        <argsstring></argsstring>
+        <name>_allocatedBlocks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="44" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bit_compressed_vector_1a2c13b26b65d51c4e7a1ab9dc80cf7a65" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t BitCompressedVector&lt; T &gt;::_columns</definition>
+        <argsstring></argsstring>
+        <name>_columns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="47" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_bit_compressed_vector_1a7d2b87c518d84663c7001317d24032af" kindref="member">bit_size_list_t</ref></type>
+        <definition>bit_size_list_t BitCompressedVector&lt; T &gt;::_bits</definition>
+        <argsstring></argsstring>
+        <name>_bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="50" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bit_compressed_vector_1a4a69717062c5334e8eb0b0f19ca4cacb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref> *_data</type>
+        <definition>storage_t* _data BitCompressedVector&lt; T &gt;::__attribute__</definition>
+        <argsstring>((aligned(16)))</argsstring>
+        <name>__attribute__</name>
+        <param>
+          <type>(aligned(16))</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1ac665626e87709357922c4f16cbab4349" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BitCompressedVector&lt; T &gt;::checkAccess</definition>
+        <argsstring>(const size_t &amp;column, const size_t &amp;rows) const </argsstring>
+        <name>checkAccess</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="189" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="189" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1a2610953d69c5fe29d059cb2310dc451d" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t BitCompressedVector&lt; T &gt;::_offsetForColumn</definition>
+        <argsstring>(uint64_t column) const </argsstring>
+        <name>_offsetForColumn</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="208" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="208" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1ae0fb796ef9c10ee7a444be5292257196" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t BitCompressedVector&lt; T &gt;::_blockPosition</definition>
+        <argsstring>(uint64_t row) const </argsstring>
+        <name>_blockPosition</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="218" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="218" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1adb0529462b8755c1986e20b1a0b77450" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t BitCompressedVector&lt; T &gt;::_blockOffset</definition>
+        <argsstring>(uint64_t row) const </argsstring>
+        <name>_blockOffset</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="225" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="225" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1a373d428173c2ed9d5e5c127118504732" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t BitCompressedVector&lt; T &gt;::_blocks</definition>
+        <argsstring>(uint64_t rows) const </argsstring>
+        <name>_blocks</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="231" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="231" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1a40bcbf0bdadebc20a64f59607ae614cd" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t BitCompressedVector&lt; T &gt;::_tupleWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>_tupleWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="238" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="238" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1a9a3af67c5b4dabb2b8c242e60c279c08" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" kindref="member">storage_t</ref> *</type>
+        <definition>storage_t* BitCompressedVector&lt; T &gt;::_allocate</definition>
+        <argsstring>(uint64_t numBlocks)</argsstring>
+        <name>_allocate</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>numBlocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="250" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="250" bodyend="259"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_bit_compressed_vector_1a411acab39dbaf7ea0643adc6c0529391" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BitCompressedVector&lt; T &gt;::BitCompressedVector</definition>
+        <argsstring>(size_t columns, size_t rows, std::vector&lt; uint64_t &gt; bits)</argsstring>
+        <name>BitCompressedVector</name>
+        <param>
+          <type>size_t</type>
+          <declname>columns</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; uint64_t &gt;</type>
+          <declname>bits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="57" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1ae6029612906b458fef1c5435a01f565f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual BitCompressedVector&lt; T &gt;::~BitCompressedVector</definition>
+        <argsstring>()</argsstring>
+        <name>~BitCompressedVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="61" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1a55b007b4cb0c73c1b10fc3d754c37e4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void *</type>
+        <definition>void* BitCompressedVector&lt; T &gt;::data</definition>
+        <argsstring>()</argsstring>
+        <name>data</name>
+        <reimplements refid="class_abstract_attribute_vector_1aa9b187475305f322958e9e70f5da7b38">data</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="65" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1ae7a6a2dc4695e00e4e49de54a8d9542b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void BitCompressedVector&lt; T &gt;::setNumRows</definition>
+        <argsstring>(size_t s)</argsstring>
+        <name>setNumRows</name>
+        <reimplements refid="class_abstract_attribute_vector_1ad46f27571b5f25653ae8a5fa95404eff">setNumRows</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="68" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1a4c177434065180a1a84bcac41ea0dece" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>T</type>
+        <definition>T BitCompressedVector&lt; T &gt;::get</definition>
+        <argsstring>(size_t column, size_t row) const </argsstring>
+        <name>get</name>
+        <reimplements refid="class_base_attribute_vector_1a46402c4cda1e8b0b9f2a4eae283cbc49">get</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="72" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="72" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1ae7e3b070498f77535154226180c0b35b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void BitCompressedVector&lt; T &gt;::set</definition>
+        <argsstring>(size_t column, size_t row, T value)</argsstring>
+        <name>set</name>
+        <reimplements refid="class_base_attribute_vector_1a9fadea1c74dd07ac58bcf29b5799ab46">set</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="96" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="96" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1a51b1da77bf858ab479f9013b38e5ca65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void BitCompressedVector&lt; T &gt;::reserve</definition>
+        <argsstring>(size_t rows)</argsstring>
+        <name>reserve</name>
+        <reimplements refid="class_base_attribute_vector_1a49761020b6ff22ea15e43e846e34e867">reserve</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="125" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="125" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1ad647a636dfa85b732d4f9f4040d0cc27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void BitCompressedVector&lt; T &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <reimplements refid="class_base_attribute_vector_1a77f5fdb728bbdbef70882e474c6b0a05">clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="149" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="149" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1a5874b21984072207a752e64ab089114a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t BitCompressedVector&lt; T &gt;::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <reimplements refid="class_base_attribute_vector_1a370a4796980b8bdf5fa252e3f2c63c37">size</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="155" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="155" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1aad4a6a855d5b5841dec1c16bd5c754d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void BitCompressedVector&lt; T &gt;::resize</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>resize</name>
+        <reimplements refid="class_base_attribute_vector_1a5f190deb098511d9de05da0ade39c846">resize</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="163" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="163" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1a63127f3d8e91918dec52c2dccb29d869" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t BitCompressedVector&lt; T &gt;::capacity</definition>
+        <argsstring>()</argsstring>
+        <name>capacity</name>
+        <reimplements refid="class_base_attribute_vector_1ad30d47e2a2f0890875c225d7d0567cd6">capacity</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="169" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1ab4ccb165ec86eddf0faa391ff6f8f7ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void BitCompressedVector&lt; T &gt;::rewriteColumn</definition>
+        <argsstring>(const size_t column, const size_t bits)</argsstring>
+        <name>rewriteColumn</name>
+        <reimplements refid="class_base_attribute_vector_1a7d4e5e6574e73f49f923ff92a072bca0">rewriteColumn</reimplements>
+        <param>
+          <type>const size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>bits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="173" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="173" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bit_compressed_vector_1a505680d45728791d0e0e54df8b738dd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_base_attribute_vector" kindref="compound">BaseAttributeVector</ref>&lt; T &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;BaseAttributeVector&lt;T&gt; &gt; BitCompressedVector&lt; T &gt;::copy</definition>
+        <argsstring>()</argsstring>
+        <name>copy</name>
+        <reimplements refid="class_base_attribute_vector_1aff09a848bc4955f7edd5b3ed7ddd4601">copy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="181" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="181" bodyend="186"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1644">
+        <label>BaseAttributeVector&lt; T &gt;</label>
+        <link refid="class_base_attribute_vector"/>
+        <childnode refid="1645" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1643">
+        <label>BitCompressedVector&lt; T &gt;</label>
+        <link refid="class_bit_compressed_vector"/>
+        <childnode refid="1644" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1645">
+        <label>AbstractAttributeVector</label>
+        <link refid="class_abstract_attribute_vector"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1647">
+        <label>BaseAttributeVector&lt; T &gt;</label>
+        <link refid="class_base_attribute_vector"/>
+        <childnode refid="1648" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1646">
+        <label>BitCompressedVector&lt; T &gt;</label>
+        <link refid="class_bit_compressed_vector"/>
+        <childnode refid="1647" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1648">
+        <label>AbstractAttributeVector</label>
+        <link refid="class_abstract_attribute_vector"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="26" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="26" bodyend="261"/>
+    <listofallmembers>
+      <member refid="class_bit_compressed_vector_1a4a69717062c5334e8eb0b0f19ca4cacb" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>__attribute__</name></member>
+      <member refid="class_bit_compressed_vector_1a9a3af67c5b4dabb2b8c242e60c279c08" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>_allocate</name></member>
+      <member refid="class_bit_compressed_vector_1a1331b2829f4e2960c1ec9fbc2c02c115" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>_allocatedBlocks</name></member>
+      <member refid="class_bit_compressed_vector_1a78cd60f75d313d42a31d9a46e7310b74" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>_bit_width</name></member>
+      <member refid="class_bit_compressed_vector_1a75f1b80ea890e2207b8e7704af5e660e" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>_bits</name></member>
+      <member refid="class_bit_compressed_vector_1adb0529462b8755c1986e20b1a0b77450" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>_blockOffset</name></member>
+      <member refid="class_bit_compressed_vector_1ae0fb796ef9c10ee7a444be5292257196" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>_blockPosition</name></member>
+      <member refid="class_bit_compressed_vector_1a373d428173c2ed9d5e5c127118504732" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>_blocks</name></member>
+      <member refid="class_bit_compressed_vector_1a2c13b26b65d51c4e7a1ab9dc80cf7a65" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>_columns</name></member>
+      <member refid="class_bit_compressed_vector_1a2610953d69c5fe29d059cb2310dc451d" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>_offsetForColumn</name></member>
+      <member refid="class_bit_compressed_vector_1a241cfd6ea835872148f6ba106018f8a2" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>_size</name></member>
+      <member refid="class_bit_compressed_vector_1a40bcbf0bdadebc20a64f59607ae614cd" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>_tupleWidth</name></member>
+      <member refid="class_bit_compressed_vector_1a7d2b87c518d84663c7001317d24032af" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>bit_size_list_t</name></member>
+      <member refid="class_bit_compressed_vector_1a411acab39dbaf7ea0643adc6c0529391" prot="public" virt="non-virtual"><scope>BitCompressedVector</scope><name>BitCompressedVector</name></member>
+      <member refid="class_bit_compressed_vector_1a63127f3d8e91918dec52c2dccb29d869" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>capacity</name></member>
+      <member refid="class_bit_compressed_vector_1ac665626e87709357922c4f16cbab4349" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>checkAccess</name></member>
+      <member refid="class_bit_compressed_vector_1ad647a636dfa85b732d4f9f4040d0cc27" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>clear</name></member>
+      <member refid="class_bit_compressed_vector_1a505680d45728791d0e0e54df8b738dd1" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>copy</name></member>
+      <member refid="class_bit_compressed_vector_1a55b007b4cb0c73c1b10fc3d754c37e4a" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>data</name></member>
+      <member refid="class_bit_compressed_vector_1a4c177434065180a1a84bcac41ea0dece" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>get</name></member>
+      <member refid="class_bit_compressed_vector_1a51b1da77bf858ab479f9013b38e5ca65" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>reserve</name></member>
+      <member refid="class_bit_compressed_vector_1aad4a6a855d5b5841dec1c16bd5c754d7" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>resize</name></member>
+      <member refid="class_bit_compressed_vector_1ab4ccb165ec86eddf0faa391ff6f8f7ce" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>rewriteColumn</name></member>
+      <member refid="class_bit_compressed_vector_1ae7e3b070498f77535154226180c0b35b" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>set</name></member>
+      <member refid="class_bit_compressed_vector_1ae7a6a2dc4695e00e4e49de54a8d9542b" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>setNumRows</name></member>
+      <member refid="class_bit_compressed_vector_1a5874b21984072207a752e64ab089114a" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>size</name></member>
+      <member refid="class_bit_compressed_vector_1a7d41099b606e83dfa0260d17f4277596" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>storage_t</name></member>
+      <member refid="class_bit_compressed_vector_1a6d312b12985dba78a8d33725a2c52374" prot="private" virt="non-virtual"><scope>BitCompressedVector</scope><name>Strategy</name></member>
+      <member refid="class_bit_compressed_vector_1afe496c1b5c79b5ab2aad16d036190f78" prot="public" virt="non-virtual"><scope>BitCompressedVector</scope><name>value_type</name></member>
+      <member refid="class_abstract_attribute_vector_1aca44301e92f1060f470bf4488592701c" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>~AbstractAttributeVector</name></member>
+      <member refid="class_base_attribute_vector_1a8e9a3b24c3c21480db901b35829cb7cb" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>~BaseAttributeVector</name></member>
+      <member refid="class_bit_compressed_vector_1ae6029612906b458fef1c5435a01f565f" prot="public" virt="virtual"><scope>BitCompressedVector</scope><name>~BitCompressedVector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

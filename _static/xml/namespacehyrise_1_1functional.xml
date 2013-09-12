@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="namespacehyrise_1_1functional" kind="namespace">
+    <compoundname>hyrise::functional</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacehyrise_1_1functional_1a7de6bac891a2fe69d9b9665d7e86ccd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hyrise::functional::collect</definition>
+        <argsstring>(const T &amp;values, F func) -&gt; std::vector&lt; decltype(func(*std::begin(values)))&gt;</argsstring>
+        <name>collect</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>F</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/vector_helpers.h" line="12" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/vector_helpers.h" bodystart="12" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1_1functional_1af4df4a6f15e5fee18815f89cf363cef6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hyrise::functional::foldLeft</definition>
+        <argsstring>(const T &amp;values, U initial, F func) -&gt; U</argsstring>
+        <name>foldLeft</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>U</type>
+          <declname>initial</declname>
+        </param>
+        <param>
+          <type>F</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/vector_helpers.h" line="20" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/vector_helpers.h" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1_1functional_1a89aba730f56007662917f64ed6930696" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hyrise::functional::select</definition>
+        <argsstring>(const T &amp;values, F func) -&gt; T</argsstring>
+        <name>select</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>F</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/vector_helpers.h" line="25" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/vector_helpers.h" bodystart="25" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1_1functional_1aa5a5d6518ef70d11b4f8a77ee8c6b767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hyrise::functional::sum</definition>
+        <argsstring>(T values, U initial, F func) -&gt; U</argsstring>
+        <name>sum</name>
+        <param>
+          <type>T</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>U</type>
+          <declname>initial</declname>
+        </param>
+        <param>
+          <type>F</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/vector_helpers.h" line="32" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/vector_helpers.h" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehyrise_1_1functional_1a920d2572b81eb4dbde35ba73c7288b2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hyrise::functional::forEachWithIndex</definition>
+        <argsstring>(T values, F func)</argsstring>
+        <name>forEachWithIndex</name>
+        <param>
+          <type>T</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>F</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/vector_helpers.h" line="40" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/vector_helpers.h" bodystart="40" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/vector_helpers.h" line="9"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_resource_manager_8h" kind="file">
+    <compoundname>ResourceManager.h</compoundname>
+    <includes local="no">map</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">string</includes>
+    <includes local="no">stdexcept</includes>
+    <includes refid="types_8h" local="yes">helper/types.h</includes>
+    <includes refid="checked__cast_8h" local="yes">helper/checked_cast.h</includes>
+    <includedby refid="_insert_scan_8cpp" local="yes">src/lib/access/InsertScan.cpp</includedby>
+    <includedby refid="_json_table_8cpp" local="no">src/lib/access/storage/JsonTable.cpp</includedby>
+    <includedby refid="_resource_manager_8cpp" local="yes">src/lib/io/ResourceManager.cpp</includedby>
+    <includedby refid="_storage_manager_8h" local="yes">src/lib/io/StorageManager.h</includedby>
+    <incdepgraph>
+      <node id="12349">
+        <label>helper/checked_cast.h</label>
+        <link refid="checked__cast_8h"/>
+        <childnode refid="12341" relation="include">
+        </childnode>
+        <childnode refid="12344" relation="include">
+        </childnode>
+      </node>
+      <node id="12347">
+        <label>limits</label>
+      </node>
+      <node id="12339">
+        <label>src/lib/io/ResourceManager.h</label>
+        <link refid="ResourceManager.h"/>
+        <childnode refid="12340" relation="include">
+        </childnode>
+        <childnode refid="12341" relation="include">
+        </childnode>
+        <childnode refid="12342" relation="include">
+        </childnode>
+        <childnode refid="12343" relation="include">
+        </childnode>
+        <childnode refid="12344" relation="include">
+        </childnode>
+        <childnode refid="12345" relation="include">
+        </childnode>
+        <childnode refid="12349" relation="include">
+        </childnode>
+      </node>
+      <node id="12346">
+        <label>cstdint</label>
+      </node>
+      <node id="12344">
+        <label>stdexcept</label>
+      </node>
+      <node id="12343">
+        <label>string</label>
+      </node>
+      <node id="12340">
+        <label>map</label>
+      </node>
+      <node id="12348">
+        <label>vector</label>
+      </node>
+      <node id="12342">
+        <label>mutex</label>
+      </node>
+      <node id="12345">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="12346" relation="include">
+        </childnode>
+        <childnode refid="12343" relation="include">
+        </childnode>
+        <childnode refid="12347" relation="include">
+        </childnode>
+        <childnode refid="12341" relation="include">
+        </childnode>
+        <childnode refid="12348" relation="include">
+        </childnode>
+      </node>
+      <node id="12341">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12362">
+        <label>src/lib/access/storage/ReplaceTable.cpp</label>
+        <link refid="_replace_table_8cpp"/>
+      </node>
+      <node id="12355">
+        <label>src/bin/hyrise/main.cpp</label>
+        <link refid="bin_2hyrise_2main_8cpp"/>
+      </node>
+      <node id="12373">
+        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
+        <link refid="_hash_value_join_8cpp"/>
+      </node>
+      <node id="12370">
+        <label>src/lib/io.h</label>
+        <link refid="io_8h"/>
+        <childnode refid="12371" relation="include">
+        </childnode>
+        <childnode refid="12372" relation="include">
+        </childnode>
+        <childnode refid="12373" relation="include">
+        </childnode>
+        <childnode refid="12374" relation="include">
+        </childnode>
+        <childnode refid="12375" relation="include">
+        </childnode>
+        <childnode refid="12376" relation="include">
+        </childnode>
+        <childnode refid="12377" relation="include">
+        </childnode>
+        <childnode refid="12378" relation="include">
+        </childnode>
+        <childnode refid="12379" relation="include">
+        </childnode>
+      </node>
+      <node id="12352">
+        <label>src/lib/access/storage/JsonTable.cpp</label>
+        <link refid="_json_table_8cpp"/>
+      </node>
+      <node id="12356">
+        <label>src/lib/access/CreateIndex.cpp</label>
+        <link refid="_create_index_8cpp"/>
+      </node>
+      <node id="12351">
+        <label>src/lib/access/InsertScan.cpp</label>
+        <link refid="_insert_scan_8cpp"/>
+      </node>
+      <node id="12366">
+        <label>src/lib/access/storage/UnloadAll.cpp</label>
+        <link refid="_unload_all_8cpp"/>
+      </node>
+      <node id="12350">
+        <label>src/lib/io/ResourceManager.h</label>
+        <link refid="ResourceManager.h"/>
+        <childnode refid="12351" relation="include">
+        </childnode>
+        <childnode refid="12352" relation="include">
+        </childnode>
+        <childnode refid="12353" relation="include">
+        </childnode>
+        <childnode refid="12354" relation="include">
+        </childnode>
+      </node>
+      <node id="12371">
+        <label>src/bin/perf_regression/GroupByScan.cpp</label>
+        <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="12379">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
+      </node>
+      <node id="12357">
+        <label>src/lib/access/IndexScan.cpp</label>
+        <link refid="_index_scan_8cpp"/>
+      </node>
+      <node id="12381">
+        <label>src/lib/testing/test.cpp</label>
+        <link refid="test_8cpp"/>
+      </node>
+      <node id="12365">
+        <label>src/lib/access/storage/TableUnload.cpp</label>
+        <link refid="_table_unload_8cpp"/>
+      </node>
+      <node id="12358">
+        <label>src/lib/access/LayoutTableLoad.cpp</label>
+        <link refid="_layout_table_load_8cpp"/>
+      </node>
+      <node id="12363">
+        <label>src/lib/access/storage/SetTable.cpp</label>
+        <link refid="_set_table_8cpp"/>
+      </node>
+      <node id="12364">
+        <label>src/lib/access/storage/TableLoad.cpp</label>
+        <link refid="_table_load_8cpp"/>
+      </node>
+      <node id="12376">
+        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
+      </node>
+      <node id="12361">
+        <label>src/lib/access/storage/MySQLTableLoad.cpp</label>
+        <link refid="_my_s_q_l_table_load_8cpp"/>
+      </node>
+      <node id="12354">
+        <label>src/lib/io/StorageManager.h</label>
+        <link refid="_storage_manager_8h"/>
+        <childnode refid="12355" relation="include">
+        </childnode>
+        <childnode refid="12356" relation="include">
+        </childnode>
+        <childnode refid="12357" relation="include">
+        </childnode>
+        <childnode refid="12358" relation="include">
+        </childnode>
+        <childnode refid="12359" relation="include">
+        </childnode>
+        <childnode refid="12360" relation="include">
+        </childnode>
+        <childnode refid="12361" relation="include">
+        </childnode>
+        <childnode refid="12362" relation="include">
+        </childnode>
+        <childnode refid="12363" relation="include">
+        </childnode>
+        <childnode refid="12364" relation="include">
+        </childnode>
+        <childnode refid="12365" relation="include">
+        </childnode>
+        <childnode refid="12366" relation="include">
+        </childnode>
+        <childnode refid="12367" relation="include">
+        </childnode>
+        <childnode refid="12368" relation="include">
+        </childnode>
+        <childnode refid="12369" relation="include">
+        </childnode>
+        <childnode refid="12370" relation="include">
+        </childnode>
+        <childnode refid="12380" relation="include">
+        </childnode>
+      </node>
+      <node id="12368">
+        <label>src/lib/access/system/QueryParser.cpp</label>
+        <link refid="_query_parser_8cpp"/>
+      </node>
+      <node id="12369">
+        <label>src/lib/io/StorageManager.cpp</label>
+        <link refid="_storage_manager_8cpp"/>
+      </node>
+      <node id="12377">
+        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
+        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="12353">
+        <label>src/lib/io/ResourceManager.cpp</label>
+        <link refid="_resource_manager_8cpp"/>
+      </node>
+      <node id="12378">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
+      </node>
+      <node id="12372">
+        <label>src/bin/perf_regression/HashJoin.cpp</label>
+        <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="12367">
+        <label>src/lib/access/system/PlanOperation.cpp</label>
+        <link refid="_plan_operation_8cpp"/>
+      </node>
+      <node id="12360">
+        <label>src/lib/access/storage/LoadFile.cpp</label>
+        <link refid="_load_file_8cpp"/>
+      </node>
+      <node id="12375">
+        <label>src/bin/perf_regression/main.cpp</label>
+        <link refid="bin_2perf__regression_2main_8cpp"/>
+      </node>
+      <node id="12374">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="12359">
+        <label>src/lib/access/storage/GetTable.cpp</label>
+        <link refid="_get_table_8cpp"/>
+      </node>
+      <node id="12380">
+        <label>src/lib/testing/test.h</label>
+        <link refid="test_8h"/>
+        <childnode refid="12381" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhyrise_1_1io_1_1_resource_manager_exception" prot="public">hyrise::io::ResourceManagerException</innerclass>
+    <innerclass refid="classhyrise_1_1io_1_1_resource_already_exists_exception" prot="public">hyrise::io::ResourceAlreadyExistsException</innerclass>
+    <innerclass refid="classhyrise_1_1io_1_1_resource_not_exists_exception" prot="public">hyrise::io::ResourceNotExistsException</innerclass>
+    <innerclass refid="classhyrise_1_1io_1_1_resource_manager" prot="public">hyrise::io::ResourceManager</innerclass>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1io">hyrise::io</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_IO_RESOURCEMANAGER_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_IO_RESOURCEMANAGER_H_</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">helper/types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="checked__cast_8h" kindref="compound">helper/checked_cast.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_abstract_resource" kindref="compound">AbstractResource</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">io<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classhyrise_1_1io_1_1_resource_manager_exception" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1io_1_1_resource_manager_exception" kindref="compound">ResourceManagerException</ref><sp/>:<sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::runtime_error<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21" refid="classhyrise_1_1io_1_1_resource_manager_exception_1a755100f399c8d66fa0f77340e80e01fa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_exception_1a755100f399c8d66fa0f77340e80e01fa" kindref="member">ResourceManagerException</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;what):<sp/>std::runtime_error(what)<sp/>{}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classhyrise_1_1io_1_1_resource_already_exists_exception" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1io_1_1_resource_already_exists_exception" kindref="compound">ResourceAlreadyExistsException</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_exception" kindref="compound">ResourceManagerException</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="classhyrise_1_1io_1_1_resource_already_exists_exception_1a12497c5e4888f7cedd1f3abf84cbee31" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_already_exists_exception_1a12497c5e4888f7cedd1f3abf84cbee31" kindref="member">ResourceAlreadyExistsException</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;what):<sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_exception" kindref="compound">ResourceManagerException</ref>(what)<sp/>{}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classhyrise_1_1io_1_1_resource_not_exists_exception" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1io_1_1_resource_not_exists_exception" kindref="compound">ResourceNotExistsException</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_exception" kindref="compound">ResourceManagerException</ref><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="classhyrise_1_1io_1_1_resource_not_exists_exception_1a7a1a7a73135ab027f24f739f66e16fac" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_not_exists_exception_1a7a1a7a73135ab027f24f739f66e16fac" kindref="member">ResourceNotExistsException</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;what):<sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_exception" kindref="compound">ResourceManagerException</ref>(what)<sp/>{}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classhyrise_1_1io_1_1_resource_manager" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1io_1_1_resource_manager" kindref="compound">ResourceManager</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42" refid="classhyrise_1_1io_1_1_resource_manager_1a06c0b1260dc17ba8406198bb26c427c6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>std::shared_ptr&lt;AbstractResource&gt;<sp/>&gt;<sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a06c0b1260dc17ba8406198bb26c427c6" kindref="member">resource_map</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager" kindref="compound">ResourceManager</ref>&amp;<sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1ab22262727cf33994dffcda141fe4c58d" kindref="member" tooltip="Retrieve singleton ResourceManager instance.">getInstance</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a8aebc08f8dc76a03c5685d999d855b27" kindref="member" tooltip="Adds a new resource.">add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;AbstractResource&gt;&amp;<sp/>resource)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;AbstractResource&gt;<sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a1fd8fc312c5c3ee27eee7c47de7244e9" kindref="member" tooltip="Retrieves a resource by name.">getResource</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="54" refid="classhyrise_1_1io_1_1_resource_manager_1a4768ef465eb1271b5ac65c19865a4bba" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;T&gt;<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="checked__cast_8h_1ab1a6688a6284640c3040705ab0ff138c" kindref="member">checked_pointer_cast</ref>&lt;T&gt;(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a1fd8fc312c5c3ee27eee7c47de7244e9" kindref="member" tooltip="Retrieves a resource by name.">getResource</ref>(name));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">remove</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a946e5b60ef5924a4129e9cd8680d03d8" kindref="member" tooltip="Replaces an existing resource.">replace</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;AbstractResource&gt;&amp;<sp/>resource)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a7a2ce16cf1ae082a1276965c330171d8" kindref="member" tooltip="Removes all resources.">clear</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a082d4f9e4abecaefff089bed21cb7584" kindref="member">exists</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a58c0f1fe350c4b0abf7a9c2ae0b0db89" kindref="member">assureExists</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a9875456caeb04860be3202fb7825fe4a" kindref="member" tooltip="Return number of elements in storage.">size</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a06c0b1260dc17ba8406198bb26c427c6" kindref="member">resource_map</ref><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a017e1c927a250a0d61902e594f8550af" kindref="member">all</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="84" refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a06c0b1260dc17ba8406198bb26c427c6" kindref="member">resource_map</ref><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema.">_resources</ref>;</highlight></codeline>
+<codeline lineno="86" refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>std::recursive_mutex<sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map.">_resource_mutex</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a1d84d028be2e35197eeaee0224164e4a" kindref="member">ResourceManager</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a1d84d028be2e35197eeaee0224164e4a" kindref="member">ResourceManager</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager" kindref="compound">ResourceManager</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager" kindref="compound">ResourceManager</ref><sp/>&amp;<ref refid="classhyrise_1_1io_1_1_resource_manager_1a37a8c7e8f011bb5a61a93be09e5f3533" kindref="member">operator= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager" kindref="compound">ResourceManager</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hyrise::io</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_IO_RESOURCEMANAGER_H_</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/ResourceManager.h"/>
+  </compounddef>
+</doxygen>

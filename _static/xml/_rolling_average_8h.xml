@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_rolling_average_8h" kind="file">
+    <compoundname>RollingAverage.h</compoundname>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="10968">
+        <label>src/lib/helper/RollingAverage.h</label>
+        <link refid="RollingAverage.h"/>
+        <childnode refid="10969" relation="include">
+        </childnode>
+      </node>
+      <node id="10969">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_rolling_average" prot="public">RollingAverage</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ROLLINGAVERAGE_H_</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ROLLINGAVERAGE_H_</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="8" refid="class_rolling_average" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rolling_average" kindref="compound">RollingAverage</ref><sp/>{</highlight></codeline>
+<codeline lineno="9" refid="class_rolling_average_1aea9e796362ca7e6900cd572441438d1d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_rolling_average_1aea9e796362ca7e6900cd572441438d1d" kindref="member">_sample_size</ref>;</highlight></codeline>
+<codeline lineno="10" refid="class_rolling_average_1a023cfebcd3ef5e94b22cbbf8afc537b7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_rolling_average_1a023cfebcd3ef5e94b22cbbf8afc537b7" kindref="member">_oldest</ref>;</highlight></codeline>
+<codeline lineno="11" refid="class_rolling_average_1a2428aa9c0f92b9ba244548234580e565" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/><ref refid="class_rolling_average_1a2428aa9c0f92b9ba244548234580e565" kindref="member">_total</ref>;</highlight></codeline>
+<codeline lineno="12" refid="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;T&gt;<sp/><ref refid="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" kindref="member">_sample</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14" refid="class_rolling_average_1a29cb8c21c1d28963ccee373eb85b4bc5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_rolling_average_1a29cb8c21c1d28963ccee373eb85b4bc5" kindref="member">RollingAverage</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sample):<sp/><ref refid="class_rolling_average_1aea9e796362ca7e6900cd572441438d1d" kindref="member">_sample_size</ref>(sample),<sp/><ref refid="class_rolling_average_1a023cfebcd3ef5e94b22cbbf8afc537b7" kindref="member">_oldest</ref>(0),<sp/><ref refid="class_rolling_average_1a2428aa9c0f92b9ba244548234580e565" kindref="member">_total</ref>(0){</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="16" refid="class_rolling_average_1a30cf0a9ddfc36e6fd30271eeb72465c2" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/><ref refid="class_rolling_average_1a30cf0a9ddfc36e6fd30271eeb72465c2" kindref="member">add</ref>(T<sp/>value){</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_rolling_average_1aea9e796362ca7e6900cd572441438d1d" kindref="member">_sample_size</ref><sp/>==<sp/><ref refid="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" kindref="member">_sample</ref>.size())</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rolling_average_1a2428aa9c0f92b9ba244548234580e565" kindref="member">_total</ref><sp/>-=<sp/><ref refid="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" kindref="member">_sample</ref>[<ref refid="class_rolling_average_1a023cfebcd3ef5e94b22cbbf8afc537b7" kindref="member">_oldest</ref>];</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" kindref="member">_sample</ref>[<ref refid="class_rolling_average_1a023cfebcd3ef5e94b22cbbf8afc537b7" kindref="member">_oldest</ref>]<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" kindref="member">_sample</ref>.push_back(value);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_rolling_average_1a2428aa9c0f92b9ba244548234580e565" kindref="member">_total</ref><sp/>+=<sp/>value;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_rolling_average_1a023cfebcd3ef5e94b22cbbf8afc537b7" kindref="member">_oldest</ref><sp/>=<sp/>(<ref refid="class_rolling_average_1a023cfebcd3ef5e94b22cbbf8afc537b7" kindref="member">_oldest</ref><sp/>+<sp/>1)<sp/>%<sp/><ref refid="class_rolling_average_1aea9e796362ca7e6900cd572441438d1d" kindref="member">_sample_size</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_rolling_average_1a2428aa9c0f92b9ba244548234580e565" kindref="member">_total</ref>/<ref refid="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" kindref="member">_sample</ref>.size();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28" refid="class_rolling_average_1af3be1d837f7397a5a59f2c94fcf365d3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(T<sp/>value){</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_rolling_average_1aea9e796362ca7e6900cd572441438d1d" kindref="member">_sample_size</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rolling_average_1a30cf0a9ddfc36e6fd30271eeb72465c2" kindref="member">add</ref>(value);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_rolling_average_1afbeb00b376be8cb5b58cd116898758e6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rolling_average_1afbeb00b376be8cb5b58cd116898758e6" kindref="member">reset</ref>(){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" kindref="member">_sample</ref>.clear();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_rolling_average_1a023cfebcd3ef5e94b22cbbf8afc537b7" kindref="member">_oldest</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_rolling_average_1a2428aa9c0f92b9ba244548234580e565" kindref="member">_total</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_rolling_average_1a1361ed59f6a4aa4326414c9dc59505c0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rolling_average_1a1361ed59f6a4aa4326414c9dc59505c0" kindref="member">clear</ref>(){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_rolling_average_1a2428aa9c0f92b9ba244548234580e565" kindref="member">_total</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" kindref="member">_sample</ref>.clear();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_rolling_average_1a023cfebcd3ef5e94b22cbbf8afc537b7" kindref="member">_oldest</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44" refid="class_rolling_average_1a288ec4f021d1cf4117173c595b3f602e" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/><ref refid="class_rolling_average_1a288ec4f021d1cf4117173c595b3f602e" kindref="member">getAverage</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>average<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" kindref="member">_sample</ref>.size()<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>average<sp/>=<sp/><ref refid="class_rolling_average_1a2428aa9c0f92b9ba244548234580e565" kindref="member">_total</ref>/<ref refid="class_rolling_average_1ab78c944f3df9dcaf1a7ffda7c54db8b9" kindref="member">_sample</ref>.size();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>average;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ROLLINGAVERAGE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/RollingAverage.h"/>
+  </compounddef>
+</doxygen>

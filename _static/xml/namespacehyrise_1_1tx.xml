@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="namespacehyrise_1_1tx" kind="namespace">
+    <compoundname>hyrise::tx</compoundname>
+    <innerclass refid="classhyrise_1_1tx_1_1_t_x_modifications" prot="public">hyrise::tx::TXModifications</innerclass>
+    <innerclass refid="structhyrise_1_1tx_1_1_t_x_data" prot="public">hyrise::tx::TXData</innerclass>
+    <innerclass refid="classhyrise_1_1tx_1_1_transaction_manager" prot="public">hyrise::tx::TransactionManager</innerclass>
+    <innerclass refid="classhyrise_1_1tx_1_1_request_handler" prot="public">hyrise::tx::RequestHandler</innerclass>
+    <innerclass refid="classhyrise_1_1tx_1_1_transaction_status_handler" prot="public">hyrise::tx::TransactionStatusHandler</innerclass>
+    <innerclass refid="structhyrise_1_1tx_1_1_t_x_context" prot="public">hyrise::tx::TXContext</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacehyrise_1_1tx_1ae309e968fd5cd0c9bc4b27e82d78c74c" prot="public" static="no">
+        <name>TX_CODE</name>
+        <enumvalue id="namespacehyrise_1_1tx_1ae309e968fd5cd0c9bc4b27e82d78c74caf50003b0387fc2990e1e931e19ef62a9" prot="public">
+          <name>TX_OK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehyrise_1_1tx_1ae309e968fd5cd0c9bc4b27e82d78c74ca5d9c443e5d63ec1955fd34e081cd3848" prot="public">
+          <name>TX_FAIL_CONCURRENT_COMMIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehyrise_1_1tx_1ae309e968fd5cd0c9bc4b27e82d78c74ca37bc98126a0f5062f2dee91480e1459b" prot="public">
+          <name>TX_FAIL_OTHER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" line="37" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" bodystart="37" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" prot="public" static="no">
+        <type>int64_t</type>
+        <definition>typedef int64_t hyrise::tx::transaction_id_t</definition>
+        <argsstring></argsstring>
+        <name>transaction_id_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" line="25" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" prot="public" static="no">
+        <type>int64_t</type>
+        <definition>typedef int64_t hyrise::tx::transaction_cid_t</definition>
+        <argsstring></argsstring>
+        <name>transaction_cid_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" line="26" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehyrise_1_1tx_1aa313640015d76af5cb69a00655d4a0cc" prot="public" static="no">
+        <type>struct <ref refid="structhyrise_1_1tx_1_1_t_x_data" kindref="compound">hyrise::tx::TXData</ref></type>
+        <definition>typedef struct hyrise::tx::TXData  hyrise::tx::TransactionData</definition>
+        <argsstring></argsstring>
+        <name>TransactionData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.h" line="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacehyrise_1_1tx_1a3b2135504010d1b24a0e37ef7a710a73" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+        <definition>const transaction_id_t hyrise::tx::MERGE_TID</definition>
+        <argsstring></argsstring>
+        <name>MERGE_TID</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" line="28" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehyrise_1_1tx_1a5ae28da55b0a12b788a793d3f85a1e3c" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+        <definition>const transaction_id_t hyrise::tx::START_TID</definition>
+        <argsstring></argsstring>
+        <name>START_TID</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" line="30" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehyrise_1_1tx_1aef812ca2ecf1b08694af0216c517ea28" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+        <definition>const transaction_id_t hyrise::tx::MAX_TID</definition>
+        <argsstring></argsstring>
+        <name>MAX_TID</name>
+        <initializer>= std::numeric_limits&lt;<ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref>&gt;::max()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" line="31" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehyrise_1_1tx_1a65c8d18e1354a3758fb7fd14f8f13e7b" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref></type>
+        <definition>const transaction_id_t hyrise::tx::UNKNOWN</definition>
+        <argsstring></argsstring>
+        <name>UNKNOWN</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" line="33" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehyrise_1_1tx_1a98d0e59aad5eb78822e01e096032d3e6" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref></type>
+        <definition>const transaction_cid_t hyrise::tx::UNKNOWN_CID</definition>
+        <argsstring></argsstring>
+        <name>UNKNOWN_CID</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" line="34" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehyrise_1_1tx_1a271d7b080a2b517cc3baf1d90585a5ad" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref></type>
+        <definition>const transaction_cid_t hyrise::tx::INF_CID</definition>
+        <argsstring></argsstring>
+        <name>INF_CID</name>
+        <initializer>= std::numeric_limits&lt;<ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">transaction_cid_t</ref>&gt;::max()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" line="35" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacehyrise_1_1tx_1a5a4967bb268e63f8b37f87f6f331a25b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a567b68bb9a070f6b7b74bff6b21b7bf0" kindref="member">storage::store_ptr_t</ref></type>
+        <definition>storage::store_ptr_t hyrise::tx::getStore</definition>
+        <argsstring>(const storage::c_atable_ptr_t &amp;table)</argsstring>
+        <name>getStore</name>
+        <param>
+          <type>const <ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref> &amp;</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" line="164" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/TransactionManager.cpp" bodystart="164" bodyend="167"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/types.h" line="22"/>
+  </compounddef>
+</doxygen>

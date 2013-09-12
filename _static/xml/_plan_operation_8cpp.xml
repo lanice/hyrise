@@ -1,0 +1,679 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_plan_operation_8cpp" kind="file">
+    <compoundname>PlanOperation.cpp</compoundname>
+    <includes refid="_plan_operation_8h" local="yes">access/system/PlanOperation.h</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">thread</includes>
+    <includes refid="_response_task_8h" local="yes">access/system/ResponseTask.h</includes>
+    <includes refid="epoch_8h" local="yes">helper/epoch.h</includes>
+    <includes refid="_papi_tracer_8h" local="yes">helper/PapiTracer.h</includes>
+    <includes refid="_storage_manager_8h" local="yes">io/StorageManager.h</includes>
+    <includes refid="_abstract_resource_8h" local="yes">storage/AbstractResource.h</includes>
+    <includes refid="_abstract_hash_table_8h" local="yes">storage/AbstractHashTable.h</includes>
+    <includes refid="_abstract_table_8h" local="yes">storage/AbstractTable.h</includes>
+    <includes refid="_table_range_view_8h" local="yes">storage/TableRangeView.h</includes>
+    <includes local="yes">boost/lexical_cast.hpp</includes>
+    <includes local="yes">log4cxx/logger.h</includes>
+    <incdepgraph>
+      <node id="8743">
+        <label>access/system/QueryParser.h</label>
+        <link refid="_query_parser_8h"/>
+        <childnode refid="8728" relation="include">
+        </childnode>
+        <childnode refid="8737" relation="include">
+        </childnode>
+        <childnode refid="8727" relation="include">
+        </childnode>
+        <childnode refid="8731" relation="include">
+        </childnode>
+        <childnode refid="8732" relation="include">
+        </childnode>
+        <childnode refid="8736" relation="include">
+        </childnode>
+        <childnode refid="8744" relation="include">
+        </childnode>
+        <childnode refid="8745" relation="include">
+        </childnode>
+      </node>
+      <node id="8751">
+        <label>atomic</label>
+      </node>
+      <node id="8755">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="8730" relation="include">
+        </childnode>
+        <childnode refid="8756" relation="include">
+        </childnode>
+        <childnode refid="8757" relation="include">
+        </childnode>
+      </node>
+      <node id="8772">
+        <label>storage/TableRangeView.h</label>
+        <link refid="_table_range_view_8h"/>
+        <childnode refid="8748" relation="include">
+        </childnode>
+        <childnode refid="8773" relation="include">
+        </childnode>
+      </node>
+      <node id="8770">
+        <label>helper/checked_cast.h</label>
+        <link refid="checked__cast_8h"/>
+        <childnode refid="8737" relation="include">
+        </childnode>
+        <childnode refid="8732" relation="include">
+        </childnode>
+      </node>
+      <node id="8723">
+        <label>access/system/PlanOperation.h</label>
+        <link refid="_plan_operation_8h"/>
+        <childnode refid="8724" relation="include">
+        </childnode>
+        <childnode refid="8739" relation="include">
+        </childnode>
+        <childnode refid="8743" relation="include">
+        </childnode>
+        <childnode refid="8746" relation="include">
+        </childnode>
+        <childnode refid="8730" relation="include">
+        </childnode>
+        <childnode refid="8740" relation="include">
+        </childnode>
+        <childnode refid="8748" relation="include">
+        </childnode>
+        <childnode refid="8744" relation="include">
+        </childnode>
+      </node>
+      <node id="8742">
+        <label>limits</label>
+      </node>
+      <node id="8734">
+        <label>helper/epoch.h</label>
+        <link refid="epoch_8h"/>
+        <childnode refid="8725" relation="include">
+        </childnode>
+      </node>
+      <node id="8749">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="8750" relation="include">
+        </childnode>
+        <childnode refid="8751" relation="include">
+        </childnode>
+      </node>
+      <node id="8774">
+        <label>boost/lexical_cast.hpp</label>
+      </node>
+      <node id="8759">
+        <label>boost/iterator/iterator_facade.hpp</label>
+      </node>
+      <node id="8769">
+        <label>io/ResourceManager.h</label>
+        <link refid="_resource_manager_8h"/>
+        <childnode refid="8728" relation="include">
+        </childnode>
+        <childnode refid="8737" relation="include">
+        </childnode>
+        <childnode refid="8736" relation="include">
+        </childnode>
+        <childnode refid="8731" relation="include">
+        </childnode>
+        <childnode refid="8732" relation="include">
+        </childnode>
+        <childnode refid="8740" relation="include">
+        </childnode>
+        <childnode refid="8770" relation="include">
+        </childnode>
+      </node>
+      <node id="8741">
+        <label>cstdint</label>
+      </node>
+      <node id="8725">
+        <label>stdint.h</label>
+      </node>
+      <node id="8732">
+        <label>stdexcept</label>
+      </node>
+      <node id="8752">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="8741" relation="include">
+        </childnode>
+        <childnode refid="8753" relation="include">
+        </childnode>
+      </node>
+      <node id="8731">
+        <label>string</label>
+      </node>
+      <node id="8728">
+        <label>map</label>
+      </node>
+      <node id="8763">
+        <label>helper/PapiTracer.h</label>
+        <link refid="_papi_tracer_8h"/>
+        <childnode refid="8764" relation="include">
+        </childnode>
+        <childnode refid="8765" relation="include">
+        </childnode>
+        <childnode refid="8760" relation="include">
+        </childnode>
+        <childnode refid="8727" relation="include">
+        </childnode>
+        <childnode refid="8731" relation="include">
+        </childnode>
+        <childnode refid="8732" relation="include">
+        </childnode>
+        <childnode refid="8766" relation="include">
+        </childnode>
+      </node>
+      <node id="8768">
+        <label>io/StorageManager.h</label>
+        <link refid="_storage_manager_8h"/>
+        <childnode refid="8751" relation="include">
+        </childnode>
+        <childnode refid="8728" relation="include">
+        </childnode>
+        <childnode refid="8737" relation="include">
+        </childnode>
+        <childnode refid="8736" relation="include">
+        </childnode>
+        <childnode refid="8731" relation="include">
+        </childnode>
+        <childnode refid="8727" relation="include">
+        </childnode>
+        <childnode refid="8769" relation="include">
+        </childnode>
+      </node>
+      <node id="8733">
+        <label>ostream</label>
+      </node>
+      <node id="8744">
+        <label>json.h</label>
+      </node>
+      <node id="8771">
+        <label>storage/AbstractHashTable.h</label>
+        <link refid="_abstract_hash_table_8h"/>
+        <childnode refid="8741" relation="include">
+        </childnode>
+        <childnode refid="8737" relation="include">
+        </childnode>
+        <childnode refid="8740" relation="include">
+        </childnode>
+        <childnode refid="8754" relation="include">
+        </childnode>
+        <childnode refid="8730" relation="include">
+        </childnode>
+      </node>
+      <node id="8724">
+        <label>access/system/OutputTask.h</label>
+        <link refid="_output_task_8h"/>
+        <childnode refid="8725" relation="include">
+        </childnode>
+        <childnode refid="8726" relation="include">
+        </childnode>
+        <childnode refid="8727" relation="include">
+        </childnode>
+        <childnode refid="8728" relation="include">
+        </childnode>
+        <childnode refid="8729" relation="include">
+        </childnode>
+        <childnode refid="8730" relation="include">
+        </childnode>
+        <childnode refid="8734" relation="include">
+        </childnode>
+        <childnode refid="8735" relation="include">
+        </childnode>
+      </node>
+      <node id="8738">
+        <label>condition_variable</label>
+      </node>
+      <node id="8730">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="8727" relation="include">
+        </childnode>
+        <childnode refid="8731" relation="include">
+        </childnode>
+        <childnode refid="8732" relation="include">
+        </childnode>
+        <childnode refid="8725" relation="include">
+        </childnode>
+        <childnode refid="8733" relation="include">
+        </childnode>
+      </node>
+      <node id="8757">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="8758" relation="include">
+        </childnode>
+        <childnode refid="8759" relation="include">
+        </childnode>
+      </node>
+      <node id="8758">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="8727">
+        <label>vector</label>
+      </node>
+      <node id="8729">
+        <label>utility</label>
+      </node>
+      <node id="8753">
+        <label>array</label>
+      </node>
+      <node id="8767">
+        <label>sstream</label>
+      </node>
+      <node id="8722">
+        <label>src/lib/access/system/PlanOperation.cpp</label>
+        <link refid="PlanOperation.cpp"/>
+        <childnode refid="8723" relation="include">
+        </childnode>
+        <childnode refid="8760" relation="include">
+        </childnode>
+        <childnode refid="8750" relation="include">
+        </childnode>
+        <childnode refid="8761" relation="include">
+        </childnode>
+        <childnode refid="8734" relation="include">
+        </childnode>
+        <childnode refid="8763" relation="include">
+        </childnode>
+        <childnode refid="8768" relation="include">
+        </childnode>
+        <childnode refid="8754" relation="include">
+        </childnode>
+        <childnode refid="8771" relation="include">
+        </childnode>
+        <childnode refid="8748" relation="include">
+        </childnode>
+        <childnode refid="8772" relation="include">
+        </childnode>
+        <childnode refid="8774" relation="include">
+        </childnode>
+        <childnode refid="8775" relation="include">
+        </childnode>
+      </node>
+      <node id="8773">
+        <label>helper/SharedFactory.h</label>
+        <link refid="_shared_factory_8h"/>
+        <childnode refid="8737" relation="include">
+        </childnode>
+      </node>
+      <node id="8747">
+        <label>cereal/cereal.hpp</label>
+      </node>
+      <node id="8726">
+        <label>time.h</label>
+      </node>
+      <node id="8766">
+        <label>helper/stringhelpers.h</label>
+        <link refid="stringhelpers_8h"/>
+        <childnode refid="8731" relation="include">
+        </childnode>
+        <childnode refid="8767" relation="include">
+        </childnode>
+      </node>
+      <node id="8765">
+        <label>sys/time.h</label>
+      </node>
+      <node id="8739">
+        <label>access/system/OperationData.h</label>
+        <link refid="_operation_data_8h"/>
+        <childnode refid="8727" relation="include">
+        </childnode>
+        <childnode refid="8740" relation="include">
+        </childnode>
+        <childnode refid="8730" relation="include">
+        </childnode>
+      </node>
+      <node id="8754">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="8745">
+        <label>access/system/BasicParser.h</label>
+        <link refid="_basic_parser_8h"/>
+        <childnode refid="8732" relation="include">
+        </childnode>
+        <childnode refid="8737" relation="include">
+        </childnode>
+        <childnode refid="8744" relation="include">
+        </childnode>
+      </node>
+      <node id="8736">
+        <label>mutex</label>
+      </node>
+      <node id="8756">
+        <label>storage/AbstractDictionary.h</label>
+        <link refid="_abstract_dictionary_8h"/>
+        <childnode refid="8727" relation="include">
+        </childnode>
+        <childnode refid="8731" relation="include">
+        </childnode>
+        <childnode refid="8737" relation="include">
+        </childnode>
+        <childnode refid="8730" relation="include">
+        </childnode>
+      </node>
+      <node id="8748">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="8742" relation="include">
+        </childnode>
+        <childnode refid="8737" relation="include">
+        </childnode>
+        <childnode refid="8732" relation="include">
+        </childnode>
+        <childnode refid="8727" relation="include">
+        </childnode>
+        <childnode refid="8731" relation="include">
+        </childnode>
+        <childnode refid="8740" relation="include">
+        </childnode>
+        <childnode refid="8749" relation="include">
+        </childnode>
+        <childnode refid="8752" relation="include">
+        </childnode>
+        <childnode refid="8754" relation="include">
+        </childnode>
+        <childnode refid="8755" relation="include">
+        </childnode>
+        <childnode refid="8730" relation="include">
+        </childnode>
+      </node>
+      <node id="8750">
+        <label>thread</label>
+      </node>
+      <node id="8740">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="8741" relation="include">
+        </childnode>
+        <childnode refid="8731" relation="include">
+        </childnode>
+        <childnode refid="8742" relation="include">
+        </childnode>
+        <childnode refid="8737" relation="include">
+        </childnode>
+        <childnode refid="8727" relation="include">
+        </childnode>
+      </node>
+      <node id="8762">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="8731" relation="include">
+        </childnode>
+      </node>
+      <node id="8760">
+        <label>algorithm</label>
+      </node>
+      <node id="8775">
+        <label>log4cxx/logger.h</label>
+      </node>
+      <node id="8764">
+        <label>stdio.h</label>
+      </node>
+      <node id="8761">
+        <label>access/system/ResponseTask.h</label>
+        <link refid="_response_task_8h"/>
+        <childnode refid="8751" relation="include">
+        </childnode>
+        <childnode refid="8736" relation="include">
+        </childnode>
+        <childnode refid="8734" relation="include">
+        </childnode>
+        <childnode refid="8724" relation="include">
+        </childnode>
+        <childnode refid="8762" relation="include">
+        </childnode>
+        <childnode refid="8746" relation="include">
+        </childnode>
+      </node>
+      <node id="8737">
+        <label>memory</label>
+      </node>
+      <node id="8735">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="8727" relation="include">
+        </childnode>
+        <childnode refid="8736" relation="include">
+        </childnode>
+        <childnode refid="8737" relation="include">
+        </childnode>
+        <childnode refid="8738" relation="include">
+        </childnode>
+        <childnode refid="8731" relation="include">
+        </childnode>
+      </node>
+      <node id="8746">
+        <label>io/TXContext.h</label>
+        <link refid="_t_x_context_8h"/>
+        <childnode refid="8740" relation="include">
+        </childnode>
+        <childnode refid="8747" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1access">hyrise::access</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_plan_operation_8h" kindref="compound">access/system/PlanOperation.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_response_task_8h" kindref="compound">access/system/ResponseTask.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="epoch_8h" kindref="compound">helper/epoch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_papi_tracer_8h" kindref="compound">helper/PapiTracer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_storage_manager_8h" kindref="compound">io/StorageManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_resource_8h" kindref="compound">storage/AbstractResource.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_hash_table_8h" kindref="compound">storage/AbstractHashTable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_table_8h" kindref="compound">storage/AbstractTable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_table_range_view_8h" kindref="compound">storage/TableRangeView.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/lexical_cast.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;log4cxx/logger.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="bin_2hyrise_2main_8cpp_1a1f643aeca905220d975e69578154a71d" kindref="member">logger</ref><sp/>=<sp/>log4cxx::Logger::getLogger(</highlight><highlight class="stringliteral">&quot;access.plan.PlanOperation&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">access<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="classhyrise_1_1access_1_1_plan_operation_1a0a450a1941e4c6366abbfa3180bf7919" kindref="member">PlanOperation::~PlanOperation</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classhyrise_1_1access_1_1_plan_operation_1aac92e842153df9a9ae7e548ac7602009" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aac92e842153df9a9ae7e548ac7602009" kindref="member">PlanOperation::addResult</ref>(<ref refid="namespacehyrise_1_1storage_1ae32c63e285e8cb5a8a3aac08dcd8d49a" kindref="member">storage::c_aresource_ptr_t</ref><sp/>result)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a96126d09e871f139400a393aae9b82e3" kindref="member">output</ref>.<ref refid="classhyrise_1_1access_1_1_operation_data_1a7f5b52688939ee178b85065305f72277" kindref="member" tooltip="Adds a new resource.">addResource</ref>(result);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classhyrise_1_1access_1_1_plan_operation_1a66c9b52d730c2029496abda71ea40b01" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a66c9b52d730c2029496abda71ea40b01" kindref="member">PlanOperation::getInputTable</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data.">input</ref>.<ref refid="group__deprecated_access_1ga69968d5ab56729a2e8ec54208a275b45" kindref="member">getTable</ref>(index);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="namespacehyrise_1_1access_1a5e26899dcca052aba3116e6a27c793d7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">storage::atable_ptr_t</ref><sp/><ref refid="namespacehyrise_1_1access_1a5e26899dcca052aba3116e6a27c793d7" kindref="member">empty_result</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classhyrise_1_1access_1_1_plan_operation_1a3f9ee072d27cf5dde038c4bff35cd4a6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">storage::c_atable_ptr_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a3f9ee072d27cf5dde038c4bff35cd4a6" kindref="member">PlanOperation::getResultTable</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a96126d09e871f139400a393aae9b82e3" kindref="member">output</ref>.<ref refid="group__deprecated_access_1gad5cdb9ac191bb55cde3d33464d537a43" kindref="member">numberOfTables</ref>())</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a96126d09e871f139400a393aae9b82e3" kindref="member">output</ref>.<ref refid="group__deprecated_access_1ga69968d5ab56729a2e8ec54208a275b45" kindref="member">getTable</ref>(index);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1access_1a5e26899dcca052aba3116e6a27c793d7" kindref="member">empty_result</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classhyrise_1_1access_1_1_plan_operation_1aa4857583f3f175825244fb767293f2bd" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1storage_1a53a798623aa803822a0edaef21f4d608" kindref="member">storage::c_ahashtable_ptr_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aa4857583f3f175825244fb767293f2bd" kindref="member">PlanOperation::getInputHashTable</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data.">input</ref>.<ref refid="group__deprecated_access_1gac45ae5fd6da2291a637aa1676cd46a9d" kindref="member">getHashTable</ref>(index);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classhyrise_1_1access_1_1_plan_operation_1aa06e9dccef9c7c8dbb8c88c936f43369" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1storage_1a53a798623aa803822a0edaef21f4d608" kindref="member">storage::c_ahashtable_ptr_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aa06e9dccef9c7c8dbb8c88c936f43369" kindref="member">PlanOperation::getResultHashTable</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a96126d09e871f139400a393aae9b82e3" kindref="member">output</ref>.<ref refid="group__deprecated_access_1gac45ae5fd6da2291a637aa1676cd46a9d" kindref="member">getHashTable</ref>(index);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classhyrise_1_1access_1_1_plan_operation_1a24dbaa436c72ba68ab30d6f58c320ac8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a24dbaa436c72ba68ab30d6f58c320ac8" kindref="member">PlanOperation::allDependenciesSuccessful</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_task_1ab25d10a171c2efc2dcdf4ec7b81d148d" kindref="member">_dependencies</ref>.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(std::dynamic_pointer_cast&lt;OutputTask&gt;(<ref refid="class_task_1ab25d10a171c2efc2dcdf4ec7b81d148d" kindref="member">_dependencies</ref>[i])-&gt;getState()<sp/>==<sp/><ref refid="namespacehyrise_1_1access_1a06dfec12b1bcee8435455d6a17aa6e9aafc363b2250c03601b3c28a2816fd9341" kindref="member">OpFail</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">std::string<sp/>PlanOperation::getDependencyErrorMessages()<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/>std::string<sp/>result;</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"></highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/>std::shared_ptr&lt;OutputTask&gt;<sp/>task;</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/>for<sp/>(size_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>_dependencies.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/>task<sp/>=<sp/>std::dynamic_pointer_cast&lt;OutputTask&gt;(_dependencies[i]);</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(task-&gt;getState()<sp/>==<sp/>OpFail)<sp/>result<sp/>+=<sp/>task-&gt;getErrorMessage()<sp/>+<sp/>&quot;\n&quot;;</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"></highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/>return<sp/>result;</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/>}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classhyrise_1_1access_1_1_plan_operation_1ad237b1647eea22538540d8d77f20f722" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1ad237b1647eea22538540d8d77f20f722" kindref="member">PlanOperation::addField</ref>(<ref refid="storage__types_8h_1a5ce4ecb27464dc24ba394527510dd89b" kindref="member">field_t</ref><sp/>field)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a7c85412d9b7fec499a1190df85199632" kindref="member">_indexed_field_definition</ref>.push_back(field);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classhyrise_1_1access_1_1_plan_operation_1abb7bcc23c5c1a19332474da034d85b8e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1abb7bcc23c5c1a19332474da034d85b8e" kindref="member">PlanOperation::addNamedField</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1ad64b8c8026a86f643d173acbb694b4f8" kindref="member">field_name_t</ref>&amp;<sp/>field)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1afa5b2221e0233ae772ad05796ae00f7e" kindref="member">_named_field_definition</ref>.push_back(field);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classhyrise_1_1access_1_1_plan_operation_1ab3c3b4ad0f0426024d52af0efb55a197" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1ad237b1647eea22538540d8d77f20f722" kindref="member">PlanOperation::addField</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Json::Value<sp/>&amp;field)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(field.isNumeric())<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1ad237b1647eea22538540d8d77f20f722" kindref="member">addField</ref>(field.asUInt());</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(field.isString())<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1abb7bcc23c5c1a19332474da034d85b8e" kindref="member">addNamedField</ref>(field.asString());</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>parse<sp/>field<sp/>name,<sp/>neither<sp/>numeric<sp/>nor<sp/>std::string&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classhyrise_1_1access_1_1_plan_operation_1a2d64bb49cfe4469bf6665bccab2327eb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a2d64bb49cfe4469bf6665bccab2327eb" kindref="member">PlanOperation::computeDeferredIndexes</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref><sp/>=<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a7c85412d9b7fec499a1190df85199632" kindref="member">_indexed_field_definition</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classhyrise_1_1access_1_1_plan_operation_1afa5b2221e0233ae772ad05796ae00f7e" kindref="member">_named_field_definition</ref>.empty())<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref>.empty());</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>table<sp/>=<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data.">input</ref>.<ref refid="group__deprecated_access_1ga69968d5ab56729a2e8ec54208a275b45" kindref="member">getTable</ref>(0);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="classhyrise_1_1access_1_1_plan_operation_1afa5b2221e0233ae772ad05796ae00f7e" kindref="member">_named_field_definition</ref>.size()<sp/>==<sp/>1)<sp/>&amp;&amp;<sp/>(<ref refid="classhyrise_1_1access_1_1_plan_operation_1afa5b2221e0233ae772ad05796ae00f7e" kindref="member">_named_field_definition</ref>[0]<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref>.resize(table-&gt;columnCount());</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::iota(std::begin(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref>),<sp/>std::end(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref>),<sp/>0);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1afa5b2221e0233ae772ad05796ae00f7e" kindref="member">_named_field_definition</ref>.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref>.push_back(table-&gt;numberOfColumn(<ref refid="classhyrise_1_1access_1_1_plan_operation_1afa5b2221e0233ae772ad05796ae00f7e" kindref="member">_named_field_definition</ref>[i]));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>assert(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref>.size()<sp/>&gt;=<sp/>(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a7c85412d9b7fec499a1190df85199632" kindref="member">_indexed_field_definition</ref>.size()<sp/>+<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1afa5b2221e0233ae772ad05796ae00f7e" kindref="member">_named_field_definition</ref>.size()));</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classhyrise_1_1access_1_1_plan_operation_1a4b050ce8d9d71f7d9fdde5955496c7c5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a4b050ce8d9d71f7d9fdde5955496c7c5" kindref="member">PlanOperation::setupPlanOperation</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a2d64bb49cfe4469bf6665bccab2327eb" kindref="member">computeDeferredIndexes</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="classhyrise_1_1access_1_1_plan_operation_1aa1bc5139142fb38bcdd5432f3b435b76" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aa1bc5139142fb38bcdd5432f3b435b76" kindref="member">PlanOperation::refreshInput</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>numberOfDependencies<sp/>=<sp/><ref refid="class_task_1ab25d10a171c2efc2dcdf4ec7b81d148d" kindref="member">_dependencies</ref>.size();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numberOfDependencies;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>dependency<sp/>=<sp/>std::dynamic_pointer_cast&lt;<ref refid="classhyrise_1_1access_1_1_plan_operation" kindref="compound">PlanOperation</ref>&gt;(<ref refid="class_task_1ab25d10a171c2efc2dcdf4ec7b81d148d" kindref="member">_dependencies</ref>[i]);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data.">input</ref>.<ref refid="classhyrise_1_1access_1_1_operation_data_1adbbfa5b9202bdf42a0ca2c9213d9621e" kindref="member">mergeWith</ref>(dependency-&gt;output);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="classhyrise_1_1access_1_1_plan_operation_1a9425cae50437f4ce3cab4f350d05b6cd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a9425cae50437f4ce3cab4f350d05b6cd" kindref="member">PlanOperation::setErrorMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>message)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>LOG4CXX_INFO(<ref refid="bin_2hyrise_2main_8cpp_1a1f643aeca905220d975e69578154a71d" kindref="member">logger</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a3f3f1273385239af0b7c4b0ba66b37f7" kindref="member">planOperationName</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>sets<sp/>error<sp/>message:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>message);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a86fef586086822356ac1b1c74689afc1" kindref="member">getResponseTask</ref>()-&gt;addErrorMessage(<ref refid="classhyrise_1_1access_1_1_plan_operation_1acfa0f3c72eaaaff0cf29e3b45d28f868" kindref="member">_operatorId</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;:<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>message);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classhyrise_1_1access_1_1_plan_operation_1abbdaa1c0b1d05c66459d7a94e0f67ca7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1abbdaa1c0b1d05c66459d7a94e0f67ca7" kindref="member">PlanOperation::operator()</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a24dbaa436c72ba68ab30d6f58c320ac8" kindref="member">allDependenciesSuccessful</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LOG4CXX_DEBUG(<ref refid="bin_2hyrise_2main_8cpp_1a1f643aeca905220d975e69578154a71d" kindref="member">logger</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Executing<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a9e27b58b694c0b501f18002fe3484767" kindref="member">vname</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1acfa0f3c72eaaaff0cf29e3b45d28f868" kindref="member">_operatorId</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1ade6985b6d6ddfac1ff5876f17f079f38" kindref="member">execute</ref>();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::exception<sp/>&amp;ex)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a9425cae50437f4ce3cab4f350d05b6cd" kindref="member">setErrorMessage</ref>(ex.what());</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(...)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a9425cae50437f4ce3cab4f350d05b6cd" kindref="member">setErrorMessage</ref>(</highlight><highlight class="stringliteral">&quot;Unknown<sp/>error&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_output_task_1a57ed6266bc5cdea32fee00aa69fa2b47" kindref="member">setState</ref>(<ref refid="namespacehyrise_1_1access_1a06dfec12b1bcee8435455d6a17aa6e9aafc363b2250c03601b3c28a2816fd9341" kindref="member">OpFail</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="classhyrise_1_1access_1_1_plan_operation_1ade6985b6d6ddfac1ff5876f17f079f38" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation" kindref="compound">PlanOperation</ref><sp/>*<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1ade6985b6d6ddfac1ff5876f17f079f38" kindref="member">PlanOperation::execute</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><ref refid="epoch_8h_1a18c258fe5c1fdd9c998d1c4bc0d39560" kindref="member">epoch_t</ref><sp/>startTime<sp/>=<sp/><ref refid="epoch_8cpp_1a1ebaf5c8f80fb2e6168da879e70f1ed5" kindref="member">get_epoch_nanoseconds</ref>();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aa1bc5139142fb38bcdd5432f3b435b76" kindref="member">refreshInput</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a4b050ce8d9d71f7d9fdde5955496c7c5" kindref="member">setupPlanOperation</ref>();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><ref refid="class_fallback_tracer" kindref="compound">PapiTracer</ref><sp/>pt;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>pt.<ref refid="class_fallback_tracer_1a84350e4813011b3bc1d509ebbaed6069" kindref="member">addEvent</ref>(</highlight><highlight class="stringliteral">&quot;PAPI_TOT_CYC&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>pt.<ref refid="class_fallback_tracer_1a84350e4813011b3bc1d509ebbaed6069" kindref="member">addEvent</ref>(<ref refid="classhyrise_1_1access_1_1_output_task_1ab9f31c897dbd058ee9a3140c594c5750" kindref="member">getEvent</ref>());</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>pt.<ref refid="class_fallback_tracer_1a9e3aa7b6b579ce36e33a710885add6ea" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a52c7d290ab4637ae1a4ee8a6dfc7a09e" kindref="member">executePlanOperation</ref>();</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>pt.<ref refid="class_fallback_tracer_1af4ee20c73627dc911dac5c7b319e3f73" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a7cf45407329bff78e4d160197f09bae8" kindref="member">teardownPlanOperation</ref>();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><ref refid="epoch_8h_1a18c258fe5c1fdd9c998d1c4bc0d39560" kindref="member">epoch_t</ref><sp/>endTime<sp/>=<sp/><ref refid="epoch_8cpp_1a1ebaf5c8f80fb2e6168da879e70f1ed5" kindref="member">get_epoch_nanoseconds</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>std::string<sp/>threadId<sp/>=<sp/>boost::lexical_cast&lt;std::string&gt;(std::this_thread::get_id());</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1access_1_1_output_task_1ad35dd50363fffa9aebef19ae050a173a" kindref="member">_performance_attr</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>*<ref refid="classhyrise_1_1access_1_1_output_task_1ad35dd50363fffa9aebef19ae050a173a" kindref="member">_performance_attr</ref><sp/>=<sp/>(<ref refid="structhyrise_1_1access_1_1performance__attributes__t" kindref="compound">performance_attributes_t</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pt.<ref refid="class_fallback_tracer_1af1c617eeaf75d5c6737f849fe0e2bbd7" kindref="member">value</ref>(</highlight><highlight class="stringliteral">&quot;PAPI_TOT_CYC&quot;</highlight><highlight class="normal">),<sp/>pt.<ref refid="class_fallback_tracer_1af1c617eeaf75d5c6737f849fe0e2bbd7" kindref="member">value</ref>(<ref refid="classhyrise_1_1access_1_1_output_task_1ab9f31c897dbd058ee9a3140c594c5750" kindref="member">getEvent</ref>()),<sp/><ref refid="classhyrise_1_1access_1_1_output_task_1ab9f31c897dbd058ee9a3140c594c5750" kindref="member">getEvent</ref>()<sp/>,<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a3f3f1273385239af0b7c4b0ba66b37f7" kindref="member">planOperationName</ref>(),<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1acfa0f3c72eaaaff0cf29e3b45d28f868" kindref="member">_operatorId</ref>,<sp/>startTime,<sp/>endTime,<sp/>threadId</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_output_task_1a57ed6266bc5cdea32fee00aa69fa2b47" kindref="member">setState</ref>(<ref refid="namespacehyrise_1_1access_1a06dfec12b1bcee8435455d6a17aa6e9aadc41ed3113dfaa5001454c6523d10063" kindref="member">OpSuccess</ref>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="classhyrise_1_1access_1_1_plan_operation_1a015beb547ed761c9f577545bbd69fcae" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a015beb547ed761c9f577545bbd69fcae" kindref="member">PlanOperation::setLimit</ref>(uint64_t<sp/>l)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a25c76f53553b99c15676d5fe8211c565" kindref="member" tooltip="Limits the number of rows read.">_limit</ref><sp/>=<sp/>l;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="classhyrise_1_1access_1_1_plan_operation_1a169fad61f9d02d856883f32b06881a3a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a169fad61f9d02d856883f32b06881a3a" kindref="member">PlanOperation::setProducesPositions</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>p)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a9ce36d0960826b9dcbe214617dfbd602" kindref="member">producesPositions</ref><sp/>=<sp/>p;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="classhyrise_1_1access_1_1_plan_operation_1a5ab2cd50fb1861224c16e5da42c5ee5a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a5ab2cd50fb1861224c16e5da42c5ee5a" kindref="member">PlanOperation::setTXContext</ref>(<ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">tx::TXContext</ref><sp/>ctx)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a0848a10fe6fd200110e7da964dbd175a" kindref="member">_txContext</ref><sp/>=<sp/>ctx;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="classhyrise_1_1access_1_1_plan_operation_1abd74149ce984cf9e719542d15fb8d724" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1abd74149ce984cf9e719542d15fb8d724" kindref="member">PlanOperation::addInput</ref>(<ref refid="namespacehyrise_1_1storage_1ae32c63e285e8cb5a8a3aac08dcd8d49a" kindref="member">storage::c_aresource_ptr_t</ref><sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data.">input</ref>.<ref refid="classhyrise_1_1access_1_1_operation_data_1a7f5b52688939ee178b85065305f72277" kindref="member" tooltip="Adds a new resource.">addResource</ref>(t);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="classhyrise_1_1access_1_1_plan_operation_1a2931efa12fa91e5ef1dbdc887a75b1ca" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a2931efa12fa91e5ef1dbdc887a75b1ca" kindref="member">PlanOperation::setPlanId</ref>(std::string<sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a2f5443dd7b8eef6e3f207247ba9275cf" kindref="member">_planId</ref><sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184" refid="classhyrise_1_1access_1_1_plan_operation_1a4d63ee4b09517fbd66ec80d110323369" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a4d63ee4b09517fbd66ec80d110323369" kindref="member">PlanOperation::setOperatorId</ref>(std::string<sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1acfa0f3c72eaaaff0cf29e3b45d28f868" kindref="member">_operatorId</ref><sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="classhyrise_1_1access_1_1_plan_operation_1a3f3f1273385239af0b7c4b0ba66b37f7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a3f3f1273385239af0b7c4b0ba66b37f7" kindref="member">PlanOperation::planOperationName</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a9df7ba63a64cd76895ad0169df925133" kindref="member">_planOperationName</ref>;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191" refid="classhyrise_1_1access_1_1_plan_operation_1ab9df68db2049c6a67cc6e2fd030b4fb3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1ab9df68db2049c6a67cc6e2fd030b4fb3" kindref="member">PlanOperation::setPlanOperationName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a9df7ba63a64cd76895ad0169df925133" kindref="member">_planOperationName</ref><sp/>=<sp/>name;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="classhyrise_1_1access_1_1_plan_operation_1a9e27b58b694c0b501f18002fe3484767" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a9e27b58b694c0b501f18002fe3484767" kindref="member">PlanOperation::vname</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a3f3f1273385239af0b7c4b0ba66b37f7" kindref="member">planOperationName</ref>();</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="classhyrise_1_1access_1_1_plan_operation_1a21a2eed324cf507a42f4e30f86ed622a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a21a2eed324cf507a42f4e30f86ed622a" kindref="member">PlanOperation::setResponseTask</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;access::ResponseTask&gt;&amp;<sp/>responseTask)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a491ab51fcf26013df7c400abc5bd8f53" kindref="member">_responseTask</ref><sp/>=<sp/>responseTask;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="classhyrise_1_1access_1_1_plan_operation_1a86fef586086822356ac1b1c74689afc1" refkind="member"><highlight class="normal">std::shared_ptr&lt;access::ResponseTask&gt;<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a86fef586086822356ac1b1c74689afc1" kindref="member">PlanOperation::getResponseTask</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a491ab51fcf26013df7c400abc5bd8f53" kindref="member">_responseTask</ref>.lock();</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}}</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/PlanOperation.cpp"/>
+  </compounddef>
+</doxygen>

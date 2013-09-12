@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classhyrise_1_1access_1_1_prefix_sum" kind="class" prot="public">
+    <compoundname>hyrise::access::PrefixSum</compoundname>
+    <basecompoundref refid="classhyrise_1_1access_1_1_parallelizable_plan_operation" prot="public" virt="non-virtual">hyrise::access::ParallelizablePlanOperation</basecompoundref>
+    <includes refid="_prefix_sum_8h" local="no">PrefixSum.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classhyrise_1_1access_1_1_prefix_sum_1acc42433787be57a7b611e3a182b215a1" prot="private" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_fixed_length_vector" kindref="compound">FixedLengthVector</ref>&lt; <ref refid="namespacehyrise_1_1storage_1a0f18d45e2ea645b5b99b70e308dc5463" kindref="member">storage::value_id_t</ref> &gt; &gt;</type>
+        <definition>typedef std::shared_ptr&lt;FixedLengthVector&lt;storage::value_id_t&gt; &gt; hyrise::access::PrefixSum::vec_ref_t</definition>
+        <argsstring></argsstring>
+        <name>vec_ref_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.h" line="20" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_prefix_sum_1a8664f3d32ac86ce68b650ef47fc0784a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PrefixSum::executePlanOperation</definition>
+        <argsstring>()</argsstring>
+        <name>executePlanOperation</name>
+        <reimplements refid="classhyrise_1_1access_1_1_plan_operation_1a52c7d290ab4637ae1a4ee8a6dfc7a09e">executePlanOperation</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.h" line="14" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.cpp" bodystart="17" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_prefix_sum_1a9c6ab0e23aa10cb042c362e3ccfdf305" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const std::string</type>
+        <definition>const std::string hyrise::access::PrefixSum::vname</definition>
+        <argsstring>()</argsstring>
+        <name>vname</name>
+        <reimplements refid="classhyrise_1_1access_1_1_plan_operation_1a9e27b58b694c0b501f18002fe3484767">vname</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.h" line="16" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.cpp" bodystart="57" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_prefix_sum_1ac024b392a2da61db7e85db7f50b3f747" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hyrise::access::PrefixSum::splitInput</definition>
+        <argsstring>()</argsstring>
+        <name>splitInput</name>
+        <reimplements refid="classhyrise_1_1access_1_1_parallelizable_plan_operation_1aac9176e1a044d05cf86e39d1dc8de64b">splitInput</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If operator is supposed to be a parallel instance of an operator, separate input data based on instance enumeration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.h" line="17" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.cpp" bodystart="61" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_prefix_sum_1aedc88481707af3e6b5a3f3e91e12fb0b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classhyrise_1_1access_1_1_plan_operation" kindref="compound">PlanOperation</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; PlanOperation &gt; hyrise::access::PrefixSum::parse</definition>
+        <argsstring>(Json::Value &amp;data)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>Json::Value &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.h" line="15" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.cpp" bodystart="48" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_prefix_sum_1a1daf175f7dab5b12066e5a29b52957a8" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a0f18d45e2ea645b5b99b70e308dc5463" kindref="member">storage::value_id_t</ref></type>
+        <definition>storage::value_id_t hyrise::access::PrefixSum::sumForIndex</definition>
+        <argsstring>(const size_t ivec_size, const std::vector&lt; vec_ref_t &gt; &amp;ivecs, const size_t index) const </argsstring>
+        <name>sumForIndex</name>
+        <param>
+          <type>const size_t</type>
+          <declname>ivec_size</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="classhyrise_1_1access_1_1_prefix_sum_1acc42433787be57a7b611e3a182b215a1" kindref="member">vec_ref_t</ref> &gt; &amp;</type>
+          <declname>ivecs</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.h" line="23" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.cpp" bodystart="66" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_prefix_sum_1a9e08134b8782c3fc0e4eba2278c14500" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehyrise_1_1storage_1a0f18d45e2ea645b5b99b70e308dc5463" kindref="member">storage::value_id_t</ref></type>
+        <definition>storage::value_id_t hyrise::access::PrefixSum::sumForIndexPrev</definition>
+        <argsstring>(const size_t ivec_size, const std::vector&lt; vec_ref_t &gt; &amp;ivecs, const size_t index) const </argsstring>
+        <name>sumForIndexPrev</name>
+        <param>
+          <type>const size_t</type>
+          <declname>ivec_size</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="classhyrise_1_1access_1_1_prefix_sum_1acc42433787be57a7b611e3a182b215a1" kindref="member">vec_ref_t</ref> &gt; &amp;</type>
+          <declname>ivecs</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.h" line="26" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.cpp" bodystart="76" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2979">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="2975">
+        <label>hyrise::access::ParallelizablePlanOperation</label>
+        <link refid="classhyrise_1_1access_1_1_parallelizable_plan_operation"/>
+        <childnode refid="2976" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2976">
+        <label>hyrise::access::PlanOperation</label>
+        <link refid="classhyrise_1_1access_1_1_plan_operation"/>
+        <childnode refid="2977" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2977">
+        <label>hyrise::access::OutputTask</label>
+        <link refid="classhyrise_1_1access_1_1_output_task"/>
+        <childnode refid="2978" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2978">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="2979" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2980" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2974">
+        <label>hyrise::access::PrefixSum</label>
+        <link refid="classhyrise_1_1access_1_1_prefix_sum"/>
+        <childnode refid="2975" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2980">
+        <label>std::enable_shared_from_this&lt; Task &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2986">
+        <label>TaskDoneObserver</label>
+        <link refid="class_task_done_observer"/>
+      </node>
+      <node id="2982">
+        <label>hyrise::access::ParallelizablePlanOperation</label>
+        <link refid="classhyrise_1_1access_1_1_parallelizable_plan_operation"/>
+        <childnode refid="2983" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2983">
+        <label>hyrise::access::PlanOperation</label>
+        <link refid="classhyrise_1_1access_1_1_plan_operation"/>
+        <childnode refid="2984" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2989" relation="usage">
+          <edgelabel>#_txContext</edgelabel>
+        </childnode>
+        <childnode refid="2990" relation="usage">
+          <edgelabel>#output</edgelabel>
+          <edgelabel>#input</edgelabel>
+        </childnode>
+      </node>
+      <node id="2984">
+        <label>hyrise::access::OutputTask</label>
+        <link refid="classhyrise_1_1access_1_1_output_task"/>
+        <childnode refid="2985" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2988" relation="usage">
+          <edgelabel>#_performance_attr</edgelabel>
+        </childnode>
+      </node>
+      <node id="2989">
+        <label>hyrise::tx::TXContext</label>
+        <link refid="structhyrise_1_1tx_1_1_t_x_context"/>
+      </node>
+      <node id="2985">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="2986" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2987" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2990">
+        <label>hyrise::access::OperationData</label>
+        <link refid="classhyrise_1_1access_1_1_operation_data"/>
+      </node>
+      <node id="2981">
+        <label>hyrise::access::PrefixSum</label>
+        <link refid="classhyrise_1_1access_1_1_prefix_sum"/>
+        <childnode refid="2982" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2987">
+        <label>std::enable_shared_from_this&lt; Task &gt;</label>
+      </node>
+      <node id="2988">
+        <label>hyrise::access::performance_attributes_t</label>
+        <link refid="structhyrise_1_1access_1_1performance__attributes__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.h" line="12" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/radixjoin/PrefixSum.h" bodystart="12" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_task_1ae86d264d411c0a0476085734c27a84b0" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_actualNode</name></member>
+      <member refid="classhyrise_1_1access_1_1_parallelizable_plan_operation_1a407dc1ccf56941a9ffda04a61b1ebc0d" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_count</name></member>
+      <member refid="class_task_1ab25d10a171c2efc2dcdf4ec7b81d148d" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_dependencies</name></member>
+      <member refid="class_task_1a432b54ea5cdbf8f875c756c70710b69e" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_dependencyWaitCount</name></member>
+      <member refid="class_task_1a10259a6dde7645e32c32262818339c8c" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_depMutex</name></member>
+      <member refid="class_task_1af277c65727e285efbf965633851ec9d8" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_doneObservers</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_field_definition</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a819ad8df6d82f43d7a6deaae6140c2fc" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_generatedKeys</name></member>
+      <member refid="class_task_1a8909ff1653cd9a685af7256976e4e334" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_id</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a7c85412d9b7fec499a1190df85199632" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_indexed_field_definition</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a25c76f53553b99c15676d5fe8211c565" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_limit</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1afa5b2221e0233ae772ad05796ae00f7e" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_named_field_definition</name></member>
+      <member refid="class_task_1a778ed5c766f4098184c31a656fe471ed" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_notifyMutex</name></member>
+      <member refid="class_task_1a6a0d1fa3b37cb2e7896ea23049798b36" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_observerMutex</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1acfa0f3c72eaaaff0cf29e3b45d28f868" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_operatorId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1af57f941216da981aa10f27f72babde5e" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_papiEvent</name></member>
+      <member refid="classhyrise_1_1access_1_1_parallelizable_plan_operation_1a4d9ee59efb7a1219191ab4bb8fc517a4" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_part</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1ad35dd50363fffa9aebef19ae050a173a" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_performance_attr</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a2f5443dd7b8eef6e3f207247ba9275cf" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_planId</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a9df7ba63a64cd76895ad0169df925133" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_planOperationName</name></member>
+      <member refid="class_task_1aa7b21c6482b905c04f354c738341beb3" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_preferredCore</name></member>
+      <member refid="class_task_1abeb3d34a483638fad8c93bb3baff50f5" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_preferredNode</name></member>
+      <member refid="class_task_1a6fbb4614f260802e6204e339f4480004" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_priority</name></member>
+      <member refid="class_task_1a7f7f81090a389fd5cf79747e165fe0f4" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_readyObservers</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a491ab51fcf26013df7c400abc5bd8f53" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_responseTask</name></member>
+      <member refid="class_task_1a5515868bfb7db5ad936cafdf6b8e65c7" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_sessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a08eefbff8ae055c461f954276a7d11ae" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_state</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a0848a10fe6fd200110e7da964dbd175a" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>_txContext</name></member>
+      <member refid="class_task_1aa9e65a15e122de040bb914ab144577b8" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>addDependency</name></member>
+      <member refid="class_task_1a0e4ebf7ad5313f027aa16d250685604a" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>addDoneObserver</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1ad237b1647eea22538540d8d77f20f722" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>addField</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1ab3c3b4ad0f0426024d52af0efb55a197" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>addField</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1abd74149ce984cf9e719542d15fb8d724" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>addInput</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1abb7bcc23c5c1a19332474da034d85b8e" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>addNamedField</name></member>
+      <member refid="class_task_1a9726ca1f4c6712a3516cb05121479f25" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>addReadyObserver</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aac92e842153df9a9ae7e548ac7602009" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>addResult</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a24dbaa436c72ba68ab30d6f58c320ac8" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>allDependenciesSuccessful</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a2d64bb49cfe4469bf6665bccab2327eb" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>computeDeferredIndexes</name></member>
+      <member refid="class_task_1afedc05b69ebd406b7fdb42391f4eef2a" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>DEFAULT_PRIORITY</name></member>
+      <member refid="classhyrise_1_1access_1_1_parallelizable_plan_operation_1a9157dca0683ab1618f9f0c3cdbc5ea29" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>distribute</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1ade6985b6d6ddfac1ff5876f17f079f38" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>execute</name></member>
+      <member refid="classhyrise_1_1access_1_1_prefix_sum_1a8664f3d32ac86ce68b650ef47fc0784a" prot="public" virt="virtual"><scope>hyrise::access::PrefixSum</scope><name>executePlanOperation</name></member>
+      <member refid="class_task_1a48d72f6b05c55e6fed32f137d5d17cf6" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getActualNode</name></member>
+      <member refid="class_task_1a75f0a4940cdd338c2ba538200bfcdddf" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getDependencyCount</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a361fb77e7a65e230ffe92f91b9a0e6c4" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getDependencyErrorMessages</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1ab9f31c897dbd058ee9a3140c594c5750" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getEvent</name></member>
+      <member refid="class_task_1a85363a10fc3b2272b30e1c24846ab237" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getId</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aa4857583f3f175825244fb767293f2bd" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getInputHashTable</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a66c9b52d730c2029496abda71ea40b01" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getInputTable</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1afbcbe16ff9a7759e0ae0737c0f38cd57" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getPerformanceData</name></member>
+      <member refid="class_task_1a4a3f6f336369d8e2d6a92fae0690c143" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getPreferredCore</name></member>
+      <member refid="class_task_1ad775abf82380305e56bb9a1847f76ece" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getPreferredNode</name></member>
+      <member refid="class_task_1a4d9b4764c7365be48eee4393e87ca92b" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getPriority</name></member>
+      <member refid="class_task_1a1a5953e7f9dfc732ce1f3d8a914439b4" prot="public" virt="virtual"><scope>hyrise::access::PrefixSum</scope><name>getQueryDuration</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a86fef586086822356ac1b1c74689afc1" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getResponseTask</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aa06e9dccef9c7c8dbb8c88c936f43369" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getResultHashTable</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a3f9ee072d27cf5dde038c4bff35cd4a6" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getResultTable</name></member>
+      <member refid="class_task_1a28ea4fab3bbd5b803f9aa7e4b4300820" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getSessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a56507bf7ac791c70f8a5a594998d8af7" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>getState</name></member>
+      <member refid="class_task_1a769a8fb688ddaed2870faeea61d84ca0" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>hasSuccessors</name></member>
+      <member refid="class_task_1afb865392382a2c3f1a13e962d5ba3b1e" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>HIGH_PRIORITY</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>input</name></member>
+      <member refid="class_task_1ab7307de77d5baf3dfec0269996d81543" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>isReady</name></member>
+      <member refid="class_task_1aeb0d741352700686296e742bc21e4362" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>lockForNotifications</name></member>
+      <member refid="class_task_1af0efeb0207f95415ca556e19bc62d60e" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>NO_PREFERRED_CORE</name></member>
+      <member refid="class_task_1a38563fd60f45377e73b8030945f9fdc8" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>NO_PREFERRED_NODE</name></member>
+      <member refid="class_task_1aa729cd30e7135f2851dd625679aa8556" prot="public" virt="virtual"><scope>hyrise::access::PrefixSum</scope><name>notifyDone</name></member>
+      <member refid="class_task_1a82157fda3766f4331966baf74e8206fa" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>notifyDoneObservers</name></member>
+      <member refid="class_task_1a793f3db3f39a9ea7352078f235ee7843" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>notifyReadyObservers</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1abbdaa1c0b1d05c66459d7a94e0f67ca7" prot="public" virt="virtual"><scope>hyrise::access::PrefixSum</scope><name>operator()</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a96126d09e871f139400a393aae9b82e3" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>output</name></member>
+      <member refid="classhyrise_1_1access_1_1_prefix_sum_1aedc88481707af3e6b5a3f3e91e12fb0b" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>parse</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a3f3f1273385239af0b7c4b0ba66b37f7" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>planOperationName</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a9ce36d0960826b9dcbe214617dfbd602" prot="protected" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>producesPositions</name></member>
+      <member refid="classhyrise_1_1access_1_1_parallelizable_plan_operation_1a4abca8f2a1495db8628c127473837432" prot="public" virt="virtual"><scope>hyrise::access::PrefixSum</scope><name>refreshInput</name></member>
+      <member refid="class_task_1a8df8b7cbdf23d35317488316bba3ebe2" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>SESSION_ID_NOT_SET</name></member>
+      <member refid="class_task_1af9b0b825e5ffb8de9c6a1a71438f4b5b" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setActualNode</name></member>
+      <member refid="classhyrise_1_1access_1_1_parallelizable_plan_operation_1a0c4ead5f1a43206cf01a16a1557e81b2" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setCount</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a9425cae50437f4ce3cab4f350d05b6cd" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setErrorMessage</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a70b1271fbca981dce18c847c2209b001" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setEvent</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1ac97c9999eea25d4ef60a348fc66f0113" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setGeneratedKeysData</name></member>
+      <member refid="class_task_1a6c3e7a3b19e50d8fcad5a084ef6b7312" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setId</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a015beb547ed761c9f577545bbd69fcae" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setLimit</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a4d63ee4b09517fbd66ec80d110323369" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setOperatorId</name></member>
+      <member refid="classhyrise_1_1access_1_1_parallelizable_plan_operation_1aa692b69d7ea9ac714d4c28be5c48619d" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setPart</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1abc851019f76a754a114eec5d0fbd9949" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setPerformanceData</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a2931efa12fa91e5ef1dbdc887a75b1ca" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setPlanId</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1ab9df68db2049c6a67cc6e2fd030b4fb3" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setPlanOperationName</name></member>
+      <member refid="class_task_1a1b8e520f60e9f41a3c1331e4e9e4b3ca" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setPreferredCore</name></member>
+      <member refid="class_task_1a59960c60425c5d5ed2e8ff52e4538ff2" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setPreferredNode</name></member>
+      <member refid="class_task_1acc93078022eabed8325f164e4eedc37a" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setPriority</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a169fad61f9d02d856883f32b06881a3a" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setProducesPositions</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a21a2eed324cf507a42f4e30f86ed622a" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setResponseTask</name></member>
+      <member refid="class_task_1a688bd7a4f5f659d049667c08fd330cfd" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setSessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_output_task_1a57ed6266bc5cdea32fee00aa69fa2b47" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setState</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a5ab2cd50fb1861224c16e5da42c5ee5a" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>setTXContext</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a4b050ce8d9d71f7d9fdde5955496c7c5" prot="protected" virt="virtual"><scope>hyrise::access::PrefixSum</scope><name>setupPlanOperation</name></member>
+      <member refid="classhyrise_1_1access_1_1_prefix_sum_1ac024b392a2da61db7e85db7f50b3f747" prot="public" virt="virtual"><scope>hyrise::access::PrefixSum</scope><name>splitInput</name></member>
+      <member refid="classhyrise_1_1access_1_1_prefix_sum_1a1daf175f7dab5b12066e5a29b52957a8" prot="private" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>sumForIndex</name></member>
+      <member refid="classhyrise_1_1access_1_1_prefix_sum_1a9e08134b8782c3fc0e4eba2278c14500" prot="private" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>sumForIndexPrev</name></member>
+      <member refid="class_task_1a0ca53354bdc006762a0fda68c64f7608" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>Task</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a7cf45407329bff78e4d160197f09bae8" prot="protected" virt="virtual"><scope>hyrise::access::PrefixSum</scope><name>teardownPlanOperation</name></member>
+      <member refid="class_task_1a35af9de734c94c39981a2b199790e288" prot="public" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>unlockForNotifications</name></member>
+      <member refid="classhyrise_1_1access_1_1_prefix_sum_1acc42433787be57a7b611e3a182b215a1" prot="private" virt="non-virtual"><scope>hyrise::access::PrefixSum</scope><name>vec_ref_t</name></member>
+      <member refid="classhyrise_1_1access_1_1_prefix_sum_1a9c6ab0e23aa10cb042c362e3ccfdf305" prot="public" virt="virtual"><scope>hyrise::access::PrefixSum</scope><name>vname</name></member>
+      <member refid="classhyrise_1_1access_1_1_plan_operation_1a0a450a1941e4c6366abbfa3180bf7919" prot="public" virt="virtual"><scope>hyrise::access::PrefixSum</scope><name>~PlanOperation</name></member>
+      <member refid="class_task_1a7bff79cc05fa4511c72048d33591503b" prot="public" virt="virtual"><scope>hyrise::access::PrefixSum</scope><name>~Task</name></member>
+      <member refid="class_task_done_observer_1a9b5fa53c4893dfc998aedca72b8dd278" prot="public" virt="virtual"><scope>hyrise::access::PrefixSum</scope><name>~TaskDoneObserver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

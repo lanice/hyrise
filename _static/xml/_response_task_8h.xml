@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_response_task_8h" kind="file">
+    <compoundname>ResponseTask.h</compoundname>
+    <includes local="no">atomic</includes>
+    <includes local="no">mutex</includes>
+    <includes refid="epoch_8h" local="yes">helper/epoch.h</includes>
+    <includes refid="_output_task_8h" local="yes">access/system/OutputTask.h</includes>
+    <includes refid="_abstract_connection_8h" local="yes">net/AbstractConnection.h</includes>
+    <includes refid="_t_x_context_8h" local="yes">io/TXContext.h</includes>
+    <includedby refid="_delete_8cpp" local="no">src/lib/access/Delete.cpp</includedby>
+    <includedby refid="_insert_scan_8cpp" local="yes">src/lib/access/InsertScan.cpp</includedby>
+    <includedby refid="_pos_update_scan_8cpp" local="no">src/lib/access/PosUpdateScan.cpp</includedby>
+    <includedby refid="_plan_operation_8cpp" local="yes">src/lib/access/system/PlanOperation.cpp</includedby>
+    <includedby refid="_request_parse_task_8cpp" local="yes">src/lib/access/system/RequestParseTask.cpp</includedby>
+    <includedby refid="_response_task_8cpp" local="yes">src/lib/access/system/ResponseTask.cpp</includedby>
+    <incdepgraph>
+      <node id="9469">
+        <label>atomic</label>
+      </node>
+      <node id="9489">
+        <label>limits</label>
+      </node>
+      <node id="9471">
+        <label>helper/epoch.h</label>
+        <link refid="epoch_8h"/>
+        <childnode refid="9472" relation="include">
+        </childnode>
+      </node>
+      <node id="9488">
+        <label>cstdint</label>
+      </node>
+      <node id="9472">
+        <label>stdint.h</label>
+      </node>
+      <node id="9480">
+        <label>stdexcept</label>
+      </node>
+      <node id="9479">
+        <label>string</label>
+      </node>
+      <node id="9476">
+        <label>map</label>
+      </node>
+      <node id="9481">
+        <label>ostream</label>
+      </node>
+      <node id="9473">
+        <label>access/system/OutputTask.h</label>
+        <link refid="_output_task_8h"/>
+        <childnode refid="9472" relation="include">
+        </childnode>
+        <childnode refid="9474" relation="include">
+        </childnode>
+        <childnode refid="9475" relation="include">
+        </childnode>
+        <childnode refid="9476" relation="include">
+        </childnode>
+        <childnode refid="9477" relation="include">
+        </childnode>
+        <childnode refid="9478" relation="include">
+        </childnode>
+        <childnode refid="9471" relation="include">
+        </childnode>
+        <childnode refid="9482" relation="include">
+        </childnode>
+      </node>
+      <node id="9484">
+        <label>condition_variable</label>
+      </node>
+      <node id="9478">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="9475" relation="include">
+        </childnode>
+        <childnode refid="9479" relation="include">
+        </childnode>
+        <childnode refid="9480" relation="include">
+        </childnode>
+        <childnode refid="9472" relation="include">
+        </childnode>
+        <childnode refid="9481" relation="include">
+        </childnode>
+      </node>
+      <node id="9475">
+        <label>vector</label>
+      </node>
+      <node id="9477">
+        <label>utility</label>
+      </node>
+      <node id="9490">
+        <label>cereal/cereal.hpp</label>
+      </node>
+      <node id="9474">
+        <label>time.h</label>
+      </node>
+      <node id="9470">
+        <label>mutex</label>
+      </node>
+      <node id="9487">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="9488" relation="include">
+        </childnode>
+        <childnode refid="9479" relation="include">
+        </childnode>
+        <childnode refid="9489" relation="include">
+        </childnode>
+        <childnode refid="9483" relation="include">
+        </childnode>
+        <childnode refid="9475" relation="include">
+        </childnode>
+      </node>
+      <node id="9485">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="9479" relation="include">
+        </childnode>
+      </node>
+      <node id="9468">
+        <label>src/lib/access/system/ResponseTask.h</label>
+        <link refid="ResponseTask.h"/>
+        <childnode refid="9469" relation="include">
+        </childnode>
+        <childnode refid="9470" relation="include">
+        </childnode>
+        <childnode refid="9471" relation="include">
+        </childnode>
+        <childnode refid="9473" relation="include">
+        </childnode>
+        <childnode refid="9485" relation="include">
+        </childnode>
+        <childnode refid="9486" relation="include">
+        </childnode>
+      </node>
+      <node id="9483">
+        <label>memory</label>
+      </node>
+      <node id="9482">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="9475" relation="include">
+        </childnode>
+        <childnode refid="9470" relation="include">
+        </childnode>
+        <childnode refid="9483" relation="include">
+        </childnode>
+        <childnode refid="9484" relation="include">
+        </childnode>
+        <childnode refid="9479" relation="include">
+        </childnode>
+      </node>
+      <node id="9486">
+        <label>io/TXContext.h</label>
+        <link refid="_t_x_context_8h"/>
+        <childnode refid="9487" relation="include">
+        </childnode>
+        <childnode refid="9490" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9497">
+        <label>src/lib/access/system/ResponseTask.cpp</label>
+        <link refid="_response_task_8cpp"/>
+      </node>
+      <node id="9493">
+        <label>src/lib/access/InsertScan.cpp</label>
+        <link refid="_insert_scan_8cpp"/>
+      </node>
+      <node id="9492">
+        <label>src/lib/access/Delete.cpp</label>
+        <link refid="_delete_8cpp"/>
+      </node>
+      <node id="9496">
+        <label>src/lib/access/system/RequestParseTask.cpp</label>
+        <link refid="_request_parse_task_8cpp"/>
+      </node>
+      <node id="9494">
+        <label>src/lib/access/PosUpdateScan.cpp</label>
+        <link refid="_pos_update_scan_8cpp"/>
+      </node>
+      <node id="9495">
+        <label>src/lib/access/system/PlanOperation.cpp</label>
+        <link refid="_plan_operation_8cpp"/>
+      </node>
+      <node id="9491">
+        <label>src/lib/access/system/ResponseTask.h</label>
+        <link refid="ResponseTask.h"/>
+        <childnode refid="9492" relation="include">
+        </childnode>
+        <childnode refid="9493" relation="include">
+        </childnode>
+        <childnode refid="9494" relation="include">
+        </childnode>
+        <childnode refid="9495" relation="include">
+        </childnode>
+        <childnode refid="9496" relation="include">
+        </childnode>
+        <childnode refid="9497" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhyrise_1_1access_1_1_response_task" prot="public">hyrise::access::ResponseTask</innerclass>
+    <innernamespace refid="namespacehyrise">hyrise</innernamespace>
+    <innernamespace refid="namespacehyrise_1_1access">hyrise::access</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Hasso-Plattner-Institut<sp/>fuer<sp/>Softwaresystemtechnik<sp/>GmbH.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_LIB_ACCESS_RESPONSETASK_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_LIB_ACCESS_RESPONSETASK_H_</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atomic&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="epoch_8h" kindref="compound">helper/epoch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_output_task_8h" kindref="compound">access/system/OutputTask.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_connection_8h" kindref="compound">net/AbstractConnection.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_t_x_context_8h" kindref="compound">io/TXContext.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">access<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PlanOperation;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classhyrise_1_1access_1_1_response_task" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1access_1_1_response_task" kindref="compound">ResponseTask</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20" refid="classhyrise_1_1access_1_1_response_task_1a7117627a706b8872164794175e7e5fc4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref><sp/>*<ref refid="classhyrise_1_1access_1_1_response_task_1a7117627a706b8872164794175e7e5fc4" kindref="member">connection</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classhyrise_1_1access_1_1_response_task_1a0abad40f4049a39eb8863d5373d65d06" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a0abad40f4049a39eb8863d5373d65d06" kindref="member">_transmitLimit</ref><sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>Used<sp/>for<sp/>serialization<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classhyrise_1_1access_1_1_response_task_1ad560f349211ac0638870310ca175f61f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1ad560f349211ac0638870310ca175f61f" kindref="member">_transmitOffset</ref><sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>Used<sp/>for<sp/>serialization<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classhyrise_1_1access_1_1_response_task_1a4c5de70e94a01a653db98ad6d566dce8" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic&lt;unsigned<sp/>long&gt;<sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a4c5de70e94a01a653db98ad6d566dce8" kindref="member">_affectedRows</ref>;</highlight></codeline>
+<codeline lineno="26" refid="classhyrise_1_1access_1_1_response_task_1a355d6a4ab42e95af891fd15f0fedf0fb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">tx::TXContext</ref><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a355d6a4ab42e95af891fd15f0fedf0fb" kindref="member">_txContext</ref>;</highlight></codeline>
+<codeline lineno="27" refid="classhyrise_1_1access_1_1_response_task_1a586b132f9836f0d670dd5b78949b6995" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="epoch_8h_1a18c258fe5c1fdd9c998d1c4bc0d39560" kindref="member">epoch_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a586b132f9836f0d670dd5b78949b6995" kindref="member">queryStart</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28" refid="classhyrise_1_1access_1_1_response_task_1ab7d38e341b9beef10fa004082d229bd1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1access_1af01db0da7e53cf5aa2d79438bd03e4a4" kindref="member">performance_vector_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1ab7d38e341b9beef10fa004082d229bd1" kindref="member">performance_data</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Unique<sp/>refs<sp/>to<sp/>the<sp/>generated<sp/>keys<sp/>of<sp/>all<sp/>planops</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classhyrise_1_1access_1_1_response_task_1a9b21ab4ab34506022eb0c31888316144" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::unique_ptr&lt;std::vector&lt;hyrise_int_t&gt;&gt;&gt;<sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a9b21ab4ab34506022eb0c31888316144" kindref="member">_generatedKeyRefs</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classhyrise_1_1access_1_1_response_task_1ace91324a3a265ef0194a650beb79046e" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classhyrise_1_1access_1_1_response_task_1ace91324a3a265ef0194a650beb79046e" kindref="member">perfMutex</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classhyrise_1_1access_1_1_response_task_1af4db521f652ee840b9ae74880e16ed1c" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classhyrise_1_1access_1_1_response_task_1af4db521f652ee840b9ae74880e16ed1c" kindref="member">errorMutex</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classhyrise_1_1access_1_1_response_task_1a783a0fa312c3706ef5d37e9931429285" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a783a0fa312c3706ef5d37e9931429285" kindref="member">_error_messages</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37" refid="classhyrise_1_1access_1_1_response_task_1a85bda4189177bac5b92c8af45690ff04" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a85bda4189177bac5b92c8af45690ff04" kindref="member">ResponseTask</ref>(<ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref><sp/>*<ref refid="classhyrise_1_1access_1_1_response_task_1a7117627a706b8872164794175e7e5fc4" kindref="member">connection</ref>)<sp/>:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>connection(connection)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a4c5de70e94a01a653db98ad6d566dce8" kindref="member">_affectedRows</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classhyrise_1_1access_1_1_response_task_1ad02e2a1a31b2c04a74a8302591b1853e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1ad02e2a1a31b2c04a74a8302591b1853e" kindref="member">~ResponseTask</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classhyrise_1_1access_1_1_response_task_1af970af7fef8deccf059fd6bc2f7310c0" kindref="member">vname</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classhyrise_1_1access_1_1_response_task_1ab1aae04cd875aec3ee1862cc94a9c21e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="epoch_8h_1a18c258fe5c1fdd9c998d1c4bc0d39560" kindref="member">epoch_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1ab1aae04cd875aec3ee1862cc94a9c21e" kindref="member">getQueryStart</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a586b132f9836f0d670dd5b78949b6995" kindref="member">queryStart</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1ae174d914351da3ea768c0f6be7469dd2" kindref="member">registerPlanOperation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;PlanOperation&gt;&amp;<sp/>planOp);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classhyrise_1_1access_1_1_response_task_1ab0d93f5e60741e29fd9a44f2309a84f8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1ab0d93f5e60741e29fd9a44f2309a84f8" kindref="member">addErrorMessage</ref>(std::string<sp/>message)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>guard(<ref refid="classhyrise_1_1access_1_1_response_task_1af4db521f652ee840b9ae74880e16ed1c" kindref="member">errorMutex</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a783a0fa312c3706ef5d37e9931429285" kindref="member">_error_messages</ref>.push_back(message);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classhyrise_1_1access_1_1_response_task_1a3788ba2f89546f350eab0ec6bb0e4838" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a3788ba2f89546f350eab0ec6bb0e4838" kindref="member">getErrorMessages</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a783a0fa312c3706ef5d37e9931429285" kindref="member">_error_messages</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classhyrise_1_1access_1_1_response_task_1a1f042ffefb393ebddcd6a3dadc32b9da" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a1f042ffefb393ebddcd6a3dadc32b9da" kindref="member">setTxContext</ref>(<ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">tx::TXContext</ref><sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a355d6a4ab42e95af891fd15f0fedf0fb" kindref="member">_txContext</ref><sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classhyrise_1_1access_1_1_response_task_1a009fed47e811efa0a2cf7e7eca5d4122" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a009fed47e811efa0a2cf7e7eca5d4122" kindref="member">setQueryStart</ref>(<ref refid="epoch_8h_1a18c258fe5c1fdd9c998d1c4bc0d39560" kindref="member">epoch_t</ref><sp/>start)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a586b132f9836f0d670dd5b78949b6995" kindref="member">queryStart</ref><sp/>=<sp/>start;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classhyrise_1_1access_1_1_response_task_1a653a87b80234090315fec0cf0ff1a5b9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a653a87b80234090315fec0cf0ff1a5b9" kindref="member">setTransmitLimit</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>l)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a0abad40f4049a39eb8863d5373d65d06" kindref="member">_transmitLimit</ref><sp/>=<sp/>l;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classhyrise_1_1access_1_1_response_task_1a3d88b4f10fc69aa0d7f53973f3e43e45" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a3d88b4f10fc69aa0d7f53973f3e43e45" kindref="member">setTransmitOffset</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>o)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1ad560f349211ac0638870310ca175f61f" kindref="member">_transmitOffset</ref><sp/>=<sp/>o;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classhyrise_1_1access_1_1_response_task_1a9d605345ae5a4370d62e3615db7162c3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a9d605345ae5a4370d62e3615db7162c3" kindref="member">incAffectedRows</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>inc)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a4c5de70e94a01a653db98ad6d566dce8" kindref="member">_affectedRows</ref><sp/>+=<sp/>inc;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="classhyrise_1_1access_1_1_response_task_1a858121e97243ec5b91704fdc86246afb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1access_1af01db0da7e53cf5aa2d79438bd03e4a4" kindref="member">performance_vector_t</ref>&amp;<sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a858121e97243ec5b91704fdc86246afb" kindref="member">getPerformanceData</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1ab7d38e341b9beef10fa004082d229bd1" kindref="member">performance_data</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1access_1a06dfec12b1bcee8435455d6a17aa6e9a" kindref="member">task_states_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1ae328ee60f1b1fb1e90df493b8b6d7516" kindref="member">getState</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;PlanOperation&gt;<sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a051aacb255ecb84b8348b7b853156a7e" kindref="member">getResultTask</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_response_task_1a104128290c6abeaae5a94d71bb46c68f" kindref="member">operator()</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_ACCESS_RESPONSETASK_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/ResponseTask.h"/>
+  </compounddef>
+</doxygen>

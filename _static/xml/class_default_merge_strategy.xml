@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_default_merge_strategy" kind="class" prot="public">
+    <compoundname>DefaultMergeStrategy</compoundname>
+    <basecompoundref refid="class_abstract_merge_strategy" prot="public" virt="non-virtual">AbstractMergeStrategy</basecompoundref>
+    <includes refid="_abstract_merge_strategy_8h" local="no">AbstractMergeStrategy.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_default_merge_strategy_1a0bef9a5e63640a7a5ec14f94c9d59138" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="_abstract_merge_strategy_8h_1a264d0402b5878f2dc616d2eee7c3209b" kindref="member">merge_tables</ref></type>
+        <definition>virtual merge_tables DefaultMergeStrategy::determineTablesToMerge</definition>
+        <argsstring>(std::vector&lt; hyrise::storage::c_atable_ptr_t &gt; &amp;input_tables) const </argsstring>
+        <name>determineTablesToMerge</name>
+        <reimplements refid="class_abstract_merge_strategy_1a63dd7bc8200700bfaf225f2227ea7d63">determineTablesToMerge</reimplements>
+        <param>
+          <type>std::vector&lt; <ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">hyrise::storage::c_atable_ptr_t</ref> &gt; &amp;</type>
+          <declname>input_tables</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/AbstractMergeStrategy.h" line="37" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/AbstractMergeStrategy.h" bodystart="37" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_default_merge_strategy_1a269edb73f4e2f229c06046307dabbea6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t DefaultMergeStrategy::calculateNewSize</definition>
+        <argsstring>(const std::vector&lt; hyrise::storage::c_atable_ptr_t &gt; &amp;input_tables, bool useValid, const std::vector&lt; bool &gt; &amp;valid) const </argsstring>
+        <name>calculateNewSize</name>
+        <reimplements refid="class_abstract_merge_strategy_1a158f095d78cdcf77fb8fec05cd54a5b0">calculateNewSize</reimplements>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">hyrise::storage::c_atable_ptr_t</ref> &gt; &amp;</type>
+          <declname>input_tables</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useValid</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; bool &gt; &amp;</type>
+          <declname>valid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/AbstractMergeStrategy.h" line="43" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/AbstractMergeStrategy.h" bodystart="43" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_default_merge_strategy_1af3c3ff0cb8d3d36bdb62b4662ed8de4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_abstract_merge_strategy" kindref="compound">AbstractMergeStrategy</ref> *</type>
+        <definition>virtual AbstractMergeStrategy* DefaultMergeStrategy::copy</definition>
+        <argsstring>()</argsstring>
+        <name>copy</name>
+        <reimplements refid="class_abstract_merge_strategy_1ad7ba6bba2799af11ed26358fa28779ab">copy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/AbstractMergeStrategy.h" line="58" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/AbstractMergeStrategy.h" bodystart="58" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1883">
+        <label>DefaultMergeStrategy</label>
+        <link refid="class_default_merge_strategy"/>
+        <childnode refid="1884" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1884">
+        <label>AbstractMergeStrategy</label>
+        <link refid="class_abstract_merge_strategy"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1885">
+        <label>DefaultMergeStrategy</label>
+        <link refid="class_default_merge_strategy"/>
+        <childnode refid="1886" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1886">
+        <label>AbstractMergeStrategy</label>
+        <link refid="class_abstract_merge_strategy"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/AbstractMergeStrategy.h" line="33" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/AbstractMergeStrategy.h" bodystart="33" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_abstract_merge_strategy_1ae344350d6981fa0f741b00d23c1302fb" prot="public" virt="non-virtual"><scope>DefaultMergeStrategy</scope><name>AbstractMergeStrategy</name></member>
+      <member refid="class_default_merge_strategy_1a269edb73f4e2f229c06046307dabbea6" prot="public" virt="virtual"><scope>DefaultMergeStrategy</scope><name>calculateNewSize</name></member>
+      <member refid="class_default_merge_strategy_1af3c3ff0cb8d3d36bdb62b4662ed8de4c" prot="public" virt="virtual"><scope>DefaultMergeStrategy</scope><name>copy</name></member>
+      <member refid="class_default_merge_strategy_1a0bef9a5e63640a7a5ec14f94c9d59138" prot="public" virt="virtual"><scope>DefaultMergeStrategy</scope><name>determineTablesToMerge</name></member>
+      <member refid="class_abstract_merge_strategy_1ad36854dbb444a691ccda77c4c5b9c1ec" prot="public" virt="virtual"><scope>DefaultMergeStrategy</scope><name>~AbstractMergeStrategy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

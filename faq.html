@@ -1,0 +1,178 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>HYRISE &amp; Development FAQ &mdash; HYRISE latest documentation</title>
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/hyrise_template.css" type="text/css" />
+    <link rel="stylesheet" href="_static/hyrise.css" type="text/css" />
+    <link rel="stylesheet" href="_static/page-1-attributes.css" type="text/css" />
+    <link rel="stylesheet" href="_static/page-1.css" type="text/css" />
+    <link rel="stylesheet" href="_static/breathe.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     'latest',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/hyrise.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <link rel="top" title="HYRISE latest documentation" href="index.html" />
+    <link rel="up" title="Documentation" href="documentation.html" />
+    <link rel="next" title="Proposals" href="proposals.html" />
+    <link rel="prev" title="Profiling plan operations" href="developing/profiling.html" /> 
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="inner-wrapper">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+      <div class="col-md-3 hyrisesidebar">
+            <p class="logo image">
+              <a href="index.html">
+                <img class="logo" src="_static/hyrise.png" alt="Logo"/>
+              </a>
+              <p>
+                ...is a new relational storage engine for main memory database systems. It is built on the premise that enterprise application workloads can benefit from a dedicated main-memory storage engine.
+              </p>
+            </p>
+  
+  <div id="tocWrapper" style="margin-bottom: 20px;">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Welcome</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html">Implementation Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="query_execution.html">HYRISE Query Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developing.html">Developing with HYRISE</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">HYRISE &amp; Development FAQ</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="proposals.html">Proposals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doxygen.html">Doxygen Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+</ul>
+
+  </div>
+
+  
+  <!-- possible but links have to be removed, too..problem: closing tags-->
+  
+  <strong>Previous topic: </strong><a href="developing/profiling.html" title="previous chapter">Profiling plan operations</a><br />
+  <strong>Next topic: </strong><a href="proposals.html" title="next chapter">Proposals</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/faq.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <p class="searchtip" style="font-size: 90%">
+      Enter search terms or a module, class or function name.
+    </p>
+    <form class="search form-inline" action="search.html" method="get" role="form">
+      <div class="form-group">
+        <input type="text" name="q" class="form-control"/>
+      </div>
+      <input type="submit" value="Go" class="btn btn-default"/>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+      </div>
+                        <div class="main col-md-9">
+<div class="row-fluid">
+  <ul class="nav nav-pills pull-left">
+    <li>
+        <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="documentation.html">Documentation</a>
+    </li>
+    <li>
+      <a href="people.html">People</a>
+    </li>
+    <li>
+      <a href="projects.html">Projects</a>
+    </li>
+    <li>
+      <a href="publications.html">Publications</a>
+    </li>
+  </ul>
+
+    
+    
+</div>
+<div class="clearfix"></div>
+                            <div class="content row-fluid">
+                              
+  <div class="section" id="hyrise-development-faq">
+<h1>HYRISE &amp; Development FAQ<a class="headerlink" href="#hyrise-development-faq" title="Permalink to this headline">¶</a></h1>
+<p>This is a list of Frequently Asked Questions about HYRISE. Feel free
+to suggest new entries</p>
+<div class="section" id="hyrise-related">
+<h2>HYRISE Related<a class="headerlink" href="#hyrise-related" title="Permalink to this headline">¶</a></h2>
+<p>How Do I ...</p>
+<p>... enable the production build?</p>
+<blockquote>
+<div>You have to set the environment variable <tt class="docutils literal"><span class="pre">PRODUCTION</span></tt></div></blockquote>
+</div>
+<div class="section" id="git-related">
+<h2>Git Related<a class="headerlink" href="#git-related" title="Permalink to this headline">¶</a></h2>
+<p>How Do I ...</p>
+<p>... discard all my local local changed and force a reset to the remote master?</p>
+<blockquote>
+<div>You have to use the <tt class="docutils literal"><span class="pre">reset</span></tt> featurre of git. The easiest way is
+to execute the command <tt class="docutils literal"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--hard</span> <span class="pre">origin/master</span></tt></div></blockquote>
+<p>... remove unused remote branches that no longer exist?</p>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">prune</span> <span class="pre">origin</span></tt></div></blockquote>
+<p>... delete a remote branch?</p>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">:branch_to_delete</span></tt></div></blockquote>
+<p>... start a new feature branch?</p>
+<blockquote>
+<div>Make sure <a class="reference external" href="https://github.com/nvie/gitflow">git-flow</a> is
+installed and follow the instructions. Now execute <tt class="docutils literal"><span class="pre">git</span> <span class="pre">flow</span>
+<span class="pre">feature</span> <span class="pre">start</span> <span class="pre">my_feature</span></tt>.</div></blockquote>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- container -->
+        </div> <!-- inner-wrapper -->
+    </div> <!-- wrapper -->
+    <div class="footer">
+        &copy; Copyright 2010-2013, Martin Grund et al.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

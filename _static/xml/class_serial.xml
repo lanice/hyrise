@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_serial" kind="class" prot="public">
+    <compoundname>Serial</compoundname>
+    <basecompoundref refid="class_abstract_resource" prot="public" virt="non-virtual">AbstractResource</basecompoundref>
+    <includes refid="_serial_8h" local="no">Serial.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_serial_1a7c321529dfc31d9b47e11433ac67e50f" prot="private" static="no">
+        <type>unsigned long</type>
+        <definition>typedef unsigned long Serial::serial_t</definition>
+        <argsstring></argsstring>
+        <name>serial_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.h" line="12" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_serial_1a3ad7ab38ef82a4b25c55b19535fbbdac" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; <ref refid="class_serial_1a7c321529dfc31d9b47e11433ac67e50f" kindref="member">serial_t</ref> &gt;</type>
+        <definition>std::atomic&lt;serial_t&gt; Serial::_serial</definition>
+        <argsstring></argsstring>
+        <name>_serial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.h" line="14" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_serial_1abb48c4786082f1086d86daa2918ed590" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Serial::~Serial</definition>
+        <argsstring>()</argsstring>
+        <name>~Serial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.h" line="18" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.h" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_serial_1a3667c3137f2df94716b5193f9fb736ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Serial::Serial</definition>
+        <argsstring>()</argsstring>
+        <name>Serial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.h" line="20" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.cpp" bodystart="3" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_serial_1a661232cf0e74d391daf3f63d19715a7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Serial::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.h" line="22" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.cpp" bodystart="7" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_serial_1a5a718e775c6da7597da2e314136456e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_serial_1a7c321529dfc31d9b47e11433ac67e50f" kindref="member">serial_t</ref></type>
+        <definition>Serial::serial_t Serial::next</definition>
+        <argsstring>()</argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.h" line="24" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="class_serial" kindref="compound">Serial</ref> class that can be used to define auto_increment columns for. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3276">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+      <node id="3275">
+        <label>Serial</label>
+        <link refid="class_serial"/>
+        <childnode refid="3276" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3278">
+        <label>AbstractResource</label>
+        <link refid="class_abstract_resource"/>
+      </node>
+      <node id="3277">
+        <label>Serial</label>
+        <link refid="class_serial"/>
+        <childnode refid="3278" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.h" line="10" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/Serial.h" bodystart="10" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_serial_1a3ad7ab38ef82a4b25c55b19535fbbdac" prot="private" virt="non-virtual"><scope>Serial</scope><name>_serial</name></member>
+      <member refid="class_serial_1a5a718e775c6da7597da2e314136456e8" prot="public" virt="non-virtual"><scope>Serial</scope><name>next</name></member>
+      <member refid="class_serial_1a661232cf0e74d391daf3f63d19715a7c" prot="public" virt="non-virtual"><scope>Serial</scope><name>reset</name></member>
+      <member refid="class_serial_1a3667c3137f2df94716b5193f9fb736ab" prot="public" virt="non-virtual"><scope>Serial</scope><name>Serial</name></member>
+      <member refid="class_serial_1a7c321529dfc31d9b47e11433ac67e50f" prot="private" virt="non-virtual"><scope>Serial</scope><name>serial_t</name></member>
+      <member refid="class_abstract_resource_1acbf6801fec7bf1acf0d90a4fb5d5c706" prot="public" virt="virtual"><scope>Serial</scope><name>~AbstractResource</name></member>
+      <member refid="class_serial_1abb48c4786082f1086d86daa2918ed590" prot="public" virt="virtual"><scope>Serial</scope><name>~Serial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

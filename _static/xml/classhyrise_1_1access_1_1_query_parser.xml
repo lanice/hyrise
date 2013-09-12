@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classhyrise_1_1access_1_1_query_parser" kind="class" prot="public">
+    <compoundname>hyrise::access::QueryParser</compoundname>
+    <includes refid="_query_parser_8h" local="no">QueryParser.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classhyrise_1_1access_1_1_query_parser_1af738974ed9643970d33e986a2c2544f3" prot="private" static="no">
+        <type>std::map&lt; std::string, <ref refid="structhyrise_1_1access_1_1_abstract_query_parser_factory" kindref="compound">AbstractQueryParserFactory</ref> * &gt;</type>
+        <definition>typedef std::map&lt; std::string, AbstractQueryParserFactory * &gt; hyrise::access::QueryParser::factory_map_t</definition>
+        <argsstring></argsstring>
+        <name>factory_map_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="64" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhyrise_1_1access_1_1_query_parser_1a1b088d46328f8a55f7349ebccd46a54e" prot="private" static="no">
+        <type>std::map&lt; Json::Value, std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt; &gt;</type>
+        <definition>typedef std::map&lt; Json::Value, std::shared_ptr&lt;Task&gt; &gt; hyrise::access::QueryParser::task_map_t</definition>
+        <argsstring></argsstring>
+        <name>task_map_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="65" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhyrise_1_1access_1_1_query_parser_1a47df6277d7a4d5e8fffef1b9cd7a7ca9" prot="private" static="no" mutable="no">
+        <type><ref refid="classhyrise_1_1access_1_1_query_parser_1af738974ed9643970d33e986a2c2544f3" kindref="member">factory_map_t</ref></type>
+        <definition>factory_map_t hyrise::access::QueryParser::_factory</definition>
+        <argsstring></argsstring>
+        <name>_factory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="67" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1abd1267ed509a7c4e4ef1a807391c1018" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::access::QueryParser::QueryParser</definition>
+        <argsstring>()</argsstring>
+        <name>QueryParser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="68" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.cpp" bodystart="12" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1a24e52b469f199be3426a36adbd951183" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::QueryParser::buildTasks</definition>
+        <argsstring>(const Json::Value &amp;query, std::vector&lt; std::shared_ptr&lt; Task &gt; &gt; &amp;tasks, task_map_t &amp;task_map) const </argsstring>
+        <name>buildTasks</name>
+        <param>
+          <type>const Json::Value &amp;</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt; &gt; &amp;</type>
+          <declname>tasks</declname>
+        </param>
+        <param>
+          <type><ref refid="classhyrise_1_1access_1_1_query_parser_1a1b088d46328f8a55f7349ebccd46a54e" kindref="member">task_map_t</ref> &amp;</type>
+          <declname>task_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="75" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.cpp" bodystart="33" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1ae1de7777643ed5c32b7455dd5b1a4fb2" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::QueryParser::setInputs</definition>
+        <argsstring>(std::shared_ptr&lt; PlanOperation &gt; planOperation, const Json::Value &amp;planOperationSpec) const </argsstring>
+        <name>setInputs</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classhyrise_1_1access_1_1_plan_operation" kindref="compound">PlanOperation</ref> &gt;</type>
+          <declname>planOperation</declname>
+        </param>
+        <param>
+          <type>const Json::Value &amp;</type>
+          <declname>planOperationSpec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="80" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.cpp" bodystart="66" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1a5b2648659db6a28bd0f3bfc2762fdf20" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string hyrise::access::QueryParser::getPapiEventName</definition>
+        <argsstring>(const Json::Value &amp;query) const </argsstring>
+        <name>getPapiEventName</name>
+        <param>
+          <type>const Json::Value &amp;</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="83" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.cpp" bodystart="76" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1a30e544ada5d2a43d514d69674efb9538" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hyrise::access::QueryParser::getSessionId</definition>
+        <argsstring>(const Json::Value &amp;query) const </argsstring>
+        <name>getSessionId</name>
+        <param>
+          <type>const Json::Value &amp;</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="85" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.cpp" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1a28131b28e12d6bbbb6b21c528365f3ae" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hyrise::access::QueryParser::setDependencies</definition>
+        <argsstring>(const Json::Value &amp;query, task_map_t &amp;task_map) const </argsstring>
+        <name>setDependencies</name>
+        <param>
+          <type>const Json::Value &amp;</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type><ref refid="classhyrise_1_1access_1_1_query_parser_1a1b088d46328f8a55f7349ebccd46a54e" kindref="member">task_map_t</ref> &amp;</type>
+          <declname>task_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="90" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.cpp" bodystart="90" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1af5f03068df4eb895cc7c3cf6a8aa7e61" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Task &gt; hyrise::access::QueryParser::getResultTask</definition>
+        <argsstring>(const task_map_t &amp;task_map) const </argsstring>
+        <name>getResultTask</name>
+        <param>
+          <type>const <ref refid="classhyrise_1_1access_1_1_query_parser_1a1b088d46328f8a55f7349ebccd46a54e" kindref="member">task_map_t</ref> &amp;</type>
+          <declname>task_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="94" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.cpp" bodystart="109" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1a81bb8b2b224395680707860c7841dc55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hyrise::access::QueryParser::~QueryParser</definition>
+        <argsstring>()</argsstring>
+        <name>~QueryParser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="97" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1aa1ed800ab83ea2afc790d1205b981d70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classhyrise_1_1access_1_1_plan_operation" kindref="compound">PlanOperation</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; PlanOperation &gt; hyrise::access::QueryParser::parse</definition>
+        <argsstring>(std::string name, Json::Value d)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>Json::Value</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="117" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.cpp" bodystart="126" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1a0d3e4deefd2b2508ca4aec36534687c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; hyrise::access::QueryParser::getOperationNames</definition>
+        <argsstring>() const </argsstring>
+        <name>getOperationNames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="121" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.cpp" bodystart="135" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1a2eefbebe6e26764a319a265df637ea70" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt; &gt;</type>
+        <definition>std::vector&lt; std::shared_ptr&lt; Task &gt; &gt; hyrise::access::QueryParser::deserialize</definition>
+        <argsstring>(Json::Value query, std::shared_ptr&lt; Task &gt; *result) const </argsstring>
+        <name>deserialize</name>
+        <param>
+          <type>Json::Value</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_task" kindref="compound">Task</ref> &gt; *</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="128" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.cpp" bodystart="20" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1a820bf334bd3a67c3ce82d926c83f17a9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>static bool hyrise::access::QueryParser::registerPlanOperation</definition>
+        <argsstring>()</argsstring>
+        <name>registerPlanOperation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="100" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1a44e396f33c03413e60b007d063e9a140" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>static bool hyrise::access::QueryParser::registerPlanOperation</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>registerPlanOperation</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="106" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1aa59d6ad225905385d3b34ad7a60e78c9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>static bool hyrise::access::QueryParser::registerTrivialPlanOperation</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>registerTrivialPlanOperation</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="112" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classhyrise_1_1access_1_1_query_parser_1a4d7b8f22e0fafd4af268ef38a0030a79" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhyrise_1_1access_1_1_query_parser" kindref="compound">QueryParser</ref> &amp;</type>
+        <definition>QueryParser &amp; hyrise::access::QueryParser::instance</definition>
+        <argsstring>()</argsstring>
+        <name>instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="119" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.cpp" bodystart="143" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3036">
+        <label>hyrise::access::QueryParser</label>
+        <link refid="classhyrise_1_1access_1_1_query_parser"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" line="63" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/system/QueryParser.h" bodystart="63" bodyend="129"/>
+    <listofallmembers>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1a47df6277d7a4d5e8fffef1b9cd7a7ca9" prot="private" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>_factory</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1a24e52b469f199be3426a36adbd951183" prot="private" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>buildTasks</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1a2eefbebe6e26764a319a265df637ea70" prot="public" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>deserialize</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1af738974ed9643970d33e986a2c2544f3" prot="private" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>factory_map_t</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1a0d3e4deefd2b2508ca4aec36534687c1" prot="public" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>getOperationNames</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1a5b2648659db6a28bd0f3bfc2762fdf20" prot="private" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>getPapiEventName</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1af5f03068df4eb895cc7c3cf6a8aa7e61" prot="private" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>getResultTask</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1a30e544ada5d2a43d514d69674efb9538" prot="private" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>getSessionId</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1a4d7b8f22e0fafd4af268ef38a0030a79" prot="public" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>instance</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1aa1ed800ab83ea2afc790d1205b981d70" prot="public" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>parse</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1abd1267ed509a7c4e4ef1a807391c1018" prot="private" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>QueryParser</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1a820bf334bd3a67c3ce82d926c83f17a9" prot="public" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>registerPlanOperation</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1a44e396f33c03413e60b007d063e9a140" prot="public" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>registerPlanOperation</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1aa59d6ad225905385d3b34ad7a60e78c9" prot="public" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>registerTrivialPlanOperation</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1a28131b28e12d6bbbb6b21c528365f3ae" prot="private" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>setDependencies</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1ae1de7777643ed5c32b7455dd5b1a4fb2" prot="private" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>setInputs</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1a1b088d46328f8a55f7349ebccd46a54e" prot="private" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>task_map_t</name></member>
+      <member refid="classhyrise_1_1access_1_1_query_parser_1a81bb8b2b224395680707860c7841dc55" prot="public" virt="non-virtual"><scope>hyrise::access::QueryParser</scope><name>~QueryParser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

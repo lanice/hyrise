@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="struct_abstract_task_scheduler_factory" kind="struct" prot="public" abstract="yes">
+    <compoundname>AbstractTaskSchedulerFactory</compoundname>
+    <derivedcompoundref refid="struct_task_scheduler_factory" prot="public" virt="non-virtual">TaskSchedulerFactory&lt; T &gt;</derivedcompoundref>
+    <includes refid="_shared_scheduler_8h" local="no">SharedScheduler.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_abstract_task_scheduler_factory_1a036bed421c21d4436eb4bd348c6a3fa2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_abstract_task_scheduler" kindref="compound">AbstractTaskScheduler</ref> *</type>
+        <definition>virtual AbstractTaskScheduler* AbstractTaskSchedulerFactory::create</definition>
+        <argsstring>(int cores) const =0</argsstring>
+        <name>create</name>
+        <reimplementedby refid="struct_task_scheduler_factory_1a23e756afc99e86a56b246973049039d8">create</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>cores</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/SharedScheduler.h" line="16"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_abstract_task_scheduler_factory_1a9e9ce1aa374b984b15bc1929c9e1aa92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual AbstractTaskSchedulerFactory::~AbstractTaskSchedulerFactory</definition>
+        <argsstring>()</argsstring>
+        <name>~AbstractTaskSchedulerFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/SharedScheduler.h" line="17" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/SharedScheduler.h" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1548">
+        <label>AbstractTaskSchedulerFactory</label>
+        <link refid="struct_abstract_task_scheduler_factory"/>
+      </node>
+      <node id="1549">
+        <label>TaskSchedulerFactory&lt; T &gt;</label>
+        <link refid="struct_task_scheduler_factory"/>
+        <childnode refid="1548" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1550">
+        <label>AbstractTaskSchedulerFactory</label>
+        <link refid="struct_abstract_task_scheduler_factory"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/SharedScheduler.h" line="15" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/SharedScheduler.h" bodystart="15" bodyend="18"/>
+    <listofallmembers>
+      <member refid="struct_abstract_task_scheduler_factory_1a036bed421c21d4436eb4bd348c6a3fa2" prot="public" virt="pure-virtual"><scope>AbstractTaskSchedulerFactory</scope><name>create</name></member>
+      <member refid="struct_abstract_task_scheduler_factory_1a9e9ce1aa374b984b15bc1929c9e1aa92" prot="public" virt="virtual"><scope>AbstractTaskSchedulerFactory</scope><name>~AbstractTaskSchedulerFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

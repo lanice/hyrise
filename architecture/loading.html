@@ -33,7 +33,7 @@
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <link rel="top" title="HYRISE latest documentation" href="../index.html" />
     <link rel="up" title="Implementation Details" href="../architecture.html" />
-    <link rel="next" title="EmptyLoader" href="loading/index.html" />
+    <link rel="next" title="Loading" href="loading/index.html" />
     <link rel="prev" title="HYRISE Layouter" href="layouter.html" /> 
   </head>
   <body>
@@ -52,7 +52,7 @@
               </p>
             </p>
   
-  <div id="tocWrapper" style="margin-bottom: 20px;">
+  <div id="tocWrapper">
     <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">Documentation</a><ul class="current">
@@ -61,12 +61,7 @@
 <li class="toctree-l3"><a class="reference internal" href="architecture.html">Create Modifiable Tables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="layouter.html">HYRISE Layouter</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Loading</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="loading/index.html">EmptyLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="loading/index.html#csvloader">CSVLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="loading/index.html#parameters">Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="loading/index.html#generic-csv-parameters">Generic CSV parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="loading/index.html#stringloader">StringLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="loading/index.html#id2">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="loading/index.html">Loading</a></li>
 <li class="toctree-l4"><a class="reference internal" href="loading/mysql.html">MySQL Loader</a></li>
 </ul>
 </li>
@@ -94,7 +89,7 @@
   <!-- possible but links have to be removed, too..problem: closing tags-->
   
   <strong>Previous topic: </strong><a href="layouter.html" title="previous chapter">HYRISE Layouter</a><br />
-  <strong>Next topic: </strong><a href="loading/index.html" title="next chapter">EmptyLoader</a></p>
+  <strong>Next topic: </strong><a href="loading/index.html" title="next chapter">Loading</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../_sources/architecture/loading.txt"
@@ -394,18 +389,21 @@ be done.</p>
 <h2>Loaders<a class="headerlink" href="#loaders" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="loading/index.html">EmptyLoader</a></li>
-<li class="toctree-l1"><a class="reference internal" href="loading/index.html#csvloader">CSVLoader</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="loading/index.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loading/index.html">Loading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loading/index.html#emptyloader">EmptyLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading/index.html#csvloader">CSVLoader</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="loading/index.html#usage">Usage</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="loading/index.html#parameters">Parameters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="loading/index.html#generic-csv-parameters">Generic CSV parameters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="loading/index.html#stringloader">StringLoader</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="loading/index.html#id1">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading/index.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading/index.html#generic-csv-parameters">Generic CSV parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading/index.html#stringloader">StringLoader</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="loading/index.html#id1">Usage</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="loading/index.html#id2">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading/index.html#id2">Parameters</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="loading/mysql.html">MySQL Loader</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="loading/mysql.html#additional-dependencies">Additional dependencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loading/mysql.html#environment-variables">Environment Variables</a></li>

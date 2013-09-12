@@ -1,7 +1,11 @@
+Loading
+=======
+
 EmptyLoader
 ^^^^^^^^^^^
 
 .. note::
+
    This Loader is defined in `src/lib/io/EmptyLoader.h` and provides
    EmptyInput and EmptyHeader.
 

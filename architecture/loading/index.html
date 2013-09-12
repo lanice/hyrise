@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>EmptyLoader &mdash; HYRISE latest documentation</title>
+    <title>Loading &mdash; HYRISE latest documentation</title>
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap.min.css" type="text/css" />
@@ -52,7 +52,7 @@
               </p>
             </p>
   
-  <div id="tocWrapper" style="margin-bottom: 20px;">
+  <div id="tocWrapper">
     <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Welcome</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../documentation.html">Documentation</a><ul class="current">
@@ -61,16 +61,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../architecture.html">Create Modifiable Tables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../layouter.html">HYRISE Layouter</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../loading.html">Loading</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="">EmptyLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#csvloader">CSVLoader</a><ul class="simple">
+<li class="toctree-l4 current"><a class="current reference internal" href="">Loading</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#generic-csv-parameters">Generic CSV parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#stringloader">StringLoader</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">Parameters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mysql.html">MySQL Loader</a></li>
 </ul>
 </li>
@@ -146,8 +139,10 @@
 <div class="clearfix"></div>
                             <div class="content row-fluid">
                               
-  <div class="section" id="emptyloader">
-<h1>EmptyLoader<a class="headerlink" href="#emptyloader" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="loading">
+<h1>Loading<a class="headerlink" href="#loading" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="emptyloader">
+<h2>EmptyLoader<a class="headerlink" href="#emptyloader" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This Loader is defined in <cite>src/lib/io/EmptyLoader.h</cite> and provides
@@ -157,7 +152,7 @@ EmptyInput and EmptyHeader.</p>
 was specified. They create empty headers or empty table bodies.</p>
 </div>
 <div class="section" id="csvloader">
-<h1>CSVLoader<a class="headerlink" href="#csvloader" title="Permalink to this headline">¶</a></h1>
+<h2>CSVLoader<a class="headerlink" href="#csvloader" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Defined in <cite>src/lin/io/CSVLoader.h</cite> and provides <em>CSVInput</em> and
@@ -166,7 +161,7 @@ was specified. They create empty headers or empty table bodies.</p>
 <p>This loader can be used to load arbitrary CSV-like files. The default
 format of HYRISE uses the delimiter <cite>|</cite>.</p>
 <div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
 <p>CSVLoader can be used as follows</p>
 <div class="highlight-c++"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -216,7 +211,7 @@ format of HYRISE uses the delimiter <cite>|</cite>.</p>
 </div>
 </div>
 <div class="section" id="parameters">
-<h1>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h1>
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <p><cite>CSVInput::params()</cite> offers the following parameters:</p>
 <dl class="docutils">
 <dt>IgnoreHeader <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
@@ -234,7 +229,7 @@ discarding extra data.</dd>
 </dl>
 </div>
 <div class="section" id="generic-csv-parameters">
-<span id="csvparams"></span><h1>Generic CSV parameters<a class="headerlink" href="#generic-csv-parameters" title="Permalink to this headline">¶</a></h1>
+<span id="csvparams"></span><h2>Generic CSV parameters<a class="headerlink" href="#generic-csv-parameters" title="Permalink to this headline">¶</a></h2>
 <p><cite>csv::params()</cite> offers the following parameters:</p>
 <dl class="docutils">
 <dt>Delimiter <span class="classifier-delimiter">:</span> <span class="classifier">unsigned char, defaults to <cite>|</cite></span></dt>
@@ -246,7 +241,7 @@ discarding extra data.</dd>
 </dl>
 </div>
 <div class="section" id="stringloader">
-<h1>StringLoader<a class="headerlink" href="#stringloader" title="Permalink to this headline">¶</a></h1>
+<h2>StringLoader<a class="headerlink" href="#stringloader" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Defined in <cite>src/lib/io/StringLoader.h</cite> and provides <em>StringHeader</em>.</p>
@@ -254,7 +249,7 @@ discarding extra data.</dd>
 <p>StringHeader allows to pass a user-defined std::string to be
 used for generating table metadata.</p>
 <div class="section" id="id1">
-<h2>Usage<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h3>Usage<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-c++"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -339,12 +334,13 @@ used for generating table metadata.</p>
 </div>
 </div>
 <div class="section" id="id2">
-<h1>Parameters<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<h2>Parameters<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p><cite>StringHeader::params</cite> offers the following parameters:</p>
 <dl class="docutils">
 <dt>CSVParams <span class="classifier-delimiter">:</span> <span class="classifier">csv::params</span></dt>
 <dd>See discussion of csv::params <a class="reference internal" href="#csvparams"><em>Generic CSV parameters</em></a></dd>
 </dl>
+</div>
 </div>
 
 

@@ -6,5 +6,4 @@ $(document).ready( function() {
         }
     });
     $('ul.notTop li').addClass('list-group-item');
-    $('pre').addClass('prettyprint');
 });

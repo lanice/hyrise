@@ -31,7 +31,6 @@ records in order to make our changes visible to other transactions.
    :language: javascript
    :linenos:
    :lines: 1-2,8-25,27-
-   :emphasize-lines: 4-5,8-13,17
 
 The above example shows what a typical insert looks like: In line
 `retrieve_revenue`, we retrieve a handle to the `revenue` table, which

@@ -2,6 +2,28 @@
 Installing Hyrise
 =================
 
+
+Installing Hyrise via Vagrant
+#############################
+
+Using `VirtualBox <http://www.virtualbox.org/>`_ and `Vagrant <http://www.vagrantup.com/>`_, you can automatically setup a HYRISE development environment. (This is the recommended way of getting started with HYRISE development).
+
+Check out `this repository <https://github.com/hyrise/hyrise_puppet/>`_ to easily setup a development VM as follows:
+
+::
+
+    # initialize submodules
+    $ git submodule update -init
+
+    # then
+    $ vagrant up
+    [...]
+    $ vagrant ssh
+
+Manually installing Hyrise
+##########################
+
+
 Linux(Ubuntu) - Initial Setup
 -----------------------------
 
@@ -45,8 +67,9 @@ You should see something akin to::
     DIR build/lib/helper
     ...
 
+
 First steps
------------
+###########
 
 Having build HYRISE, you should now head over to :doc:`json_queries`
 

@@ -18,7 +18,7 @@ Documentation
 What is HYRISE
 --------------
 
-raditional databases are separated into ones for current data from the day-to-
+Traditional databases are separated into ones for current data from the day-to-
 day business processes and ones for reporting and analytics. For fast moving
 businesses moving data from one silo to another is cumbersome and takes too
 much time. As a result the new data arriving in the reporting system is already

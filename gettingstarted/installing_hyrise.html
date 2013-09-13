@@ -134,8 +134,23 @@
                               
   <div class="section" id="installing-hyrise">
 <h1>Installing Hyrise<a class="headerlink" href="#installing-hyrise" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installing-hyrise-via-vagrant">
+<h2>Installing Hyrise via Vagrant<a class="headerlink" href="#installing-hyrise-via-vagrant" title="Permalink to this headline">¶</a></h2>
+<p>Using <a class="reference external" href="http://www.virtualbox.org/">VirtualBox</a> and <a class="reference external" href="http://www.vagrantup.com/">Vagrant</a>, you can automatically setup a HYRISE development environment. (This is the recommended way of getting started with HYRISE development).</p>
+<p>Check out <a class="reference external" href="https://github.com/hyrise/hyrise_puppet/">this repository</a> to easily setup a development VM as follows:</p>
+<div class="highlight-c++"><pre># initialize submodules
+$ git submodule update -init
+
+# then
+$ vagrant up
+[...]
+$ vagrant ssh</pre>
+</div>
+</div>
+<div class="section" id="manually-installing-hyrise">
+<h2>Manually installing Hyrise<a class="headerlink" href="#manually-installing-hyrise" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="linux-ubuntu-initial-setup">
-<h2>Linux(Ubuntu) - Initial Setup<a class="headerlink" href="#linux-ubuntu-initial-setup" title="Permalink to this headline">¶</a></h2>
+<h3>Linux(Ubuntu) - Initial Setup<a class="headerlink" href="#linux-ubuntu-initial-setup" title="Permalink to this headline">¶</a></h3>
 <p>Install base requisites via:</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">openssh</span><span class="o">-</span><span class="n">server</span> <span class="n">git</span><span class="o">-</span><span class="n">core</span>
 </pre></div>
@@ -154,7 +169,7 @@ git config --global user.email your@emailAdress.com</pre>
 </div>
 </div>
 <div class="section" id="linux-ubuntu-installation">
-<h2>Linux(Ubuntu) - Installation<a class="headerlink" href="#linux-ubuntu-installation" title="Permalink to this headline">¶</a></h2>
+<h3>Linux(Ubuntu) - Installation<a class="headerlink" href="#linux-ubuntu-installation" title="Permalink to this headline">¶</a></h3>
 <p>For Ubuntu, we provide a set of automatic scripts to install all necessary dependencies:</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="n">cd</span> <span class="n">tools</span><span class="o">/</span><span class="n">autosetup</span>
 <span class="p">.</span><span class="o">/</span><span class="n">install</span><span class="p">.</span><span class="n">sh</span>
@@ -162,7 +177,7 @@ git config --global user.email your@emailAdress.com</pre>
 </div>
 </div>
 <div class="section" id="build-the-project">
-<h2>Build the project<a class="headerlink" href="#build-the-project" title="Permalink to this headline">¶</a></h2>
+<h3>Build the project<a class="headerlink" href="#build-the-project" title="Permalink to this headline">¶</a></h3>
 <p>Go back to the main directory and build the project:</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="n">cd</span> <span class="p">..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span>
 <span class="n">make</span>
@@ -172,6 +187,7 @@ git config --global user.email your@emailAdress.com</pre>
 <div class="highlight-c++"><div class="highlight"><pre><span class="n">DIR</span> <span class="n">build</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">helper</span>
 <span class="p">...</span>
 </pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="first-steps">

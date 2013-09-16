@@ -6,12 +6,14 @@ Plan Operations
 
 Find below a summary of the available Plan Operations and their JSON arguments.
 
+
+
 Table Load
 ==========
 
-Loads a table from file::
+This operator loads a table from a file::
 
-    "ID": {
+    "load": {
         "type":"TableLoad",
         "table": "table name",
         "filename": "file.data",
@@ -22,15 +24,14 @@ Loads a table from file::
 
 
 
-
 TableUnload
 ===========
 
-simply unloads a table specified in the ``"table":`` field.
+Simply unloads a table specified in the ``"table":`` field.
 
 ::
 
-    "ID": {
+    "unload": {
         "type":"TableUnload",
         "table": "table name"
         },
@@ -40,14 +41,16 @@ simply unloads a table specified in the ``"table":`` field.
 
 .. _simpletablescan:
 
+
+
 SimpleTableScan
 ===============
 
-Performs a Selection
+This operator performs a Selection.
 
 ::
 
-    "ID": {
+    "scan": {
         "type":"SimpleTableScan",
         "positions": true,
         "predicates": [
@@ -57,11 +60,13 @@ Performs a Selection
             ]
         },
 
-``"positions: true"`` save row positions rather than rows in the intermediate result. [optional. true is default.]
+Use ``"positions: true"`` to save row positions rather than rows in the intermediate result. This is optional and by default true.
 
 ``"predicates:"`` is a list of predicates in prefix order, that will be used to build the predicate tree for selection.
 
-``"type:"`` boolean operators can be given as string or int:
+    For each predicate you can specify the operator type, the input table, the data types and a value for logical operations.
+
+    Use ``"type:"`` to specify the boolean operators. They can be given as string or int:
         == ==========
         0   EQ
         1   LT
@@ -92,7 +97,6 @@ Performs a Selection
 
 
 
-
 ProjectionScan
 ==============
 
@@ -101,38 +105,34 @@ Performs a Projection of columns given in ``"fields":``
 
 ::
 
-    "ID": {
+    "projection": {
         "type":"ProjectionScan",
         "fields" : [
-        "ADDRNUMBER","NAME_CO","NAME1","NAME2"
-        ]
+            "ADDRNUMBER","NAME_CO","NAME1","NAME2"
+            ]
         },
         
 ``"fields":`` is synonymous to columns/contains a list of all columns to be projected into the result table.
 
 
 
-
 UnionScan
 =========
 
-
-used to combine two table and remove duplicates.
+The Union Scan combines two tables and removes duplicates.
 
 ::
 
-    "ID": {
+    "union": {
         "type":"UnionScan",
         },
-
 
 
 
 JoinScan
 ========
 
-
-currently only performs equi/inner join.
+This operator performs a Join. It currently only performs equi/inner join.
 
 ::
 
@@ -171,26 +171,21 @@ The example given above would perform an inner join on the tables loaded in 0,1 
         
 
 
-
-
 MergeJoin
 =========
 
-
 deprecated.
-
 
 
 
 HashBuild
 =========
 
-
-will build a hash table, hashing the columns specified in "fields".
+This one will build a hash table, hashing the columns specified in "fields".
 
 ::
 
-    "ID": {
+    "hash": {
         "type":"HashBuild",
         "fields": [1]
         },
@@ -205,7 +200,7 @@ HashJoinProbe
 
 ::
 
-    "ID": {
+    "hashProbe": {
         "type":"HashJoinProbe",
         "fields": [1]
         },
@@ -246,16 +241,14 @@ here's another example of a full HashJoin for clarification. Mind the "edges" co
 
 
 
-
 GroupByScan
 ===========
 
-
-group table by attributes specified in ``"fields":``.
+This scan groups a table by attributes specified in ``"fields":`` using aggregation functions specified in ``"functions":``. This oeprator only works on hash tables, so perform a hash build before.
 
 ::
 
-    "ID": {
+    "group": {
         "type": "GroupByScan",
         "fields": ["employee_company_id"],
         "functions": [
@@ -278,16 +271,14 @@ group table by attributes specified in ``"fields":``.
 
 
 
-
 MaterializingScan
 =================
 
-
-returns a materialized view that contains the
+The Materializing Scan returns a materialized view that contains the
 
     ::
 
-        "ID": {
+        "materializing": {
             "type":"MaterializingScan",
             "samples": 3,
             "memcpy": false, [default: false]
@@ -301,13 +292,10 @@ returns a materialized view that contains the
 #TODO: note to Martin: remove "copyValues".
 
 
-
-
 SortScan
 ========
 
-
-sorts a table by given attribute(s).
+This operator can be sorted a table by given the attribute(s).
 
 ::
 
@@ -320,12 +308,10 @@ sorts a table by given attribute(s).
 
 
 
-
 SmallestTableScan
 =================
 
-
-determines the smallest table of all given tables and projects it.
+This scan determines the smallest table of all given tables and projects it.
 
 ::
 
@@ -335,10 +321,8 @@ determines the smallest table of all given tables and projects it.
 
 
 
-
 LayoutSingleTable
 =================
-
 
 ::
 
@@ -373,10 +357,8 @@ LayoutSingleTable
 
 
 
-
 LayoutTableLoad
 ===============
-
 
 ::
 
@@ -386,3 +368,17 @@ LayoutTableLoad
         "filename": "tables/employees.data",
         "input_row": 3
     }
+
+
+
+NoOp
+=====
+
+This operator does not perform any action and can be used to drop intermediate results.
+
+:: 
+
+    "noop": {
+        "type": "NoOp"
+    }
+

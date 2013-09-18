@@ -1,8 +1,8 @@
 Group By Scan
 -------------
 
-Useage
-^^^^^^
+Usage
+^^^^^
 
 For implementing the group by scan we use hashing. Therefore, it is necessary that
 every GroupBy instance has the source table itself, a hash map, the grouping fields

@@ -7,5 +7,6 @@ flexibility allowing deviation from patterns and ideas implemented.
 
 .. toctree::
     :glob:
+    :titlesonly:
 
     extensions/*

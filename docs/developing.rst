@@ -6,6 +6,7 @@ The following documents give detailed help in developing with HYRISE.
 
 .. toctree::
     :glob:
+    :titlesonly:
 
     developing/git
     developing/build_environment

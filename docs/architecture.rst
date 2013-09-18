@@ -9,6 +9,7 @@ certain architectural decisions.
 
 .. toctree::
     :glob:
+    :titlesonly:
 
     architecture/architecture
     architecture/layouter

@@ -6,20 +6,11 @@ JSON Queries
 JSON Query Execution
 ********************
 
-#. Set up where to look for table data directory (folder already exists) ::
+Before executing queries in Hyrise you have to start the server:
 
-      cd hyrise
-      export HYRISE_DB_PATH=`pwd`/test
+:doc:`tutorial1_starting_the_server`
 
-#. Export library directory ::
-
-      export LD_LIBRARY_PATH=./build/:$LD_LIBRARY_PATH
-
-#. Starting the server :: 
-
-      ./build/hyrise_server -l ./build/log.properties -p 5000
-
-#. Now in a different terminal, you can send a query to the server ::
+Now in a different terminal, you can send a query to the server ::
 
        curl -X POST --data-urlencode "query@test/gettingstarted.json"
        http://localhost:5000/jsonQuery

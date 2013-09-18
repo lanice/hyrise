@@ -1,8 +1,10 @@
+#############
 PlanOperation
---------------
+#############
+
 
 Input/output handling
-^^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 PlanOperations accept multiple data types as input and output data. Though most operations perform on AbstractTable so far, the HashJoinProbe for example expects a HashTable as an input. The HashBuild operator produces HashTables. Therefore, all PlanOperations store their input and output data in OperationalData containers::
 

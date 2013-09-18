@@ -1,5 +1,6 @@
+##############################
 Writing your own PlanOperation
-******************************
+##############################
 
 This short tutorial demonstrates the basic steps toward implementing a Plan Operation in Hyrise, using a StringLength Operator as an example.
 
@@ -10,8 +11,10 @@ New Plan Operations inherit from PlanOperation.h and need to register themselves
 
 In addition to that new Plan Operations need to implement the following three methods (see below a simple example for a "StrLenScan" operation, that returns a list of string lengths for a given column of strings)::
 
+
 1. Specifiy a name for your new Plan Operation using:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
+=====================================================
+
 ::
 
     static string name()
@@ -28,7 +31,8 @@ as well as::
 
 
 2. Parse JSON input:
-""""""""""""""""""""
+====================
+
 ::
     
     _PlanOperation *StrLenScan::parse(Json::Value &data)
@@ -44,7 +48,8 @@ and then accessed using ``data["someOtherField"][i]``
 
 
 3. Implement your Plan Operation
-""""""""""""""""""""""""""""""""
+================================
+
 ::
 
     void StrLenScan::executePlanOperation()
@@ -70,7 +75,7 @@ Finally, to output the result of your plan operation, use ``this->addResult(outp
 
 
 4. Testing your own Plan Operation
-""""""""""""""""""""""""""""""""""
+==================================
 
 a simple query using the String Length Operator might look like this::
 

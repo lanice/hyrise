@@ -1,10 +1,11 @@
-============
+############
 JSON Queries
-============
+############
 .. _qexec:
 
+
 JSON Query Execution
-********************
+====================
 
 Before executing queries in Hyrise you have to start the server:
 
@@ -15,8 +16,9 @@ Now in a different terminal, you can send a query to the server ::
        curl -X POST --data-urlencode "query@test/gettingstarted.json"
        http://localhost:5000/jsonQuery
 
+
 Details
-*******
+=======
 
 JSON Queries are a different representation of the original flow graph
 of the query plan. Basically a k-v map defines all operators that are
@@ -49,8 +51,9 @@ below ::
             "edges": [["0","1"],["1","2"]]
         }
 
+
 Parameters
-**********
+----------
 
 The JSON input document defines 3 main input keys
 
@@ -114,5 +117,3 @@ Your response from the server should look something like this::
     Additionally there is performance data available for the parsing of the JSON Query -> ``"name":"RequestParseTask"`` as well as for outputting the response -> ``"name":"ResponseTask"``.
 
 ``"rows"`` gives a list of the rows resulting from the query.
-
-

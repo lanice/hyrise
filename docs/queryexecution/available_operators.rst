@@ -1,6 +1,6 @@
-*******************
+###################
 Available Operators
-*******************
+###################
 
 Currently the following plan operators support remote execution
 
@@ -16,7 +16,7 @@ Each operator accepts input and output data of multiple types, e.g. tables, hash
 Handling this data is implemented in ``OperationalData`` and ``PlanOperation`` classes.
 
 SingleTableLayout
-======================
+=================
 
 The goal of the **SingleTableLayout** plan operation is to perform a
 layout decision for a given workload. Therefore it has multiple

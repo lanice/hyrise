@@ -1,8 +1,9 @@
+##################
 Loading from MySQL
-==================
+##################
 
 Loading CSV into MySQL
-**********************
+======================
 
 (optional.)
 
@@ -25,7 +26,7 @@ Import Data from CSV File::
 
 
 Loading Data from MySQL-DBs
-***************************
+===========================
 
 First, make sure you have WITH_MYSQL enabled in your build configuration file settings.mk.default -> see :ref:`builprep`.
 

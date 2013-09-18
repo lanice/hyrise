@@ -1,6 +1,6 @@
-************
+############
 JSON Queries
-************
+############
 
 JSON Queries are a different representation of the original flow graph
 of the query plan. Basically a k-v map defines all operators that are
@@ -73,9 +73,10 @@ the result table and additional information::
            [ 4158, 2973, 2086, 6 ],
            [ 4371, 4045, 230, 2748 ],
        ]
+
     
 Parameters
-===========
+==========
 
 The JSON input document defines 3 main input keys
 
@@ -87,8 +88,9 @@ The edges of the flow graph may describe any non-circular graph with
 the restriction that any vertice may have multiple inputs, but only a
 single output.
 
+
 Settings
-===========
+========
 
 Currently, there is no designated scheduling unit implemented in HYRISE. To simulate scheduling or other decisions, a settings operation can be executed to set certain options::
 

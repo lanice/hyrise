@@ -4,7 +4,7 @@ Projects
 
 
 Layouting
----------
+=========
 
 To support a dynamic and incremental layout calculation we need to:
 

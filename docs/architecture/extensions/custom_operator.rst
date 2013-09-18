@@ -1,6 +1,6 @@
-=========================
+#########################
 Writing a custom operator
-=========================
+#########################
 
 HYRISE allows for the implementation and registration of custom
 operators to fit specific user needs that are not met by the built-in
@@ -11,6 +11,7 @@ We currently distinguish two kinds of operators: `trivial` and
 construction from the JSON plan whereas a complex operator needs to do
 custom parsing of JSON parameters. Trivial operators take inputs and
 do something with them without any further parameterization.
+
 
 Writing a `trivial` operator
 ============================
@@ -54,6 +55,7 @@ parameters.
 
 In order to be able to register a trivial operation, the class must be
 default-constructable.
+
 
 Writing a `complex` operator
 ============================

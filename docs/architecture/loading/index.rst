@@ -1,8 +1,10 @@
+#######
 Loading
-=======
+#######
+
 
 EmptyLoader
-^^^^^^^^^^^
+===========
 
 .. note::
 
@@ -13,8 +15,9 @@ EmptyLoader
 The classes defined in `EmptyLoader.h` are used when no alternative
 was specified. They create empty headers or empty table bodies.
 
+
 CSVLoader
-^^^^^^^^^
+=========
 
 .. note::
    Defined in `src/lin/io/CSVLoader.h` and provides *CSVInput* and
@@ -23,8 +26,9 @@ CSVLoader
 This loader can be used to load arbitrary CSV-like files. The default
 format of HYRISE uses the delimiter `|`.
 
+
 Usage
-"""""
+-----
 
 CSVLoader can be used as follows
 
@@ -32,8 +36,9 @@ CSVLoader can be used as follows
     :language: c++
     :linenos: 
 
+
 Parameters
-^^^^^^^^^^
+==========
 
 `CSVInput::params()` offers the following parameters:
 
@@ -53,8 +58,9 @@ CSVParams : csv::params
 
 .. _csvparams:
 
+
 Generic CSV parameters
-^^^^^^^^^^^^^^^^^^^^^^
+======================
 
 `csv::params()` offers the following parameters:
 
@@ -67,7 +73,7 @@ LineCount : ssize_t, defaults to `-1`
 
 
 StringLoader
-^^^^^^^^^^^^
+============
 
 .. note::
     Defined in `src/lib/io/StringLoader.h` and provides *StringHeader*.
@@ -75,15 +81,17 @@ StringLoader
 StringHeader allows to pass a user-defined std::string to be
 used for generating table metadata.
 
+
 Usage
-"""""
+-----
 
 .. literalinclude:: ../../../src/bin/units_io/string_tests.cpp
     :language: c++
     :linenos: 
 
+
 Parameters
-^^^^^^^^^^
+==========
 
 `StringHeader::params` offers the following parameters:
 

@@ -1,8 +1,9 @@
-***********************
+#######################
 Setup Build Environment
-***********************
+#######################
 
 Currently only two platforms are supported: Linux and Mac OS X.
+
 
 Library Dependencies
 ====================
@@ -25,6 +26,7 @@ Optional Dependencies
 
 * PAPI
 * gnuplot
+
 
 Initial Git Setup
 =================
@@ -52,6 +54,7 @@ necessary dependencies to start development with HYRISE::
     $ ./install.sh
 
 This should suffice to install all packages and external dependencies.
+
 
 Mac OS X
 ========
@@ -97,6 +100,7 @@ Copy and paste the following execution recipe::
 
 .. _builprep:
 
+
 Build Preparation
 =================
 
@@ -123,6 +127,7 @@ this file accordingly.
     to "linux") to make sure HYRISE builds correctly.
 
     This is *required* when ``uname`` does not return "Linux" on a Linux system.
+
 
 Build HYRISE
 ============

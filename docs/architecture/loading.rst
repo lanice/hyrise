@@ -1,11 +1,13 @@
+#######
 Loading
-=======
+#######
 
 Hyrise features a loading infrastructure that should make it
 sufficiently easy to implement new loaders.
 
+
 Introduction
-------------------
+============
 
 Currently, Hyrise distinguishes two differnt tasks in loading:
 
@@ -17,8 +19,9 @@ implementing all tasks, as for example distinguishing between metadata
 and data is (at the current stage of implementation) not possible for
 reading binary data files.
 
+
 Abstract Overview
-------------------
+=================
 
 A loader has to implement the interface defined in
 "src/lib/io/AbstractLoader.h".
@@ -32,7 +35,7 @@ A loader has to implement the interface defined in
 
 
 How to load data
-------------------
+================
 
 The primary interface for producing a table is
 
@@ -54,7 +57,7 @@ be done.
 
 
 Shortcuts
-------------------
+=========
 
 .. doxygenfunction:: Loader::shortcuts::load
 
@@ -64,8 +67,9 @@ Shortcuts
 
 .. doxygenfunction:: Loader::shortcuts::loadInsertOnly
 
+
 Loaders
-------------------
+=======
 
 
 .. toctree::

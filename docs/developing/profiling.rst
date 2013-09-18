@@ -1,6 +1,7 @@
-*************************
+#########################
 Profiling plan operations
-*************************
+#########################
+
 
 In order to allow for profiling plans/plan operations, HYRISE features
 two plan operations to start and stop profiling, ``StartProfiling``

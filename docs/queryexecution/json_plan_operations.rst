@@ -1,11 +1,10 @@
 .. _jsonplanops:
 
-***************
+###############
 Plan Operations
-***************
+###############
 
 Find below a summary of the available Plan Operations and their JSON arguments.
-
 
 
 Table Load
@@ -21,7 +20,6 @@ This operator loads a table from a file::
         "binary": true/false, [optional]
         "unsafe": true/false [optional]
         },
-
 
 
 TableUnload
@@ -40,7 +38,6 @@ Simply unloads a table specified in the ``"table":`` field.
 
 
 .. _simpletablescan:
-
 
 
 SimpleTableScan
@@ -96,7 +93,6 @@ Use ``"positions: true"`` to save row positions rather than rows in the intermed
     The example given above would build the following predicate (prefix notation): ``OR((NAME1 < 330)(NAME2 < 300))``.
 
 
-
 ProjectionScan
 ==============
 
@@ -115,7 +111,6 @@ Performs a Projection of columns given in ``"fields":``
 ``"fields":`` is synonymous to columns/contains a list of all columns to be projected into the result table.
 
 
-
 UnionScan
 =========
 
@@ -126,7 +121,6 @@ The Union Scan combines two tables and removes duplicates.
     "union": {
         "type":"UnionScan",
         },
-
 
 
 JoinScan
@@ -168,14 +162,12 @@ This operator performs a Join. It currently only performs equi/inner join.
         ``"field_right": "employee_company_id"`` pass in right part of join condition
         
 The example given above would perform an inner join on the tables loaded in 0,1 - matching up 0.company_id with 1.employee_company_id.
-        
 
 
 MergeJoin
 =========
 
 deprecated.
-
 
 
 HashBuild
@@ -240,7 +232,6 @@ here's another example of a full HashJoin for clarification. Mind the "edges" co
     }
 
 
-
 GroupByScan
 ===========
 
@@ -268,7 +259,6 @@ This scan groups a table by attributes specified in ``"fields":`` using aggregat
                 == =======
                 
 ``"field":`` field the aggregate function is to be performed on.
-
 
 
 MaterializingScan
@@ -307,7 +297,6 @@ This operator can be sorted a table by given the attribute(s).
 ``"fields":`` fields/attributes by which the table is to be sorted.
 
 
-
 SmallestTableScan
 =================
 
@@ -318,7 +307,6 @@ This scan determines the smallest table of all given tables and projects it.
     "ID": {
         "type":"SmallestTableScan",
         },
-
 
 
 LayoutSingleTable
@@ -356,7 +344,6 @@ LayoutSingleTable
 ``"layouter":``
 
 
-
 LayoutTableLoad
 ===============
 
@@ -368,7 +355,6 @@ LayoutTableLoad
         "filename": "tables/employees.data",
         "input_row": 3
     }
-
 
 
 NoOp

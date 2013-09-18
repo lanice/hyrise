@@ -1,6 +1,7 @@
-*******************************
+###############################
 Writing Performance Regressions
-*******************************
+###############################
+
 
 Performance regressions are used to keep track of the systems
 performance by defining a set of (micro-)benchmarks that execute
@@ -8,8 +9,9 @@ specici scenarios relevant to your application. The result of these
 benchmarks is then compared over time and gives better understanding
 of how architectural changes impact the overall performance.
 
+
 The Performance Test Data
-====================================
+=========================
 
 None of the performance test data is checked into the code repository.
 Therefore, the test data needs to be generated before executing
@@ -18,6 +20,7 @@ standard TPC-C reference is used. The HYRISE StorageManager loads this test
 data by reading it's environment variable ``$HYRISE_DB_PATH``. This variable has 
 to be set to the path that the data generator used as ouput folder - otherwise
 the performance regression suite will abort.
+
 
 Generating Data
 ---------------
@@ -39,6 +42,7 @@ Generating a table structure with one warehouse entry would look like the follow
 ``./build/perf_datagen -w 1 -d /tmp/ --hyrise``
 The cardinality for the other tables is set by default as described above.
 
+
 HYRISE Performance Regressions
 ==============================
 
@@ -51,6 +55,7 @@ benchmark, we use a pre-defined ``TestBody`` implementation that
 allows to execute a test multiple times with a given number of warm up
 iterations. The Code that is associated to the ``BENCHMARK`` macro is
 executed and measured.
+
 
 Writing a Simple Regression
 ---------------------------
@@ -76,6 +81,7 @@ following::
 
 Here the output lists all kinds of statistical values that help to
 identify the robustness and timely errors of an implementation.
+
 
 Writing a Regression Fixture
 ----------------------------
@@ -141,6 +147,7 @@ to do this is to copy most of the functionality of the
 ``::testing::XmlUnitTestResultPrinter`` defined in
 ``third_party/gtest/gtest-all.cpp``. 
 
+
 Executing Performance Regressions
 ---------------------------------
 
@@ -156,6 +163,7 @@ can be executed by simply running their executable:
 ``./build/perf_regression``
 
 The ouput of the performance regressions execution is as described above.
+
 
 Publishing Results to Codespeed
 -------------------------------

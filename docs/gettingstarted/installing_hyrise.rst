@@ -73,4 +73,4 @@ You should see something akin to::
 First steps
 ===========
 
-Having build HYRISE, you should now head over to :doc:`json_queries`
+Having build HYRISE, you should now head over to :doc:`tutorial1_starting_the_server` and :doc:`tutorial2_querying`

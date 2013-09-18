@@ -2,7 +2,7 @@
 Starting the Hyrise Server
 ##########################
 
-Befor starting the server, you have to configure Hyrise and tell it where to find the table data directory. This directory has to exist already. In this Hyrise version most tables are in the /test directory of the project ::
+Before starting the server, you have to configure Hyrise and tell it where to find the table data directory. This directory has to exist already. In this Hyrise version most tables are in the /test directory of the project ::
 
       cd hyrise
       export HYRISE_DB_PATH=`pwd`/test

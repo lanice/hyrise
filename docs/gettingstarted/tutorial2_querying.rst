@@ -7,11 +7,8 @@ JSON Queries
 JSON Query Execution
 ====================
 
-Before executing queries in Hyrise you have to start the server:
-
-:doc:`tutorial1_starting_the_server`
-
-Now in a different terminal, you can send a query to the server ::
+After starting the Server (:doc:`tutorial1_starting_the_server`) you can sent queries to it from a different
+Terminal window. To do this, post a JSON-String (probably from a file) to Hyrise ::
 
        curl -X POST --data-urlencode "query@test/gettingstarted.json"
        http://localhost:5000/jsonQuery

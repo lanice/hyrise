@@ -50,7 +50,6 @@ If one for example needs to programmatically construct a loader, the
 following piece of code should fairly well demonstrate how this could
 be done.
 
-
 .. literalinclude:: ../../src/bin/units_io/loading_example.cpp
     :language: c++
     :linenos: 
@@ -65,12 +64,9 @@ Shortcuts
 
 .. doxygenfunction:: Loader::shortcuts::loadWithStringHeader
 
-.. doxygenfunction:: Loader::shortcuts::loadInsertOnly
-
 
 Loaders
 =======
-
 
 .. toctree::
     :titlesonly:

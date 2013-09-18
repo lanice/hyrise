@@ -6,31 +6,12 @@ This short tutorial demonstrates the basic steps toward implementing a Plan Oper
 
 New Plan Operations inherit from PlanOperation.h and need to register themselves as Plan Operations using the following construct::
 
-    bool NewPlanOperation::is_registered = 
-        QueryParser::registerPlanOperation<NewPlanOperation>();
+    auto _ =  QueryParser::registerPlanOperation<NewPlanOperation>("NameOfNewPlanOperation");
 
-In addition to that new Plan Operations need to implement the following three methods (see below a simple example for a "StrLenScan" operation, that returns a list of string lengths for a given column of strings)::
-
-
-1. Specifiy a name for your new Plan Operation using:
-=====================================================
-
-::
-
-    static string name()
-    {
-        return "StrLenScan";
-    }
-    
-as well as::
-
-    const string vname() 
-    {
-        return "StrLenScan";
-    }
+In addition to that new Plan Operations need to implement the following two methods (see below a simple example for a "StrLenScan" operation, that returns a list of string lengths for a given column of strings)::
 
 
-2. Parse JSON input:
+1. Parse JSON input:
 ====================
 
 ::
@@ -44,10 +25,12 @@ as well as::
 In our case using a BasicParser Object (of type StrLenScan) is sufficient to parse all required input. BasicParser will parse JSON fields named "fields:" (representing columns the plan operation is to be executed on) and "limit:" (which we don't require in this example).
 
 Additional JSON fields can be checked using ``data.isMember("someOtherField")``
-and then accessed using ``data["someOtherField"][i]``
+and then accessed using ``data["someOtherField"][i]``.
+
+If you only use the basic parser, instead of adding this method, you can also register your operator with ``auto _ =  QueryParser::registerTrivialPlanOperation<NewPlanOperation>("NameOfNewPlanOperation");´´. This will automatically register the operator and tells Hyrise to use the basic JSON parser for it.
 
 
-3. Implement your Plan Operation
+2. Implement your Plan Operation
 ================================
 
 ::
@@ -74,7 +57,7 @@ Implementation of your PlanOperation will vary with degree of complexity and mig
 Finally, to output the result of your plan operation, use ``this->addResult(output_table)``.
 
 
-4. Testing your own Plan Operation
+3. Testing your own Plan Operation
 ==================================
 
 a simple query using the String Length Operator might look like this::

@@ -10,6 +10,7 @@ certain architectural decisions.
 .. toctree::
     :glob:
     :titlesonly:
+    :maxdepth: 1
 
     architecture/architecture
     architecture/layouter

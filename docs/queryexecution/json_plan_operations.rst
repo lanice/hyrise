@@ -37,10 +37,7 @@ Simply unloads a table specified in the ``"table":`` field.
         },
 
 
-
-
 .. _simpletablescan:
-
 
 SimpleTableScan
 ===============

@@ -4,7 +4,9 @@
 Plan Operations
 ###############
 
-Find below a summary of the available Plan Operations and their JSON arguments.
+Find below a summary of the available Plan Operations and their JSON arguments. 
+Each operator accepts input and output data of multiple types, e.g. tables, hash maps etc.
+Handling this data is implemented in ``OperationalData`` and ``PlanOperation`` classes.
 
 
 Table Load
@@ -266,14 +268,14 @@ MaterializingScan
 
 The Materializing Scan returns a materialized view that contains the
 
-    ::
+::
 
-        "materializing": {
-            "type":"MaterializingScan",
-            "samples": 3,
-            "memcpy": false, [default: false]
-            "copyValues": [deprecated]
-            },
+    "materializing": {
+        "type":"MaterializingScan",
+        "samples": 3,
+        "memcpy": false, [default: false]
+        "copyValues": [deprecated]
+        },
 
 ``"samples": 3`` will output a sample materialized table (here 3 rows).
 
@@ -289,7 +291,7 @@ This operator can be sorted a table by given the attribute(s).
 
 ::
 
-    "ID": {
+    "sort": {
         "type":"SortScan",
         "fields": [0]
         },
@@ -304,7 +306,7 @@ This scan determines the smallest table of all given tables and projects it.
 
 ::
 
-    "ID": {
+    "smallest": {
         "type":"SmallestTableScan",
         },
 
@@ -312,36 +314,47 @@ This scan determines the smallest table of all given tables and projects it.
 LayoutSingleTable
 =================
 
-::
+The goal of the **SingleTableLayout** plan operation is to perform a
+layout decision for a given workload. Therefore it has multiple
+required input parameters. An example of the input is shown below:
 
-    "0": {
-        "type": "LayoutSingleTable",
-        "operators": [
-        {
-            "type": "Select",
-            "weight": 1,
-            "selectivity": 0.03,
-            "attributes": ["employee_id"]
-        }
-        ],
-        "attributes": ["employee_id", "employee_company_id", "employee_name"],
-        "num_rows": 1000,
-        "layouter": "BaseLayouter"
-    },
+.. literalinclude:: ../../test/json/simple_layouter_candidate.json
+   :language: javascript
 
+The runtime of the layouter plan operation depends heavily on the
+algorithm that is used to find the best layout. There are three
+different engines available:
 
-``"operators":``
+#. ``BaseLayouter`` - Exhaustively iterate over the problem space
+#. ``CandidateLayouter`` - Perform early pruning of combinations based on primary partitions
+#. ``DivideAndConquerLayouter`` - Before merging candidates, partition the problem space based on an access graph
 
-``"type":``
-``"weight":``
-``"selectivity":``
-``"attributes":``
+The layout engine that is used during the execution is set using the
+``layouter`` member of the plan operation.
 
-``"attributes":``
+The most important option for the plan operator is setting the
+number of rows for the input table, which is used to calcualte the
+correct cost for selectivities.
 
-``"num_rows":``
+.. literalinclude:: ../../test/json/simple_layouter_candidate.json
+   :language: javascript
+   :lines: 10
 
-``"layouter":``
+Furthermore you can specify how many possible results the
+layouter should return. This option can be used to present multiple
+layouts in a UI.
+
+.. literalinclude:: ../../test/json/simple_layouter_candidate.json
+   :language: javascript
+   :lines: 11
+
+The meta data that is required to generate the best possible layout
+are the attributes of the table and the list of operations that is
+executed on this table.
+
+.. literalinclude:: ../../test/json/simple_layouter_candidate.json
+   :language: javascript
+   :lines: 6-9
 
 
 LayoutTableLoad
@@ -349,7 +362,7 @@ LayoutTableLoad
 
 ::
 
-    "1": {
+    "layout": {
         "type": "LayoutTableLoad",
         "table": "emplyoees",
         "filename": "tables/employees.data",

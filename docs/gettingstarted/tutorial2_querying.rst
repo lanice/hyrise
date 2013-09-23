@@ -40,7 +40,7 @@ below ::
 Query Execution
 ===============
 
-To send these queries to Hyrise, after starting the Server (:doc:`tutorial1_starting_the_server`), you can post them as JSON-String (probably from a file) via the HTTP interface to Hyrise ::
+To send these queries to Hyrise, after starting the Server (:doc:`tutorial1_starting_the_server`), you can post them as JSON-String (usually from a file) via the HTTP interface to Hyrise ::
 
        curl -X POST --data-urlencode "query@test/gettingstarted.json"
        http://localhost:5000/jsonQuery

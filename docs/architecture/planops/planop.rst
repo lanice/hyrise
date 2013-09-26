@@ -29,3 +29,5 @@ To implement more data types, add additional lists and implement their correspon
 During query execution, these containers are passed between dependent operators. On execution, PlanOperation::refreshInput is called to fetch output data of predecessors. Override setupPlanOperation to implement additional processing behaviour.
 
 Always keep an eye on retain counting correctness to prevent memory leaks or to prevent fetching deleted objects!
+
+For implementation details of two example operators go to :doc:`./groupby` and :doc:`./hashjoin`.

@@ -1,5 +1,6 @@
+################
 Query Statistics
-================
+################
 
 The goal of query statistics is to keep track of what is happening in
 the system. To achieve this, information about the execution of each
@@ -15,8 +16,9 @@ statistics table, but it is not guaranteed that each query will
 appear. We assume that if a single query might not be recorded this
 information will have no impact on the overall workload.
 
+
 Statistic Table
----------------
+===============
 
 The table for the query statistics has the following columns ---
 independent if it is the global or thread local table.

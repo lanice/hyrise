@@ -1,8 +1,8 @@
 .. _v8ops:
 
-*********************
+#####################
 Integrating Google V8
-*********************
+#####################
 
 Hyrise comes with the possibility to implement plan operations in JavaScript
 instead of C++ to ease the prototypical development. Of course the performance
@@ -34,6 +34,7 @@ variable ``HYRISE_SCRIPT_PATH`` determines the base folder where the server
 expects to find those files. If the variable is not set, int points to the
 directory from where the server was launched.
 
+
 Defining a new Plan Operation
 -----------------------------
 
@@ -45,6 +46,7 @@ The minmal plan operation defines a script that defines the following function::
 The variable ``input`` defines an array that contains all references to input
 tables of the plan operation. The requirement is that the function will return
 a single table as output.
+
 
 API for the Plan Operation
 --------------------------

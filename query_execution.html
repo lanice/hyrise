@@ -61,7 +61,6 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="">HYRISE Query Execution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="queryexecution/json_query_execution.html">JSON Query Execution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="queryexecution/json_queries.html">JSON Queries</a></li>
-<li class="toctree-l3"><a class="reference internal" href="queryexecution/available_operators.html">Available Operators</a></li>
 <li class="toctree-l3"><a class="reference internal" href="queryexecution/parallelization.html">Parallelization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="queryexecution/json_plan_operations.html">Plan Operations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="queryexecution/tx.html">Transaction Management System</a></li>
@@ -142,64 +141,19 @@ experiments with different settings.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="queryexecution/json_query_execution.html">JSON Query Execution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="queryexecution/json_queries.html">JSON Queries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_queries.html#parameters">Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_queries.html#settings">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="queryexecution/json_queries.html">JSON Queries</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="queryexecution/available_operators.html">Available Operators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/available_operators.html#singletablelayout">SingleTableLayout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="queryexecution/parallelization.html">Parallelization</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="queryexecution/parallelization.html">Parallelization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/parallelization.html#independent-operators">Independent Operators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/parallelization.html#parallel-operator">Parallel Operator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/parallelization.html#implementation-details">Implementation Details</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="queryexecution/parallelization.html#querytransformationengine">QueryTransformationEngine</a></li>
-<li class="toctree-l3"><a class="reference internal" href="queryexecution/parallelization.html#queryparser">QueryParser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="queryexecution/json_plan_operations.html">Plan Operations</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="queryexecution/tx.html">Transaction Management System</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="queryexecution/json_plan_operations.html">Plan Operations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#table-load">Table Load</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#tableunload">TableUnload</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#simpletablescan">SimpleTableScan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#projectionscan">ProjectionScan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#unionscan">UnionScan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#joinscan">JoinScan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#mergejoin">MergeJoin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#hashbuild">HashBuild</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#hashjoinprobe">HashJoinProbe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#groupbyscan">GroupByScan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#materializingscan">MaterializingScan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#sortscan">SortScan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#smallesttablescan">SmallestTableScan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#layoutsingletable">LayoutSingleTable</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/json_plan_operations.html#layouttableload">LayoutTableLoad</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="queryexecution/tx.html">Transaction Management System</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/tx.html#using-transactions-in-your-plan">Using transactions in your plan</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="queryexecution/tx.html#single-request-transactions">Single-request transactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="queryexecution/tx.html#multiple-transaction-steps">Multiple transaction steps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="queryexecution/tx.html#autcommit-shortcut">Autcommit shortcut</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/tx.html#architectural-overview">Architectural Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/tx.html#typical-control-flow">Typical Control Flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/tx.html#necessary-plan-operations">Necessary Plan Operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/tx.html#multi-version-concurrency-control-mvcc">Multi Version Concurrency Control (MVCC)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/tx.html#our-mvcc-implementation">Our MVCC Implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/tx.html#evaluating-the-visiblity">Evaluating the visiblity</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="queryexecution/v8ops.html">Integrating Google V8</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="queryexecution/v8ops.html#using-javascript-for-plan-operations">Using JavaScript for Plan Operations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="queryexecution/v8ops.html#defining-a-new-plan-operation">Defining a new Plan Operation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="queryexecution/v8ops.html#api-for-the-plan-operation">API for the Plan Operation</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="queryexecution/v8ops.html">Integrating Google V8</a><ul class="simple">
 </ul>
 </li>
 </ul>

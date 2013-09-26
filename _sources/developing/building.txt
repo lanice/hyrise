@@ -1,12 +1,13 @@
-********************
+####################
 Building the project
-********************
+####################
 
 A simple::
 
     $ make
 
 should suffice to build the complete project
+
 
 Additional targets
 ==================

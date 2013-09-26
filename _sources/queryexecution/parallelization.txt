@@ -1,12 +1,13 @@
-***************
+###############
 Parallelization
-***************
+###############
 
 HYRISE offers parallel execution of queries.
 
 JSON is used to specify a human-readable definition of the query's operators. To execute them as specified, the QueryTransformationEngine transforms the query to a format which results in directly instantiable operator definitions using the QueryParser. The latter's resulting operators can finally be executed. See `Implementation Details`_.
 
 The amount of parallel executable operators is limited by the thread pool size. There are two different kinds of parallel execution. Further details on how they work and rely on transformation can be found below.
+
 
 Independent Operators
 ======================
@@ -15,8 +16,9 @@ Two operators are independent if they aren't nodes in the same edge. An edges de
 
 	"edges": [["0", "2"], ["1", "2"]]
 
+
 Parallel Operator
-======================
+==================
 
 The above example is limited to execute operators as one. It is possible to execute a single operator in parallel using the "instances" JSON member in an operator's definition::
 
@@ -65,13 +67,15 @@ As one can see, the edges will be adjusted accordingly. Consequently, "0"'s inst
 
 By default, the first input table is distributed about evenly on these instances using the "part" and "count" member variables and corresponding modulo distribution. Derived operators may overwrite _PlanOperation::splitInput for further behaviour.
 
+
 Implementation Details
-=================================
+=======================
 
 In this section, the QueryTransformationEngine and the QueryParser are explained in detail.
 
+
 QueryTransformationEngine
------------------------------
+--------------------------
 
 As mentioned above, the QueryTransformationEngine transforms an incoming query. The resulting operator definitions and adapted edges have to be parseable one-to-one by the QueryParser to construct the correct corresponding executable task KV map. transform is the method to call::
 
@@ -123,8 +127,9 @@ Secondly, edges with the original operator as the source node areduplicated to h
 
 And lastly, the original operator's definition and all edges containing it in any node are removed. The operator's parallelization is completed.
 
+
 QueryParser
---------------------
+------------
 
 After transforming the incoming query to meet the specification, the QueryParser is used to instantiate each operator with correct edges-based dependencies. These so-called tasks are ready for execution. deserialize is the method to call::
 

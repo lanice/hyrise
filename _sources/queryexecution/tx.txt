@@ -1,6 +1,6 @@
-******************************
+#############################
 Transaction Management System
-******************************
+#############################
 
 HYRISE uses optimistic concurrency control mechanisms to provide transactional
 guarantees during query execution. However, currently HYRISE is only able to
@@ -19,6 +19,7 @@ There are two essential parts to transaction control in HYRISE:
 
 1. Creating a transaction context/reusing an existing transaction context
 2. Commit/Rollback transaction context
+
 
 Single-request transactions
 ---------------------------
@@ -80,6 +81,7 @@ is not possible and thus, our example should always succeed.
 
 
 .. _multiple-tx:
+
 
 Multiple transaction steps
 --------------------------
@@ -178,6 +180,7 @@ the session has been closed at this point.
    Reusing a session_context that has been committed/rolled back
    results in *undefined behavior*.
 
+
 Autcommit shortcut
 ------------------
 
@@ -187,6 +190,7 @@ additional ``POST`` parameter: ``autocommit``. This allows the query
 parser to automatically append a ``Commit`` operation at the end of
 the current query.
 
+
 Architectural Overview
 =======================
 
@@ -195,6 +199,7 @@ serialization for transactions. During query parsing each query is assigned a
 ``TXContext`` that can be used to identify all matching positions. It contains
 a unique transaction ID and the last commit id. The transaction ID is used to
 distinguish other deletes and writes from our own deletes and writes.
+
 
 Typical Control Flow
 =====================
@@ -224,6 +229,7 @@ of the transaction for all its input tables. However, TX are then serialized by 
 Once a transaction is committed, the TX context is no longer valid and the
 system is required to fetch a new TID to proceed.
 
+
 Necessary Plan Operations
 ==========================
 
@@ -240,6 +246,7 @@ and should only be used in this context:
      modifications are specified in the JSON of the plan operation. An update
      is basically a delete + insert of the modified tuple\
 
+
 Multi Version Concurrency Control (MVCC)
 =========================================
 
@@ -249,9 +256,9 @@ MVCC is a method to allow multiple transactions to write on the same table concu
 
 This is done by storing multiple versions of the same row. Instead of updating a row, it is deleted (more correctly, made invisible for new transactions) and inserted with modified data (only visible to new transactions). This means that transactions that were started before the modifying transactions was committed can still access the version that was valid when they started.
 
+
 Our MVCC Implementation
 ========================
-
 
 On the level of a Store we do so by having three vectors storing visibility information about each row:
 
@@ -284,6 +291,7 @@ The endCID vector behaves similar. It stores the CID of the transaction that suc
 +-------+------------+----------+-----------+-------------------------------+
 | --    | 13         | 14       | 14        | delete committed              |
 +-------+------------+----------+-----------+-------------------------------+
+
 
 Evaluating the visiblity
 =========================

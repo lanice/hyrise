@@ -1,8 +1,10 @@
+#############
 Group By Scan
--------------
+#############
 
-Useage
-^^^^^^
+
+Usage
+======
 
 For implementing the group by scan we use hashing. Therefore, it is necessary that
 every GroupBy instance has the source table itself, a hash map, the grouping fields
@@ -42,8 +44,9 @@ Example::
 If more than one column is part of the grouping expression, just add more fields to the the GroupByScan instance and HashBuild-Operation.
 The implementation of *HashBuild* and *HashedColumn* takes care of building the correct hash group.
 
+
 executePlanOperation()
-^^^^^^^^^^^^^^^^^^^^^^
+======================
 
 Commented Code::
 
@@ -122,8 +125,9 @@ Commented Code::
     /*adding the result to output*/
     this->addResult(resultTab);
 
+
 Aggregate Scan (Count and Sum)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==============================
 
 HYRISE supports two different aggregate functions so far.
 
@@ -143,8 +147,9 @@ all values.
 The result is directly written to *target* in row *targetRow*. *AbstractTable *t* is the input table of the calling
 GroupByScan instance.
 
+
 Parallelization
-^^^^^^^^^^^^^^^
+===============
 
 In order to parallelize the group by scan following the HYRISE typical parallelization approach (input distribution)
 we introduced two new classes: *AbstractHashTable* and *HashTableView*. *HashTableView* and *HashTable* both inherit

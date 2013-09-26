@@ -1,6 +1,7 @@
-==================
+##################
 Custom expressions
-==================
+##################
+
 
 Why write a custom expression?
 ==============================
@@ -21,8 +22,10 @@ is that they follow the expression protocoll set forth in
 `Expressions::add<...>("callsign")`. An example can be found in
 `src/lib/access/ExampleExpression.(h|cpp)`.
 
+
 `AbstractExpression` interface
 ==============================
+
 
 `walk` method
 -------------
@@ -41,6 +44,7 @@ structures to process your query: The already mentioned
 dictionaries and ensures the correct type of the retrieved data
 structures.
 
+
 `match` method
 --------------
 
@@ -52,8 +56,10 @@ given inputs and add a row number for each matching rows. More complex
 match methods may spawn extra threads or use different schemes of
 iterating over extracted data structures from the `walk` method. 
 
+
 Registration and usage
 ======================
+
 
 Registering
 -----------
@@ -71,6 +77,7 @@ expression, we suggest to use sufficiently unique identifiers to avoid
 future colisions with either hyrise-implemented expressions or other
 extensions by namespacing your expressions similarly to the above example.
 
+
 Parsing
 -------
 
@@ -84,6 +91,7 @@ The minimum implementations may look something like::
   std::unique_ptr<MyExpression> ExampleExpression::parse(const Json::Value& data) {
     return make_unique<ExpressionExpression>();
   }
+
 
 Using registered expressions
 ----------------------------

@@ -16,7 +16,7 @@ Documentation
    
 
 What is HYRISE
---------------
+==============
 
 Traditional databases are separated into ones for current data from the day-to-
 day business processes and ones for reporting and analytics. For fast moving
@@ -36,8 +36,9 @@ traditional storage models.
 
 This database provides the implementation to the above mentioned ideas. 
 
+
 Current status
---------------
+==============
 
 This system is a research prototype and by no means meant to be used in
 production use and we cannot guarantee that it will work in such environments.
@@ -61,8 +62,9 @@ All plan operations are currently hand-coded in JSON an then queried against
 the database. SQL compilation is currently not available but somewhere on the
 road-map.
 
+
 Quick Start
--------------
+===========
 
 Currently only Linux systems are supported. Mac OS X could work, but you will
 need a more recent compiler than GCC 4.2. Best is to update the compiler using
@@ -70,8 +72,10 @@ the homebrew-dupes repository.
 
 Other than that standard build environment should suffice.
 
+
 Automatic Dependency Installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
+
 
 Vagrant
 ********
@@ -85,13 +89,15 @@ Vagrant you should be able to run the init script simply by calling::
 
 from the command line.
 
+
 Ubuntu
 ******
 
 If you are on Ubuntu it should be sufficient to run the ``install.sh`` script from the ``tools/autosetup`` folder. 
   
+
 Building
-~~~~~~~~
+========
 
 To start the build you will only need to execute a simple command line command
 to start. The given make file provides all necessary targets. First check if
@@ -121,8 +127,9 @@ The smaller test-suite can be executed using::
 
     make test_basic
 
+
 Documentation
----------------
+=============
 
 The project provides some documentation about how to develop and use HYRISE.
 The documentation can be build using.::
@@ -137,8 +144,9 @@ feel free to post in::
 
 To contact fellow hyrise developers.
 
+
 How to Contribute
--------------------
+=================
 
 Pull requests and issues reports are always welcome. The easiest way to
 participate is to clone HYRISE and submit patches that we can merge including
@@ -154,7 +162,7 @@ If you have any questions feel free to contact the maintainers
 
 
 Contributers
--------------
+============
 
 The following people contributed to HYRISE in various forms listed in
 alphabetical order :)
@@ -189,8 +197,9 @@ alphabetical order :)
   * Tim Zimmermann
   * Uwe Hartmann
 
+
 License
-----------
+========
 
 HYRISE is licensed as open source after the OpenSource "Licence of the Hasso-Plattner Institute" declared in the LICENSE file of this project. 
 
@@ -202,7 +211,6 @@ license to be compatible with German law. The most prominent difference is the
 exclusion of all liabilities which is not possible in Germany.
 
 Contents:
-
 
 
 Indices and tables

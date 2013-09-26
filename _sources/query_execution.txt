@@ -14,6 +14,7 @@ experiments with different settings.
 
 .. toctree::
     :glob:
+    :titlesonly:
     
     queryexecution/json_query_execution
     queryexecution/json_queries

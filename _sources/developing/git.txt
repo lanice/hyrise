@@ -1,6 +1,7 @@
-**********
+##########
 Repository
-**********
+##########
+
 
 Obtaining the code
 ==================
@@ -11,6 +12,7 @@ project site (You need an account). The code can then be obtained through::
     git clone git@github.com:hyrise/hyrise.git
 
 .. _github: https://github.com/hyrise/hyrise
+
 
 Flow
 ====
@@ -47,6 +49,7 @@ as follows::
 This should allow you to use git flow as expected by the project.
 
 .. _git-flow : http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/
+
 
 Branching
 =========

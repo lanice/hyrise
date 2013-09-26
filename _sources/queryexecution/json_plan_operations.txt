@@ -1,17 +1,20 @@
 .. _jsonplanops:
 
-***************
+###############
 Plan Operations
-***************
+###############
 
-Find below a summary of the available Plan Operations and their JSON arguments.
+Find below a summary of the available Plan Operations and their JSON arguments. 
+Each operator accepts input and output data of multiple types, e.g. tables, hash maps etc.
+Handling this data is implemented in ``OperationalData`` and ``PlanOperation`` classes.
+
 
 Table Load
 ==========
 
-Loads a table from file::
+This operator loads a table from a file::
 
-    "ID": {
+    "load": {
         "type":"TableLoad",
         "table": "table name",
         "filename": "file.data",
@@ -21,21 +24,17 @@ Loads a table from file::
         },
 
 
-
-
 TableUnload
 ===========
 
-simply unloads a table specified in the ``"table":`` field.
+Simply unloads a table specified in the ``"table":`` field.
 
 ::
 
-    "ID": {
+    "unload": {
         "type":"TableUnload",
         "table": "table name"
         },
-
-
 
 
 .. _simpletablescan:
@@ -43,11 +42,11 @@ simply unloads a table specified in the ``"table":`` field.
 SimpleTableScan
 ===============
 
-Performs a Selection
+This operator performs a Selection.
 
 ::
 
-    "ID": {
+    "scan": {
         "type":"SimpleTableScan",
         "positions": true,
         "predicates": [
@@ -57,11 +56,13 @@ Performs a Selection
             ]
         },
 
-``"positions: true"`` save row positions rather than rows in the intermediate result. [optional. true is default.]
+Use ``"positions: true"`` to save row positions rather than rows in the intermediate result. This is optional and by default true.
 
 ``"predicates:"`` is a list of predicates in prefix order, that will be used to build the predicate tree for selection.
 
-``"type:"`` boolean operators can be given as string or int:
+    For each predicate you can specify the operator type, the input table, the data types and a value for logical operations.
+
+    Use ``"type:"`` to specify the boolean operators. They can be given as string or int:
         == ==========
         0   EQ
         1   LT
@@ -91,8 +92,6 @@ Performs a Selection
     The example given above would build the following predicate (prefix notation): ``OR((NAME1 < 330)(NAME2 < 300))``.
 
 
-
-
 ProjectionScan
 ==============
 
@@ -101,38 +100,32 @@ Performs a Projection of columns given in ``"fields":``
 
 ::
 
-    "ID": {
+    "projection": {
         "type":"ProjectionScan",
         "fields" : [
-        "ADDRNUMBER","NAME_CO","NAME1","NAME2"
-        ]
+            "ADDRNUMBER","NAME_CO","NAME1","NAME2"
+            ]
         },
         
 ``"fields":`` is synonymous to columns/contains a list of all columns to be projected into the result table.
 
 
-
-
 UnionScan
 =========
 
-
-used to combine two table and remove duplicates.
+The Union Scan combines two tables and removes duplicates.
 
 ::
 
-    "ID": {
+    "union": {
         "type":"UnionScan",
         },
-
-
 
 
 JoinScan
 ========
 
-
-currently only performs equi/inner join.
+This operator performs a Join. It currently only performs equi/inner join.
 
 ::
 
@@ -168,29 +161,22 @@ currently only performs equi/inner join.
         ``"field_right": "employee_company_id"`` pass in right part of join condition
         
 The example given above would perform an inner join on the tables loaded in 0,1 - matching up 0.company_id with 1.employee_company_id.
-        
-
-
 
 
 MergeJoin
 =========
 
-
 deprecated.
-
-
 
 
 HashBuild
 =========
 
-
-will build a hash table, hashing the columns specified in "fields".
+This one will build a hash table, hashing the columns specified in "fields".
 
 ::
 
-    "ID": {
+    "hash": {
         "type":"HashBuild",
         "fields": [1]
         },
@@ -205,7 +191,7 @@ HashJoinProbe
 
 ::
 
-    "ID": {
+    "hashProbe": {
         "type":"HashJoinProbe",
         "fields": [1]
         },
@@ -245,17 +231,14 @@ here's another example of a full HashJoin for clarification. Mind the "edges" co
     }
 
 
-
-
 GroupByScan
 ===========
 
-
-group table by attributes specified in ``"fields":``.
+This scan groups a table by attributes specified in ``"fields":`` using aggregation functions specified in ``"functions":``. This oeprator only works on hash tables, so perform a hash build before.
 
 ::
 
-    "ID": {
+    "group": {
         "type": "GroupByScan",
         "fields": ["employee_company_id"],
         "functions": [
@@ -277,22 +260,19 @@ group table by attributes specified in ``"fields":``.
 ``"field":`` field the aggregate function is to be performed on.
 
 
-
-
 MaterializingScan
 =================
 
+The Materializing Scan returns a materialized view that contains the
 
-returns a materialized view that contains the
+::
 
-    ::
-
-        "ID": {
-            "type":"MaterializingScan",
-            "samples": 3,
-            "memcpy": false, [default: false]
-            "copyValues": [deprecated]
-            },
+    "materializing": {
+        "type":"MaterializingScan",
+        "samples": 3,
+        "memcpy": false, [default: false]
+        "copyValues": [deprecated]
+        },
 
 ``"samples": 3`` will output a sample materialized table (here 3 rows).
 
@@ -301,17 +281,14 @@ returns a materialized view that contains the
 #TODO: note to Martin: remove "copyValues".
 
 
-
-
 SortScan
 ========
 
-
-sorts a table by given attribute(s).
+This operator can be sorted a table by given the attribute(s).
 
 ::
 
-    "ID": {
+    "sort": {
         "type":"SortScan",
         "fields": [0]
         },
@@ -319,70 +296,85 @@ sorts a table by given attribute(s).
 ``"fields":`` fields/attributes by which the table is to be sorted.
 
 
-
-
 SmallestTableScan
 =================
 
-
-determines the smallest table of all given tables and projects it.
+This scan determines the smallest table of all given tables and projects it.
 
 ::
 
-    "ID": {
+    "smallest": {
         "type":"SmallestTableScan",
         },
-
-
 
 
 LayoutSingleTable
 =================
 
+The goal of the **SingleTableLayout** plan operation is to perform a
+layout decision for a given workload. Therefore it has multiple
+required input parameters. An example of the input is shown below:
 
-::
+.. literalinclude:: ../../test/json/simple_layouter_candidate.json
+   :language: javascript
 
-    "0": {
-        "type": "LayoutSingleTable",
-        "operators": [
-        {
-            "type": "Select",
-            "weight": 1,
-            "selectivity": 0.03,
-            "attributes": ["employee_id"]
-        }
-        ],
-        "attributes": ["employee_id", "employee_company_id", "employee_name"],
-        "num_rows": 1000,
-        "layouter": "BaseLayouter"
-    },
+The runtime of the layouter plan operation depends heavily on the
+algorithm that is used to find the best layout. There are three
+different engines available:
 
+#. ``BaseLayouter`` - Exhaustively iterate over the problem space
+#. ``CandidateLayouter`` - Perform early pruning of combinations based on primary partitions
+#. ``DivideAndConquerLayouter`` - Before merging candidates, partition the problem space based on an access graph
 
-``"operators":``
+The layout engine that is used during the execution is set using the
+``layouter`` member of the plan operation.
 
-``"type":``
-``"weight":``
-``"selectivity":``
-``"attributes":``
+The most important option for the plan operator is setting the
+number of rows for the input table, which is used to calcualte the
+correct cost for selectivities.
 
-``"attributes":``
+.. literalinclude:: ../../test/json/simple_layouter_candidate.json
+   :language: javascript
+   :lines: 10
 
-``"num_rows":``
+Furthermore you can specify how many possible results the
+layouter should return. This option can be used to present multiple
+layouts in a UI.
 
-``"layouter":``
+.. literalinclude:: ../../test/json/simple_layouter_candidate.json
+   :language: javascript
+   :lines: 11
 
+The meta data that is required to generate the best possible layout
+are the attributes of the table and the list of operations that is
+executed on this table.
 
+.. literalinclude:: ../../test/json/simple_layouter_candidate.json
+   :language: javascript
+   :lines: 6-9
 
 
 LayoutTableLoad
 ===============
 
-
 ::
 
-    "1": {
+    "layout": {
         "type": "LayoutTableLoad",
         "table": "emplyoees",
         "filename": "tables/employees.data",
         "input_row": 3
     }
+
+
+NoOp
+=====
+
+This operator does not perform any action and can be used to drop intermediate results.
+
+:: 
+
+    "noop": {
+        "type": "NoOp"
+    }
+

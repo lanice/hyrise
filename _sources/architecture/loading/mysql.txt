@@ -1,5 +1,6 @@
+############
 MySQL Loader
-============
+############
 
 .. note::
     MySQLInput is only available when compiled with WITH_MYSQL as
@@ -8,15 +9,16 @@ MySQL Loader
 .. _sqldep:
 
 Additional dependencies
------------------------
+=======================
 
 The following dependencies are needed once WITH_MYSQL has been activated:
 
 * libmysqlcppconn-dev
 * libmysqlclient-dev
 
+
 Environment Variables
----------------------
+=====================
 
 The following environment variables can be used to influence the
 default initialization values of *MySQLInput*:
@@ -29,8 +31,9 @@ default initialization values of *MySQLInput*:
 Yet, for specific implementations of functionality, one might rather
 want to use the parameters defined with `MySQLInput::params()`.
 
+
 Parameters
-----------
+==========
 
 Connection settings:
 
@@ -59,13 +62,15 @@ Schema : string
 Table : string
     * set for table to import
 
+
 Usage
------
+=====
 
 .. literalinclude:: ../../../src/bin/units_io/mysql_tests.cpp
 
+
 Implementation details
-----------------------
+======================
 
 In order to translate MySQL types to HYRISE types, in
 `MySQLLoader.cpp` defines a data structure named `translations`. It

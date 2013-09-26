@@ -6,4 +6,5 @@ $(document).ready( function() {
         }
     });
     $('ul.notTop li').addClass('list-group-item');
+    $('table').addClass('table');
 });

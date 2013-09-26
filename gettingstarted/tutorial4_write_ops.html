@@ -153,7 +153,7 @@
 <p>In our case using a BasicParser Object (of type StrLenScan) is sufficient to parse all required input. BasicParser will parse JSON fields named &#8220;fields:&#8221; (representing columns the plan operation is to be executed on) and &#8220;limit:&#8221; (which we don&#8217;t require in this example).</p>
 <p>Additional JSON fields can be checked using <tt class="docutils literal"><span class="pre">data.isMember(&quot;someOtherField&quot;)</span></tt>
 and then accessed using <tt class="docutils literal"><span class="pre">data[&quot;someOtherField&quot;][i]</span></tt>.</p>
-<p>If you only use the basic parser, instead of adding this method, you can also register your operator with <a href="#id1"><span class="problematic" id="id2">``</span></a>auto _ =  QueryParser::registerTrivialPlanOperation&lt;NewPlanOperation&gt;(&#8220;NameOfNewPlanOperation&#8221;);´´. This will automatically register the operator and tells Hyrise to use the basic JSON parser for it.</p>
+<p>If you only use the basic parser, instead of adding this method, you can also omit it and register your operator with <tt class="docutils literal"><span class="pre">auto</span> <span class="pre">_</span> <span class="pre">=</span>&nbsp; <span class="pre">QueryParser::registerTrivialPlanOperation&lt;NewPlanOperation&gt;(&quot;NameOfNewPlanOperation&quot;)</span></tt>. This will automatically register the operator and tells Hyrise to use the basic JSON parser for it.</p>
 </div>
 <div class="section" id="implement-your-plan-operation">
 <h2>2. Implement your Plan Operation<a class="headerlink" href="#implement-your-plan-operation" title="Permalink to this headline">¶</a></h2>
@@ -176,12 +176,12 @@ and then accessed using <tt class="docutils literal"><span class="pre">data[&quo
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Implementation of your PlanOperation will vary with degree of complexity and might require you to write several helper methods. In this example, we create a new output table using TableBuilder (-&gt; see TableBuilder.h). We then iterate over all the (string) elements of the input column and add the string&#8217;s length as integer to the end of our output table (string_length).
+<p>The implementation of your PlanOperation will vary with degree of complexity and might require you to write several helper methods. In this example, we create a new output table using TableBuilder (-&gt; see TableBuilder.h). We then iterate over all the (string) elements of the input column and add the string&#8217;s length as integer to the end of our output table (string_length).
 Finally, to output the result of your plan operation, use <tt class="docutils literal"><span class="pre">this-&gt;addResult(output_table)</span></tt>.</p>
 </div>
 <div class="section" id="testing-your-own-plan-operation">
 <h2>3. Testing your own Plan Operation<a class="headerlink" href="#testing-your-own-plan-operation" title="Permalink to this headline">¶</a></h2>
-<p>a simple query using the String Length Operator might look like this:</p>
+<p>To test your operator just add a query using it to the test/autojson directory. A simple query using the String Length Operator might look like this:</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="p">{</span>
     <span class="s">&quot;operators&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s">&quot;0&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -198,7 +198,7 @@ Finally, to output the result of your plan operation, use <tt class="docutils li
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>for our example list of students (located at test/students.csv) the output should look similar to this:</p>
+<p>For our example list of students (located at test/students.csv) the output should look similar to this:</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="p">{</span>
        <span class="s">&quot;header&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s">&quot;str_len&quot;</span> <span class="p">],</span>
        <span class="s">&quot;performanceData&quot;</span> <span class="o">:</span>
@@ -246,6 +246,16 @@ Finally, to output the result of your plan operation, use <tt class="docutils li
             <span class="p">[</span> <span class="mi">13</span> <span class="p">],</span> <span class="p">...,</span> <span class="p">[</span> <span class="mi">19</span> <span class="p">]</span>
     <span class="p">]</span>
 <span class="p">}</span>
+</pre></div>
+</div>
+<p>For a complete test you should also specify an output table for the query result to be compared with. To do this you add a table load operation to the beginning your test query having the index &#8216;1&#8217; and a table field with the value &#8216;reference&#8217;:</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;operators&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;-1&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="s">&quot;TableLoad&quot;</span><span class="p">,</span>
+      <span class="s">&quot;filename&quot;</span> <span class="o">:</span> <span class="s">&quot;tables/revenue.tbl&quot;</span><span class="p">,</span>
+      <span class="s">&quot;table&quot;</span> <span class="o">:</span> <span class="s">&quot;reference&quot;</span>
+    <span class="p">},</span>
+    <span class="p">...</span>
 </pre></div>
 </div>
 </div>

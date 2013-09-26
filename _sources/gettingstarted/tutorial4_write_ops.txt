@@ -27,7 +27,7 @@ In our case using a BasicParser Object (of type StrLenScan) is sufficient to par
 Additional JSON fields can be checked using ``data.isMember("someOtherField")``
 and then accessed using ``data["someOtherField"][i]``.
 
-If you only use the basic parser, instead of adding this method, you can also register your operator with ``auto _ =  QueryParser::registerTrivialPlanOperation<NewPlanOperation>("NameOfNewPlanOperation");´´. This will automatically register the operator and tells Hyrise to use the basic JSON parser for it.
+If you only use the basic parser, instead of adding this method, you can also omit it and register your operator with ``auto _ =  QueryParser::registerTrivialPlanOperation<NewPlanOperation>("NameOfNewPlanOperation")``. This will automatically register the operator and tells Hyrise to use the basic JSON parser for it.
 
 
 2. Implement your Plan Operation
@@ -53,14 +53,14 @@ If you only use the basic parser, instead of adding this method, you can also re
     	addResult(string_length);
     }
 
-Implementation of your PlanOperation will vary with degree of complexity and might require you to write several helper methods. In this example, we create a new output table using TableBuilder (-> see TableBuilder.h). We then iterate over all the (string) elements of the input column and add the string's length as integer to the end of our output table (string_length).
+The implementation of your PlanOperation will vary with degree of complexity and might require you to write several helper methods. In this example, we create a new output table using TableBuilder (-> see TableBuilder.h). We then iterate over all the (string) elements of the input column and add the string's length as integer to the end of our output table (string_length).
 Finally, to output the result of your plan operation, use ``this->addResult(output_table)``.
 
 
 3. Testing your own Plan Operation
 ==================================
 
-a simple query using the String Length Operator might look like this::
+To test your operator just add a query using it to the test/autojson directory. A simple query using the String Length Operator might look like this::
 
     {
     	"operators": {
@@ -77,7 +77,7 @@ a simple query using the String Length Operator might look like this::
     	"edges": [["0", "1"]]
     }
 
-for our example list of students (located at test/students.csv) the output should look similar to this::
+For our example list of students (located at test/students.csv) the output should look similar to this::
 
     {
 	   "header" : [ "str_len" ],
@@ -126,3 +126,13 @@ for our example list of students (located at test/students.csv) the output shoul
         	[ 13 ], ..., [ 19 ]
 	]
     }
+
+For a complete test you should also specify an output table for the query result to be compared with. To do this you add a table load operation to the beginning your test query having the index '1' and a table field with the value 'reference'::
+
+    "operators": {
+        "-1" : {
+          "type" : "TableLoad",
+          "filename" : "tables/revenue.tbl",
+          "table" : "reference"
+        },
+        ...

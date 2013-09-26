@@ -103,7 +103,7 @@ To start the build you will only need to execute a simple command line command
 to start. The given make file provides all necessary targets. First check if
 all submodules are initialized correctly.::
 
-    git submodule init --update
+    git submodule update --init
 
 Now copy the file ``settings.mk.default`` to ``settings.mk`` and if necessary
 modify settings to start the build. The most prominent one is ``PRODUCTION`` to

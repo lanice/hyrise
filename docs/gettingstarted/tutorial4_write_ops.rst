@@ -27,7 +27,7 @@ In our case using a BasicParser Object (of type StrLenScan) is sufficient to par
 Additional JSON fields can be checked using ``data.isMember("someOtherField")``
 and then accessed using ``data["someOtherField"][i]``.
 
-If you only use the basic parser, instead of adding this method, you can also omit it and register your operator with ``auto _ =  QueryParser::registerTrivialPlanOperation<NewPlanOperation>("NameOfNewPlanOperation");´´. This will automatically register the operator and tells Hyrise to use the basic JSON parser for it.
+If you only use the basic parser, instead of adding this method, you can also omit it and register your operator with ``auto _ =  QueryParser::registerTrivialPlanOperation<NewPlanOperation>("NameOfNewPlanOperation")``. This will automatically register the operator and tells Hyrise to use the basic JSON parser for it.
 
 
 2. Implement your Plan Operation

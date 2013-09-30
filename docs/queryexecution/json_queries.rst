@@ -91,7 +91,7 @@ The JSON input document defines 3 main input keys
 The edges of the flow graph may describe any non-circular graph with the restriction that any vertice may have multiple inputs, but only a single output.
 
 With this particular JSON Query, Hyrise Server would perform three Database Operations. 
-First on the "Edge" ["0","1"] a table is being loaded into the database from file (operator: "0"). A SimpleTableScan is then being performed on that table (operator: "1"), giving predicates for the selection in prefix notation. The example above would translate to: (company_id > 2) OR (company_name = "Microsoft"). See :ref:`simpletablescan` for more details on the SimpleTableScan operation.
+First on the "Edge" ["0","1"] a table is being loaded into the database from file (operator: "0"). A SimpleTableScan is then being performed on that table (operator: "1"), giving predicates for the selection in prefix notation. The example above would translate to: (company_id > 2) OR (company_name = "Microsoft"). See :ref:`simpleTableScan` for more details on the SimpleTableScan operation.
 
 A detailed Overview of all available Database operators and their respective JSON notation can be found at :ref:`jsonplanops`.
 

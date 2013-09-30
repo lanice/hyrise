@@ -8,6 +8,28 @@ Find below a summary of the available Plan Operations and their JSON arguments.
 Each operator accepts input and output data of multiple types, e.g. tables, hash maps etc.
 Handling this data is implemented in ``OperationalData`` and ``PlanOperation`` classes.
 
+    - :ref:`tableLoad`
+    - :ref:`tableUnload`
+    - :ref:`simpleTableScan`
+    - :ref:`projectionScan`
+    - :ref:`insertScan`
+    - :ref:`unionScan`
+    - :ref:`joinScan`
+    - :ref:`mergeJoin`
+    - :ref:`indexScan`
+    - :ref:`hashBuild`
+    - :ref:`hashJoinProbe`
+    - :ref:`groupByScan`
+    - :ref:`materializingScan`
+    - :ref:`sortScan`
+    - :ref:`smallestTableScan`
+    - :ref:`layoutSingleTable`
+    - :ref:`layoutTableLoad`
+    - :ref:`noOp`
+    - :ref:`distinct`
+
+
+.. _tableLoad:
 
 Table Load
 ==========
@@ -24,8 +46,10 @@ This operator loads a table from a file::
         },
 
 
-TableUnload
-===========
+.. _tableUnload:
+
+Table Unload
+============
 
 Simply unloads a table specified in the ``"table":`` field.
 
@@ -37,10 +61,10 @@ Simply unloads a table specified in the ``"table":`` field.
         },
 
 
-.. _simpletablescan:
+.. _simpleTableScan:
 
-SimpleTableScan
-===============
+Simple Table Scan
+=================
 
 This operator performs a Selection.
 
@@ -92,9 +116,10 @@ Use ``"positions: true"`` to save row positions rather than rows in the intermed
     The example given above would build the following predicate (prefix notation): ``OR((NAME1 < 330)(NAME2 < 300))``.
 
 
-ProjectionScan
-==============
+.. _projectionScan:
 
+Projection Scan
+===============
 
 Performs a Projection of columns given in ``"fields":``
 
@@ -110,8 +135,30 @@ Performs a Projection of columns given in ``"fields":``
 ``"fields":`` is synonymous to columns/contains a list of all columns to be projected into the result table.
 
 
-UnionScan
-=========
+.. _insertScan:
+
+Insert Scan
+===========
+
+Performs an Insert into a given table. The ``"data":`` attribute takes an array with the rows to be inserted.
+
+::
+
+    "insert" : {
+            "type" : "InsertScan",
+            "data" : [
+                [2009,1,2000],
+                [2009,2,2500],
+                [2009,3,3000],
+                [2009,4,4000]
+            ]
+        }
+
+
+.. _unionScan:
+
+Union Scan
+==========
 
 The Union Scan combines two tables and removes duplicates.
 
@@ -122,8 +169,10 @@ The Union Scan combines two tables and removes duplicates.
         },
 
 
-JoinScan
-========
+.. _joinScan:
+
+Join Scan
+=========
 
 This operator performs a Join. It currently only performs equi/inner join.
 
@@ -163,14 +212,36 @@ This operator performs a Join. It currently only performs equi/inner join.
 The example given above would perform an inner join on the tables loaded in 0,1 - matching up 0.company_id with 1.employee_company_id.
 
 
-MergeJoin
-=========
+.. _mergeJoin:
+
+Merge Join
+==========
 
 deprecated.
 
 
-HashBuild
-=========
+.. _indexScan:
+
+Index Scan
+==========
+
+This operator can be used to add an index to a table.
+
+::
+
+    "index": {
+      "type": "IndexScan",
+      "vtype": 0,
+      "value": 3,
+      "fields": ["employee_company_id"],
+      "index": "emp_comp_ix"
+    }
+
+
+.. _hashBuild:
+
+Hash Build
+==========
 
 This one will build a hash table, hashing the columns specified in "fields".
 
@@ -184,8 +255,10 @@ This one will build a hash table, hashing the columns specified in "fields".
 ``"fields": [1]`` pass in column(s) to be hashed, e.g. 1st column.
 
 
-HashJoinProbe
-=============
+.. _hashJoinProbe:
+
+Hash Join Probe
+===============
 
 "probe" other input against hashed table
 
@@ -231,10 +304,12 @@ here's another example of a full HashJoin for clarification. Mind the "edges" co
     }
 
 
-GroupByScan
-===========
+.. _groupByScan:
 
-This scan groups a table by attributes specified in ``"fields":`` using aggregation functions specified in ``"functions":``. This oeprator only works on hash tables, so perform a hash build before.
+GroupBy Scan
+============
+
+This scan groups a table by attributes specified in ``"fields":`` using aggregation functions specified in ``"functions":``. This oeprator only works on hash tables, so perform a :ref:`hashBuild` before.
 
 ::
 
@@ -260,8 +335,10 @@ This scan groups a table by attributes specified in ``"fields":`` using aggregat
 ``"field":`` field the aggregate function is to be performed on.
 
 
-MaterializingScan
-=================
+.. _materializingScan:
+
+Materializing Scan
+==================
 
 The Materializing Scan returns a materialized view that contains the
 
@@ -281,8 +358,10 @@ The Materializing Scan returns a materialized view that contains the
 #TODO: note to Martin: remove "copyValues".
 
 
-SortScan
-========
+.. _sortScan:
+
+Sort Scan
+=========
 
 This operator can be sorted a table by given the attribute(s).
 
@@ -296,8 +375,10 @@ This operator can be sorted a table by given the attribute(s).
 ``"fields":`` fields/attributes by which the table is to be sorted.
 
 
-SmallestTableScan
-=================
+.. _smallestTableScan:
+
+Smallest Table Scan
+===================
 
 This scan determines the smallest table of all given tables and projects it.
 
@@ -308,8 +389,10 @@ This scan determines the smallest table of all given tables and projects it.
         },
 
 
-LayoutSingleTable
-=================
+.. _layoutSingleTable:
+
+Layout Single Table
+===================
 
 The goal of the **SingleTableLayout** plan operation is to perform a
 layout decision for a given workload. Therefore it has multiple
@@ -354,8 +437,10 @@ executed on this table.
    :lines: 6-9
 
 
-LayoutTableLoad
-===============
+.. _layoutTableLoad:
+
+Layout Table Load
+=================
 
 ::
 
@@ -367,8 +452,10 @@ LayoutTableLoad
     }
 
 
+.. _noOp:
+
 NoOp
-=====
+====
 
 This operator does not perform any action and can be used to drop intermediate results.
 
@@ -378,3 +465,17 @@ This operator does not perform any action and can be used to drop intermediate r
         "type": "NoOp"
     }
 
+
+.. _distinct:
+
+Distinct
+========
+
+The distinct operator returns a table with only distinct values in the specified fields.
+
+::
+    
+    "distinct": {
+      "type": "Distinct",
+      "fields": ["employee_company_id"]
+    }

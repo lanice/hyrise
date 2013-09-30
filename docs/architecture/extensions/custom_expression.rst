@@ -17,7 +17,7 @@ For more complex needs, see :doc:`../../architecture/extensions/custom_operator`
 
 `TableScan` implements a registration-based expression evaluation for
 custom implementations of expressions. The idea for custom expressions
-is that they follow the expression protocoll set forth in
+is that they follow the expression protocol set forth in
 `AbstractExpression` and register via
 `Expressions::add<...>("callsign")`. An example can be found in
 `src/lib/access/ExampleExpression.(h|cpp)`.
@@ -35,8 +35,7 @@ This method is called once the input table has been determined in
 shared pointer to an `AbstractTable`. At this point, we can take full
 control and start to recover type information and "peel off" layers of
 abstraction in order to allow for more efficient expression
-processing. To find out more about how to "peel off" abstraction layers
-in HYRISE, head over to :doc:`architecture/peel_off_abstraction`.
+processing.
 
 After `walk` is done, you should have recovered all the necessary data
 structures to process your query: The already mentioned

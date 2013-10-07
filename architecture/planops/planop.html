@@ -165,6 +165,7 @@
 <p>To implement more data types, add additional lists and implement their corresponding interfaces. (get, add etc.) Interfaces have to be implemented on the PlanOperation as well, e.g. addInput, getInput(size_t index) or addResult etc.</p>
 <p>During query execution, these containers are passed between dependent operators. On execution, PlanOperation::refreshInput is called to fetch output data of predecessors. Override setupPlanOperation to implement additional processing behaviour.</p>
 <p>Always keep an eye on retain counting correctness to prevent memory leaks or to prevent fetching deleted objects!</p>
+<p>For implementation details of two example operators go to <a class="reference internal" href="groupby.html"><em>Group By Scan</em></a> and <a class="reference internal" href="hashjoin.html"><em>HashJoin</em></a>.</p>
 </div>
 </div>
 

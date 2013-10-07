@@ -152,7 +152,7 @@ higher performance in evaluating complex expressions where needed.</p>
 <p>For more complex needs, see <a class="reference internal" href="custom_operator.html"><em>Writing a custom operator</em></a>.</p>
 <p><cite>TableScan</cite> implements a registration-based expression evaluation for
 custom implementations of expressions. The idea for custom expressions
-is that they follow the expression protocoll set forth in
+is that they follow the expression protocol set forth in
 <cite>AbstractExpression</cite> and register via
 <cite>Expressions::add&lt;...&gt;(&#8220;callsign&#8221;)</cite>. An example can be found in
 <cite>src/lib/access/ExampleExpression.(h|cpp)</cite>.</p>
@@ -166,8 +166,7 @@ is that they follow the expression protocoll set forth in
 shared pointer to an <cite>AbstractTable</cite>. At this point, we can take full
 control and start to recover type information and &#8220;peel off&#8221; layers of
 abstraction in order to allow for more efficient expression
-processing. To find out more about how to &#8220;peel off&#8221; abstraction layers
-in HYRISE, head over to <tt class="xref doc docutils literal"><span class="pre">architecture/peel_off_abstraction</span></tt>.</p>
+processing.</p>
 <p>After <cite>walk</cite> is done, you should have recovered all the necessary data
 structures to process your query: The already mentioned
 <cite>ExampleExpression</cite> extracts the underlying attribute vectors and

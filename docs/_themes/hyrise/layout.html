@@ -27,16 +27,6 @@
       {%- if render_sidebar %}
       <div class="col-md-3 hyrisesidebar">
           {%- block sidebarlogo %}
-          {%- if logo %}
-            <p class="logo image">
-              <a href="{{ pathto(master_doc) }}">
-                <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
-              </a>
-              <p>
-                ...is a new relational storage engine for main memory database systems. It is built on the premise that enterprise application workloads can benefit from a dedicated main-memory storage engine.
-              </p>
-            </p>
-          {%- endif %}
           {%- endblock %}
           {%- if pagename != 'index' and pagename != 'people' and pagename != 'projects' and pagename != 'publications' %}
             {%- if sidebars != None %}
@@ -145,6 +135,10 @@
 {%- block header %}{% endblock %}
 
 {%- block content %}
+    {%- include 'globaltoc.html' %}
+    {%- if pagename == 'index' %}
+        {%- include "index.html" %}
+    {%- else %}
     <div class="wrapper">
         <div class="inner-wrapper">
             <div class="container">
@@ -154,7 +148,6 @@
                             {%- block sidebar %}{{ sidebar() }}{% endblock %}
                         {%- endif %}
                         <div class="main col-md-9">
-                            {%- include 'globaltoc.html' %}
                             <div class="content row-fluid">
                               {% block body %} {% endblock %}
                             </div>
@@ -187,11 +180,9 @@
                     </div>
                 </div>
             </div> <!-- container -->
-            {%- if pagename == 'index' %}
-                {%- include "index.html" %}
-            {%- endif %}
         </div> <!-- inner-wrapper -->
     </div> <!-- wrapper -->
+    {% endif %}
 {%- endblock %}
 
 {%- block footer %}

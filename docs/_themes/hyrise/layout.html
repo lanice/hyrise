@@ -71,6 +71,7 @@
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
     {%- endfor %}
     <script type="text/javascript" src="{{ pathto('_static/hyrise.js', 1) }}"></script>
+    <script type="text/javascript" src="{{ pathto('_static/bootstrap.js', 1) }}"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 {%- endmacro %}
 
@@ -132,6 +133,10 @@
 {%- block extrahead %} {% endblock %}
   </head>
   <body>
+    <div id="backToTop">
+      <span class="glyphicon glyphicon-chevron-up"></span> <br />
+      <p>Back To Top</p>
+    </div>
 {%- block header %}{% endblock %}
 
 {%- block content %}

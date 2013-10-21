@@ -11,4 +11,5 @@ $(document).ready( function() {
     $('#learnmore').click(function() {
         $('html,body').stop().animate({scrollTop: $('#fullwidth').offset().top - $('#menu').height()}, 750);
     });
+    $('.main .notTop').not('.simple').hide();
 });

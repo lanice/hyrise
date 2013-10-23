@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="expression__types_8h" kind="file">
     <compoundname>expression_types.h</compoundname>
     <includes local="no">map</includes>
@@ -33,47 +33,13 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2860">
-        <label>src/lib/access/expressions/pred_buildExpression.cpp</label>
-        <link refid="pred__build_expression_8cpp"/>
-      </node>
-      <node id="2867">
-        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
-        <link refid="_hash_value_join_8cpp"/>
-      </node>
-      <node id="2883">
-        <label>src/lib/access/expressions/pred_GreaterThanExpression.h</label>
-        <link refid="pred___greater_than_expression_8h"/>
-        <childnode refid="2859" relation="include">
-        </childnode>
-      </node>
-      <node id="2856">
-        <label>src/lib/access/expressions/join_predicates.h</label>
-        <link refid="join__predicates_8h"/>
-        <childnode refid="2857" relation="include">
-        </childnode>
+      <node id="2870">
+        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
+        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
       </node>
       <node id="2865">
         <label>src/bin/perf_regression/GroupByScan.cpp</label>
         <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
-      </node>
-      <node id="2872">
-        <label>src/bin/perf_regression/UnionScan.cpp</label>
-        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
-      </node>
-      <node id="2876">
-        <label>src/lib/access/SimpleRawTableScan.cpp</label>
-        <link refid="_simple_raw_table_scan_8cpp"/>
-      </node>
-      <node id="2877">
-        <label>src/lib/access/SimpleTableScan.cpp</label>
-        <link refid="lib_2access_2_simple_table_scan_8cpp"/>
-      </node>
-      <node id="2873">
-        <label>src/lib/access/MergeJoin.hpp</label>
-        <link refid="_merge_join_8hpp"/>
-        <childnode refid="2864" relation="include">
-        </childnode>
       </node>
       <node id="2862">
         <label>src/lib/access/JoinScan.h</label>
@@ -83,13 +49,57 @@
         <childnode refid="2864" relation="include">
         </childnode>
       </node>
-      <node id="2880">
-        <label>src/lib/access/expressions/pred_PredicateBuilder.cpp</label>
-        <link refid="pred___predicate_builder_8cpp"/>
+      <node id="2882">
+        <label>src/bin/perf_regression/scan_performance.cpp</label>
+        <link refid="scan__performance_8cpp"/>
       </node>
-      <node id="2855">
-        <label>src/lib/access/expressions/expression_types.cpp</label>
-        <link refid="expression__types_8cpp"/>
+      <node id="2864">
+        <label>src/lib/access.h</label>
+        <link refid="access_8h"/>
+        <childnode refid="2865" relation="include">
+        </childnode>
+        <childnode refid="2866" relation="include">
+        </childnode>
+        <childnode refid="2867" relation="include">
+        </childnode>
+        <childnode refid="2868" relation="include">
+        </childnode>
+        <childnode refid="2869" relation="include">
+        </childnode>
+        <childnode refid="2870" relation="include">
+        </childnode>
+        <childnode refid="2871" relation="include">
+        </childnode>
+        <childnode refid="2872" relation="include">
+        </childnode>
+      </node>
+      <node id="2858">
+        <label>src/lib/access/expressions/pred_BetweenOperation.h</label>
+        <link refid="pred___between_operation_8h"/>
+        <childnode refid="2859" relation="include">
+        </childnode>
+      </node>
+      <node id="2868">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="2859">
+        <label>src/lib/access/expressions/predicates.h</label>
+        <link refid="predicates_8h"/>
+        <childnode refid="2860" relation="include">
+        </childnode>
+        <childnode refid="2861" relation="include">
+        </childnode>
+        <childnode refid="2862" relation="include">
+        </childnode>
+        <childnode refid="2873" relation="include">
+        </childnode>
+        <childnode refid="2864" relation="include">
+        </childnode>
+      </node>
+      <node id="2871">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
       </node>
       <node id="2884">
         <label>src/lib/access/expressions/pred_LessThanExpression.h</label>
@@ -97,18 +107,56 @@
         <childnode refid="2859" relation="include">
         </childnode>
       </node>
+      <node id="2856">
+        <label>src/lib/access/expressions/join_predicates.h</label>
+        <link refid="join__predicates_8h"/>
+        <childnode refid="2857" relation="include">
+        </childnode>
+      </node>
+      <node id="2875">
+        <label>src/lib/access/expressions/pred_buildExpression.h</label>
+        <link refid="pred__build_expression_8h"/>
+        <childnode refid="2860" relation="include">
+        </childnode>
+        <childnode refid="2859" relation="include">
+        </childnode>
+        <childnode refid="2876" relation="include">
+        </childnode>
+        <childnode refid="2877" relation="include">
+        </childnode>
+      </node>
+      <node id="2881">
+        <label>src/lib/access/expressions/pred_EqualsExpression.h</label>
+        <link refid="pred___equals_expression_8h"/>
+        <childnode refid="2882" relation="include">
+        </childnode>
+        <childnode refid="2859" relation="include">
+        </childnode>
+      </node>
       <node id="2869">
         <label>src/bin/perf_regression/ProjectionScan.cpp</label>
         <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
       </node>
-      <node id="2863">
-        <label>src/lib/access/JoinScan.cpp</label>
-        <link refid="lib_2access_2_join_scan_8cpp"/>
-      </node>
-      <node id="2858">
-        <label>src/lib/access/expressions/pred_BetweenOperation.h</label>
-        <link refid="pred___between_operation_8h"/>
+      <node id="2883">
+        <label>src/lib/access/expressions/pred_GreaterThanExpression.h</label>
+        <link refid="pred___greater_than_expression_8h"/>
         <childnode refid="2859" relation="include">
+        </childnode>
+      </node>
+      <node id="2866">
+        <label>src/bin/perf_regression/HashJoin.cpp</label>
+        <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="2877">
+        <label>src/lib/access/SimpleTableScan.cpp</label>
+        <link refid="lib_2access_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="2861">
+        <label>src/lib/access/expressions/pred_expression_factory.h</label>
+        <link refid="pred__expression__factory_8h"/>
+        <childnode refid="2859" relation="include">
+        </childnode>
+        <childnode refid="2860" relation="include">
         </childnode>
       </node>
       <node id="2857">
@@ -131,18 +179,6 @@
         <childnode refid="2879" relation="include">
         </childnode>
       </node>
-      <node id="2870">
-        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
-        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
-      </node>
-      <node id="2871">
-        <label>src/bin/perf_regression/SortScan.cpp</label>
-        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
-      </node>
-      <node id="2866">
-        <label>src/bin/perf_regression/HashJoin.cpp</label>
-        <link refid="_hash_join_8cpp"/>
-      </node>
       <node id="2879">
         <label>src/lib/access/expressions/pred_PredicateBuilder.h</label>
         <link refid="pred___predicate_builder_8h"/>
@@ -151,71 +187,13 @@
         <childnode refid="2880" relation="include">
         </childnode>
       </node>
-      <node id="2878">
-        <label>src/lib/access/expressions/pred_CompoundExpression.h</label>
-        <link refid="pred___compound_expression_8h"/>
-        <childnode refid="2859" relation="include">
-        </childnode>
-        <childnode refid="2879" relation="include">
-        </childnode>
+      <node id="2860">
+        <label>src/lib/access/expressions/pred_buildExpression.cpp</label>
+        <link refid="pred__build_expression_8cpp"/>
       </node>
-      <node id="2875">
-        <label>src/lib/access/expressions/pred_buildExpression.h</label>
-        <link refid="pred__build_expression_8h"/>
-        <childnode refid="2860" relation="include">
-        </childnode>
-        <childnode refid="2859" relation="include">
-        </childnode>
-        <childnode refid="2876" relation="include">
-        </childnode>
-        <childnode refid="2877" relation="include">
-        </childnode>
-      </node>
-      <node id="2874">
-        <label>src/lib/access/expressions/pred_SimpleFieldExpression.h</label>
-        <link refid="pred___simple_field_expression_8h"/>
-        <childnode refid="2857" relation="include">
-        </childnode>
-        <childnode refid="2859" relation="include">
-        </childnode>
-      </node>
-      <node id="2882">
-        <label>src/bin/perf_regression/scan_performance.cpp</label>
-        <link refid="scan__performance_8cpp"/>
-      </node>
-      <node id="2881">
-        <label>src/lib/access/expressions/pred_EqualsExpression.h</label>
-        <link refid="pred___equals_expression_8h"/>
-        <childnode refid="2882" relation="include">
-        </childnode>
-        <childnode refid="2859" relation="include">
-        </childnode>
-      </node>
-      <node id="2861">
-        <label>src/lib/access/expressions/pred_expression_factory.h</label>
-        <link refid="pred__expression__factory_8h"/>
-        <childnode refid="2859" relation="include">
-        </childnode>
-        <childnode refid="2860" relation="include">
-        </childnode>
-      </node>
-      <node id="2868">
-        <label>src/bin/perf_regression/JoinScan.cpp</label>
-        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
-      </node>
-      <node id="2859">
-        <label>src/lib/access/expressions/predicates.h</label>
-        <link refid="predicates_8h"/>
-        <childnode refid="2860" relation="include">
-        </childnode>
-        <childnode refid="2861" relation="include">
-        </childnode>
-        <childnode refid="2862" relation="include">
-        </childnode>
-        <childnode refid="2873" relation="include">
-        </childnode>
-        <childnode refid="2864" relation="include">
-        </childnode>
+      <node id="2863">
+        <label>src/lib/access/JoinScan.cpp</label>
+        <link refid="lib_2access_2_join_scan_8cpp"/>
       </node>
       <node id="2854">
         <label>src/lib/access/expressions/expression_types.h</label>
@@ -233,25 +211,47 @@
         <childnode refid="2863" relation="include">
         </childnode>
       </node>
-      <node id="2864">
-        <label>src/lib/access.h</label>
-        <link refid="access_8h"/>
-        <childnode refid="2865" relation="include">
+      <node id="2867">
+        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
+        <link refid="_hash_value_join_8cpp"/>
+      </node>
+      <node id="2878">
+        <label>src/lib/access/expressions/pred_CompoundExpression.h</label>
+        <link refid="pred___compound_expression_8h"/>
+        <childnode refid="2859" relation="include">
         </childnode>
-        <childnode refid="2866" relation="include">
+        <childnode refid="2879" relation="include">
         </childnode>
-        <childnode refid="2867" relation="include">
+      </node>
+      <node id="2876">
+        <label>src/lib/access/SimpleRawTableScan.cpp</label>
+        <link refid="_simple_raw_table_scan_8cpp"/>
+      </node>
+      <node id="2874">
+        <label>src/lib/access/expressions/pred_SimpleFieldExpression.h</label>
+        <link refid="pred___simple_field_expression_8h"/>
+        <childnode refid="2857" relation="include">
         </childnode>
-        <childnode refid="2868" relation="include">
+        <childnode refid="2859" relation="include">
         </childnode>
-        <childnode refid="2869" relation="include">
+      </node>
+      <node id="2872">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
+      </node>
+      <node id="2855">
+        <label>src/lib/access/expressions/expression_types.cpp</label>
+        <link refid="expression__types_8cpp"/>
+      </node>
+      <node id="2873">
+        <label>src/lib/access/MergeJoin.hpp</label>
+        <link refid="_merge_join_8hpp"/>
+        <childnode refid="2864" relation="include">
         </childnode>
-        <childnode refid="2870" relation="include">
-        </childnode>
-        <childnode refid="2871" relation="include">
-        </childnode>
-        <childnode refid="2872" relation="include">
-        </childnode>
+      </node>
+      <node id="2880">
+        <label>src/lib/access/expressions/pred_PredicateBuilder.cpp</label>
+        <link refid="pred___predicate_builder_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="struct_predicate_type" prot="public">PredicateType</innerclass>
@@ -296,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/expression_types.h" line="10" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/expression_types.h" bodystart="10" bodyend="10"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/access/expressions/expression_types.h" line="10" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/access/expressions/expression_types.h" bodystart="10" bodyend="10"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -311,7 +311,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/expression_types.h" line="35" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/expression_types.h" bodystart="35" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/access/expressions/expression_types.h" line="35" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/access/expressions/expression_types.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="expression__types_8h_1a6b227c2086984787afea2b4e490dcd5b" prot="public" static="no">
         <type>std::map&lt; std::string, <ref refid="expression__types_8h_1a51ad9989dafb48362f7e9354d68fe720" kindref="member">ExpressionType</ref> &gt;</type>
@@ -324,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/expression_types.h" line="36" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/expression_types.h" bodystart="36" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/access/expressions/expression_types.h" line="36" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/access/expressions/expression_types.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -343,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/expression_types.h" line="38" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/expression_types.cpp" bodystart="37" bodyend="41"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/access/expressions/expression_types.h" line="38" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/access/expressions/expression_types.cpp" bodystart="37" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="expression__types_8h_1a0da444b0186a6a8d6e3a5970afeec527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="expression__types_8h_1a51ad9989dafb48362f7e9354d68fe720" kindref="member">ExpressionType</ref></type>
@@ -360,7 +360,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/expression_types.h" line="39" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/expression_types.cpp" bodystart="43" bodyend="47"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/access/expressions/expression_types.h" line="39" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/access/expressions/expression_types.cpp" bodystart="43" bodyend="47"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -411,6 +411,6 @@
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_ACCESS_EXPRESSION_TYPES_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/expressions/expression_types.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/access/expressions/expression_types.h"/>
   </compounddef>
 </doxygen>

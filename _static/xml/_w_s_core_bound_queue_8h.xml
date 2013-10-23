@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_w_s_core_bound_queue_8h" kind="file">
     <compoundname>WSCoreBoundQueue.h</compoundname>
     <includes local="no">deque</includes>
@@ -11,26 +11,71 @@
       <node id="19257">
         <label>atomic</label>
       </node>
+      <node id="19256">
+        <label>AbstractCoreBoundQueue.h</label>
+        <link refid="_abstract_core_bound_queue_8h"/>
+        <childnode refid="19248" relation="include">
+        </childnode>
+        <childnode refid="19257" relation="include">
+        </childnode>
+      </node>
       <node id="19250">
         <label>queue</label>
       </node>
-      <node id="19241">
-        <label>AbstractTaskScheduler.h</label>
-        <link refid="_abstract_task_scheduler_8h"/>
-        <childnode refid="19242" relation="include">
+      <node id="19240">
+        <label>AbstractCoreBoundQueuesScheduler.h</label>
+        <link refid="_abstract_core_bound_queues_scheduler_8h"/>
+        <childnode refid="19241" relation="include">
         </childnode>
-        <childnode refid="19248" relation="include">
+        <childnode refid="19256" relation="include">
+        </childnode>
+        <childnode refid="19257" relation="include">
+        </childnode>
+      </node>
+      <node id="19254">
+        <label>helper/HwlocHelper.h</label>
+        <link refid="_hwloc_helper_8h"/>
+        <childnode refid="19255" relation="include">
+        </childnode>
+        <childnode refid="19243" relation="include">
+        </childnode>
+      </node>
+      <node id="19239">
+        <label>WSCoreBoundQueuesScheduler.h</label>
+        <link refid="_w_s_core_bound_queues_scheduler_8h"/>
+        <childnode refid="19240" relation="include">
+        </childnode>
+        <childnode refid="19256" relation="include">
+        </childnode>
+      </node>
+      <node id="19242">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="19243" relation="include">
+        </childnode>
+        <childnode refid="19244" relation="include">
         </childnode>
         <childnode refid="19245" relation="include">
         </childnode>
-        <childnode refid="19252" relation="include">
+        <childnode refid="19246" relation="include">
         </childnode>
-        <childnode refid="19253" relation="include">
+        <childnode refid="19247" relation="include">
         </childnode>
-        <childnode refid="19251" relation="include">
-        </childnode>
-        <childnode refid="19254" relation="include">
-        </childnode>
+      </node>
+      <node id="19247">
+        <label>string</label>
+      </node>
+      <node id="19252">
+        <label>unordered_set</label>
+      </node>
+      <node id="19255">
+        <label>hwloc.h</label>
+      </node>
+      <node id="19246">
+        <label>condition_variable</label>
+      </node>
+      <node id="19243">
+        <label>vector</label>
       </node>
       <node id="19248">
         <label>taskscheduler/AbstractTaskQueue.h</label>
@@ -50,55 +95,22 @@
         <childnode refid="19242" relation="include">
         </childnode>
       </node>
-      <node id="19247">
-        <label>string</label>
-      </node>
-      <node id="19252">
-        <label>unordered_set</label>
-      </node>
-      <node id="19237">
-        <label>src/lib/taskscheduler/WSCoreBoundQueue.h</label>
-        <link refid="WSCoreBoundQueue.h"/>
-        <childnode refid="19238" relation="include">
+      <node id="19241">
+        <label>AbstractTaskScheduler.h</label>
+        <link refid="_abstract_task_scheduler_8h"/>
+        <childnode refid="19242" relation="include">
         </childnode>
-        <childnode refid="19239" relation="include">
-        </childnode>
-        <childnode refid="19256" relation="include">
-        </childnode>
-      </node>
-      <node id="19255">
-        <label>hwloc.h</label>
-      </node>
-      <node id="19246">
-        <label>condition_variable</label>
-      </node>
-      <node id="19239">
-        <label>WSCoreBoundQueuesScheduler.h</label>
-        <link refid="_w_s_core_bound_queues_scheduler_8h"/>
-        <childnode refid="19240" relation="include">
-        </childnode>
-        <childnode refid="19256" relation="include">
-        </childnode>
-      </node>
-      <node id="19243">
-        <label>vector</label>
-      </node>
-      <node id="19256">
-        <label>AbstractCoreBoundQueue.h</label>
-        <link refid="_abstract_core_bound_queue_8h"/>
         <childnode refid="19248" relation="include">
         </childnode>
-        <childnode refid="19257" relation="include">
+        <childnode refid="19245" relation="include">
         </childnode>
-      </node>
-      <node id="19240">
-        <label>AbstractCoreBoundQueuesScheduler.h</label>
-        <link refid="_abstract_core_bound_queues_scheduler_8h"/>
-        <childnode refid="19241" relation="include">
+        <childnode refid="19252" relation="include">
         </childnode>
-        <childnode refid="19256" relation="include">
+        <childnode refid="19253" relation="include">
         </childnode>
-        <childnode refid="19257" relation="include">
+        <childnode refid="19251" relation="include">
+        </childnode>
+        <childnode refid="19254" relation="include">
         </childnode>
       </node>
       <node id="19253">
@@ -113,12 +125,14 @@
       <node id="19249">
         <label>thread</label>
       </node>
-      <node id="19254">
-        <label>helper/HwlocHelper.h</label>
-        <link refid="_hwloc_helper_8h"/>
-        <childnode refid="19255" relation="include">
+      <node id="19237">
+        <label>src/lib/taskscheduler/WSCoreBoundQueue.h</label>
+        <link refid="WSCoreBoundQueue.h"/>
+        <childnode refid="19238" relation="include">
         </childnode>
-        <childnode refid="19243" relation="include">
+        <childnode refid="19239" relation="include">
+        </childnode>
+        <childnode refid="19256" relation="include">
         </childnode>
       </node>
       <node id="19251">
@@ -127,22 +141,12 @@
       <node id="19245">
         <label>memory</label>
       </node>
-      <node id="19242">
-        <label>taskscheduler/Task.h</label>
-        <link refid="_task_8h"/>
-        <childnode refid="19243" relation="include">
-        </childnode>
-        <childnode refid="19244" relation="include">
-        </childnode>
-        <childnode refid="19245" relation="include">
-        </childnode>
-        <childnode refid="19246" relation="include">
-        </childnode>
-        <childnode refid="19247" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="19259">
+        <label>src/lib/taskscheduler/WSCoreBoundQueue.cpp</label>
+        <link refid="_w_s_core_bound_queue_8cpp"/>
+      </node>
       <node id="19260">
         <label>src/lib/taskscheduler/WSCoreBoundQueuesScheduler.cpp</label>
         <link refid="_w_s_core_bound_queues_scheduler_8cpp"/>
@@ -154,10 +158,6 @@
         </childnode>
         <childnode refid="19260" relation="include">
         </childnode>
-      </node>
-      <node id="19259">
-        <label>src/lib/taskscheduler/WSCoreBoundQueue.cpp</label>
-        <link refid="_w_s_core_bound_queue_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_w_s_core_bound_queue" prot="public">WSCoreBoundQueue</innerclass>
@@ -217,6 +217,6 @@
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WSCOREBOUNDQUEUE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/WSCoreBoundQueue.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/taskscheduler/WSCoreBoundQueue.h"/>
   </compounddef>
 </doxygen>

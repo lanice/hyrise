@@ -30,13 +30,18 @@
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <script type="text/javascript" src="../../_static/hyrise.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <link rel="top" title="HYRISE latest documentation" href="../../index.html" />
     <link rel="up" title="Plan Operations" href="../planops.html" />
     <link rel="next" title="Group By Scan" href="groupby.html" />
     <link rel="prev" title="Plan Operations" href="../planops.html" /> 
   </head>
-  <body><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
+  <body>
+    <div id="backToTop">
+      <span class="glyphicon glyphicon-chevron-up"></span> <br />
+      <p>Back To Top</p>
+    </div><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -136,7 +141,7 @@
 <p>PlanOperations accept multiple data types as input and output data. Though most operations perform on AbstractTable so far, the HashJoinProbe for example expects a HashTable as an input. The HashBuild operator produces HashTables. Therefore, all PlanOperations store their input and output data in OperationalData containers:</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="k">class</span> <span class="nc">_PlanOperation</span> <span class="o">:</span> <span class="k">public</span> <span class="n">OutputTask</span>
 <span class="p">{</span>
-<span class="k">protected</span><span class="o">:</span>
+<span class="nl">protected:</span>
         <span class="n">OperationalData</span> <span class="n">input</span><span class="p">;</span>
         <span class="n">OperationalData</span> <span class="n">output</span><span class="p">;</span>
 <span class="p">...</span>
@@ -145,7 +150,7 @@
 <p>These simply hold lists of data:</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="k">class</span> <span class="nc">OperationalData</span>
 <span class="p">{</span>
-<span class="k">protected</span><span class="o">:</span>
+<span class="nl">protected:</span>
         <span class="n">vector</span><span class="o">&lt;</span><span class="n">AbstractTable</span> <span class="o">*&gt;</span> <span class="n">tables</span><span class="p">;</span>
         <span class="n">vector</span><span class="o">&lt;</span><span class="n">HashTable</span> <span class="o">*&gt;</span>     <span class="n">hashTables</span><span class="p">;</span>
 <span class="p">...</span>

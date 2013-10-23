@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="bin_2hyrise_2main_8cpp" kind="file">
     <compoundname>main.cpp</compoundname>
     <includes local="no">fcntl.h</includes>
@@ -19,6 +19,95 @@
     <includes refid="_storage_manager_8h" local="yes">io/StorageManager.h</includes>
     <includes refid="_shared_scheduler_8h" local="yes">taskscheduler/SharedScheduler.h</includes>
     <incdepgraph>
+      <node id="28">
+        <label>atomic</label>
+      </node>
+      <node id="20">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="43">
+        <label>queue</label>
+      </node>
+      <node id="35">
+        <label>limits</label>
+      </node>
+      <node id="37">
+        <label>taskscheduler/SharedScheduler.h</label>
+        <link refid="_shared_scheduler_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>cstdint</label>
+      </node>
+      <node id="17">
+        <label>helper/HwlocHelper.h</label>
+        <link refid="_hwloc_helper_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>net/AsyncConnection.h</label>
+        <link refid="_async_connection_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>log4cxx/basicconfigurator.h</label>
+      </node>
+      <node id="9">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>fcntl.h</label>
+      </node>
+      <node id="24">
+        <label>string</label>
+      </node>
       <node id="4">
         <label>src/bin/hyrise/main.cpp</label>
         <link refid="bin/hyrise/main.cpp"/>
@@ -55,14 +144,20 @@
         <childnode refid="37" relation="include">
         </childnode>
       </node>
-      <node id="28">
-        <label>atomic</label>
+      <node id="29">
+        <label>map</label>
       </node>
-      <node id="20">
-        <label>arpa/inet.h</label>
+      <node id="44">
+        <label>unordered_set</label>
       </node>
-      <node id="43">
-        <label>queue</label>
+      <node id="10">
+        <label>hwloc.h</label>
+      </node>
+      <node id="6">
+        <label>fstream</label>
+      </node>
+      <node id="16">
+        <label>boost/program_options.hpp</label>
       </node>
       <node id="36">
         <label>helper/checked_cast.h</label>
@@ -72,47 +167,17 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="35">
-        <label>limits</label>
+      <node id="40">
+        <label>condition_variable</label>
       </node>
-      <node id="32">
-        <label>io/ResourceManager.h</label>
-        <link refid="_resource_manager_8h"/>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
+      <node id="26">
+        <label>ebb/ebb.h</label>
       </node>
-      <node id="34">
-        <label>cstdint</label>
+      <node id="18">
+        <label>vector</label>
       </node>
-      <node id="38">
-        <label>taskscheduler/AbstractTaskScheduler.h</label>
-        <link refid="_abstract_task_scheduler_8h"/>
-        <childnode refid="39" relation="include">
-        </childnode>
-        <childnode refid="41" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="44" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
+      <node id="11">
+        <label>signal.h</label>
       </node>
       <node id="41">
         <label>taskscheduler/AbstractTaskQueue.h</label>
@@ -132,26 +197,77 @@
         <childnode refid="39" relation="include">
         </childnode>
       </node>
-      <node id="13">
-        <label>log4cxx/basicconfigurator.h</label>
+      <node id="15">
+        <label>log4cxx/helpers/exception.h</label>
       </node>
-      <node id="9">
-        <label>stdexcept</label>
+      <node id="8">
+        <label>sstream</label>
       </node>
-      <node id="5">
-        <label>fcntl.h</label>
+      <node id="38">
+        <label>taskscheduler/AbstractTaskScheduler.h</label>
+        <link refid="_abstract_task_scheduler_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
       </node>
-      <node id="24">
-        <label>string</label>
+      <node id="22">
+        <label>cstdlib</label>
       </node>
-      <node id="29">
-        <label>map</label>
+      <node id="21">
+        <label>sys/time.h</label>
       </node>
-      <node id="44">
-        <label>unordered_set</label>
+      <node id="7">
+        <label>iostream</label>
       </node>
-      <node id="10">
-        <label>hwloc.h</label>
+      <node id="25">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>log4cxx/propertyconfigurator.h</label>
+      </node>
+      <node id="32">
+        <label>io/ResourceManager.h</label>
+        <link refid="_resource_manager_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>ev.h</label>
+      </node>
+      <node id="31">
+        <label>mutex</label>
+      </node>
+      <node id="42">
+        <label>thread</label>
+      </node>
+      <node id="12">
+        <label>log4cxx/logger.h</label>
       </node>
       <node id="27">
         <label>io/StorageManager.h</label>
@@ -171,124 +287,8 @@
         <childnode refid="32" relation="include">
         </childnode>
       </node>
-      <node id="6">
-        <label>fstream</label>
-      </node>
-      <node id="16">
-        <label>boost/program_options.hpp</label>
-      </node>
-      <node id="40">
-        <label>condition_variable</label>
-      </node>
-      <node id="26">
-        <label>ebb/ebb.h</label>
-      </node>
-      <node id="18">
-        <label>vector</label>
-      </node>
-      <node id="11">
-        <label>signal.h</label>
-      </node>
-      <node id="15">
-        <label>log4cxx/helpers/exception.h</label>
-      </node>
-      <node id="8">
-        <label>sstream</label>
-      </node>
-      <node id="19">
-        <label>net/AsyncConnection.h</label>
-        <link refid="_async_connection_8h"/>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
-      </node>
-      <node id="22">
-        <label>cstdlib</label>
-      </node>
-      <node id="21">
-        <label>sys/time.h</label>
-      </node>
-      <node id="7">
-        <label>iostream</label>
-      </node>
-      <node id="14">
-        <label>log4cxx/propertyconfigurator.h</label>
-      </node>
-      <node id="23">
-        <label>ev.h</label>
-      </node>
-      <node id="31">
-        <label>mutex</label>
-      </node>
-      <node id="37">
-        <label>taskscheduler/SharedScheduler.h</label>
-        <link refid="_shared_scheduler_8h"/>
-        <childnode refid="38" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="42">
-        <label>thread</label>
-      </node>
-      <node id="33">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="34" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="35" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-      </node>
-      <node id="17">
-        <label>helper/HwlocHelper.h</label>
-        <link refid="_hwloc_helper_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-      </node>
-      <node id="25">
-        <label>net/AbstractConnection.h</label>
-        <link refid="_abstract_connection_8h"/>
-        <childnode refid="24" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>log4cxx/logger.h</label>
-      </node>
       <node id="30">
         <label>memory</label>
-      </node>
-      <node id="39">
-        <label>taskscheduler/Task.h</label>
-        <link refid="_task_8h"/>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
       </node>
     </incdepgraph>
     <innerclass refid="class_port_resource" prot="public">PortResource</innerclass>
@@ -308,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" line="28" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" bodystart="28" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" line="28" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="bin_2hyrise_2main_8cpp_1a04b3c3c8f61f8c0830a47db758d04d9a" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -322,7 +322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" line="29" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" bodystart="29" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" line="29" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="bin_2hyrise_2main_8cpp_1aeb2044d5b2fe773e51cf4d1fbe100752" prot="public" static="no" mutable="no">
         <type>const size_t</type>
@@ -336,7 +336,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" line="30" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" bodystart="30" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" line="30" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="bin_2hyrise_2main_8cpp_1a7a40d9164397ae556e53aa25f552ea52" prot="public" static="yes" mutable="no">
         <type>ebb_server</type>
@@ -349,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" line="33" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" bodystart="33" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" line="33" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -369,7 +369,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" line="35"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" line="35" column="1"/>
       </memberdef>
       <memberdef kind="function" id="bin_2hyrise_2main_8cpp_1ad4088adc01000894dca03bde946cece8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -386,7 +386,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" line="86" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" bodystart="86" bodyend="91"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" line="86" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" bodystart="86" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="bin_2hyrise_2main_8cpp_1a81ecbbdb48cb57b6bf2beab14738c31e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -403,7 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" line="93" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" bodystart="93" bodyend="126"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" line="93" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" bodystart="93" bodyend="126"/>
       </memberdef>
       <memberdef kind="function" id="bin_2hyrise_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -425,7 +425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" line="129" bodyfile="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp" bodystart="129" bodyend="195"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" line="129" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp" bodystart="129" bodyend="195"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -518,7 +518,7 @@
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
 <codeline lineno="86" refid="bin_2hyrise_2main_8cpp_1ad4088adc01000894dca03bde946cece8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bin_2hyrise_2main_8cpp_1ad4088adc01000894dca03bde946cece8" kindref="member">shutdown</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sig)<sp/>{</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Graceful<sp/>stop&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_storage_manager_1a73b12a097673a0afa604a22dd401a1bb" kindref="member" tooltip="Retrieve singleton storage-manager instance.">StorageManager::getInstance</ref>()-&gt;<ref refid="classhyrise_1_1io_1_1_storage_manager_1a8ae4677060c29dd5b6fed2871e557b5b" kindref="member">removeAll</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_storage_manager_1a73b12a097673a0afa604a22dd401a1bb" kindref="member" tooltip="Retrieve singleton storage-manager instance. ">StorageManager::getInstance</ref>()-&gt;<ref refid="classhyrise_1_1io_1_1_storage_manager_1a8ae4677060c29dd5b6fed2871e557b5b" kindref="member">removeAll</ref>();</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/>sleep(1);</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/>ebb_server_unlisten(&amp;<ref refid="bin_2hyrise_2main_8cpp_1a7a40d9164397ae556e53aa25f552ea52" kindref="member">server</ref>);</highlight></codeline>
 <codeline lineno="91"><highlight class="normal">}</highlight></codeline>
@@ -627,6 +627,6 @@
 <codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline lineno="195"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/captain/HPI/aepic/hyrise/src/bin/hyrise/main.cpp"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/bin/hyrise/main.cpp"/>
   </compounddef>
 </doxygen>

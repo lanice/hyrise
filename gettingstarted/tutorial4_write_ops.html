@@ -30,13 +30,18 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/hyrise.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <link rel="top" title="HYRISE latest documentation" href="../index.html" />
     <link rel="up" title="Getting Started" href="../getting_started.html" />
     <link rel="next" title="Implementation Details" href="../architecture.html" />
     <link rel="prev" title="Loading from MySQL" href="tutorial3_mysql_load.html" /> 
   </head>
-  <body><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
+  <body>
+    <div id="backToTop">
+      <span class="glyphicon glyphicon-chevron-up"></span> <br />
+      <p>Back To Top</p>
+    </div><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -155,7 +160,7 @@ and then accessed using <tt class="docutils literal"><span class="pre">data[&quo
     <span class="n">AbstractTable</span><span class="o">*</span> <span class="n">string_length</span> <span class="o">=</span> <span class="n">TableBuilder</span><span class="o">::</span><span class="n">build</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
 
     <span class="k">if</span><span class="p">(</span><span class="n">in</span><span class="o">-&gt;</span><span class="n">typeOfColumn</span><span class="p">(</span><span class="n">_field_definition</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="n">StringType</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">for</span><span class="p">(</span><span class="n">size_t</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">in</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">();</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">in</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">();</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
                     <span class="n">string_length</span><span class="o">-&gt;</span><span class="n">setValue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_field_definition</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">row</span><span class="p">,</span>
                         <span class="p">(</span><span class="n">in</span><span class="o">-&gt;</span><span class="n">getValue</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_field_definition</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">row</span><span class="p">)).</span><span class="n">size</span><span class="p">());</span>
             <span class="p">}</span>

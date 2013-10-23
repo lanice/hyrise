@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_settings_8h" kind="file">
     <compoundname>Settings.h</compoundname>
     <includes local="no">cstddef</includes>
@@ -13,6 +13,9 @@
       <node id="10979">
         <label>string</label>
       </node>
+      <node id="10978">
+        <label>cstddef</label>
+      </node>
       <node id="10977">
         <label>src/lib/helper/Settings.h</label>
         <link refid="Settings.h"/>
@@ -21,14 +24,27 @@
         <childnode refid="10979" relation="include">
         </childnode>
       </node>
-      <node id="10978">
-        <label>cstddef</label>
-      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="10984">
+        <label>src/lib/helper/Settings.cpp</label>
+        <link refid="_settings_8cpp"/>
+      </node>
       <node id="10982">
         <label>src/lib/access/storage/TableIO.cpp</label>
         <link refid="_table_i_o_8cpp"/>
+      </node>
+      <node id="10985">
+        <label>src/lib/io/StorageManager.cpp</label>
+        <link refid="_storage_manager_8cpp"/>
+      </node>
+      <node id="10983">
+        <label>src/lib/access/system/SettingsOperation.cpp</label>
+        <link refid="_settings_operation_8cpp"/>
+      </node>
+      <node id="10981">
+        <label>src/lib/access/ScriptOperation.cpp</label>
+        <link refid="_script_operation_8cpp"/>
       </node>
       <node id="10980">
         <label>src/lib/helper/Settings.h</label>
@@ -43,22 +59,6 @@
         </childnode>
         <childnode refid="10985" relation="include">
         </childnode>
-      </node>
-      <node id="10985">
-        <label>src/lib/io/StorageManager.cpp</label>
-        <link refid="_storage_manager_8cpp"/>
-      </node>
-      <node id="10984">
-        <label>src/lib/helper/Settings.cpp</label>
-        <link refid="_settings_8cpp"/>
-      </node>
-      <node id="10983">
-        <label>src/lib/access/system/SettingsOperation.cpp</label>
-        <link refid="_settings_operation_8cpp"/>
-      </node>
-      <node id="10981">
-        <label>src/lib/access/ScriptOperation.cpp</label>
-        <link refid="_script_operation_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_settings" prot="public">Settings</innerclass>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/Settings.h" line="13" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/helper/Settings.h" bodystart="8" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/helper/Settings.h" line="8" column="9" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/helper/Settings.h" bodystart="8" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -132,6 +132,6 @@
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_HELPER_SETTINGS_H_</highlight></codeline>
 <codeline lineno="45"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/captain/HPI/aepic/hyrise/src/lib/helper/Settings.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/helper/Settings.h"/>
   </compounddef>
 </doxygen>

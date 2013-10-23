@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_central_priority_scheduler_8cpp" kind="file">
     <compoundname>CentralPriorityScheduler.cpp</compoundname>
     <includes refid="_central_priority_scheduler_8h" local="yes">CentralPriorityScheduler.h</includes>
@@ -7,40 +7,34 @@
       <node id="18618">
         <label>queue</label>
       </node>
-      <node id="18609">
-        <label>AbstractTaskScheduler.h</label>
-        <link refid="_abstract_task_scheduler_8h"/>
-        <childnode refid="18610" relation="include">
+      <node id="18624">
+        <label>taskscheduler/SharedScheduler.h</label>
+        <link refid="_shared_scheduler_8h"/>
+        <childnode refid="18609" relation="include">
         </childnode>
-        <childnode refid="18616" relation="include">
-        </childnode>
-        <childnode refid="18613" relation="include">
-        </childnode>
-        <childnode refid="18620" relation="include">
-        </childnode>
-        <childnode refid="18621" relation="include">
-        </childnode>
-        <childnode refid="18619" relation="include">
-        </childnode>
-        <childnode refid="18622" relation="include">
+        <childnode refid="18625" relation="include">
         </childnode>
       </node>
-      <node id="18616">
-        <label>taskscheduler/AbstractTaskQueue.h</label>
-        <link refid="_abstract_task_queue_8h"/>
-        <childnode refid="18613" relation="include">
+      <node id="18622">
+        <label>helper/HwlocHelper.h</label>
+        <link refid="_hwloc_helper_8h"/>
+        <childnode refid="18623" relation="include">
+        </childnode>
+        <childnode refid="18611" relation="include">
+        </childnode>
+      </node>
+      <node id="18610">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="18611" relation="include">
         </childnode>
         <childnode refid="18612" relation="include">
         </childnode>
-        <childnode refid="18617" relation="include">
-        </childnode>
-        <childnode refid="18618" relation="include">
+        <childnode refid="18613" relation="include">
         </childnode>
         <childnode refid="18614" relation="include">
         </childnode>
-        <childnode refid="18619" relation="include">
-        </childnode>
-        <childnode refid="18610" relation="include">
+        <childnode refid="18615" relation="include">
         </childnode>
       </node>
       <node id="18625">
@@ -49,8 +43,17 @@
       <node id="18615">
         <label>string</label>
       </node>
+      <node id="18607">
+        <label>src/lib/taskscheduler/CentralPriorityScheduler.cpp</label>
+        <link refid="CentralPriorityScheduler.cpp"/>
+        <childnode refid="18608" relation="include">
+        </childnode>
+      </node>
       <node id="18620">
         <label>unordered_set</label>
+      </node>
+      <node id="18623">
+        <label>hwloc.h</label>
       </node>
       <node id="18608">
         <label>CentralPriorityScheduler.h</label>
@@ -74,14 +77,47 @@
         <childnode refid="18624" relation="include">
         </childnode>
       </node>
-      <node id="18623">
-        <label>hwloc.h</label>
-      </node>
       <node id="18614">
         <label>condition_variable</label>
       </node>
       <node id="18611">
         <label>vector</label>
+      </node>
+      <node id="18616">
+        <label>taskscheduler/AbstractTaskQueue.h</label>
+        <link refid="_abstract_task_queue_8h"/>
+        <childnode refid="18613" relation="include">
+        </childnode>
+        <childnode refid="18612" relation="include">
+        </childnode>
+        <childnode refid="18617" relation="include">
+        </childnode>
+        <childnode refid="18618" relation="include">
+        </childnode>
+        <childnode refid="18614" relation="include">
+        </childnode>
+        <childnode refid="18619" relation="include">
+        </childnode>
+        <childnode refid="18610" relation="include">
+        </childnode>
+      </node>
+      <node id="18609">
+        <label>AbstractTaskScheduler.h</label>
+        <link refid="_abstract_task_scheduler_8h"/>
+        <childnode refid="18610" relation="include">
+        </childnode>
+        <childnode refid="18616" relation="include">
+        </childnode>
+        <childnode refid="18613" relation="include">
+        </childnode>
+        <childnode refid="18620" relation="include">
+        </childnode>
+        <childnode refid="18621" relation="include">
+        </childnode>
+        <childnode refid="18619" relation="include">
+        </childnode>
+        <childnode refid="18622" relation="include">
+        </childnode>
       </node>
       <node id="18621">
         <label>iostream</label>
@@ -89,50 +125,14 @@
       <node id="18612">
         <label>mutex</label>
       </node>
-      <node id="18624">
-        <label>taskscheduler/SharedScheduler.h</label>
-        <link refid="_shared_scheduler_8h"/>
-        <childnode refid="18609" relation="include">
-        </childnode>
-        <childnode refid="18625" relation="include">
-        </childnode>
-      </node>
       <node id="18617">
         <label>thread</label>
-      </node>
-      <node id="18622">
-        <label>helper/HwlocHelper.h</label>
-        <link refid="_hwloc_helper_8h"/>
-        <childnode refid="18623" relation="include">
-        </childnode>
-        <childnode refid="18611" relation="include">
-        </childnode>
       </node>
       <node id="18619">
         <label>log4cxx/logger.h</label>
       </node>
       <node id="18613">
         <label>memory</label>
-      </node>
-      <node id="18610">
-        <label>taskscheduler/Task.h</label>
-        <link refid="_task_8h"/>
-        <childnode refid="18611" relation="include">
-        </childnode>
-        <childnode refid="18612" relation="include">
-        </childnode>
-        <childnode refid="18613" relation="include">
-        </childnode>
-        <childnode refid="18614" relation="include">
-        </childnode>
-        <childnode refid="18615" relation="include">
-        </childnode>
-      </node>
-      <node id="18607">
-        <label>src/lib/taskscheduler/CentralPriorityScheduler.cpp</label>
-        <link refid="CentralPriorityScheduler.cpp"/>
-        <childnode refid="18608" relation="include">
-        </childnode>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -301,6 +301,6 @@
 <codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG4CXX_ERROR(<ref refid="class_central_priority_scheduler_1aa4267e5a5f132e654be611d5b0bbe489" kindref="member">_logger</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Task<sp/>that<sp/>notified<sp/>to<sp/>be<sp/>ready<sp/>to<sp/>run<sp/>was<sp/>not<sp/>found<sp/>/<sp/>found<sp/>more<sp/>than<sp/>once<sp/>in<sp/>waitSet!<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespacestd_1aa2f6c380fda0f127ac99017940bef1e9" kindref="member">std::to_string</ref>(tmp));</highlight></codeline>
 <codeline lineno="163"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/CentralPriorityScheduler.cpp"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/taskscheduler/CentralPriorityScheduler.cpp"/>
   </compounddef>
 </doxygen>

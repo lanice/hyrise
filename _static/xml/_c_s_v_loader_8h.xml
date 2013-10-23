@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_c_s_v_loader_8h" kind="file">
     <compoundname>CSVLoader.h</compoundname>
     <includes local="no">memory</includes>
@@ -20,21 +20,38 @@
       <node id="11757">
         <label>limits</label>
       </node>
-      <node id="11752">
-        <label>io/AbstractLoader.h</label>
-        <link refid="_abstract_loader_8h"/>
-        <childnode refid="11753" relation="include">
-        </childnode>
-        <childnode refid="11759" relation="include">
-        </childnode>
-        <childnode refid="11755" relation="include">
-        </childnode>
-      </node>
       <node id="11756">
         <label>cstdint</label>
       </node>
       <node id="11761">
         <label>stdint.h</label>
+      </node>
+      <node id="11755">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="11756" relation="include">
+        </childnode>
+        <childnode refid="11754" relation="include">
+        </childnode>
+        <childnode refid="11757" relation="include">
+        </childnode>
+        <childnode refid="11751" relation="include">
+        </childnode>
+        <childnode refid="11758" relation="include">
+        </childnode>
+      </node>
+      <node id="11760">
+        <label>stdexcept</label>
+      </node>
+      <node id="11754">
+        <label>string</label>
+      </node>
+      <node id="11763">
+        <label>parameters.inc</label>
+        <link refid="parameters_8inc"/>
+      </node>
+      <node id="11762">
+        <label>ostream</label>
       </node>
       <node id="11753">
         <label>io/Loader.h</label>
@@ -50,17 +67,38 @@
         <childnode refid="11763" relation="include">
         </childnode>
       </node>
-      <node id="11760">
-        <label>stdexcept</label>
-      </node>
-      <node id="11754">
-        <label>string</label>
-      </node>
-      <node id="11762">
-        <label>ostream</label>
-      </node>
       <node id="11766">
         <label>libcsv/csv.h</label>
+      </node>
+      <node id="11758">
+        <label>vector</label>
+      </node>
+      <node id="11752">
+        <label>io/AbstractLoader.h</label>
+        <link refid="_abstract_loader_8h"/>
+        <childnode refid="11753" relation="include">
+        </childnode>
+        <childnode refid="11759" relation="include">
+        </childnode>
+        <childnode refid="11755" relation="include">
+        </childnode>
+      </node>
+      <node id="11765">
+        <label>iosfwd</label>
+      </node>
+      <node id="11750">
+        <label>src/lib/io/CSVLoader.h</label>
+        <link refid="CSVLoader.h"/>
+        <childnode refid="11751" relation="include">
+        </childnode>
+        <childnode refid="11752" relation="include">
+        </childnode>
+        <childnode refid="11764" relation="include">
+        </childnode>
+        <childnode refid="11767" relation="include">
+        </childnode>
+        <childnode refid="11763" relation="include">
+        </childnode>
       </node>
       <node id="11759">
         <label>storage/storage_types.h</label>
@@ -75,24 +113,6 @@
         </childnode>
         <childnode refid="11762" relation="include">
         </childnode>
-      </node>
-      <node id="11763">
-        <label>parameters.inc</label>
-        <link refid="parameters_8inc"/>
-      </node>
-      <node id="11758">
-        <label>vector</label>
-      </node>
-      <node id="11767">
-        <label>io/LoaderException.h</label>
-        <link refid="_loader_exception_8h"/>
-        <childnode refid="11760" relation="include">
-        </childnode>
-        <childnode refid="11754" relation="include">
-        </childnode>
-      </node>
-      <node id="11765">
-        <label>iosfwd</label>
       </node>
       <node id="11764">
         <label>io/GenericCSV.h</label>
@@ -112,32 +132,12 @@
         <childnode refid="11763" relation="include">
         </childnode>
       </node>
-      <node id="11750">
-        <label>src/lib/io/CSVLoader.h</label>
-        <link refid="CSVLoader.h"/>
-        <childnode refid="11751" relation="include">
-        </childnode>
-        <childnode refid="11752" relation="include">
-        </childnode>
-        <childnode refid="11764" relation="include">
-        </childnode>
-        <childnode refid="11767" relation="include">
-        </childnode>
-        <childnode refid="11763" relation="include">
-        </childnode>
-      </node>
-      <node id="11755">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="11756" relation="include">
+      <node id="11767">
+        <label>io/LoaderException.h</label>
+        <link refid="_loader_exception_8h"/>
+        <childnode refid="11760" relation="include">
         </childnode>
         <childnode refid="11754" relation="include">
-        </childnode>
-        <childnode refid="11757" relation="include">
-        </childnode>
-        <childnode refid="11751" relation="include">
-        </childnode>
-        <childnode refid="11758" relation="include">
         </childnode>
       </node>
       <node id="11751">
@@ -145,17 +145,17 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="11771">
-        <label>src/lib/access/storage/TableIO.cpp</label>
-        <link refid="_table_i_o_8cpp"/>
-      </node>
       <node id="11770">
         <label>src/lib/access/LayoutTableLoad.cpp</label>
         <link refid="_layout_table_load_8cpp"/>
       </node>
-      <node id="11775">
-        <label>src/lib/access/storage/TableLoad.cpp</label>
-        <link refid="_table_load_8cpp"/>
+      <node id="11772">
+        <label>src/lib/io/CSVLoader.cpp</label>
+        <link refid="_c_s_v_loader_8cpp"/>
+      </node>
+      <node id="11771">
+        <label>src/lib/access/storage/TableIO.cpp</label>
+        <link refid="_table_i_o_8cpp"/>
       </node>
       <node id="11777">
         <label>src/lib/io/MPassCSVLoader.h</label>
@@ -169,35 +169,29 @@
         <label>src/lib/io/StorageManager.cpp</label>
         <link refid="_storage_manager_8cpp"/>
       </node>
-      <node id="11772">
-        <label>src/lib/io/CSVLoader.cpp</label>
-        <link refid="_c_s_v_loader_8cpp"/>
+      <node id="11781">
+        <label>src/lib/io/TableDump.cpp</label>
+        <link refid="_table_dump_8cpp"/>
       </node>
-      <node id="11769">
-        <label>src/bin/test_relation_eq/main.cpp</label>
-        <link refid="bin_2test__relation__eq_2main_8cpp"/>
+      <node id="11778">
+        <label>src/lib/io/MPassCSVLoader.cpp</label>
+        <link refid="_m_pass_c_s_v_loader_8cpp"/>
       </node>
-      <node id="11779">
-        <label>src/lib/io/RawTableLoader.cpp</label>
-        <link refid="_raw_table_loader_8cpp"/>
-      </node>
-      <node id="11773">
-        <label>src/lib/io/loaders.h</label>
-        <link refid="loaders_8h"/>
-        <childnode refid="11774" relation="include">
-        </childnode>
-        <childnode refid="11775" relation="include">
-        </childnode>
-        <childnode refid="11776" relation="include">
-        </childnode>
+      <node id="11776">
+        <label>src/lib/io/shortcuts.cpp</label>
+        <link refid="shortcuts_8cpp"/>
       </node>
       <node id="11774">
         <label>src/bin/perf_regression/Loading.cpp</label>
         <link refid="_loading_8cpp"/>
       </node>
-      <node id="11776">
-        <label>src/lib/io/shortcuts.cpp</label>
-        <link refid="shortcuts_8cpp"/>
+      <node id="11775">
+        <label>src/lib/access/storage/TableLoad.cpp</label>
+        <link refid="_table_load_8cpp"/>
+      </node>
+      <node id="11769">
+        <label>src/bin/test_relation_eq/main.cpp</label>
+        <link refid="bin_2test__relation__eq_2main_8cpp"/>
       </node>
       <node id="11768">
         <label>src/lib/io/CSVLoader.h</label>
@@ -221,13 +215,19 @@
         <childnode refid="11781" relation="include">
         </childnode>
       </node>
-      <node id="11781">
-        <label>src/lib/io/TableDump.cpp</label>
-        <link refid="_table_dump_8cpp"/>
+      <node id="11773">
+        <label>src/lib/io/loaders.h</label>
+        <link refid="loaders_8h"/>
+        <childnode refid="11774" relation="include">
+        </childnode>
+        <childnode refid="11775" relation="include">
+        </childnode>
+        <childnode refid="11776" relation="include">
+        </childnode>
       </node>
-      <node id="11778">
-        <label>src/lib/io/MPassCSVLoader.cpp</label>
-        <link refid="_m_pass_c_s_v_loader_8cpp"/>
+      <node id="11779">
+        <label>src/lib/io/RawTableLoader.cpp</label>
+        <link refid="_raw_table_loader_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_c_s_v_loader_error" prot="public">CSVLoaderError</innerclass>
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/CSVLoader.h" line="15" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/io/CSVLoader.cpp" bodystart="76" bodyend="86"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/io/CSVLoader.h" line="15" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/io/CSVLoader.cpp" bodystart="76" bodyend="86"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -281,7 +281,7 @@
 <codeline lineno="20"><highlight class="normal"><sp/><sp/>{}</highlight></codeline>
 <codeline lineno="21"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="class_c_s_v_input" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_s_v_input" kindref="compound">CSVInput</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_input" kindref="compound" tooltip="Interface for implementing a data source for loading data into a table.">AbstractInput</ref><sp/>{</highlight></codeline>
+<codeline lineno="23" refid="class_c_s_v_input" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_s_v_input" kindref="compound">CSVInput</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_input" kindref="compound" tooltip="Interface for implementing a data source for loading data into a table. ">AbstractInput</ref><sp/>{</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="25" refid="class_c_s_v_input_1_1params" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_s_v_input_1_1params" kindref="compound">params</ref><sp/>{</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="parameters_8inc" kindref="compound">parameters.inc</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
@@ -324,6 +324,6 @@
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_IO_CSVLOADER_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/captain/HPI/aepic/hyrise/src/lib/io/CSVLoader.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/io/CSVLoader.h"/>
   </compounddef>
 </doxygen>

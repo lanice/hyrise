@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_order_indifferent_dictionary_8h" kind="file">
     <compoundname>OrderIndifferentDictionary.h</compoundname>
     <includes local="no">exception</includes>
@@ -16,36 +16,6 @@
     <includedby refid="_table_builder_8cpp" local="yes">src/lib/storage/TableBuilder.cpp</includedby>
     <includedby refid="_value_id_map_8hpp" local="no">src/lib/storage/ValueIdMap.hpp</includedby>
     <incdepgraph>
-      <node id="16256">
-        <label>storage/BaseDictionary.h</label>
-        <link refid="_base_dictionary_8h"/>
-        <childnode refid="16251" relation="include">
-        </childnode>
-        <childnode refid="16257" relation="include">
-        </childnode>
-        <childnode refid="16258" relation="include">
-        </childnode>
-      </node>
-      <node id="16245">
-        <label>src/lib/storage/OrderIndifferentDictionary.h</label>
-        <link refid="OrderIndifferentDictionary.h"/>
-        <childnode refid="16246" relation="include">
-        </childnode>
-        <childnode refid="16247" relation="include">
-        </childnode>
-        <childnode refid="16248" relation="include">
-        </childnode>
-        <childnode refid="16249" relation="include">
-        </childnode>
-        <childnode refid="16250" relation="include">
-        </childnode>
-        <childnode refid="16251" relation="include">
-        </childnode>
-        <childnode refid="16256" relation="include">
-        </childnode>
-        <childnode refid="16258" relation="include">
-        </childnode>
-      </node>
       <node id="16260">
         <label>boost/iterator/iterator_facade.hpp</label>
       </node>
@@ -70,6 +40,33 @@
       <node id="16250">
         <label>limits.h</label>
       </node>
+      <node id="16259">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="16245">
+        <label>src/lib/storage/OrderIndifferentDictionary.h</label>
+        <link refid="OrderIndifferentDictionary.h"/>
+        <childnode refid="16246" relation="include">
+        </childnode>
+        <childnode refid="16247" relation="include">
+        </childnode>
+        <childnode refid="16248" relation="include">
+        </childnode>
+        <childnode refid="16249" relation="include">
+        </childnode>
+        <childnode refid="16250" relation="include">
+        </childnode>
+        <childnode refid="16251" relation="include">
+        </childnode>
+        <childnode refid="16256" relation="include">
+        </childnode>
+        <childnode refid="16258" relation="include">
+        </childnode>
+      </node>
+      <node id="16247">
+        <label>vector</label>
+      </node>
       <node id="16251">
         <label>storage/storage_types.h</label>
         <link refid="storage__types_8h"/>
@@ -84,21 +81,6 @@
         <childnode refid="16255" relation="include">
         </childnode>
       </node>
-      <node id="16258">
-        <label>storage/DictionaryIterator.h</label>
-        <link refid="_dictionary_iterator_8h"/>
-        <childnode refid="16259" relation="include">
-        </childnode>
-        <childnode refid="16260" relation="include">
-        </childnode>
-      </node>
-      <node id="16259">
-        <label>storage/BaseIterator.h</label>
-        <link refid="_base_iterator_8h"/>
-      </node>
-      <node id="16247">
-        <label>vector</label>
-      </node>
       <node id="16257">
         <label>storage/AbstractDictionary.h</label>
         <link refid="_abstract_dictionary_8h"/>
@@ -111,54 +93,48 @@
         <childnode refid="16251" relation="include">
         </childnode>
       </node>
+      <node id="16258">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="16259" relation="include">
+        </childnode>
+        <childnode refid="16260" relation="include">
+        </childnode>
+      </node>
       <node id="16249">
         <label>memory</label>
       </node>
+      <node id="16256">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="16251" relation="include">
+        </childnode>
+        <childnode refid="16257" relation="include">
+        </childnode>
+        <childnode refid="16258" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="16270">
-        <label>src/lib/access/expressions/pred_buildExpression.cpp</label>
-        <link refid="pred__build_expression_8cpp"/>
+      <node id="16280">
+        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
+        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
       </node>
-      <node id="16277">
-        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
-        <link refid="_hash_value_join_8cpp"/>
+      <node id="16275">
+        <label>src/bin/perf_regression/GroupByScan.cpp</label>
+        <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
       </node>
-      <node id="16293">
-        <label>src/lib/access/expressions/pred_GreaterThanExpression.h</label>
-        <link refid="pred___greater_than_expression_8h"/>
-        <childnode refid="16269" relation="include">
+      <node id="16310">
+        <label>src/lib/access/UpdateScan.cpp</label>
+        <link refid="_update_scan_8cpp"/>
+      </node>
+      <node id="16272">
+        <label>src/lib/access/JoinScan.h</label>
+        <link refid="_join_scan_8h"/>
+        <childnode refid="16273" relation="include">
         </childnode>
-      </node>
-      <node id="16307">
-        <label>src/lib/access/storage/JsonTable.cpp</label>
-        <link refid="_json_table_8cpp"/>
-      </node>
-      <node id="16318">
-        <label>src/lib/storage/Store.cpp</label>
-        <link refid="_store_8cpp"/>
-      </node>
-      <node id="16261">
-        <label>src/lib/storage/OrderIndifferentDictionary.h</label>
-        <link refid="OrderIndifferentDictionary.h"/>
-        <childnode refid="16262" relation="include">
+        <childnode refid="16274" relation="include">
         </childnode>
-        <childnode refid="16263" relation="include">
-        </childnode>
-        <childnode refid="16264" relation="include">
-        </childnode>
-        <childnode refid="16265" relation="include">
-        </childnode>
-        <childnode refid="16266" relation="include">
-        </childnode>
-      </node>
-      <node id="16304">
-        <label>src/lib/access/InsertScan.cpp</label>
-        <link refid="_insert_scan_8cpp"/>
-      </node>
-      <node id="16308">
-        <label>src/lib/access/storage/TableIO.cpp</label>
-        <link refid="_table_i_o_8cpp"/>
       </node>
       <node id="16266">
         <label>src/lib/storage/ValueIdMap.hpp</label>
@@ -172,101 +148,33 @@
         <childnode refid="16319" relation="include">
         </childnode>
       </node>
-      <node id="16275">
-        <label>src/bin/perf_regression/GroupByScan.cpp</label>
-        <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
+      <node id="16292">
+        <label>src/bin/perf_regression/scan_performance.cpp</label>
+        <link refid="scan__performance_8cpp"/>
       </node>
-      <node id="16262">
-        <label>src/lib/access/ExpressionScan.cpp</label>
-        <link refid="_expression_scan_8cpp"/>
+      <node id="16308">
+        <label>src/lib/access/storage/TableIO.cpp</label>
+        <link refid="_table_i_o_8cpp"/>
       </node>
-      <node id="16282">
-        <label>src/bin/perf_regression/UnionScan.cpp</label>
-        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
-      </node>
-      <node id="16286">
-        <label>src/lib/access/SimpleRawTableScan.cpp</label>
-        <link refid="_simple_raw_table_scan_8cpp"/>
-      </node>
-      <node id="16287">
-        <label>src/lib/access/SimpleTableScan.cpp</label>
-        <link refid="lib_2access_2_simple_table_scan_8cpp"/>
-      </node>
-      <node id="16297">
-        <label>src/lib/io/Loader.cpp</label>
-        <link refid="_loader_8cpp"/>
-      </node>
-      <node id="16283">
-        <label>src/lib/access/MergeJoin.hpp</label>
-        <link refid="_merge_join_8hpp"/>
-        <childnode refid="16274" relation="include">
+      <node id="16274">
+        <label>src/lib/access.h</label>
+        <link refid="access_8h"/>
+        <childnode refid="16275" relation="include">
         </childnode>
-      </node>
-      <node id="16320">
-        <label>src/lib/storage/TableGenerator.cpp</label>
-        <link refid="_table_generator_8cpp"/>
-      </node>
-      <node id="16301">
-        <label>src/lib/access/Delete.cpp</label>
-        <link refid="_delete_8cpp"/>
-      </node>
-      <node id="16272">
-        <label>src/lib/access/JoinScan.h</label>
-        <link refid="_join_scan_8h"/>
-        <childnode refid="16273" relation="include">
+        <childnode refid="16276" relation="include">
         </childnode>
-        <childnode refid="16274" relation="include">
+        <childnode refid="16277" relation="include">
         </childnode>
-      </node>
-      <node id="16305">
-        <label>src/lib/access/MergeTable.cpp</label>
-        <link refid="_merge_table_8cpp"/>
-      </node>
-      <node id="16290">
-        <label>src/lib/access/expressions/pred_PredicateBuilder.cpp</label>
-        <link refid="pred___predicate_builder_8cpp"/>
-      </node>
-      <node id="16314">
-        <label>src/lib/io/TransactionManager.cpp</label>
-        <link refid="_transaction_manager_8cpp"/>
-      </node>
-      <node id="16263">
-        <label>src/lib/access/GroupByScan.cpp</label>
-        <link refid="lib_2access_2_group_by_scan_8cpp"/>
-      </node>
-      <node id="16294">
-        <label>src/lib/access/expressions/pred_LessThanExpression.h</label>
-        <link refid="pred___less_than_expression_8h"/>
-        <childnode refid="16269" relation="include">
+        <childnode refid="16278" relation="include">
         </childnode>
-      </node>
-      <node id="16295">
-        <label>src/lib/storage/SequentialHeapMerger.h</label>
-        <link refid="_sequential_heap_merger_8h"/>
-        <childnode refid="16296" relation="include">
+        <childnode refid="16279" relation="include">
         </childnode>
-        <childnode refid="16297" relation="include">
+        <childnode refid="16280" relation="include">
         </childnode>
-        <childnode refid="16298" relation="include">
+        <childnode refid="16281" relation="include">
         </childnode>
-        <childnode refid="16299" relation="include">
+        <childnode refid="16282" relation="include">
         </childnode>
-        <childnode refid="16320" relation="include">
-        </childnode>
-        <childnode refid="16319" relation="include">
-        </childnode>
-      </node>
-      <node id="16279">
-        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
-        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
-      </node>
-      <node id="16273">
-        <label>src/lib/access/JoinScan.cpp</label>
-        <link refid="lib_2access_2_join_scan_8cpp"/>
-      </node>
-      <node id="16264">
-        <label>src/lib/access/Layouter.cpp</label>
-        <link refid="_layouter_8cpp"/>
       </node>
       <node id="16268">
         <label>src/lib/access/expressions/pred_BetweenOperation.h</label>
@@ -274,9 +182,119 @@
         <childnode refid="16269" relation="include">
         </childnode>
       </node>
+      <node id="16263">
+        <label>src/lib/access/GroupByScan.cpp</label>
+        <link refid="lib_2access_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="16278">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="16316">
+        <label>src/lib/storage/PointerCalculator.cpp</label>
+        <link refid="_pointer_calculator_8cpp"/>
+      </node>
+      <node id="16313">
+        <label>src/lib/io/TableDump.cpp</label>
+        <link refid="_table_dump_8cpp"/>
+      </node>
+      <node id="16269">
+        <label>src/lib/access/expressions/predicates.h</label>
+        <link refid="predicates_8h"/>
+        <childnode refid="16270" relation="include">
+        </childnode>
+        <childnode refid="16271" relation="include">
+        </childnode>
+        <childnode refid="16272" relation="include">
+        </childnode>
+        <childnode refid="16283" relation="include">
+        </childnode>
+        <childnode refid="16274" relation="include">
+        </childnode>
+      </node>
+      <node id="16315">
+        <label>src/lib/storage/AbstractTable.cpp</label>
+        <link refid="_abstract_table_8cpp"/>
+      </node>
+      <node id="16281">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
+      </node>
+      <node id="16294">
+        <label>src/lib/access/expressions/pred_LessThanExpression.h</label>
+        <link refid="pred___less_than_expression_8h"/>
+        <childnode refid="16269" relation="include">
+        </childnode>
+      </node>
+      <node id="16307">
+        <label>src/lib/access/storage/JsonTable.cpp</label>
+        <link refid="_json_table_8cpp"/>
+      </node>
+      <node id="16306">
+        <label>src/lib/access/PosUpdateScan.cpp</label>
+        <link refid="_pos_update_scan_8cpp"/>
+      </node>
+      <node id="16285">
+        <label>src/lib/access/expressions/pred_buildExpression.h</label>
+        <link refid="pred__build_expression_8h"/>
+        <childnode refid="16270" relation="include">
+        </childnode>
+        <childnode refid="16269" relation="include">
+        </childnode>
+        <childnode refid="16286" relation="include">
+        </childnode>
+        <childnode refid="16287" relation="include">
+        </childnode>
+      </node>
+      <node id="16291">
+        <label>src/lib/access/expressions/pred_EqualsExpression.h</label>
+        <link refid="pred___equals_expression_8h"/>
+        <childnode refid="16292" relation="include">
+        </childnode>
+        <childnode refid="16269" relation="include">
+        </childnode>
+      </node>
+      <node id="16279">
+        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
+      </node>
+      <node id="16264">
+        <label>src/lib/access/Layouter.cpp</label>
+        <link refid="_layouter_8cpp"/>
+      </node>
+      <node id="16293">
+        <label>src/lib/access/expressions/pred_GreaterThanExpression.h</label>
+        <link refid="pred___greater_than_expression_8h"/>
+        <childnode refid="16269" relation="include">
+        </childnode>
+      </node>
       <node id="16321">
         <label>src/lib/storage/Table.cpp</label>
         <link refid="_table_8cpp"/>
+      </node>
+      <node id="16276">
+        <label>src/bin/perf_regression/HashJoin.cpp</label>
+        <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="16311">
+        <label>src/lib/io/MPassCSVLoader.cpp</label>
+        <link refid="_m_pass_c_s_v_loader_8cpp"/>
+      </node>
+      <node id="16287">
+        <label>src/lib/access/SimpleTableScan.cpp</label>
+        <link refid="lib_2access_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="16312">
+        <label>src/lib/io/shortcuts.cpp</label>
+        <link refid="shortcuts_8cpp"/>
+      </node>
+      <node id="16271">
+        <label>src/lib/access/expressions/pred_expression_factory.h</label>
+        <link refid="pred__expression__factory_8h"/>
+        <childnode refid="16269" relation="include">
+        </childnode>
+        <childnode refid="16270" relation="include">
+        </childnode>
       </node>
       <node id="16267">
         <label>src/lib/access/expressions/pred_common.h</label>
@@ -298,41 +316,37 @@
         <childnode refid="16289" relation="include">
         </childnode>
       </node>
-      <node id="16315">
-        <label>src/lib/storage/AbstractTable.cpp</label>
-        <link refid="_abstract_table_8cpp"/>
+      <node id="16297">
+        <label>src/lib/io/Loader.cpp</label>
+        <link refid="_loader_8cpp"/>
       </node>
-      <node id="16296">
-        <label>src/lib/access/LayoutTable.cpp</label>
-        <link refid="_layout_table_8cpp"/>
+      <node id="16302">
+        <label>src/lib/access/expressions/GenericExpressions.h</label>
+        <link refid="_generic_expressions_8h"/>
+        <childnode refid="16303" relation="include">
+        </childnode>
       </node>
-      <node id="16303">
-        <label>src/lib/access/expressions/GenericExpressions.cpp</label>
-        <link refid="_generic_expressions_8cpp"/>
+      <node id="16320">
+        <label>src/lib/storage/TableGenerator.cpp</label>
+        <link refid="_table_generator_8cpp"/>
       </node>
-      <node id="16280">
-        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
-        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
+      <node id="16261">
+        <label>src/lib/storage/OrderIndifferentDictionary.h</label>
+        <link refid="OrderIndifferentDictionary.h"/>
+        <childnode refid="16262" relation="include">
+        </childnode>
+        <childnode refid="16263" relation="include">
+        </childnode>
+        <childnode refid="16264" relation="include">
+        </childnode>
+        <childnode refid="16265" relation="include">
+        </childnode>
+        <childnode refid="16266" relation="include">
+        </childnode>
       </node>
-      <node id="16306">
-        <label>src/lib/access/PosUpdateScan.cpp</label>
-        <link refid="_pos_update_scan_8cpp"/>
-      </node>
-      <node id="16281">
-        <label>src/bin/perf_regression/SortScan.cpp</label>
-        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
-      </node>
-      <node id="16312">
-        <label>src/lib/io/shortcuts.cpp</label>
-        <link refid="shortcuts_8cpp"/>
-      </node>
-      <node id="16309">
-        <label>src/lib/access/tx/ValidatePositions.cpp</label>
-        <link refid="_validate_positions_8cpp"/>
-      </node>
-      <node id="16276">
-        <label>src/bin/perf_regression/HashJoin.cpp</label>
-        <link refid="_hash_join_8cpp"/>
+      <node id="16318">
+        <label>src/lib/storage/Store.cpp</label>
+        <link refid="_store_8cpp"/>
       </node>
       <node id="16289">
         <label>src/lib/access/expressions/pred_PredicateBuilder.h</label>
@@ -342,73 +356,13 @@
         <childnode refid="16290" relation="include">
         </childnode>
       </node>
-      <node id="16288">
-        <label>src/lib/access/expressions/pred_CompoundExpression.h</label>
-        <link refid="pred___compound_expression_8h"/>
-        <childnode refid="16269" relation="include">
-        </childnode>
-        <childnode refid="16289" relation="include">
-        </childnode>
+      <node id="16270">
+        <label>src/lib/access/expressions/pred_buildExpression.cpp</label>
+        <link refid="pred__build_expression_8cpp"/>
       </node>
-      <node id="16298">
-        <label>src/lib/storage/SequentialHeapMerger.cpp</label>
-        <link refid="_sequential_heap_merger_8cpp"/>
-      </node>
-      <node id="16300">
-        <label>src/bin/perf_regression/tx_performance.cpp</label>
-        <link refid="tx__performance_8cpp"/>
-      </node>
-      <node id="16310">
-        <label>src/lib/access/UpdateScan.cpp</label>
-        <link refid="_update_scan_8cpp"/>
-      </node>
-      <node id="16285">
-        <label>src/lib/access/expressions/pred_buildExpression.h</label>
-        <link refid="pred__build_expression_8h"/>
-        <childnode refid="16270" relation="include">
-        </childnode>
-        <childnode refid="16269" relation="include">
-        </childnode>
-        <childnode refid="16286" relation="include">
-        </childnode>
-        <childnode refid="16287" relation="include">
-        </childnode>
-      </node>
-      <node id="16284">
-        <label>src/lib/access/expressions/pred_SimpleFieldExpression.h</label>
-        <link refid="pred___simple_field_expression_8h"/>
-        <childnode refid="16267" relation="include">
-        </childnode>
-        <childnode refid="16269" relation="include">
-        </childnode>
-      </node>
-      <node id="16292">
-        <label>src/bin/perf_regression/scan_performance.cpp</label>
-        <link refid="scan__performance_8cpp"/>
-      </node>
-      <node id="16291">
-        <label>src/lib/access/expressions/pred_EqualsExpression.h</label>
-        <link refid="pred___equals_expression_8h"/>
-        <childnode refid="16292" relation="include">
-        </childnode>
-        <childnode refid="16269" relation="include">
-        </childnode>
-      </node>
-      <node id="16271">
-        <label>src/lib/access/expressions/pred_expression_factory.h</label>
-        <link refid="pred__expression__factory_8h"/>
-        <childnode refid="16269" relation="include">
-        </childnode>
-        <childnode refid="16270" relation="include">
-        </childnode>
-      </node>
-      <node id="16278">
-        <label>src/bin/perf_regression/JoinScan.cpp</label>
-        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
-      </node>
-      <node id="16265">
-        <label>src/lib/storage/TableBuilder.cpp</label>
-        <link refid="_table_builder_8cpp"/>
+      <node id="16273">
+        <label>src/lib/access/JoinScan.cpp</label>
+        <link refid="lib_2access_2_join_scan_8cpp"/>
       </node>
       <node id="16319">
         <label>src/lib/storage.h</label>
@@ -430,37 +384,81 @@
         <childnode refid="16282" relation="include">
         </childnode>
       </node>
+      <node id="16304">
+        <label>src/lib/access/InsertScan.cpp</label>
+        <link refid="_insert_scan_8cpp"/>
+      </node>
+      <node id="16277">
+        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
+        <link refid="_hash_value_join_8cpp"/>
+      </node>
+      <node id="16262">
+        <label>src/lib/access/ExpressionScan.cpp</label>
+        <link refid="_expression_scan_8cpp"/>
+      </node>
       <node id="16317">
         <label>src/lib/storage/PrettyPrinter.cpp</label>
         <link refid="_pretty_printer_8cpp"/>
       </node>
-      <node id="16269">
-        <label>src/lib/access/expressions/predicates.h</label>
-        <link refid="predicates_8h"/>
-        <childnode refid="16270" relation="include">
+      <node id="16305">
+        <label>src/lib/access/MergeTable.cpp</label>
+        <link refid="_merge_table_8cpp"/>
+      </node>
+      <node id="16303">
+        <label>src/lib/access/expressions/GenericExpressions.cpp</label>
+        <link refid="_generic_expressions_8cpp"/>
+      </node>
+      <node id="16288">
+        <label>src/lib/access/expressions/pred_CompoundExpression.h</label>
+        <link refid="pred___compound_expression_8h"/>
+        <childnode refid="16269" relation="include">
         </childnode>
-        <childnode refid="16271" relation="include">
-        </childnode>
-        <childnode refid="16272" relation="include">
-        </childnode>
-        <childnode refid="16283" relation="include">
-        </childnode>
-        <childnode refid="16274" relation="include">
+        <childnode refid="16289" relation="include">
         </childnode>
       </node>
-      <node id="16316">
-        <label>src/lib/storage/PointerCalculator.cpp</label>
-        <link refid="_pointer_calculator_8cpp"/>
+      <node id="16286">
+        <label>src/lib/access/SimpleRawTableScan.cpp</label>
+        <link refid="_simple_raw_table_scan_8cpp"/>
       </node>
-      <node id="16313">
-        <label>src/lib/io/TableDump.cpp</label>
-        <link refid="_table_dump_8cpp"/>
+      <node id="16298">
+        <label>src/lib/storage/SequentialHeapMerger.cpp</label>
+        <link refid="_sequential_heap_merger_8cpp"/>
       </node>
-      <node id="16302">
-        <label>src/lib/access/expressions/GenericExpressions.h</label>
-        <link refid="_generic_expressions_8h"/>
-        <childnode refid="16303" relation="include">
+      <node id="16284">
+        <label>src/lib/access/expressions/pred_SimpleFieldExpression.h</label>
+        <link refid="pred___simple_field_expression_8h"/>
+        <childnode refid="16267" relation="include">
         </childnode>
+        <childnode refid="16269" relation="include">
+        </childnode>
+      </node>
+      <node id="16282">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
+      </node>
+      <node id="16309">
+        <label>src/lib/access/tx/ValidatePositions.cpp</label>
+        <link refid="_validate_positions_8cpp"/>
+      </node>
+      <node id="16265">
+        <label>src/lib/storage/TableBuilder.cpp</label>
+        <link refid="_table_builder_8cpp"/>
+      </node>
+      <node id="16300">
+        <label>src/bin/perf_regression/tx_performance.cpp</label>
+        <link refid="tx__performance_8cpp"/>
+      </node>
+      <node id="16314">
+        <label>src/lib/io/TransactionManager.cpp</label>
+        <link refid="_transaction_manager_8cpp"/>
+      </node>
+      <node id="16296">
+        <label>src/lib/access/LayoutTable.cpp</label>
+        <link refid="_layout_table_8cpp"/>
+      </node>
+      <node id="16301">
+        <label>src/lib/access/Delete.cpp</label>
+        <link refid="_delete_8cpp"/>
       </node>
       <node id="16299">
         <label>src/lib/storage/Store.h</label>
@@ -510,29 +508,31 @@
         <childnode refid="16319" relation="include">
         </childnode>
       </node>
-      <node id="16311">
-        <label>src/lib/io/MPassCSVLoader.cpp</label>
-        <link refid="_m_pass_c_s_v_loader_8cpp"/>
+      <node id="16283">
+        <label>src/lib/access/MergeJoin.hpp</label>
+        <link refid="_merge_join_8hpp"/>
+        <childnode refid="16274" relation="include">
+        </childnode>
       </node>
-      <node id="16274">
-        <label>src/lib/access.h</label>
-        <link refid="access_8h"/>
-        <childnode refid="16275" relation="include">
+      <node id="16295">
+        <label>src/lib/storage/SequentialHeapMerger.h</label>
+        <link refid="_sequential_heap_merger_8h"/>
+        <childnode refid="16296" relation="include">
         </childnode>
-        <childnode refid="16276" relation="include">
+        <childnode refid="16297" relation="include">
         </childnode>
-        <childnode refid="16277" relation="include">
+        <childnode refid="16298" relation="include">
         </childnode>
-        <childnode refid="16278" relation="include">
+        <childnode refid="16299" relation="include">
         </childnode>
-        <childnode refid="16279" relation="include">
+        <childnode refid="16320" relation="include">
         </childnode>
-        <childnode refid="16280" relation="include">
+        <childnode refid="16319" relation="include">
         </childnode>
-        <childnode refid="16281" relation="include">
-        </childnode>
-        <childnode refid="16282" relation="include">
-        </childnode>
+      </node>
+      <node id="16290">
+        <label>src/lib/access/expressions/pred_PredicateBuilder.cpp</label>
+        <link refid="pred___predicate_builder_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_order_indifferent_dictionary_iterator" prot="public">OrderIndifferentDictionaryIterator</innerclass>
@@ -732,6 +732,6 @@
 <codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_STORAGE_ORDERINDIFFERENTDICTIONARY_H_</highlight></codeline>
 <codeline lineno="189"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/OrderIndifferentDictionary.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/storage/OrderIndifferentDictionary.h"/>
   </compounddef>
 </doxygen>

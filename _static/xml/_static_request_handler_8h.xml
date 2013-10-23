@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_static_request_handler_8h" kind="file">
     <compoundname>StaticRequestHandler.h</compoundname>
     <includes local="no">string</includes>
@@ -7,6 +7,20 @@
     <includes refid="_router_8h" local="yes">net/Router.h</includes>
     <includedby refid="_static_request_handler_8cpp" local="yes">src/lib/net/StaticRequestHandler.cpp</includedby>
     <incdepgraph>
+      <node id="13464">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="13465" relation="include">
+        </childnode>
+        <childnode refid="13466" relation="include">
+        </childnode>
+        <childnode refid="13460" relation="include">
+        </childnode>
+        <childnode refid="13467" relation="include">
+        </childnode>
+        <childnode refid="13459" relation="include">
+        </childnode>
+      </node>
       <node id="13459">
         <label>string</label>
       </node>
@@ -19,6 +33,24 @@
         </childnode>
         <childnode refid="13461" relation="include">
         </childnode>
+      </node>
+      <node id="13467">
+        <label>condition_variable</label>
+      </node>
+      <node id="13465">
+        <label>vector</label>
+      </node>
+      <node id="13463">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="13459" relation="include">
+        </childnode>
+      </node>
+      <node id="13462">
+        <label>unordered_map</label>
+      </node>
+      <node id="13466">
+        <label>mutex</label>
       </node>
       <node id="13461">
         <label>net/Router.h</label>
@@ -34,52 +66,20 @@
         <childnode refid="13464" relation="include">
         </childnode>
       </node>
-      <node id="13467">
-        <label>condition_variable</label>
-      </node>
-      <node id="13465">
-        <label>vector</label>
-      </node>
-      <node id="13462">
-        <label>unordered_map</label>
-      </node>
-      <node id="13466">
-        <label>mutex</label>
-      </node>
-      <node id="13463">
-        <label>net/AbstractConnection.h</label>
-        <link refid="_abstract_connection_8h"/>
-        <childnode refid="13459" relation="include">
-        </childnode>
-      </node>
       <node id="13460">
         <label>memory</label>
       </node>
-      <node id="13464">
-        <label>taskscheduler/Task.h</label>
-        <link refid="_task_8h"/>
-        <childnode refid="13465" relation="include">
-        </childnode>
-        <childnode refid="13466" relation="include">
-        </childnode>
-        <childnode refid="13460" relation="include">
-        </childnode>
-        <childnode refid="13467" relation="include">
-        </childnode>
-        <childnode refid="13459" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="13469">
-        <label>src/lib/net/StaticRequestHandler.cpp</label>
-        <link refid="_static_request_handler_8cpp"/>
-      </node>
       <node id="13468">
         <label>src/lib/net/StaticRequestHandler.h</label>
         <link refid="StaticRequestHandler.h"/>
         <childnode refid="13469" relation="include">
         </childnode>
+      </node>
+      <node id="13469">
+        <label>src/lib/net/StaticRequestHandler.cpp</label>
+        <link refid="_static_request_handler_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classhyrise_1_1net_1_1_static_request_handler" prot="public">hyrise::net::StaticRequestHandler</innerclass>
@@ -104,7 +104,7 @@
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AbstractConnection;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="classhyrise_1_1net_1_1_static_request_handler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1net_1_1_static_request_handler" kindref="compound">StaticRequestHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_abstract_request_handler" kindref="compound" tooltip="Base class for request handlers.">net::AbstractRequestHandler</ref><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="classhyrise_1_1net_1_1_static_request_handler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1net_1_1_static_request_handler" kindref="compound">StaticRequestHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_abstract_request_handler" kindref="compound" tooltip="Base class for request handlers. ">net::AbstractRequestHandler</ref><sp/>{</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="17" refid="classhyrise_1_1net_1_1_static_request_handler_1a404a55bf8c66477156ad80b21147ec77" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_static_request_handler_1a404a55bf8c66477156ad80b21147ec77" kindref="member">_registered</ref>;</highlight></codeline>
 <codeline lineno="18" refid="classhyrise_1_1net_1_1_static_request_handler_1aa5f3a0d3a773a69229b63d8739cb8d22" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref><sp/>*<ref refid="classhyrise_1_1net_1_1_static_request_handler_1aa5f3a0d3a773a69229b63d8739cb8d22" kindref="member">_connection</ref>;</highlight></codeline>
@@ -122,6 +122,6 @@
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_NET_STATICREQUESTHANDLER_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/captain/HPI/aepic/hyrise/src/lib/net/StaticRequestHandler.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/net/StaticRequestHandler.h"/>
   </compounddef>
 </doxygen>

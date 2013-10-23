@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_thread_per_task_scheduler_8h" kind="file">
     <compoundname>ThreadPerTaskScheduler.h</compoundname>
     <includes refid="_abstract_task_scheduler_8h" local="yes">AbstractTaskScheduler.h</includes>
@@ -13,40 +13,34 @@
       <node id="19109">
         <label>queue</label>
       </node>
-      <node id="19100">
-        <label>AbstractTaskScheduler.h</label>
-        <link refid="_abstract_task_scheduler_8h"/>
-        <childnode refid="19101" relation="include">
+      <node id="19115">
+        <label>taskscheduler/SharedScheduler.h</label>
+        <link refid="_shared_scheduler_8h"/>
+        <childnode refid="19100" relation="include">
         </childnode>
-        <childnode refid="19107" relation="include">
-        </childnode>
-        <childnode refid="19104" relation="include">
-        </childnode>
-        <childnode refid="19111" relation="include">
-        </childnode>
-        <childnode refid="19112" relation="include">
-        </childnode>
-        <childnode refid="19110" relation="include">
-        </childnode>
-        <childnode refid="19113" relation="include">
+        <childnode refid="19116" relation="include">
         </childnode>
       </node>
-      <node id="19107">
-        <label>taskscheduler/AbstractTaskQueue.h</label>
-        <link refid="_abstract_task_queue_8h"/>
-        <childnode refid="19104" relation="include">
+      <node id="19113">
+        <label>helper/HwlocHelper.h</label>
+        <link refid="_hwloc_helper_8h"/>
+        <childnode refid="19114" relation="include">
+        </childnode>
+        <childnode refid="19102" relation="include">
+        </childnode>
+      </node>
+      <node id="19101">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="19102" relation="include">
         </childnode>
         <childnode refid="19103" relation="include">
         </childnode>
-        <childnode refid="19108" relation="include">
-        </childnode>
-        <childnode refid="19109" relation="include">
+        <childnode refid="19104" relation="include">
         </childnode>
         <childnode refid="19105" relation="include">
         </childnode>
-        <childnode refid="19110" relation="include">
-        </childnode>
-        <childnode refid="19101" relation="include">
+        <childnode refid="19106" relation="include">
         </childnode>
       </node>
       <node id="19116">
@@ -67,8 +61,50 @@
       <node id="19102">
         <label>vector</label>
       </node>
+      <node id="19107">
+        <label>taskscheduler/AbstractTaskQueue.h</label>
+        <link refid="_abstract_task_queue_8h"/>
+        <childnode refid="19104" relation="include">
+        </childnode>
+        <childnode refid="19103" relation="include">
+        </childnode>
+        <childnode refid="19108" relation="include">
+        </childnode>
+        <childnode refid="19109" relation="include">
+        </childnode>
+        <childnode refid="19105" relation="include">
+        </childnode>
+        <childnode refid="19110" relation="include">
+        </childnode>
+        <childnode refid="19101" relation="include">
+        </childnode>
+      </node>
+      <node id="19100">
+        <label>AbstractTaskScheduler.h</label>
+        <link refid="_abstract_task_scheduler_8h"/>
+        <childnode refid="19101" relation="include">
+        </childnode>
+        <childnode refid="19107" relation="include">
+        </childnode>
+        <childnode refid="19104" relation="include">
+        </childnode>
+        <childnode refid="19111" relation="include">
+        </childnode>
+        <childnode refid="19112" relation="include">
+        </childnode>
+        <childnode refid="19110" relation="include">
+        </childnode>
+        <childnode refid="19113" relation="include">
+        </childnode>
+      </node>
       <node id="19112">
         <label>iostream</label>
+      </node>
+      <node id="19103">
+        <label>mutex</label>
+      </node>
+      <node id="19108">
+        <label>thread</label>
       </node>
       <node id="19099">
         <label>src/lib/taskscheduler/ThreadPerTaskScheduler.h</label>
@@ -86,47 +122,11 @@
         <childnode refid="19109" relation="include">
         </childnode>
       </node>
-      <node id="19103">
-        <label>mutex</label>
-      </node>
-      <node id="19115">
-        <label>taskscheduler/SharedScheduler.h</label>
-        <link refid="_shared_scheduler_8h"/>
-        <childnode refid="19100" relation="include">
-        </childnode>
-        <childnode refid="19116" relation="include">
-        </childnode>
-      </node>
-      <node id="19108">
-        <label>thread</label>
-      </node>
-      <node id="19113">
-        <label>helper/HwlocHelper.h</label>
-        <link refid="_hwloc_helper_8h"/>
-        <childnode refid="19114" relation="include">
-        </childnode>
-        <childnode refid="19102" relation="include">
-        </childnode>
-      </node>
       <node id="19110">
         <label>log4cxx/logger.h</label>
       </node>
       <node id="19104">
         <label>memory</label>
-      </node>
-      <node id="19101">
-        <label>taskscheduler/Task.h</label>
-        <link refid="_task_8h"/>
-        <childnode refid="19102" relation="include">
-        </childnode>
-        <childnode refid="19103" relation="include">
-        </childnode>
-        <childnode refid="19104" relation="include">
-        </childnode>
-        <childnode refid="19105" relation="include">
-        </childnode>
-        <childnode refid="19106" relation="include">
-        </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -211,6 +211,6 @@
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>THREADPERTASKSCHEDULER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/ThreadPerTaskScheduler.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/taskscheduler/ThreadPerTaskScheduler.h"/>
   </compounddef>
 </doxygen>

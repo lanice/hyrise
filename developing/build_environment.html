@@ -30,13 +30,18 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/hyrise.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <link rel="top" title="HYRISE latest documentation" href="../index.html" />
     <link rel="up" title="Developing with HYRISE" href="../developing.html" />
     <link rel="next" title="Building the project" href="building.html" />
     <link rel="prev" title="Repository" href="git.html" /> 
   </head>
-  <body><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
+  <body>
+    <div id="backToTop">
+      <span class="glyphicon glyphicon-chevron-up"></span> <br />
+      <p>Back To Top</p>
+    </div><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -190,25 +195,25 @@ dependencies are available and need no further configuration.</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="n">mkdir</span> <span class="n">install</span>
 <span class="n">cd</span> <span class="n">install</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">boost</span> <span class="n">thrift</span> <span class="n">log4cxx</span> <span class="n">google</span><span class="o">-</span><span class="n">perftools</span> <span class="n">ccache</span> <span class="n">hwloc</span> <span class="n">libev</span> <span class="n">cmake</span>
-<span class="n">wget</span> <span class="nl">http:</span><span class="c1">//leaseweb.dl.sourceforge.net/project/libcsv/libcsv/libcsv-3.0.1/libcsv-3.0.1.tar.gz</span>
+<span class="n">wget</span> <span class="n">http</span><span class="o">:</span><span class="c1">//leaseweb.dl.sourceforge.net/project/libcsv/libcsv/libcsv-3.0.1/libcsv-3.0.1.tar.gz</span>
 <span class="n">tar</span> <span class="n">zxvf</span> <span class="n">libcsv</span><span class="o">-</span><span class="mf">3.0.1</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
 <span class="n">cd</span> <span class="n">libcsv</span><span class="o">-</span><span class="mf">3.0.1</span>
 <span class="n">make</span>
 <span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
 <span class="n">cd</span> <span class="p">..</span>
-<span class="n">wget</span> <span class="nl">http:</span><span class="c1">//www.antlr.org/depot/antlr3/main/runtime/C/dist/libantlr3c-3.1.4-SNAPSHOT.tar.gz</span>
+<span class="n">wget</span> <span class="n">http</span><span class="o">:</span><span class="c1">//www.antlr.org/depot/antlr3/main/runtime/C/dist/libantlr3c-3.1.4-SNAPSHOT.tar.gz</span>
 <span class="n">cd</span> <span class="n">libantlr3c</span><span class="o">-</span><span class="mf">3.1.4</span><span class="o">-</span><span class="n">SNAPSHOT</span>
 <span class="p">.</span><span class="o">/</span><span class="n">configure</span>
 <span class="n">make</span>
 <span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
 <span class="n">cd</span> <span class="p">..</span>
-<span class="n">wget</span> <span class="nl">http:</span><span class="c1">//glaros.dtc.umn.edu/gkhome/fetch/sw/metis/metis-5.0.tar.gz</span>
+<span class="n">wget</span> <span class="n">http</span><span class="o">:</span><span class="c1">//glaros.dtc.umn.edu/gkhome/fetch/sw/metis/metis-5.0.tar.gz</span>
 <span class="n">tar</span> <span class="n">zxvf</span> <span class="n">metis</span><span class="o">-</span><span class="mf">5.0</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
 <span class="n">cd</span> <span class="n">metis</span><span class="o">-</span><span class="mf">5.0</span>
 <span class="n">make</span> <span class="n">config</span>
 <span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
 <span class="n">cd</span> <span class="p">..</span>
-<span class="n">wget</span> <span class="nl">ftp:</span><span class="c1">//oss.sgi.com/www/projects/libnuma/download/numactl-2.0.7.tar.gz</span>
+<span class="n">wget</span> <span class="n">ftp</span><span class="o">:</span><span class="c1">//oss.sgi.com/www/projects/libnuma/download/numactl-2.0.7.tar.gz</span>
 <span class="n">tar</span> <span class="n">zvxf</span> <span class="n">numactl</span><span class="o">-</span><span class="mf">2.0.7</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
 <span class="n">cd</span> <span class="n">numactl</span><span class="o">-</span><span class="mf">2.0.7</span>
 <span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>

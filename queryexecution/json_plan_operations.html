@@ -30,13 +30,18 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/hyrise.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <link rel="top" title="HYRISE latest documentation" href="../index.html" />
     <link rel="up" title="HYRISE Query Execution" href="../query_execution.html" />
     <link rel="next" title="Transaction Management System" href="tx.html" />
     <link rel="prev" title="Parallelization" href="parallelization.html" /> 
   </head>
-  <body><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
+  <body>
+    <div id="backToTop">
+      <span class="glyphicon glyphicon-chevron-up"></span> <br />
+      <p>Back To Top</p>
+    </div><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -159,8 +164,8 @@ Handling this data is implemented in <tt class="docutils literal"><span class="p
     <span class="s">&quot;table&quot;</span><span class="o">:</span> <span class="s">&quot;table name&quot;</span><span class="p">,</span>
     <span class="s">&quot;filename&quot;</span><span class="o">:</span> <span class="s">&quot;file.data&quot;</span><span class="p">,</span>
     <span class="s">&quot;header&quot;</span><span class="o">:</span> <span class="s">&quot;header.txt&quot;</span><span class="p">,</span>
-    <span class="s">&quot;binary&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="p">,</span> <span class="p">[</span><span class="n">optional</span><span class="p">]</span>
-    <span class="s">&quot;unsafe&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="o">/</span><span class="kc">false</span> <span class="p">[</span><span class="n">optional</span><span class="p">]</span>
+    <span class="s">&quot;binary&quot;</span><span class="o">:</span> <span class="nb">true</span><span class="o">/</span><span class="nb">false</span><span class="p">,</span> <span class="p">[</span><span class="n">optional</span><span class="p">]</span>
+    <span class="s">&quot;unsafe&quot;</span><span class="o">:</span> <span class="nb">true</span><span class="o">/</span><span class="nb">false</span> <span class="p">[</span><span class="n">optional</span><span class="p">]</span>
     <span class="p">},</span>
 </pre></div>
 </div>
@@ -180,7 +185,7 @@ Handling this data is implemented in <tt class="docutils literal"><span class="p
 <p>This operator performs a Selection.</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;scan&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;SimpleTableScan&quot;</span><span class="p">,</span>
-    <span class="s">&quot;positions&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s">&quot;positions&quot;</span><span class="o">:</span> <span class="nb">true</span><span class="p">,</span>
     <span class="s">&quot;predicates&quot;</span><span class="o">:</span> <span class="p">[</span>
         <span class="p">{</span> <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="mi">7</span> <span class="p">},</span>
         <span class="p">{</span> <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;in&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;f&quot;</span> <span class="o">:</span> <span class="s">&quot;NAME1&quot;</span><span class="p">,</span> <span class="s">&quot;vtype&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;value&quot;</span><span class="o">:</span> <span class="mi">330</span> <span class="p">},</span>
@@ -462,7 +467,7 @@ Handling this data is implemented in <tt class="docutils literal"><span class="p
 <div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;materializing&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;MaterializingScan&quot;</span><span class="p">,</span>
     <span class="s">&quot;samples&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="s">&quot;memcpy&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+    <span class="s">&quot;memcpy&quot;</span><span class="o">:</span> <span class="nb">false</span><span class="p">,</span> <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="nb">false</span><span class="p">]</span>
     <span class="s">&quot;copyValues&quot;</span><span class="o">:</span> <span class="p">[</span><span class="n">deprecated</span><span class="p">]</span>
     <span class="p">},</span>
 </pre></div>

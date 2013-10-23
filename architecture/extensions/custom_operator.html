@@ -30,13 +30,18 @@
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <script type="text/javascript" src="../../_static/hyrise.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <link rel="top" title="HYRISE latest documentation" href="../../index.html" />
     <link rel="up" title="Extension points" href="../extension_points.html" />
     <link rel="next" title="Routing" href="../routing.html" />
     <link rel="prev" title="Custom expressions" href="custom_expression.html" /> 
   </head>
-  <body><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
+  <body>
+    <div id="backToTop">
+      <span class="glyphicon glyphicon-chevron-up"></span> <br />
+      <p>Back To Top</p>
+    </div><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -196,8 +201,8 @@ defined in the JSON execution plan:</p>
 
 <span class="k">class</span> <span class="nc">MyComplexOperator</span> <span class="o">:</span> <span class="k">public</span> <span class="n">_PlanOperation</span> <span class="p">{</span>
    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">_param</span><span class="p">;</span>
-   <span class="kt">void</span> <span class="n">executePlanOperation</span><span class="p">();</span>
-<span class="k">public</span><span class="o">:</span>
+   <span class="kt">void</span> <span class="nf">executePlanOperation</span><span class="p">();</span>
+<span class="nl">public:</span>
    <span class="n">MyComplexOperator</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">param</span><span class="p">);</span>
    <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">_PlanOperation</span><span class="o">&gt;</span> <span class="n">parse</span><span class="p">(</span><span class="n">Json</span><span class="o">::</span><span class="n">Value</span><span class="o">&amp;</span> <span class="n">data</span><span class="p">);</span>
 <span class="p">}</span>

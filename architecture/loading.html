@@ -30,13 +30,18 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/hyrise.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <link rel="top" title="HYRISE latest documentation" href="../index.html" />
     <link rel="up" title="Implementation Details" href="../architecture.html" />
     <link rel="next" title="Loading" href="loading/index.html" />
     <link rel="prev" title="HYRISE Layouter" href="layouter.html" /> 
   </head>
-  <body><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
+  <body>
+    <div id="backToTop">
+      <span class="glyphicon glyphicon-chevron-up"></span> <br />
+      <p>Back To Top</p>
+    </div><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -293,7 +298,7 @@ be done.</p>
 <span class="k">class</span> <span class="nc">LoaderExample</span> <span class="o">:</span> <span class="k">public</span> <span class="o">::</span><span class="n">hyrise</span><span class="o">::</span><span class="n">Test</span> <span class="p">{};</span>
 
 <span class="n">TEST_F</span><span class="p">(</span><span class="n">LoaderExample</span><span class="p">,</span> <span class="n">load_with_basepath</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">hyrise</span><span class="o">::</span><span class="n">storage</span><span class="o">::</span><span class="n">atable_ptr_t</span>  <span class="n">t</span> <span class="o">=</span> <span class="n">Loader</span><span class="o">::</span><span class="n">load</span><span class="p">(</span>
+  <span class="n">hyrise</span><span class="o">::</span><span class="n">storage</span><span class="o">::</span><span class="kt">atable_ptr_t</span>  <span class="n">t</span> <span class="o">=</span> <span class="n">Loader</span><span class="o">::</span><span class="n">load</span><span class="p">(</span>
       <span class="n">Loader</span><span class="o">::</span><span class="n">params</span><span class="p">()</span>
       <span class="p">.</span><span class="n">setInput</span><span class="p">(</span><span class="n">CSVInput</span><span class="p">(</span><span class="s">&quot;employees.data&quot;</span><span class="p">))</span>
       <span class="p">.</span><span class="n">setHeader</span><span class="p">(</span><span class="n">CSVHeader</span><span class="p">(</span><span class="s">&quot;employees.tbl&quot;</span><span class="p">))</span>

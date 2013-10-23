@@ -30,13 +30,18 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/hyrise.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <link rel="top" title="HYRISE latest documentation" href="../index.html" />
     <link rel="up" title="HYRISE Query Execution" href="../query_execution.html" />
     <link rel="next" title="Plan Operations" href="json_plan_operations.html" />
     <link rel="prev" title="JSON Queries" href="json_queries.html" /> 
   </head>
-  <body><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
+  <body>
+    <div id="backToTop">
+      <span class="glyphicon glyphicon-chevron-up"></span> <br />
+      <p>Back To Top</p>
+    </div><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -168,7 +173,7 @@
                 <span class="p">},</span>
                 <span class="s">&quot;0_union&quot;</span><span class="o">:</span> <span class="p">{</span>
                         <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;UnionScan&quot;</span>
-                        <span class="s">&quot;positions&quot;</span><span class="o">:</span> <span class="kc">true</span>
+                        <span class="s">&quot;positions&quot;</span><span class="o">:</span> <span class="nb">true</span>
                 <span class="p">},</span>
                 <span class="s">&quot;1&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="p">[...]</span> <span class="p">}</span>
         <span class="p">},</span>
@@ -209,7 +214,7 @@
         <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">unionOperatorId</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">unionIdFor</span><span class="p">(</span><span class="n">operatorId</span><span class="p">);</span>
         <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="n">unionOperator</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">unionOperator</span><span class="p">(</span><span class="n">operatorId</span><span class="p">);</span>
         <span class="n">query</span><span class="p">[</span><span class="s">&quot;operators&quot;</span><span class="p">][</span><span class="n">unionOperatorId</span><span class="p">]</span> <span class="o">=</span> <span class="n">unionOperator</span><span class="p">;</span>
-        <span class="k">const</span> <span class="n">size_t</span> <span class="n">numberOfInitialEdges</span> <span class="o">=</span> <span class="n">query</span><span class="p">[</span><span class="s">&quot;edges&quot;</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
+        <span class="k">const</span> <span class="kt">size_t</span> <span class="n">numberOfInitialEdges</span> <span class="o">=</span> <span class="n">query</span><span class="p">[</span><span class="s">&quot;edges&quot;</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
 
         <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">instanceIds</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">buildInstances</span><span class="p">(</span>
                 <span class="n">query</span><span class="p">,</span> <span class="n">operatorConfiguration</span><span class="p">,</span> <span class="n">operatorId</span><span class="p">,</span> <span class="n">unionOperatorId</span><span class="p">);</span>
@@ -244,7 +249,7 @@
         <span class="n">boost</span><span class="o">::</span><span class="n">threadpool</span><span class="o">::</span><span class="n">dependency_task_func</span> <span class="o">**</span><span class="n">result</span><span class="p">)</span> <span class="k">const</span>
 <span class="p">{</span>
         <span class="n">vector</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">threadpool</span><span class="o">::</span><span class="n">dependency_task_func</span><span class="o">*&gt;</span> <span class="n">tasks</span><span class="p">;</span>
-        <span class="n">task_map_t</span> <span class="n">task_map</span><span class="p">;</span>
+        <span class="kt">task_map_t</span> <span class="n">task_map</span><span class="p">;</span>
 
         <span class="k">this</span><span class="o">-&gt;</span><span class="n">buildTasks</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">tasks</span><span class="p">,</span> <span class="n">task_map</span><span class="p">);</span>
         <span class="k">this</span><span class="o">-&gt;</span><span class="n">setDependencies</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">task_map</span><span class="p">);</span>

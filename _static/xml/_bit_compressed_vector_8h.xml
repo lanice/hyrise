@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_bit_compressed_vector_8h" kind="file">
     <compoundname>BitCompressedVector.h</compoundname>
     <includes local="no">cassert</includes>
@@ -28,12 +28,6 @@
       <node id="15226">
         <label>string</label>
       </node>
-      <node id="15232">
-        <label>storage/AbstractAttributeVector.h</label>
-        <link refid="_abstract_attribute_vector_8h"/>
-        <childnode refid="15233" relation="include">
-        </childnode>
-      </node>
       <node id="15230">
         <label>storage/BaseAttributeVector.h</label>
         <link refid="_base_attribute_vector_8h"/>
@@ -42,6 +36,12 @@
         <childnode refid="15227" relation="include">
         </childnode>
         <childnode refid="15232" relation="include">
+        </childnode>
+      </node>
+      <node id="15232">
+        <label>storage/AbstractAttributeVector.h</label>
+        <link refid="_abstract_attribute_vector_8h"/>
+        <childnode refid="15233" relation="include">
         </childnode>
       </node>
       <node id="15229">
@@ -53,13 +53,8 @@
       <node id="15225">
         <label>mutex</label>
       </node>
-      <node id="15228">
-        <label>memory/MallocStrategy.h</label>
-        <link refid="_malloc_strategy_8h"/>
-        <childnode refid="15229" relation="include">
-        </childnode>
-        <childnode refid="15223" relation="include">
-        </childnode>
+      <node id="15224">
+        <label>cstring</label>
       </node>
       <node id="15220">
         <label>src/lib/storage/BitCompressedVector.h</label>
@@ -83,17 +78,126 @@
         <childnode refid="15230" relation="include">
         </childnode>
       </node>
-      <node id="15224">
-        <label>cstring</label>
-      </node>
       <node id="15231">
         <label>memory</label>
       </node>
+      <node id="15228">
+        <label>memory/MallocStrategy.h</label>
+        <link refid="_malloc_strategy_8h"/>
+        <childnode refid="15229" relation="include">
+        </childnode>
+        <childnode refid="15223" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="15250">
-        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
-        <link refid="_hash_value_join_8cpp"/>
+      <node id="15240">
+        <label>src/lib/access/MaterializingScan.cpp</label>
+        <link refid="_materializing_scan_8cpp"/>
+      </node>
+      <node id="15253">
+        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
+        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="15284">
+        <label>src/lib/access/UnionScan.cpp</label>
+        <link refid="lib_2access_2_union_scan_8cpp"/>
+      </node>
+      <node id="15248">
+        <label>src/bin/perf_regression/GroupByScan.cpp</label>
+        <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="15298">
+        <label>src/lib/access/UpdateScan.cpp</label>
+        <link refid="_update_scan_8cpp"/>
+      </node>
+      <node id="15279">
+        <label>src/lib/access/radixjoin/RadixCluster.h</label>
+        <link refid="_radix_cluster_8h"/>
+        <childnode refid="15259" relation="include">
+        </childnode>
+      </node>
+      <node id="15270">
+        <label>src/lib/access/HashJoinProbe.cpp</label>
+        <link refid="_hash_join_probe_8cpp"/>
+      </node>
+      <node id="15258">
+        <label>src/lib/access/radixjoin/NestedLoopEquiJoin.cpp</label>
+        <link refid="_nested_loop_equi_join_8cpp"/>
+      </node>
+      <node id="15297">
+        <label>src/lib/access/storage/TableIO.cpp</label>
+        <link refid="_table_i_o_8cpp"/>
+      </node>
+      <node id="15247">
+        <label>src/lib/access.h</label>
+        <link refid="access_8h"/>
+        <childnode refid="15248" relation="include">
+        </childnode>
+        <childnode refid="15249" relation="include">
+        </childnode>
+        <childnode refid="15250" relation="include">
+        </childnode>
+        <childnode refid="15251" relation="include">
+        </childnode>
+        <childnode refid="15252" relation="include">
+        </childnode>
+        <childnode refid="15253" relation="include">
+        </childnode>
+        <childnode refid="15254" relation="include">
+        </childnode>
+        <childnode refid="15255" relation="include">
+        </childnode>
+      </node>
+      <node id="15269">
+        <label>src/lib/access/GroupByScan.cpp</label>
+        <link refid="lib_2access_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="15251">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="15287">
+        <label>src/lib/io/TableDump.cpp</label>
+        <link refid="_table_dump_8cpp"/>
+      </node>
+      <node id="15285">
+        <label>src/lib/storage/PointerCalculator.cpp</label>
+        <link refid="_pointer_calculator_8cpp"/>
+      </node>
+      <node id="15259">
+        <label>src/lib/access/radixjoin/RadixCluster.cpp</label>
+        <link refid="_radix_cluster_8cpp"/>
+      </node>
+      <node id="15244">
+        <label>src/lib/storage/GroupValue.cpp</label>
+        <link refid="_group_value_8cpp"/>
+      </node>
+      <node id="15243">
+        <label>src/lib/storage/AbstractTable.cpp</label>
+        <link refid="_abstract_table_8cpp"/>
+      </node>
+      <node id="15254">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
+      </node>
+      <node id="15277">
+        <label>src/lib/access/radixjoin/Histogram.h</label>
+        <link refid="_histogram_8h"/>
+        <childnode refid="15278" relation="include">
+        </childnode>
+        <childnode refid="15241" relation="include">
+        </childnode>
+        <childnode refid="15279" relation="include">
+        </childnode>
+      </node>
+      <node id="15296">
+        <label>src/lib/access/storage/JsonTable.cpp</label>
+        <link refid="_json_table_8cpp"/>
+      </node>
+      <node id="15275">
+        <label>src/lib/access/PosUpdateScan.cpp</label>
+        <link refid="_pos_update_scan_8cpp"/>
       </node>
       <node id="15286">
         <label>src/lib/storage/storage_types_helper.h</label>
@@ -107,107 +211,9 @@
         <childnode refid="15288" relation="include">
         </childnode>
       </node>
-      <node id="15296">
-        <label>src/lib/access/storage/JsonTable.cpp</label>
-        <link refid="_json_table_8cpp"/>
-      </node>
-      <node id="15303">
-        <label>src/lib/storage/Store.cpp</label>
-        <link refid="_store_8cpp"/>
-      </node>
-      <node id="15266">
-        <label>src/lib/access/CreateIndex.cpp</label>
-        <link refid="_create_index_8cpp"/>
-      </node>
-      <node id="15276">
-        <label>src/lib/access/ProjectionScan.cpp</label>
-        <link refid="lib_2access_2_projection_scan_8cpp"/>
-      </node>
-      <node id="15273">
-        <label>src/lib/access/IntersectPositions.cpp</label>
-        <link refid="_intersect_positions_8cpp"/>
-      </node>
-      <node id="15293">
-        <label>src/lib/access/InsertScan.cpp</label>
-        <link refid="_insert_scan_8cpp"/>
-      </node>
-      <node id="15259">
-        <label>src/lib/access/radixjoin/RadixCluster.cpp</label>
-        <link refid="_radix_cluster_8cpp"/>
-      </node>
-      <node id="15297">
-        <label>src/lib/access/storage/TableIO.cpp</label>
-        <link refid="_table_i_o_8cpp"/>
-      </node>
-      <node id="15248">
-        <label>src/bin/perf_regression/GroupByScan.cpp</label>
-        <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
-      </node>
-      <node id="15238">
-        <label>src/lib/access/ExpressionScan.cpp</label>
-        <link refid="_expression_scan_8cpp"/>
-      </node>
-      <node id="15255">
-        <label>src/bin/perf_regression/UnionScan.cpp</label>
-        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
-      </node>
-      <node id="15261">
-        <label>src/lib/access/SimpleRawTableScan.cpp</label>
-        <link refid="_simple_raw_table_scan_8cpp"/>
-      </node>
-      <node id="15280">
-        <label>src/lib/access/SimpleTableScan.cpp</label>
-        <link refid="lib_2access_2_simple_table_scan_8cpp"/>
-      </node>
-      <node id="15272">
-        <label>src/lib/access/IndexScan.cpp</label>
-        <link refid="_index_scan_8cpp"/>
-      </node>
-      <node id="15279">
-        <label>src/lib/access/radixjoin/RadixCluster.h</label>
-        <link refid="_radix_cluster_8h"/>
-        <childnode refid="15259" relation="include">
-        </childnode>
-      </node>
-      <node id="15271">
-        <label>src/lib/access/HashValueJoin.hpp</label>
-        <link refid="_hash_value_join_8hpp"/>
-        <childnode refid="15247" relation="include">
-        </childnode>
-      </node>
-      <node id="15262">
-        <label>src/lib/io/Loader.cpp</label>
-        <link refid="_loader_8cpp"/>
-      </node>
-      <node id="15246">
-        <label>src/lib/access/MergeJoin.hpp</label>
-        <link refid="_merge_join_8hpp"/>
-        <childnode refid="15247" relation="include">
-        </childnode>
-      </node>
-      <node id="15305">
-        <label>src/lib/storage/TableGenerator.cpp</label>
-        <link refid="_table_generator_8cpp"/>
-      </node>
-      <node id="15258">
-        <label>src/lib/access/radixjoin/NestedLoopEquiJoin.cpp</label>
-        <link refid="_nested_loop_equi_join_8cpp"/>
-      </node>
-      <node id="15267">
-        <label>src/lib/access/Delete.cpp</label>
-        <link refid="_delete_8cpp"/>
-      </node>
-      <node id="15295">
-        <label>src/lib/access/MergeTable.cpp</label>
-        <link refid="_merge_table_8cpp"/>
-      </node>
-      <node id="15301">
-        <label>src/lib/io/TransactionManager.cpp</label>
-        <link refid="_transaction_manager_8cpp"/>
-      </node>
-      <node id="15284">
-        <label>src/lib/access/UnionScan.cpp</label>
-        <link refid="lib_2access_2_union_scan_8cpp"/>
+      <node id="15241">
+        <label>src/lib/access/radixjoin/PrefixSum.cpp</label>
+        <link refid="_prefix_sum_8cpp"/>
       </node>
       <node id="15237">
         <label>src/lib/storage/Table.h</label>
@@ -237,9 +243,307 @@
         <childnode refid="15289" relation="include">
         </childnode>
       </node>
-      <node id="15270">
-        <label>src/lib/access/HashJoinProbe.cpp</label>
-        <link refid="_hash_join_probe_8cpp"/>
+      <node id="15252">
+        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
+      </node>
+      <node id="15239">
+        <label>src/lib/access/Layouter.cpp</label>
+        <link refid="_layouter_8cpp"/>
+      </node>
+      <node id="15263">
+        <label>src/lib/storage/MutableVerticalTable.cpp</label>
+        <link refid="_mutable_vertical_table_8cpp"/>
+      </node>
+      <node id="15236">
+        <label>src/lib/storage/Table.cpp</label>
+        <link refid="_table_8cpp"/>
+      </node>
+      <node id="15249">
+        <label>src/bin/perf_regression/HashJoin.cpp</label>
+        <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="15299">
+        <label>src/lib/io/MPassCSVLoader.cpp</label>
+        <link refid="_m_pass_c_s_v_loader_8cpp"/>
+      </node>
+      <node id="15280">
+        <label>src/lib/access/SimpleTableScan.cpp</label>
+        <link refid="lib_2access_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="15300">
+        <label>src/lib/io/shortcuts.cpp</label>
+        <link refid="shortcuts_8cpp"/>
+      </node>
+      <node id="15273">
+        <label>src/lib/access/IntersectPositions.cpp</label>
+        <link refid="_intersect_positions_8cpp"/>
+      </node>
+      <node id="15262">
+        <label>src/lib/io/Loader.cpp</label>
+        <link refid="_loader_8cpp"/>
+      </node>
+      <node id="15291">
+        <label>src/lib/access/expressions/GenericExpressions.h</label>
+        <link refid="_generic_expressions_8h"/>
+        <childnode refid="15292" relation="include">
+        </childnode>
+      </node>
+      <node id="15305">
+        <label>src/lib/storage/TableGenerator.cpp</label>
+        <link refid="_table_generator_8cpp"/>
+      </node>
+      <node id="15281">
+        <label>src/lib/access/TableScan.cpp</label>
+        <link refid="_table_scan_8cpp"/>
+      </node>
+      <node id="15278">
+        <label>src/lib/access/radixjoin/Histogram.cpp</label>
+        <link refid="_histogram_8cpp"/>
+      </node>
+      <node id="15260">
+        <label>src/lib/access/ScriptOperation.cpp</label>
+        <link refid="_script_operation_8cpp"/>
+      </node>
+      <node id="15303">
+        <label>src/lib/storage/Store.cpp</label>
+        <link refid="_store_8cpp"/>
+      </node>
+      <node id="15257">
+        <label>src/lib/access/MultiplyRefField.cpp</label>
+        <link refid="_multiply_ref_field_8cpp"/>
+      </node>
+      <node id="15283">
+        <label>src/lib/access/UnionAll.cpp</label>
+        <link refid="_union_all_8cpp"/>
+      </node>
+      <node id="15272">
+        <label>src/lib/access/IndexScan.cpp</label>
+        <link refid="_index_scan_8cpp"/>
+      </node>
+      <node id="15235">
+        <label>src/lib/storage/AttributeVectorFactory.h</label>
+        <link refid="_attribute_vector_factory_8h"/>
+        <childnode refid="15236" relation="include">
+        </childnode>
+        <childnode refid="15237" relation="include">
+        </childnode>
+      </node>
+      <node id="15288">
+        <label>src/lib/storage/storage_types_helper.cpp</label>
+        <link refid="storage__types__helper_8cpp"/>
+      </node>
+      <node id="15274">
+        <label>src/lib/access/JoinScan.cpp</label>
+        <link refid="lib_2access_2_join_scan_8cpp"/>
+      </node>
+      <node id="15266">
+        <label>src/lib/access/CreateIndex.cpp</label>
+        <link refid="_create_index_8cpp"/>
+      </node>
+      <node id="15289">
+        <label>src/lib/storage.h</label>
+        <link refid="storage_8h"/>
+        <childnode refid="15248" relation="include">
+        </childnode>
+        <childnode refid="15249" relation="include">
+        </childnode>
+        <childnode refid="15250" relation="include">
+        </childnode>
+        <childnode refid="15251" relation="include">
+        </childnode>
+        <childnode refid="15252" relation="include">
+        </childnode>
+        <childnode refid="15253" relation="include">
+        </childnode>
+        <childnode refid="15254" relation="include">
+        </childnode>
+        <childnode refid="15255" relation="include">
+        </childnode>
+      </node>
+      <node id="15307">
+        <label>src/lib/storage/TableFactory.cpp</label>
+        <link refid="_table_factory_8cpp"/>
+      </node>
+      <node id="15268">
+        <label>src/lib/access/Distinct.cpp</label>
+        <link refid="_distinct_8cpp"/>
+      </node>
+      <node id="15293">
+        <label>src/lib/access/InsertScan.cpp</label>
+        <link refid="_insert_scan_8cpp"/>
+      </node>
+      <node id="15250">
+        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
+        <link refid="_hash_value_join_8cpp"/>
+      </node>
+      <node id="15238">
+        <label>src/lib/access/ExpressionScan.cpp</label>
+        <link refid="_expression_scan_8cpp"/>
+      </node>
+      <node id="15245">
+        <label>src/lib/storage/MutableVerticalTable.h</label>
+        <link refid="_mutable_vertical_table_8h"/>
+        <childnode refid="15238" relation="include">
+        </childnode>
+        <childnode refid="15246" relation="include">
+        </childnode>
+        <childnode refid="15256" relation="include">
+        </childnode>
+        <childnode refid="15258" relation="include">
+        </childnode>
+        <childnode refid="15259" relation="include">
+        </childnode>
+        <childnode refid="15260" relation="include">
+        </childnode>
+        <childnode refid="15261" relation="include">
+        </childnode>
+        <childnode refid="15262" relation="include">
+        </childnode>
+        <childnode refid="15243" relation="include">
+        </childnode>
+        <childnode refid="15263" relation="include">
+        </childnode>
+        <childnode refid="15264" relation="include">
+        </childnode>
+        <childnode refid="15290" relation="include">
+        </childnode>
+        <childnode refid="15304" relation="include">
+        </childnode>
+        <childnode refid="15305" relation="include">
+        </childnode>
+        <childnode refid="15289" relation="include">
+        </childnode>
+      </node>
+      <node id="15302">
+        <label>src/lib/storage/PrettyPrinter.cpp</label>
+        <link refid="_pretty_printer_8cpp"/>
+      </node>
+      <node id="15295">
+        <label>src/lib/access/MergeTable.cpp</label>
+        <link refid="_merge_table_8cpp"/>
+      </node>
+      <node id="15306">
+        <label>src/lib/storage/TableFactory.h</label>
+        <link refid="_table_factory_8h"/>
+        <childnode refid="15262" relation="include">
+        </childnode>
+        <childnode refid="15245" relation="include">
+        </childnode>
+        <childnode refid="15307" relation="include">
+        </childnode>
+        <childnode refid="15289" relation="include">
+        </childnode>
+      </node>
+      <node id="15242">
+        <label>src/lib/access/SortScan.cpp</label>
+        <link refid="lib_2access_2_sort_scan_8cpp"/>
+      </node>
+      <node id="15292">
+        <label>src/lib/access/expressions/GenericExpressions.cpp</label>
+        <link refid="_generic_expressions_8cpp"/>
+      </node>
+      <node id="15261">
+        <label>src/lib/access/SimpleRawTableScan.cpp</label>
+        <link refid="_simple_raw_table_scan_8cpp"/>
+      </node>
+      <node id="15256">
+        <label>src/lib/access/MultiplyRefField.h</label>
+        <link refid="_multiply_ref_field_8h"/>
+        <childnode refid="15257" relation="include">
+        </childnode>
+      </node>
+      <node id="15255">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
+      </node>
+      <node id="15282">
+        <label>src/lib/access/tx/ValidatePositions.cpp</label>
+        <link refid="_validate_positions_8cpp"/>
+      </node>
+      <node id="15304">
+        <label>src/lib/storage/TableBuilder.cpp</label>
+        <link refid="_table_builder_8cpp"/>
+      </node>
+      <node id="15271">
+        <label>src/lib/access/HashValueJoin.hpp</label>
+        <link refid="_hash_value_join_8hpp"/>
+        <childnode refid="15247" relation="include">
+        </childnode>
+      </node>
+      <node id="15265">
+        <label>src/bin/perf_regression/tx_performance.cpp</label>
+        <link refid="tx__performance_8cpp"/>
+      </node>
+      <node id="15301">
+        <label>src/lib/io/TransactionManager.cpp</label>
+        <link refid="_transaction_manager_8cpp"/>
+      </node>
+      <node id="15294">
+        <label>src/lib/access/LayoutTable.cpp</label>
+        <link refid="_layout_table_8cpp"/>
+      </node>
+      <node id="15276">
+        <label>src/lib/access/ProjectionScan.cpp</label>
+        <link refid="lib_2access_2_projection_scan_8cpp"/>
+      </node>
+      <node id="15267">
+        <label>src/lib/access/Delete.cpp</label>
+        <link refid="_delete_8cpp"/>
+      </node>
+      <node id="15290">
+        <label>src/lib/storage/Store.h</label>
+        <link refid="_store_8h"/>
+        <childnode refid="15265" relation="include">
+        </childnode>
+        <childnode refid="15267" relation="include">
+        </childnode>
+        <childnode refid="15291" relation="include">
+        </childnode>
+        <childnode refid="15293" relation="include">
+        </childnode>
+        <childnode refid="15294" relation="include">
+        </childnode>
+        <childnode refid="15295" relation="include">
+        </childnode>
+        <childnode refid="15275" relation="include">
+        </childnode>
+        <childnode refid="15280" relation="include">
+        </childnode>
+        <childnode refid="15296" relation="include">
+        </childnode>
+        <childnode refid="15297" relation="include">
+        </childnode>
+        <childnode refid="15282" relation="include">
+        </childnode>
+        <childnode refid="15298" relation="include">
+        </childnode>
+        <childnode refid="15262" relation="include">
+        </childnode>
+        <childnode refid="15299" relation="include">
+        </childnode>
+        <childnode refid="15300" relation="include">
+        </childnode>
+        <childnode refid="15287" relation="include">
+        </childnode>
+        <childnode refid="15301" relation="include">
+        </childnode>
+        <childnode refid="15243" relation="include">
+        </childnode>
+        <childnode refid="15285" relation="include">
+        </childnode>
+        <childnode refid="15302" relation="include">
+        </childnode>
+        <childnode refid="15303" relation="include">
+        </childnode>
+        <childnode refid="15289" relation="include">
+        </childnode>
+      </node>
+      <node id="15234">
+        <label>src/lib/storage/BitCompressedVector.h</label>
+        <link refid="BitCompressedVector.h"/>
+        <childnode refid="15235" relation="include">
+        </childnode>
       </node>
       <node id="15264">
         <label>src/lib/storage/PointerCalculator.h</label>
@@ -299,315 +603,11 @@
         <childnode refid="15289" relation="include">
         </childnode>
       </node>
-      <node id="15245">
-        <label>src/lib/storage/MutableVerticalTable.h</label>
-        <link refid="_mutable_vertical_table_8h"/>
-        <childnode refid="15238" relation="include">
+      <node id="15246">
+        <label>src/lib/access/MergeJoin.hpp</label>
+        <link refid="_merge_join_8hpp"/>
+        <childnode refid="15247" relation="include">
         </childnode>
-        <childnode refid="15246" relation="include">
-        </childnode>
-        <childnode refid="15256" relation="include">
-        </childnode>
-        <childnode refid="15258" relation="include">
-        </childnode>
-        <childnode refid="15259" relation="include">
-        </childnode>
-        <childnode refid="15260" relation="include">
-        </childnode>
-        <childnode refid="15261" relation="include">
-        </childnode>
-        <childnode refid="15262" relation="include">
-        </childnode>
-        <childnode refid="15243" relation="include">
-        </childnode>
-        <childnode refid="15263" relation="include">
-        </childnode>
-        <childnode refid="15264" relation="include">
-        </childnode>
-        <childnode refid="15290" relation="include">
-        </childnode>
-        <childnode refid="15304" relation="include">
-        </childnode>
-        <childnode refid="15305" relation="include">
-        </childnode>
-        <childnode refid="15289" relation="include">
-        </childnode>
-      </node>
-      <node id="15269">
-        <label>src/lib/access/GroupByScan.cpp</label>
-        <link refid="lib_2access_2_group_by_scan_8cpp"/>
-      </node>
-      <node id="15252">
-        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
-        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
-      </node>
-      <node id="15268">
-        <label>src/lib/access/Distinct.cpp</label>
-        <link refid="_distinct_8cpp"/>
-      </node>
-      <node id="15242">
-        <label>src/lib/access/SortScan.cpp</label>
-        <link refid="lib_2access_2_sort_scan_8cpp"/>
-      </node>
-      <node id="15274">
-        <label>src/lib/access/JoinScan.cpp</label>
-        <link refid="lib_2access_2_join_scan_8cpp"/>
-      </node>
-      <node id="15283">
-        <label>src/lib/access/UnionAll.cpp</label>
-        <link refid="_union_all_8cpp"/>
-      </node>
-      <node id="15239">
-        <label>src/lib/access/Layouter.cpp</label>
-        <link refid="_layouter_8cpp"/>
-      </node>
-      <node id="15236">
-        <label>src/lib/storage/Table.cpp</label>
-        <link refid="_table_8cpp"/>
-      </node>
-      <node id="15288">
-        <label>src/lib/storage/storage_types_helper.cpp</label>
-        <link refid="storage__types__helper_8cpp"/>
-      </node>
-      <node id="15243">
-        <label>src/lib/storage/AbstractTable.cpp</label>
-        <link refid="_abstract_table_8cpp"/>
-      </node>
-      <node id="15307">
-        <label>src/lib/storage/TableFactory.cpp</label>
-        <link refid="_table_factory_8cpp"/>
-      </node>
-      <node id="15244">
-        <label>src/lib/storage/GroupValue.cpp</label>
-        <link refid="_group_value_8cpp"/>
-      </node>
-      <node id="15294">
-        <label>src/lib/access/LayoutTable.cpp</label>
-        <link refid="_layout_table_8cpp"/>
-      </node>
-      <node id="15292">
-        <label>src/lib/access/expressions/GenericExpressions.cpp</label>
-        <link refid="_generic_expressions_8cpp"/>
-      </node>
-      <node id="15277">
-        <label>src/lib/access/radixjoin/Histogram.h</label>
-        <link refid="_histogram_8h"/>
-        <childnode refid="15278" relation="include">
-        </childnode>
-        <childnode refid="15241" relation="include">
-        </childnode>
-        <childnode refid="15279" relation="include">
-        </childnode>
-      </node>
-      <node id="15263">
-        <label>src/lib/storage/MutableVerticalTable.cpp</label>
-        <link refid="_mutable_vertical_table_8cpp"/>
-      </node>
-      <node id="15253">
-        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
-        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
-      </node>
-      <node id="15275">
-        <label>src/lib/access/PosUpdateScan.cpp</label>
-        <link refid="_pos_update_scan_8cpp"/>
-      </node>
-      <node id="15254">
-        <label>src/bin/perf_regression/SortScan.cpp</label>
-        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
-      </node>
-      <node id="15306">
-        <label>src/lib/storage/TableFactory.h</label>
-        <link refid="_table_factory_8h"/>
-        <childnode refid="15262" relation="include">
-        </childnode>
-        <childnode refid="15245" relation="include">
-        </childnode>
-        <childnode refid="15307" relation="include">
-        </childnode>
-        <childnode refid="15289" relation="include">
-        </childnode>
-      </node>
-      <node id="15300">
-        <label>src/lib/io/shortcuts.cpp</label>
-        <link refid="shortcuts_8cpp"/>
-      </node>
-      <node id="15282">
-        <label>src/lib/access/tx/ValidatePositions.cpp</label>
-        <link refid="_validate_positions_8cpp"/>
-      </node>
-      <node id="15249">
-        <label>src/bin/perf_regression/HashJoin.cpp</label>
-        <link refid="_hash_join_8cpp"/>
-      </node>
-      <node id="15235">
-        <label>src/lib/storage/AttributeVectorFactory.h</label>
-        <link refid="_attribute_vector_factory_8h"/>
-        <childnode refid="15236" relation="include">
-        </childnode>
-        <childnode refid="15237" relation="include">
-        </childnode>
-      </node>
-      <node id="15265">
-        <label>src/bin/perf_regression/tx_performance.cpp</label>
-        <link refid="tx__performance_8cpp"/>
-      </node>
-      <node id="15278">
-        <label>src/lib/access/radixjoin/Histogram.cpp</label>
-        <link refid="_histogram_8cpp"/>
-      </node>
-      <node id="15298">
-        <label>src/lib/access/UpdateScan.cpp</label>
-        <link refid="_update_scan_8cpp"/>
-      </node>
-      <node id="15240">
-        <label>src/lib/access/MaterializingScan.cpp</label>
-        <link refid="_materializing_scan_8cpp"/>
-      </node>
-      <node id="15281">
-        <label>src/lib/access/TableScan.cpp</label>
-        <link refid="_table_scan_8cpp"/>
-      </node>
-      <node id="15251">
-        <label>src/bin/perf_regression/JoinScan.cpp</label>
-        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
-      </node>
-      <node id="15304">
-        <label>src/lib/storage/TableBuilder.cpp</label>
-        <link refid="_table_builder_8cpp"/>
-      </node>
-      <node id="15289">
-        <label>src/lib/storage.h</label>
-        <link refid="storage_8h"/>
-        <childnode refid="15248" relation="include">
-        </childnode>
-        <childnode refid="15249" relation="include">
-        </childnode>
-        <childnode refid="15250" relation="include">
-        </childnode>
-        <childnode refid="15251" relation="include">
-        </childnode>
-        <childnode refid="15252" relation="include">
-        </childnode>
-        <childnode refid="15253" relation="include">
-        </childnode>
-        <childnode refid="15254" relation="include">
-        </childnode>
-        <childnode refid="15255" relation="include">
-        </childnode>
-      </node>
-      <node id="15302">
-        <label>src/lib/storage/PrettyPrinter.cpp</label>
-        <link refid="_pretty_printer_8cpp"/>
-      </node>
-      <node id="15285">
-        <label>src/lib/storage/PointerCalculator.cpp</label>
-        <link refid="_pointer_calculator_8cpp"/>
-      </node>
-      <node id="15287">
-        <label>src/lib/io/TableDump.cpp</label>
-        <link refid="_table_dump_8cpp"/>
-      </node>
-      <node id="15260">
-        <label>src/lib/access/ScriptOperation.cpp</label>
-        <link refid="_script_operation_8cpp"/>
-      </node>
-      <node id="15291">
-        <label>src/lib/access/expressions/GenericExpressions.h</label>
-        <link refid="_generic_expressions_8h"/>
-        <childnode refid="15292" relation="include">
-        </childnode>
-      </node>
-      <node id="15290">
-        <label>src/lib/storage/Store.h</label>
-        <link refid="_store_8h"/>
-        <childnode refid="15265" relation="include">
-        </childnode>
-        <childnode refid="15267" relation="include">
-        </childnode>
-        <childnode refid="15291" relation="include">
-        </childnode>
-        <childnode refid="15293" relation="include">
-        </childnode>
-        <childnode refid="15294" relation="include">
-        </childnode>
-        <childnode refid="15295" relation="include">
-        </childnode>
-        <childnode refid="15275" relation="include">
-        </childnode>
-        <childnode refid="15280" relation="include">
-        </childnode>
-        <childnode refid="15296" relation="include">
-        </childnode>
-        <childnode refid="15297" relation="include">
-        </childnode>
-        <childnode refid="15282" relation="include">
-        </childnode>
-        <childnode refid="15298" relation="include">
-        </childnode>
-        <childnode refid="15262" relation="include">
-        </childnode>
-        <childnode refid="15299" relation="include">
-        </childnode>
-        <childnode refid="15300" relation="include">
-        </childnode>
-        <childnode refid="15287" relation="include">
-        </childnode>
-        <childnode refid="15301" relation="include">
-        </childnode>
-        <childnode refid="15243" relation="include">
-        </childnode>
-        <childnode refid="15285" relation="include">
-        </childnode>
-        <childnode refid="15302" relation="include">
-        </childnode>
-        <childnode refid="15303" relation="include">
-        </childnode>
-        <childnode refid="15289" relation="include">
-        </childnode>
-      </node>
-      <node id="15299">
-        <label>src/lib/io/MPassCSVLoader.cpp</label>
-        <link refid="_m_pass_c_s_v_loader_8cpp"/>
-      </node>
-      <node id="15234">
-        <label>src/lib/storage/BitCompressedVector.h</label>
-        <link refid="BitCompressedVector.h"/>
-        <childnode refid="15235" relation="include">
-        </childnode>
-      </node>
-      <node id="15247">
-        <label>src/lib/access.h</label>
-        <link refid="access_8h"/>
-        <childnode refid="15248" relation="include">
-        </childnode>
-        <childnode refid="15249" relation="include">
-        </childnode>
-        <childnode refid="15250" relation="include">
-        </childnode>
-        <childnode refid="15251" relation="include">
-        </childnode>
-        <childnode refid="15252" relation="include">
-        </childnode>
-        <childnode refid="15253" relation="include">
-        </childnode>
-        <childnode refid="15254" relation="include">
-        </childnode>
-        <childnode refid="15255" relation="include">
-        </childnode>
-      </node>
-      <node id="15241">
-        <label>src/lib/access/radixjoin/PrefixSum.cpp</label>
-        <link refid="_prefix_sum_8cpp"/>
-      </node>
-      <node id="15256">
-        <label>src/lib/access/MultiplyRefField.h</label>
-        <link refid="_multiply_ref_field_8h"/>
-        <childnode refid="15257" relation="include">
-        </childnode>
-      </node>
-      <node id="15257">
-        <label>src/lib/access/MultiplyRefField.cpp</label>
-        <link refid="_multiply_ref_field_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_bit_compressed_vector" prot="public">BitCompressedVector</innerclass>
@@ -621,7 +621,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" line="18" bodyfile="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="18" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/storage/BitCompressedVector.h" line="18" column="9" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/storage/BitCompressedVector.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -724,7 +724,7 @@
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96" refid="class_bit_compressed_vector_1ae7e3b070498f77535154226180c0b35b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row,<sp/>T<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="96" refid="class_bit_compressed_vector_1ae7e3b070498f77535154226180c0b35b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bit_compressed_vector_1ae7e3b070498f77535154226180c0b35b" kindref="member">set</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row,<sp/>T<sp/>value)<sp/>{</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bit_compressed_vector_1ac665626e87709357922c4f16cbab4349" kindref="member">checkAccess</ref>(column,<sp/>row);</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>offset<sp/>=<sp/><ref refid="class_bit_compressed_vector_1adb0529462b8755c1986e20b1a0b77450" kindref="member">_blockOffset</ref>(row);</highlight></codeline>
@@ -893,6 +893,6 @@
 <codeline lineno="262"><highlight class="normal"></highlight></codeline>
 <codeline lineno="263"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_STORAGE_BITCOMPRESSEDVECTOR_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/captain/HPI/aepic/hyrise/src/lib/storage/BitCompressedVector.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/storage/BitCompressedVector.h"/>
   </compounddef>
 </doxygen>

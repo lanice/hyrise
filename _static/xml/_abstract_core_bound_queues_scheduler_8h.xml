@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_abstract_core_bound_queues_scheduler_8h" kind="file">
     <compoundname>AbstractCoreBoundQueuesScheduler.h</compoundname>
     <includes refid="_abstract_task_scheduler_8h" local="yes">AbstractTaskScheduler.h</includes>
@@ -14,26 +14,63 @@
       <node id="18510">
         <label>atomic</label>
       </node>
+      <node id="18509">
+        <label>AbstractCoreBoundQueue.h</label>
+        <link refid="_abstract_core_bound_queue_8h"/>
+        <childnode refid="18501" relation="include">
+        </childnode>
+        <childnode refid="18510" relation="include">
+        </childnode>
+      </node>
       <node id="18503">
         <label>queue</label>
       </node>
-      <node id="18494">
-        <label>AbstractTaskScheduler.h</label>
-        <link refid="_abstract_task_scheduler_8h"/>
-        <childnode refid="18495" relation="include">
+      <node id="18493">
+        <label>src/lib/taskscheduler/AbstractCoreBoundQueuesScheduler.h</label>
+        <link refid="AbstractCoreBoundQueuesScheduler.h"/>
+        <childnode refid="18494" relation="include">
         </childnode>
-        <childnode refid="18501" relation="include">
+        <childnode refid="18509" relation="include">
+        </childnode>
+        <childnode refid="18510" relation="include">
+        </childnode>
+      </node>
+      <node id="18507">
+        <label>helper/HwlocHelper.h</label>
+        <link refid="_hwloc_helper_8h"/>
+        <childnode refid="18508" relation="include">
+        </childnode>
+        <childnode refid="18496" relation="include">
+        </childnode>
+      </node>
+      <node id="18495">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="18496" relation="include">
+        </childnode>
+        <childnode refid="18497" relation="include">
         </childnode>
         <childnode refid="18498" relation="include">
         </childnode>
-        <childnode refid="18505" relation="include">
+        <childnode refid="18499" relation="include">
         </childnode>
-        <childnode refid="18506" relation="include">
+        <childnode refid="18500" relation="include">
         </childnode>
-        <childnode refid="18504" relation="include">
-        </childnode>
-        <childnode refid="18507" relation="include">
-        </childnode>
+      </node>
+      <node id="18500">
+        <label>string</label>
+      </node>
+      <node id="18505">
+        <label>unordered_set</label>
+      </node>
+      <node id="18508">
+        <label>hwloc.h</label>
+      </node>
+      <node id="18499">
+        <label>condition_variable</label>
+      </node>
+      <node id="18496">
+        <label>vector</label>
       </node>
       <node id="18501">
         <label>taskscheduler/AbstractTaskQueue.h</label>
@@ -53,37 +90,22 @@
         <childnode refid="18495" relation="include">
         </childnode>
       </node>
-      <node id="18500">
-        <label>string</label>
-      </node>
-      <node id="18505">
-        <label>unordered_set</label>
-      </node>
-      <node id="18508">
-        <label>hwloc.h</label>
-      </node>
-      <node id="18499">
-        <label>condition_variable</label>
-      </node>
-      <node id="18496">
-        <label>vector</label>
-      </node>
-      <node id="18509">
-        <label>AbstractCoreBoundQueue.h</label>
-        <link refid="_abstract_core_bound_queue_8h"/>
+      <node id="18494">
+        <label>AbstractTaskScheduler.h</label>
+        <link refid="_abstract_task_scheduler_8h"/>
+        <childnode refid="18495" relation="include">
+        </childnode>
         <childnode refid="18501" relation="include">
         </childnode>
-        <childnode refid="18510" relation="include">
+        <childnode refid="18498" relation="include">
         </childnode>
-      </node>
-      <node id="18493">
-        <label>src/lib/taskscheduler/AbstractCoreBoundQueuesScheduler.h</label>
-        <link refid="AbstractCoreBoundQueuesScheduler.h"/>
-        <childnode refid="18494" relation="include">
+        <childnode refid="18505" relation="include">
         </childnode>
-        <childnode refid="18509" relation="include">
+        <childnode refid="18506" relation="include">
         </childnode>
-        <childnode refid="18510" relation="include">
+        <childnode refid="18504" relation="include">
+        </childnode>
+        <childnode refid="18507" relation="include">
         </childnode>
       </node>
       <node id="18506">
@@ -95,97 +117,17 @@
       <node id="18502">
         <label>thread</label>
       </node>
-      <node id="18507">
-        <label>helper/HwlocHelper.h</label>
-        <link refid="_hwloc_helper_8h"/>
-        <childnode refid="18508" relation="include">
-        </childnode>
-        <childnode refid="18496" relation="include">
-        </childnode>
-      </node>
       <node id="18504">
         <label>log4cxx/logger.h</label>
       </node>
       <node id="18498">
         <label>memory</label>
       </node>
-      <node id="18495">
-        <label>taskscheduler/Task.h</label>
-        <link refid="_task_8h"/>
-        <childnode refid="18496" relation="include">
-        </childnode>
-        <childnode refid="18497" relation="include">
-        </childnode>
-        <childnode refid="18498" relation="include">
-        </childnode>
-        <childnode refid="18499" relation="include">
-        </childnode>
-        <childnode refid="18500" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="18515">
-        <label>src/lib/taskscheduler/CoreBoundQueuesScheduler.h</label>
-        <link refid="_core_bound_queues_scheduler_8h"/>
-        <childnode refid="18516" relation="include">
-        </childnode>
-      </node>
-      <node id="18524">
-        <label>src/lib/taskscheduler/WSCoreBoundQueuesScheduler.cpp</label>
-        <link refid="_w_s_core_bound_queues_scheduler_8cpp"/>
-      </node>
-      <node id="18514">
-        <label>src/lib/taskscheduler/CoreBoundPriorityQueuesScheduler.cpp</label>
-        <link refid="_core_bound_priority_queues_scheduler_8cpp"/>
-      </node>
       <node id="18519">
         <label>src/lib/taskscheduler/WSCoreBoundPriorityQueue.cpp</label>
         <link refid="_w_s_core_bound_priority_queue_8cpp"/>
-      </node>
-      <node id="18522">
-        <label>src/lib/taskscheduler/WSCoreBoundQueue.h</label>
-        <link refid="_w_s_core_bound_queue_8h"/>
-        <childnode refid="18523" relation="include">
-        </childnode>
-        <childnode refid="18524" relation="include">
-        </childnode>
-      </node>
-      <node id="18523">
-        <label>src/lib/taskscheduler/WSCoreBoundQueue.cpp</label>
-        <link refid="_w_s_core_bound_queue_8cpp"/>
-      </node>
-      <node id="18518">
-        <label>src/lib/taskscheduler/WSCoreBoundPriorityQueue.h</label>
-        <link refid="_w_s_core_bound_priority_queue_8h"/>
-        <childnode refid="18519" relation="include">
-        </childnode>
-        <childnode refid="18520" relation="include">
-        </childnode>
-      </node>
-      <node id="18512">
-        <label>src/lib/taskscheduler/AbstractCoreBoundQueuesScheduler.cpp</label>
-        <link refid="_abstract_core_bound_queues_scheduler_8cpp"/>
-      </node>
-      <node id="18517">
-        <label>src/lib/taskscheduler/WSCoreBoundPriorityQueuesScheduler.h</label>
-        <link refid="_w_s_core_bound_priority_queues_scheduler_8h"/>
-        <childnode refid="18518" relation="include">
-        </childnode>
-        <childnode refid="18520" relation="include">
-        </childnode>
-      </node>
-      <node id="18520">
-        <label>src/lib/taskscheduler/WSCoreBoundPriorityQueuesScheduler.cpp</label>
-        <link refid="_w_s_core_bound_priority_queues_scheduler_8cpp"/>
-      </node>
-      <node id="18521">
-        <label>src/lib/taskscheduler/WSCoreBoundQueuesScheduler.h</label>
-        <link refid="_w_s_core_bound_queues_scheduler_8h"/>
-        <childnode refid="18522" relation="include">
-        </childnode>
-        <childnode refid="18524" relation="include">
-        </childnode>
       </node>
       <node id="18511">
         <label>src/lib/taskscheduler/AbstractCoreBoundQueuesScheduler.h</label>
@@ -201,15 +143,73 @@
         <childnode refid="18521" relation="include">
         </childnode>
       </node>
+      <node id="18523">
+        <label>src/lib/taskscheduler/WSCoreBoundQueue.cpp</label>
+        <link refid="_w_s_core_bound_queue_8cpp"/>
+      </node>
+      <node id="18518">
+        <label>src/lib/taskscheduler/WSCoreBoundPriorityQueue.h</label>
+        <link refid="_w_s_core_bound_priority_queue_8h"/>
+        <childnode refid="18519" relation="include">
+        </childnode>
+        <childnode refid="18520" relation="include">
+        </childnode>
+      </node>
+      <node id="18521">
+        <label>src/lib/taskscheduler/WSCoreBoundQueuesScheduler.h</label>
+        <link refid="_w_s_core_bound_queues_scheduler_8h"/>
+        <childnode refid="18522" relation="include">
+        </childnode>
+        <childnode refid="18524" relation="include">
+        </childnode>
+      </node>
+      <node id="18520">
+        <label>src/lib/taskscheduler/WSCoreBoundPriorityQueuesScheduler.cpp</label>
+        <link refid="_w_s_core_bound_priority_queues_scheduler_8cpp"/>
+      </node>
+      <node id="18514">
+        <label>src/lib/taskscheduler/CoreBoundPriorityQueuesScheduler.cpp</label>
+        <link refid="_core_bound_priority_queues_scheduler_8cpp"/>
+      </node>
       <node id="18513">
         <label>src/lib/taskscheduler/CoreBoundPriorityQueuesScheduler.h</label>
         <link refid="_core_bound_priority_queues_scheduler_8h"/>
         <childnode refid="18514" relation="include">
         </childnode>
       </node>
+      <node id="18515">
+        <label>src/lib/taskscheduler/CoreBoundQueuesScheduler.h</label>
+        <link refid="_core_bound_queues_scheduler_8h"/>
+        <childnode refid="18516" relation="include">
+        </childnode>
+      </node>
+      <node id="18517">
+        <label>src/lib/taskscheduler/WSCoreBoundPriorityQueuesScheduler.h</label>
+        <link refid="_w_s_core_bound_priority_queues_scheduler_8h"/>
+        <childnode refid="18518" relation="include">
+        </childnode>
+        <childnode refid="18520" relation="include">
+        </childnode>
+      </node>
+      <node id="18524">
+        <label>src/lib/taskscheduler/WSCoreBoundQueuesScheduler.cpp</label>
+        <link refid="_w_s_core_bound_queues_scheduler_8cpp"/>
+      </node>
       <node id="18516">
         <label>src/lib/taskscheduler/CoreBoundQueuesScheduler.cpp</label>
         <link refid="_core_bound_queues_scheduler_8cpp"/>
+      </node>
+      <node id="18522">
+        <label>src/lib/taskscheduler/WSCoreBoundQueue.h</label>
+        <link refid="_w_s_core_bound_queue_8h"/>
+        <childnode refid="18523" relation="include">
+        </childnode>
+        <childnode refid="18524" relation="include">
+        </childnode>
+      </node>
+      <node id="18512">
+        <label>src/lib/taskscheduler/AbstractCoreBoundQueuesScheduler.cpp</label>
+        <link refid="_abstract_core_bound_queues_scheduler_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_abstract_core_bound_queues_scheduler" prot="public">AbstractCoreBoundQueuesScheduler</innerclass>
@@ -300,6 +300,6 @@
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ABSTRACTCOREBOUNDQUEUESSCHEDULER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="/home/captain/HPI/aepic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueuesScheduler.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/taskscheduler/AbstractCoreBoundQueuesScheduler.h"/>
   </compounddef>
 </doxygen>

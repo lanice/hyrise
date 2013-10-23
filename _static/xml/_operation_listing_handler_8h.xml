@@ -1,18 +1,50 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_operation_listing_handler_8h" kind="file">
     <compoundname>OperationListingHandler.h</compoundname>
     <includes refid="_router_8h" local="yes">net/Router.h</includes>
     <includedby refid="_operation_listing_handler_8cpp" local="yes">src/lib/access/OperationListingHandler.cpp</includedby>
     <incdepgraph>
+      <node id="5854">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="5855" relation="include">
+        </childnode>
+        <childnode refid="5856" relation="include">
+        </childnode>
+        <childnode refid="5850" relation="include">
+        </childnode>
+        <childnode refid="5857" relation="include">
+        </childnode>
+        <childnode refid="5852" relation="include">
+        </childnode>
+      </node>
+      <node id="5852">
+        <label>string</label>
+      </node>
       <node id="5848">
         <label>src/lib/access/OperationListingHandler.h</label>
         <link refid="OperationListingHandler.h"/>
         <childnode refid="5849" relation="include">
         </childnode>
       </node>
-      <node id="5852">
-        <label>string</label>
+      <node id="5857">
+        <label>condition_variable</label>
+      </node>
+      <node id="5855">
+        <label>vector</label>
+      </node>
+      <node id="5853">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="5852" relation="include">
+        </childnode>
+      </node>
+      <node id="5851">
+        <label>unordered_map</label>
+      </node>
+      <node id="5856">
+        <label>mutex</label>
       </node>
       <node id="5849">
         <label>net/Router.h</label>
@@ -28,52 +60,20 @@
         <childnode refid="5854" relation="include">
         </childnode>
       </node>
-      <node id="5857">
-        <label>condition_variable</label>
-      </node>
-      <node id="5855">
-        <label>vector</label>
-      </node>
-      <node id="5851">
-        <label>unordered_map</label>
-      </node>
-      <node id="5856">
-        <label>mutex</label>
-      </node>
-      <node id="5853">
-        <label>net/AbstractConnection.h</label>
-        <link refid="_abstract_connection_8h"/>
-        <childnode refid="5852" relation="include">
-        </childnode>
-      </node>
       <node id="5850">
         <label>memory</label>
       </node>
-      <node id="5854">
-        <label>taskscheduler/Task.h</label>
-        <link refid="_task_8h"/>
-        <childnode refid="5855" relation="include">
-        </childnode>
-        <childnode refid="5856" relation="include">
-        </childnode>
-        <childnode refid="5850" relation="include">
-        </childnode>
-        <childnode refid="5857" relation="include">
-        </childnode>
-        <childnode refid="5852" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="5859">
+        <label>src/lib/access/OperationListingHandler.cpp</label>
+        <link refid="_operation_listing_handler_8cpp"/>
+      </node>
       <node id="5858">
         <label>src/lib/access/OperationListingHandler.h</label>
         <link refid="OperationListingHandler.h"/>
         <childnode refid="5859" relation="include">
         </childnode>
-      </node>
-      <node id="5859">
-        <label>src/lib/access/OperationListingHandler.cpp</label>
-        <link refid="_operation_listing_handler_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classhyrise_1_1access_1_1_operation_listing_handler" prot="public">hyrise::access::OperationListingHandler</innerclass>
@@ -94,7 +94,7 @@
 <codeline lineno="7" refid="namespacehyrise_1_1net" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">net<sp/>{<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">AbstractConnection</ref>;<sp/>}</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">access<sp/>{</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10" refid="classhyrise_1_1access_1_1_operation_listing_handler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1access_1_1_operation_listing_handler" kindref="compound">OperationListingHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_abstract_request_handler" kindref="compound" tooltip="Base class for request handlers.">net::AbstractRequestHandler</ref><sp/>{</highlight></codeline>
+<codeline lineno="10" refid="classhyrise_1_1access_1_1_operation_listing_handler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1access_1_1_operation_listing_handler" kindref="compound">OperationListingHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_abstract_request_handler" kindref="compound" tooltip="Base class for request handlers. ">net::AbstractRequestHandler</ref><sp/>{</highlight></codeline>
 <codeline lineno="11" refid="classhyrise_1_1access_1_1_operation_listing_handler_1a309cbc0cdbdfe54dd634733fd6b817ee" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_operation_listing_handler_1a309cbc0cdbdfe54dd634733fd6b817ee" kindref="member">registered</ref>;</highlight></codeline>
 <codeline lineno="12" refid="classhyrise_1_1access_1_1_operation_listing_handler_1aac308a19c56a9e9fb475ec28a6ca4d34" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref><sp/>*<ref refid="classhyrise_1_1access_1_1_operation_listing_handler_1aac308a19c56a9e9fb475ec28a6ca4d34" kindref="member">_connection_data</ref>;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
@@ -110,6 +110,6 @@
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/captain/HPI/aepic/hyrise/src/lib/access/OperationListingHandler.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/access/OperationListingHandler.h"/>
   </compounddef>
 </doxygen>

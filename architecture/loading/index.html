@@ -30,13 +30,18 @@
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <script type="text/javascript" src="../../_static/hyrise.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <link rel="top" title="HYRISE latest documentation" href="../../index.html" />
     <link rel="up" title="Loading" href="../loading.html" />
     <link rel="next" title="MySQL Loader" href="mysql.html" />
     <link rel="prev" title="Loading" href="../loading.html" /> 
   </head>
-  <body><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
+  <body>
+    <div id="backToTop">
+      <span class="glyphicon glyphicon-chevron-up"></span> <br />
+      <p>Back To Top</p>
+    </div><nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -180,7 +185,7 @@ format of HYRISE uses the delimiter <cite>|</cite>.</p>
 <span class="k">class</span> <span class="nc">CSVTests</span> <span class="o">:</span> <span class="k">public</span> <span class="o">::</span><span class="n">hyrise</span><span class="o">::</span><span class="n">Test</span> <span class="p">{};</span>
 
 <span class="n">TEST_F</span><span class="p">(</span><span class="n">CSVTests</span><span class="p">,</span> <span class="n">load_test</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">hyrise</span><span class="o">::</span><span class="n">storage</span><span class="o">::</span><span class="n">atable_ptr_t</span>  <span class="n">t</span> <span class="o">=</span> <span class="n">Loader</span><span class="o">::</span><span class="n">load</span><span class="p">(</span>
+  <span class="n">hyrise</span><span class="o">::</span><span class="n">storage</span><span class="o">::</span><span class="kt">atable_ptr_t</span>  <span class="n">t</span> <span class="o">=</span> <span class="n">Loader</span><span class="o">::</span><span class="n">load</span><span class="p">(</span>
       <span class="n">Loader</span><span class="o">::</span><span class="n">params</span><span class="p">()</span>
       <span class="p">.</span><span class="n">setHeader</span><span class="p">(</span><span class="n">CSVHeader</span><span class="p">(</span><span class="s">&quot;test/tables/employees.tbl&quot;</span><span class="p">))</span>
       <span class="p">.</span><span class="n">setInput</span><span class="p">(</span><span class="n">CSVInput</span><span class="p">(</span><span class="s">&quot;test/tables/employees.data&quot;</span><span class="p">))</span>
@@ -189,7 +194,7 @@ format of HYRISE uses the delimiter <cite>|</cite>.</p>
 
 
 <span class="n">TEST_F</span><span class="p">(</span><span class="n">CSVTests</span><span class="p">,</span> <span class="n">DISABLED_load_test_mpass</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">hyrise</span><span class="o">::</span><span class="n">storage</span><span class="o">::</span><span class="n">atable_ptr_t</span>  <span class="n">t</span> <span class="o">=</span> <span class="n">Loader</span><span class="o">::</span><span class="n">load</span><span class="p">(</span>
+  <span class="n">hyrise</span><span class="o">::</span><span class="n">storage</span><span class="o">::</span><span class="kt">atable_ptr_t</span>  <span class="n">t</span> <span class="o">=</span> <span class="n">Loader</span><span class="o">::</span><span class="n">load</span><span class="p">(</span>
       <span class="n">Loader</span><span class="o">::</span><span class="n">params</span><span class="p">()</span>
       <span class="p">.</span><span class="n">setHeader</span><span class="p">(</span><span class="n">CSVHeader</span><span class="p">(</span><span class="s">&quot;test/loader/demo/demo.tbl&quot;</span><span class="p">))</span>
       <span class="p">.</span><span class="n">setInput</span><span class="p">(</span><span class="n">MPassCSVInput</span><span class="p">(</span><span class="s">&quot;test/loader/demo&quot;</span><span class="p">))</span>
@@ -286,7 +291,7 @@ used for generating table metadata.</p>
 <span class="k">class</span> <span class="nc">StringLoaderTests</span> <span class="o">:</span> <span class="k">public</span> <span class="o">::</span><span class="n">hyrise</span><span class="o">::</span><span class="n">Test</span> <span class="p">{};</span>
 
 <span class="n">TEST_F</span><span class="p">(</span><span class="n">StringLoaderTests</span><span class="p">,</span> <span class="n">load_test</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">hyrise</span><span class="o">::</span><span class="n">storage</span><span class="o">::</span><span class="n">atable_ptr_t</span>  <span class="n">t</span> <span class="o">=</span> <span class="n">Loader</span><span class="o">::</span><span class="n">load</span><span class="p">(</span>
+  <span class="n">hyrise</span><span class="o">::</span><span class="n">storage</span><span class="o">::</span><span class="kt">atable_ptr_t</span>  <span class="n">t</span> <span class="o">=</span> <span class="n">Loader</span><span class="o">::</span><span class="n">load</span><span class="p">(</span>
       <span class="n">Loader</span><span class="o">::</span><span class="n">params</span><span class="p">()</span>
       <span class="p">.</span><span class="n">setHeader</span><span class="p">(</span><span class="n">StringHeader</span><span class="p">(</span><span class="s">&quot;employee_id|employee_company_id|employee_name</span><span class="se">\n</span><span class="s">&quot;</span>
                               <span class="s">&quot;INTEGER|INTEGER|STRING</span><span class="se">\n</span><span class="s">&quot;</span>
@@ -297,7 +302,7 @@ used for generating table metadata.</p>
 
 
 <span class="n">TEST_F</span><span class="p">(</span><span class="n">StringLoaderTests</span><span class="p">,</span> <span class="n">load_test_typesafe</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">hyrise</span><span class="o">::</span><span class="n">storage</span><span class="o">::</span><span class="n">atable_ptr_t</span>  <span class="n">t</span> <span class="o">=</span> <span class="n">Loader</span><span class="o">::</span><span class="n">load</span><span class="p">(</span>
+  <span class="n">hyrise</span><span class="o">::</span><span class="n">storage</span><span class="o">::</span><span class="kt">atable_ptr_t</span>  <span class="n">t</span> <span class="o">=</span> <span class="n">Loader</span><span class="o">::</span><span class="n">load</span><span class="p">(</span>
       <span class="n">Loader</span><span class="o">::</span><span class="n">params</span><span class="p">()</span>
       <span class="p">.</span><span class="n">setHeader</span><span class="p">(</span><span class="n">StringHeader</span><span class="p">(</span><span class="s">&quot;employee_id|employee_company_id|employee_name</span><span class="se">\n</span><span class="s">&quot;</span>
                               <span class="s">&quot;INTEGER|INTEGER|STRING</span><span class="se">\n</span><span class="s">&quot;</span>
@@ -307,12 +312,12 @@ used for generating table metadata.</p>
 
 
   <span class="n">EmptyInput</span> <span class="n">input</span><span class="p">;</span>
-  <span class="n">StringHeader</span> <span class="n">header</span><span class="p">(</span><span class="s">&quot;employee_id|employee_company_id|employee_name</span><span class="se">\n</span><span class="s">&quot;</span>
+  <span class="n">StringHeader</span> <span class="nf">header</span><span class="p">(</span><span class="s">&quot;employee_id|employee_company_id|employee_name</span><span class="se">\n</span><span class="s">&quot;</span>
                       <span class="s">&quot;INTEGER|INTEGER|INTEGER</span><span class="se">\n</span><span class="s">&quot;</span>
                       <span class="s">&quot;0_C | 0_C | 0_C&quot;</span><span class="p">);</span>
 
   <span class="n">Loader</span><span class="o">::</span><span class="n">params</span> <span class="n">p</span><span class="p">;</span>
-  <span class="n">p</span><span class="p">.</span><span class="n">setInput</span><span class="p">(</span><span class="n">input</span><span class="p">).</span><span class="n">setHeader</span><span class="p">(</span><span class="n">header</span><span class="p">).</span><span class="n">setReturnsMutableVerticalTable</span><span class="p">(</span><span class="kc">true</span><span class="p">).</span><span class="n">setReferenceTable</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+  <span class="n">p</span><span class="p">.</span><span class="n">setInput</span><span class="p">(</span><span class="n">input</span><span class="p">).</span><span class="n">setHeader</span><span class="p">(</span><span class="n">header</span><span class="p">).</span><span class="n">setReturnsMutableVerticalTable</span><span class="p">(</span><span class="nb">true</span><span class="p">).</span><span class="n">setReferenceTable</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
 
   <span class="k">auto</span> <span class="n">res</span> <span class="o">=</span> <span class="n">Loader</span><span class="o">::</span><span class="n">load</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
 

@@ -1,0 +1,16 @@
+digraph "SharedFactory&lt; T &gt;"
+{
+  edge [fontname="Helvetica",fontsize="11",labelfontname="Helvetica",labelfontsize="11"];
+  node [fontname="Helvetica",fontsize="11",shape=record];
+  Node1 [label="{SharedFactory\< T \>\n||+ create()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{std::enable_shared\l_from_this\< T \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [dir="back",color="orange",fontsize="11",style="solid",label=" \< TableRangeView \>" ,fontname="Helvetica"];
+  Node3 [label="{SharedFactory\< TableRange\lView \>\n||+ create()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_shared_factory.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{hyrise::storage::TableRangeView\n|- _table\l- _start\l- _end\l- _columnCount\l|+ TableRangeView()\l+ ~TableRangeView()\l+ getStart()\l+ subtableCount()\l+ copy()\l+ print()\l+ getTable()\l+ size()\l+ setValueId()\l+ getValueId()\land 12 more...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhyrise_1_1storage_1_1_table_range_view.html"];
+  Node1 -> Node5 [dir="back",color="orange",fontsize="11",style="solid",label=" \< PointerCalculator \>" ,fontname="Helvetica"];
+  Node5 [label="{SharedFactory\< PointerCalculator \>\n||+ create()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_shared_factory.html"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node6 [label="{PointerCalculator\n|- table\l- pos_list\l- fields\l- slice_for_slice\l- offset_in_slice\l- width_for_slice\l- slice_count\l|+ PointerCalculator()\l+ PointerCalculator()\l+ ~PointerCalculator()\l+ setPositions()\l+ setFields()\l+ intersect()\l+ unite()\l+ concatenate()\l+ getPositions()\l+ getActualTablePositions()\land 20 more...\l+ unite_many()\l+ concatenate_many()\l# updateFieldMapping()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pointer_calculator.html"];
+}

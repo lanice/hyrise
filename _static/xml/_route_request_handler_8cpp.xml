@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="_route_request_handler_8cpp" kind="file">
     <compoundname>RouteRequestHandler.cpp</compoundname>
     <includes refid="_route_request_handler_8h" local="yes">net/RouteRequestHandler.h</includes>
@@ -10,6 +10,63 @@
     <incdepgraph>
       <node id="13417">
         <label>arpa/inet.h</label>
+      </node>
+      <node id="13410">
+        <label>taskscheduler/Task.h</label>
+        <link refid="_task_8h"/>
+        <childnode refid="13411" relation="include">
+        </childnode>
+        <childnode refid="13412" relation="include">
+        </childnode>
+        <childnode refid="13407" relation="include">
+        </childnode>
+        <childnode refid="13413" relation="include">
+        </childnode>
+        <childnode refid="13405" relation="include">
+        </childnode>
+      </node>
+      <node id="13404">
+        <label>net/RouteRequestHandler.h</label>
+        <link refid="_route_request_handler_8h"/>
+        <childnode refid="13405" relation="include">
+        </childnode>
+        <childnode refid="13406" relation="include">
+        </childnode>
+      </node>
+      <node id="13405">
+        <label>string</label>
+      </node>
+      <node id="13415">
+        <label>json.h</label>
+      </node>
+      <node id="13413">
+        <label>condition_variable</label>
+      </node>
+      <node id="13406">
+        <label>net/Router.h</label>
+        <link refid="_router_8h"/>
+        <childnode refid="13407" relation="include">
+        </childnode>
+        <childnode refid="13408" relation="include">
+        </childnode>
+        <childnode refid="13405" relation="include">
+        </childnode>
+        <childnode refid="13409" relation="include">
+        </childnode>
+        <childnode refid="13410" relation="include">
+        </childnode>
+      </node>
+      <node id="13409">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="13405" relation="include">
+        </childnode>
+      </node>
+      <node id="13421">
+        <label>ebb/ebb.h</label>
+      </node>
+      <node id="13411">
+        <label>vector</label>
       </node>
       <node id="13416">
         <label>net/AsyncConnection.h</label>
@@ -29,34 +86,8 @@
         <childnode refid="13421" relation="include">
         </childnode>
       </node>
-      <node id="13410">
-        <label>taskscheduler/Task.h</label>
-        <link refid="_task_8h"/>
-        <childnode refid="13411" relation="include">
-        </childnode>
-        <childnode refid="13412" relation="include">
-        </childnode>
-        <childnode refid="13407" relation="include">
-        </childnode>
-        <childnode refid="13413" relation="include">
-        </childnode>
-        <childnode refid="13405" relation="include">
-        </childnode>
-      </node>
-      <node id="13405">
-        <label>string</label>
-      </node>
-      <node id="13415">
-        <label>json.h</label>
-      </node>
-      <node id="13413">
-        <label>condition_variable</label>
-      </node>
-      <node id="13421">
-        <label>ebb/ebb.h</label>
-      </node>
-      <node id="13411">
-        <label>vector</label>
+      <node id="13414">
+        <label>sstream</label>
       </node>
       <node id="13403">
         <label>src/lib/net/RouteRequestHandler.cpp</label>
@@ -72,20 +103,11 @@
         <childnode refid="13416" relation="include">
         </childnode>
       </node>
-      <node id="13414">
-        <label>sstream</label>
-      </node>
       <node id="13419">
         <label>cstdlib</label>
       </node>
       <node id="13418">
         <label>sys/time.h</label>
-      </node>
-      <node id="13409">
-        <label>net/AbstractConnection.h</label>
-        <link refid="_abstract_connection_8h"/>
-        <childnode refid="13405" relation="include">
-        </childnode>
       </node>
       <node id="13420">
         <label>ev.h</label>
@@ -96,30 +118,8 @@
       <node id="13412">
         <label>mutex</label>
       </node>
-      <node id="13406">
-        <label>net/Router.h</label>
-        <link refid="_router_8h"/>
-        <childnode refid="13407" relation="include">
-        </childnode>
-        <childnode refid="13408" relation="include">
-        </childnode>
-        <childnode refid="13405" relation="include">
-        </childnode>
-        <childnode refid="13409" relation="include">
-        </childnode>
-        <childnode refid="13410" relation="include">
-        </childnode>
-      </node>
       <node id="13407">
         <label>memory</label>
-      </node>
-      <node id="13404">
-        <label>net/RouteRequestHandler.h</label>
-        <link refid="_route_request_handler_8h"/>
-        <childnode refid="13405" relation="include">
-        </childnode>
-        <childnode refid="13406" relation="include">
-        </childnode>
       </node>
     </incdepgraph>
     <innernamespace refid="namespacehyrise">hyrise</innernamespace>
@@ -156,7 +156,7 @@
 <codeline lineno="25"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27" refid="classhyrise_1_1net_1_1_route_request_handler_1a25c8ac74736b9db1b170ee55926af5b7" refkind="member"><highlight class="normal">std::string<sp/><ref refid="classhyrise_1_1net_1_1_route_request_handler_1a25c8ac74736b9db1b170ee55926af5b7" kindref="member">RouteRequestHandler::constructResponse</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;router<sp/>=<sp/><ref refid="classhyrise_1_1net_1_1_router_1a77163aca532cddbea1edfdaec58a0926" kindref="member" tooltip="Returns global Router instance. ">Router::getInstance</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;router<sp/>=<sp/><ref refid="classhyrise_1_1net_1_1_router_1a77163aca532cddbea1edfdaec58a0926" kindref="member" tooltip="Returns global Router instance.">Router::getInstance</ref>();</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/>Json::Value<sp/>result;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;routes<sp/>=<sp/>result[</highlight><highlight class="stringliteral">&quot;routes&quot;</highlight><highlight class="normal">];</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>catch_all<sp/>=<sp/>router.getCatchAllRaw();</highlight></codeline>
@@ -176,6 +176,6 @@
 <codeline lineno="45"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="46"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/net/RouteRequestHandler.cpp"/>
+    <location file="/home/vagrant/lanice/src/lib/net/RouteRequestHandler.cpp"/>
   </compounddef>
 </doxygen>

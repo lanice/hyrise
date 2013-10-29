@@ -1,56 +1,32 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="lib_2access_2_union_scan_8cpp" kind="file">
     <compoundname>UnionScan.cpp</compoundname>
     <includes refid="_union_scan_8h" local="yes">access/UnionScan.h</includes>
     <includes refid="_horizontal_table_8h" local="yes">storage/HorizontalTable.h</includes>
     <includes refid="_pointer_calculator_8h" local="yes">storage/PointerCalculator.h</includes>
     <incdepgraph>
+      <node id="2055">
+        <label>helper/SharedFactory.h</label>
+        <link refid="_shared_factory_8h"/>
+        <childnode refid="2029" relation="include">
+        </childnode>
+      </node>
       <node id="2043">
         <label>atomic</label>
       </node>
-      <node id="2013">
-        <label>src/lib/access/UnionScan.cpp</label>
-        <link refid="lib/access/UnionScan.cpp"/>
-        <childnode refid="2014" relation="include">
-        </childnode>
-        <childnode refid="2052" relation="include">
-        </childnode>
-        <childnode refid="2054" relation="include">
+      <node id="2026">
+        <label>helper/epoch.h</label>
+        <link refid="epoch_8h"/>
+        <childnode refid="2017" relation="include">
         </childnode>
       </node>
       <node id="2034">
         <label>limits</label>
       </node>
-      <node id="2016">
-        <label>access/system/OutputTask.h</label>
-        <link refid="_output_task_8h"/>
-        <childnode refid="2017" relation="include">
-        </childnode>
-        <childnode refid="2018" relation="include">
-        </childnode>
-        <childnode refid="2019" relation="include">
-        </childnode>
-        <childnode refid="2020" relation="include">
-        </childnode>
-        <childnode refid="2021" relation="include">
-        </childnode>
-        <childnode refid="2022" relation="include">
-        </childnode>
-        <childnode refid="2026" relation="include">
-        </childnode>
-        <childnode refid="2027" relation="include">
-        </childnode>
-      </node>
-      <node id="2046">
-        <label>storage/AbstractResource.h</label>
-        <link refid="_abstract_resource_8h"/>
-      </node>
-      <node id="2051">
-        <label>boost/iterator/iterator_facade.hpp</label>
-      </node>
-      <node id="2033">
-        <label>cstdint</label>
+      <node id="2050">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
       </node>
       <node id="2052">
         <label>storage/HorizontalTable.h</label>
@@ -66,62 +42,68 @@
         <childnode refid="2040" relation="include">
         </childnode>
       </node>
-      <node id="2040">
-        <label>storage/AbstractTable.h</label>
-        <link refid="_abstract_table_8h"/>
-        <childnode refid="2034" relation="include">
+      <node id="2047">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="2022" relation="include">
         </childnode>
-        <childnode refid="2029" relation="include">
+        <childnode refid="2048" relation="include">
         </childnode>
-        <childnode refid="2024" relation="include">
+        <childnode refid="2049" relation="include">
         </childnode>
+      </node>
+      <node id="2056">
+        <label>storage/MutableVerticalTable.h</label>
+        <link refid="_mutable_vertical_table_8h"/>
         <childnode refid="2019" relation="include">
         </childnode>
         <childnode refid="2023" relation="include">
         </childnode>
         <childnode refid="2032" relation="include">
         </childnode>
-        <childnode refid="2041" relation="include">
+        <childnode refid="2057" relation="include">
         </childnode>
-        <childnode refid="2044" relation="include">
+        <childnode refid="2071" relation="include">
         </childnode>
-        <childnode refid="2046" relation="include">
+        <childnode refid="2053" relation="include">
         </childnode>
-        <childnode refid="2047" relation="include">
+        <childnode refid="2040" relation="include">
         </childnode>
-        <childnode refid="2022" relation="include">
+      </node>
+      <node id="2051">
+        <label>boost/iterator/iterator_facade.hpp</label>
+      </node>
+      <node id="2033">
+        <label>cstdint</label>
+      </node>
+      <node id="2049">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="2050" relation="include">
+        </childnode>
+        <childnode refid="2051" relation="include">
+        </childnode>
+      </node>
+      <node id="2067">
+        <label>memory/MallocStrategy.h</label>
+        <link refid="_malloc_strategy_8h"/>
+        <childnode refid="2068" relation="include">
+        </childnode>
+        <childnode refid="2033" relation="include">
+        </childnode>
+      </node>
+      <node id="2058">
+        <label>storage/BaseAttributeVector.h</label>
+        <link refid="_base_attribute_vector_8h"/>
+        <childnode refid="2029" relation="include">
+        </childnode>
+        <childnode refid="2024" relation="include">
+        </childnode>
+        <childnode refid="2059" relation="include">
         </childnode>
       </node>
       <node id="2017">
         <label>stdint.h</label>
-      </node>
-      <node id="2032">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="2033" relation="include">
-        </childnode>
-        <childnode refid="2023" relation="include">
-        </childnode>
-        <childnode refid="2034" relation="include">
-        </childnode>
-        <childnode refid="2029" relation="include">
-        </childnode>
-        <childnode refid="2019" relation="include">
-        </childnode>
-      </node>
-      <node id="2065">
-        <label>cmath</label>
-      </node>
-      <node id="2044">
-        <label>helper/unique_id.h</label>
-        <link refid="unique__id_8h"/>
-        <childnode refid="2033" relation="include">
-        </childnode>
-        <childnode refid="2045" relation="include">
-        </childnode>
-      </node>
-      <node id="2070">
-        <label>cassert</label>
       </node>
       <node id="2027">
         <label>taskscheduler/Task.h</label>
@@ -137,20 +119,44 @@
         <childnode refid="2023" relation="include">
         </childnode>
       </node>
+      <node id="2015">
+        <label>access/system/PlanOperation.h</label>
+        <link refid="_plan_operation_8h"/>
+        <childnode refid="2016" relation="include">
+        </childnode>
+        <childnode refid="2031" relation="include">
+        </childnode>
+        <childnode refid="2035" relation="include">
+        </childnode>
+        <childnode refid="2038" relation="include">
+        </childnode>
+        <childnode refid="2022" relation="include">
+        </childnode>
+        <childnode refid="2032" relation="include">
+        </childnode>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2036" relation="include">
+        </childnode>
+      </node>
+      <node id="2013">
+        <label>src/lib/access/UnionScan.cpp</label>
+        <link refid="lib/access/UnionScan.cpp"/>
+        <childnode refid="2014" relation="include">
+        </childnode>
+        <childnode refid="2052" relation="include">
+        </childnode>
+        <childnode refid="2054" relation="include">
+        </childnode>
+      </node>
+      <node id="2065">
+        <label>cmath</label>
+      </node>
+      <node id="2070">
+        <label>cassert</label>
+      </node>
       <node id="2024">
         <label>stdexcept</label>
-      </node>
-      <node id="2023">
-        <label>string</label>
-      </node>
-      <node id="2020">
-        <label>map</label>
-      </node>
-      <node id="2026">
-        <label>helper/epoch.h</label>
-        <link refid="epoch_8h"/>
-        <childnode refid="2017" relation="include">
-        </childnode>
       </node>
       <node id="2057">
         <label>storage/Table.h</label>
@@ -174,41 +180,23 @@
         <childnode refid="2061" relation="include">
         </childnode>
       </node>
-      <node id="2058">
-        <label>storage/BaseAttributeVector.h</label>
-        <link refid="_base_attribute_vector_8h"/>
+      <node id="2061">
+        <label>storage/AttributeVectorFactory.h</label>
+        <link refid="_attribute_vector_factory_8h"/>
         <childnode refid="2029" relation="include">
         </childnode>
-        <childnode refid="2024" relation="include">
+        <childnode refid="2058" relation="include">
         </childnode>
-        <childnode refid="2059" relation="include">
+        <childnode refid="2062" relation="include">
         </childnode>
-      </node>
-      <node id="2025">
-        <label>ostream</label>
-      </node>
-      <node id="2036">
-        <label>json.h</label>
-      </node>
-      <node id="2037">
-        <label>access/system/BasicParser.h</label>
-        <link refid="_basic_parser_8h"/>
-        <childnode refid="2024" relation="include">
-        </childnode>
-        <childnode refid="2029" relation="include">
-        </childnode>
-        <childnode refid="2036" relation="include">
+        <childnode refid="2069" relation="include">
         </childnode>
       </node>
-      <node id="2050">
-        <label>storage/BaseIterator.h</label>
-        <link refid="_base_iterator_8h"/>
+      <node id="2023">
+        <label>string</label>
       </node>
-      <node id="2059">
-        <label>storage/AbstractAttributeVector.h</label>
-        <link refid="_abstract_attribute_vector_8h"/>
-        <childnode refid="2060" relation="include">
-        </childnode>
+      <node id="2020">
+        <label>map</label>
       </node>
       <node id="2062">
         <label>storage/FixedLengthVector.h</label>
@@ -236,34 +224,58 @@
         <childnode refid="2058" relation="include">
         </childnode>
       </node>
+      <node id="2071">
+        <label>storage/TableFactory.h</label>
+        <link refid="_table_factory_8h"/>
+        <childnode refid="2029" relation="include">
+        </childnode>
+        <childnode refid="2032" relation="include">
+        </childnode>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2057" relation="include">
+        </childnode>
+      </node>
+      <node id="2041">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="2042" relation="include">
+        </childnode>
+        <childnode refid="2043" relation="include">
+        </childnode>
+      </node>
+      <node id="2025">
+        <label>ostream</label>
+      </node>
+      <node id="2036">
+        <label>json.h</label>
+      </node>
       <node id="2030">
         <label>condition_variable</label>
       </node>
-      <node id="2014">
-        <label>access/UnionScan.h</label>
-        <link refid="_union_scan_8h"/>
-        <childnode refid="2015" relation="include">
+      <node id="2022">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="2019" relation="include">
         </childnode>
-      </node>
-      <node id="2061">
-        <label>storage/AttributeVectorFactory.h</label>
-        <link refid="_attribute_vector_factory_8h"/>
-        <childnode refid="2029" relation="include">
+        <childnode refid="2023" relation="include">
         </childnode>
-        <childnode refid="2058" relation="include">
+        <childnode refid="2024" relation="include">
         </childnode>
-        <childnode refid="2062" relation="include">
+        <childnode refid="2017" relation="include">
         </childnode>
-        <childnode refid="2069" relation="include">
+        <childnode refid="2025" relation="include">
         </childnode>
       </node>
       <node id="2019">
         <label>vector</label>
       </node>
-      <node id="2055">
-        <label>helper/SharedFactory.h</label>
-        <link refid="_shared_factory_8h"/>
-        <childnode refid="2029" relation="include">
+      <node id="2044">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="2033" relation="include">
+        </childnode>
+        <childnode refid="2045" relation="include">
         </childnode>
       </node>
       <node id="2021">
@@ -275,12 +287,38 @@
       <node id="2066">
         <label>sstream</label>
       </node>
-      <node id="2038">
-        <label>io/TXContext.h</label>
-        <link refid="_t_x_context_8h"/>
+      <node id="2054">
+        <label>storage/PointerCalculator.h</label>
+        <link refid="_pointer_calculator_8h"/>
+        <childnode refid="2019" relation="include">
+        </childnode>
         <childnode refid="2032" relation="include">
         </childnode>
-        <childnode refid="2039" relation="include">
+        <childnode refid="2055" relation="include">
+        </childnode>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2056" relation="include">
+        </childnode>
+      </node>
+      <node id="2016">
+        <label>access/system/OutputTask.h</label>
+        <link refid="_output_task_8h"/>
+        <childnode refid="2017" relation="include">
+        </childnode>
+        <childnode refid="2018" relation="include">
+        </childnode>
+        <childnode refid="2019" relation="include">
+        </childnode>
+        <childnode refid="2020" relation="include">
+        </childnode>
+        <childnode refid="2021" relation="include">
+        </childnode>
+        <childnode refid="2022" relation="include">
+        </childnode>
+        <childnode refid="2026" relation="include">
+        </childnode>
+        <childnode refid="2027" relation="include">
         </childnode>
       </node>
       <node id="2035">
@@ -309,80 +347,6 @@
       <node id="2018">
         <label>time.h</label>
       </node>
-      <node id="2063">
-        <label>cerrno</label>
-      </node>
-      <node id="2056">
-        <label>storage/MutableVerticalTable.h</label>
-        <link refid="_mutable_vertical_table_8h"/>
-        <childnode refid="2019" relation="include">
-        </childnode>
-        <childnode refid="2023" relation="include">
-        </childnode>
-        <childnode refid="2032" relation="include">
-        </childnode>
-        <childnode refid="2057" relation="include">
-        </childnode>
-        <childnode refid="2071" relation="include">
-        </childnode>
-        <childnode refid="2053" relation="include">
-        </childnode>
-        <childnode refid="2040" relation="include">
-        </childnode>
-      </node>
-      <node id="2041">
-        <label>helper/locking.h</label>
-        <link refid="locking_8h"/>
-        <childnode refid="2042" relation="include">
-        </childnode>
-        <childnode refid="2043" relation="include">
-        </childnode>
-      </node>
-      <node id="2071">
-        <label>storage/TableFactory.h</label>
-        <link refid="_table_factory_8h"/>
-        <childnode refid="2029" relation="include">
-        </childnode>
-        <childnode refid="2032" relation="include">
-        </childnode>
-        <childnode refid="2040" relation="include">
-        </childnode>
-        <childnode refid="2057" relation="include">
-        </childnode>
-      </node>
-      <node id="2068">
-        <label>iostream</label>
-      </node>
-      <node id="2060">
-        <label>cstddef</label>
-      </node>
-      <node id="2022">
-        <label>storage/storage_types.h</label>
-        <link refid="storage__types_8h"/>
-        <childnode refid="2019" relation="include">
-        </childnode>
-        <childnode refid="2023" relation="include">
-        </childnode>
-        <childnode refid="2024" relation="include">
-        </childnode>
-        <childnode refid="2017" relation="include">
-        </childnode>
-        <childnode refid="2025" relation="include">
-        </childnode>
-      </node>
-      <node id="2031">
-        <label>access/system/OperationData.h</label>
-        <link refid="_operation_data_8h"/>
-        <childnode refid="2019" relation="include">
-        </childnode>
-        <childnode refid="2032" relation="include">
-        </childnode>
-        <childnode refid="2022" relation="include">
-        </childnode>
-      </node>
-      <node id="2028">
-        <label>mutex</label>
-      </node>
       <node id="2048">
         <label>storage/AbstractDictionary.h</label>
         <link refid="_abstract_dictionary_8h"/>
@@ -395,36 +359,45 @@
         <childnode refid="2022" relation="include">
         </childnode>
       </node>
-      <node id="2042">
-        <label>thread</label>
-      </node>
-      <node id="2049">
-        <label>storage/DictionaryIterator.h</label>
-        <link refid="_dictionary_iterator_8h"/>
-        <childnode refid="2050" relation="include">
+      <node id="2038">
+        <label>io/TXContext.h</label>
+        <link refid="_t_x_context_8h"/>
+        <childnode refid="2032" relation="include">
         </childnode>
-        <childnode refid="2051" relation="include">
+        <childnode refid="2039" relation="include">
         </childnode>
       </node>
-      <node id="2015">
-        <label>access/system/PlanOperation.h</label>
-        <link refid="_plan_operation_8h"/>
-        <childnode refid="2016" relation="include">
-        </childnode>
-        <childnode refid="2031" relation="include">
-        </childnode>
-        <childnode refid="2035" relation="include">
-        </childnode>
-        <childnode refid="2038" relation="include">
-        </childnode>
-        <childnode refid="2022" relation="include">
+      <node id="2063">
+        <label>cerrno</label>
+      </node>
+      <node id="2068">
+        <label>iostream</label>
+      </node>
+      <node id="2031">
+        <label>access/system/OperationData.h</label>
+        <link refid="_operation_data_8h"/>
+        <childnode refid="2019" relation="include">
         </childnode>
         <childnode refid="2032" relation="include">
         </childnode>
-        <childnode refid="2040" relation="include">
+        <childnode refid="2022" relation="include">
         </childnode>
-        <childnode refid="2036" relation="include">
+      </node>
+      <node id="2060">
+        <label>cstddef</label>
+      </node>
+      <node id="2014">
+        <label>access/UnionScan.h</label>
+        <link refid="_union_scan_8h"/>
+        <childnode refid="2015" relation="include">
         </childnode>
+      </node>
+      <node id="2046">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="2028">
+        <label>mutex</label>
       </node>
       <node id="2053">
         <label>storage/ColumnMetadata.h</label>
@@ -436,8 +409,14 @@
         <childnode refid="2024" relation="include">
         </childnode>
       </node>
-      <node id="2064">
-        <label>cstring</label>
+      <node id="2059">
+        <label>storage/AbstractAttributeVector.h</label>
+        <link refid="_abstract_attribute_vector_8h"/>
+        <childnode refid="2060" relation="include">
+        </childnode>
+      </node>
+      <node id="2042">
+        <label>thread</label>
       </node>
       <node id="2069">
         <label>storage/BitCompressedVector.h</label>
@@ -461,40 +440,61 @@
         <childnode refid="2058" relation="include">
         </childnode>
       </node>
-      <node id="2054">
-        <label>storage/PointerCalculator.h</label>
-        <link refid="_pointer_calculator_8h"/>
+      <node id="2037">
+        <label>access/system/BasicParser.h</label>
+        <link refid="_basic_parser_8h"/>
+        <childnode refid="2024" relation="include">
+        </childnode>
+        <childnode refid="2029" relation="include">
+        </childnode>
+        <childnode refid="2036" relation="include">
+        </childnode>
+      </node>
+      <node id="2032">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2033" relation="include">
+        </childnode>
+        <childnode refid="2023" relation="include">
+        </childnode>
+        <childnode refid="2034" relation="include">
+        </childnode>
+        <childnode refid="2029" relation="include">
+        </childnode>
         <childnode refid="2019" relation="include">
+        </childnode>
+      </node>
+      <node id="2040">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="2034" relation="include">
+        </childnode>
+        <childnode refid="2029" relation="include">
+        </childnode>
+        <childnode refid="2024" relation="include">
+        </childnode>
+        <childnode refid="2019" relation="include">
+        </childnode>
+        <childnode refid="2023" relation="include">
         </childnode>
         <childnode refid="2032" relation="include">
         </childnode>
-        <childnode refid="2055" relation="include">
+        <childnode refid="2041" relation="include">
         </childnode>
-        <childnode refid="2040" relation="include">
+        <childnode refid="2044" relation="include">
         </childnode>
-        <childnode refid="2056" relation="include">
+        <childnode refid="2046" relation="include">
         </childnode>
+        <childnode refid="2047" relation="include">
+        </childnode>
+        <childnode refid="2022" relation="include">
+        </childnode>
+      </node>
+      <node id="2064">
+        <label>cstring</label>
       </node>
       <node id="2029">
         <label>memory</label>
-      </node>
-      <node id="2047">
-        <label>storage/BaseDictionary.h</label>
-        <link refid="_base_dictionary_8h"/>
-        <childnode refid="2022" relation="include">
-        </childnode>
-        <childnode refid="2048" relation="include">
-        </childnode>
-        <childnode refid="2049" relation="include">
-        </childnode>
-      </node>
-      <node id="2067">
-        <label>memory/MallocStrategy.h</label>
-        <link refid="_malloc_strategy_8h"/>
-        <childnode refid="2068" relation="include">
-        </childnode>
-        <childnode refid="2033" relation="include">
-        </childnode>
       </node>
     </incdepgraph>
     <innernamespace refid="namespacehyrise">hyrise</innernamespace>
@@ -518,7 +518,7 @@
 <codeline lineno="12"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14" refid="classhyrise_1_1access_1_1_union_scan_1a7f0572417fb61f7848233c54ac5cdf19" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_union_scan_1a7f0572417fb61f7848233c54ac5cdf19" kindref="member">UnionScan::executePlanOperation</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>tables<sp/>=<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data. ">input</ref>.<ref refid="group__deprecated_access_1gad5f05c886f04315886788ab4c40a34ae" kindref="member">getTables</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>tables<sp/>=<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data.">input</ref>.<ref refid="group__deprecated_access_1gad5f05c886f04315886788ab4c40a34ae" kindref="member">getTables</ref>();</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/>std::vector&lt;std::shared_ptr&lt;const<sp/>PointerCalculator&gt;&gt;<sp/>pcs(tables.size());</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/>std::transform(begin(tables),<sp/>end(tables),</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>begin(pcs),</highlight></codeline>
@@ -537,6 +537,6 @@
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal">}}</highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/access/UnionScan.cpp"/>
+    <location file="/home/vagrant/lanice/src/lib/access/UnionScan.cpp"/>
   </compounddef>
 </doxygen>

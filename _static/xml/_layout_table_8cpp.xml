@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="_layout_table_8cpp" kind="file">
     <compoundname>LayoutTable.cpp</compoundname>
     <includes refid="_layout_table_8h" local="yes">access/LayoutTable.h</includes>
@@ -8,20 +8,62 @@
     <includes refid="_sequential_heap_merger_8h" local="yes">storage/SequentialHeapMerger.h</includes>
     <includes refid="_store_8h" local="yes">storage/Store.h</includes>
     <incdepgraph>
-      <node id="5041">
-        <label>io/StringLoader.h</label>
-        <link refid="_string_loader_8h"/>
-        <childnode refid="5038" relation="include">
-        </childnode>
-      </node>
       <node id="5028">
         <label>atomic</label>
       </node>
       <node id="5074">
         <label>functional</label>
       </node>
+      <node id="5011">
+        <label>helper/epoch.h</label>
+        <link refid="epoch_8h"/>
+        <childnode refid="5002" relation="include">
+        </childnode>
+      </node>
+      <node id="5072">
+        <label>helper/vector_helpers.h</label>
+        <link refid="vector__helpers_8h"/>
+        <childnode refid="5073" relation="include">
+        </childnode>
+        <childnode refid="5074" relation="include">
+        </childnode>
+        <childnode refid="5075" relation="include">
+        </childnode>
+        <childnode refid="5076" relation="include">
+        </childnode>
+      </node>
       <node id="5019">
         <label>limits</label>
+      </node>
+      <node id="5035">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="4999">
+        <label>access/LayoutTable.h</label>
+        <link refid="_layout_table_8h"/>
+        <childnode refid="5000" relation="include">
+        </childnode>
+      </node>
+      <node id="5038">
+        <label>io/AbstractLoader.h</label>
+        <link refid="_abstract_loader_8h"/>
+        <childnode refid="5039" relation="include">
+        </childnode>
+        <childnode refid="5007" relation="include">
+        </childnode>
+        <childnode refid="5017" relation="include">
+        </childnode>
+      </node>
+      <node id="5032">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="5007" relation="include">
+        </childnode>
+        <childnode refid="5033" relation="include">
+        </childnode>
+        <childnode refid="5034" relation="include">
+        </childnode>
       </node>
       <node id="5045">
         <label>assert.h</label>
@@ -29,37 +71,23 @@
       <node id="5076">
         <label>iterator</label>
       </node>
-      <node id="5001">
-        <label>access/system/OutputTask.h</label>
-        <link refid="_output_task_8h"/>
-        <childnode refid="5002" relation="include">
-        </childnode>
-        <childnode refid="5003" relation="include">
-        </childnode>
+      <node id="5054">
+        <label>storage/MutableVerticalTable.h</label>
+        <link refid="_mutable_vertical_table_8h"/>
         <childnode refid="5004" relation="include">
         </childnode>
-        <childnode refid="5005" relation="include">
+        <childnode refid="5008" relation="include">
         </childnode>
-        <childnode refid="5006" relation="include">
+        <childnode refid="5017" relation="include">
         </childnode>
-        <childnode refid="5007" relation="include">
+        <childnode refid="5055" relation="include">
         </childnode>
-        <childnode refid="5011" relation="include">
+        <childnode refid="5069" relation="include">
         </childnode>
-        <childnode refid="5012" relation="include">
+        <childnode refid="5056" relation="include">
         </childnode>
-      </node>
-      <node id="5043">
-        <label>storage/ValueIdMap.hpp</label>
-        <link refid="_value_id_map_8hpp"/>
-        <childnode refid="5044" relation="include">
+        <childnode refid="5025" relation="include">
         </childnode>
-        <childnode refid="5047" relation="include">
-        </childnode>
-      </node>
-      <node id="5031">
-        <label>storage/AbstractResource.h</label>
-        <link refid="_abstract_resource_8h"/>
       </node>
       <node id="5036">
         <label>boost/iterator/iterator_facade.hpp</label>
@@ -67,76 +95,92 @@
       <node id="5018">
         <label>cstdint</label>
       </node>
-      <node id="5025">
-        <label>storage/AbstractTable.h</label>
-        <link refid="_abstract_table_8h"/>
-        <childnode refid="5019" relation="include">
+      <node id="4998">
+        <label>src/lib/access/LayoutTable.cpp</label>
+        <link refid="LayoutTable.cpp"/>
+        <childnode refid="4999" relation="include">
         </childnode>
+        <childnode refid="5037" relation="include">
+        </childnode>
+        <childnode refid="5041" relation="include">
+        </childnode>
+        <childnode refid="5042" relation="include">
+        </childnode>
+        <childnode refid="5053" relation="include">
+        </childnode>
+      </node>
+      <node id="5034">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="5035" relation="include">
+        </childnode>
+        <childnode refid="5036" relation="include">
+        </childnode>
+      </node>
+      <node id="5066">
+        <label>memory/MallocStrategy.h</label>
+        <link refid="_malloc_strategy_8h"/>
+        <childnode refid="5046" relation="include">
+        </childnode>
+        <childnode refid="5018" relation="include">
+        </childnode>
+      </node>
+      <node id="5041">
+        <label>io/StringLoader.h</label>
+        <link refid="_string_loader_8h"/>
+        <childnode refid="5038" relation="include">
+        </childnode>
+      </node>
+      <node id="5057">
+        <label>storage/BaseAttributeVector.h</label>
+        <link refid="_base_attribute_vector_8h"/>
         <childnode refid="5014" relation="include">
         </childnode>
         <childnode refid="5009" relation="include">
         </childnode>
-        <childnode refid="5004" relation="include">
-        </childnode>
-        <childnode refid="5008" relation="include">
-        </childnode>
-        <childnode refid="5017" relation="include">
-        </childnode>
-        <childnode refid="5026" relation="include">
-        </childnode>
-        <childnode refid="5029" relation="include">
-        </childnode>
-        <childnode refid="5031" relation="include">
-        </childnode>
-        <childnode refid="5032" relation="include">
-        </childnode>
-        <childnode refid="5007" relation="include">
+        <childnode refid="5058" relation="include">
         </childnode>
       </node>
       <node id="5002">
         <label>stdint.h</label>
       </node>
-      <node id="5017">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="5018" relation="include">
+      <node id="5047">
+        <label>storage/OrderIndifferentDictionary.h</label>
+        <link refid="_order_indifferent_dictionary_8h"/>
+        <childnode refid="5048" relation="include">
         </childnode>
-        <childnode refid="5008" relation="include">
+        <childnode refid="5004" relation="include">
         </childnode>
-        <childnode refid="5019" relation="include">
+        <childnode refid="5005" relation="include">
         </childnode>
         <childnode refid="5014" relation="include">
         </childnode>
-        <childnode refid="5004" relation="include">
+        <childnode refid="5049" relation="include">
+        </childnode>
+        <childnode refid="5007" relation="include">
+        </childnode>
+        <childnode refid="5032" relation="include">
+        </childnode>
+        <childnode refid="5034" relation="include">
         </childnode>
       </node>
-      <node id="5050">
-        <label>storage/AbstractMerger.h</label>
-        <link refid="_abstract_merger_8h"/>
-        <childnode refid="5004" relation="include">
-        </childnode>
-        <childnode refid="5051" relation="include">
-        </childnode>
-        <childnode refid="5017" relation="include">
+      <node id="5053">
+        <label>storage/Store.h</label>
+        <link refid="_store_8h"/>
+        <childnode refid="5054" relation="include">
         </childnode>
         <childnode refid="5025" relation="include">
         </childnode>
-        <childnode refid="5052" relation="include">
+        <childnode refid="5070" relation="include">
         </childnode>
-      </node>
-      <node id="5064">
-        <label>cmath</label>
-      </node>
-      <node id="5029">
-        <label>helper/unique_id.h</label>
-        <link refid="unique__id_8h"/>
-        <childnode refid="5018" relation="include">
+        <childnode refid="5071" relation="include">
         </childnode>
-        <childnode refid="5030" relation="include">
+        <childnode refid="5042" relation="include">
         </childnode>
-      </node>
-      <node id="5068">
-        <label>cassert</label>
+        <childnode refid="5077" relation="include">
+        </childnode>
+        <childnode refid="5017" relation="include">
+        </childnode>
       </node>
       <node id="5012">
         <label>taskscheduler/Task.h</label>
@@ -152,8 +196,35 @@
         <childnode refid="5008" relation="include">
         </childnode>
       </node>
-      <node id="5009">
-        <label>stdexcept</label>
+      <node id="5000">
+        <label>access/system/PlanOperation.h</label>
+        <link refid="_plan_operation_8h"/>
+        <childnode refid="5001" relation="include">
+        </childnode>
+        <childnode refid="5016" relation="include">
+        </childnode>
+        <childnode refid="5020" relation="include">
+        </childnode>
+        <childnode refid="5023" relation="include">
+        </childnode>
+        <childnode refid="5007" relation="include">
+        </childnode>
+        <childnode refid="5017" relation="include">
+        </childnode>
+        <childnode refid="5025" relation="include">
+        </childnode>
+        <childnode refid="5021" relation="include">
+        </childnode>
+      </node>
+      <node id="5042">
+        <label>storage/SequentialHeapMerger.h</label>
+        <link refid="_sequential_heap_merger_8h"/>
+        <childnode refid="5043" relation="include">
+        </childnode>
+        <childnode refid="5025" relation="include">
+        </childnode>
+        <childnode refid="5050" relation="include">
+        </childnode>
       </node>
       <node id="5052">
         <label>storage/TableUtils.h</label>
@@ -163,20 +234,17 @@
         <childnode refid="5051" relation="include">
         </childnode>
       </node>
+      <node id="5064">
+        <label>cmath</label>
+      </node>
+      <node id="5068">
+        <label>cassert</label>
+      </node>
+      <node id="5009">
+        <label>stdexcept</label>
+      </node>
       <node id="5075">
         <label>numeric</label>
-      </node>
-      <node id="5008">
-        <label>string</label>
-      </node>
-      <node id="5005">
-        <label>map</label>
-      </node>
-      <node id="5011">
-        <label>helper/epoch.h</label>
-        <link refid="epoch_8h"/>
-        <childnode refid="5002" relation="include">
-        </childnode>
       </node>
       <node id="5055">
         <label>storage/Table.h</label>
@@ -200,39 +268,6 @@
         <childnode refid="5060" relation="include">
         </childnode>
       </node>
-      <node id="5048">
-        <label>exception</label>
-      </node>
-      <node id="5057">
-        <label>storage/BaseAttributeVector.h</label>
-        <link refid="_base_attribute_vector_8h"/>
-        <childnode refid="5014" relation="include">
-        </childnode>
-        <childnode refid="5009" relation="include">
-        </childnode>
-        <childnode refid="5058" relation="include">
-        </childnode>
-      </node>
-      <node id="5040">
-        <label>parameters.inc</label>
-        <link refid="parameters_8inc"/>
-      </node>
-      <node id="5010">
-        <label>ostream</label>
-      </node>
-      <node id="5021">
-        <label>json.h</label>
-      </node>
-      <node id="5022">
-        <label>access/system/BasicParser.h</label>
-        <link refid="_basic_parser_8h"/>
-        <childnode refid="5009" relation="include">
-        </childnode>
-        <childnode refid="5014" relation="include">
-        </childnode>
-        <childnode refid="5021" relation="include">
-        </childnode>
-      </node>
       <node id="5077">
         <label>storage/PrettyPrinter.h</label>
         <link refid="_pretty_printer_8h"/>
@@ -243,12 +278,20 @@
         <childnode refid="5079" relation="include">
         </childnode>
       </node>
-      <node id="5049">
-        <label>limits.h</label>
+      <node id="5060">
+        <label>storage/AttributeVectorFactory.h</label>
+        <link refid="_attribute_vector_factory_8h"/>
+        <childnode refid="5014" relation="include">
+        </childnode>
+        <childnode refid="5057" relation="include">
+        </childnode>
+        <childnode refid="5061" relation="include">
+        </childnode>
+        <childnode refid="5067" relation="include">
+        </childnode>
       </node>
-      <node id="5035">
-        <label>storage/BaseIterator.h</label>
-        <link refid="_base_iterator_8h"/>
+      <node id="5008">
+        <label>string</label>
       </node>
       <node id="5039">
         <label>io/Loader.h</label>
@@ -264,17 +307,8 @@
         <childnode refid="5040" relation="include">
         </childnode>
       </node>
-      <node id="4999">
-        <label>access/LayoutTable.h</label>
-        <link refid="_layout_table_8h"/>
-        <childnode refid="5000" relation="include">
-        </childnode>
-      </node>
-      <node id="5058">
-        <label>storage/AbstractAttributeVector.h</label>
-        <link refid="_abstract_attribute_vector_8h"/>
-        <childnode refid="5059" relation="include">
-        </childnode>
+      <node id="5005">
+        <label>map</label>
       </node>
       <node id="5061">
         <label>storage/FixedLengthVector.h</label>
@@ -302,40 +336,90 @@
         <childnode refid="5057" relation="include">
         </childnode>
       </node>
-      <node id="5015">
-        <label>condition_variable</label>
+      <node id="5079">
+        <label>helper/RangeIter.h</label>
+        <link refid="_range_iter_8h"/>
       </node>
-      <node id="5047">
-        <label>storage/OrderIndifferentDictionary.h</label>
-        <link refid="_order_indifferent_dictionary_8h"/>
-        <childnode refid="5048" relation="include">
-        </childnode>
-        <childnode refid="5004" relation="include">
-        </childnode>
-        <childnode refid="5005" relation="include">
-        </childnode>
+      <node id="5069">
+        <label>storage/TableFactory.h</label>
+        <link refid="_table_factory_8h"/>
         <childnode refid="5014" relation="include">
         </childnode>
-        <childnode refid="5049" relation="include">
+        <childnode refid="5017" relation="include">
         </childnode>
-        <childnode refid="5007" relation="include">
+        <childnode refid="5025" relation="include">
+        </childnode>
+        <childnode refid="5055" relation="include">
+        </childnode>
+      </node>
+      <node id="5044">
+        <label>storage/OrderPreservingDictionary.h</label>
+        <link refid="_order_preserving_dictionary_8h"/>
+        <childnode refid="5045" relation="include">
+        </childnode>
+        <childnode refid="5046" relation="include">
+        </childnode>
+        <childnode refid="5014" relation="include">
         </childnode>
         <childnode refid="5032" relation="include">
         </childnode>
+        <childnode refid="5035" relation="include">
+        </childnode>
         <childnode refid="5034" relation="include">
         </childnode>
+        <childnode refid="5007" relation="include">
+        </childnode>
       </node>
-      <node id="5060">
-        <label>storage/AttributeVectorFactory.h</label>
-        <link refid="_attribute_vector_factory_8h"/>
-        <childnode refid="5014" relation="include">
+      <node id="5026">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="5027" relation="include">
         </childnode>
-        <childnode refid="5057" relation="include">
+        <childnode refid="5028" relation="include">
         </childnode>
-        <childnode refid="5061" relation="include">
+      </node>
+      <node id="5048">
+        <label>exception</label>
+      </node>
+      <node id="5010">
+        <label>ostream</label>
+      </node>
+      <node id="5021">
+        <label>json.h</label>
+      </node>
+      <node id="5049">
+        <label>limits.h</label>
+      </node>
+      <node id="5070">
+        <label>storage/TableMerger.h</label>
+        <link refid="_table_merger_8h"/>
+        <childnode refid="5004" relation="include">
         </childnode>
-        <childnode refid="5067" relation="include">
+        <childnode refid="5017" relation="include">
         </childnode>
+        <childnode refid="5025" relation="include">
+        </childnode>
+        <childnode refid="5071" relation="include">
+        </childnode>
+        <childnode refid="5050" relation="include">
+        </childnode>
+      </node>
+      <node id="5050">
+        <label>storage/AbstractMerger.h</label>
+        <link refid="_abstract_merger_8h"/>
+        <childnode refid="5004" relation="include">
+        </childnode>
+        <childnode refid="5051" relation="include">
+        </childnode>
+        <childnode refid="5017" relation="include">
+        </childnode>
+        <childnode refid="5025" relation="include">
+        </childnode>
+        <childnode refid="5052" relation="include">
+        </childnode>
+      </node>
+      <node id="5015">
+        <label>condition_variable</label>
       </node>
       <node id="5037">
         <label>io/EmptyLoader.h</label>
@@ -345,8 +429,30 @@
         <childnode refid="5038" relation="include">
         </childnode>
       </node>
+      <node id="5007">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="5004" relation="include">
+        </childnode>
+        <childnode refid="5008" relation="include">
+        </childnode>
+        <childnode refid="5009" relation="include">
+        </childnode>
+        <childnode refid="5002" relation="include">
+        </childnode>
+        <childnode refid="5010" relation="include">
+        </childnode>
+      </node>
       <node id="5004">
         <label>vector</label>
+      </node>
+      <node id="5029">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="5018" relation="include">
+        </childnode>
+        <childnode refid="5030" relation="include">
+        </childnode>
       </node>
       <node id="5006">
         <label>utility</label>
@@ -357,12 +463,42 @@
       <node id="5065">
         <label>sstream</label>
       </node>
-      <node id="5023">
-        <label>io/TXContext.h</label>
-        <link refid="_t_x_context_8h"/>
-        <childnode refid="5017" relation="include">
+      <node id="5001">
+        <label>access/system/OutputTask.h</label>
+        <link refid="_output_task_8h"/>
+        <childnode refid="5002" relation="include">
         </childnode>
-        <childnode refid="5024" relation="include">
+        <childnode refid="5003" relation="include">
+        </childnode>
+        <childnode refid="5004" relation="include">
+        </childnode>
+        <childnode refid="5005" relation="include">
+        </childnode>
+        <childnode refid="5006" relation="include">
+        </childnode>
+        <childnode refid="5007" relation="include">
+        </childnode>
+        <childnode refid="5011" relation="include">
+        </childnode>
+        <childnode refid="5012" relation="include">
+        </childnode>
+      </node>
+      <node id="5071">
+        <label>storage/AbstractMergeStrategy.h</label>
+        <link refid="_abstract_merge_strategy_8h"/>
+        <childnode refid="5004" relation="include">
+        </childnode>
+        <childnode refid="5025" relation="include">
+        </childnode>
+        <childnode refid="5072" relation="include">
+        </childnode>
+      </node>
+      <node id="5043">
+        <label>storage/ValueIdMap.hpp</label>
+        <link refid="_value_id_map_8hpp"/>
+        <childnode refid="5044" relation="include">
+        </childnode>
+        <childnode refid="5047" relation="include">
         </childnode>
       </node>
       <node id="5020">
@@ -385,110 +521,11 @@
         <childnode refid="5022" relation="include">
         </childnode>
       </node>
-      <node id="5038">
-        <label>io/AbstractLoader.h</label>
-        <link refid="_abstract_loader_8h"/>
-        <childnode refid="5039" relation="include">
-        </childnode>
-        <childnode refid="5007" relation="include">
-        </childnode>
-        <childnode refid="5017" relation="include">
-        </childnode>
-      </node>
       <node id="5024">
         <label>cereal/cereal.hpp</label>
       </node>
       <node id="5003">
         <label>time.h</label>
-      </node>
-      <node id="5072">
-        <label>helper/vector_helpers.h</label>
-        <link refid="vector__helpers_8h"/>
-        <childnode refid="5073" relation="include">
-        </childnode>
-        <childnode refid="5074" relation="include">
-        </childnode>
-        <childnode refid="5075" relation="include">
-        </childnode>
-        <childnode refid="5076" relation="include">
-        </childnode>
-      </node>
-      <node id="5062">
-        <label>cerrno</label>
-      </node>
-      <node id="5054">
-        <label>storage/MutableVerticalTable.h</label>
-        <link refid="_mutable_vertical_table_8h"/>
-        <childnode refid="5004" relation="include">
-        </childnode>
-        <childnode refid="5008" relation="include">
-        </childnode>
-        <childnode refid="5017" relation="include">
-        </childnode>
-        <childnode refid="5055" relation="include">
-        </childnode>
-        <childnode refid="5069" relation="include">
-        </childnode>
-        <childnode refid="5056" relation="include">
-        </childnode>
-        <childnode refid="5025" relation="include">
-        </childnode>
-      </node>
-      <node id="5026">
-        <label>helper/locking.h</label>
-        <link refid="locking_8h"/>
-        <childnode refid="5027" relation="include">
-        </childnode>
-        <childnode refid="5028" relation="include">
-        </childnode>
-      </node>
-      <node id="5069">
-        <label>storage/TableFactory.h</label>
-        <link refid="_table_factory_8h"/>
-        <childnode refid="5014" relation="include">
-        </childnode>
-        <childnode refid="5017" relation="include">
-        </childnode>
-        <childnode refid="5025" relation="include">
-        </childnode>
-        <childnode refid="5055" relation="include">
-        </childnode>
-      </node>
-      <node id="5046">
-        <label>iostream</label>
-      </node>
-      <node id="5059">
-        <label>cstddef</label>
-      </node>
-      <node id="5007">
-        <label>storage/storage_types.h</label>
-        <link refid="storage__types_8h"/>
-        <childnode refid="5004" relation="include">
-        </childnode>
-        <childnode refid="5008" relation="include">
-        </childnode>
-        <childnode refid="5009" relation="include">
-        </childnode>
-        <childnode refid="5002" relation="include">
-        </childnode>
-        <childnode refid="5010" relation="include">
-        </childnode>
-      </node>
-      <node id="5016">
-        <label>access/system/OperationData.h</label>
-        <link refid="_operation_data_8h"/>
-        <childnode refid="5004" relation="include">
-        </childnode>
-        <childnode refid="5017" relation="include">
-        </childnode>
-        <childnode refid="5007" relation="include">
-        </childnode>
-      </node>
-      <node id="5051">
-        <label>unordered_map</label>
-      </node>
-      <node id="5013">
-        <label>mutex</label>
       </node>
       <node id="5033">
         <label>storage/AbstractDictionary.h</label>
@@ -502,106 +539,42 @@
         <childnode refid="5007" relation="include">
         </childnode>
       </node>
-      <node id="5071">
-        <label>storage/AbstractMergeStrategy.h</label>
-        <link refid="_abstract_merge_strategy_8h"/>
+      <node id="5023">
+        <label>io/TXContext.h</label>
+        <link refid="_t_x_context_8h"/>
+        <childnode refid="5017" relation="include">
+        </childnode>
+        <childnode refid="5024" relation="include">
+        </childnode>
+      </node>
+      <node id="5062">
+        <label>cerrno</label>
+      </node>
+      <node id="5046">
+        <label>iostream</label>
+      </node>
+      <node id="5016">
+        <label>access/system/OperationData.h</label>
+        <link refid="_operation_data_8h"/>
         <childnode refid="5004" relation="include">
         </childnode>
-        <childnode refid="5025" relation="include">
-        </childnode>
-        <childnode refid="5072" relation="include">
-        </childnode>
-      </node>
-      <node id="5027">
-        <label>thread</label>
-      </node>
-      <node id="5034">
-        <label>storage/DictionaryIterator.h</label>
-        <link refid="_dictionary_iterator_8h"/>
-        <childnode refid="5035" relation="include">
-        </childnode>
-        <childnode refid="5036" relation="include">
-        </childnode>
-      </node>
-      <node id="5044">
-        <label>storage/OrderPreservingDictionary.h</label>
-        <link refid="_order_preserving_dictionary_8h"/>
-        <childnode refid="5045" relation="include">
-        </childnode>
-        <childnode refid="5046" relation="include">
-        </childnode>
-        <childnode refid="5014" relation="include">
-        </childnode>
-        <childnode refid="5032" relation="include">
-        </childnode>
-        <childnode refid="5035" relation="include">
-        </childnode>
-        <childnode refid="5034" relation="include">
+        <childnode refid="5017" relation="include">
         </childnode>
         <childnode refid="5007" relation="include">
         </childnode>
       </node>
-      <node id="5079">
-        <label>helper/RangeIter.h</label>
-        <link refid="_range_iter_8h"/>
+      <node id="5059">
+        <label>cstddef</label>
       </node>
-      <node id="4998">
-        <label>src/lib/access/LayoutTable.cpp</label>
-        <link refid="LayoutTable.cpp"/>
-        <childnode refid="4999" relation="include">
-        </childnode>
-        <childnode refid="5037" relation="include">
-        </childnode>
-        <childnode refid="5041" relation="include">
-        </childnode>
-        <childnode refid="5042" relation="include">
-        </childnode>
-        <childnode refid="5053" relation="include">
-        </childnode>
+      <node id="5051">
+        <label>unordered_map</label>
       </node>
-      <node id="5053">
-        <label>storage/Store.h</label>
-        <link refid="_store_8h"/>
-        <childnode refid="5054" relation="include">
-        </childnode>
-        <childnode refid="5025" relation="include">
-        </childnode>
-        <childnode refid="5070" relation="include">
-        </childnode>
-        <childnode refid="5071" relation="include">
-        </childnode>
-        <childnode refid="5042" relation="include">
-        </childnode>
-        <childnode refid="5077" relation="include">
-        </childnode>
-        <childnode refid="5017" relation="include">
-        </childnode>
+      <node id="5031">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
       </node>
-      <node id="5078">
-        <label>ftprinter/FTPrinter.h</label>
-      </node>
-      <node id="5073">
-        <label>algorithm</label>
-      </node>
-      <node id="5000">
-        <label>access/system/PlanOperation.h</label>
-        <link refid="_plan_operation_8h"/>
-        <childnode refid="5001" relation="include">
-        </childnode>
-        <childnode refid="5016" relation="include">
-        </childnode>
-        <childnode refid="5020" relation="include">
-        </childnode>
-        <childnode refid="5023" relation="include">
-        </childnode>
-        <childnode refid="5007" relation="include">
-        </childnode>
-        <childnode refid="5017" relation="include">
-        </childnode>
-        <childnode refid="5025" relation="include">
-        </childnode>
-        <childnode refid="5021" relation="include">
-        </childnode>
+      <node id="5013">
+        <label>mutex</label>
       </node>
       <node id="5056">
         <label>storage/ColumnMetadata.h</label>
@@ -613,8 +586,14 @@
         <childnode refid="5009" relation="include">
         </childnode>
       </node>
-      <node id="5063">
-        <label>cstring</label>
+      <node id="5058">
+        <label>storage/AbstractAttributeVector.h</label>
+        <link refid="_abstract_attribute_vector_8h"/>
+        <childnode refid="5059" relation="include">
+        </childnode>
+      </node>
+      <node id="5027">
+        <label>thread</label>
       </node>
       <node id="5067">
         <label>storage/BitCompressedVector.h</label>
@@ -638,50 +617,71 @@
         <childnode refid="5057" relation="include">
         </childnode>
       </node>
-      <node id="5070">
-        <label>storage/TableMerger.h</label>
-        <link refid="_table_merger_8h"/>
+      <node id="5022">
+        <label>access/system/BasicParser.h</label>
+        <link refid="_basic_parser_8h"/>
+        <childnode refid="5009" relation="include">
+        </childnode>
+        <childnode refid="5014" relation="include">
+        </childnode>
+        <childnode refid="5021" relation="include">
+        </childnode>
+      </node>
+      <node id="5078">
+        <label>ftprinter/FTPrinter.h</label>
+      </node>
+      <node id="5073">
+        <label>algorithm</label>
+      </node>
+      <node id="5017">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="5018" relation="include">
+        </childnode>
+        <childnode refid="5008" relation="include">
+        </childnode>
+        <childnode refid="5019" relation="include">
+        </childnode>
+        <childnode refid="5014" relation="include">
+        </childnode>
         <childnode refid="5004" relation="include">
+        </childnode>
+      </node>
+      <node id="5025">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="5019" relation="include">
+        </childnode>
+        <childnode refid="5014" relation="include">
+        </childnode>
+        <childnode refid="5009" relation="include">
+        </childnode>
+        <childnode refid="5004" relation="include">
+        </childnode>
+        <childnode refid="5008" relation="include">
         </childnode>
         <childnode refid="5017" relation="include">
         </childnode>
-        <childnode refid="5025" relation="include">
+        <childnode refid="5026" relation="include">
         </childnode>
-        <childnode refid="5071" relation="include">
+        <childnode refid="5029" relation="include">
         </childnode>
-        <childnode refid="5050" relation="include">
+        <childnode refid="5031" relation="include">
         </childnode>
+        <childnode refid="5032" relation="include">
+        </childnode>
+        <childnode refid="5007" relation="include">
+        </childnode>
+      </node>
+      <node id="5063">
+        <label>cstring</label>
       </node>
       <node id="5014">
         <label>memory</label>
       </node>
-      <node id="5032">
-        <label>storage/BaseDictionary.h</label>
-        <link refid="_base_dictionary_8h"/>
-        <childnode refid="5007" relation="include">
-        </childnode>
-        <childnode refid="5033" relation="include">
-        </childnode>
-        <childnode refid="5034" relation="include">
-        </childnode>
-      </node>
-      <node id="5042">
-        <label>storage/SequentialHeapMerger.h</label>
-        <link refid="_sequential_heap_merger_8h"/>
-        <childnode refid="5043" relation="include">
-        </childnode>
-        <childnode refid="5025" relation="include">
-        </childnode>
-        <childnode refid="5050" relation="include">
-        </childnode>
-      </node>
-      <node id="5066">
-        <label>memory/MallocStrategy.h</label>
-        <link refid="_malloc_strategy_8h"/>
-        <childnode refid="5046" relation="include">
-        </childnode>
-        <childnode refid="5018" relation="include">
-        </childnode>
+      <node id="5040">
+        <label>parameters.inc</label>
+        <link refid="parameters_8inc"/>
       </node>
     </incdepgraph>
     <innernamespace refid="namespacehyrise">hyrise</innernamespace>
@@ -714,7 +714,7 @@
 <codeline lineno="21"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23" refid="classhyrise_1_1access_1_1_layout_table_1aa6b81c1571dce1f85dbb803ca9306a1a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_layout_table_1aa6b81c1571dce1f85dbb803ca9306a1a" kindref="member">LayoutTable::executePlanOperation</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>store<sp/>=<sp/>std::dynamic_pointer_cast&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_store" kindref="compound">storage::Store</ref>&gt;(<ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data. ">input</ref>.<ref refid="group__deprecated_access_1ga69968d5ab56729a2e8ec54208a275b45" kindref="member">getTable</ref>());</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>store<sp/>=<sp/>std::dynamic_pointer_cast&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_store" kindref="compound">storage::Store</ref>&gt;(<ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data.">input</ref>.<ref refid="group__deprecated_access_1ga69968d5ab56729a2e8ec54208a275b45" kindref="member">getTable</ref>());</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(store<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Input<sp/>is<sp/>not<sp/>a<sp/>store&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
@@ -747,7 +747,7 @@
 <codeline lineno="54" refid="classhyrise_1_1access_1_1_layout_table_1a0336440ef62f4fe673aad7b071beb7da" refkind="member"><highlight class="normal">std::shared_ptr&lt;AbstractTable&gt;<sp/><ref refid="classhyrise_1_1access_1_1_layout_table_1a0336440ef62f4fe673aad7b071beb7da" kindref="member">LayoutTable::createEmptyLayoutedTable</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;layout)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Prepare<sp/>the<sp/>new<sp/>table<sp/>by<sp/>defining<sp/>an<sp/>empty<sp/>input<sp/>and<sp/>load<sp/>the</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>partitioning<sp/>for<sp/>the<sp/>table<sp/>from<sp/>the<sp/>string<sp/>header</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="class_empty_input" kindref="compound">EmptyInput</ref><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data. ">input</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="class_empty_input" kindref="compound">EmptyInput</ref><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data.">input</ref>;</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><ref refid="class_string_header" kindref="compound">StringHeader</ref><sp/>header(layout);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><ref refid="class_loader_1_1params" kindref="compound">Loader::params</ref><sp/>p;</highlight></codeline>
@@ -761,6 +761,6 @@
 <codeline lineno="68"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="69"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/access/LayoutTable.cpp"/>
+    <location file="/home/vagrant/lanice/src/lib/access/LayoutTable.cpp"/>
   </compounddef>
 </doxygen>

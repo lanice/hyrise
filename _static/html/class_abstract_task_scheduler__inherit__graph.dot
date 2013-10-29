@@ -1,0 +1,22 @@
+digraph "AbstractTaskScheduler"
+{
+  edge [fontname="Helvetica",fontsize="11",labelfontname="Helvetica",labelfontsize="11"];
+  node [fontname="Helvetica",fontsize="11",shape=record];
+  Node1 [label="{AbstractTaskScheduler\n||+ ~AbstractTaskScheduler()\l+ schedule()\l+ scheduleQuery()\l+ shutdown()\l+ getNumberOfWorker()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{AbstractCoreBoundQueuesScheduler\n|# _waitSet\l# _taskQueues\l# _queues\l# _status\l# _setMutex\l# _queuesMutex\l# _nextQueue\l# _logger\l|+ AbstractCoreBoundQueuesScheduler()\l+ ~AbstractCoreBoundQueues\lScheduler()\l+ getSchedulerStatus()\l+ schedule()\l+ schedule()\l+ notifyReady()\l+ wait()\l+ getNumberOfWorker()\l+ shutdown()\l# pushToQueue()\l# createTaskQueue()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_abstract_core_bound_queues_scheduler.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{CoreBoundPriorityQueuesScheduler\n||+ CoreBoundPriorityQueuesScheduler()\l+ ~CoreBoundPriorityQueues\lScheduler()\l- pushToQueue()\l- createTaskQueue()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_core_bound_priority_queues_scheduler.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{CoreBoundQueuesScheduler\n||+ CoreBoundQueuesScheduler()\l+ ~CoreBoundQueuesScheduler()\l- pushToQueue()\l- createTaskQueue()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_core_bound_queues_scheduler.html"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node5 [label="{WSCoreBoundPriorityQueues\lScheduler\n||+ WSCoreBoundPriorityQueues\lScheduler()\l+ ~WSCoreBoundPriorityQueues\lScheduler()\l+ getTaskQueues()\l- pushToQueue()\l- createTaskQueue()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_w_s_core_bound_priority_queues_scheduler.html"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node6 [label="{WSCoreBoundQueuesScheduler\n||+ WSCoreBoundQueuesScheduler()\l+ ~WSCoreBoundQueuesScheduler()\l+ getTaskQueues()\l- pushToQueue()\l- createTaskQueue()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_w_s_core_bound_queues_scheduler.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node7 [label="{CentralPriorityScheduler\n|- _waitSet\l- _setMutex\l- _runQueue\l- _queueMutex\l- _worker_threads\l- _condition\l- _status\l- _statusMutex\l- _logger\l|+ CentralPriorityScheduler()\l+ ~CentralPriorityScheduler()\l+ worker_loop()\l+ schedule()\l+ shutdown()\l+ getNumberOfWorker()\l+ notifyReady()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_central_priority_scheduler.html"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node8 [label="{CentralScheduler\n|- _waitSet\l- _setMutex\l- _runQueue\l- _queueMutex\l- _worker_threads\l- _condition\l- _status\l- _statusMutex\l- _logger\l|+ CentralScheduler()\l+ ~CentralScheduler()\l+ worker_loop()\l+ schedule()\l+ shutdown()\l+ getNumberOfWorker()\l+ notifyReady()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_central_scheduler.html"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node9 [label="{ThreadPerTaskScheduler\n|- _waitSet\l- _setMutex\l- _status\l- _statusMutex\l- _logger\l|+ ThreadPerTaskScheduler()\l+ ThreadPerTaskScheduler()\l+ ~ThreadPerTaskScheduler()\l+ schedule()\l+ shutdown()\l+ getNumberOfWorker()\l+ notifyReady()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_thread_per_task_scheduler.html"];
+}

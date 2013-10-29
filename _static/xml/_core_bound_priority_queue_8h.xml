@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="_core_bound_priority_queue_8h" kind="file">
     <compoundname>CoreBoundPriorityQueue.h</compoundname>
     <includes refid="_abstract_core_bound_queue_8h" local="yes">AbstractCoreBoundQueue.h</includes>
@@ -12,16 +12,26 @@
       <node id="18720">
         <label>atomic</label>
       </node>
-      <node id="18709">
-        <label>AbstractCoreBoundQueue.h</label>
-        <link refid="_abstract_core_bound_queue_8h"/>
-        <childnode refid="18710" relation="include">
-        </childnode>
-        <childnode refid="18720" relation="include">
-        </childnode>
-      </node>
       <node id="18714">
         <label>queue</label>
+      </node>
+      <node id="18710">
+        <label>taskscheduler/AbstractTaskQueue.h</label>
+        <link refid="_abstract_task_queue_8h"/>
+        <childnode refid="18711" relation="include">
+        </childnode>
+        <childnode refid="18712" relation="include">
+        </childnode>
+        <childnode refid="18713" relation="include">
+        </childnode>
+        <childnode refid="18714" relation="include">
+        </childnode>
+        <childnode refid="18715" relation="include">
+        </childnode>
+        <childnode refid="18716" relation="include">
+        </childnode>
+        <childnode refid="18717" relation="include">
+        </childnode>
       </node>
       <node id="18717">
         <label>taskscheduler/Task.h</label>
@@ -40,8 +50,22 @@
       <node id="18719">
         <label>string</label>
       </node>
+      <node id="18709">
+        <label>AbstractCoreBoundQueue.h</label>
+        <link refid="_abstract_core_bound_queue_8h"/>
+        <childnode refid="18710" relation="include">
+        </childnode>
+        <childnode refid="18720" relation="include">
+        </childnode>
+      </node>
       <node id="18721">
         <label>tbb/concurrent_priority_queue.h</label>
+      </node>
+      <node id="18715">
+        <label>condition_variable</label>
+      </node>
+      <node id="18718">
+        <label>vector</label>
       </node>
       <node id="18708">
         <label>src/lib/taskscheduler/CoreBoundPriorityQueue.h</label>
@@ -53,30 +77,6 @@
         <childnode refid="18714" relation="include">
         </childnode>
         <childnode refid="18721" relation="include">
-        </childnode>
-      </node>
-      <node id="18715">
-        <label>condition_variable</label>
-      </node>
-      <node id="18718">
-        <label>vector</label>
-      </node>
-      <node id="18710">
-        <label>taskscheduler/AbstractTaskQueue.h</label>
-        <link refid="_abstract_task_queue_8h"/>
-        <childnode refid="18711" relation="include">
-        </childnode>
-        <childnode refid="18712" relation="include">
-        </childnode>
-        <childnode refid="18713" relation="include">
-        </childnode>
-        <childnode refid="18714" relation="include">
-        </childnode>
-        <childnode refid="18715" relation="include">
-        </childnode>
-        <childnode refid="18716" relation="include">
-        </childnode>
-        <childnode refid="18717" relation="include">
         </childnode>
       </node>
       <node id="18712">
@@ -103,6 +103,10 @@
         <childnode refid="18725" relation="include">
         </childnode>
       </node>
+      <node id="18723">
+        <label>src/lib/taskscheduler/CoreBoundPriorityQueue.cpp</label>
+        <link refid="_core_bound_priority_queue_8cpp"/>
+      </node>
       <node id="18722">
         <label>src/lib/taskscheduler/CoreBoundPriorityQueue.h</label>
         <link refid="CoreBoundPriorityQueue.h"/>
@@ -110,10 +114,6 @@
         </childnode>
         <childnode refid="18724" relation="include">
         </childnode>
-      </node>
-      <node id="18723">
-        <label>src/lib/taskscheduler/CoreBoundPriorityQueue.cpp</label>
-        <link refid="_core_bound_priority_queue_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_core_bound_priority_queue" prot="public">CoreBoundPriorityQueue</innerclass>
@@ -174,6 +174,6 @@
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>COREBOUNDPRIORITYQUEUE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/taskscheduler/CoreBoundPriorityQueue.h"/>
+    <location file="/home/vagrant/lanice/src/lib/taskscheduler/CoreBoundPriorityQueue.h"/>
   </compounddef>
 </doxygen>

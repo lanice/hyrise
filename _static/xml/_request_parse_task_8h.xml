@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="_request_parse_task_8h" kind="file">
     <compoundname>RequestParseTask.h</compoundname>
     <includes local="no">string</includes>
@@ -10,6 +10,12 @@
     <includedby refid="_request_parse_task_8cpp" local="yes">src/lib/access/system/RequestParseTask.cpp</includedby>
     <includedby refid="_async_connection_8cpp" local="yes">src/lib/net/AsyncConnection.cpp</includedby>
     <incdepgraph>
+      <node id="9382">
+        <label>helper/epoch.h</label>
+        <link refid="epoch_8h"/>
+        <childnode refid="9383" relation="include">
+        </childnode>
+      </node>
       <node id="9383">
         <label>stdint.h</label>
       </node>
@@ -30,18 +36,6 @@
       <node id="9380">
         <label>string</label>
       </node>
-      <node id="9382">
-        <label>helper/epoch.h</label>
-        <link refid="epoch_8h"/>
-        <childnode refid="9383" relation="include">
-        </childnode>
-      </node>
-      <node id="9390">
-        <label>condition_variable</label>
-      </node>
-      <node id="9388">
-        <label>vector</label>
-      </node>
       <node id="9379">
         <label>src/lib/access/system/RequestParseTask.h</label>
         <link refid="RequestParseTask.h"/>
@@ -56,17 +50,8 @@
         <childnode refid="9386" relation="include">
         </childnode>
       </node>
-      <node id="9386">
-        <label>net/AbstractConnection.h</label>
-        <link refid="_abstract_connection_8h"/>
-        <childnode refid="9380" relation="include">
-        </childnode>
-      </node>
-      <node id="9385">
-        <label>unordered_map</label>
-      </node>
-      <node id="9389">
-        <label>mutex</label>
+      <node id="9390">
+        <label>condition_variable</label>
       </node>
       <node id="9384">
         <label>net/Router.h</label>
@@ -81,6 +66,21 @@
         </childnode>
         <childnode refid="9387" relation="include">
         </childnode>
+      </node>
+      <node id="9386">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="9380" relation="include">
+        </childnode>
+      </node>
+      <node id="9388">
+        <label>vector</label>
+      </node>
+      <node id="9385">
+        <label>unordered_map</label>
+      </node>
+      <node id="9389">
+        <label>mutex</label>
       </node>
       <node id="9381">
         <label>memory</label>
@@ -128,7 +128,7 @@
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ResponseTask;</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17" refid="classhyrise_1_1access_1_1_request_parse_task" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1access_1_1_request_parse_task" kindref="compound">RequestParseTask</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_abstract_request_handler" kindref="compound" tooltip="Base class for request handlers. ">net::AbstractRequestHandler</ref><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="classhyrise_1_1access_1_1_request_parse_task" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1access_1_1_request_parse_task" kindref="compound">RequestParseTask</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_abstract_request_handler" kindref="compound" tooltip="Base class for request handlers.">net::AbstractRequestHandler</ref><sp/>{</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="19" refid="classhyrise_1_1access_1_1_request_parse_task_1aabba0cef49c9ebe24aeda6e01ec66425" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">net::AbstractConnection</ref><sp/>*<ref refid="classhyrise_1_1access_1_1_request_parse_task_1aabba0cef49c9ebe24aeda6e01ec66425" kindref="member">_connection</ref>;</highlight></codeline>
 <codeline lineno="20" refid="classhyrise_1_1access_1_1_request_parse_task_1a232d3c2dd18aaf76b98a984a692d767a" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;ResponseTask&gt;<sp/><ref refid="classhyrise_1_1access_1_1_request_parse_task_1a232d3c2dd18aaf76b98a984a692d767a" kindref="member">_responseTask</ref>;</highlight></codeline>
@@ -148,6 +148,6 @@
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_ACCESS_REQUESTPARSETASK_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/access/system/RequestParseTask.h"/>
+    <location file="/home/vagrant/lanice/src/lib/access/system/RequestParseTask.h"/>
   </compounddef>
 </doxygen>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="lib_2testing_2main_8cpp" kind="file">
     <compoundname>main.cpp</compoundname>
     <includes refid="main_8h" local="yes">testing/main.h</includes>
@@ -13,11 +13,32 @@
       <node id="114">
         <label>string</label>
       </node>
+      <node id="116">
+        <label>testing/MinimalistPrinter.h</label>
+        <link refid="_minimalist_printer_8h"/>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+      </node>
       <node id="115">
         <label>vector</label>
       </node>
       <node id="118">
         <label>gtest/gtest.h</label>
+      </node>
+      <node id="112">
+        <label>testing/main.h</label>
+        <link refid="main_8h"/>
+      </node>
+      <node id="119">
+        <label>log4cxx/propertyconfigurator.h</label>
+      </node>
+      <node id="113">
+        <label>algorithm</label>
+      </node>
+      <node id="117">
+        <label>memory</label>
       </node>
       <node id="111">
         <label>src/lib/testing/main.cpp</label>
@@ -36,27 +57,6 @@
         </childnode>
         <childnode refid="119" relation="include">
         </childnode>
-      </node>
-      <node id="116">
-        <label>testing/MinimalistPrinter.h</label>
-        <link refid="_minimalist_printer_8h"/>
-        <childnode refid="117" relation="include">
-        </childnode>
-        <childnode refid="118" relation="include">
-        </childnode>
-      </node>
-      <node id="119">
-        <label>log4cxx/propertyconfigurator.h</label>
-      </node>
-      <node id="112">
-        <label>testing/main.h</label>
-        <link refid="main_8h"/>
-      </node>
-      <node id="113">
-        <label>algorithm</label>
-      </node>
-      <node id="117">
-        <label>memory</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespacehyrise">hyrise</innernamespace>
@@ -92,7 +92,7 @@
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::testing::UnitTest::GetInstance()-&gt;listeners();</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adds<sp/>a<sp/>listener<sp/>to<sp/>the<sp/>end.<sp/><sp/>Google<sp/>Test<sp/>takes<sp/>the<sp/>ownership.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>listeners.Release(listeners.default_result_printer());</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>listeners.Append(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1testing_1_1_minimalist_printer" kindref="compound" tooltip="Minimalistic printing features for gtest testrunner. ">hyrise::testing::MinimalistPrinter</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>listeners.Append(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1testing_1_1_minimalist_printer" kindref="compound" tooltip="Minimalistic printing features for gtest testrunner.">hyrise::testing::MinimalistPrinter</ref>);</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>RUN_ALL_TESTS();</highlight></codeline>
 <codeline lineno="30"><highlight class="normal">}</highlight></codeline>
@@ -100,6 +100,6 @@
 <codeline lineno="32"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="33"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/testing/main.cpp"/>
+    <location file="/home/vagrant/lanice/src/lib/testing/main.cpp"/>
   </compounddef>
 </doxygen>

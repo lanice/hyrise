@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="_pos_update_scan_8cpp" kind="file">
     <compoundname>PosUpdateScan.cpp</compoundname>
     <includes refid="_pos_update_scan_8h" local="yes">access/PosUpdateScan.h</includes>
@@ -13,18 +13,14 @@
     <includes refid="_abstract_table_8h" local="yes">storage/AbstractTable.h</includes>
     <includes refid="meta__storage_8h" local="yes">storage/meta_storage.h</includes>
     <incdepgraph>
+      <node id="5944">
+        <label>helper/SharedFactory.h</label>
+        <link refid="_shared_factory_8h"/>
+        <childnode refid="5876" relation="include">
+        </childnode>
+      </node>
       <node id="5948">
         <label>boost/mpl/size.hpp</label>
-      </node>
-      <node id="5902">
-        <label>json_converters.h</label>
-        <link refid="json__converters_8h"/>
-        <childnode refid="5879" relation="include">
-        </childnode>
-        <childnode refid="5887" relation="include">
-        </childnode>
-        <childnode refid="5883" relation="include">
-        </childnode>
       </node>
       <node id="5890">
         <label>atomic</label>
@@ -35,8 +31,40 @@
       <node id="5905">
         <label>functional</label>
       </node>
+      <node id="5873">
+        <label>helper/epoch.h</label>
+        <link refid="epoch_8h"/>
+        <childnode refid="5864" relation="include">
+        </childnode>
+      </node>
+      <node id="5903">
+        <label>helper/vector_helpers.h</label>
+        <link refid="vector__helpers_8h"/>
+        <childnode refid="5904" relation="include">
+        </childnode>
+        <childnode refid="5905" relation="include">
+        </childnode>
+        <childnode refid="5906" relation="include">
+        </childnode>
+        <childnode refid="5907" relation="include">
+        </childnode>
+      </node>
       <node id="5881">
         <label>limits</label>
+      </node>
+      <node id="5897">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="5894">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="5869" relation="include">
+        </childnode>
+        <childnode refid="5895" relation="include">
+        </childnode>
+        <childnode refid="5896" relation="include">
+        </childnode>
       </node>
       <node id="5936">
         <label>assert.h</label>
@@ -44,37 +72,31 @@
       <node id="5907">
         <label>iterator</label>
       </node>
-      <node id="5863">
-        <label>access/system/OutputTask.h</label>
-        <link refid="_output_task_8h"/>
-        <childnode refid="5864" relation="include">
+      <node id="5908">
+        <label>helper/checked_cast.h</label>
+        <link refid="checked__cast_8h"/>
+        <childnode refid="5876" relation="include">
         </childnode>
-        <childnode refid="5865" relation="include">
+        <childnode refid="5871" relation="include">
         </childnode>
+      </node>
+      <node id="5912">
+        <label>storage/MutableVerticalTable.h</label>
+        <link refid="_mutable_vertical_table_8h"/>
         <childnode refid="5866" relation="include">
         </childnode>
-        <childnode refid="5867" relation="include">
+        <childnode refid="5870" relation="include">
         </childnode>
-        <childnode refid="5868" relation="include">
+        <childnode refid="5879" relation="include">
         </childnode>
-        <childnode refid="5869" relation="include">
+        <childnode refid="5913" relation="include">
         </childnode>
-        <childnode refid="5873" relation="include">
+        <childnode refid="5928" relation="include">
         </childnode>
-        <childnode refid="5874" relation="include">
+        <childnode refid="5914" relation="include">
         </childnode>
-      </node>
-      <node id="5934">
-        <label>storage/ValueIdMap.hpp</label>
-        <link refid="_value_id_map_8hpp"/>
-        <childnode refid="5935" relation="include">
+        <childnode refid="5887" relation="include">
         </childnode>
-        <childnode refid="5937" relation="include">
-        </childnode>
-      </node>
-      <node id="5893">
-        <label>storage/AbstractResource.h</label>
-        <link refid="_abstract_resource_8h"/>
       </node>
       <node id="5898">
         <label>boost/iterator/iterator_facade.hpp</label>
@@ -82,76 +104,72 @@
       <node id="5880">
         <label>cstdint</label>
       </node>
-      <node id="5887">
-        <label>storage/AbstractTable.h</label>
-        <link refid="_abstract_table_8h"/>
-        <childnode refid="5881" relation="include">
+      <node id="5896">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="5897" relation="include">
         </childnode>
+        <childnode refid="5898" relation="include">
+        </childnode>
+      </node>
+      <node id="5924">
+        <label>memory/MallocStrategy.h</label>
+        <link refid="_malloc_strategy_8h"/>
+        <childnode refid="5925" relation="include">
+        </childnode>
+        <childnode refid="5880" relation="include">
+        </childnode>
+      </node>
+      <node id="5915">
+        <label>storage/BaseAttributeVector.h</label>
+        <link refid="_base_attribute_vector_8h"/>
         <childnode refid="5876" relation="include">
         </childnode>
         <childnode refid="5871" relation="include">
         </childnode>
-        <childnode refid="5866" relation="include">
-        </childnode>
-        <childnode refid="5870" relation="include">
-        </childnode>
-        <childnode refid="5879" relation="include">
-        </childnode>
-        <childnode refid="5888" relation="include">
-        </childnode>
-        <childnode refid="5891" relation="include">
-        </childnode>
-        <childnode refid="5893" relation="include">
-        </childnode>
-        <childnode refid="5894" relation="include">
-        </childnode>
-        <childnode refid="5869" relation="include">
+        <childnode refid="5916" relation="include">
         </childnode>
       </node>
       <node id="5864">
         <label>stdint.h</label>
       </node>
-      <node id="5879">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="5880" relation="include">
+      <node id="5937">
+        <label>storage/OrderIndifferentDictionary.h</label>
+        <link refid="_order_indifferent_dictionary_8h"/>
+        <childnode refid="5938" relation="include">
         </childnode>
-        <childnode refid="5870" relation="include">
+        <childnode refid="5866" relation="include">
         </childnode>
-        <childnode refid="5881" relation="include">
+        <childnode refid="5867" relation="include">
         </childnode>
         <childnode refid="5876" relation="include">
         </childnode>
-        <childnode refid="5866" relation="include">
+        <childnode refid="5939" relation="include">
+        </childnode>
+        <childnode refid="5869" relation="include">
+        </childnode>
+        <childnode refid="5894" relation="include">
+        </childnode>
+        <childnode refid="5896" relation="include">
         </childnode>
       </node>
-      <node id="5931">
-        <label>storage/AbstractMerger.h</label>
-        <link refid="_abstract_merger_8h"/>
-        <childnode refid="5866" relation="include">
-        </childnode>
-        <childnode refid="5899" relation="include">
-        </childnode>
-        <childnode refid="5879" relation="include">
+      <node id="5911">
+        <label>storage/Store.h</label>
+        <link refid="_store_8h"/>
+        <childnode refid="5912" relation="include">
         </childnode>
         <childnode refid="5887" relation="include">
         </childnode>
-        <childnode refid="5932" relation="include">
+        <childnode refid="5929" relation="include">
         </childnode>
-      </node>
-      <node id="5922">
-        <label>cmath</label>
-      </node>
-      <node id="5891">
-        <label>helper/unique_id.h</label>
-        <link refid="unique__id_8h"/>
-        <childnode refid="5880" relation="include">
+        <childnode refid="5930" relation="include">
         </childnode>
-        <childnode refid="5892" relation="include">
+        <childnode refid="5933" relation="include">
         </childnode>
-      </node>
-      <node id="5927">
-        <label>cassert</label>
+        <childnode refid="5940" relation="include">
+        </childnode>
+        <childnode refid="5879" relation="include">
+        </childnode>
       </node>
       <node id="5874">
         <label>taskscheduler/Task.h</label>
@@ -167,8 +185,35 @@
         <childnode refid="5870" relation="include">
         </childnode>
       </node>
-      <node id="5871">
-        <label>stdexcept</label>
+      <node id="5862">
+        <label>access/system/PlanOperation.h</label>
+        <link refid="_plan_operation_8h"/>
+        <childnode refid="5863" relation="include">
+        </childnode>
+        <childnode refid="5878" relation="include">
+        </childnode>
+        <childnode refid="5882" relation="include">
+        </childnode>
+        <childnode refid="5885" relation="include">
+        </childnode>
+        <childnode refid="5869" relation="include">
+        </childnode>
+        <childnode refid="5879" relation="include">
+        </childnode>
+        <childnode refid="5887" relation="include">
+        </childnode>
+        <childnode refid="5883" relation="include">
+        </childnode>
+      </node>
+      <node id="5933">
+        <label>storage/SequentialHeapMerger.h</label>
+        <link refid="_sequential_heap_merger_8h"/>
+        <childnode refid="5934" relation="include">
+        </childnode>
+        <childnode refid="5887" relation="include">
+        </childnode>
+        <childnode refid="5931" relation="include">
+        </childnode>
       </node>
       <node id="5932">
         <label>storage/TableUtils.h</label>
@@ -178,63 +223,17 @@
         <childnode refid="5899" relation="include">
         </childnode>
       </node>
+      <node id="5922">
+        <label>cmath</label>
+      </node>
+      <node id="5927">
+        <label>cassert</label>
+      </node>
+      <node id="5871">
+        <label>stdexcept</label>
+      </node>
       <node id="5906">
         <label>numeric</label>
-      </node>
-      <node id="5870">
-        <label>string</label>
-      </node>
-      <node id="5946">
-        <label>boost/mpl/at.hpp</label>
-      </node>
-      <node id="5860">
-        <label>src/lib/access/PosUpdateScan.cpp</label>
-        <link refid="PosUpdateScan.cpp"/>
-        <childnode refid="5861" relation="include">
-        </childnode>
-        <childnode refid="5900" relation="include">
-        </childnode>
-        <childnode refid="5902" relation="include">
-        </childnode>
-        <childnode refid="5903" relation="include">
-        </childnode>
-        <childnode refid="5908" relation="include">
-        </childnode>
-        <childnode refid="5909" relation="include">
-        </childnode>
-        <childnode refid="5911" relation="include">
-        </childnode>
-        <childnode refid="5943" relation="include">
-        </childnode>
-        <childnode refid="5887" relation="include">
-        </childnode>
-        <childnode refid="5945" relation="include">
-        </childnode>
-      </node>
-      <node id="5867">
-        <label>map</label>
-      </node>
-      <node id="5945">
-        <label>storage/meta_storage.h</label>
-        <link refid="meta__storage_8h"/>
-        <childnode refid="5871" relation="include">
-        </childnode>
-        <childnode refid="5946" relation="include">
-        </childnode>
-        <childnode refid="5947" relation="include">
-        </childnode>
-        <childnode refid="5948" relation="include">
-        </childnode>
-        <childnode refid="5869" relation="include">
-        </childnode>
-        <childnode refid="5949" relation="include">
-        </childnode>
-      </node>
-      <node id="5873">
-        <label>helper/epoch.h</label>
-        <link refid="epoch_8h"/>
-        <childnode refid="5864" relation="include">
-        </childnode>
       </node>
       <node id="5913">
         <label>storage/Table.h</label>
@@ -258,43 +257,6 @@
         <childnode refid="5918" relation="include">
         </childnode>
       </node>
-      <node id="5938">
-        <label>exception</label>
-      </node>
-      <node id="5915">
-        <label>storage/BaseAttributeVector.h</label>
-        <link refid="_base_attribute_vector_8h"/>
-        <childnode refid="5876" relation="include">
-        </childnode>
-        <childnode refid="5871" relation="include">
-        </childnode>
-        <childnode refid="5916" relation="include">
-        </childnode>
-      </node>
-      <node id="5872">
-        <label>ostream</label>
-      </node>
-      <node id="5908">
-        <label>helper/checked_cast.h</label>
-        <link refid="checked__cast_8h"/>
-        <childnode refid="5876" relation="include">
-        </childnode>
-        <childnode refid="5871" relation="include">
-        </childnode>
-      </node>
-      <node id="5883">
-        <label>json.h</label>
-      </node>
-      <node id="5884">
-        <label>access/system/BasicParser.h</label>
-        <link refid="_basic_parser_8h"/>
-        <childnode refid="5871" relation="include">
-        </childnode>
-        <childnode refid="5876" relation="include">
-        </childnode>
-        <childnode refid="5883" relation="include">
-        </childnode>
-      </node>
       <node id="5940">
         <label>storage/PrettyPrinter.h</label>
         <link refid="_pretty_printer_8h"/>
@@ -305,18 +267,26 @@
         <childnode refid="5942" relation="include">
         </childnode>
       </node>
-      <node id="5939">
-        <label>limits.h</label>
-      </node>
-      <node id="5897">
-        <label>storage/BaseIterator.h</label>
-        <link refid="_base_iterator_8h"/>
-      </node>
-      <node id="5916">
-        <label>storage/AbstractAttributeVector.h</label>
-        <link refid="_abstract_attribute_vector_8h"/>
-        <childnode refid="5917" relation="include">
+      <node id="5918">
+        <label>storage/AttributeVectorFactory.h</label>
+        <link refid="_attribute_vector_factory_8h"/>
+        <childnode refid="5876" relation="include">
         </childnode>
+        <childnode refid="5915" relation="include">
+        </childnode>
+        <childnode refid="5919" relation="include">
+        </childnode>
+        <childnode refid="5926" relation="include">
+        </childnode>
+      </node>
+      <node id="5870">
+        <label>string</label>
+      </node>
+      <node id="5946">
+        <label>boost/mpl/at.hpp</label>
+      </node>
+      <node id="5867">
+        <label>map</label>
       </node>
       <node id="5919">
         <label>storage/FixedLengthVector.h</label>
@@ -344,8 +314,21 @@
         <childnode refid="5915" relation="include">
         </childnode>
       </node>
-      <node id="5877">
-        <label>condition_variable</label>
+      <node id="5942">
+        <label>helper/RangeIter.h</label>
+        <link refid="_range_iter_8h"/>
+      </node>
+      <node id="5928">
+        <label>storage/TableFactory.h</label>
+        <link refid="_table_factory_8h"/>
+        <childnode refid="5876" relation="include">
+        </childnode>
+        <childnode refid="5879" relation="include">
+        </childnode>
+        <childnode refid="5887" relation="include">
+        </childnode>
+        <childnode refid="5913" relation="include">
+        </childnode>
       </node>
       <node id="5861">
         <label>access/PosUpdateScan.h</label>
@@ -355,49 +338,130 @@
         <childnode refid="5899" relation="include">
         </childnode>
       </node>
-      <node id="5937">
-        <label>storage/OrderIndifferentDictionary.h</label>
-        <link refid="_order_indifferent_dictionary_8h"/>
-        <childnode refid="5938" relation="include">
+      <node id="5935">
+        <label>storage/OrderPreservingDictionary.h</label>
+        <link refid="_order_preserving_dictionary_8h"/>
+        <childnode refid="5936" relation="include">
         </childnode>
-        <childnode refid="5866" relation="include">
-        </childnode>
-        <childnode refid="5867" relation="include">
+        <childnode refid="5925" relation="include">
         </childnode>
         <childnode refid="5876" relation="include">
-        </childnode>
-        <childnode refid="5939" relation="include">
-        </childnode>
-        <childnode refid="5869" relation="include">
         </childnode>
         <childnode refid="5894" relation="include">
         </childnode>
+        <childnode refid="5897" relation="include">
+        </childnode>
         <childnode refid="5896" relation="include">
         </childnode>
+        <childnode refid="5869" relation="include">
+        </childnode>
       </node>
-      <node id="5918">
-        <label>storage/AttributeVectorFactory.h</label>
-        <link refid="_attribute_vector_factory_8h"/>
-        <childnode refid="5876" relation="include">
+      <node id="5888">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="5889" relation="include">
         </childnode>
-        <childnode refid="5915" relation="include">
+        <childnode refid="5890" relation="include">
         </childnode>
-        <childnode refid="5919" relation="include">
+      </node>
+      <node id="5938">
+        <label>exception</label>
+      </node>
+      <node id="5872">
+        <label>ostream</label>
+      </node>
+      <node id="5883">
+        <label>json.h</label>
+      </node>
+      <node id="5945">
+        <label>storage/meta_storage.h</label>
+        <link refid="meta__storage_8h"/>
+        <childnode refid="5871" relation="include">
         </childnode>
-        <childnode refid="5926" relation="include">
+        <childnode refid="5946" relation="include">
+        </childnode>
+        <childnode refid="5947" relation="include">
+        </childnode>
+        <childnode refid="5948" relation="include">
+        </childnode>
+        <childnode refid="5869" relation="include">
+        </childnode>
+        <childnode refid="5949" relation="include">
+        </childnode>
+      </node>
+      <node id="5939">
+        <label>limits.h</label>
+      </node>
+      <node id="5929">
+        <label>storage/TableMerger.h</label>
+        <link refid="_table_merger_8h"/>
+        <childnode refid="5866" relation="include">
+        </childnode>
+        <childnode refid="5879" relation="include">
+        </childnode>
+        <childnode refid="5887" relation="include">
+        </childnode>
+        <childnode refid="5930" relation="include">
+        </childnode>
+        <childnode refid="5931" relation="include">
+        </childnode>
+      </node>
+      <node id="5931">
+        <label>storage/AbstractMerger.h</label>
+        <link refid="_abstract_merger_8h"/>
+        <childnode refid="5866" relation="include">
+        </childnode>
+        <childnode refid="5899" relation="include">
+        </childnode>
+        <childnode refid="5879" relation="include">
+        </childnode>
+        <childnode refid="5887" relation="include">
+        </childnode>
+        <childnode refid="5932" relation="include">
+        </childnode>
+      </node>
+      <node id="5877">
+        <label>condition_variable</label>
+      </node>
+      <node id="5901">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="5870" relation="include">
+        </childnode>
+      </node>
+      <node id="5869">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="5866" relation="include">
+        </childnode>
+        <childnode refid="5870" relation="include">
+        </childnode>
+        <childnode refid="5871" relation="include">
+        </childnode>
+        <childnode refid="5864" relation="include">
+        </childnode>
+        <childnode refid="5872" relation="include">
         </childnode>
       </node>
       <node id="5866">
         <label>vector</label>
       </node>
-      <node id="5947">
-        <label>boost/mpl/int.hpp</label>
+      <node id="5891">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="5880" relation="include">
+        </childnode>
+        <childnode refid="5892" relation="include">
+        </childnode>
       </node>
-      <node id="5944">
-        <label>helper/SharedFactory.h</label>
-        <link refid="_shared_factory_8h"/>
+      <node id="5910">
+        <label>helper/Synchronized.h</label>
+        <link refid="_synchronized_8h"/>
         <childnode refid="5876" relation="include">
         </childnode>
+      </node>
+      <node id="5947">
+        <label>boost/mpl/int.hpp</label>
       </node>
       <node id="5868">
         <label>utility</label>
@@ -408,12 +472,56 @@
       <node id="5923">
         <label>sstream</label>
       </node>
-      <node id="5885">
-        <label>io/TXContext.h</label>
-        <link refid="_t_x_context_8h"/>
+      <node id="5943">
+        <label>storage/PointerCalculator.h</label>
+        <link refid="_pointer_calculator_8h"/>
+        <childnode refid="5866" relation="include">
+        </childnode>
         <childnode refid="5879" relation="include">
         </childnode>
-        <childnode refid="5886" relation="include">
+        <childnode refid="5944" relation="include">
+        </childnode>
+        <childnode refid="5887" relation="include">
+        </childnode>
+        <childnode refid="5912" relation="include">
+        </childnode>
+      </node>
+      <node id="5863">
+        <label>access/system/OutputTask.h</label>
+        <link refid="_output_task_8h"/>
+        <childnode refid="5864" relation="include">
+        </childnode>
+        <childnode refid="5865" relation="include">
+        </childnode>
+        <childnode refid="5866" relation="include">
+        </childnode>
+        <childnode refid="5867" relation="include">
+        </childnode>
+        <childnode refid="5868" relation="include">
+        </childnode>
+        <childnode refid="5869" relation="include">
+        </childnode>
+        <childnode refid="5873" relation="include">
+        </childnode>
+        <childnode refid="5874" relation="include">
+        </childnode>
+      </node>
+      <node id="5930">
+        <label>storage/AbstractMergeStrategy.h</label>
+        <link refid="_abstract_merge_strategy_8h"/>
+        <childnode refid="5866" relation="include">
+        </childnode>
+        <childnode refid="5887" relation="include">
+        </childnode>
+        <childnode refid="5903" relation="include">
+        </childnode>
+      </node>
+      <node id="5934">
+        <label>storage/ValueIdMap.hpp</label>
+        <link refid="_value_id_map_8hpp"/>
+        <childnode refid="5935" relation="include">
+        </childnode>
+        <childnode refid="5937" relation="include">
         </childnode>
       </node>
       <node id="5882">
@@ -442,100 +550,55 @@
       <node id="5865">
         <label>time.h</label>
       </node>
-      <node id="5903">
-        <label>helper/vector_helpers.h</label>
-        <link refid="vector__helpers_8h"/>
-        <childnode refid="5904" relation="include">
+      <node id="5860">
+        <label>src/lib/access/PosUpdateScan.cpp</label>
+        <link refid="PosUpdateScan.cpp"/>
+        <childnode refid="5861" relation="include">
         </childnode>
-        <childnode refid="5905" relation="include">
+        <childnode refid="5900" relation="include">
         </childnode>
-        <childnode refid="5906" relation="include">
+        <childnode refid="5902" relation="include">
         </childnode>
-        <childnode refid="5907" relation="include">
+        <childnode refid="5903" relation="include">
+        </childnode>
+        <childnode refid="5908" relation="include">
+        </childnode>
+        <childnode refid="5909" relation="include">
+        </childnode>
+        <childnode refid="5911" relation="include">
+        </childnode>
+        <childnode refid="5943" relation="include">
+        </childnode>
+        <childnode refid="5887" relation="include">
+        </childnode>
+        <childnode refid="5945" relation="include">
+        </childnode>
+      </node>
+      <node id="5895">
+        <label>storage/AbstractDictionary.h</label>
+        <link refid="_abstract_dictionary_8h"/>
+        <childnode refid="5866" relation="include">
+        </childnode>
+        <childnode refid="5870" relation="include">
+        </childnode>
+        <childnode refid="5876" relation="include">
+        </childnode>
+        <childnode refid="5869" relation="include">
+        </childnode>
+      </node>
+      <node id="5885">
+        <label>io/TXContext.h</label>
+        <link refid="_t_x_context_8h"/>
+        <childnode refid="5879" relation="include">
+        </childnode>
+        <childnode refid="5886" relation="include">
         </childnode>
       </node>
       <node id="5920">
         <label>cerrno</label>
       </node>
-      <node id="5912">
-        <label>storage/MutableVerticalTable.h</label>
-        <link refid="_mutable_vertical_table_8h"/>
-        <childnode refid="5866" relation="include">
-        </childnode>
-        <childnode refid="5870" relation="include">
-        </childnode>
-        <childnode refid="5879" relation="include">
-        </childnode>
-        <childnode refid="5913" relation="include">
-        </childnode>
-        <childnode refid="5928" relation="include">
-        </childnode>
-        <childnode refid="5914" relation="include">
-        </childnode>
-        <childnode refid="5887" relation="include">
-        </childnode>
-      </node>
-      <node id="5888">
-        <label>helper/locking.h</label>
-        <link refid="locking_8h"/>
-        <childnode refid="5889" relation="include">
-        </childnode>
-        <childnode refid="5890" relation="include">
-        </childnode>
-      </node>
-      <node id="5928">
-        <label>storage/TableFactory.h</label>
-        <link refid="_table_factory_8h"/>
-        <childnode refid="5876" relation="include">
-        </childnode>
-        <childnode refid="5879" relation="include">
-        </childnode>
-        <childnode refid="5887" relation="include">
-        </childnode>
-        <childnode refid="5913" relation="include">
-        </childnode>
-      </node>
       <node id="5925">
         <label>iostream</label>
-      </node>
-      <node id="5901">
-        <label>net/AbstractConnection.h</label>
-        <link refid="_abstract_connection_8h"/>
-        <childnode refid="5870" relation="include">
-        </childnode>
-      </node>
-      <node id="5900">
-        <label>access/system/ResponseTask.h</label>
-        <link refid="_response_task_8h"/>
-        <childnode refid="5890" relation="include">
-        </childnode>
-        <childnode refid="5875" relation="include">
-        </childnode>
-        <childnode refid="5873" relation="include">
-        </childnode>
-        <childnode refid="5863" relation="include">
-        </childnode>
-        <childnode refid="5901" relation="include">
-        </childnode>
-        <childnode refid="5885" relation="include">
-        </childnode>
-      </node>
-      <node id="5917">
-        <label>cstddef</label>
-      </node>
-      <node id="5869">
-        <label>storage/storage_types.h</label>
-        <link refid="storage__types_8h"/>
-        <childnode refid="5866" relation="include">
-        </childnode>
-        <childnode refid="5870" relation="include">
-        </childnode>
-        <childnode refid="5871" relation="include">
-        </childnode>
-        <childnode refid="5864" relation="include">
-        </childnode>
-        <childnode refid="5872" relation="include">
-        </childnode>
       </node>
       <node id="5878">
         <label>access/system/OperationData.h</label>
@@ -547,14 +610,11 @@
         <childnode refid="5869" relation="include">
         </childnode>
       </node>
+      <node id="5917">
+        <label>cstddef</label>
+      </node>
       <node id="5899">
         <label>unordered_map</label>
-      </node>
-      <node id="5910">
-        <label>helper/Synchronized.h</label>
-        <link refid="_synchronized_8h"/>
-        <childnode refid="5876" relation="include">
-        </childnode>
       </node>
       <node id="5909">
         <label>io/TransactionManager.h</label>
@@ -580,107 +640,12 @@
         <childnode refid="5869" relation="include">
         </childnode>
       </node>
+      <node id="5893">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
       <node id="5875">
         <label>mutex</label>
-      </node>
-      <node id="5895">
-        <label>storage/AbstractDictionary.h</label>
-        <link refid="_abstract_dictionary_8h"/>
-        <childnode refid="5866" relation="include">
-        </childnode>
-        <childnode refid="5870" relation="include">
-        </childnode>
-        <childnode refid="5876" relation="include">
-        </childnode>
-        <childnode refid="5869" relation="include">
-        </childnode>
-      </node>
-      <node id="5930">
-        <label>storage/AbstractMergeStrategy.h</label>
-        <link refid="_abstract_merge_strategy_8h"/>
-        <childnode refid="5866" relation="include">
-        </childnode>
-        <childnode refid="5887" relation="include">
-        </childnode>
-        <childnode refid="5903" relation="include">
-        </childnode>
-      </node>
-      <node id="5889">
-        <label>thread</label>
-      </node>
-      <node id="5896">
-        <label>storage/DictionaryIterator.h</label>
-        <link refid="_dictionary_iterator_8h"/>
-        <childnode refid="5897" relation="include">
-        </childnode>
-        <childnode refid="5898" relation="include">
-        </childnode>
-      </node>
-      <node id="5935">
-        <label>storage/OrderPreservingDictionary.h</label>
-        <link refid="_order_preserving_dictionary_8h"/>
-        <childnode refid="5936" relation="include">
-        </childnode>
-        <childnode refid="5925" relation="include">
-        </childnode>
-        <childnode refid="5876" relation="include">
-        </childnode>
-        <childnode refid="5894" relation="include">
-        </childnode>
-        <childnode refid="5897" relation="include">
-        </childnode>
-        <childnode refid="5896" relation="include">
-        </childnode>
-        <childnode refid="5869" relation="include">
-        </childnode>
-      </node>
-      <node id="5942">
-        <label>helper/RangeIter.h</label>
-        <link refid="_range_iter_8h"/>
-      </node>
-      <node id="5911">
-        <label>storage/Store.h</label>
-        <link refid="_store_8h"/>
-        <childnode refid="5912" relation="include">
-        </childnode>
-        <childnode refid="5887" relation="include">
-        </childnode>
-        <childnode refid="5929" relation="include">
-        </childnode>
-        <childnode refid="5930" relation="include">
-        </childnode>
-        <childnode refid="5933" relation="include">
-        </childnode>
-        <childnode refid="5940" relation="include">
-        </childnode>
-        <childnode refid="5879" relation="include">
-        </childnode>
-      </node>
-      <node id="5941">
-        <label>ftprinter/FTPrinter.h</label>
-      </node>
-      <node id="5904">
-        <label>algorithm</label>
-      </node>
-      <node id="5862">
-        <label>access/system/PlanOperation.h</label>
-        <link refid="_plan_operation_8h"/>
-        <childnode refid="5863" relation="include">
-        </childnode>
-        <childnode refid="5878" relation="include">
-        </childnode>
-        <childnode refid="5882" relation="include">
-        </childnode>
-        <childnode refid="5885" relation="include">
-        </childnode>
-        <childnode refid="5869" relation="include">
-        </childnode>
-        <childnode refid="5879" relation="include">
-        </childnode>
-        <childnode refid="5887" relation="include">
-        </childnode>
-        <childnode refid="5883" relation="include">
-        </childnode>
       </node>
       <node id="5914">
         <label>storage/ColumnMetadata.h</label>
@@ -692,8 +657,30 @@
         <childnode refid="5871" relation="include">
         </childnode>
       </node>
-      <node id="5921">
-        <label>cstring</label>
+      <node id="5916">
+        <label>storage/AbstractAttributeVector.h</label>
+        <link refid="_abstract_attribute_vector_8h"/>
+        <childnode refid="5917" relation="include">
+        </childnode>
+      </node>
+      <node id="5900">
+        <label>access/system/ResponseTask.h</label>
+        <link refid="_response_task_8h"/>
+        <childnode refid="5890" relation="include">
+        </childnode>
+        <childnode refid="5875" relation="include">
+        </childnode>
+        <childnode refid="5873" relation="include">
+        </childnode>
+        <childnode refid="5863" relation="include">
+        </childnode>
+        <childnode refid="5901" relation="include">
+        </childnode>
+        <childnode refid="5885" relation="include">
+        </childnode>
+      </node>
+      <node id="5889">
+        <label>thread</label>
       </node>
       <node id="5926">
         <label>storage/BitCompressedVector.h</label>
@@ -717,64 +704,77 @@
         <childnode refid="5915" relation="include">
         </childnode>
       </node>
-      <node id="5929">
-        <label>storage/TableMerger.h</label>
-        <link refid="_table_merger_8h"/>
-        <childnode refid="5866" relation="include">
+      <node id="5884">
+        <label>access/system/BasicParser.h</label>
+        <link refid="_basic_parser_8h"/>
+        <childnode refid="5871" relation="include">
         </childnode>
-        <childnode refid="5879" relation="include">
+        <childnode refid="5876" relation="include">
         </childnode>
-        <childnode refid="5887" relation="include">
-        </childnode>
-        <childnode refid="5930" relation="include">
-        </childnode>
-        <childnode refid="5931" relation="include">
+        <childnode refid="5883" relation="include">
         </childnode>
       </node>
-      <node id="5943">
-        <label>storage/PointerCalculator.h</label>
-        <link refid="_pointer_calculator_8h"/>
+      <node id="5941">
+        <label>ftprinter/FTPrinter.h</label>
+      </node>
+      <node id="5904">
+        <label>algorithm</label>
+      </node>
+      <node id="5879">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="5880" relation="include">
+        </childnode>
+        <childnode refid="5870" relation="include">
+        </childnode>
+        <childnode refid="5881" relation="include">
+        </childnode>
+        <childnode refid="5876" relation="include">
+        </childnode>
         <childnode refid="5866" relation="include">
+        </childnode>
+      </node>
+      <node id="5887">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="5881" relation="include">
+        </childnode>
+        <childnode refid="5876" relation="include">
+        </childnode>
+        <childnode refid="5871" relation="include">
+        </childnode>
+        <childnode refid="5866" relation="include">
+        </childnode>
+        <childnode refid="5870" relation="include">
         </childnode>
         <childnode refid="5879" relation="include">
         </childnode>
-        <childnode refid="5944" relation="include">
+        <childnode refid="5888" relation="include">
+        </childnode>
+        <childnode refid="5891" relation="include">
+        </childnode>
+        <childnode refid="5893" relation="include">
+        </childnode>
+        <childnode refid="5894" relation="include">
+        </childnode>
+        <childnode refid="5869" relation="include">
+        </childnode>
+      </node>
+      <node id="5921">
+        <label>cstring</label>
+      </node>
+      <node id="5902">
+        <label>json_converters.h</label>
+        <link refid="json__converters_8h"/>
+        <childnode refid="5879" relation="include">
         </childnode>
         <childnode refid="5887" relation="include">
         </childnode>
-        <childnode refid="5912" relation="include">
+        <childnode refid="5883" relation="include">
         </childnode>
       </node>
       <node id="5876">
         <label>memory</label>
-      </node>
-      <node id="5894">
-        <label>storage/BaseDictionary.h</label>
-        <link refid="_base_dictionary_8h"/>
-        <childnode refid="5869" relation="include">
-        </childnode>
-        <childnode refid="5895" relation="include">
-        </childnode>
-        <childnode refid="5896" relation="include">
-        </childnode>
-      </node>
-      <node id="5933">
-        <label>storage/SequentialHeapMerger.h</label>
-        <link refid="_sequential_heap_merger_8h"/>
-        <childnode refid="5934" relation="include">
-        </childnode>
-        <childnode refid="5887" relation="include">
-        </childnode>
-        <childnode refid="5931" relation="include">
-        </childnode>
-      </node>
-      <node id="5924">
-        <label>memory/MallocStrategy.h</label>
-        <link refid="_malloc_strategy_8h"/>
-        <childnode refid="5925" relation="include">
-        </childnode>
-        <childnode refid="5880" relation="include">
-        </childnode>
       </node>
     </incdepgraph>
     <innernamespace refid="namespacehyrise">hyrise</innernamespace>
@@ -815,7 +815,7 @@
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31" refid="classhyrise_1_1access_1_1_pos_update_scan_1ae6e8d52f9fca0f2e9bbc2a262f65dc8f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_pos_update_scan_1ae6e8d52f9fca0f2e9bbc2a262f65dc8f" kindref="member">PosUpdateScan::executePlanOperation</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c_pc<sp/>=<sp/><ref refid="checked__cast_8h_1ab1a6688a6284640c3040705ab0ff138c" kindref="member">checked_pointer_cast</ref>&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref>&gt;(<ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data. ">input</ref>.<ref refid="group__deprecated_access_1ga69968d5ab56729a2e8ec54208a275b45" kindref="member">getTable</ref>(0));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c_pc<sp/>=<sp/><ref refid="checked__cast_8h_1ab1a6688a6284640c3040705ab0ff138c" kindref="member">checked_pointer_cast</ref>&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_pointer_calculator" kindref="compound">PointerCalculator</ref>&gt;(<ref refid="classhyrise_1_1access_1_1_plan_operation_1aecedc322d6f58070da10f0706ffce779" kindref="member" tooltip="Containers to store and handle input/output or rather result data.">input</ref>.<ref refid="group__deprecated_access_1ga69968d5ab56729a2e8ec54208a275b45" kindref="member">getTable</ref>(0));</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c_store<sp/>=<sp/><ref refid="checked__cast_8h_1ab1a6688a6284640c3040705ab0ff138c" kindref="member">checked_pointer_cast</ref>&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_store" kindref="compound">storage::Store</ref>&gt;(c_pc-&gt;getActualTable());</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Cast<sp/>the<sp/>constness<sp/>away</highlight><highlight class="normal"></highlight></codeline>
@@ -887,6 +887,6 @@
 <codeline lineno="101"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="102"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/access/PosUpdateScan.cpp"/>
+    <location file="/home/vagrant/lanice/src/lib/access/PosUpdateScan.cpp"/>
   </compounddef>
 </doxygen>

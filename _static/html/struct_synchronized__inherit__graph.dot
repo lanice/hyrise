@@ -1,0 +1,8 @@
+digraph "Synchronized&lt; T, LockT &gt;"
+{
+  edge [fontname="Helvetica",fontsize="11",labelfontname="Helvetica",labelfontsize="11"];
+  node [fontname="Helvetica",fontsize="11",shape=record];
+  Node1 [label="{Synchronized\< T, LockT \>\n|- _t\l- _mtx\l|+ Synchronized()\l+ Synchronized()\l+ operator()()\l+ operator=()\l+ operator=()\l+ Synchronized()\l+ Synchronized()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="orange",fontsize="11",style="solid",label=" \< map_t, locking::Spinlock \>" ,fontname="Helvetica"];
+  Node2 [label="{Synchronized\< map_t,\l locking::Spinlock \>\n|- _t\l- _mtx\l|+ Synchronized()\l+ Synchronized()\l+ Synchronized()\l+ Synchronized()\l+ operator()()\l+ operator=()\l+ operator=()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_synchronized.html"];
+}

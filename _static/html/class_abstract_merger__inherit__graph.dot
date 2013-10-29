@@ -1,0 +1,10 @@
+digraph "AbstractMerger"
+{
+  edge [fontname="Helvetica",fontsize="11",labelfontname="Helvetica",labelfontsize="11"];
+  node [fontname="Helvetica",fontsize="11",shape=record];
+  Node1 [label="{AbstractMerger\n||+ ~AbstractMerger()\l+ mergeValues()\l+ copy()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{hyrise::storage::SimpleStore\lMerger\n||- ~SimpleStoreMerger()\l- mergeValues()\l- copy()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhyrise_1_1storage_1_1_simple_store_merger.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{SequentialHeapMerger\n||+ mergeValues()\l+ copy()\l- mergeValues()\l- copyValues()\l- createNewDict()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sequential_heap_merger.html"];
+}

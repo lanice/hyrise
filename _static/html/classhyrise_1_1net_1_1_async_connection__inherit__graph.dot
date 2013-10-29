@@ -1,0 +1,8 @@
+digraph "hyrise::net::AsyncConnection"
+{
+  edge [fontname="Helvetica",fontsize="11",labelfontname="Helvetica",labelfontsize="11"];
+  node [fontname="Helvetica",fontsize="11",shape=record];
+  Node1 [label="{hyrise::net::AsyncConnection\n|+ ev_write\l+ ev_loop\l+ connection\l+ request\l+ addr\l+ starttime\l+ path\l+ body\l+ body_len\l+ response\land 6 more...\l|+ AsyncConnection()\l+ ~AsyncConnection()\l+ getBody()\l+ hasBody()\l+ getPath()\l+ respond()\l- send_response()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{hyrise::net::AbstractConnection\n||+ ~AbstractConnection()\l+ getBody()\l+ getPath()\l+ hasBody()\l+ respond()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhyrise_1_1net_1_1_abstract_connection.html"];
+}

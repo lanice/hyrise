@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="_resource_manager_8cpp" kind="file">
     <compoundname>ResourceManager.cpp</compoundname>
     <includes refid="_resource_manager_8h" local="yes">io/ResourceManager.h</includes>
@@ -7,50 +7,8 @@
     <includes refid="_environment_8h" local="yes">helper/Environment.h</includes>
     <includes refid="_abstract_resource_8h" local="yes">storage/AbstractResource.h</includes>
     <incdepgraph>
-      <node id="12322">
-        <label>src/lib/io/ResourceManager.cpp</label>
-        <link refid="ResourceManager.cpp"/>
-        <childnode refid="12323" relation="include">
-        </childnode>
-        <childnode refid="12334" relation="include">
-        </childnode>
-        <childnode refid="12336" relation="include">
-        </childnode>
-        <childnode refid="12337" relation="include">
-        </childnode>
-      </node>
       <node id="12331">
         <label>limits</label>
-      </node>
-      <node id="12337">
-        <label>storage/AbstractResource.h</label>
-        <link refid="_abstract_resource_8h"/>
-      </node>
-      <node id="12330">
-        <label>cstdint</label>
-      </node>
-      <node id="12329">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="12330" relation="include">
-        </childnode>
-        <childnode refid="12327" relation="include">
-        </childnode>
-        <childnode refid="12331" relation="include">
-        </childnode>
-        <childnode refid="12325" relation="include">
-        </childnode>
-        <childnode refid="12332" relation="include">
-        </childnode>
-      </node>
-      <node id="12328">
-        <label>stdexcept</label>
-      </node>
-      <node id="12327">
-        <label>string</label>
-      </node>
-      <node id="12324">
-        <label>map</label>
       </node>
       <node id="12333">
         <label>helper/checked_cast.h</label>
@@ -60,6 +18,9 @@
         <childnode refid="12328" relation="include">
         </childnode>
       </node>
+      <node id="12330">
+        <label>cstdint</label>
+      </node>
       <node id="12334">
         <label>helper/stringhelpers.h</label>
         <link refid="stringhelpers_8h"/>
@@ -68,17 +29,8 @@
         <childnode refid="12335" relation="include">
         </childnode>
       </node>
-      <node id="12336">
-        <label>helper/Environment.h</label>
-        <link refid="_environment_8h"/>
-        <childnode refid="12327" relation="include">
-        </childnode>
-      </node>
-      <node id="12332">
-        <label>vector</label>
-      </node>
-      <node id="12335">
-        <label>sstream</label>
+      <node id="12328">
+        <label>stdexcept</label>
       </node>
       <node id="12323">
         <label>io/ResourceManager.h</label>
@@ -98,8 +50,56 @@
         <childnode refid="12333" relation="include">
         </childnode>
       </node>
+      <node id="12327">
+        <label>string</label>
+      </node>
+      <node id="12324">
+        <label>map</label>
+      </node>
+      <node id="12332">
+        <label>vector</label>
+      </node>
+      <node id="12336">
+        <label>helper/Environment.h</label>
+        <link refid="_environment_8h"/>
+        <childnode refid="12327" relation="include">
+        </childnode>
+      </node>
+      <node id="12322">
+        <label>src/lib/io/ResourceManager.cpp</label>
+        <link refid="ResourceManager.cpp"/>
+        <childnode refid="12323" relation="include">
+        </childnode>
+        <childnode refid="12334" relation="include">
+        </childnode>
+        <childnode refid="12336" relation="include">
+        </childnode>
+        <childnode refid="12337" relation="include">
+        </childnode>
+      </node>
+      <node id="12335">
+        <label>sstream</label>
+      </node>
+      <node id="12337">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
       <node id="12326">
         <label>mutex</label>
+      </node>
+      <node id="12329">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="12330" relation="include">
+        </childnode>
+        <childnode refid="12327" relation="include">
+        </childnode>
+        <childnode refid="12331" relation="include">
+        </childnode>
+        <childnode refid="12325" relation="include">
+        </childnode>
+        <childnode refid="12332" relation="include">
+        </childnode>
       </node>
       <node id="12325">
         <label>memory</label>
@@ -122,7 +122,7 @@
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">io<sp/>{</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="classhyrise_1_1io_1_1_resource_manager_1ab22262727cf33994dffcda141fe4c58d" refkind="member"><highlight class="normal"><ref refid="classhyrise_1_1io_1_1_resource_manager" kindref="compound">ResourceManager</ref>&amp;<sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1ab22262727cf33994dffcda141fe4c58d" kindref="member" tooltip="Retrieve singleton ResourceManager instance. ">ResourceManager::getInstance</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="11" refid="classhyrise_1_1io_1_1_resource_manager_1ab22262727cf33994dffcda141fe4c58d" refkind="member"><highlight class="normal"><ref refid="classhyrise_1_1io_1_1_resource_manager" kindref="compound">ResourceManager</ref>&amp;<sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1ab22262727cf33994dffcda141fe4c58d" kindref="member" tooltip="Retrieve singleton ResourceManager instance.">ResourceManager::getInstance</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager" kindref="compound">ResourceManager</ref><sp/>rm;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rm;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal">}</highlight></codeline>
@@ -132,62 +132,62 @@
 <codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::move(std::unique_lock&lt;T&gt;(mtx));</highlight></codeline>
 <codeline lineno="19"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21" refid="classhyrise_1_1io_1_1_resource_manager_1a9875456caeb04860be3202fb7825fe4a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a9875456caeb04860be3202fb7825fe4a" kindref="member" tooltip="Return number of elements in storage. ">ResourceManager::size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map. ">_resource_mutex</ref>)<sp/>;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema. ">_resources</ref>.size();</highlight></codeline>
+<codeline lineno="21" refid="classhyrise_1_1io_1_1_resource_manager_1a9875456caeb04860be3202fb7825fe4a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a9875456caeb04860be3202fb7825fe4a" kindref="member" tooltip="Return number of elements in storage.">ResourceManager::size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map.">_resource_mutex</ref>)<sp/>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema.">_resources</ref>.size();</highlight></codeline>
 <codeline lineno="24"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26" refid="classhyrise_1_1io_1_1_resource_manager_1a082d4f9e4abecaefff089bed21cb7584" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a082d4f9e4abecaefff089bed21cb7584" kindref="member">ResourceManager::exists</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map. ">_resource_mutex</ref>)<sp/>;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema. ">_resources</ref>.count(name)<sp/>==<sp/>1;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map.">_resource_mutex</ref>)<sp/>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema.">_resources</ref>.count(name)<sp/>==<sp/>1;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31" refid="classhyrise_1_1io_1_1_resource_manager_1a58c0f1fe350c4b0abf7a9c2ae0b0db89" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a58c0f1fe350c4b0abf7a9c2ae0b0db89" kindref="member">ResourceManager::assureExists</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map. ">_resource_mutex</ref>)<sp/>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map.">_resource_mutex</ref>)<sp/>;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classhyrise_1_1io_1_1_resource_manager_1a082d4f9e4abecaefff089bed21cb7584" kindref="member">exists</ref>(name))<sp/>{</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_not_exists_exception" kindref="compound">ResourceNotExistsException</ref>(</highlight><highlight class="stringliteral">&quot;ResourceManager:<sp/>Resource<sp/>\&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;\&apos;<sp/>does<sp/>not<sp/>exist&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="36"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="classhyrise_1_1io_1_1_resource_manager_1a7a2ce16cf1ae082a1276965c330171d8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a7a2ce16cf1ae082a1276965c330171d8" kindref="member" tooltip="Removes all resources. ">ResourceManager::clear</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map. ">_resource_mutex</ref>)<sp/>;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema. ">_resources</ref>.clear();</highlight></codeline>
+<codeline lineno="38" refid="classhyrise_1_1io_1_1_resource_manager_1a7a2ce16cf1ae082a1276965c330171d8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a7a2ce16cf1ae082a1276965c330171d8" kindref="member" tooltip="Removes all resources.">ResourceManager::clear</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map.">_resource_mutex</ref>)<sp/>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema.">_resources</ref>.clear();</highlight></codeline>
 <codeline lineno="41"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="classhyrise_1_1io_1_1_resource_manager_1a59abe607c36c587f37f341d3f5db30aa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a59abe607c36c587f37f341d3f5db30aa" kindref="member" tooltip="Removes a named resource. ">ResourceManager::remove</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map. ">_resource_mutex</ref>)<sp/>;</highlight></codeline>
+<codeline lineno="43" refid="classhyrise_1_1io_1_1_resource_manager_1a59abe607c36c587f37f341d3f5db30aa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a59abe607c36c587f37f341d3f5db30aa" kindref="member" tooltip="Removes a named resource.">ResourceManager::remove</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map.">_resource_mutex</ref>)<sp/>;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a58c0f1fe350c4b0abf7a9c2ae0b0db89" kindref="member">assureExists</ref>(name);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema. ">_resources</ref>.erase(name);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema.">_resources</ref>.erase(name);</highlight></codeline>
 <codeline lineno="47"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49" refid="classhyrise_1_1io_1_1_resource_manager_1a946e5b60ef5924a4129e9cd8680d03d8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a946e5b60ef5924a4129e9cd8680d03d8" kindref="member" tooltip="Replaces an existing resource. ">ResourceManager::replace</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;AbstractResource&gt;&amp;<sp/>resource)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map. ">_resource_mutex</ref>)<sp/>;</highlight></codeline>
+<codeline lineno="49" refid="classhyrise_1_1io_1_1_resource_manager_1a946e5b60ef5924a4129e9cd8680d03d8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a946e5b60ef5924a4129e9cd8680d03d8" kindref="member" tooltip="Replaces an existing resource.">ResourceManager::replace</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;AbstractResource&gt;&amp;<sp/>resource)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map.">_resource_mutex</ref>)<sp/>;</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a58c0f1fe350c4b0abf7a9c2ae0b0db89" kindref="member">assureExists</ref>(name);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema. ">_resources</ref>.at(name)<sp/>=<sp/>resource;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema.">_resources</ref>.at(name)<sp/>=<sp/>resource;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55" refid="classhyrise_1_1io_1_1_resource_manager_1a8aebc08f8dc76a03c5685d999d855b27" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a8aebc08f8dc76a03c5685d999d855b27" kindref="member" tooltip="Adds a new resource. ">ResourceManager::add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;AbstractResource&gt;&amp;<sp/>resource)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map. ">_resource_mutex</ref>)<sp/>;</highlight></codeline>
+<codeline lineno="55" refid="classhyrise_1_1io_1_1_resource_manager_1a8aebc08f8dc76a03c5685d999d855b27" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a8aebc08f8dc76a03c5685d999d855b27" kindref="member" tooltip="Adds a new resource.">ResourceManager::add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;AbstractResource&gt;&amp;<sp/>resource)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map.">_resource_mutex</ref>)<sp/>;</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a082d4f9e4abecaefff089bed21cb7584" kindref="member">exists</ref>(name))</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_already_exists_exception" kindref="compound">ResourceAlreadyExistsException</ref>(</highlight><highlight class="stringliteral">&quot;ResourceManager:<sp/>Resource<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>already<sp/>exists&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema. ">_resources</ref>.insert(make_pair(name,<sp/>resource));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema.">_resources</ref>.insert(make_pair(name,<sp/>resource));</highlight></codeline>
 <codeline lineno="60"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="classhyrise_1_1io_1_1_resource_manager_1a1fd8fc312c5c3ee27eee7c47de7244e9" refkind="member"><highlight class="normal">std::shared_ptr&lt;AbstractResource&gt;<sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a1fd8fc312c5c3ee27eee7c47de7244e9" kindref="member" tooltip="Retrieves a resource by name. ">ResourceManager::getResource</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map. ">_resource_mutex</ref>)<sp/>;</highlight></codeline>
+<codeline lineno="62" refid="classhyrise_1_1io_1_1_resource_manager_1a1fd8fc312c5c3ee27eee7c47de7244e9" refkind="member"><highlight class="normal">std::shared_ptr&lt;AbstractResource&gt;<sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a1fd8fc312c5c3ee27eee7c47de7244e9" kindref="member" tooltip="Retrieves a resource by name.">ResourceManager::getResource</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map.">_resource_mutex</ref>)<sp/>;</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a58c0f1fe350c4b0abf7a9c2ae0b0db89" kindref="member">assureExists</ref>(name);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema. ">_resources</ref>.at(name);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema.">_resources</ref>.at(name);</highlight></codeline>
 <codeline lineno="66"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68" refid="classhyrise_1_1io_1_1_resource_manager_1a017e1c927a250a0d61902e594f8550af" refkind="member"><highlight class="normal"><ref refid="classhyrise_1_1io_1_1_resource_manager_1a06c0b1260dc17ba8406198bb26c427c6" kindref="member">ResourceManager::resource_map</ref><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a017e1c927a250a0d61902e594f8550af" kindref="member">ResourceManager::all</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map. ">_resource_mutex</ref>);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema. ">_resources</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock<sp/>=<sp/><ref refid="namespacehyrise_1_1io_1a35929c6e2dae8f93cdea5d2e010e6e35" kindref="member">lock_guard</ref>(<ref refid="classhyrise_1_1io_1_1_resource_manager_1a631f927a64aff55d273aa222a053e800" kindref="member" tooltip="Mutex protecting the _schema map.">_resource_mutex</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_resource_manager_1a55629b3cd74f80d1cea4436b577ff955" kindref="member" tooltip="The actual schema.">_resources</ref>;</highlight></codeline>
 <codeline lineno="71"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
 <codeline lineno="73"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="74"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hyrise::io</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/io/ResourceManager.cpp"/>
+    <location file="/home/vagrant/lanice/src/lib/io/ResourceManager.cpp"/>
   </compounddef>
 </doxygen>

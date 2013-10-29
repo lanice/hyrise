@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="_store_8h" kind="file">
     <compoundname>Store.h</compoundname>
     <includes refid="_mutable_vertical_table_8h" local="no">storage/MutableVerticalTable.h</includes>
@@ -38,8 +38,34 @@
       <node id="17521">
         <label>functional</label>
       </node>
+      <node id="17519">
+        <label>helper/vector_helpers.h</label>
+        <link refid="vector__helpers_8h"/>
+        <childnode refid="17520" relation="include">
+        </childnode>
+        <childnode refid="17521" relation="include">
+        </childnode>
+        <childnode refid="17522" relation="include">
+        </childnode>
+        <childnode refid="17523" relation="include">
+        </childnode>
+      </node>
       <node id="17482">
         <label>limits</label>
+      </node>
+      <node id="17500">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="17497">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="17486" relation="include">
+        </childnode>
+        <childnode refid="17498" relation="include">
+        </childnode>
+        <childnode refid="17499" relation="include">
+        </childnode>
       </node>
       <node id="17530">
         <label>assert.h</label>
@@ -47,17 +73,23 @@
       <node id="17523">
         <label>iterator</label>
       </node>
-      <node id="17528">
-        <label>storage/ValueIdMap.hpp</label>
-        <link refid="_value_id_map_8hpp"/>
-        <childnode refid="17529" relation="include">
+      <node id="17477">
+        <label>storage/MutableVerticalTable.h</label>
+        <link refid="_mutable_vertical_table_8h"/>
+        <childnode refid="17478" relation="include">
         </childnode>
-        <childnode refid="17531" relation="include">
+        <childnode refid="17479" relation="include">
         </childnode>
-      </node>
-      <node id="17496">
-        <label>storage/AbstractResource.h</label>
-        <link refid="_abstract_resource_8h"/>
+        <childnode refid="17480" relation="include">
+        </childnode>
+        <childnode refid="17484" relation="include">
+        </childnode>
+        <childnode refid="17516" relation="include">
+        </childnode>
+        <childnode refid="17485" relation="include">
+        </childnode>
+        <childnode refid="17490" relation="include">
+        </childnode>
       </node>
       <node id="17501">
         <label>boost/iterator/iterator_facade.hpp</label>
@@ -65,79 +97,82 @@
       <node id="17481">
         <label>cstdint</label>
       </node>
-      <node id="17490">
-        <label>storage/AbstractTable.h</label>
-        <link refid="_abstract_table_8h"/>
-        <childnode refid="17482" relation="include">
+      <node id="17499">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="17500" relation="include">
         </childnode>
+        <childnode refid="17501" relation="include">
+        </childnode>
+      </node>
+      <node id="17512">
+        <label>memory/MallocStrategy.h</label>
+        <link refid="_malloc_strategy_8h"/>
+        <childnode refid="17513" relation="include">
+        </childnode>
+        <childnode refid="17481" relation="include">
+        </childnode>
+      </node>
+      <node id="17502">
+        <label>storage/BaseAttributeVector.h</label>
+        <link refid="_base_attribute_vector_8h"/>
         <childnode refid="17483" relation="include">
         </childnode>
         <childnode refid="17487" relation="include">
         </childnode>
-        <childnode refid="17478" relation="include">
-        </childnode>
-        <childnode refid="17479" relation="include">
-        </childnode>
-        <childnode refid="17480" relation="include">
-        </childnode>
-        <childnode refid="17491" relation="include">
-        </childnode>
-        <childnode refid="17494" relation="include">
-        </childnode>
-        <childnode refid="17496" relation="include">
-        </childnode>
-        <childnode refid="17497" relation="include">
-        </childnode>
-        <childnode refid="17486" relation="include">
+        <childnode refid="17503" relation="include">
         </childnode>
       </node>
       <node id="17488">
         <label>stdint.h</label>
       </node>
-      <node id="17480">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="17481" relation="include">
+      <node id="17531">
+        <label>storage/OrderIndifferentDictionary.h</label>
+        <link refid="_order_indifferent_dictionary_8h"/>
+        <childnode refid="17532" relation="include">
         </childnode>
-        <childnode refid="17479" relation="include">
+        <childnode refid="17478" relation="include">
         </childnode>
-        <childnode refid="17482" relation="include">
+        <childnode refid="17533" relation="include">
         </childnode>
         <childnode refid="17483" relation="include">
         </childnode>
-        <childnode refid="17478" relation="include">
+        <childnode refid="17534" relation="include">
+        </childnode>
+        <childnode refid="17486" relation="include">
+        </childnode>
+        <childnode refid="17497" relation="include">
+        </childnode>
+        <childnode refid="17499" relation="include">
         </childnode>
       </node>
-      <node id="17524">
-        <label>storage/AbstractMerger.h</label>
-        <link refid="_abstract_merger_8h"/>
-        <childnode refid="17478" relation="include">
-        </childnode>
-        <childnode refid="17525" relation="include">
-        </childnode>
-        <childnode refid="17480" relation="include">
+      <node id="17476">
+        <label>src/lib/storage/Store.h</label>
+        <link refid="Store.h"/>
+        <childnode refid="17477" relation="include">
         </childnode>
         <childnode refid="17490" relation="include">
         </childnode>
-        <childnode refid="17526" relation="include">
+        <childnode refid="17517" relation="include">
+        </childnode>
+        <childnode refid="17518" relation="include">
+        </childnode>
+        <childnode refid="17527" relation="include">
+        </childnode>
+        <childnode refid="17535" relation="include">
+        </childnode>
+        <childnode refid="17480" relation="include">
         </childnode>
       </node>
-      <node id="17509">
-        <label>cmath</label>
-      </node>
-      <node id="17494">
-        <label>helper/unique_id.h</label>
-        <link refid="unique__id_8h"/>
-        <childnode refid="17481" relation="include">
+      <node id="17527">
+        <label>storage/SequentialHeapMerger.h</label>
+        <link refid="_sequential_heap_merger_8h"/>
+        <childnode refid="17528" relation="include">
         </childnode>
-        <childnode refid="17495" relation="include">
+        <childnode refid="17490" relation="include">
         </childnode>
-      </node>
-      <node id="17515">
-        <label>cassert</label>
-      </node>
-      <node id="17487">
-        <label>stdexcept</label>
+        <childnode refid="17524" relation="include">
+        </childnode>
       </node>
       <node id="17526">
         <label>storage/TableUtils.h</label>
@@ -147,14 +182,17 @@
         <childnode refid="17525" relation="include">
         </childnode>
       </node>
+      <node id="17509">
+        <label>cmath</label>
+      </node>
+      <node id="17515">
+        <label>cassert</label>
+      </node>
+      <node id="17487">
+        <label>stdexcept</label>
+      </node>
       <node id="17522">
         <label>numeric</label>
-      </node>
-      <node id="17479">
-        <label>string</label>
-      </node>
-      <node id="17533">
-        <label>map</label>
       </node>
       <node id="17484">
         <label>storage/Table.h</label>
@@ -178,22 +216,6 @@
         <childnode refid="17505" relation="include">
         </childnode>
       </node>
-      <node id="17532">
-        <label>exception</label>
-      </node>
-      <node id="17502">
-        <label>storage/BaseAttributeVector.h</label>
-        <link refid="_base_attribute_vector_8h"/>
-        <childnode refid="17483" relation="include">
-        </childnode>
-        <childnode refid="17487" relation="include">
-        </childnode>
-        <childnode refid="17503" relation="include">
-        </childnode>
-      </node>
-      <node id="17489">
-        <label>ostream</label>
-      </node>
       <node id="17535">
         <label>storage/PrettyPrinter.h</label>
         <link refid="_pretty_printer_8h"/>
@@ -204,18 +226,23 @@
         <childnode refid="17537" relation="include">
         </childnode>
       </node>
-      <node id="17534">
-        <label>limits.h</label>
-      </node>
-      <node id="17500">
-        <label>storage/BaseIterator.h</label>
-        <link refid="_base_iterator_8h"/>
-      </node>
-      <node id="17503">
-        <label>storage/AbstractAttributeVector.h</label>
-        <link refid="_abstract_attribute_vector_8h"/>
-        <childnode refid="17504" relation="include">
+      <node id="17505">
+        <label>storage/AttributeVectorFactory.h</label>
+        <link refid="_attribute_vector_factory_8h"/>
+        <childnode refid="17483" relation="include">
         </childnode>
+        <childnode refid="17502" relation="include">
+        </childnode>
+        <childnode refid="17506" relation="include">
+        </childnode>
+        <childnode refid="17514" relation="include">
+        </childnode>
+      </node>
+      <node id="17479">
+        <label>string</label>
+      </node>
+      <node id="17533">
+        <label>map</label>
       </node>
       <node id="17506">
         <label>storage/FixedLengthVector.h</label>
@@ -243,87 +270,9 @@
         <childnode refid="17502" relation="include">
         </childnode>
       </node>
-      <node id="17531">
-        <label>storage/OrderIndifferentDictionary.h</label>
-        <link refid="_order_indifferent_dictionary_8h"/>
-        <childnode refid="17532" relation="include">
-        </childnode>
-        <childnode refid="17478" relation="include">
-        </childnode>
-        <childnode refid="17533" relation="include">
-        </childnode>
-        <childnode refid="17483" relation="include">
-        </childnode>
-        <childnode refid="17534" relation="include">
-        </childnode>
-        <childnode refid="17486" relation="include">
-        </childnode>
-        <childnode refid="17497" relation="include">
-        </childnode>
-        <childnode refid="17499" relation="include">
-        </childnode>
-      </node>
-      <node id="17505">
-        <label>storage/AttributeVectorFactory.h</label>
-        <link refid="_attribute_vector_factory_8h"/>
-        <childnode refid="17483" relation="include">
-        </childnode>
-        <childnode refid="17502" relation="include">
-        </childnode>
-        <childnode refid="17506" relation="include">
-        </childnode>
-        <childnode refid="17514" relation="include">
-        </childnode>
-      </node>
-      <node id="17478">
-        <label>vector</label>
-      </node>
-      <node id="17495">
-        <label>array</label>
-      </node>
-      <node id="17511">
-        <label>sstream</label>
-      </node>
-      <node id="17519">
-        <label>helper/vector_helpers.h</label>
-        <link refid="vector__helpers_8h"/>
-        <childnode refid="17520" relation="include">
-        </childnode>
-        <childnode refid="17521" relation="include">
-        </childnode>
-        <childnode refid="17522" relation="include">
-        </childnode>
-        <childnode refid="17523" relation="include">
-        </childnode>
-      </node>
-      <node id="17507">
-        <label>cerrno</label>
-      </node>
-      <node id="17477">
-        <label>storage/MutableVerticalTable.h</label>
-        <link refid="_mutable_vertical_table_8h"/>
-        <childnode refid="17478" relation="include">
-        </childnode>
-        <childnode refid="17479" relation="include">
-        </childnode>
-        <childnode refid="17480" relation="include">
-        </childnode>
-        <childnode refid="17484" relation="include">
-        </childnode>
-        <childnode refid="17516" relation="include">
-        </childnode>
-        <childnode refid="17485" relation="include">
-        </childnode>
-        <childnode refid="17490" relation="include">
-        </childnode>
-      </node>
-      <node id="17491">
-        <label>helper/locking.h</label>
-        <link refid="locking_8h"/>
-        <childnode refid="17492" relation="include">
-        </childnode>
-        <childnode refid="17493" relation="include">
-        </childnode>
+      <node id="17537">
+        <label>helper/RangeIter.h</label>
+        <link refid="_range_iter_8h"/>
       </node>
       <node id="17516">
         <label>storage/TableFactory.h</label>
@@ -335,65 +284,6 @@
         <childnode refid="17490" relation="include">
         </childnode>
         <childnode refid="17484" relation="include">
-        </childnode>
-      </node>
-      <node id="17513">
-        <label>iostream</label>
-      </node>
-      <node id="17504">
-        <label>cstddef</label>
-      </node>
-      <node id="17486">
-        <label>storage/storage_types.h</label>
-        <link refid="storage__types_8h"/>
-        <childnode refid="17478" relation="include">
-        </childnode>
-        <childnode refid="17479" relation="include">
-        </childnode>
-        <childnode refid="17487" relation="include">
-        </childnode>
-        <childnode refid="17488" relation="include">
-        </childnode>
-        <childnode refid="17489" relation="include">
-        </childnode>
-      </node>
-      <node id="17525">
-        <label>unordered_map</label>
-      </node>
-      <node id="17510">
-        <label>mutex</label>
-      </node>
-      <node id="17498">
-        <label>storage/AbstractDictionary.h</label>
-        <link refid="_abstract_dictionary_8h"/>
-        <childnode refid="17478" relation="include">
-        </childnode>
-        <childnode refid="17479" relation="include">
-        </childnode>
-        <childnode refid="17483" relation="include">
-        </childnode>
-        <childnode refid="17486" relation="include">
-        </childnode>
-      </node>
-      <node id="17518">
-        <label>storage/AbstractMergeStrategy.h</label>
-        <link refid="_abstract_merge_strategy_8h"/>
-        <childnode refid="17478" relation="include">
-        </childnode>
-        <childnode refid="17490" relation="include">
-        </childnode>
-        <childnode refid="17519" relation="include">
-        </childnode>
-      </node>
-      <node id="17492">
-        <label>thread</label>
-      </node>
-      <node id="17499">
-        <label>storage/DictionaryIterator.h</label>
-        <link refid="_dictionary_iterator_8h"/>
-        <childnode refid="17500" relation="include">
-        </childnode>
-        <childnode refid="17501" relation="include">
         </childnode>
       </node>
       <node id="17529">
@@ -414,33 +304,130 @@
         <childnode refid="17486" relation="include">
         </childnode>
       </node>
-      <node id="17537">
-        <label>helper/RangeIter.h</label>
-        <link refid="_range_iter_8h"/>
+      <node id="17491">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="17492" relation="include">
+        </childnode>
+        <childnode refid="17493" relation="include">
+        </childnode>
       </node>
-      <node id="17476">
-        <label>src/lib/storage/Store.h</label>
-        <link refid="Store.h"/>
-        <childnode refid="17477" relation="include">
-        </childnode>
-        <childnode refid="17490" relation="include">
-        </childnode>
-        <childnode refid="17517" relation="include">
-        </childnode>
-        <childnode refid="17518" relation="include">
-        </childnode>
-        <childnode refid="17527" relation="include">
-        </childnode>
-        <childnode refid="17535" relation="include">
+      <node id="17532">
+        <label>exception</label>
+      </node>
+      <node id="17489">
+        <label>ostream</label>
+      </node>
+      <node id="17534">
+        <label>limits.h</label>
+      </node>
+      <node id="17517">
+        <label>storage/TableMerger.h</label>
+        <link refid="_table_merger_8h"/>
+        <childnode refid="17478" relation="include">
         </childnode>
         <childnode refid="17480" relation="include">
         </childnode>
+        <childnode refid="17490" relation="include">
+        </childnode>
+        <childnode refid="17518" relation="include">
+        </childnode>
+        <childnode refid="17524" relation="include">
+        </childnode>
       </node>
-      <node id="17536">
-        <label>ftprinter/FTPrinter.h</label>
+      <node id="17524">
+        <label>storage/AbstractMerger.h</label>
+        <link refid="_abstract_merger_8h"/>
+        <childnode refid="17478" relation="include">
+        </childnode>
+        <childnode refid="17525" relation="include">
+        </childnode>
+        <childnode refid="17480" relation="include">
+        </childnode>
+        <childnode refid="17490" relation="include">
+        </childnode>
+        <childnode refid="17526" relation="include">
+        </childnode>
       </node>
-      <node id="17520">
-        <label>algorithm</label>
+      <node id="17486">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="17478" relation="include">
+        </childnode>
+        <childnode refid="17479" relation="include">
+        </childnode>
+        <childnode refid="17487" relation="include">
+        </childnode>
+        <childnode refid="17488" relation="include">
+        </childnode>
+        <childnode refid="17489" relation="include">
+        </childnode>
+      </node>
+      <node id="17478">
+        <label>vector</label>
+      </node>
+      <node id="17494">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="17481" relation="include">
+        </childnode>
+        <childnode refid="17495" relation="include">
+        </childnode>
+      </node>
+      <node id="17495">
+        <label>array</label>
+      </node>
+      <node id="17511">
+        <label>sstream</label>
+      </node>
+      <node id="17518">
+        <label>storage/AbstractMergeStrategy.h</label>
+        <link refid="_abstract_merge_strategy_8h"/>
+        <childnode refid="17478" relation="include">
+        </childnode>
+        <childnode refid="17490" relation="include">
+        </childnode>
+        <childnode refid="17519" relation="include">
+        </childnode>
+      </node>
+      <node id="17528">
+        <label>storage/ValueIdMap.hpp</label>
+        <link refid="_value_id_map_8hpp"/>
+        <childnode refid="17529" relation="include">
+        </childnode>
+        <childnode refid="17531" relation="include">
+        </childnode>
+      </node>
+      <node id="17498">
+        <label>storage/AbstractDictionary.h</label>
+        <link refid="_abstract_dictionary_8h"/>
+        <childnode refid="17478" relation="include">
+        </childnode>
+        <childnode refid="17479" relation="include">
+        </childnode>
+        <childnode refid="17483" relation="include">
+        </childnode>
+        <childnode refid="17486" relation="include">
+        </childnode>
+      </node>
+      <node id="17507">
+        <label>cerrno</label>
+      </node>
+      <node id="17513">
+        <label>iostream</label>
+      </node>
+      <node id="17504">
+        <label>cstddef</label>
+      </node>
+      <node id="17525">
+        <label>unordered_map</label>
+      </node>
+      <node id="17496">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="17510">
+        <label>mutex</label>
       </node>
       <node id="17485">
         <label>storage/ColumnMetadata.h</label>
@@ -452,8 +439,14 @@
         <childnode refid="17487" relation="include">
         </childnode>
       </node>
-      <node id="17508">
-        <label>cstring</label>
+      <node id="17503">
+        <label>storage/AbstractAttributeVector.h</label>
+        <link refid="_abstract_attribute_vector_8h"/>
+        <childnode refid="17504" relation="include">
+        </childnode>
+      </node>
+      <node id="17492">
+        <label>thread</label>
       </node>
       <node id="17514">
         <label>storage/BitCompressedVector.h</label>
@@ -477,120 +470,63 @@
         <childnode refid="17502" relation="include">
         </childnode>
       </node>
-      <node id="17517">
-        <label>storage/TableMerger.h</label>
-        <link refid="_table_merger_8h"/>
+      <node id="17536">
+        <label>ftprinter/FTPrinter.h</label>
+      </node>
+      <node id="17520">
+        <label>algorithm</label>
+      </node>
+      <node id="17480">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="17481" relation="include">
+        </childnode>
+        <childnode refid="17479" relation="include">
+        </childnode>
+        <childnode refid="17482" relation="include">
+        </childnode>
+        <childnode refid="17483" relation="include">
+        </childnode>
         <childnode refid="17478" relation="include">
+        </childnode>
+      </node>
+      <node id="17490">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="17482" relation="include">
+        </childnode>
+        <childnode refid="17483" relation="include">
+        </childnode>
+        <childnode refid="17487" relation="include">
+        </childnode>
+        <childnode refid="17478" relation="include">
+        </childnode>
+        <childnode refid="17479" relation="include">
         </childnode>
         <childnode refid="17480" relation="include">
         </childnode>
-        <childnode refid="17490" relation="include">
+        <childnode refid="17491" relation="include">
         </childnode>
-        <childnode refid="17518" relation="include">
+        <childnode refid="17494" relation="include">
         </childnode>
-        <childnode refid="17524" relation="include">
+        <childnode refid="17496" relation="include">
         </childnode>
+        <childnode refid="17497" relation="include">
+        </childnode>
+        <childnode refid="17486" relation="include">
+        </childnode>
+      </node>
+      <node id="17508">
+        <label>cstring</label>
       </node>
       <node id="17483">
         <label>memory</label>
       </node>
-      <node id="17497">
-        <label>storage/BaseDictionary.h</label>
-        <link refid="_base_dictionary_8h"/>
-        <childnode refid="17486" relation="include">
-        </childnode>
-        <childnode refid="17498" relation="include">
-        </childnode>
-        <childnode refid="17499" relation="include">
-        </childnode>
-      </node>
-      <node id="17527">
-        <label>storage/SequentialHeapMerger.h</label>
-        <link refid="_sequential_heap_merger_8h"/>
-        <childnode refid="17528" relation="include">
-        </childnode>
-        <childnode refid="17490" relation="include">
-        </childnode>
-        <childnode refid="17524" relation="include">
-        </childnode>
-      </node>
-      <node id="17512">
-        <label>memory/MallocStrategy.h</label>
-        <link refid="_malloc_strategy_8h"/>
-        <childnode refid="17513" relation="include">
-        </childnode>
-        <childnode refid="17481" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="17567">
-        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
-        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
-      </node>
-      <node id="17562">
-        <label>src/bin/perf_regression/GroupByScan.cpp</label>
-        <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
-      </node>
-      <node id="17551">
-        <label>src/lib/access/UpdateScan.cpp</label>
-        <link refid="_update_scan_8cpp"/>
-      </node>
-      <node id="17549">
-        <label>src/lib/access/storage/TableIO.cpp</label>
-        <link refid="_table_i_o_8cpp"/>
-      </node>
-      <node id="17565">
-        <label>src/bin/perf_regression/JoinScan.cpp</label>
-        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
-      </node>
-      <node id="17558">
-        <label>src/lib/storage/PointerCalculator.cpp</label>
-        <link refid="_pointer_calculator_8cpp"/>
-      </node>
-      <node id="17555">
-        <label>src/lib/io/TableDump.cpp</label>
-        <link refid="_table_dump_8cpp"/>
-      </node>
-      <node id="17557">
-        <label>src/lib/storage/AbstractTable.cpp</label>
-        <link refid="_abstract_table_8cpp"/>
-      </node>
-      <node id="17568">
-        <label>src/bin/perf_regression/SortScan.cpp</label>
-        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
-      </node>
-      <node id="17548">
-        <label>src/lib/access/storage/JsonTable.cpp</label>
-        <link refid="_json_table_8cpp"/>
-      </node>
-      <node id="17546">
-        <label>src/lib/access/PosUpdateScan.cpp</label>
-        <link refid="_pos_update_scan_8cpp"/>
-      </node>
       <node id="17566">
         <label>src/bin/perf_regression/ProjectionScan.cpp</label>
         <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
-      </node>
-      <node id="17563">
-        <label>src/bin/perf_regression/HashJoin.cpp</label>
-        <link refid="_hash_join_8cpp"/>
-      </node>
-      <node id="17553">
-        <label>src/lib/io/MPassCSVLoader.cpp</label>
-        <link refid="_m_pass_c_s_v_loader_8cpp"/>
-      </node>
-      <node id="17547">
-        <label>src/lib/access/SimpleTableScan.cpp</label>
-        <link refid="lib_2access_2_simple_table_scan_8cpp"/>
-      </node>
-      <node id="17554">
-        <label>src/lib/io/shortcuts.cpp</label>
-        <link refid="shortcuts_8cpp"/>
-      </node>
-      <node id="17552">
-        <label>src/lib/io/Loader.cpp</label>
-        <link refid="_loader_8cpp"/>
       </node>
       <node id="17541">
         <label>src/lib/access/expressions/GenericExpressions.h</label>
@@ -598,73 +534,17 @@
         <childnode refid="17542" relation="include">
         </childnode>
       </node>
-      <node id="17560">
-        <label>src/lib/storage/Store.cpp</label>
-        <link refid="_store_8cpp"/>
-      </node>
-      <node id="17561">
-        <label>src/lib/storage.h</label>
-        <link refid="storage_8h"/>
-        <childnode refid="17562" relation="include">
-        </childnode>
-        <childnode refid="17563" relation="include">
-        </childnode>
-        <childnode refid="17564" relation="include">
-        </childnode>
-        <childnode refid="17565" relation="include">
-        </childnode>
-        <childnode refid="17566" relation="include">
-        </childnode>
-        <childnode refid="17567" relation="include">
-        </childnode>
-        <childnode refid="17568" relation="include">
-        </childnode>
-        <childnode refid="17569" relation="include">
-        </childnode>
-      </node>
-      <node id="17543">
-        <label>src/lib/access/InsertScan.cpp</label>
-        <link refid="_insert_scan_8cpp"/>
-      </node>
-      <node id="17564">
-        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
-        <link refid="_hash_value_join_8cpp"/>
-      </node>
-      <node id="17559">
-        <label>src/lib/storage/PrettyPrinter.cpp</label>
-        <link refid="_pretty_printer_8cpp"/>
-      </node>
-      <node id="17545">
-        <label>src/lib/access/MergeTable.cpp</label>
-        <link refid="_merge_table_8cpp"/>
-      </node>
-      <node id="17542">
-        <label>src/lib/access/expressions/GenericExpressions.cpp</label>
-        <link refid="_generic_expressions_8cpp"/>
-      </node>
-      <node id="17569">
-        <label>src/bin/perf_regression/UnionScan.cpp</label>
-        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
-      </node>
-      <node id="17550">
-        <label>src/lib/access/tx/ValidatePositions.cpp</label>
-        <link refid="_validate_positions_8cpp"/>
-      </node>
-      <node id="17539">
-        <label>src/bin/perf_regression/tx_performance.cpp</label>
-        <link refid="tx__performance_8cpp"/>
-      </node>
-      <node id="17556">
-        <label>src/lib/io/TransactionManager.cpp</label>
-        <link refid="_transaction_manager_8cpp"/>
+      <node id="17568">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
       </node>
       <node id="17544">
         <label>src/lib/access/LayoutTable.cpp</label>
         <link refid="_layout_table_8cpp"/>
       </node>
-      <node id="17540">
-        <label>src/lib/access/Delete.cpp</label>
-        <link refid="_delete_8cpp"/>
+      <node id="17567">
+        <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
+        <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
       </node>
       <node id="17538">
         <label>src/lib/storage/Store.h</label>
@@ -714,6 +594,126 @@
         <childnode refid="17561" relation="include">
         </childnode>
       </node>
+      <node id="17548">
+        <label>src/lib/access/storage/JsonTable.cpp</label>
+        <link refid="_json_table_8cpp"/>
+      </node>
+      <node id="17557">
+        <label>src/lib/storage/AbstractTable.cpp</label>
+        <link refid="_abstract_table_8cpp"/>
+      </node>
+      <node id="17562">
+        <label>src/bin/perf_regression/GroupByScan.cpp</label>
+        <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
+      </node>
+      <node id="17552">
+        <label>src/lib/io/Loader.cpp</label>
+        <link refid="_loader_8cpp"/>
+      </node>
+      <node id="17560">
+        <label>src/lib/storage/Store.cpp</label>
+        <link refid="_store_8cpp"/>
+      </node>
+      <node id="17556">
+        <label>src/lib/io/TransactionManager.cpp</label>
+        <link refid="_transaction_manager_8cpp"/>
+      </node>
+      <node id="17555">
+        <label>src/lib/io/TableDump.cpp</label>
+        <link refid="_table_dump_8cpp"/>
+      </node>
+      <node id="17561">
+        <label>src/lib/storage.h</label>
+        <link refid="storage_8h"/>
+        <childnode refid="17562" relation="include">
+        </childnode>
+        <childnode refid="17563" relation="include">
+        </childnode>
+        <childnode refid="17564" relation="include">
+        </childnode>
+        <childnode refid="17565" relation="include">
+        </childnode>
+        <childnode refid="17566" relation="include">
+        </childnode>
+        <childnode refid="17567" relation="include">
+        </childnode>
+        <childnode refid="17568" relation="include">
+        </childnode>
+        <childnode refid="17569" relation="include">
+        </childnode>
+      </node>
+      <node id="17558">
+        <label>src/lib/storage/PointerCalculator.cpp</label>
+        <link refid="_pointer_calculator_8cpp"/>
+      </node>
+      <node id="17543">
+        <label>src/lib/access/InsertScan.cpp</label>
+        <link refid="_insert_scan_8cpp"/>
+      </node>
+      <node id="17549">
+        <label>src/lib/access/storage/TableIO.cpp</label>
+        <link refid="_table_i_o_8cpp"/>
+      </node>
+      <node id="17539">
+        <label>src/bin/perf_regression/tx_performance.cpp</label>
+        <link refid="tx__performance_8cpp"/>
+      </node>
+      <node id="17553">
+        <label>src/lib/io/MPassCSVLoader.cpp</label>
+        <link refid="_m_pass_c_s_v_loader_8cpp"/>
+      </node>
+      <node id="17547">
+        <label>src/lib/access/SimpleTableScan.cpp</label>
+        <link refid="lib_2access_2_simple_table_scan_8cpp"/>
+      </node>
+      <node id="17551">
+        <label>src/lib/access/UpdateScan.cpp</label>
+        <link refid="_update_scan_8cpp"/>
+      </node>
+      <node id="17540">
+        <label>src/lib/access/Delete.cpp</label>
+        <link refid="_delete_8cpp"/>
+      </node>
+      <node id="17569">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
+      </node>
+      <node id="17546">
+        <label>src/lib/access/PosUpdateScan.cpp</label>
+        <link refid="_pos_update_scan_8cpp"/>
+      </node>
+      <node id="17550">
+        <label>src/lib/access/tx/ValidatePositions.cpp</label>
+        <link refid="_validate_positions_8cpp"/>
+      </node>
+      <node id="17565">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="17554">
+        <label>src/lib/io/shortcuts.cpp</label>
+        <link refid="shortcuts_8cpp"/>
+      </node>
+      <node id="17563">
+        <label>src/bin/perf_regression/HashJoin.cpp</label>
+        <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="17545">
+        <label>src/lib/access/MergeTable.cpp</label>
+        <link refid="_merge_table_8cpp"/>
+      </node>
+      <node id="17542">
+        <label>src/lib/access/expressions/GenericExpressions.cpp</label>
+        <link refid="_generic_expressions_8cpp"/>
+      </node>
+      <node id="17559">
+        <label>src/lib/storage/PrettyPrinter.cpp</label>
+        <link refid="_pretty_printer_8cpp"/>
+      </node>
+      <node id="17564">
+        <label>src/bin/perf_regression/HashValueJoin.cpp</label>
+        <link refid="_hash_value_join_8cpp"/>
+      </node>
     </invincdepgraph>
     <innerclass refid="classhyrise_1_1storage_1_1_store" prot="public">hyrise::storage::Store</innerclass>
     <innerclass refid="structhyrise_1_1storage_1_1_store_1_1table__offset__idx__t" prot="private">hyrise::storage::Store::table_offset_idx_t</innerclass>
@@ -760,7 +760,7 @@
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_store_1a9dfe0417bf8466b07a7ae182ccff3a1f" kindref="member">isVisibleForTransaction</ref>(<ref refid="namespacehyrise_1_1storage_1adf2f7735f8bc6e8bd84d1242ae680cf0" kindref="member">pos_t</ref><sp/>pos,<sp/><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">tx::transaction_cid_t</ref><sp/>last_commit_id,<sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref><sp/><ref refid="classhyrise_1_1storage_1_1_store_1a23aefced824df6f151f6cc8c24c343d5" kindref="member">tid</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_store_1a39d01b18628007ebdb35c6a3e9956e9d" kindref="member" tooltip="This method validates a list of positions to check if it is valid. ">validatePositions</ref>(<ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref>&amp;<sp/>pos,<sp/><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">tx::transaction_cid_t</ref><sp/>last_commit_id,<sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref><sp/>tid<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_store_1a39d01b18628007ebdb35c6a3e9956e9d" kindref="member" tooltip="This method validates a list of positions to check if it is valid.">validatePositions</ref>(<ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref>&amp;<sp/>pos,<sp/><ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">tx::transaction_cid_t</ref><sp/>last_commit_id,<sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref><sp/>tid<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref><sp/><ref refid="classhyrise_1_1storage_1_1_store_1a511dd165cc867c52148b5bb7fa512f21" kindref="member">buildValidPositions</ref>(<ref refid="namespacehyrise_1_1tx_1ab0c3f917d48f404a70d7055bf34dfc33" kindref="member">tx::transaction_cid_t</ref><sp/>last_commit_id,<sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref><sp/>tid)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_store_1ab8363f76dfa1fc45072c969f99210f4d" kindref="member">copyRowToDelta</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a1c9f919a7a3f09a8b304a98f1ebad3ee" kindref="member">c_atable_ptr_t</ref>&amp;<sp/>source,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>src_row,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dst_row,<sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref><sp/>tid);</highlight></codeline>
@@ -774,7 +774,7 @@
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1tx_1ae309e968fd5cd0c9bc4b27e82d78c74c" kindref="member">tx::TX_CODE</ref><sp/><ref refid="classhyrise_1_1storage_1_1_store_1ab632af42a47cc16f455fb565a37e9803" kindref="member">markForDeletion</ref>(<ref refid="namespacehyrise_1_1storage_1adf2f7735f8bc6e8bd84d1242ae680cf0" kindref="member">pos_t</ref><sp/>pos,<sp/><sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref><sp/>tid);</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1tx_1ae309e968fd5cd0c9bc4b27e82d78c74c" kindref="member">tx::TX_CODE</ref><sp/><ref refid="classhyrise_1_1storage_1_1_store_1af2b216cfd132da5ba3f1af4586fde29c" kindref="member">unmarkForDeletion</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">pos_list_t</ref>&amp;<sp/>pos,<sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">tx::transaction_id_t</ref><sp/>tid);</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref><sp/>*<ref refid="classhyrise_1_1storage_1_1_store_1a42b86a67e914cf6b2a2f0a61c722aba6" kindref="member" tooltip="AbstractTable interface. ">metadataAt</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column_index,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row_index<sp/>=<sp/>0,<sp/><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref><sp/>table_id<sp/>=<sp/>0)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_column_metadata" kindref="compound">ColumnMetadata</ref><sp/>*<ref refid="classhyrise_1_1storage_1_1_store_1a42b86a67e914cf6b2a2f0a61c722aba6" kindref="member" tooltip="AbstractTable interface.">metadataAt</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column_index,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row_index<sp/>=<sp/>0,<sp/><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref><sp/>table_id<sp/>=<sp/>0)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_store_1a860030016eb93f2585f93665a0d50504" kindref="member">setDictionaryAt</ref>(<ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref><sp/>dict,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0,<sp/><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref><sp/>table_id<sp/>=<sp/>0)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref>&amp;<sp/><ref refid="classhyrise_1_1storage_1_1_store_1aeb97a977a531969f6d4eac66b695b8c4" kindref="member">dictionaryAt</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0,<sp/><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref><sp/>table_id<sp/>=<sp/>0)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_abstract_table_1af76ff827deb697db8077a90c450381ab" kindref="member">AbstractTable::SharedDictionaryPtr</ref>&amp;<sp/><ref refid="classhyrise_1_1storage_1_1_store_1aefae310dd013419d63adf33dad9ea13d" kindref="member">dictionaryByTableId</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>column,<sp/><ref refid="namespacehyrise_1_1storage_1a5a738eaf9cb0a700c3f988e48cfe05d3" kindref="member">table_id_t</ref><sp/>table_id)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
@@ -820,6 +820,6 @@
 <codeline lineno="115"><highlight class="normal"></highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_STORAGE_STORE_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/storage/Store.h"/>
+    <location file="/home/vagrant/lanice/src/lib/storage/Store.h"/>
   </compounddef>
 </doxygen>

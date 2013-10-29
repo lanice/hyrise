@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="_raw_table_loader_8h" kind="file">
     <compoundname>RawTableLoader.h</compoundname>
     <includes refid="_abstract_loader_8h" local="yes">io/AbstractLoader.h</includes>
@@ -10,46 +10,27 @@
       <node id="12306">
         <label>limits</label>
       </node>
+      <node id="12300">
+        <label>io/AbstractLoader.h</label>
+        <link refid="_abstract_loader_8h"/>
+        <childnode refid="12301" relation="include">
+        </childnode>
+        <childnode refid="12308" relation="include">
+        </childnode>
+        <childnode refid="12304" relation="include">
+        </childnode>
+      </node>
       <node id="12305">
         <label>cstdint</label>
       </node>
       <node id="12310">
         <label>stdint.h</label>
       </node>
-      <node id="12304">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="12305" relation="include">
-        </childnode>
-        <childnode refid="12303" relation="include">
-        </childnode>
-        <childnode refid="12306" relation="include">
-        </childnode>
-        <childnode refid="12302" relation="include">
-        </childnode>
-        <childnode refid="12307" relation="include">
-        </childnode>
-      </node>
       <node id="12309">
         <label>stdexcept</label>
       </node>
-      <node id="12299">
-        <label>src/lib/io/RawTableLoader.h</label>
-        <link refid="RawTableLoader.h"/>
-        <childnode refid="12300" relation="include">
-        </childnode>
-        <childnode refid="12313" relation="include">
-        </childnode>
-      </node>
       <node id="12303">
         <label>string</label>
-      </node>
-      <node id="12312">
-        <label>parameters.inc</label>
-        <link refid="parameters_8inc"/>
-      </node>
-      <node id="12311">
-        <label>ostream</label>
       </node>
       <node id="12301">
         <label>io/Loader.h</label>
@@ -65,24 +46,11 @@
         <childnode refid="12312" relation="include">
         </childnode>
       </node>
+      <node id="12311">
+        <label>ostream</label>
+      </node>
       <node id="12315">
         <label>libcsv/csv.h</label>
-      </node>
-      <node id="12307">
-        <label>vector</label>
-      </node>
-      <node id="12300">
-        <label>io/AbstractLoader.h</label>
-        <link refid="_abstract_loader_8h"/>
-        <childnode refid="12301" relation="include">
-        </childnode>
-        <childnode refid="12308" relation="include">
-        </childnode>
-        <childnode refid="12304" relation="include">
-        </childnode>
-      </node>
-      <node id="12314">
-        <label>iosfwd</label>
       </node>
       <node id="12308">
         <label>storage/storage_types.h</label>
@@ -97,6 +65,12 @@
         </childnode>
         <childnode refid="12311" relation="include">
         </childnode>
+      </node>
+      <node id="12307">
+        <label>vector</label>
+      </node>
+      <node id="12314">
+        <label>iosfwd</label>
       </node>
       <node id="12313">
         <label>io/GenericCSV.h</label>
@@ -116,26 +90,44 @@
         <childnode refid="12312" relation="include">
         </childnode>
       </node>
+      <node id="12304">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="12305" relation="include">
+        </childnode>
+        <childnode refid="12303" relation="include">
+        </childnode>
+        <childnode refid="12306" relation="include">
+        </childnode>
+        <childnode refid="12302" relation="include">
+        </childnode>
+        <childnode refid="12307" relation="include">
+        </childnode>
+      </node>
+      <node id="12299">
+        <label>src/lib/io/RawTableLoader.h</label>
+        <link refid="RawTableLoader.h"/>
+        <childnode refid="12300" relation="include">
+        </childnode>
+        <childnode refid="12313" relation="include">
+        </childnode>
+      </node>
       <node id="12302">
         <label>memory</label>
       </node>
+      <node id="12312">
+        <label>parameters.inc</label>
+        <link refid="parameters_8inc"/>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="12316">
-        <label>src/lib/io/RawTableLoader.h</label>
-        <link refid="RawTableLoader.h"/>
-        <childnode refid="12317" relation="include">
-        </childnode>
-        <childnode refid="12321" relation="include">
-        </childnode>
-      </node>
-      <node id="12320">
-        <label>src/lib/io/shortcuts.cpp</label>
-        <link refid="shortcuts_8cpp"/>
-      </node>
       <node id="12318">
         <label>src/bin/perf_regression/Loading.cpp</label>
         <link refid="_loading_8cpp"/>
+      </node>
+      <node id="12321">
+        <label>src/lib/io/RawTableLoader.cpp</label>
+        <link refid="_raw_table_loader_8cpp"/>
       </node>
       <node id="12319">
         <label>src/lib/access/storage/TableLoad.cpp</label>
@@ -151,9 +143,17 @@
         <childnode refid="12320" relation="include">
         </childnode>
       </node>
-      <node id="12321">
-        <label>src/lib/io/RawTableLoader.cpp</label>
-        <link refid="_raw_table_loader_8cpp"/>
+      <node id="12320">
+        <label>src/lib/io/shortcuts.cpp</label>
+        <link refid="shortcuts_8cpp"/>
+      </node>
+      <node id="12316">
+        <label>src/lib/io/RawTableLoader.h</label>
+        <link refid="RawTableLoader.h"/>
+        <childnode refid="12317" relation="include">
+        </childnode>
+        <childnode refid="12321" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classhyrise_1_1io_1_1_raw_table_loader" prot="public">hyrise::io::RawTableLoader</innerclass>
@@ -173,7 +173,7 @@
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">io<sp/>{</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17" refid="classhyrise_1_1io_1_1_raw_table_loader" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1io_1_1_raw_table_loader" kindref="compound">RawTableLoader</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_input" kindref="compound" tooltip="Interface for implementing a data source for loading data into a table. ">AbstractInput</ref><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="classhyrise_1_1io_1_1_raw_table_loader" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1io_1_1_raw_table_loader" kindref="compound">RawTableLoader</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_input" kindref="compound" tooltip="Interface for implementing a data source for loading data into a table.">AbstractInput</ref><sp/>{</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
@@ -192,7 +192,7 @@
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_loader_1_1params" kindref="compound">Loader::params</ref><sp/>&amp;args);</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="classhyrise_1_1io_1_1_raw_table_loader_1ab4878b5c35485ca1c4172cea08ff3cb3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_raw_table_loader_1ab4878b5c35485ca1c4172cea08ff3cb3" kindref="member" tooltip="Never wrap a raw table with a store. ">needs_store_wrap</ref>()<sp/>{<sp/></highlight></codeline>
+<codeline lineno="37" refid="classhyrise_1_1io_1_1_raw_table_loader_1ab4878b5c35485ca1c4172cea08ff3cb3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1io_1_1_raw_table_loader_1ab4878b5c35485ca1c4172cea08ff3cb3" kindref="member" tooltip="Never wrap a raw table with a store.">needs_store_wrap</ref>()<sp/>{<sp/></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
@@ -208,6 +208,6 @@
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SRC_LIB_IO_RAWTABLELOADER_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/io/RawTableLoader.h"/>
+    <location file="/home/vagrant/lanice/src/lib/io/RawTableLoader.h"/>
   </compounddef>
 </doxygen>

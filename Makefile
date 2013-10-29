@@ -168,7 +168,7 @@ pushdocs: doxygen
 	$(MAKE) clean
 	mkdir -p _build/html
 	cd _build
-	git clone -b gh-pages git@github.com:hyrise/hyrise.git html
+	git clone -b gh-pages git@github.com:lanice/hyrise.git html
 	cd ..
 	make html
 	cd _build/html

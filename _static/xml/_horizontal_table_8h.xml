@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_horizontal_table_8h" kind="file">
     <compoundname>HorizontalTable.h</compoundname>
     <includes local="no">vector</includes>
@@ -17,9 +17,15 @@
       <node id="16004">
         <label>limits</label>
       </node>
-      <node id="16021">
-        <label>storage/BaseIterator.h</label>
-        <link refid="_base_iterator_8h"/>
+      <node id="16017">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="16022">
+        <label>boost/iterator/iterator_facade.hpp</label>
+      </node>
+      <node id="16003">
+        <label>cstdint</label>
       </node>
       <node id="15999">
         <label>src/lib/storage/HorizontalTable.h</label>
@@ -33,121 +39,6 @@
         <childnode refid="16006" relation="include">
         </childnode>
         <childnode refid="16011" relation="include">
-        </childnode>
-      </node>
-      <node id="16018">
-        <label>storage/BaseDictionary.h</label>
-        <link refid="_base_dictionary_8h"/>
-        <childnode refid="16007" relation="include">
-        </childnode>
-        <childnode refid="16019" relation="include">
-        </childnode>
-        <childnode refid="16020" relation="include">
-        </childnode>
-      </node>
-      <node id="16022">
-        <label>boost/iterator/iterator_facade.hpp</label>
-      </node>
-      <node id="16003">
-        <label>cstdint</label>
-      </node>
-      <node id="16020">
-        <label>storage/DictionaryIterator.h</label>
-        <link refid="_dictionary_iterator_8h"/>
-        <childnode refid="16021" relation="include">
-        </childnode>
-        <childnode refid="16022" relation="include">
-        </childnode>
-      </node>
-      <node id="16009">
-        <label>stdint.h</label>
-      </node>
-      <node id="16008">
-        <label>stdexcept</label>
-      </node>
-      <node id="16001">
-        <label>string</label>
-      </node>
-      <node id="16012">
-        <label>helper/locking.h</label>
-        <link refid="locking_8h"/>
-        <childnode refid="16013" relation="include">
-        </childnode>
-        <childnode refid="16014" relation="include">
-        </childnode>
-      </node>
-      <node id="16010">
-        <label>ostream</label>
-      </node>
-      <node id="16007">
-        <label>storage/storage_types.h</label>
-        <link refid="storage__types_8h"/>
-        <childnode refid="16000" relation="include">
-        </childnode>
-        <childnode refid="16001" relation="include">
-        </childnode>
-        <childnode refid="16008" relation="include">
-        </childnode>
-        <childnode refid="16009" relation="include">
-        </childnode>
-        <childnode refid="16010" relation="include">
-        </childnode>
-      </node>
-      <node id="16000">
-        <label>vector</label>
-      </node>
-      <node id="16015">
-        <label>helper/unique_id.h</label>
-        <link refid="unique__id_8h"/>
-        <childnode refid="16003" relation="include">
-        </childnode>
-        <childnode refid="16016" relation="include">
-        </childnode>
-      </node>
-      <node id="16016">
-        <label>array</label>
-      </node>
-      <node id="16019">
-        <label>storage/AbstractDictionary.h</label>
-        <link refid="_abstract_dictionary_8h"/>
-        <childnode refid="16000" relation="include">
-        </childnode>
-        <childnode refid="16001" relation="include">
-        </childnode>
-        <childnode refid="16005" relation="include">
-        </childnode>
-        <childnode refid="16007" relation="include">
-        </childnode>
-      </node>
-      <node id="16017">
-        <label>storage/AbstractResource.h</label>
-        <link refid="_abstract_resource_8h"/>
-      </node>
-      <node id="16006">
-        <label>storage/ColumnMetadata.h</label>
-        <link refid="_column_metadata_8h"/>
-        <childnode refid="16007" relation="include">
-        </childnode>
-        <childnode refid="16001" relation="include">
-        </childnode>
-        <childnode refid="16008" relation="include">
-        </childnode>
-      </node>
-      <node id="16013">
-        <label>thread</label>
-      </node>
-      <node id="16002">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="16003" relation="include">
-        </childnode>
-        <childnode refid="16001" relation="include">
-        </childnode>
-        <childnode refid="16004" relation="include">
-        </childnode>
-        <childnode refid="16005" relation="include">
-        </childnode>
-        <childnode refid="16000" relation="include">
         </childnode>
       </node>
       <node id="16011">
@@ -176,11 +67,124 @@
         <childnode refid="16007" relation="include">
         </childnode>
       </node>
+      <node id="16009">
+        <label>stdint.h</label>
+      </node>
+      <node id="16002">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="16003" relation="include">
+        </childnode>
+        <childnode refid="16001" relation="include">
+        </childnode>
+        <childnode refid="16004" relation="include">
+        </childnode>
+        <childnode refid="16005" relation="include">
+        </childnode>
+        <childnode refid="16000" relation="include">
+        </childnode>
+      </node>
+      <node id="16015">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="16003" relation="include">
+        </childnode>
+        <childnode refid="16016" relation="include">
+        </childnode>
+      </node>
+      <node id="16008">
+        <label>stdexcept</label>
+      </node>
+      <node id="16001">
+        <label>string</label>
+      </node>
+      <node id="16010">
+        <label>ostream</label>
+      </node>
+      <node id="16021">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="16000">
+        <label>vector</label>
+      </node>
+      <node id="16016">
+        <label>array</label>
+      </node>
+      <node id="16012">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="16013" relation="include">
+        </childnode>
+        <childnode refid="16014" relation="include">
+        </childnode>
+      </node>
+      <node id="16007">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="16000" relation="include">
+        </childnode>
+        <childnode refid="16001" relation="include">
+        </childnode>
+        <childnode refid="16008" relation="include">
+        </childnode>
+        <childnode refid="16009" relation="include">
+        </childnode>
+        <childnode refid="16010" relation="include">
+        </childnode>
+      </node>
+      <node id="16019">
+        <label>storage/AbstractDictionary.h</label>
+        <link refid="_abstract_dictionary_8h"/>
+        <childnode refid="16000" relation="include">
+        </childnode>
+        <childnode refid="16001" relation="include">
+        </childnode>
+        <childnode refid="16005" relation="include">
+        </childnode>
+        <childnode refid="16007" relation="include">
+        </childnode>
+      </node>
+      <node id="16013">
+        <label>thread</label>
+      </node>
+      <node id="16020">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="16021" relation="include">
+        </childnode>
+        <childnode refid="16022" relation="include">
+        </childnode>
+      </node>
+      <node id="16006">
+        <label>storage/ColumnMetadata.h</label>
+        <link refid="_column_metadata_8h"/>
+        <childnode refid="16007" relation="include">
+        </childnode>
+        <childnode refid="16001" relation="include">
+        </childnode>
+        <childnode refid="16008" relation="include">
+        </childnode>
+      </node>
       <node id="16005">
         <label>memory</label>
       </node>
+      <node id="16018">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="16007" relation="include">
+        </childnode>
+        <childnode refid="16019" relation="include">
+        </childnode>
+        <childnode refid="16020" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="16025">
+        <label>src/lib/access/UnionScan.cpp</label>
+        <link refid="lib_2access_2_union_scan_8cpp"/>
+      </node>
       <node id="16023">
         <label>src/lib/storage/HorizontalTable.h</label>
         <link refid="HorizontalTable.h"/>
@@ -191,17 +195,13 @@
         <childnode refid="16026" relation="include">
         </childnode>
       </node>
-      <node id="16025">
-        <label>src/lib/access/UnionScan.cpp</label>
-        <link refid="lib_2access_2_union_scan_8cpp"/>
+      <node id="16024">
+        <label>src/lib/access/UnionAll.cpp</label>
+        <link refid="_union_all_8cpp"/>
       </node>
       <node id="16026">
         <label>src/lib/storage/HorizontalTable.cpp</label>
         <link refid="_horizontal_table_8cpp"/>
-      </node>
-      <node id="16024">
-        <label>src/lib/access/UnionAll.cpp</label>
-        <link refid="_union_all_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classhyrise_1_1storage_1_1_horizontal_table" prot="public">hyrise::storage::HorizontalTable</innerclass>
@@ -247,7 +247,7 @@
 <codeline lineno="38"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_horizontal_table_1a0d34d7612d7bf96dbd273892ad464c23" kindref="member">partForRow</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1storage_1_1_horizontal_table_1a746451cba51a11d58d8bc39ce7ec219b" kindref="member">computeSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="42" refid="classhyrise_1_1storage_1_1_horizontal_table_1aa62a70cbe61e5fdaca237b6384754029" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;c_atable_ptr_t<sp/>&gt;<sp/><ref refid="classhyrise_1_1storage_1_1_horizontal_table_1aa62a70cbe61e5fdaca237b6384754029" kindref="member" tooltip="subtables">_parts</ref>;</highlight></codeline>
+<codeline lineno="42" refid="classhyrise_1_1storage_1_1_horizontal_table_1aa62a70cbe61e5fdaca237b6384754029" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;c_atable_ptr_t<sp/>&gt;<sp/><ref refid="classhyrise_1_1storage_1_1_horizontal_table_1aa62a70cbe61e5fdaca237b6384754029" kindref="member" tooltip="subtables ">_parts</ref>;</highlight></codeline>
 <codeline lineno="43" refid="classhyrise_1_1storage_1_1_horizontal_table_1a9ee4c7a81099045c24ad190cf17183b4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;size_t&gt;<sp/><ref refid="classhyrise_1_1storage_1_1_horizontal_table_1a9ee4c7a81099045c24ad190cf17183b4" kindref="member">_offsets</ref>;</highlight></codeline>
 <codeline lineno="44" refid="classhyrise_1_1storage_1_1_horizontal_table_1adf6a68ee7933d1a524eadc9e89db5a16" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;table_id_t&gt;<sp/><ref refid="classhyrise_1_1storage_1_1_horizontal_table_1adf6a68ee7933d1a524eadc9e89db5a16" kindref="member">_table_id_offsets</ref>;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
@@ -258,6 +258,6 @@
 <codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_STORAGE_HORIZONTALTABLE_H_</highlight></codeline>
 <codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/vagrant/lanice/src/lib/storage/HorizontalTable.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/storage/HorizontalTable.h"/>
   </compounddef>
 </doxygen>

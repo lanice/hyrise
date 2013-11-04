@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_static_request_handler_8cpp" kind="file">
     <compoundname>StaticRequestHandler.cpp</compoundname>
     <includes refid="_static_request_handler_8h" local="yes">net/StaticRequestHandler.h</includes>
@@ -16,6 +16,30 @@
       </node>
       <node id="13449">
         <label>arpa/inet.h</label>
+      </node>
+      <node id="13447">
+        <label>helper/fs.h</label>
+        <link refid="fs_8h"/>
+        <childnode refid="13437" relation="include">
+        </childnode>
+      </node>
+      <node id="13448">
+        <label>net/AsyncConnection.h</label>
+        <link refid="_async_connection_8h"/>
+        <childnode refid="13449" relation="include">
+        </childnode>
+        <childnode refid="13450" relation="include">
+        </childnode>
+        <childnode refid="13451" relation="include">
+        </childnode>
+        <childnode refid="13452" relation="include">
+        </childnode>
+        <childnode refid="13437" relation="include">
+        </childnode>
+        <childnode refid="13441" relation="include">
+        </childnode>
+        <childnode refid="13453" relation="include">
+        </childnode>
       </node>
       <node id="13442">
         <label>taskscheduler/Task.h</label>
@@ -34,8 +58,24 @@
       <node id="13437">
         <label>string</label>
       </node>
+      <node id="13436">
+        <label>net/StaticRequestHandler.h</label>
+        <link refid="_static_request_handler_8h"/>
+        <childnode refid="13437" relation="include">
+        </childnode>
+        <childnode refid="13438" relation="include">
+        </childnode>
+        <childnode refid="13439" relation="include">
+        </childnode>
+      </node>
       <node id="13446">
         <label>fstream</label>
+      </node>
+      <node id="13445">
+        <label>condition_variable</label>
+      </node>
+      <node id="13453">
+        <label>ebb/ebb.h</label>
       </node>
       <node id="13435">
         <label>src/lib/net/StaticRequestHandler.cpp</label>
@@ -57,8 +97,32 @@
         <childnode refid="13456" relation="include">
         </childnode>
       </node>
-      <node id="13445">
-        <label>condition_variable</label>
+      <node id="13443">
+        <label>vector</label>
+      </node>
+      <node id="13455">
+        <label>boost/filesystem.hpp</label>
+      </node>
+      <node id="13451">
+        <label>cstdlib</label>
+      </node>
+      <node id="13450">
+        <label>sys/time.h</label>
+      </node>
+      <node id="13441">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="13437" relation="include">
+        </childnode>
+      </node>
+      <node id="13452">
+        <label>ev.h</label>
+      </node>
+      <node id="13440">
+        <label>unordered_map</label>
+      </node>
+      <node id="13444">
+        <label>mutex</label>
       </node>
       <node id="13439">
         <label>net/Router.h</label>
@@ -72,70 +136,6 @@
         <childnode refid="13441" relation="include">
         </childnode>
         <childnode refid="13442" relation="include">
-        </childnode>
-      </node>
-      <node id="13441">
-        <label>net/AbstractConnection.h</label>
-        <link refid="_abstract_connection_8h"/>
-        <childnode refid="13437" relation="include">
-        </childnode>
-      </node>
-      <node id="13453">
-        <label>ebb/ebb.h</label>
-      </node>
-      <node id="13443">
-        <label>vector</label>
-      </node>
-      <node id="13448">
-        <label>net/AsyncConnection.h</label>
-        <link refid="_async_connection_8h"/>
-        <childnode refid="13449" relation="include">
-        </childnode>
-        <childnode refid="13450" relation="include">
-        </childnode>
-        <childnode refid="13451" relation="include">
-        </childnode>
-        <childnode refid="13452" relation="include">
-        </childnode>
-        <childnode refid="13437" relation="include">
-        </childnode>
-        <childnode refid="13441" relation="include">
-        </childnode>
-        <childnode refid="13453" relation="include">
-        </childnode>
-      </node>
-      <node id="13455">
-        <label>boost/filesystem.hpp</label>
-      </node>
-      <node id="13447">
-        <label>helper/fs.h</label>
-        <link refid="fs_8h"/>
-        <childnode refid="13437" relation="include">
-        </childnode>
-      </node>
-      <node id="13451">
-        <label>cstdlib</label>
-      </node>
-      <node id="13450">
-        <label>sys/time.h</label>
-      </node>
-      <node id="13452">
-        <label>ev.h</label>
-      </node>
-      <node id="13440">
-        <label>unordered_map</label>
-      </node>
-      <node id="13444">
-        <label>mutex</label>
-      </node>
-      <node id="13436">
-        <label>net/StaticRequestHandler.h</label>
-        <link refid="_static_request_handler_8h"/>
-        <childnode refid="13437" relation="include">
-        </childnode>
-        <childnode refid="13438" relation="include">
-        </childnode>
-        <childnode refid="13439" relation="include">
         </childnode>
       </node>
       <node id="13456">
@@ -244,6 +244,6 @@
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>
 <codeline lineno="91"><highlight class="normal">}}</highlight></codeline>
     </programlisting>
-    <location file="/home/vagrant/lanice/src/lib/net/StaticRequestHandler.cpp"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/net/StaticRequestHandler.cpp"/>
   </compounddef>
 </doxygen>

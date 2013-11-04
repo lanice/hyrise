@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="layouter_2base_8h" kind="file">
     <compoundname>base.h</compoundname>
     <includes refid="config_8h" local="yes">config.h</includes>
@@ -21,6 +21,16 @@
       </node>
       <node id="10301">
         <label>assert.h</label>
+      </node>
+      <node id="10302">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10299">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="10309">
+        <label>string</label>
       </node>
       <node id="10298">
         <label>src/lib/layouter/base.h</label>
@@ -46,11 +56,17 @@
         <childnode refid="10311" relation="include">
         </childnode>
       </node>
-      <node id="10302">
-        <label>stdlib.h</label>
+      <node id="10305">
+        <label>vector</label>
       </node>
-      <node id="10309">
-        <label>string</label>
+      <node id="10304">
+        <label>sstream</label>
+      </node>
+      <node id="10303">
+        <label>iostream</label>
+      </node>
+      <node id="10311">
+        <label>unordered_map</label>
       </node>
       <node id="10300">
         <label>matrix.h</label>
@@ -66,6 +82,9 @@
         <childnode refid="10305" relation="include">
         </childnode>
       </node>
+      <node id="10307">
+        <label>set</label>
+      </node>
       <node id="10306">
         <label>layout_utils.h</label>
         <link refid="layout__utils_8h"/>
@@ -74,75 +93,18 @@
         <childnode refid="10305" relation="include">
         </childnode>
       </node>
-      <node id="10305">
-        <label>vector</label>
-      </node>
-      <node id="10299">
-        <label>config.h</label>
-        <link refid="config_8h"/>
-      </node>
-      <node id="10304">
-        <label>sstream</label>
-      </node>
-      <node id="10303">
-        <label>iostream</label>
-      </node>
-      <node id="10311">
-        <label>unordered_map</label>
-      </node>
-      <node id="10307">
-        <label>set</label>
-      </node>
       <node id="10310">
         <label>algorithm</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="10323">
-        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
-        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
-      </node>
-      <node id="10325">
-        <label>src/bin/perf_regression/SortScan.cpp</label>
-        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
-      </node>
-      <node id="10312">
-        <label>src/lib/layouter/base.h</label>
-        <link refid="layouter/base.h"/>
-        <childnode refid="10313" relation="include">
-        </childnode>
-        <childnode refid="10314" relation="include">
-        </childnode>
-        <childnode refid="10315" relation="include">
-        </childnode>
-      </node>
       <node id="10324">
         <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
         <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
       </node>
-      <node id="10314">
-        <label>src/lib/layouter/incremental.cpp</label>
-        <link refid="incremental_8cpp"/>
-      </node>
       <node id="10319">
         <label>src/bin/perf_regression/GroupByScan.cpp</label>
         <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
-      </node>
-      <node id="10326">
-        <label>src/bin/perf_regression/UnionScan.cpp</label>
-        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
-      </node>
-      <node id="10322">
-        <label>src/bin/perf_regression/JoinScan.cpp</label>
-        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
-      </node>
-      <node id="10316">
-        <label>src/lib/access/Layouter.h</label>
-        <link refid="_layouter_8h"/>
-        <childnode refid="10317" relation="include">
-        </childnode>
-        <childnode refid="10318" relation="include">
-        </childnode>
       </node>
       <node id="10318">
         <label>src/lib/access.h</label>
@@ -164,9 +126,47 @@
         <childnode refid="10326" relation="include">
         </childnode>
       </node>
+      <node id="10322">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="10325">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
+      </node>
+      <node id="10312">
+        <label>src/lib/layouter/base.h</label>
+        <link refid="layouter/base.h"/>
+        <childnode refid="10313" relation="include">
+        </childnode>
+        <childnode refid="10314" relation="include">
+        </childnode>
+        <childnode refid="10315" relation="include">
+        </childnode>
+      </node>
+      <node id="10323">
+        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
+      </node>
+      <node id="10317">
+        <label>src/lib/access/Layouter.cpp</label>
+        <link refid="_layouter_8cpp"/>
+      </node>
       <node id="10320">
         <label>src/bin/perf_regression/HashJoin.cpp</label>
         <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="10316">
+        <label>src/lib/access/Layouter.h</label>
+        <link refid="_layouter_8h"/>
+        <childnode refid="10317" relation="include">
+        </childnode>
+        <childnode refid="10318" relation="include">
+        </childnode>
+      </node>
+      <node id="10313">
+        <label>src/lib/layouter/base.cpp</label>
+        <link refid="base_8cpp"/>
       </node>
       <node id="10315">
         <label>src/lib/layouter/incremental.h</label>
@@ -176,17 +176,17 @@
         <childnode refid="10314" relation="include">
         </childnode>
       </node>
-      <node id="10317">
-        <label>src/lib/access/Layouter.cpp</label>
-        <link refid="_layouter_8cpp"/>
-      </node>
-      <node id="10313">
-        <label>src/lib/layouter/base.cpp</label>
-        <link refid="base_8cpp"/>
+      <node id="10314">
+        <label>src/lib/layouter/incremental.cpp</label>
+        <link refid="incremental_8cpp"/>
       </node>
       <node id="10321">
         <label>src/bin/perf_regression/HashValueJoin.cpp</label>
         <link refid="_hash_value_join_8cpp"/>
+      </node>
+      <node id="10326">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classlayouter_1_1_schema" prot="public">layouter::Schema</innerclass>
@@ -590,6 +590,6 @@
 <codeline lineno="385"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="386"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_LAYOUTER_BASE_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/vagrant/lanice/src/lib/layouter/base.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/layouter/base.h"/>
   </compounddef>
 </doxygen>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_hash_join_probe_8cpp" kind="file">
     <compoundname>HashJoinProbe.cpp</compoundname>
     <includes refid="_hash_join_probe_8h" local="yes">access/HashJoinProbe.h</includes>
@@ -8,11 +8,11 @@
     <includes refid="_pointer_calculator_8h" local="yes">storage/PointerCalculator.h</includes>
     <includes local="no">log4cxx/logger.h</includes>
     <incdepgraph>
-      <node id="4229">
-        <label>helper/SharedFactory.h</label>
-        <link refid="_shared_factory_8h"/>
-        <childnode refid="4199" relation="include">
-        </childnode>
+      <node id="4213">
+        <label>atomic</label>
+      </node>
+      <node id="4204">
+        <label>limits</label>
       </node>
       <node id="4182">
         <label>src/lib/access/HashJoinProbe.cpp</label>
@@ -28,56 +28,48 @@
         <childnode refid="4246" relation="include">
         </childnode>
       </node>
-      <node id="4213">
-        <label>atomic</label>
-      </node>
-      <node id="4196">
-        <label>helper/epoch.h</label>
-        <link refid="epoch_8h"/>
-        <childnode refid="4187" relation="include">
+      <node id="4227">
+        <label>storage/AbstractHashTable.h</label>
+        <link refid="_abstract_hash_table_8h"/>
+        <childnode refid="4203" relation="include">
         </childnode>
-      </node>
-      <node id="4204">
-        <label>limits</label>
-      </node>
-      <node id="4220">
-        <label>storage/BaseIterator.h</label>
-        <link refid="_base_iterator_8h"/>
-      </node>
-      <node id="4217">
-        <label>storage/BaseDictionary.h</label>
-        <link refid="_base_dictionary_8h"/>
-        <childnode refid="4192" relation="include">
-        </childnode>
-        <childnode refid="4218" relation="include">
-        </childnode>
-        <childnode refid="4219" relation="include">
-        </childnode>
-      </node>
-      <node id="4226">
-        <label>helper/checked_cast.h</label>
-        <link refid="checked__cast_8h"/>
         <childnode refid="4199" relation="include">
-        </childnode>
-        <childnode refid="4194" relation="include">
-        </childnode>
-      </node>
-      <node id="4230">
-        <label>storage/MutableVerticalTable.h</label>
-        <link refid="_mutable_vertical_table_8h"/>
-        <childnode refid="4189" relation="include">
-        </childnode>
-        <childnode refid="4193" relation="include">
         </childnode>
         <childnode refid="4202" relation="include">
         </childnode>
-        <childnode refid="4231" relation="include">
+        <childnode refid="4216" relation="include">
         </childnode>
-        <childnode refid="4245" relation="include">
+        <childnode refid="4192" relation="include">
         </childnode>
-        <childnode refid="4232" relation="include">
+      </node>
+      <node id="4186">
+        <label>access/system/OutputTask.h</label>
+        <link refid="_output_task_8h"/>
+        <childnode refid="4187" relation="include">
         </childnode>
-        <childnode refid="4210" relation="include">
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4190" relation="include">
+        </childnode>
+        <childnode refid="4191" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+        <childnode refid="4196" relation="include">
+        </childnode>
+        <childnode refid="4197" relation="include">
+        </childnode>
+      </node>
+      <node id="4216">
+        <label>storage/AbstractResource.h</label>
+        <link refid="_abstract_resource_8h"/>
+      </node>
+      <node id="4184">
+        <label>access/system/ParallelizablePlanOperation.h</label>
+        <link refid="_parallelizable_plan_operation_8h"/>
+        <childnode refid="4185" relation="include">
         </childnode>
       </node>
       <node id="4221">
@@ -86,34 +78,86 @@
       <node id="4203">
         <label>cstdint</label>
       </node>
-      <node id="4219">
-        <label>storage/DictionaryIterator.h</label>
-        <link refid="_dictionary_iterator_8h"/>
-        <childnode refid="4220" relation="include">
+      <node id="4210">
+        <label>storage/AbstractTable.h</label>
+        <link refid="_abstract_table_8h"/>
+        <childnode refid="4204" relation="include">
         </childnode>
-        <childnode refid="4221" relation="include">
-        </childnode>
-      </node>
-      <node id="4241">
-        <label>memory/MallocStrategy.h</label>
-        <link refid="_malloc_strategy_8h"/>
-        <childnode refid="4242" relation="include">
-        </childnode>
-        <childnode refid="4203" relation="include">
-        </childnode>
-      </node>
-      <node id="4233">
-        <label>storage/BaseAttributeVector.h</label>
-        <link refid="_base_attribute_vector_8h"/>
         <childnode refid="4199" relation="include">
         </childnode>
         <childnode refid="4194" relation="include">
         </childnode>
-        <childnode refid="4234" relation="include">
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4211" relation="include">
+        </childnode>
+        <childnode refid="4214" relation="include">
+        </childnode>
+        <childnode refid="4216" relation="include">
+        </childnode>
+        <childnode refid="4217" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
         </childnode>
       </node>
       <node id="4187">
         <label>stdint.h</label>
+      </node>
+      <node id="4202">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4204" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+      </node>
+      <node id="4222">
+        <label>storage/HashTable.h</label>
+        <link refid="_hash_table_8h"/>
+        <childnode refid="4213" relation="include">
+        </childnode>
+        <childnode refid="4223" relation="include">
+        </childnode>
+        <childnode refid="4224" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4225" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4226" relation="include">
+        </childnode>
+        <childnode refid="4227" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4240">
+        <label>cmath</label>
+      </node>
+      <node id="4214">
+        <label>helper/unique_id.h</label>
+        <link refid="unique__id_8h"/>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4215" relation="include">
+        </childnode>
+      </node>
+      <node id="4244">
+        <label>cassert</label>
       </node>
       <node id="4197">
         <label>taskscheduler/Task.h</label>
@@ -129,40 +173,20 @@
         <childnode refid="4193" relation="include">
         </childnode>
       </node>
-      <node id="4185">
-        <label>access/system/PlanOperation.h</label>
-        <link refid="_plan_operation_8h"/>
-        <childnode refid="4186" relation="include">
-        </childnode>
-        <childnode refid="4201" relation="include">
-        </childnode>
-        <childnode refid="4205" relation="include">
-        </childnode>
-        <childnode refid="4208" relation="include">
-        </childnode>
-        <childnode refid="4192" relation="include">
-        </childnode>
-        <childnode refid="4202" relation="include">
-        </childnode>
-        <childnode refid="4210" relation="include">
-        </childnode>
-        <childnode refid="4206" relation="include">
-        </childnode>
-      </node>
-      <node id="4240">
-        <label>cmath</label>
-      </node>
-      <node id="4244">
-        <label>cassert</label>
-      </node>
-      <node id="4184">
-        <label>access/system/ParallelizablePlanOperation.h</label>
-        <link refid="_parallelizable_plan_operation_8h"/>
-        <childnode refid="4185" relation="include">
-        </childnode>
-      </node>
       <node id="4194">
         <label>stdexcept</label>
+      </node>
+      <node id="4193">
+        <label>string</label>
+      </node>
+      <node id="4190">
+        <label>map</label>
+      </node>
+      <node id="4196">
+        <label>helper/epoch.h</label>
+        <link refid="epoch_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
       </node>
       <node id="4231">
         <label>storage/Table.h</label>
@@ -186,37 +210,49 @@
         <childnode refid="4236" relation="include">
         </childnode>
       </node>
-      <node id="4236">
-        <label>storage/AttributeVectorFactory.h</label>
-        <link refid="_attribute_vector_factory_8h"/>
+      <node id="4233">
+        <label>storage/BaseAttributeVector.h</label>
+        <link refid="_base_attribute_vector_8h"/>
         <childnode refid="4199" relation="include">
         </childnode>
-        <childnode refid="4233" relation="include">
+        <childnode refid="4194" relation="include">
         </childnode>
-        <childnode refid="4237" relation="include">
-        </childnode>
-        <childnode refid="4243" relation="include">
+        <childnode refid="4234" relation="include">
         </childnode>
       </node>
-      <node id="4193">
-        <label>string</label>
+      <node id="4195">
+        <label>ostream</label>
       </node>
-      <node id="4227">
-        <label>storage/AbstractHashTable.h</label>
-        <link refid="_abstract_hash_table_8h"/>
-        <childnode refid="4203" relation="include">
+      <node id="4226">
+        <label>helper/checked_cast.h</label>
+        <link refid="checked__cast_8h"/>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+      </node>
+      <node id="4206">
+        <label>json.h</label>
+      </node>
+      <node id="4207">
+        <label>access/system/BasicParser.h</label>
+        <link refid="_basic_parser_8h"/>
+        <childnode refid="4194" relation="include">
         </childnode>
         <childnode refid="4199" relation="include">
         </childnode>
-        <childnode refid="4202" relation="include">
-        </childnode>
-        <childnode refid="4216" relation="include">
-        </childnode>
-        <childnode refid="4192" relation="include">
+        <childnode refid="4206" relation="include">
         </childnode>
       </node>
-      <node id="4190">
-        <label>map</label>
+      <node id="4220">
+        <label>storage/BaseIterator.h</label>
+        <link refid="_base_iterator_8h"/>
+      </node>
+      <node id="4234">
+        <label>storage/AbstractAttributeVector.h</label>
+        <link refid="_abstract_attribute_vector_8h"/>
+        <childnode refid="4235" relation="include">
+        </childnode>
       </node>
       <node id="4237">
         <label>storage/FixedLengthVector.h</label>
@@ -244,66 +280,28 @@
         <childnode refid="4233" relation="include">
         </childnode>
       </node>
-      <node id="4245">
-        <label>storage/TableFactory.h</label>
-        <link refid="_table_factory_8h"/>
-        <childnode refid="4199" relation="include">
-        </childnode>
-        <childnode refid="4202" relation="include">
-        </childnode>
-        <childnode refid="4210" relation="include">
-        </childnode>
-        <childnode refid="4231" relation="include">
-        </childnode>
-      </node>
-      <node id="4211">
-        <label>helper/locking.h</label>
-        <link refid="locking_8h"/>
-        <childnode refid="4212" relation="include">
-        </childnode>
-        <childnode refid="4213" relation="include">
-        </childnode>
-      </node>
-      <node id="4195">
-        <label>ostream</label>
-      </node>
-      <node id="4206">
-        <label>json.h</label>
-      </node>
-      <node id="4183">
-        <label>access/HashJoinProbe.h</label>
-        <link refid="_hash_join_probe_8h"/>
-        <childnode refid="4184" relation="include">
-        </childnode>
-        <childnode refid="4202" relation="include">
-        </childnode>
-      </node>
       <node id="4200">
         <label>condition_variable</label>
       </node>
-      <node id="4192">
-        <label>storage/storage_types.h</label>
-        <link refid="storage__types_8h"/>
-        <childnode refid="4189" relation="include">
+      <node id="4236">
+        <label>storage/AttributeVectorFactory.h</label>
+        <link refid="_attribute_vector_factory_8h"/>
+        <childnode refid="4199" relation="include">
         </childnode>
-        <childnode refid="4193" relation="include">
+        <childnode refid="4233" relation="include">
         </childnode>
-        <childnode refid="4194" relation="include">
+        <childnode refid="4237" relation="include">
         </childnode>
-        <childnode refid="4187" relation="include">
-        </childnode>
-        <childnode refid="4195" relation="include">
+        <childnode refid="4243" relation="include">
         </childnode>
       </node>
       <node id="4189">
         <label>vector</label>
       </node>
-      <node id="4214">
-        <label>helper/unique_id.h</label>
-        <link refid="unique__id_8h"/>
-        <childnode refid="4203" relation="include">
-        </childnode>
-        <childnode refid="4215" relation="include">
+      <node id="4229">
+        <label>helper/SharedFactory.h</label>
+        <link refid="_shared_factory_8h"/>
+        <childnode refid="4199" relation="include">
         </childnode>
       </node>
       <node id="4191">
@@ -315,38 +313,12 @@
       <node id="4225">
         <label>sstream</label>
       </node>
-      <node id="4228">
-        <label>storage/PointerCalculator.h</label>
-        <link refid="_pointer_calculator_8h"/>
-        <childnode refid="4189" relation="include">
-        </childnode>
+      <node id="4208">
+        <label>io/TXContext.h</label>
+        <link refid="_t_x_context_8h"/>
         <childnode refid="4202" relation="include">
         </childnode>
-        <childnode refid="4229" relation="include">
-        </childnode>
-        <childnode refid="4210" relation="include">
-        </childnode>
-        <childnode refid="4230" relation="include">
-        </childnode>
-      </node>
-      <node id="4186">
-        <label>access/system/OutputTask.h</label>
-        <link refid="_output_task_8h"/>
-        <childnode refid="4187" relation="include">
-        </childnode>
-        <childnode refid="4188" relation="include">
-        </childnode>
-        <childnode refid="4189" relation="include">
-        </childnode>
-        <childnode refid="4190" relation="include">
-        </childnode>
-        <childnode refid="4191" relation="include">
-        </childnode>
-        <childnode refid="4192" relation="include">
-        </childnode>
-        <childnode refid="4196" relation="include">
-        </childnode>
-        <childnode refid="4197" relation="include">
+        <childnode refid="4209" relation="include">
         </childnode>
       </node>
       <node id="4205">
@@ -375,6 +347,91 @@
       <node id="4188">
         <label>time.h</label>
       </node>
+      <node id="4238">
+        <label>cerrno</label>
+      </node>
+      <node id="4230">
+        <label>storage/MutableVerticalTable.h</label>
+        <link refid="_mutable_vertical_table_8h"/>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4231" relation="include">
+        </childnode>
+        <childnode refid="4245" relation="include">
+        </childnode>
+        <childnode refid="4232" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+      </node>
+      <node id="4211">
+        <label>helper/locking.h</label>
+        <link refid="locking_8h"/>
+        <childnode refid="4212" relation="include">
+        </childnode>
+        <childnode refid="4213" relation="include">
+        </childnode>
+      </node>
+      <node id="4245">
+        <label>storage/TableFactory.h</label>
+        <link refid="_table_factory_8h"/>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+        <childnode refid="4231" relation="include">
+        </childnode>
+      </node>
+      <node id="4242">
+        <label>iostream</label>
+      </node>
+      <node id="4235">
+        <label>cstddef</label>
+      </node>
+      <node id="4192">
+        <label>storage/storage_types.h</label>
+        <link refid="storage__types_8h"/>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4195" relation="include">
+        </childnode>
+      </node>
+      <node id="4201">
+        <label>access/system/OperationData.h</label>
+        <link refid="_operation_data_8h"/>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4183">
+        <label>access/HashJoinProbe.h</label>
+        <link refid="_hash_join_probe_8h"/>
+        <childnode refid="4184" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+      </node>
+      <node id="4224">
+        <label>unordered_map</label>
+      </node>
+      <node id="4198">
+        <label>mutex</label>
+      </node>
       <node id="4218">
         <label>storage/AbstractDictionary.h</label>
         <link refid="_abstract_dictionary_8h"/>
@@ -387,42 +444,42 @@
         <childnode refid="4192" relation="include">
         </childnode>
       </node>
-      <node id="4208">
-        <label>io/TXContext.h</label>
-        <link refid="_t_x_context_8h"/>
-        <childnode refid="4202" relation="include">
+      <node id="4212">
+        <label>thread</label>
+      </node>
+      <node id="4219">
+        <label>storage/DictionaryIterator.h</label>
+        <link refid="_dictionary_iterator_8h"/>
+        <childnode refid="4220" relation="include">
         </childnode>
-        <childnode refid="4209" relation="include">
+        <childnode refid="4221" relation="include">
         </childnode>
       </node>
-      <node id="4238">
-        <label>cerrno</label>
+      <node id="4223">
+        <label>set</label>
       </node>
-      <node id="4242">
-        <label>iostream</label>
+      <node id="4246">
+        <label>log4cxx/logger.h</label>
       </node>
-      <node id="4201">
-        <label>access/system/OperationData.h</label>
-        <link refid="_operation_data_8h"/>
-        <childnode refid="4189" relation="include">
+      <node id="4185">
+        <label>access/system/PlanOperation.h</label>
+        <link refid="_plan_operation_8h"/>
+        <childnode refid="4186" relation="include">
         </childnode>
-        <childnode refid="4202" relation="include">
+        <childnode refid="4201" relation="include">
+        </childnode>
+        <childnode refid="4205" relation="include">
+        </childnode>
+        <childnode refid="4208" relation="include">
         </childnode>
         <childnode refid="4192" relation="include">
         </childnode>
-      </node>
-      <node id="4235">
-        <label>cstddef</label>
-      </node>
-      <node id="4224">
-        <label>unordered_map</label>
-      </node>
-      <node id="4216">
-        <label>storage/AbstractResource.h</label>
-        <link refid="_abstract_resource_8h"/>
-      </node>
-      <node id="4198">
-        <label>mutex</label>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+        <childnode refid="4206" relation="include">
+        </childnode>
       </node>
       <node id="4232">
         <label>storage/ColumnMetadata.h</label>
@@ -434,14 +491,8 @@
         <childnode refid="4194" relation="include">
         </childnode>
       </node>
-      <node id="4234">
-        <label>storage/AbstractAttributeVector.h</label>
-        <link refid="_abstract_attribute_vector_8h"/>
-        <childnode refid="4235" relation="include">
-        </childnode>
-      </node>
-      <node id="4212">
-        <label>thread</label>
+      <node id="4239">
+        <label>cstring</label>
       </node>
       <node id="4243">
         <label>storage/BitCompressedVector.h</label>
@@ -465,91 +516,40 @@
         <childnode refid="4233" relation="include">
         </childnode>
       </node>
-      <node id="4222">
-        <label>storage/HashTable.h</label>
-        <link refid="_hash_table_8h"/>
-        <childnode refid="4213" relation="include">
-        </childnode>
-        <childnode refid="4223" relation="include">
-        </childnode>
-        <childnode refid="4224" relation="include">
-        </childnode>
-        <childnode refid="4199" relation="include">
-        </childnode>
-        <childnode refid="4225" relation="include">
+      <node id="4228">
+        <label>storage/PointerCalculator.h</label>
+        <link refid="_pointer_calculator_8h"/>
+        <childnode refid="4189" relation="include">
         </childnode>
         <childnode refid="4202" relation="include">
         </childnode>
-        <childnode refid="4226" relation="include">
-        </childnode>
-        <childnode refid="4227" relation="include">
+        <childnode refid="4229" relation="include">
         </childnode>
         <childnode refid="4210" relation="include">
         </childnode>
-        <childnode refid="4192" relation="include">
+        <childnode refid="4230" relation="include">
         </childnode>
-      </node>
-      <node id="4223">
-        <label>set</label>
-      </node>
-      <node id="4207">
-        <label>access/system/BasicParser.h</label>
-        <link refid="_basic_parser_8h"/>
-        <childnode refid="4194" relation="include">
-        </childnode>
-        <childnode refid="4199" relation="include">
-        </childnode>
-        <childnode refid="4206" relation="include">
-        </childnode>
-      </node>
-      <node id="4202">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="4203" relation="include">
-        </childnode>
-        <childnode refid="4193" relation="include">
-        </childnode>
-        <childnode refid="4204" relation="include">
-        </childnode>
-        <childnode refid="4199" relation="include">
-        </childnode>
-        <childnode refid="4189" relation="include">
-        </childnode>
-      </node>
-      <node id="4210">
-        <label>storage/AbstractTable.h</label>
-        <link refid="_abstract_table_8h"/>
-        <childnode refid="4204" relation="include">
-        </childnode>
-        <childnode refid="4199" relation="include">
-        </childnode>
-        <childnode refid="4194" relation="include">
-        </childnode>
-        <childnode refid="4189" relation="include">
-        </childnode>
-        <childnode refid="4193" relation="include">
-        </childnode>
-        <childnode refid="4202" relation="include">
-        </childnode>
-        <childnode refid="4211" relation="include">
-        </childnode>
-        <childnode refid="4214" relation="include">
-        </childnode>
-        <childnode refid="4216" relation="include">
-        </childnode>
-        <childnode refid="4217" relation="include">
-        </childnode>
-        <childnode refid="4192" relation="include">
-        </childnode>
-      </node>
-      <node id="4246">
-        <label>log4cxx/logger.h</label>
-      </node>
-      <node id="4239">
-        <label>cstring</label>
       </node>
       <node id="4199">
         <label>memory</label>
+      </node>
+      <node id="4217">
+        <label>storage/BaseDictionary.h</label>
+        <link refid="_base_dictionary_8h"/>
+        <childnode refid="4192" relation="include">
+        </childnode>
+        <childnode refid="4218" relation="include">
+        </childnode>
+        <childnode refid="4219" relation="include">
+        </childnode>
+      </node>
+      <node id="4241">
+        <label>memory/MallocStrategy.h</label>
+        <link refid="_malloc_strategy_8h"/>
+        <childnode refid="4242" relation="include">
+        </childnode>
+        <childnode refid="4203" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <innernamespace refid="namespacehyrise">hyrise</innernamespace>
@@ -593,18 +593,18 @@
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref><sp/>*probeTablePosList<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref>;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1access_1_1_hash_join_probe_1af758fc81721fb1c650a3704ba71976f9" kindref="member">_selfjoin</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref>.size()<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number. ">_field_definition</ref>.size()<sp/>==<sp/>1)</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fetchPositions&lt;SingleAggregateHashTable&gt;(buildTablePosList,<sp/>probeTablePosList);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fetchPositions&lt;AggregateHashTable&gt;(buildTablePosList,<sp/>probeTablePosList);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref>.size()<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number. ">_field_definition</ref>.size()<sp/>==<sp/>1)</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fetchPositions&lt;SingleJoinHashTable&gt;(buildTablePosList,<sp/>probeTablePosList);</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fetchPositions&lt;JoinHashTable&gt;(buildTablePosList,<sp/>probeTablePosList);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aac92e842153df9a9ae7e548ac7602009" kindref="member">addResult</ref>(<ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a763341dd15061fb56edc240acf3239ac" kindref="member" tooltip="Constructs resulting table from given build and probe tables&amp;#39; rows.">buildResultTable</ref>(buildTablePosList,<sp/>probeTablePosList));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1aac92e842153df9a9ae7e548ac7602009" kindref="member">addResult</ref>(<ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a763341dd15061fb56edc240acf3239ac" kindref="member" tooltip="Constructs resulting table from given build and probe tables&amp;#39; rows. ">buildResultTable</ref>(buildTablePosList,<sp/>probeTablePosList));</highlight></codeline>
 <codeline lineno="47"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
 <codeline lineno="49" refid="classhyrise_1_1access_1_1_hash_join_probe_1a564f43c504373899a3263e648169f197" refkind="member"><highlight class="normal">std::shared_ptr&lt;PlanOperation&gt;<sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a564f43c504373899a3263e648169f197" kindref="member">HashJoinProbe::parse</ref>(Json::Value<sp/>&amp;data)<sp/>{</highlight></codeline>
@@ -638,7 +638,7 @@
 <codeline lineno="77" refid="classhyrise_1_1access_1_1_hash_join_probe_1ae2dea0749245a8ba07f9c004634a8b22" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1ae2dea0749245a8ba07f9c004634a8b22" kindref="member">HashJoinProbe::fetchPositions</ref>(<ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref><sp/>*buildTablePosList,</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref><sp/>*probeTablePosList)<sp/>{</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>probeTable<sp/>=<sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a0f2698817a868542946eea4c4c4640d4" kindref="member">getProbeTable</ref>();</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>hash_table<sp/>=<sp/>std::dynamic_pointer_cast&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_hash_table" kindref="compound" tooltip="HashTable based on a map; key specifies the key for the given map.">HashTable</ref>&gt;(<ref refid="classhyrise_1_1access_1_1_plan_operation_1aa4857583f3f175825244fb767293f2bd" kindref="member">getInputHashTable</ref>(0));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>hash_table<sp/>=<sp/>std::dynamic_pointer_cast&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_hash_table" kindref="compound" tooltip="HashTable based on a map; key specifies the key for the given map. ">HashTable</ref>&gt;(<ref refid="classhyrise_1_1access_1_1_plan_operation_1aa4857583f3f175825244fb767293f2bd" kindref="member">getInputHashTable</ref>(0));</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/>assert(hash_table<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/>LOG4CXX_DEBUG(<ref refid="bin_2hyrise_2main_8cpp_1a1f643aeca905220d975e69578154a71d" kindref="member">logger</ref>,<sp/>hash_table-&gt;stats());</highlight></codeline>
@@ -646,7 +646,7 @@
 <codeline lineno="85"><highlight class="normal"><sp/><sp/>LOG4CXX_DEBUG(<ref refid="bin_2hyrise_2main_8cpp_1a1f643aeca905220d975e69578154a71d" kindref="member">logger</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Hash<sp/>Table<sp/>Size:<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hash_table-&gt;size());</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="storage__types_8h_1a866dd5ae291f599db49986f6aa5ba77a" kindref="member">pos_t</ref><sp/>probeTableRow<sp/>=<sp/>0;<sp/>probeTableRow<sp/>&lt;<sp/>probeTable-&gt;size();<sp/>++probeTableRow)<sp/>{</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref><sp/>matchingRows(hash_table-&gt;get(probeTable,<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number.">_field_definition</ref>,<sp/>probeTableRow));</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="storage__types_8h_1a543d59ef56384af4a7af9aa551bc6825" kindref="member">pos_list_t</ref><sp/>matchingRows(hash_table-&gt;get(probeTable,<sp/><ref refid="classhyrise_1_1access_1_1_plan_operation_1a93b05edfc4c655961a27bc6b8560cec5" kindref="member" tooltip="Transaction number. ">_field_definition</ref>,<sp/>probeTableRow));</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!matchingRows.empty())<sp/>{</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buildTablePosList-&gt;insert(buildTablePosList-&gt;end(),<sp/>matchingRows.begin(),<sp/>matchingRows.end());</highlight></codeline>
@@ -657,7 +657,7 @@
 <codeline lineno="96"><highlight class="normal"><sp/><sp/>LOG4CXX_DEBUG(<ref refid="bin_2hyrise_2main_8cpp_1a1f643aeca905220d975e69578154a71d" kindref="member">logger</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Done<sp/>Probing&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="97"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99" refid="classhyrise_1_1access_1_1_hash_join_probe_1a763341dd15061fb56edc240acf3239ac" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">storage::atable_ptr_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a763341dd15061fb56edc240acf3239ac" kindref="member" tooltip="Constructs resulting table from given build and probe tables&amp;#39; rows.">HashJoinProbe::buildResultTable</ref>(<ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref><sp/>*buildTablePosList,</highlight></codeline>
+<codeline lineno="99" refid="classhyrise_1_1access_1_1_hash_join_probe_1a763341dd15061fb56edc240acf3239ac" refkind="member"><highlight class="normal"><ref refid="namespacehyrise_1_1storage_1a21d5e900c20019710828c453eaded1ee" kindref="member">storage::atable_ptr_t</ref><sp/><ref refid="classhyrise_1_1access_1_1_hash_join_probe_1a763341dd15061fb56edc240acf3239ac" kindref="member" tooltip="Constructs resulting table from given build and probe tables&amp;#39; rows. ">HashJoinProbe::buildResultTable</ref>(<ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref><sp/>*buildTablePosList,</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacehyrise_1_1storage_1a82124b84ebfac47beba542ec17d56471" kindref="member">storage::pos_list_t</ref><sp/>*probeTablePosList)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"><sp/><sp/>std::vector&lt;storage::atable_ptr_t&gt;<sp/>parts;</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"></highlight></codeline>
@@ -674,6 +674,6 @@
 <codeline lineno="113"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="114"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/vagrant/lanice/src/lib/access/HashJoinProbe.cpp"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/access/HashJoinProbe.cpp"/>
   </compounddef>
 </doxygen>

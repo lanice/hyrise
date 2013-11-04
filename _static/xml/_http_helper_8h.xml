@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_http_helper_8h" kind="file">
     <compoundname>HttpHelper.h</compoundname>
     <includes local="no">map</includes>
@@ -8,12 +8,6 @@
     <includedby refid="_http_helper_8cpp" local="yes">src/lib/helper/HttpHelper.cpp</includedby>
     <includedby refid="_transaction_route_handler_8cpp" local="yes">src/lib/io/TransactionRouteHandler.cpp</includedby>
     <incdepgraph>
-      <node id="10602">
-        <label>string</label>
-      </node>
-      <node id="10601">
-        <label>map</label>
-      </node>
       <node id="10600">
         <label>src/lib/helper/HttpHelper.h</label>
         <link refid="HttpHelper.h"/>
@@ -22,16 +16,14 @@
         <childnode refid="10602" relation="include">
         </childnode>
       </node>
+      <node id="10602">
+        <label>string</label>
+      </node>
+      <node id="10601">
+        <label>map</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="10606">
-        <label>src/lib/io/TransactionRouteHandler.cpp</label>
-        <link refid="_transaction_route_handler_8cpp"/>
-      </node>
-      <node id="10604">
-        <label>src/lib/access/system/RequestParseTask.cpp</label>
-        <link refid="_request_parse_task_8cpp"/>
-      </node>
       <node id="10603">
         <label>src/lib/helper/HttpHelper.h</label>
         <link refid="HttpHelper.h"/>
@@ -41,6 +33,14 @@
         </childnode>
         <childnode refid="10606" relation="include">
         </childnode>
+      </node>
+      <node id="10606">
+        <label>src/lib/io/TransactionRouteHandler.cpp</label>
+        <link refid="_transaction_route_handler_8cpp"/>
+      </node>
+      <node id="10604">
+        <label>src/lib/access/system/RequestParseTask.cpp</label>
+        <link refid="_request_parse_task_8cpp"/>
       </node>
       <node id="10605">
         <label>src/lib/helper/HttpHelper.cpp</label>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/vagrant/lanice/src/lib/helper/HttpHelper.h" line="5" bodyfile="/home/vagrant/lanice/src/lib/helper/HttpHelper.cpp" bodystart="9" bodyend="27"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/helper/HttpHelper.h" line="5" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/helper/HttpHelper.cpp" bodystart="9" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="_http_helper_8h_1a8d2bbb788b9834259677fa54a8a17592" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/vagrant/lanice/src/lib/helper/HttpHelper.h" line="7" bodyfile="/home/vagrant/lanice/src/lib/helper/HttpHelper.cpp" bodystart="29" bodyend="46"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/helper/HttpHelper.h" line="7" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/helper/HttpHelper.cpp" bodystart="29" bodyend="46"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -101,6 +101,6 @@
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal">std::string<sp/><ref refid="_http_helper_8cpp_1a8d2bbb788b9834259677fa54a8a17592" kindref="member">urldecode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;input);</highlight></codeline>
     </programlisting>
-    <location file="/home/vagrant/lanice/src/lib/helper/HttpHelper.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/helper/HttpHelper.h"/>
   </compounddef>
 </doxygen>

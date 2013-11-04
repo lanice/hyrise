@@ -49,7 +49,7 @@
   {% endif %}
   <div id="search-results">
   {% if search_results %}
-    <ul>
+    <ul class="search-results">
     {% for href, caption, context in search_results %}
       <li><a href="{{ pathto(item.href) }}">{{ caption }}</a>
         <div class="context">{{ context|e }}</div>

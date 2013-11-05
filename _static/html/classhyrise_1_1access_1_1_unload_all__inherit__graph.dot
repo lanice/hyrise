@@ -1,0 +1,16 @@
+digraph "hyrise::access::UnloadAll"
+{
+  edge [fontname="Helvetica",fontsize="11",labelfontname="Helvetica",labelfontsize="11"];
+  node [fontname="Helvetica",fontsize="11",shape=record];
+  Node1 [label="{hyrise::access::UnloadAll\n||+ ~UnloadAll()\l+ executePlanOperation()\l+ vname()\l+ parse()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{hyrise::access::PlanOperation\n|# input\l# output\l# _limit\l# _field_definition\l# _named_field_definition\l# _indexed_field_definition\l# _responseTask\l# producesPositions\l# _planId\l# _operatorId\l# _planOperationName\l# _txContext\l|+ ~PlanOperation()\l+ setLimit()\l+ setProducesPositions()\l+ setTXContext()\l+ addInput()\l+ getInputTable()\l+ getResultTable()\l+ getInputHashTable()\l+ getResultHashTable()\l+ addField()\land 12 more...\l# addResult()\l# computeDeferredIndexes()\l# refreshInput()\l# setupPlanOperation()\l# executePlanOperation()\l# teardownPlanOperation()\l# allDependenciesSuccessful()\l# getDependencyErrorMessages()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhyrise_1_1access_1_1_plan_operation.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{hyrise::access::OutputTask\n|# _performance_attr\l# _state\l# _papiEvent\l# _generatedKeys\l|+ getState()\l+ setState()\l+ getPerformanceData()\l+ setPerformanceData()\l+ setGeneratedKeysData()\l+ setEvent()\l+ getEvent()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhyrise_1_1access_1_1_output_task.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{Task\n|+ DEFAULT_PRIORITY\l+ HIGH_PRIORITY\l+ NO_PREFERRED_CORE\l+ NO_PREFERRED_NODE\l+ SESSION_ID_NOT_SET\l# _dependencies\l# _readyObservers\l# _doneObservers\l# _dependencyWaitCount\l# _depMutex\l# _observerMutex\l# _notifyMutex\l# _preferredCore\l# _preferredNode\l# _actualNode\l# _priority\l# _sessionId\l# _id\l|+ Task()\l+ ~Task()\l+ operator()()\l+ getQueryDuration()\l+ vname()\l+ hasSuccessors()\l+ addDependency()\l+ getDependencyCount()\l+ addReadyObserver()\l+ addDoneObserver()\land 18 more...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_task.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node5 [label="{TaskDoneObserver\n||+ notifyDone()\l+ ~TaskDoneObserver()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_task_done_observer.html"];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node6 [label="{std::enable_shared\l_from_this\< Task \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

@@ -1,0 +1,18 @@
+digraph "PointerCalculator"
+{
+  edge [fontname="Helvetica",fontsize="11",labelfontname="Helvetica",labelfontsize="11"];
+  node [fontname="Helvetica",fontsize="11",shape=record];
+  Node1 [label="{PointerCalculator\n|- table\l- pos_list\l- fields\l- slice_for_slice\l- offset_in_slice\l- width_for_slice\l- slice_count\l|+ PointerCalculator()\l+ PointerCalculator()\l+ ~PointerCalculator()\l+ setPositions()\l+ setFields()\l+ intersect()\l+ unite()\l+ concatenate()\l+ getPositions()\l+ getActualTablePositions()\land 20 more...\l+ unite_many()\l+ concatenate_many()\l# updateFieldMapping()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{AbstractTable\n|- _uuid\l|+ copy_structure()\l+ copy_structure_modifiable()\l+ copyValueIds()\l+ metadataAt()\l+ metadata()\l+ dictionaryAt()\l+ dictionaryByTableId()\l+ dictionaries()\l+ setDictionaryAt()\l+ typeOfColumn()\land 31 more...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_abstract_table.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{AbstractResource\n||+ ~AbstractResource()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_abstract_resource.html"];
+  Node4 -> Node1 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{SharedFactory\< PointerCalculator \>\n||+ create()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_shared_factory.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node5 [label="{std::enable_shared\l_from_this\< PointerCalculator \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node4 [dir="back",color="orange",fontsize="11",style="solid",label=" \< PointerCalculator \>" ,fontname="Helvetica"];
+  Node6 [label="{SharedFactory\< T \>\n||+ create()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_shared_factory.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node7 [label="{std::enable_shared\l_from_this\< T \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

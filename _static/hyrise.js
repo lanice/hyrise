@@ -1,7 +1,7 @@
 $(document).ready( function() {
     $('body').addClass('onload');
     $('ul').each( function() {
-        if (!$(this).hasClass('topnav') && !$(this).hasClass('search')) {
+        if (!$(this).hasClass('topnav')) {
             $(this).addClass('list notTop');
         }
     });

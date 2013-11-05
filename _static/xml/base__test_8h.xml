@@ -1,21 +1,27 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="base__test_8h" kind="file">
     <compoundname>base_test.h</compoundname>
     <includes local="no">gtest/gtest.h</includes>
     <includedby refid="test_8h" local="yes">src/lib/testing/test.h</includedby>
     <incdepgraph>
+      <node id="19319">
+        <label>gtest/gtest.h</label>
+      </node>
       <node id="19318">
         <label>src/lib/testing/base_test.h</label>
         <link refid="base_test.h"/>
         <childnode refid="19319" relation="include">
         </childnode>
       </node>
-      <node id="19319">
-        <label>gtest/gtest.h</label>
-      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="19321">
+        <label>src/lib/testing/test.h</label>
+        <link refid="test_8h"/>
+        <childnode refid="19322" relation="include">
+        </childnode>
+      </node>
       <node id="19322">
         <label>src/lib/testing/test.cpp</label>
         <link refid="test_8cpp"/>
@@ -24,12 +30,6 @@
         <label>src/lib/testing/base_test.h</label>
         <link refid="base_test.h"/>
         <childnode refid="19321" relation="include">
-        </childnode>
-      </node>
-      <node id="19321">
-        <label>src/lib/testing/test.h</label>
-        <link refid="test_8h"/>
-        <childnode refid="19322" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -57,6 +57,6 @@
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/testing/base_test.h"/>
+    <location file="/home/vagrant/lanice/src/lib/testing/base_test.h"/>
   </compounddef>
 </doxygen>

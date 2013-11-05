@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="_string_loader_8cpp" kind="file">
     <compoundname>StringLoader.cpp</compoundname>
     <includes refid="_string_loader_8h" local="yes">io/StringLoader.h</includes>
@@ -8,47 +8,58 @@
     <includes refid="_generic_c_s_v_8h" local="yes">io/GenericCSV.h</includes>
     <includes refid="_metadata_creation_8h" local="yes">io/MetadataCreation.h</includes>
     <incdepgraph>
+      <node id="12580">
+        <label>limits</label>
+      </node>
+      <node id="12574">
+        <label>io/AbstractLoader.h</label>
+        <link refid="_abstract_loader_8h"/>
+        <childnode refid="12575" relation="include">
+        </childnode>
+        <childnode refid="12582" relation="include">
+        </childnode>
+        <childnode refid="12578" relation="include">
+        </childnode>
+      </node>
+      <node id="12579">
+        <label>cstdint</label>
+      </node>
+      <node id="12572">
+        <label>src/lib/io/StringLoader.cpp</label>
+        <link refid="StringLoader.cpp"/>
+        <childnode refid="12573" relation="include">
+        </childnode>
+        <childnode refid="12587" relation="include">
+        </childnode>
+        <childnode refid="12588" relation="include">
+        </childnode>
+        <childnode refid="12589" relation="include">
+        </childnode>
+        <childnode refid="12592" relation="include">
+        </childnode>
+      </node>
       <node id="12573">
         <label>io/StringLoader.h</label>
         <link refid="_string_loader_8h"/>
         <childnode refid="12574" relation="include">
         </childnode>
       </node>
-      <node id="12580">
-        <label>limits</label>
-      </node>
-      <node id="12579">
-        <label>cstdint</label>
-      </node>
       <node id="12584">
         <label>stdint.h</label>
-      </node>
-      <node id="12578">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="12579" relation="include">
-        </childnode>
-        <childnode refid="12577" relation="include">
-        </childnode>
-        <childnode refid="12580" relation="include">
-        </childnode>
-        <childnode refid="12576" relation="include">
-        </childnode>
-        <childnode refid="12581" relation="include">
-        </childnode>
       </node>
       <node id="12583">
         <label>stdexcept</label>
       </node>
+      <node id="12593">
+        <label>io/LoaderException.h</label>
+        <link refid="_loader_exception_8h"/>
+        <childnode refid="12583" relation="include">
+        </childnode>
+        <childnode refid="12577" relation="include">
+        </childnode>
+      </node>
       <node id="12577">
         <label>string</label>
-      </node>
-      <node id="12586">
-        <label>parameters.inc</label>
-        <link refid="parameters_8inc"/>
-      </node>
-      <node id="12585">
-        <label>ostream</label>
       </node>
       <node id="12575">
         <label>io/Loader.h</label>
@@ -63,6 +74,9 @@
         </childnode>
         <childnode refid="12586" relation="include">
         </childnode>
+      </node>
+      <node id="12585">
+        <label>ostream</label>
       </node>
       <node id="12591">
         <label>libcsv/csv.h</label>
@@ -83,28 +97,6 @@
         <childnode refid="12582" relation="include">
         </childnode>
       </node>
-      <node id="12581">
-        <label>vector</label>
-      </node>
-      <node id="12588">
-        <label>sstream</label>
-      </node>
-      <node id="12574">
-        <label>io/AbstractLoader.h</label>
-        <link refid="_abstract_loader_8h"/>
-        <childnode refid="12575" relation="include">
-        </childnode>
-        <childnode refid="12582" relation="include">
-        </childnode>
-        <childnode refid="12578" relation="include">
-        </childnode>
-      </node>
-      <node id="12590">
-        <label>iosfwd</label>
-      </node>
-      <node id="12587">
-        <label>iostream</label>
-      </node>
       <node id="12582">
         <label>storage/storage_types.h</label>
         <link refid="storage__types_8h"/>
@@ -119,19 +111,17 @@
         <childnode refid="12585" relation="include">
         </childnode>
       </node>
-      <node id="12572">
-        <label>src/lib/io/StringLoader.cpp</label>
-        <link refid="StringLoader.cpp"/>
-        <childnode refid="12573" relation="include">
-        </childnode>
-        <childnode refid="12587" relation="include">
-        </childnode>
-        <childnode refid="12588" relation="include">
-        </childnode>
-        <childnode refid="12589" relation="include">
-        </childnode>
-        <childnode refid="12592" relation="include">
-        </childnode>
+      <node id="12581">
+        <label>vector</label>
+      </node>
+      <node id="12588">
+        <label>sstream</label>
+      </node>
+      <node id="12590">
+        <label>iosfwd</label>
+      </node>
+      <node id="12587">
+        <label>iostream</label>
       </node>
       <node id="12589">
         <label>io/GenericCSV.h</label>
@@ -151,16 +141,26 @@
         <childnode refid="12586" relation="include">
         </childnode>
       </node>
-      <node id="12593">
-        <label>io/LoaderException.h</label>
-        <link refid="_loader_exception_8h"/>
-        <childnode refid="12583" relation="include">
+      <node id="12578">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="12579" relation="include">
         </childnode>
         <childnode refid="12577" relation="include">
+        </childnode>
+        <childnode refid="12580" relation="include">
+        </childnode>
+        <childnode refid="12576" relation="include">
+        </childnode>
+        <childnode refid="12581" relation="include">
         </childnode>
       </node>
       <node id="12576">
         <label>memory</label>
+      </node>
+      <node id="12586">
+        <label>parameters.inc</label>
+        <link refid="parameters_8inc"/>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -186,6 +186,6 @@
 <codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_string_header_1acc4ad6279c5eb79a819f6c9e8dc9c4f2" kindref="member">StringHeader</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="17"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/io/StringLoader.cpp"/>
+    <location file="/home/vagrant/lanice/src/lib/io/StringLoader.cpp"/>
   </compounddef>
 </doxygen>

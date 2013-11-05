@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="base_8cpp" kind="file">
     <compoundname>base.cpp</compoundname>
     <includes refid="layouter_2base_8h" local="yes">base.h</includes>
@@ -37,28 +37,6 @@
       <node id="13079">
         <label>float.h</label>
       </node>
-      <node id="13069">
-        <label>stdlib.h</label>
-      </node>
-      <node id="13088">
-        <label>boost/foreach.hpp</label>
-      </node>
-      <node id="13089">
-        <label>boost/format.hpp</label>
-      </node>
-      <node id="13066">
-        <label>config.h</label>
-        <link refid="config_8h"/>
-      </node>
-      <node id="13076">
-        <label>string</label>
-      </node>
-      <node id="13087">
-        <label>boost/assign.hpp</label>
-      </node>
-      <node id="13083">
-        <label>map</label>
-      </node>
       <node id="13065">
         <label>base.h</label>
         <link refid="layouter_2base_8h"/>
@@ -83,11 +61,82 @@
         <childnode refid="13078" relation="include">
         </childnode>
       </node>
+      <node id="13069">
+        <label>stdlib.h</label>
+      </node>
+      <node id="13088">
+        <label>boost/foreach.hpp</label>
+      </node>
+      <node id="13089">
+        <label>boost/format.hpp</label>
+      </node>
+      <node id="13076">
+        <label>string</label>
+      </node>
+      <node id="13087">
+        <label>boost/assign.hpp</label>
+      </node>
+      <node id="13083">
+        <label>map</label>
+      </node>
+      <node id="13067">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="13068" relation="include">
+        </childnode>
+        <childnode refid="13069" relation="include">
+        </childnode>
+        <childnode refid="13070" relation="include">
+        </childnode>
+        <childnode refid="13071" relation="include">
+        </childnode>
+        <childnode refid="13072" relation="include">
+        </childnode>
+      </node>
+      <node id="13073">
+        <label>layout_utils.h</label>
+        <link refid="layout__utils_8h"/>
+        <childnode refid="13074" relation="include">
+        </childnode>
+        <childnode refid="13072" relation="include">
+        </childnode>
+      </node>
       <node id="13090">
         <label>metis.h</label>
       </node>
       <node id="13081">
         <label>limits.h</label>
+      </node>
+      <node id="13072">
+        <label>vector</label>
+      </node>
+      <node id="13084">
+        <label>boost/unordered_set.hpp</label>
+      </node>
+      <node id="13066">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="13071">
+        <label>sstream</label>
+      </node>
+      <node id="13082">
+        <label>math.h</label>
+      </node>
+      <node id="13070">
+        <label>iostream</label>
+      </node>
+      <node id="13086">
+        <label>boost/algorithm/combination.hpp</label>
+      </node>
+      <node id="13078">
+        <label>unordered_map</label>
+      </node>
+      <node id="13074">
+        <label>set</label>
+      </node>
+      <node id="13077">
+        <label>algorithm</label>
       </node>
       <node id="13064">
         <label>src/lib/layouter/base.cpp</label>
@@ -131,55 +180,6 @@
         <childnode refid="13090" relation="include">
         </childnode>
       </node>
-      <node id="13072">
-        <label>vector</label>
-      </node>
-      <node id="13084">
-        <label>boost/unordered_set.hpp</label>
-      </node>
-      <node id="13071">
-        <label>sstream</label>
-      </node>
-      <node id="13082">
-        <label>math.h</label>
-      </node>
-      <node id="13070">
-        <label>iostream</label>
-      </node>
-      <node id="13086">
-        <label>boost/algorithm/combination.hpp</label>
-      </node>
-      <node id="13078">
-        <label>unordered_map</label>
-      </node>
-      <node id="13067">
-        <label>matrix.h</label>
-        <link refid="matrix_8h"/>
-        <childnode refid="13068" relation="include">
-        </childnode>
-        <childnode refid="13069" relation="include">
-        </childnode>
-        <childnode refid="13070" relation="include">
-        </childnode>
-        <childnode refid="13071" relation="include">
-        </childnode>
-        <childnode refid="13072" relation="include">
-        </childnode>
-      </node>
-      <node id="13074">
-        <label>set</label>
-      </node>
-      <node id="13073">
-        <label>layout_utils.h</label>
-        <link refid="layout__utils_8h"/>
-        <childnode refid="13074" relation="include">
-        </childnode>
-        <childnode refid="13072" relation="include">
-        </childnode>
-      </node>
-      <node id="13077">
-        <label>algorithm</label>
-      </node>
     </incdepgraph>
     <innerclass refid="structstd_1_1hash_3_01subset__t_01_4" prot="public">std::hash&lt; subset_t &gt;</innerclass>
     <innerclass refid="struct__intermediate" prot="public">_intermediate</innerclass>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lanice/develop/epic/hyrise/src/lib/layouter/base.cpp" line="1180" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/layouter/base.cpp" bodystart="1180" bodyend="-1"/>
+        <location file="/home/vagrant/lanice/src/lib/layouter/base.cpp" line="1180" bodyfile="/home/vagrant/lanice/src/lib/layouter/base.cpp" bodystart="1180" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -216,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lanice/develop/epic/hyrise/src/lib/layouter/base.cpp" line="1159" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/layouter/base.cpp" bodystart="1159" bodyend="1166"/>
+        <location file="/home/vagrant/lanice/src/lib/layouter/base.cpp" line="1159" bodyfile="/home/vagrant/lanice/src/lib/layouter/base.cpp" bodystart="1159" bodyend="1166"/>
       </memberdef>
       <memberdef kind="function" id="base_8cpp_1a9d01ad399f906dd61b7694cfc1d6f414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacelayouter_1a9779582085930cc6fb80f4f2b27dfd9e" kindref="member">subset_t</ref></type>
@@ -237,7 +237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lanice/develop/epic/hyrise/src/lib/layouter/base.cpp" line="1169" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/layouter/base.cpp" bodystart="1169" bodyend="1178"/>
+        <location file="/home/vagrant/lanice/src/lib/layouter/base.cpp" line="1169" bodyfile="/home/vagrant/lanice/src/lib/layouter/base.cpp" bodystart="1169" bodyend="1178"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1385,8 +1385,8 @@
 <codeline lineno="1138"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classlayouter_1_1_base_layouter_1add31da0cb128c19ccd33d08b2b876a07" kindref="member">schema</ref>.<ref refid="classlayouter_1_1_schema_1a42edf8cfb82aecc5827980be5d5a5205" kindref="member">nbAttributes</ref>;<sp/>++i)<sp/>{</highlight></codeline>
 <codeline lineno="1140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>queried<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="1141"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOST_FOREACH(std::set&lt;unsigned&gt;<sp/>set,<sp/><ref refid="classlayouter_1_1_candidate_layouter_1acc320f5cf0b1c9f41fee1e0e66ca8349" kindref="member">_candidateList</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="1142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(set.count(i)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="1141"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOST_FOREACH(std::set&lt;unsigned&gt;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">,<sp/><ref refid="classlayouter_1_1_candidate_layouter_1acc320f5cf0b1c9f41fee1e0e66ca8349" kindref="member">_candidateList</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="1142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">set</highlight><highlight class="normal">.<ref refid="classlayouter_1_1_base_layouter_1a6e76630eaf8939a9365cc8a795e41e73" kindref="member">count</ref>(i)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
 <codeline lineno="1143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queried<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -1696,6 +1696,6 @@
 <codeline lineno="1450"><highlight class="normal"><sp/><sp/>std::sort(<ref refid="classlayouter_1_1_base_layouter_1a0655d7dff96b8eff715a053b1e46737b" kindref="member">results</ref>.begin(),<sp/><ref refid="classlayouter_1_1_base_layouter_1a0655d7dff96b8eff715a053b1e46737b" kindref="member">results</ref>.end());</highlight></codeline>
 <codeline lineno="1451"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/layouter/base.cpp"/>
+    <location file="/home/vagrant/lanice/src/lib/layouter/base.cpp"/>
   </compounddef>
 </doxygen>

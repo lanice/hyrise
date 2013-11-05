@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="_loader_exception_8h" kind="file">
     <compoundname>LoaderException.h</compoundname>
     <includes local="no">stdexcept</includes>
@@ -13,9 +13,6 @@
       <node id="12001">
         <label>stdexcept</label>
       </node>
-      <node id="12002">
-        <label>string</label>
-      </node>
       <node id="12000">
         <label>src/lib/io/LoaderException.h</label>
         <link refid="LoaderException.h"/>
@@ -24,19 +21,14 @@
         <childnode refid="12002" relation="include">
         </childnode>
       </node>
+      <node id="12002">
+        <label>string</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="12006">
-        <label>src/lib/access/LayoutTableLoad.cpp</label>
-        <link refid="_layout_table_load_8cpp"/>
-      </node>
-      <node id="12008">
-        <label>src/lib/io/CSVLoader.cpp</label>
-        <link refid="_c_s_v_loader_8cpp"/>
-      </node>
-      <node id="12007">
-        <label>src/lib/access/storage/TableIO.cpp</label>
-        <link refid="_table_i_o_8cpp"/>
+      <node id="12010">
+        <label>src/bin/perf_regression/Loading.cpp</label>
+        <link refid="_loading_8cpp"/>
       </node>
       <node id="12013">
         <label>src/lib/io/MPassCSVLoader.h</label>
@@ -46,25 +38,51 @@
         <childnode refid="12014" relation="include">
         </childnode>
       </node>
-      <node id="12016">
-        <label>src/lib/io/StorageManager.cpp</label>
-        <link refid="_storage_manager_8cpp"/>
+      <node id="12021">
+        <label>src/lib/io/StringLoader.cpp</label>
+        <link refid="_string_loader_8cpp"/>
+      </node>
+      <node id="12003">
+        <label>src/lib/io/LoaderException.h</label>
+        <link refid="LoaderException.h"/>
+        <childnode refid="12004" relation="include">
+        </childnode>
+        <childnode refid="12018" relation="include">
+        </childnode>
+        <childnode refid="12013" relation="include">
+        </childnode>
+        <childnode refid="12019" relation="include">
+        </childnode>
+        <childnode refid="12017" relation="include">
+        </childnode>
+      </node>
+      <node id="12018">
+        <label>src/lib/io/Loader.cpp</label>
+        <link refid="_loader_8cpp"/>
       </node>
       <node id="12017">
         <label>src/lib/io/TableDump.cpp</label>
         <link refid="_table_dump_8cpp"/>
       </node>
+      <node id="12015">
+        <label>src/lib/io/RawTableLoader.cpp</label>
+        <link refid="_raw_table_loader_8cpp"/>
+      </node>
+      <node id="12007">
+        <label>src/lib/access/storage/TableIO.cpp</label>
+        <link refid="_table_i_o_8cpp"/>
+      </node>
+      <node id="12011">
+        <label>src/lib/access/storage/TableLoad.cpp</label>
+        <link refid="_table_load_8cpp"/>
+      </node>
       <node id="12014">
         <label>src/lib/io/MPassCSVLoader.cpp</label>
         <link refid="_m_pass_c_s_v_loader_8cpp"/>
       </node>
-      <node id="12012">
-        <label>src/lib/io/shortcuts.cpp</label>
-        <link refid="shortcuts_8cpp"/>
-      </node>
-      <node id="12010">
-        <label>src/bin/perf_regression/Loading.cpp</label>
-        <link refid="_loading_8cpp"/>
+      <node id="12016">
+        <label>src/lib/io/StorageManager.cpp</label>
+        <link refid="_storage_manager_8cpp"/>
       </node>
       <node id="12019">
         <label>src/lib/io/MetadataCreation.h</label>
@@ -78,21 +96,31 @@
         <childnode refid="12021" relation="include">
         </childnode>
       </node>
-      <node id="12018">
-        <label>src/lib/io/Loader.cpp</label>
-        <link refid="_loader_8cpp"/>
+      <node id="12009">
+        <label>src/lib/io/loaders.h</label>
+        <link refid="loaders_8h"/>
+        <childnode refid="12010" relation="include">
+        </childnode>
+        <childnode refid="12011" relation="include">
+        </childnode>
+        <childnode refid="12012" relation="include">
+        </childnode>
       </node>
-      <node id="12011">
-        <label>src/lib/access/storage/TableLoad.cpp</label>
-        <link refid="_table_load_8cpp"/>
+      <node id="12005">
+        <label>src/bin/test_relation_eq/main.cpp</label>
+        <link refid="bin_2test__relation__eq_2main_8cpp"/>
       </node>
       <node id="12020">
         <label>src/lib/io/MetadataCreation.cpp</label>
         <link refid="_metadata_creation_8cpp"/>
       </node>
-      <node id="12005">
-        <label>src/bin/test_relation_eq/main.cpp</label>
-        <link refid="bin_2test__relation__eq_2main_8cpp"/>
+      <node id="12006">
+        <label>src/lib/access/LayoutTableLoad.cpp</label>
+        <link refid="_layout_table_load_8cpp"/>
+      </node>
+      <node id="12012">
+        <label>src/lib/io/shortcuts.cpp</label>
+        <link refid="shortcuts_8cpp"/>
       </node>
       <node id="12004">
         <label>src/lib/io/CSVLoader.h</label>
@@ -116,37 +144,9 @@
         <childnode refid="12017" relation="include">
         </childnode>
       </node>
-      <node id="12009">
-        <label>src/lib/io/loaders.h</label>
-        <link refid="loaders_8h"/>
-        <childnode refid="12010" relation="include">
-        </childnode>
-        <childnode refid="12011" relation="include">
-        </childnode>
-        <childnode refid="12012" relation="include">
-        </childnode>
-      </node>
-      <node id="12015">
-        <label>src/lib/io/RawTableLoader.cpp</label>
-        <link refid="_raw_table_loader_8cpp"/>
-      </node>
-      <node id="12021">
-        <label>src/lib/io/StringLoader.cpp</label>
-        <link refid="_string_loader_8cpp"/>
-      </node>
-      <node id="12003">
-        <label>src/lib/io/LoaderException.h</label>
-        <link refid="LoaderException.h"/>
-        <childnode refid="12004" relation="include">
-        </childnode>
-        <childnode refid="12018" relation="include">
-        </childnode>
-        <childnode refid="12013" relation="include">
-        </childnode>
-        <childnode refid="12019" relation="include">
-        </childnode>
-        <childnode refid="12017" relation="include">
-        </childnode>
+      <node id="12008">
+        <label>src/lib/io/CSVLoader.cpp</label>
+        <link refid="_c_s_v_loader_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_loader_1_1_error" prot="public">Loader::Error</innerclass>
@@ -173,6 +173,6 @@
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_IO_LOADEREXCEPTION_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/lanice/develop/epic/hyrise/src/lib/io/LoaderException.h"/>
+    <location file="/home/vagrant/lanice/src/lib/io/LoaderException.h"/>
   </compounddef>
 </doxygen>

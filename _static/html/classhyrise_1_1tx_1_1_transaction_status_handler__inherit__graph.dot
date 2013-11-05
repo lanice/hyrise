@@ -1,0 +1,16 @@
+digraph "hyrise::tx::TransactionStatusHandler"
+{
+  edge [fontname="Helvetica",fontsize="11",labelfontname="Helvetica",labelfontsize="11"];
+  node [fontname="Helvetica",fontsize="11",shape=record];
+  Node1 [label="{hyrise::tx::TransactionStatus\lHandler\n||+ TransactionStatusHandler()\l+ processRequest()\l+ vname()\l+ name()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{hyrise::tx::RequestHandler\n|# _connection\l|+ RequestHandler()\l+ operator()()\l+ processRequest()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhyrise_1_1tx_1_1_request_handler.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{hyrise::net::AbstractRequest\lHandler\n||+ ~AbstractRequestHandler()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhyrise_1_1net_1_1_abstract_request_handler.html",tooltip="Base class for request handlers."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{Task\n|+ DEFAULT_PRIORITY\l+ HIGH_PRIORITY\l+ NO_PREFERRED_CORE\l+ NO_PREFERRED_NODE\l+ SESSION_ID_NOT_SET\l# _dependencies\l# _readyObservers\l# _doneObservers\l# _dependencyWaitCount\l# _depMutex\l# _observerMutex\l# _notifyMutex\l# _preferredCore\l# _preferredNode\l# _actualNode\l# _priority\l# _sessionId\l# _id\l|+ Task()\l+ ~Task()\l+ operator()()\l+ getQueryDuration()\l+ vname()\l+ hasSuccessors()\l+ addDependency()\l+ getDependencyCount()\l+ addReadyObserver()\l+ addDoneObserver()\land 18 more...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_task.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node5 [label="{TaskDoneObserver\n||+ notifyDone()\l+ ~TaskDoneObserver()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_task_done_observer.html"];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node6 [label="{std::enable_shared\l_from_this\< Task \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

@@ -1,0 +1,8 @@
+digraph "hyrise::access::ColumnSetFun&lt; T &gt;"
+{
+  edge [fontname="Helvetica",fontsize="11",labelfontname="Helvetica",labelfontsize="11"];
+  node [fontname="Helvetica",fontsize="11",shape=record];
+  Node1 [label="{hyrise::access::ColumnSet\lFun\< T \>\n|- _column\l- _value\l|+ ColumnSetFun()\l+ ~ColumnSetFun()\l+ updateRow()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="11",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{hyrise::access::UpdateFun\n|# _table\l|+ UpdateFun()\l+ ~UpdateFun()\l+ updateRow()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhyrise_1_1access_1_1_update_fun.html"];
+}

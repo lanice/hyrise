@@ -1,15 +1,15 @@
-<div class="jumbotron">
-  <div class="container">
-    <!-- <h1 class="jumboheading">Hyrise</h1> -->
-    <img src="{{ pathto('_static/hyrise.png', 1) }}" alt="Logo" width="300px"/>
-    <p>...is a new relational storage engine for main memory database systems. It is built on the premise that enterprise application workloads can benefit from a dedicated main-memory storage engine.</p>
-    <p><a class="btn btn-primary btn-lg" id="learnmore">Learn more</a>&nbsp;<a class="btn btn-success btn-lg">Try it out!</a></p>
-  </div>
-</div>
 
-<div class="clearfix"></div>
-<div class="fullwidth" id="fullwidth">
+<div id="intro">
+    <div class="story container">
+        <div class="float-left">
+      <h2>HYRISE</h2>
+          <p>...is a new relational storage engine for main memory database systems. It is built on the premise that enterprise application workloads can benefit from a dedicated main-memory storage engine.</p>
+          </div>
+      </div> <!--.story-->
+  </div>
+<div id="second">
   <div class="container">
+    {%- include 'globaltoc.html' %}
     <div class="container-fluid">
       <div class="row-fluid without">
         <div class="col-md-12">
@@ -39,13 +39,7 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<div class="container index-container">
-  <div class="container-fluid">
-    <div class="section">       
       <div class="row-fluid">
         <div class="col-md-6 feature">
           <h4>
@@ -56,7 +50,7 @@
           </p>
         </div>
         <div class="col-md-6 image">
-          <img src="{{ pathto('_static/overview.png', 1) }}">
+          <img src="_static/overview.png">
         </div>
       </div>
     </div>
@@ -64,7 +58,7 @@
     <div class="section">
       <div class="row-fluid">
         <div class="col-md-6 image">
-          <img src="{{ pathto('_static/row_column.png', 1) }}" width="450px">
+          <img src="_static/row_column.png" width="450px">
         </div>
         <div class="col-md-6 feature">
           <h4>
@@ -89,9 +83,9 @@
           </p>
         </div>
         <div class="col-md-6 image">
-          <img src="{{ pathto('_static/layout.png', 1) }}">
+          <img src="_static/layout.png">
         </div>
       </div>
-    </div> 
-  </div>      
+    </div>
+  </div>
 </div>

@@ -72,6 +72,15 @@
     {%- endfor %}
     <script type="text/javascript" src="{{ pathto('_static/hyrise.js', 1) }}"></script>
     <script type="text/javascript" src="{{ pathto('_static/bootstrap.js', 1) }}"></script>
+
+    {%- if pagename == 'index' %}
+        <link rel="stylesheet" href="{{ pathto('_static/parallax-scroll-index.css', 1) }}" type="text/css" />
+        <script type="text/javascript" src="{{ pathto('_static/parallax-scroll-index.js', 1) }}"></script>
+        <script type="text/javascript" src="{{ pathto('_static/jquery.localscroll-1.2.7-min.js', 1) }}"></script>
+        <script type="text/javascript" src="{{ pathto('_static/jquery.scrollTo-1.4.2-min.js', 1) }}"></script>
+    {%- endif %}
+
+
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 {%- endmacro %}
 
@@ -102,9 +111,7 @@
           title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
           href="{{ pathto('_static/opensearch.xml', 1) }}"/>
     {%- endif %}
-    {%- if favicon %}
-    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
-    {%- endif %}
+    <link rel="shortcut icon" href="{{ pathto('_static/' + 'favicon.ico', 1) }}"/>
     {%- endif %}
 {%- block linktags %}
     {%- if hasdoc('about') %}
@@ -140,13 +147,13 @@
 {%- block header %}{% endblock %}
 
 {%- block content %}
-    {%- include 'globaltoc.html' %}
     {%- if pagename == 'index' %}
         {%- include "index.html" %}
     {%- else %}
     <div class="wrapper">
         <div class="inner-wrapper">
             <div class="container">
+                {%- include 'globaltoc.html' %}
                 <div class="container-fluid">
                     <div class="row-fluid">
                         {%- if render_sidebar %}
@@ -184,28 +191,27 @@
                         </div>
                     </div>
                 </div>
+                {%- block footer %}
+                    <div class="footer">
+                    {%- if show_copyright %}
+                      {%- if hasdoc('copyright') %}
+                        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+                      {%- else %}
+                        {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+                      {%- endif %}
+                    {%- endif %}
+                    {%- if last_updated %}
+                      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+                    {%- endif %}
+                    {%- if show_sphinx %}
+                      {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+                    {%- endif %}
+                    </div>
+                {%- endblock %}
             </div> <!-- container -->
         </div> <!-- inner-wrapper -->
     </div> <!-- wrapper -->
     {% endif %}
-{%- endblock %}
-
-{%- block footer %}
-    <div class="footer">
-    {%- if show_copyright %}
-      {%- if hasdoc('copyright') %}
-        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
-      {%- else %}
-        {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
-      {%- endif %}
-    {%- endif %}
-    {%- if last_updated %}
-      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
-    {%- endif %}
-    {%- if show_sphinx %}
-      {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
-    {%- endif %}
-    </div>
 {%- endblock %}
   </body>
 </html>

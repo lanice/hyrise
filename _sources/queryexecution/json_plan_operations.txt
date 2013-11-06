@@ -16,6 +16,7 @@ Handling this data is implemented in ``OperationalData`` and ``PlanOperation`` c
     - :ref:`unionScan`
     - :ref:`joinScan`
     - :ref:`mergeJoin`
+    - :ref:`createIndex`
     - :ref:`indexScan`
     - :ref:`hashBuild`
     - :ref:`hashJoinProbe`
@@ -220,12 +221,28 @@ Merge Join
 deprecated.
 
 
+.. _createIndex:
+
+Create Index
+============
+
+This operator can be used to add an index to a table.
+
+::
+
+    "index": {
+      "type": "CreateIndex",
+      "fields": ["order_id"],
+      "index_name": "vbak_order_ix"
+    }
+
+
 .. _indexScan:
 
 Index Scan
 ==========
 
-This operator can be used to add an index to a table.
+This operator initiates a table scan using a given index.
 
 ::
 

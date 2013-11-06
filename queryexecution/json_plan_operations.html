@@ -148,6 +148,7 @@ Handling this data is implemented in <tt class="docutils literal"><span class="p
 <li><a class="reference internal" href="#unionscan"><em>Union Scan</em></a></li>
 <li><a class="reference internal" href="#joinscan"><em>Join Scan</em></a></li>
 <li><a class="reference internal" href="#mergejoin"><em>Merge Join</em></a></li>
+<li><a class="reference internal" href="#createindex"><em>Create Index</em></a></li>
 <li><a class="reference internal" href="#indexscan"><em>Index Scan</em></a></li>
 <li><a class="reference internal" href="#hashbuild"><em>Hash Build</em></a></li>
 <li><a class="reference internal" href="#hashjoinprobe"><em>Hash Join Probe</em></a></li>
@@ -363,9 +364,20 @@ Handling this data is implemented in <tt class="docutils literal"><span class="p
 <span id="mergejoin"></span><h2>Merge Join<a class="headerlink" href="#merge-join" title="Permalink to this headline">¶</a></h2>
 <p>deprecated.</p>
 </div>
+<div class="section" id="create-index">
+<span id="createindex"></span><h2>Create Index<a class="headerlink" href="#create-index" title="Permalink to this headline">¶</a></h2>
+<p>This operator can be used to add an index to a table.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;index&quot;</span><span class="o">:</span> <span class="p">{</span>
+  <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;CreateIndex&quot;</span><span class="p">,</span>
+  <span class="s">&quot;fields&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s">&quot;order_id&quot;</span><span class="p">],</span>
+  <span class="s">&quot;index_name&quot;</span><span class="o">:</span> <span class="s">&quot;vbak_order_ix&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="index-scan">
 <span id="indexscan"></span><h2>Index Scan<a class="headerlink" href="#index-scan" title="Permalink to this headline">¶</a></h2>
-<p>This operator can be used to add an index to a table.</p>
+<p>This operator initiates a table scan using a given index.</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;index&quot;</span><span class="o">:</span> <span class="p">{</span>
   <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;IndexScan&quot;</span><span class="p">,</span>
   <span class="s">&quot;vtype&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>

@@ -26,6 +26,7 @@
 {%- macro sidebar() %}
       {%- if render_sidebar %}
       <div class="col-md-3 hyrisesidebar">
+          <div class="logo"></div>
           {%- block sidebarlogo %}
           {%- endblock %}
           {%- if pagename != 'index' and pagename != 'people' and pagename != 'projects' and pagename != 'publications' %}
@@ -40,7 +41,7 @@
               {%- include "localtoc.html" %}
               {%- endblock %}
               {%- block sidebarrel %}
-              {%- include "relations.html" %}
+              <!-- {%- include "relations.html" %} -->
               {%- endblock %}
               {%- block sidebarsourcelink %}
               {%- include "sourcelink.html" %}

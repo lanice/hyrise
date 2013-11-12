@@ -83,9 +83,12 @@ Vagrant
 Using vagrant and VirtualBox you can have a fully working HYRISE development
 setup in the matter of minutes without having to worry about anything. This is
 currently our recommendation to setup. If you have installed VirtualBox and
-Vagrant you should be able to run the init script simply by calling::
+Vagrant you should be able to run the init script simply by calling
 
-    vagrant up 
+.. code-block:: c
+  :linenos:
+
+  vagrant up
 
 from the command line.
 
@@ -101,9 +104,12 @@ Building
 
 To start the build you will only need to execute a simple command line command
 to start. The given make file provides all necessary targets. First check if
-all submodules are initialized correctly.::
+all submodules are initialized correctly.
 
-    git submodule update --init
+.. code-block:: c
+  :linenos:
+
+  git submodule update --init
 
 Now copy the file ``settings.mk.default`` to ``settings.mk`` and if necessary
 modify settings to start the build. The most prominent one is ``PRODUCTION`` to
@@ -115,32 +121,44 @@ modify settings to start the build. The most prominent one is `PRODUCTION` to
 disable the debug build and ``HYRISE_ALLOCATOR`` for using ``tcmalloc`` or
 ``jemalloc`` instead of the libc allocator.
 
-A simple build is executed by::
+A simple build is executed by
 
-    make
+.. code-block:: c
+  :linenos:
 
-To build and execute the test suites using predefined tables issue::
+  make
 
-    make test
+To build and execute the test suites using predefined tables issue
 
-The smaller test-suite can be executed using::
+.. code-block:: c
+  :linenos:
 
-    make test_basic
+  make test
+
+The smaller test-suite can be executed using
+
+.. code-block:: c
+  :linenos:
+
+  make test_basic
 
 
 Documentation
 =============
 
 The project provides some documentation about how to develop and use HYRISE.
-The documentation can be build using.::
+The documentation can be build using.
 
-    make docs
+.. code-block:: c
+  :linenos:
+
+  make docs
 
 The documentation contains information about how to use HYRISE and how to
 implement own plan operations and table types etc. If you have any questions
-feel free to post in::
+feel free to post in
 
-    hyrise-dev@googlegroups.com
+  hyrise-dev@googlegroups.com
 
 To contact fellow hyrise developers.
 

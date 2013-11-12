@@ -67,6 +67,7 @@ Usage
 =====
 
 .. literalinclude:: ../../../src/bin/units_io/mysql_tests.cpp
+    :linenos:
 
 
 Implementation details

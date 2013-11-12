@@ -9,12 +9,14 @@
     
     <title>MySQL Loader &mdash; HYRISE latest documentation</title>
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/hyrise_template.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/hyrise.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/page-1-attributes.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/page-1.css" type="text/css" />
+
+    <!-- <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /> -->
+    <link rel="stylesheet" href="../../_static/pygments-github.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/breathe.css" type="text/css" />
     
     <script type="text/javascript">
@@ -57,16 +59,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="../../index.html" class="brand">
-        <div>hyrise</div>
-      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav topnav">
         <li><a href="../../index.html">Home</a></li>
-        <li><a href="../../documentation.html">Documentation</a></li>
+        <li class="active" ><a href="../../documentation.html">Documentation</a></li>
         <li><a href="../../people.html">People</a></li>
         <li><a href="../../projects.html">Projects</a></li>
         <li><a href="../../publications.html">Publications</a></li>
@@ -77,6 +76,7 @@
                 <div class="container-fluid">
                     <div class="row-fluid">
       <div class="col-md-3 hyrisesidebar">
+          <div class="logo"></div>
   
   <div id="tocWrapper">
     <ul class="current">
@@ -112,8 +112,9 @@
   
   <!-- possible but links have to be removed, too..problem: closing tags-->
   
+              <!--
   <strong>Previous topic: </strong><a href="index.html" title="previous chapter">Loading</a><br />
-  <strong>Next topic: </strong><a href="../statistics.html" title="next chapter">Query Statistics</a></p>
+  <strong>Next topic: </strong><a href="../statistics.html" title="next chapter">Query Statistics</a></p> -->
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../../_sources/architecture/loading/mysql.txt"
@@ -211,7 +212,75 @@ want to use the parameters defined with <cite>MySQLInput::params()</cite>.</p>
 </div>
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-c++"><div class="highlight"><pre><span class="c1">// Copyright (c) 2012 Hasso-Plattner-Institut fuer Softwaresystemtechnik GmbH. All rights reserved.</span>
+<div class="highlight-c++"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// Copyright (c) 2012 Hasso-Plattner-Institut fuer Softwaresystemtechnik GmbH. All rights reserved.</span>
 <span class="cp">#ifdef WITH_MYSQL</span>
 
 <span class="cp">#include &quot;testing/test.h&quot;</span>
@@ -281,7 +350,7 @@ want to use the parameters defined with <cite>MySQLInput::params()</cite>.</p>
 
 <span class="cp">#endif</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div>
 <div class="section" id="implementation-details">
 <h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h2>

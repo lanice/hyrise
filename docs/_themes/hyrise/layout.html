@@ -86,12 +86,15 @@
 {%- endmacro %}
 
 {%- macro css() %}
-    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/bootstrap.min.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/hyrise_template.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/page-1-attributes.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/page-1.css', 1) }}" type="text/css" />
+
+    <!-- <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" /> -->
+    <link rel="stylesheet" href="{{ pathto('_static/pygments-github.css', 1) }}" type="text/css" />
+
     {%- for cssfile in css_files %}
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
     {%- endfor %}

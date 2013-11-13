@@ -13,12 +13,17 @@ $(document).ready( function() {
     });
     $('.main .notTop').not('.simple').hide();
 
-    $('#backToTop').affix({
-        offset: {
-          top: 700, 
-          bottom: 70
+    $(window).scroll(function() {
+        var scrollTop = $(this).scrollTop();
+        
+        if (scrollTop > 100) {
+             $('#backToTop').fadeIn({duration:100});
+        } else {
+             $('#backToTop').hide();
         }
-    }).click( function() {
-        $('html,body').stop().animate({scrollTop: 0}, 750);
     });
+
+    $('#backToTop').click(function() {
+        $('html,body').stop().animate({scrollTop: 0}, 750);
+    }).hide();
 });

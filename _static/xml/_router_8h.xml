@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_router_8h" kind="file">
     <compoundname>Router.h</compoundname>
     <includes local="no">memory</includes>
@@ -36,6 +36,21 @@
       <node id="13389">
         <label>condition_variable</label>
       </node>
+      <node id="13387">
+        <label>vector</label>
+      </node>
+      <node id="13385">
+        <label>net/AbstractConnection.h</label>
+        <link refid="_abstract_connection_8h"/>
+        <childnode refid="13384" relation="include">
+        </childnode>
+      </node>
+      <node id="13383">
+        <label>unordered_map</label>
+      </node>
+      <node id="13388">
+        <label>mutex</label>
+      </node>
       <node id="13381">
         <label>src/lib/net/Router.h</label>
         <link refid="Router.h"/>
@@ -50,37 +65,18 @@
         <childnode refid="13386" relation="include">
         </childnode>
       </node>
-      <node id="13385">
-        <label>net/AbstractConnection.h</label>
-        <link refid="_abstract_connection_8h"/>
-        <childnode refid="13384" relation="include">
-        </childnode>
-      </node>
-      <node id="13387">
-        <label>vector</label>
-      </node>
-      <node id="13383">
-        <label>unordered_map</label>
-      </node>
-      <node id="13388">
-        <label>mutex</label>
-      </node>
       <node id="13382">
         <label>memory</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="13391">
-        <label>src/lib/access/OperationListingHandler.h</label>
-        <link refid="_operation_listing_handler_8h"/>
-        <childnode refid="13392" relation="include">
-        </childnode>
+      <node id="13392">
+        <label>src/lib/access/OperationListingHandler.cpp</label>
+        <link refid="_operation_listing_handler_8cpp"/>
       </node>
-      <node id="13399">
-        <label>src/lib/net/RouteRequestHandler.h</label>
-        <link refid="_route_request_handler_8h"/>
-        <childnode refid="13400" relation="include">
-        </childnode>
+      <node id="13398">
+        <label>src/lib/net/Router.cpp</label>
+        <link refid="_router_8cpp"/>
       </node>
       <node id="13397">
         <label>src/lib/io/TransactionRouteHandler.cpp</label>
@@ -90,6 +86,32 @@
         <label>src/lib/access/system/RequestParseTask.cpp</label>
         <link refid="_request_parse_task_8cpp"/>
       </node>
+      <node id="13401">
+        <label>src/lib/net/StaticRequestHandler.h</label>
+        <link refid="_static_request_handler_8h"/>
+        <childnode refid="13402" relation="include">
+        </childnode>
+      </node>
+      <node id="13391">
+        <label>src/lib/access/OperationListingHandler.h</label>
+        <link refid="_operation_listing_handler_8h"/>
+        <childnode refid="13392" relation="include">
+        </childnode>
+      </node>
+      <node id="13396">
+        <label>src/lib/io/TransactionRouteHandler.h</label>
+        <link refid="_transaction_route_handler_8h"/>
+        <childnode refid="13397" relation="include">
+        </childnode>
+      </node>
+      <node id="13402">
+        <label>src/lib/net/StaticRequestHandler.cpp</label>
+        <link refid="_static_request_handler_8cpp"/>
+      </node>
+      <node id="13400">
+        <label>src/lib/net/RouteRequestHandler.cpp</label>
+        <link refid="_route_request_handler_8cpp"/>
+      </node>
       <node id="13394">
         <label>src/lib/access/system/RequestParseTask.h</label>
         <link refid="_request_parse_task_8h"/>
@@ -97,10 +119,6 @@
         </childnode>
         <childnode refid="13395" relation="include">
         </childnode>
-      </node>
-      <node id="13402">
-        <label>src/lib/net/StaticRequestHandler.cpp</label>
-        <link refid="_static_request_handler_8cpp"/>
       </node>
       <node id="13390">
         <label>src/lib/net/Router.h</label>
@@ -122,32 +140,14 @@
         <childnode refid="13401" relation="include">
         </childnode>
       </node>
-      <node id="13392">
-        <label>src/lib/access/OperationListingHandler.cpp</label>
-        <link refid="_operation_listing_handler_8cpp"/>
-      </node>
-      <node id="13400">
-        <label>src/lib/net/RouteRequestHandler.cpp</label>
-        <link refid="_route_request_handler_8cpp"/>
-      </node>
-      <node id="13398">
-        <label>src/lib/net/Router.cpp</label>
-        <link refid="_router_8cpp"/>
-      </node>
-      <node id="13401">
-        <label>src/lib/net/StaticRequestHandler.h</label>
-        <link refid="_static_request_handler_8h"/>
-        <childnode refid="13402" relation="include">
-        </childnode>
-      </node>
       <node id="13395">
         <label>src/lib/net/AsyncConnection.cpp</label>
         <link refid="_async_connection_8cpp"/>
       </node>
-      <node id="13396">
-        <label>src/lib/io/TransactionRouteHandler.h</label>
-        <link refid="_transaction_route_handler_8h"/>
-        <childnode refid="13397" relation="include">
+      <node id="13399">
+        <label>src/lib/net/RouteRequestHandler.h</label>
+        <link refid="_route_request_handler_8h"/>
+        <childnode refid="13400" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -178,7 +178,7 @@
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hyrise<sp/>{</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">net<sp/>{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="classhyrise_1_1net_1_1_abstract_request_handler" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1net_1_1_abstract_request_handler" kindref="compound" tooltip="Base class for request handlers.">AbstractRequestHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="19" refid="classhyrise_1_1net_1_1_abstract_request_handler" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1net_1_1_abstract_request_handler" kindref="compound" tooltip="Base class for request handlers. ">AbstractRequestHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="21" refid="classhyrise_1_1net_1_1_abstract_request_handler_1a22c7c6e6ea6e7cedb23196f5871b5aca" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;AbstractRequestHandler&gt;<sp/><ref refid="classhyrise_1_1net_1_1_abstract_request_handler_1a22c7c6e6ea6e7cedb23196f5871b5aca" kindref="member">SharedPtr</ref>;</highlight></codeline>
 <codeline lineno="22" refid="classhyrise_1_1net_1_1_abstract_request_handler_1afe4d99aa43e91ffd9df791076cde3741" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_abstract_request_handler_1afe4d99aa43e91ffd9df791076cde3741" kindref="member">~AbstractRequestHandler</ref>()<sp/>{}</highlight></codeline>
@@ -190,13 +190,13 @@
 <codeline lineno="28"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="32" refid="structhyrise_1_1net_1_1_request_handler_factory" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhyrise_1_1net_1_1_request_handler_factory" kindref="compound" tooltip="Factory for request handlers, implements abstract factory pattern.">RequestHandlerFactory</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="structhyrise_1_1net_1_1_abstract_request_handler_factory" kindref="compound">AbstractRequestHandlerFactory</ref><sp/>{</highlight></codeline>
+<codeline lineno="32" refid="structhyrise_1_1net_1_1_request_handler_factory" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhyrise_1_1net_1_1_request_handler_factory" kindref="compound" tooltip="Factory for request handlers, implements abstract factory pattern. ">RequestHandlerFactory</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="structhyrise_1_1net_1_1_abstract_request_handler_factory" kindref="compound">AbstractRequestHandlerFactory</ref><sp/>{</highlight></codeline>
 <codeline lineno="33" refid="structhyrise_1_1net_1_1_request_handler_factory_1a8591e12cfe99e082e52accd1866d72d4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1net_1_1_abstract_request_handler_1a22c7c6e6ea6e7cedb23196f5871b5aca" kindref="member">AbstractRequestHandler::SharedPtr</ref><sp/><ref refid="structhyrise_1_1net_1_1_request_handler_factory_1a8591e12cfe99e082e52accd1866d72d4" kindref="member">create</ref>(<ref refid="classhyrise_1_1net_1_1_abstract_connection" kindref="compound">AbstractConnection</ref><sp/>*connection)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_shared&lt;T&gt;(connection);</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="36"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="classhyrise_1_1net_1_1_router_exception" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1net_1_1_router_exception" kindref="compound" tooltip="For all routing related exceptions.">RouterException</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::runtime_error<sp/>{</highlight></codeline>
+<codeline lineno="39" refid="classhyrise_1_1net_1_1_router_exception" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1net_1_1_router_exception" kindref="compound" tooltip="For all routing related exceptions. ">RouterException</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::runtime_error<sp/>{</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_router_exception_1a7c31f71bc7a4a75d9c7ddfb8baedbed0" kindref="member">RouterException</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;message);</highlight></codeline>
 <codeline lineno="42"><highlight class="normal">};</highlight></codeline>
@@ -219,26 +219,26 @@
 <codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RequestHandlerClass&gt;</highlight></codeline>
 <codeline lineno="88" refid="classhyrise_1_1net_1_1_router_1a847346a8882c7d5e3ed7f2bc8d1acbae" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_router_1a847346a8882c7d5e3ed7f2bc8d1acbae" kindref="member">registerRoute</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;url,</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1net_1_1_router_1a75e876b127a75fc4514436e264d3fd04" kindref="member">route_t</ref><sp/><ref refid="classhyrise_1_1net_1_1_router_1ad9866a97c73b455d8f0f51f2ccd6d829" kindref="member">route</ref><sp/>=<sp/>route_t::EXACT)<sp/>{</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;router<sp/>=<sp/><ref refid="classhyrise_1_1net_1_1_router_1a77163aca532cddbea1edfdaec58a0926" kindref="member" tooltip="Returns global Router instance.">Router::getInstance</ref>();</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1net_1_1_router_1ad5a7e91fa85f977fbe84b4c6a292560d" kindref="member">handler_uptr</ref><sp/>factory(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="structhyrise_1_1net_1_1_request_handler_factory" kindref="compound" tooltip="Factory for request handlers, implements abstract factory pattern.">RequestHandlerFactory&lt;RequestHandlerClass&gt;</ref>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;router<sp/>=<sp/><ref refid="classhyrise_1_1net_1_1_router_1a77163aca532cddbea1edfdaec58a0926" kindref="member" tooltip="Returns global Router instance. ">Router::getInstance</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1net_1_1_router_1ad5a7e91fa85f977fbe84b4c6a292560d" kindref="member">handler_uptr</ref><sp/>factory(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="structhyrise_1_1net_1_1_request_handler_factory" kindref="compound" tooltip="Factory for request handlers, implements abstract factory pattern. ">RequestHandlerFactory&lt;RequestHandlerClass&gt;</ref>);</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>router.addRoute(url,<sp/>std::move(factory),<sp/><ref refid="classhyrise_1_1net_1_1_router_1ad9866a97c73b455d8f0f51f2ccd6d829" kindref="member">route</ref>,<sp/>RequestHandlerClass::name());</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
 <codeline lineno="99"></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_router" kindref="compound">Router</ref><sp/>&amp;<ref refid="classhyrise_1_1net_1_1_router_1a77163aca532cddbea1edfdaec58a0926" kindref="member" tooltip="Returns global Router instance.">getInstance</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_router" kindref="compound">Router</ref><sp/>&amp;<ref refid="classhyrise_1_1net_1_1_router_1a77163aca532cddbea1edfdaec58a0926" kindref="member" tooltip="Returns global Router instance. ">getInstance</ref>();</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_router_1a7a3b8f96bf2ac38074b2a3fa8847448a" kindref="member">route_map_t</ref><sp/>&amp;<ref refid="classhyrise_1_1net_1_1_router_1a07ba91385f5e56f7653e9db542de37a0" kindref="member" tooltip="Returns routing map of registered classes.">getRouters</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_router_1a7a3b8f96bf2ac38074b2a3fa8847448a" kindref="member">route_map_t</ref><sp/>&amp;<ref refid="classhyrise_1_1net_1_1_router_1a07ba91385f5e56f7653e9db542de37a0" kindref="member" tooltip="Returns routing map of registered classes. ">getRouters</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_router_1acc5a2fb69113bad878ce8a67eff8de61" kindref="member" tooltip="Setter for catchAll.">setCatchAll</ref>(<ref refid="classhyrise_1_1net_1_1_router_1a146307bd3fa93bccf28eb0d4f2dabc58" kindref="member">handler_ptr</ref><sp/>handler);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_router_1acc5a2fb69113bad878ce8a67eff8de61" kindref="member" tooltip="Setter for catchAll. ">setCatchAll</ref>(<ref refid="classhyrise_1_1net_1_1_router_1a146307bd3fa93bccf28eb0d4f2dabc58" kindref="member">handler_ptr</ref><sp/>handler);</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1net_1_1_router_1a146307bd3fa93bccf28eb0d4f2dabc58" kindref="member">handler_ptr</ref><sp/><ref refid="classhyrise_1_1net_1_1_router_1a11abfb71687be26dc81ab135e7134f93" kindref="member" tooltip="Getter for catchAll, exception when not set.">getCatchAll</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1net_1_1_router_1a146307bd3fa93bccf28eb0d4f2dabc58" kindref="member">handler_ptr</ref><sp/><ref refid="classhyrise_1_1net_1_1_router_1a11abfb71687be26dc81ab135e7134f93" kindref="member" tooltip="Getter for catchAll, exception when not set. ">getCatchAll</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1net_1_1_router_1a146307bd3fa93bccf28eb0d4f2dabc58" kindref="member">handler_ptr</ref><sp/><ref refid="classhyrise_1_1net_1_1_router_1a0ad2f5ee80367348350b92af6e1fa6d6" kindref="member" tooltip="Raw getter for catchAll, no exception when not set.">getCatchAllRaw</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1net_1_1_router_1a146307bd3fa93bccf28eb0d4f2dabc58" kindref="member">handler_ptr</ref><sp/><ref refid="classhyrise_1_1net_1_1_router_1a0ad2f5ee80367348350b92af6e1fa6d6" kindref="member" tooltip="Raw getter for catchAll, no exception when not set. ">getCatchAllRaw</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><ref refid="classhyrise_1_1net_1_1_router_1a146307bd3fa93bccf28eb0d4f2dabc58" kindref="member">handler_ptr</ref><sp/><ref refid="classhyrise_1_1net_1_1_router_1a0803a7bd599f3d889e218499a90c5df2" kindref="member">getHandler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;url)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classhyrise_1_1net_1_1_router_1a12570daf895d9b475f5d7524e9c0704a" kindref="member" tooltip="Return name of handler for route.">getHandlerNameForRoute</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;url)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classhyrise_1_1net_1_1_router_1a12570daf895d9b475f5d7524e9c0704a" kindref="member" tooltip="Return name of handler for route. ">getHandlerNameForRoute</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;url)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"></highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1net_1_1_router_1aebb5cd00102f90491f8982e5d41b9b5e" kindref="member">addRoute</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;url,</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhyrise_1_1net_1_1_router_1ad5a7e91fa85f977fbe84b4c6a292560d" kindref="member">handler_uptr</ref><sp/>factory,</highlight></codeline>
@@ -255,6 +255,6 @@
 <codeline lineno="139"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_NET_ROUTER_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/vagrant/lanice/src/lib/net/Router.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/net/Router.h"/>
   </compounddef>
 </doxygen>

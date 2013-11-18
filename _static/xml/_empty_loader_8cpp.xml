@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_empty_loader_8cpp" kind="file">
     <compoundname>EmptyLoader.cpp</compoundname>
     <includes refid="_empty_loader_8h" local="yes">io/EmptyLoader.h</includes>
@@ -7,33 +7,38 @@
       <node id="11790">
         <label>limits</label>
       </node>
-      <node id="11785">
-        <label>io/AbstractLoader.h</label>
-        <link refid="_abstract_loader_8h"/>
-        <childnode refid="11786" relation="include">
-        </childnode>
-        <childnode refid="11792" relation="include">
-        </childnode>
-        <childnode refid="11788" relation="include">
-        </childnode>
-      </node>
-      <node id="11782">
-        <label>src/lib/io/EmptyLoader.cpp</label>
-        <link refid="EmptyLoader.cpp"/>
-        <childnode refid="11783" relation="include">
-        </childnode>
-      </node>
       <node id="11789">
         <label>cstdint</label>
       </node>
       <node id="11794">
         <label>stdint.h</label>
       </node>
+      <node id="11788">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="11789" relation="include">
+        </childnode>
+        <childnode refid="11787" relation="include">
+        </childnode>
+        <childnode refid="11790" relation="include">
+        </childnode>
+        <childnode refid="11784" relation="include">
+        </childnode>
+        <childnode refid="11791" relation="include">
+        </childnode>
+      </node>
       <node id="11793">
         <label>stdexcept</label>
       </node>
       <node id="11787">
         <label>string</label>
+      </node>
+      <node id="11796">
+        <label>parameters.inc</label>
+        <link refid="parameters_8inc"/>
+      </node>
+      <node id="11795">
+        <label>ostream</label>
       </node>
       <node id="11786">
         <label>io/Loader.h</label>
@@ -49,15 +54,31 @@
         <childnode refid="11796" relation="include">
         </childnode>
       </node>
-      <node id="11795">
-        <label>ostream</label>
-      </node>
       <node id="11783">
         <label>io/EmptyLoader.h</label>
         <link refid="_empty_loader_8h"/>
         <childnode refid="11784" relation="include">
         </childnode>
         <childnode refid="11785" relation="include">
+        </childnode>
+      </node>
+      <node id="11791">
+        <label>vector</label>
+      </node>
+      <node id="11782">
+        <label>src/lib/io/EmptyLoader.cpp</label>
+        <link refid="EmptyLoader.cpp"/>
+        <childnode refid="11783" relation="include">
+        </childnode>
+      </node>
+      <node id="11785">
+        <label>io/AbstractLoader.h</label>
+        <link refid="_abstract_loader_8h"/>
+        <childnode refid="11786" relation="include">
+        </childnode>
+        <childnode refid="11792" relation="include">
+        </childnode>
+        <childnode refid="11788" relation="include">
         </childnode>
       </node>
       <node id="11792">
@@ -74,29 +95,8 @@
         <childnode refid="11795" relation="include">
         </childnode>
       </node>
-      <node id="11791">
-        <label>vector</label>
-      </node>
-      <node id="11788">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="11789" relation="include">
-        </childnode>
-        <childnode refid="11787" relation="include">
-        </childnode>
-        <childnode refid="11790" relation="include">
-        </childnode>
-        <childnode refid="11784" relation="include">
-        </childnode>
-        <childnode refid="11791" relation="include">
-        </childnode>
-      </node>
       <node id="11784">
         <label>memory</label>
-      </node>
-      <node id="11796">
-        <label>parameters.inc</label>
-        <link refid="parameters_8inc"/>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -124,6 +124,6 @@
 <codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_empty_header_1af5b694714c0664119898e683b17bb0a1" kindref="member">EmptyHeader</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="19"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/vagrant/lanice/src/lib/io/EmptyLoader.cpp"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/io/EmptyLoader.cpp"/>
   </compounddef>
 </doxygen>

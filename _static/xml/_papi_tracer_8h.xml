@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_papi_tracer_8h" kind="file">
     <compoundname>PapiTracer.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -14,16 +14,11 @@
     <includedby refid="_request_parse_task_8cpp" local="yes">src/lib/access/system/RequestParseTask.cpp</includedby>
     <includedby refid="_response_task_8cpp" local="yes">src/lib/access/system/ResponseTask.cpp</includedby>
     <incdepgraph>
-      <node id="10894">
-        <label>helper/stringhelpers.h</label>
-        <link refid="stringhelpers_8h"/>
-        <childnode refid="10892" relation="include">
-        </childnode>
-        <childnode refid="10895" relation="include">
-        </childnode>
-      </node>
       <node id="10893">
         <label>stdexcept</label>
+      </node>
+      <node id="10892">
+        <label>string</label>
       </node>
       <node id="10887">
         <label>src/lib/helper/PapiTracer.h</label>
@@ -43,8 +38,13 @@
         <childnode refid="10894" relation="include">
         </childnode>
       </node>
-      <node id="10892">
-        <label>string</label>
+      <node id="10894">
+        <label>helper/stringhelpers.h</label>
+        <link refid="stringhelpers_8h"/>
+        <childnode refid="10892" relation="include">
+        </childnode>
+        <childnode refid="10895" relation="include">
+        </childnode>
       </node>
       <node id="10891">
         <label>vector</label>
@@ -63,6 +63,14 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="10897">
+        <label>src/bin/perf_regression/main.cpp</label>
+        <link refid="bin_2perf__regression_2main_8cpp"/>
+      </node>
+      <node id="10899">
+        <label>src/lib/access/system/RequestParseTask.cpp</label>
+        <link refid="_request_parse_task_8cpp"/>
+      </node>
       <node id="10896">
         <label>src/lib/helper/PapiTracer.h</label>
         <link refid="PapiTracer.h"/>
@@ -75,10 +83,6 @@
         <childnode refid="10900" relation="include">
         </childnode>
       </node>
-      <node id="10899">
-        <label>src/lib/access/system/RequestParseTask.cpp</label>
-        <link refid="_request_parse_task_8cpp"/>
-      </node>
       <node id="10898">
         <label>src/lib/access/system/PlanOperation.cpp</label>
         <link refid="_plan_operation_8cpp"/>
@@ -86,10 +90,6 @@
       <node id="10900">
         <label>src/lib/access/system/ResponseTask.cpp</label>
         <link refid="_response_task_8cpp"/>
-      </node>
-      <node id="10897">
-        <label>src/bin/perf_regression/main.cpp</label>
-        <link refid="bin_2perf__regression_2main_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_tracing_error" prot="public">TracingError</innerclass>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/vagrant/lanice/src/lib/helper/PapiTracer.h" line="188" bodyfile="/home/vagrant/lanice/src/lib/helper/PapiTracer.h" bodystart="188" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/helper/PapiTracer.h" line="188" column="1" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/helper/PapiTracer.h" bodystart="188" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -128,7 +128,7 @@
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stringhelpers_8h" kindref="compound">helper/stringhelpers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="class_tracing_error" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_tracing_error" kindref="compound" tooltip="For errors generally related to tracing.">TracingError</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::runtime_error<sp/>{</highlight></codeline>
+<codeline lineno="16" refid="class_tracing_error" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_tracing_error" kindref="compound" tooltip="For errors generally related to tracing. ">TracingError</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::runtime_error<sp/>{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="18" refid="class_tracing_error_1a3f162ee0157e4fcce20bbf4da2725186" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_tracing_error_1a3f162ee0157e4fcce20bbf4da2725186" kindref="member">TracingError</ref>(std::string<sp/>what)<sp/>:<sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;TracingError:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>what)<sp/>{}</highlight></codeline>
 <codeline lineno="19"><highlight class="normal">};</highlight></codeline>
@@ -151,7 +151,7 @@
 <codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handle(Func<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/>ActivityT<sp/>activity,<sp/>Args&amp;&amp;...<sp/>args)<sp/>{</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retval<sp/>=<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">(std::forward&lt;Args&gt;(args)...);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retval<sp/>!=<sp/>PAPI_OK)</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_tracing_error" kindref="compound" tooltip="For errors generally related to tracing.">TracingError</ref>(std::string(activity)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>failed:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>PAPI_strerror(retval));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_tracing_error" kindref="compound" tooltip="For errors generally related to tracing. ">TracingError</ref>(std::string(activity)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>failed:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>PAPI_strerror(retval));</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initialize()<sp/>{</highlight></codeline>
@@ -161,7 +161,7 @@
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>guard(init_mtx);</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!initialized)<sp/>{</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(PAPI_library_init(PAPI_VER_CURRENT)<sp/>!=<sp/>PAPI_VER_CURRENT)</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_tracing_error" kindref="compound" tooltip="For errors generally related to tracing.">TracingError</ref>(</highlight><highlight class="stringliteral">&quot;PAPI<sp/>could<sp/>not<sp/>be<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_tracing_error" kindref="compound" tooltip="For errors generally related to tracing. ">TracingError</ref>(</highlight><highlight class="stringliteral">&quot;PAPI<sp/>could<sp/>not<sp/>be<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initialized<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -224,7 +224,7 @@
 <codeline lineno="136"><highlight class="normal"></highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>item<sp/>=<sp/>std::find(_counters.begin(),<sp/>_counters.end(),<sp/>eventName);</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item<sp/>==<sp/>_counters.end())</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_tracing_error" kindref="compound" tooltip="For errors generally related to tracing.">TracingError</ref>(</highlight><highlight class="stringliteral">&quot;Trying<sp/>to<sp/>access<sp/>unregistered<sp/>event<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>eventName<sp/>+</highlight><highlight class="stringliteral">&quot;&apos;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_tracing_error" kindref="compound" tooltip="For errors generally related to tracing. ">TracingError</ref>(</highlight><highlight class="stringliteral">&quot;Trying<sp/>to<sp/>access<sp/>unregistered<sp/>event<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>eventName<sp/>+</highlight><highlight class="stringliteral">&quot;&apos;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Available:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="stringhelpers_8h_1a9d6658fdfba931db8a145b18f63c89a3" kindref="member">joinString</ref>(_counters,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">));</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>std::distance(_counters.begin(),<sp/>item);</highlight></codeline>
 <codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_results.at(index);</highlight></codeline>
@@ -247,7 +247,7 @@
 <codeline lineno="165"><highlight class="normal"></highlight></codeline>
 <codeline lineno="166" refid="class_fallback_tracer_1a9e3aa7b6b579ce36e33a710885add6ea" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fallback_tracer_1a9e3aa7b6b579ce36e33a710885add6ea" kindref="member">start</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_counters.empty())</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_tracing_error" kindref="compound" tooltip="For errors generally related to tracing.">TracingError</ref>(</highlight><highlight class="stringliteral">&quot;No<sp/>events<sp/>set&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_tracing_error" kindref="compound" tooltip="For errors generally related to tracing. ">TracingError</ref>(</highlight><highlight class="stringliteral">&quot;No<sp/>events<sp/>set&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fallback_tracer_1ad6e529c8e48886a8920f3c5e7a2c2e21" kindref="member">_result</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>gettimeofday(&amp;<ref refid="class_fallback_tracer_1a8cdcec5aa29a05fc1d514f8e46f538e7" kindref="member">_start</ref>,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="171"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -261,7 +261,7 @@
 <codeline lineno="179" refid="class_fallback_tracer_1af1c617eeaf75d5c6737f849fe0e2bbd7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_fallback_tracer_1af1c617eeaf75d5c6737f849fe0e2bbd7" kindref="member">value</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>eventName)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>item<sp/>=<sp/>find(_counters.begin(),<sp/>_counters.end(),<sp/>eventName);</highlight></codeline>
 <codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item<sp/>==<sp/>_counters.end())</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_tracing_error" kindref="compound" tooltip="For errors generally related to tracing.">TracingError</ref>(</highlight><highlight class="stringliteral">&quot;Trying<sp/>to<sp/>access<sp/>unregistered<sp/>event<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>eventName<sp/>+</highlight><highlight class="stringliteral">&quot;&apos;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_tracing_error" kindref="compound" tooltip="For errors generally related to tracing. ">TracingError</ref>(</highlight><highlight class="stringliteral">&quot;Trying<sp/>to<sp/>access<sp/>unregistered<sp/>event<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>eventName<sp/>+</highlight><highlight class="stringliteral">&quot;&apos;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Available:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="stringhelpers_8h_1a9d6658fdfba931db8a145b18f63c89a3" kindref="member">joinString</ref>(_counters,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">));</highlight></codeline>
 <codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fallback_tracer_1ad6e529c8e48886a8920f3c5e7a2c2e21" kindref="member">_result</ref>;</highlight></codeline>
 <codeline lineno="185"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -274,6 +274,6 @@
 <codeline lineno="192"><highlight class="normal"></highlight></codeline>
 <codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_HELPER_PAPITRACER_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/vagrant/lanice/src/lib/helper/PapiTracer.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/helper/PapiTracer.h"/>
   </compounddef>
 </doxygen>

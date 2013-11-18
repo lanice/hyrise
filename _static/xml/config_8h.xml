@@ -1,60 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="config_8h" kind="file">
     <compoundname>config.h</compoundname>
     <includedby refid="layouter_2base_8h" local="yes">src/lib/layouter/base.h</includedby>
     <invincdepgraph>
-      <node id="13105">
-        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
-        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
-      </node>
-      <node id="13107">
-        <label>src/bin/perf_regression/SortScan.cpp</label>
-        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
-      </node>
-      <node id="13094">
-        <label>src/lib/layouter/base.h</label>
-        <link refid="layouter_2base_8h"/>
-        <childnode refid="13095" relation="include">
-        </childnode>
-        <childnode refid="13096" relation="include">
-        </childnode>
-        <childnode refid="13097" relation="include">
-        </childnode>
-      </node>
       <node id="13106">
         <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
         <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
       </node>
-      <node id="13096">
-        <label>src/lib/layouter/incremental.cpp</label>
-        <link refid="incremental_8cpp"/>
-      </node>
       <node id="13101">
         <label>src/bin/perf_regression/GroupByScan.cpp</label>
         <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
-      </node>
-      <node id="13093">
-        <label>src/lib/layouter/config.h</label>
-        <link refid="config.h"/>
-        <childnode refid="13094" relation="include">
-        </childnode>
-      </node>
-      <node id="13108">
-        <label>src/bin/perf_regression/UnionScan.cpp</label>
-        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
-      </node>
-      <node id="13104">
-        <label>src/bin/perf_regression/JoinScan.cpp</label>
-        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
-      </node>
-      <node id="13098">
-        <label>src/lib/access/Layouter.h</label>
-        <link refid="_layouter_8h"/>
-        <childnode refid="13099" relation="include">
-        </childnode>
-        <childnode refid="13100" relation="include">
-        </childnode>
       </node>
       <node id="13100">
         <label>src/lib/access.h</label>
@@ -76,9 +32,53 @@
         <childnode refid="13108" relation="include">
         </childnode>
       </node>
+      <node id="13104">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="13093">
+        <label>src/lib/layouter/config.h</label>
+        <link refid="config.h"/>
+        <childnode refid="13094" relation="include">
+        </childnode>
+      </node>
+      <node id="13107">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
+      </node>
+      <node id="13094">
+        <label>src/lib/layouter/base.h</label>
+        <link refid="layouter_2base_8h"/>
+        <childnode refid="13095" relation="include">
+        </childnode>
+        <childnode refid="13096" relation="include">
+        </childnode>
+        <childnode refid="13097" relation="include">
+        </childnode>
+      </node>
+      <node id="13105">
+        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
+      </node>
+      <node id="13099">
+        <label>src/lib/access/Layouter.cpp</label>
+        <link refid="_layouter_8cpp"/>
+      </node>
       <node id="13102">
         <label>src/bin/perf_regression/HashJoin.cpp</label>
         <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="13098">
+        <label>src/lib/access/Layouter.h</label>
+        <link refid="_layouter_8h"/>
+        <childnode refid="13099" relation="include">
+        </childnode>
+        <childnode refid="13100" relation="include">
+        </childnode>
+      </node>
+      <node id="13095">
+        <label>src/lib/layouter/base.cpp</label>
+        <link refid="base_8cpp"/>
       </node>
       <node id="13097">
         <label>src/lib/layouter/incremental.h</label>
@@ -88,17 +88,17 @@
         <childnode refid="13096" relation="include">
         </childnode>
       </node>
-      <node id="13099">
-        <label>src/lib/access/Layouter.cpp</label>
-        <link refid="_layouter_8cpp"/>
-      </node>
-      <node id="13095">
-        <label>src/lib/layouter/base.cpp</label>
-        <link refid="base_8cpp"/>
+      <node id="13096">
+        <label>src/lib/layouter/incremental.cpp</label>
+        <link refid="incremental_8cpp"/>
       </node>
       <node id="13103">
         <label>src/bin/perf_regression/HashValueJoin.cpp</label>
         <link refid="_hash_value_join_8cpp"/>
+      </node>
+      <node id="13108">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="structlayouter_1_1_layouter_configuration" prot="public">layouter::LayouterConfiguration</innerclass>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/vagrant/lanice/src/lib/layouter/config.h" line="5" bodyfile="/home/vagrant/lanice/src/lib/layouter/config.h" bodystart="5" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/layouter/config.h" line="5" column="9" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/layouter/config.h" bodystart="5" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="config_8h_1a8ff5142b8f9e0750772cdf9b00a8ea7c" prot="public" static="no">
         <name>HYRISE_COST</name>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/vagrant/lanice/src/lib/layouter/config.h" line="6" bodyfile="/home/vagrant/lanice/src/lib/layouter/config.h" bodystart="6" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/layouter/config.h" line="6" column="9" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/layouter/config.h" bodystart="6" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="config_8h_1a0e9c0c29eacb7a3c52b78a4f08e55891" prot="public" static="no">
         <name>ROW_COST</name>
@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/vagrant/lanice/src/lib/layouter/config.h" line="7" bodyfile="/home/vagrant/lanice/src/lib/layouter/config.h" bodystart="7" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/layouter/config.h" line="7" column="9" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/layouter/config.h" bodystart="7" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="config_8h_1ac349b1745933aeb7cfcbfb7a034f211c" prot="public" static="no">
         <name>COL_COST</name>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/vagrant/lanice/src/lib/layouter/config.h" line="8" bodyfile="/home/vagrant/lanice/src/lib/layouter/config.h" bodystart="8" bodyend="-1"/>
+        <location file="/home/lanice/develop/epic/hyrise/src/lib/layouter/config.h" line="8" column="9" bodyfile="/home/lanice/develop/epic/hyrise/src/lib/layouter/config.h" bodystart="8" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -174,6 +174,6 @@
 <codeline lineno="18"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_LAYOUTER_CONFIG_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/vagrant/lanice/src/lib/layouter/config.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/layouter/config.h"/>
   </compounddef>
 </doxygen>

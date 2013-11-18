@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="matrix_8h" kind="file">
     <compoundname>matrix.h</compoundname>
     <includes local="no">assert.h</includes>
@@ -16,6 +16,15 @@
       <node id="13186">
         <label>stdlib.h</label>
       </node>
+      <node id="13189">
+        <label>vector</label>
+      </node>
+      <node id="13188">
+        <label>sstream</label>
+      </node>
+      <node id="13187">
+        <label>iostream</label>
+      </node>
       <node id="13184">
         <label>src/lib/layouter/matrix.h</label>
         <link refid="matrix.h"/>
@@ -30,70 +39,15 @@
         <childnode refid="13189" relation="include">
         </childnode>
       </node>
-      <node id="13189">
-        <label>vector</label>
-      </node>
-      <node id="13188">
-        <label>sstream</label>
-      </node>
-      <node id="13187">
-        <label>iostream</label>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="13202">
-        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
-        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
-      </node>
-      <node id="13204">
-        <label>src/bin/perf_regression/SortScan.cpp</label>
-        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
-      </node>
-      <node id="13191">
-        <label>src/lib/layouter/base.h</label>
-        <link refid="layouter_2base_8h"/>
-        <childnode refid="13192" relation="include">
-        </childnode>
-        <childnode refid="13193" relation="include">
-        </childnode>
-        <childnode refid="13194" relation="include">
-        </childnode>
-      </node>
       <node id="13203">
         <label>src/bin/perf_regression/SimpleTableScan.cpp</label>
         <link refid="bin_2perf__regression_2_simple_table_scan_8cpp"/>
       </node>
-      <node id="13193">
-        <label>src/lib/layouter/incremental.cpp</label>
-        <link refid="incremental_8cpp"/>
-      </node>
       <node id="13198">
         <label>src/bin/perf_regression/GroupByScan.cpp</label>
         <link refid="bin_2perf__regression_2_group_by_scan_8cpp"/>
-      </node>
-      <node id="13190">
-        <label>src/lib/layouter/matrix.h</label>
-        <link refid="matrix.h"/>
-        <childnode refid="13191" relation="include">
-        </childnode>
-        <childnode refid="13192" relation="include">
-        </childnode>
-      </node>
-      <node id="13205">
-        <label>src/bin/perf_regression/UnionScan.cpp</label>
-        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
-      </node>
-      <node id="13201">
-        <label>src/bin/perf_regression/JoinScan.cpp</label>
-        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
-      </node>
-      <node id="13195">
-        <label>src/lib/access/Layouter.h</label>
-        <link refid="_layouter_8h"/>
-        <childnode refid="13196" relation="include">
-        </childnode>
-        <childnode refid="13197" relation="include">
-        </childnode>
       </node>
       <node id="13197">
         <label>src/lib/access.h</label>
@@ -115,9 +69,47 @@
         <childnode refid="13205" relation="include">
         </childnode>
       </node>
+      <node id="13201">
+        <label>src/bin/perf_regression/JoinScan.cpp</label>
+        <link refid="bin_2perf__regression_2_join_scan_8cpp"/>
+      </node>
+      <node id="13204">
+        <label>src/bin/perf_regression/SortScan.cpp</label>
+        <link refid="bin_2perf__regression_2_sort_scan_8cpp"/>
+      </node>
+      <node id="13191">
+        <label>src/lib/layouter/base.h</label>
+        <link refid="layouter_2base_8h"/>
+        <childnode refid="13192" relation="include">
+        </childnode>
+        <childnode refid="13193" relation="include">
+        </childnode>
+        <childnode refid="13194" relation="include">
+        </childnode>
+      </node>
+      <node id="13202">
+        <label>src/bin/perf_regression/ProjectionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_projection_scan_8cpp"/>
+      </node>
+      <node id="13196">
+        <label>src/lib/access/Layouter.cpp</label>
+        <link refid="_layouter_8cpp"/>
+      </node>
       <node id="13199">
         <label>src/bin/perf_regression/HashJoin.cpp</label>
         <link refid="_hash_join_8cpp"/>
+      </node>
+      <node id="13195">
+        <label>src/lib/access/Layouter.h</label>
+        <link refid="_layouter_8h"/>
+        <childnode refid="13196" relation="include">
+        </childnode>
+        <childnode refid="13197" relation="include">
+        </childnode>
+      </node>
+      <node id="13192">
+        <label>src/lib/layouter/base.cpp</label>
+        <link refid="base_8cpp"/>
       </node>
       <node id="13194">
         <label>src/lib/layouter/incremental.h</label>
@@ -127,17 +119,25 @@
         <childnode refid="13193" relation="include">
         </childnode>
       </node>
-      <node id="13196">
-        <label>src/lib/access/Layouter.cpp</label>
-        <link refid="_layouter_8cpp"/>
-      </node>
-      <node id="13192">
-        <label>src/lib/layouter/base.cpp</label>
-        <link refid="base_8cpp"/>
+      <node id="13193">
+        <label>src/lib/layouter/incremental.cpp</label>
+        <link refid="incremental_8cpp"/>
       </node>
       <node id="13200">
         <label>src/bin/perf_regression/HashValueJoin.cpp</label>
         <link refid="_hash_value_join_8cpp"/>
+      </node>
+      <node id="13205">
+        <label>src/bin/perf_regression/UnionScan.cpp</label>
+        <link refid="bin_2perf__regression_2_union_scan_8cpp"/>
+      </node>
+      <node id="13190">
+        <label>src/lib/layouter/matrix.h</label>
+        <link refid="matrix.h"/>
+        <childnode refid="13191" relation="include">
+        </childnode>
+        <childnode refid="13192" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="structadj__t" prot="public">adj_t</innerclass>
@@ -191,7 +191,7 @@
 <codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Skalar<sp/>Operators</highlight></codeline>
 <codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/>T<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>col)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix&lt;T&gt;</ref><sp/>&amp;</highlight><highlight class="keyword">set</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>col,<sp/>T<sp/>val);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix&lt;T&gt;</ref><sp/>&amp;<ref refid="class_matrix_1a38509c26c889b09652ecae906614e7e8" kindref="member">set</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>col,<sp/>T<sp/>val);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Graph<sp/>Ops</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>columns</highlight><highlight class="normal"></highlight></codeline>
@@ -309,6 +309,6 @@
 <codeline lineno="160"><highlight class="normal"></highlight></codeline>
 <codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>SRC_LIB_LAYOUTER_MATRIX_H_</highlight></codeline>
     </programlisting>
-    <location file="/home/vagrant/lanice/src/lib/layouter/matrix.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/layouter/matrix.h"/>
   </compounddef>
 </doxygen>

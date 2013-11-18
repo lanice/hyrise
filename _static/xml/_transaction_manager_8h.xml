@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="_transaction_manager_8h" kind="file">
     <compoundname>TransactionManager.h</compoundname>
     <includes local="no">algorithm</includes>
@@ -38,6 +38,20 @@
       <node id="12814">
         <label>stdint.h</label>
       </node>
+      <node id="12805">
+        <label>helper/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="12806" relation="include">
+        </childnode>
+        <childnode refid="12807" relation="include">
+        </childnode>
+        <childnode refid="12808" relation="include">
+        </childnode>
+        <childnode refid="12804" relation="include">
+        </childnode>
+        <childnode refid="12809" relation="include">
+        </childnode>
+      </node>
       <node id="12813">
         <label>stdexcept</label>
       </node>
@@ -47,6 +61,23 @@
       <node id="12798">
         <label>map</label>
       </node>
+      <node id="12815">
+        <label>ostream</label>
+      </node>
+      <node id="12809">
+        <label>vector</label>
+      </node>
+      <node id="12810">
+        <label>io/TXContext.h</label>
+        <link refid="_t_x_context_8h"/>
+        <childnode refid="12805" relation="include">
+        </childnode>
+        <childnode refid="12811" relation="include">
+        </childnode>
+      </node>
+      <node id="12811">
+        <label>cereal/cereal.hpp</label>
+      </node>
       <node id="12801">
         <label>helper/locking.h</label>
         <link refid="locking_8h"/>
@@ -54,9 +85,6 @@
         </childnode>
         <childnode refid="12797" relation="include">
         </childnode>
-      </node>
-      <node id="12815">
-        <label>ostream</label>
       </node>
       <node id="12812">
         <label>storage/storage_types.h</label>
@@ -72,28 +100,14 @@
         <childnode refid="12815" relation="include">
         </childnode>
       </node>
-      <node id="12809">
-        <label>vector</label>
+      <node id="12800">
+        <label>unordered_map</label>
       </node>
       <node id="12803">
         <label>helper/Synchronized.h</label>
         <link refid="_synchronized_8h"/>
         <childnode refid="12804" relation="include">
         </childnode>
-      </node>
-      <node id="12811">
-        <label>cereal/cereal.hpp</label>
-      </node>
-      <node id="12810">
-        <label>io/TXContext.h</label>
-        <link refid="_t_x_context_8h"/>
-        <childnode refid="12805" relation="include">
-        </childnode>
-        <childnode refid="12811" relation="include">
-        </childnode>
-      </node>
-      <node id="12800">
-        <label>unordered_map</label>
       </node>
       <node id="12795">
         <label>src/lib/io/TransactionManager.h</label>
@@ -128,72 +142,38 @@
       <node id="12796">
         <label>algorithm</label>
       </node>
-      <node id="12805">
-        <label>helper/types.h</label>
-        <link refid="types_8h"/>
-        <childnode refid="12806" relation="include">
-        </childnode>
-        <childnode refid="12807" relation="include">
-        </childnode>
-        <childnode refid="12808" relation="include">
-        </childnode>
-        <childnode refid="12804" relation="include">
-        </childnode>
-        <childnode refid="12809" relation="include">
-        </childnode>
-      </node>
       <node id="12804">
         <label>memory</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="12821">
-        <label>src/lib/access/storage/JsonTable.cpp</label>
-        <link refid="_json_table_8cpp"/>
+      <node id="12824">
+        <label>src/lib/access/tx/Commit.cpp</label>
+        <link refid="_commit_8cpp"/>
       </node>
       <node id="12828">
         <label>src/lib/io/TransactionRouteHandler.cpp</label>
         <link refid="_transaction_route_handler_8cpp"/>
       </node>
-      <node id="12829">
-        <label>src/lib/storage/Store.cpp</label>
-        <link refid="_store_8cpp"/>
-      </node>
       <node id="12822">
         <label>src/lib/access/system/RequestParseTask.cpp</label>
         <link refid="_request_parse_task_8cpp"/>
       </node>
-      <node id="12827">
-        <label>src/lib/io/TransactionManager.cpp</label>
-        <link refid="_transaction_manager_8cpp"/>
-      </node>
-      <node id="12819">
-        <label>src/lib/access/InsertScan.cpp</label>
-        <link refid="_insert_scan_8cpp"/>
-      </node>
-      <node id="12817">
-        <label>src/bin/perf_regression/tx_performance.cpp</label>
-        <link refid="tx__performance_8cpp"/>
-      </node>
-      <node id="12823">
-        <label>src/lib/access/system/ResponseTask.cpp</label>
-        <link refid="_response_task_8cpp"/>
-      </node>
-      <node id="12818">
-        <label>src/lib/access/Delete.cpp</label>
-        <link refid="_delete_8cpp"/>
+      <node id="12821">
+        <label>src/lib/access/storage/JsonTable.cpp</label>
+        <link refid="_json_table_8cpp"/>
       </node>
       <node id="12820">
         <label>src/lib/access/PosUpdateScan.cpp</label>
         <link refid="_pos_update_scan_8cpp"/>
       </node>
-      <node id="12824">
-        <label>src/lib/access/tx/Commit.cpp</label>
-        <link refid="_commit_8cpp"/>
+      <node id="12829">
+        <label>src/lib/storage/Store.cpp</label>
+        <link refid="_store_8cpp"/>
       </node>
-      <node id="12826">
-        <label>src/lib/access/tx/ValidatePositions.cpp</label>
-        <link refid="_validate_positions_8cpp"/>
+      <node id="12819">
+        <label>src/lib/access/InsertScan.cpp</label>
+        <link refid="_insert_scan_8cpp"/>
       </node>
       <node id="12816">
         <label>src/lib/io/TransactionManager.h</label>
@@ -225,9 +205,29 @@
         <childnode refid="12829" relation="include">
         </childnode>
       </node>
+      <node id="12826">
+        <label>src/lib/access/tx/ValidatePositions.cpp</label>
+        <link refid="_validate_positions_8cpp"/>
+      </node>
       <node id="12825">
         <label>src/lib/access/tx/Rollback.cpp</label>
         <link refid="_rollback_8cpp"/>
+      </node>
+      <node id="12823">
+        <label>src/lib/access/system/ResponseTask.cpp</label>
+        <link refid="_response_task_8cpp"/>
+      </node>
+      <node id="12817">
+        <label>src/bin/perf_regression/tx_performance.cpp</label>
+        <link refid="tx__performance_8cpp"/>
+      </node>
+      <node id="12827">
+        <label>src/lib/io/TransactionManager.cpp</label>
+        <link refid="_transaction_manager_8cpp"/>
+      </node>
+      <node id="12818">
+        <label>src/lib/access/Delete.cpp</label>
+        <link refid="_delete_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classhyrise_1_1tx_1_1_t_x_modifications" prot="public">hyrise::tx::TXModifications</innerclass>
@@ -304,7 +304,7 @@
 <codeline lineno="62" refid="structhyrise_1_1tx_1_1_t_x_data_1ac97b8209c1d5612f2f40bb7eae79a544" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structhyrise_1_1tx_1_1_t_x_data_1ac97b8209c1d5612f2f40bb7eae79a544" kindref="member">TXData</ref>(<ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref><sp/>ctx)<sp/>:<sp/><ref refid="structhyrise_1_1tx_1_1_t_x_data_1a964a77b5fa8c326c204945065aba3872" kindref="member">_context</ref>(ctx)<sp/>{}</highlight></codeline>
 <codeline lineno="63"><highlight class="normal">}<sp/><ref refid="namespacehyrise_1_1tx_1aa313640015d76af5cb69a00655d4a0cc" kindref="member">TransactionData</ref>;</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="classhyrise_1_1tx_1_1_transaction_manager" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1tx_1_1_transaction_manager" kindref="compound" tooltip="Transaction manager based on transaction contexts.">TransactionManager</ref><sp/>{</highlight></codeline>
+<codeline lineno="66" refid="classhyrise_1_1tx_1_1_transaction_manager" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhyrise_1_1tx_1_1_transaction_manager" kindref="compound" tooltip="Transaction manager based on transaction contexts. ">TransactionManager</ref><sp/>{</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="71"></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structhyrise_1_1tx_1_1_t_x_context" kindref="compound">TXContext</ref><sp/><ref refid="group___transaction_1gaec6847072bba8cdf2917268d9bb6b43b" kindref="member">beginTransaction</ref>();</highlight></codeline>
@@ -320,7 +320,7 @@
 <codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;TXContext&gt;<sp/><ref refid="group___transaction_1ga10e36ee27cd9e7412b57531636d8a135" kindref="member">getRunningTransactionContexts</ref>();</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Singleton<sp/>Constructor</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager" kindref="compound" tooltip="Transaction manager based on transaction contexts.">TransactionManager</ref>&amp;<sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" kindref="member">getInstance</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager" kindref="compound" tooltip="Transaction manager based on transaction contexts. ">TransactionManager</ref>&amp;<sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a7d18ac2a3ae9dcd70301d715070798a2" kindref="member">getInstance</ref>();</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>last<sp/>valid<sp/>commit<sp/>id<sp/>for<sp/>visibility</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/><ref refid="namespacehyrise_1_1tx_1a3f8f9dae75e3e1872247b082f80ffd77" kindref="member">transaction_id_t</ref><sp/><ref refid="classhyrise_1_1tx_1_1_transaction_manager_1a196c28d46f96ad76d98066f943d18ae0" kindref="member">getLastCommitId</ref>();</highlight></codeline>
@@ -381,6 +381,6 @@
 <codeline lineno="167"><highlight class="normal"></highlight></codeline>
 <codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/vagrant/lanice/src/lib/io/TransactionManager.h"/>
+    <location file="/home/lanice/develop/epic/hyrise/src/lib/io/TransactionManager.h"/>
   </compounddef>
 </doxygen>

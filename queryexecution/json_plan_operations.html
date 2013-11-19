@@ -245,10 +245,14 @@ Handling this data is implemented in <tt class="docutils literal"><span class="p
 <tr class="row-even"><td>9</td>
 <td>MULTI_EQ</td>
 </tr>
+<tr class="row-odd"><td>16</td>
+<td>LIKE</td>
+</tr>
 </tbody>
 </table>
 </dd>
 </dl>
+<p>The <tt class="docutils literal"><span class="pre">LIKE</span></tt> expression expects a regular expression for regex <tt class="docutils literal"><span class="pre">(&quot;a*b.b(ca)*&quot;</span> <span class="pre">matches</span> <span class="pre">&quot;aaabwbcaca&quot;)</span></tt></p>
 <p><tt class="docutils literal"><span class="pre">&quot;in&quot;:</span> <span class="pre">0</span></tt> simply refers to the fact, that we&#8217;re performing the selection on the first table.</p>
 <p><tt class="docutils literal"><span class="pre">&quot;f&quot;:</span> <span class="pre">&quot;NAME1&quot;</span></tt> first argument for logical operation. Here &#8220;type&#8221;: 1 (less than).</p>
 <dl class="docutils">

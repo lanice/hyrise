@@ -99,8 +99,11 @@ Use ``"positions: true"`` to save row positions rather than rows in the intermed
         7   OR
         8   NOT
         9   MULTI_EQ
+        16  LIKE
         == ==========
         
+    The ``LIKE`` expression expects a regular expression for regex ``("a*b.b(ca)*" matches "aaabwbcaca")``
+
     ``"in": 0`` simply refers to the fact, that we're performing the selection on the first table. 
     
     ``"f": "NAME1"`` first argument for logical operation. Here "type": 1 (less than).

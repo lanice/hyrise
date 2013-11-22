@@ -172,8 +172,7 @@ below</p>
 <div class="section" id="query-execution">
 <h2>Query Execution<a class="headerlink" href="#query-execution" title="Permalink to this headline">¶</a></h2>
 <p>To send these queries to Hyrise, after starting the Server (<a class="reference internal" href="tutorial1_starting_the_server.html"><em>Starting the Hyrise Server</em></a>), you can post them as JSON-String (usually from a file) via the HTTP interface to Hyrise</p>
-<div class="highlight-c++"><div class="highlight"><pre><span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="n">urlencode</span> <span class="s">&quot;query@test/gettingstarted.json&quot;</span>
-<span class="nl">http:</span><span class="c1">//localhost:5000/jsonQuery</span>
+<div class="highlight-c++"><div class="highlight"><pre><span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="n">urlencode</span> <span class="s">&quot;query@test/gettingstarted.json&quot;</span> <span class="o">--</span><span class="n">data</span> <span class="s">&quot;performance=true&quot;</span> <span class="n">http</span><span class="o">:</span><span class="c1">//localhost:5000/jsonQuery</span>
 </pre></div>
 </div>
 </div>

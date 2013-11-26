@@ -1,6 +1,3 @@
-.. highlight:: javascript
-   :linenothreshold: 5
-
 #######################
 HYRISE Query Execution
 #######################
@@ -16,11 +13,11 @@ experiments with different settings.
     :glob:
     :titlesonly:
     
-    queryexecution/json_query_execution
-    queryexecution/json_queries
-    queryexecution/available_operators
-    queryexecution/parallelization
-    queryexecution/json_plan_operations
-    queryexecution/tx
-    queryexecution/v8ops
+    /queryexecution/json_query_execution
+    /queryexecution/json_queries
+    /queryexecution/available_operators
+    /queryexecution/parallelization
+    /queryexecution/json_plan_operations
+    /queryexecution/tx
+    /queryexecution/v8ops
 

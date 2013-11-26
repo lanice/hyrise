@@ -7,6 +7,5 @@ Getting Started
     :glob:
     :titlesonly:
 
-    gettingstarted/installing_hyrise    
-    gettingstarted/tutorial*
-
+    /gettingstarted/installing_hyrise    
+    /gettingstarted/tutorial*

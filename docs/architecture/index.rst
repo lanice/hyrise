@@ -12,10 +12,10 @@ certain architectural decisions.
     :titlesonly:
     :maxdepth: 1
 
-    architecture/architecture
-    architecture/layouter
-    architecture/loading
-    architecture/statistics
-    architecture/planops
+    /architecture/architecture
+    /architecture/layouter
+    /architecture/loading
+    /architecture/statistics
+    /architecture/planops
 
-    architecture/*
+    /architecture/*

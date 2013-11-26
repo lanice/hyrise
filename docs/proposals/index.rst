@@ -7,7 +7,4 @@ Proposals
     :glob:
     :titlesonly:
 
-    proposals/*
-    
-
-
+    overview

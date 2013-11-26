@@ -1,21 +1,24 @@
 pre {
-  border-radius: 3px;
-  border: 1px solid silver;
-  background: white;
-  padding: 0px 5px;
+  border-radius: 0;
+  border: 1px solid #eee;
   line-height: 20px;
+  background: white;
+  padding: 2px 5px;
+  line-height: 20px;
+  box-shadow: 0 0 20px -10px inset;
 }
 
 table.highlighttable {
   display: block;
   position: relative;
-  border: 1px solid silver;
-  border-radius: 3px;
+  border: 1px solid #eee;
+  border-radius: 0;
   overflow: auto;
+  box-shadow: 0 0 20px -10px inset;
 }
 
 .linenodiv {
-  background: #eee;
+  background: rgba(200,200,200,0.3);
   width: 30px;
   text-align: center;
   opacity: .7;
@@ -39,7 +42,8 @@ table.highlighttable {
   margin: 0;
   padding: 0;
   line-height: 20px;
-  background: white;
+  background: transparent;
+  box-shadow: none;
   border-radius: 0;
   margin-left: 10px;
   white-space: pre;
@@ -64,6 +68,9 @@ table.highlighttable {
   background-color: white;
 }
 
+.highlighttable .highlight {
+  background: transparent;
+}
 
 .c { color: #999988; font-style: italic } /* Comment */
 .err { color: #a61717; background-color: #e3d2d2 } /* Error */

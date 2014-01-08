@@ -13,10 +13,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav topnav">
-        <li {%- if pagename == 'index' %} class="active" {% endif %}><a href="{{ pathto(master_doc) }}">Home</a></li>
-        <li {%- if pagename == 'documentation' or (parents[0] and parents[0].link == pathto('documentation/overview')) %} class="active" {% endif %}><a href="{{ pathto('documentation/overview') }}">Documentation</a></li>
+        <li {%- if pagename == 'index' %} class="active" {% endif %}><a href="{{ pathto('index') }}">Home</a></li>
+        <li {%- if pagename != 'index' and pagename != 'people' and pagename != 'publications' %} class="active" {% endif %}><a href="{{ pathto('documentation/index') }}">{{ pagename }}</a></li>
         <li {%- if pagename == 'people' %} class="active" {% endif %}><a href="{{ pathto('people') }}">People</a></li>
-        <li {%- if pagename == 'projects' %} class="active" {% endif %}><a href="{{ pathto('projects') }}">Projects</a></li>
+        <!-- <li {%- if pagename == 'projects' %} class="active" {% endif %}><a href="{{ pathto('projects') }}">Projects</a></li> -->
         <li {%- if pagename == 'publications' %} class="active" {% endif %}><a href="{{ pathto('publications') }}">Publications</a></li>
       </ul>
 

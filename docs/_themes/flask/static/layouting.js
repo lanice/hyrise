@@ -7,7 +7,7 @@
 
 		var $body = $('body');
 		var $menu = $('.hyrisesidebar');
-		var $list = $menu.find('ul:first');
+		var $list = $menu.find('.localtoc ul:first');
 
 		var moveNavigation = function() {
 			var $this = $(window);

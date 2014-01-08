@@ -69,7 +69,6 @@ Loaders
 =======
 
 .. toctree::
-    :titlesonly:
 
     loading/index
     loading/mysql

@@ -10,12 +10,12 @@ certain architectural decisions.
 .. toctree::
     :glob:
     :titlesonly:
-    :maxdepth: 1
+    :maxdepth: 3
 
-    /architecture/architecture
-    /architecture/layouter
-    /architecture/loading
-    /architecture/statistics
-    /architecture/planops
+    architecture
+    layouter
+    loading
+    statistics
+    planops
 
-    /architecture/*
+    *

@@ -1,5 +1,5 @@
 =============================
-HYRISE documentation
+HYRISE introduction
 =============================
 
 
@@ -46,19 +46,19 @@ Read more
 
 You are interested? Have a look at the :doc:`documentation <documentation/index>`.
 
-.. toctree::
-    :hidden:
+.. .. toctree::
+..     :hidden:
 
-    index
+..     index
 
-.. toctree::
-    :maxdepth: 1
+.. .. toctree::
+..     :maxdepth: 1
 
-    /documentation/index
-    /gettingstarted/index
-    /architecture/index
-    /queryexecution/index
-    /developing/index
-    /faq/index
-    /proposals/index
-    /doxygen/index
+..     /documentation/index
+..     /gettingstarted/index
+..     /architecture/index
+..     /queryexecution/index
+..     /developing/index
+..     /faq/index
+..     /proposals/index
+..     /doxygen/index

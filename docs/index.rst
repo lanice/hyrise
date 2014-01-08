@@ -51,14 +51,14 @@ You are interested? Have a look at the :doc:`documentation <documentation/index>
 
 ..     index
 
-.. .. toctree::
-..     :maxdepth: 1
+.. toctree::
+    :maxdepth: 1
 
-..     /documentation/index
-..     /gettingstarted/index
-..     /architecture/index
-..     /queryexecution/index
-..     /developing/index
-..     /faq/index
-..     /proposals/index
-..     /doxygen/index
+    documentation/index
+    documentation/gettingstarted/index
+    documentation/architecture/index
+    documentation/queryexecution/index
+    documentation/developing/index
+    documentation/faq/index
+    documentation/proposals/index
+    doxygen/index

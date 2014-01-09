@@ -1,0 +1,249 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MySQL Loader &mdash; HYRISE latest documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/breathe.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     'latest',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="HYRISE latest documentation" href="../../../index.html" />
+    <link rel="up" title="Loading" href="../loading.html" />
+    <link rel="next" title="Query Statistics" href="../statistics.html" />
+    <link rel="prev" title="Loading" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  <link rel="stylesheet" href="../../../_static/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/hyrise_template.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/hyrise.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/hyrise-pygments.css" type="text/css" />
+
+  <script src="../../../_static/jquery-1.9.1.js"></script>
+  <script src="../../../_static/jquery-fix.js"></script>
+  <script src="../../../_static/bootstrap.js"></script>
+  <script src="../../../_static/layouting.js"></script>
+
+  </head>
+  <body>
+  
+  
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../statistics.html" title="Query Statistics"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Loading"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../contents.html">HYRISE latest documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Implementation Details</a> &raquo;</li>
+          <li><a href="../loading.html" accesskey="U">Loading</a> &raquo;</li> 
+      </ul>
+    </div>
+  <div class="wrapper">
+    <div class="inner-wrapper">
+        <div class="container"><div class="navbar-wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top container" role="navigation" id="menu">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav topnav">
+        <li><a href="../../../index.html">Home</a></li>
+        <li class="active" ><a href="../../index.html">Documentation</a></li>
+        <li><a href="../../../people.html">People</a></li>
+        <!-- <li><a href="../../../projects.html">Projects</a></li> -->
+        <li><a href="../../../publications.html">Publications</a></li>
+      </ul>
+
+      <h1>MySQL Loader</h1>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+</div>
+            <div class="row">
+              
+  <div class="col-md-3">
+    <div class="hyrisesidebar nav">
+  <h3><a href="../../../contents.html">Contents</a></h3>
+  <div class='localtoc'>
+	<ul>
+<li><a class="reference internal" href="#">MySQL Loader</a><ul>
+<li><a class="reference internal" href="#additional-dependencies">Additional dependencies</a></li>
+<li><a class="reference internal" href="#environment-variables">Environment Variables</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#implementation-details">Implementation details</a></li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Implementation Details</a><ul>
+  <li><a href="../loading.html">Loading</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Loading</a></li>
+      <li>Next: <a href="../statistics.html" title="next chapter">Query Statistics</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/documentation/architecture/loading/mysql.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+  </div>
+              <div class="col-md-9" role="main">
+                
+  <div class="section" id="mysql-loader">
+<h1>MySQL Loader<a class="headerlink" href="#mysql-loader" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">MySQLInput is only available when compiled with WITH_MYSQL as
+described in <a class="reference internal" href="../../developing/build_environment.html"><em>Setup Build Environment</em></a>.</p>
+</div>
+<div class="section" id="additional-dependencies">
+<span id="sqldep"></span><h2>Additional dependencies<a class="headerlink" href="#additional-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>The following dependencies are needed once WITH_MYSQL has been activated:</p>
+<ul class="simple">
+<li>libmysqlcppconn-dev</li>
+<li>libmysqlclient-dev</li>
+</ul>
+</div>
+<div class="section" id="environment-variables">
+<h2>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<p>The following environment variables can be used to influence the
+default initialization values of <em>MySQLInput</em>:</p>
+<ul class="simple">
+<li>HYRISE_MYSQL_HOST</li>
+<li>HYRISE_MYSQL_PORT</li>
+<li>HYRISE_MYSQL_USER</li>
+<li>HYRISE_MYSQL_PASS</li>
+</ul>
+<p>Yet, for specific implementations of functionality, one might rather
+want to use the parameters defined with <cite>MySQLInput::params()</cite>.</p>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>Connection settings:</p>
+<dl class="docutils">
+<dt>Host <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><ul class="first last simple">
+<li>defaults to environment variable <cite>HYRISE_MYSQL_HOST</cite></li>
+<li>otherwise falls back to <cite>127.0.0.1</cite></li>
+</ul>
+</dd>
+<dt>Port <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><ul class="first last simple">
+<li>defaults to environment variable <cite>HYRISE_MYSQL_PORT</cite></li>
+<li>otherwise falls back to <cite>3306</cite></li>
+</ul>
+</dd>
+<dt>User <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><ul class="first last simple">
+<li>defaults to environment variable <cite>HYRISE_MYSQL_USER</cite></li>
+<li>otherwise falls back to <cite>root</cite></li>
+</ul>
+</dd>
+<dt>Pass <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><ul class="first last simple">
+<li>defaults to environment variable <cite>HYRISE_MYSQL_PASS</cite></li>
+<li>otherwise falls back to <cite>root</cite></li>
+</ul>
+</dd>
+</dl>
+<p>Import settings:</p>
+<dl class="docutils">
+<dt>Schema <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><ul class="first last simple">
+<li>set for table schema</li>
+</ul>
+</dd>
+<dt>Table <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><ul class="first last simple">
+<li>set for table to import</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="implementation-details">
+<h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h2>
+<p>In order to translate MySQL types to HYRISE types, in
+<cite>MySQLLoader.cpp</cite> defines a data structure named <cite>translations</cite>. It
+holds all the information necessary for the loader to translate a
+column from MySQL to HYRISE, namely maps MySQL column names to HYRISE
+column types and conversion functions. Imports will fail unless all
+columns can be properly converted, thus when you encounter a type not
+yet covered by translations, either open a ticket or fix it by
+providing your own method.</p>
+</div>
+</div>
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="footer">
+        &copy; Copyright 2010-2013, Martin Grund et al.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+      </div>
+
+    </div>
+  </div>
+
+
+
+  </body>
+</html>

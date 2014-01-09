@@ -1,0 +1,160 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Starting the Hyrise Server &mdash; HYRISE latest documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/breathe.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     'latest',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="HYRISE latest documentation" href="../../index.html" />
+    <link rel="up" title="Getting Started" href="index.html" />
+    <link rel="next" title="Querying with Hyrise" href="tutorial2_querying.html" />
+    <link rel="prev" title="Installing Hyrise" href="installing_hyrise.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  <link rel="stylesheet" href="../../_static/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise_template.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise-pygments.css" type="text/css" />
+
+  <script src="../../_static/jquery-1.9.1.js"></script>
+  <script src="../../_static/jquery-fix.js"></script>
+  <script src="../../_static/bootstrap.js"></script>
+  <script src="../../_static/layouting.js"></script>
+
+  </head>
+  <body>
+  
+  
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tutorial2_querying.html" title="Querying with Hyrise"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="installing_hyrise.html" title="Installing Hyrise"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../contents.html">HYRISE latest documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Getting Started</a> &raquo;</li> 
+      </ul>
+    </div>
+  <div class="wrapper">
+    <div class="inner-wrapper">
+        <div class="container"><div class="navbar-wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top container" role="navigation" id="menu">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav topnav">
+        <li><a href="../../index.html">Home</a></li>
+        <li class="active" ><a href="../index.html">Documentation</a></li>
+        <li><a href="../../people.html">People</a></li>
+        <!-- <li><a href="../../projects.html">Projects</a></li> -->
+        <li><a href="../../publications.html">Publications</a></li>
+      </ul>
+
+      <h1>Starting the Hyrise Server</h1>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+</div>
+            <div class="row">
+              
+  <div class="col-md-3">
+    <div class="hyrisesidebar nav"><h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="index.html">Getting Started</a><ul>
+      <li>Previous: <a href="installing_hyrise.html" title="previous chapter">Installing Hyrise</a></li>
+      <li>Next: <a href="tutorial2_querying.html" title="next chapter">Querying with Hyrise</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/documentation/gettingstarted/tutorial1_starting_the_server.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+  </div>
+              <div class="col-md-9" role="main">
+                
+  <div class="section" id="starting-the-hyrise-server">
+<h1>Starting the Hyrise Server<a class="headerlink" href="#starting-the-hyrise-server" title="Permalink to this headline">¶</a></h1>
+<p>Before starting the server, you have to configure Hyrise and tell it where to find the table data directory. This directory has to exist already. In this Hyrise version most tables are in the /test directory of the project</p>
+<div class="highlight-c++"><pre>cd hyrise
+export HYRISE_DB_PATH=`pwd`/test</pre>
+</div>
+<p>Export the library directory with the &#8216;export&#8217; command</p>
+<div class="highlight-c++"><pre>export LD_LIBRARY_PATH=./build/:$LD_LIBRARY_PATH</pre>
+</div>
+<p>Finally you can start the server</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="p">.</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">hyrise_server</span> <span class="o">-</span><span class="n">l</span> <span class="p">.</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">log</span><span class="p">.</span><span class="n">properties</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5000</span>
+</pre></div>
+</div>
+</div>
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="footer">
+        &copy; Copyright 2010-2013, Martin Grund et al.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+      </div>
+
+    </div>
+  </div>
+
+
+
+  </body>
+</html>

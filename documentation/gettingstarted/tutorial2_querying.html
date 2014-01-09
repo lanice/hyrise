@@ -1,0 +1,199 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Querying with Hyrise &mdash; HYRISE latest documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/breathe.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     'latest',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="HYRISE latest documentation" href="../../index.html" />
+    <link rel="up" title="Getting Started" href="index.html" />
+    <link rel="next" title="Loading from MySQL" href="tutorial3_mysql_load.html" />
+    <link rel="prev" title="Starting the Hyrise Server" href="tutorial1_starting_the_server.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  <link rel="stylesheet" href="../../_static/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise_template.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise-pygments.css" type="text/css" />
+
+  <script src="../../_static/jquery-1.9.1.js"></script>
+  <script src="../../_static/jquery-fix.js"></script>
+  <script src="../../_static/bootstrap.js"></script>
+  <script src="../../_static/layouting.js"></script>
+
+  </head>
+  <body>
+  
+  
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tutorial3_mysql_load.html" title="Loading from MySQL"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tutorial1_starting_the_server.html" title="Starting the Hyrise Server"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../contents.html">HYRISE latest documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Getting Started</a> &raquo;</li> 
+      </ul>
+    </div>
+  <div class="wrapper">
+    <div class="inner-wrapper">
+        <div class="container"><div class="navbar-wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top container" role="navigation" id="menu">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav topnav">
+        <li><a href="../../index.html">Home</a></li>
+        <li class="active" ><a href="../index.html">Documentation</a></li>
+        <li><a href="../../people.html">People</a></li>
+        <!-- <li><a href="../../projects.html">Projects</a></li> -->
+        <li><a href="../../publications.html">Publications</a></li>
+      </ul>
+
+      <h1>Querying with Hyrise</h1>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+</div>
+            <div class="row">
+              
+  <div class="col-md-3">
+    <div class="hyrisesidebar nav">
+  <h3><a href="../../contents.html">Contents</a></h3>
+  <div class='localtoc'>
+	<ul>
+<li><a class="reference internal" href="#">Querying with Hyrise</a><ul>
+<li><a class="reference internal" href="#json-queries">JSON Queries</a></li>
+<li><a class="reference internal" href="#query-execution">Query Execution</a></li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="index.html">Getting Started</a><ul>
+      <li>Previous: <a href="tutorial1_starting_the_server.html" title="previous chapter">Starting the Hyrise Server</a></li>
+      <li>Next: <a href="tutorial3_mysql_load.html" title="next chapter">Loading from MySQL</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/documentation/gettingstarted/tutorial2_querying.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+  </div>
+              <div class="col-md-9" role="main">
+                
+  <div class="section" id="querying-with-hyrise">
+<h1>Querying with Hyrise<a class="headerlink" href="#querying-with-hyrise" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="json-queries">
+<span id="qexec"></span><h2>JSON Queries<a class="headerlink" href="#json-queries" title="Permalink to this headline">¶</a></h2>
+<p>At the moment Hyrise only accepts queries in Javascript Object Notation. These JSON Queries are a different representation of the original flow graph of the query plan. Basically a k-v map defines all operators that are connected using edges. For more details on how to write queries and how they are processed go to <a class="reference internal" href="../queryexecution/json_queries.html"><em>JSON Queries</em></a> and check <a class="reference internal" href="../queryexecution/json_plan_operations.html#jsonplanops"><em>Plan Operations</em></a> for a list of available operators. An example for a simple query plan is defined
+below</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;papi&quot;</span><span class="o">:</span> <span class="s">&quot;PAPI_L1_DCA&quot;</span><span class="p">,</span>
+    <span class="s">&quot;operators&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s">&quot;0&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;LoadFile&quot;</span><span class="p">,</span>
+            <span class="s">&quot;filename&quot;</span> <span class="o">:</span> <span class="s">&quot;tables/companies.tbl&quot;</span>
+        <span class="p">},</span>
+        <span class="s">&quot;1&quot;</span> <span class="o">:</span> <span class="p">{</span>
+            <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="s">&quot;SimpleTableScan&quot;</span><span class="p">,</span>
+            <span class="s">&quot;positions&quot;</span> <span class="o">:</span> <span class="nb">true</span><span class="p">,</span>
+            <span class="s">&quot;predicates&quot;</span><span class="o">:</span><span class="p">[</span>
+            <span class="p">{</span> <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="mi">7</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&quot;in&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;f&quot;</span> <span class="o">:</span> <span class="s">&quot;company_id&quot;</span><span class="p">,</span> <span class="s">&quot;vtype&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;value&quot;</span><span class="o">:</span> <span class="mi">2</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;in&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;f&quot;</span> <span class="o">:</span> <span class="s">&quot;company_name&quot;</span><span class="p">,</span> <span class="s">&quot;vtype&quot;</span> <span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&quot;value&quot;</span><span class="o">:</span> <span class="s">&quot;Microsoft&quot;</span> <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="s">&quot;2&quot;</span> <span class="o">:</span> <span class="p">{</span>
+            <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="s">&quot;ProjectionScan&quot;</span><span class="p">,</span>
+            <span class="s">&quot;fields&quot;</span> <span class="o">:</span> <span class="p">[</span>
+            <span class="s">&quot;company_id&quot;</span><span class="p">,</span><span class="s">&quot;company_name&quot;</span>
+            <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s">&quot;edges&quot;</span><span class="o">:</span> <span class="p">[[</span><span class="s">&quot;0&quot;</span><span class="p">,</span><span class="s">&quot;1&quot;</span><span class="p">],[</span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="s">&quot;2&quot;</span><span class="p">]]</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="query-execution">
+<h2>Query Execution<a class="headerlink" href="#query-execution" title="Permalink to this headline">¶</a></h2>
+<p>To send these queries to Hyrise, after starting the Server (<a class="reference internal" href="tutorial1_starting_the_server.html"><em>Starting the Hyrise Server</em></a>), you can post them as JSON-String (usually from a file) via the HTTP interface to Hyrise</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="n">urlencode</span> <span class="s">&quot;query@test/gettingstarted.json&quot;</span> <span class="o">--</span><span class="n">data</span> <span class="s">&quot;performance=true&quot;</span> <span class="n">http</span><span class="o">:</span><span class="c1">//localhost:5000/jsonQuery</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="footer">
+        &copy; Copyright 2010-2013, Martin Grund et al.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+      </div>
+
+    </div>
+  </div>
+
+
+
+  </body>
+</html>

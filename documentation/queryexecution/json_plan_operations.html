@@ -1,0 +1,615 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Plan Operations &mdash; HYRISE latest documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/breathe.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     'latest',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="HYRISE latest documentation" href="../../index.html" />
+    <link rel="up" title="HYRISE Query Execution" href="index.html" />
+    <link rel="next" title="Transaction Management System" href="tx.html" />
+    <link rel="prev" title="Parallelization" href="parallelization.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  <link rel="stylesheet" href="../../_static/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise_template.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise-pygments.css" type="text/css" />
+
+  <script src="../../_static/jquery-1.9.1.js"></script>
+  <script src="../../_static/jquery-fix.js"></script>
+  <script src="../../_static/bootstrap.js"></script>
+  <script src="../../_static/layouting.js"></script>
+
+  </head>
+  <body>
+  
+  
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tx.html" title="Transaction Management System"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="parallelization.html" title="Parallelization"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../contents.html">HYRISE latest documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">HYRISE Query Execution</a> &raquo;</li> 
+      </ul>
+    </div>
+  <div class="wrapper">
+    <div class="inner-wrapper">
+        <div class="container"><div class="navbar-wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top container" role="navigation" id="menu">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav topnav">
+        <li><a href="../../index.html">Home</a></li>
+        <li class="active" ><a href="../index.html">Documentation</a></li>
+        <li><a href="../../people.html">People</a></li>
+        <!-- <li><a href="../../projects.html">Projects</a></li> -->
+        <li><a href="../../publications.html">Publications</a></li>
+      </ul>
+
+      <h1>Plan Operations</h1>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+</div>
+            <div class="row">
+              
+  <div class="col-md-3">
+    <div class="hyrisesidebar nav">
+  <h3><a href="../../contents.html">Contents</a></h3>
+  <div class='localtoc'>
+	<ul>
+<li><a class="reference internal" href="#">Plan Operations</a><ul>
+<li><a class="reference internal" href="#table-load">Table Load</a></li>
+<li><a class="reference internal" href="#table-unload">Table Unload</a></li>
+<li><a class="reference internal" href="#simple-table-scan">Simple Table Scan</a></li>
+<li><a class="reference internal" href="#projection-scan">Projection Scan</a></li>
+<li><a class="reference internal" href="#insert-scan">Insert Scan</a></li>
+<li><a class="reference internal" href="#union-scan">Union Scan</a></li>
+<li><a class="reference internal" href="#join-scan">Join Scan</a></li>
+<li><a class="reference internal" href="#merge-join">Merge Join</a></li>
+<li><a class="reference internal" href="#create-index">Create Index</a></li>
+<li><a class="reference internal" href="#index-scan">Index Scan</a></li>
+<li><a class="reference internal" href="#hash-build">Hash Build</a></li>
+<li><a class="reference internal" href="#hash-join-probe">Hash Join Probe</a></li>
+<li><a class="reference internal" href="#groupby-scan">GroupBy Scan</a></li>
+<li><a class="reference internal" href="#materializing-scan">Materializing Scan</a></li>
+<li><a class="reference internal" href="#sort-scan">Sort Scan</a></li>
+<li><a class="reference internal" href="#smallest-table-scan">Smallest Table Scan</a></li>
+<li><a class="reference internal" href="#layout-single-table">Layout Single Table</a></li>
+<li><a class="reference internal" href="#layout-table-load">Layout Table Load</a></li>
+<li><a class="reference internal" href="#noop">NoOp</a></li>
+<li><a class="reference internal" href="#distinct">Distinct</a></li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="index.html">HYRISE Query Execution</a><ul>
+      <li>Previous: <a href="parallelization.html" title="previous chapter">Parallelization</a></li>
+      <li>Next: <a href="tx.html" title="next chapter">Transaction Management System</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/documentation/queryexecution/json_plan_operations.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+  </div>
+              <div class="col-md-9" role="main">
+                
+  <div class="section" id="plan-operations">
+<span id="jsonplanops"></span><h1>Plan Operations<a class="headerlink" href="#plan-operations" title="Permalink to this headline">¶</a></h1>
+<p>Find below a summary of the available Plan Operations and their JSON arguments.
+Each operator accepts input and output data of multiple types, e.g. tables, hash maps etc.
+Handling this data is implemented in <tt class="docutils literal"><span class="pre">OperationalData</span></tt> and <tt class="docutils literal"><span class="pre">PlanOperation</span></tt> classes.</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#tableload"><em>Table Load</em></a></li>
+<li><a class="reference internal" href="#tableunload"><em>Table Unload</em></a></li>
+<li><a class="reference internal" href="#simpletablescan"><em>Simple Table Scan</em></a></li>
+<li><a class="reference internal" href="#projectionscan"><em>Projection Scan</em></a></li>
+<li><a class="reference internal" href="#insertscan"><em>Insert Scan</em></a></li>
+<li><a class="reference internal" href="#unionscan"><em>Union Scan</em></a></li>
+<li><a class="reference internal" href="#joinscan"><em>Join Scan</em></a></li>
+<li><a class="reference internal" href="#mergejoin"><em>Merge Join</em></a></li>
+<li><a class="reference internal" href="#createindex"><em>Create Index</em></a></li>
+<li><a class="reference internal" href="#indexscan"><em>Index Scan</em></a></li>
+<li><a class="reference internal" href="#hashbuild"><em>Hash Build</em></a></li>
+<li><a class="reference internal" href="#hashjoinprobe"><em>Hash Join Probe</em></a></li>
+<li><a class="reference internal" href="#groupbyscan"><em>GroupBy Scan</em></a></li>
+<li><a class="reference internal" href="#materializingscan"><em>Materializing Scan</em></a></li>
+<li><a class="reference internal" href="#sortscan"><em>Sort Scan</em></a></li>
+<li><a class="reference internal" href="#smallesttablescan"><em>Smallest Table Scan</em></a></li>
+<li><a class="reference internal" href="#layoutsingletable"><em>Layout Single Table</em></a></li>
+<li><a class="reference internal" href="#layouttableload"><em>Layout Table Load</em></a></li>
+<li><a class="reference internal" href="#noop"><em>NoOp</em></a></li>
+<li><a class="reference internal" href="#distinct"><em>Distinct</em></a></li>
+</ul>
+</div></blockquote>
+<div class="section" id="table-load">
+<span id="tableload"></span><h2>Table Load<a class="headerlink" href="#table-load" title="Permalink to this headline">¶</a></h2>
+<p>This operator loads a table from a file:</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;load&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;TableLoad&quot;</span><span class="p">,</span>
+    <span class="s">&quot;table&quot;</span><span class="o">:</span> <span class="s">&quot;table name&quot;</span><span class="p">,</span>
+    <span class="s">&quot;filename&quot;</span><span class="o">:</span> <span class="s">&quot;file.data&quot;</span><span class="p">,</span>
+    <span class="s">&quot;header&quot;</span><span class="o">:</span> <span class="s">&quot;header.txt&quot;</span><span class="p">,</span>
+    <span class="s">&quot;binary&quot;</span><span class="o">:</span> <span class="nb">true</span><span class="o">/</span><span class="nb">false</span><span class="p">,</span> <span class="p">[</span><span class="n">optional</span><span class="p">]</span>
+    <span class="s">&quot;unsafe&quot;</span><span class="o">:</span> <span class="nb">true</span><span class="o">/</span><span class="nb">false</span> <span class="p">[</span><span class="n">optional</span><span class="p">]</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="table-unload">
+<span id="tableunload"></span><h2>Table Unload<a class="headerlink" href="#table-unload" title="Permalink to this headline">¶</a></h2>
+<p>Simply unloads a table specified in the <tt class="docutils literal"><span class="pre">&quot;table&quot;:</span></tt> field.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;unload&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;TableUnload&quot;</span><span class="p">,</span>
+    <span class="s">&quot;table&quot;</span><span class="o">:</span> <span class="s">&quot;table name&quot;</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="simple-table-scan">
+<span id="simpletablescan"></span><h2>Simple Table Scan<a class="headerlink" href="#simple-table-scan" title="Permalink to this headline">¶</a></h2>
+<p>This operator performs a Selection.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;scan&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;SimpleTableScan&quot;</span><span class="p">,</span>
+    <span class="s">&quot;positions&quot;</span><span class="o">:</span> <span class="nb">true</span><span class="p">,</span>
+    <span class="s">&quot;predicates&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="mi">7</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;in&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;f&quot;</span> <span class="o">:</span> <span class="s">&quot;NAME1&quot;</span><span class="p">,</span> <span class="s">&quot;vtype&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;value&quot;</span><span class="o">:</span> <span class="mi">330</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;in&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;f&quot;</span> <span class="o">:</span> <span class="s">&quot;NAME2&quot;</span><span class="p">,</span> <span class="s">&quot;vtype&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;value&quot;</span><span class="o">:</span> <span class="mi">300</span> <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+<p>Use <tt class="docutils literal"><span class="pre">&quot;positions:</span> <span class="pre">true&quot;</span></tt> to save row positions rather than rows in the intermediate result. This is optional and by default true.</p>
+<p><tt class="docutils literal"><span class="pre">&quot;predicates:&quot;</span></tt> is a list of predicates in prefix order, that will be used to build the predicate tree for selection.</p>
+<blockquote>
+<div><p>For each predicate you can specify the operator type, the input table, the data types and a value for logical operations.</p>
+<dl class="docutils">
+<dt>Use <tt class="docutils literal"><span class="pre">&quot;type:&quot;</span></tt> to specify the boolean operators. They can be given as string or int:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="17%" />
+<col width="83%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>0</td>
+<td>EQ</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>LT</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>GT</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>BETWEEN</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>COMPOUND</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>NEG</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>AND</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>OR</td>
+</tr>
+<tr class="row-odd"><td>8</td>
+<td>NOT</td>
+</tr>
+<tr class="row-even"><td>9</td>
+<td>MULTI_EQ</td>
+</tr>
+<tr class="row-odd"><td>16</td>
+<td>LIKE</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>The <tt class="docutils literal"><span class="pre">LIKE</span></tt> expression expects a regular expression for regex <tt class="docutils literal"><span class="pre">(&quot;a*b.b(ca)*&quot;</span> <span class="pre">matches</span> <span class="pre">&quot;aaabwbcaca&quot;)</span></tt></p>
+<p><tt class="docutils literal"><span class="pre">&quot;in&quot;:</span> <span class="pre">0</span></tt> simply refers to the fact, that we&#8217;re performing the selection on the first table.</p>
+<p><tt class="docutils literal"><span class="pre">&quot;f&quot;:</span> <span class="pre">&quot;NAME1&quot;</span></tt> first argument for logical operation. Here &#8220;type&#8221;: 1 (less than).</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">&quot;vtype&quot;:</span></tt> specifies the type of values in &#8220;f&#8221;</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>0</td>
+<td>IntegerType</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>FloatType</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>StringType</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p><tt class="docutils literal"><span class="pre">&quot;value&quot;:</span> <span class="pre">value</span></tt> second argument for logical operation. e.g. 300</p>
+<p>The example given above would build the following predicate (prefix notation): <tt class="docutils literal"><span class="pre">OR((NAME1</span> <span class="pre">&lt;</span> <span class="pre">330)(NAME2</span> <span class="pre">&lt;</span> <span class="pre">300))</span></tt>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="projection-scan">
+<span id="projectionscan"></span><h2>Projection Scan<a class="headerlink" href="#projection-scan" title="Permalink to this headline">¶</a></h2>
+<p>Performs a Projection of columns given in <tt class="docutils literal"><span class="pre">&quot;fields&quot;:</span></tt></p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;projection&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;ProjectionScan&quot;</span><span class="p">,</span>
+    <span class="s">&quot;fields&quot;</span> <span class="o">:</span> <span class="p">[</span>
+        <span class="s">&quot;ADDRNUMBER&quot;</span><span class="p">,</span><span class="s">&quot;NAME_CO&quot;</span><span class="p">,</span><span class="s">&quot;NAME1&quot;</span><span class="p">,</span><span class="s">&quot;NAME2&quot;</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">&quot;fields&quot;:</span></tt> is synonymous to columns/contains a list of all columns to be projected into the result table.</p>
+</div>
+<div class="section" id="insert-scan">
+<span id="insertscan"></span><h2>Insert Scan<a class="headerlink" href="#insert-scan" title="Permalink to this headline">¶</a></h2>
+<p>Performs an Insert into a given table. The <tt class="docutils literal"><span class="pre">&quot;data&quot;:</span></tt> attribute takes an array with the rows to be inserted.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;insert&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="s">&quot;InsertScan&quot;</span><span class="p">,</span>
+        <span class="s">&quot;data&quot;</span> <span class="o">:</span> <span class="p">[</span>
+            <span class="p">[</span><span class="mi">2009</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2000</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">2009</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2500</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">2009</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3000</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">2009</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4000</span><span class="p">]</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="union-scan">
+<span id="unionscan"></span><h2>Union Scan<a class="headerlink" href="#union-scan" title="Permalink to this headline">¶</a></h2>
+<p>The Union Scan combines two tables and removes duplicates.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;union&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;UnionScan&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="join-scan">
+<span id="joinscan"></span><h2>Join Scan<a class="headerlink" href="#join-scan" title="Permalink to this headline">¶</a></h2>
+<p>This operator performs a Join. It currently only performs equi/inner join.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;ID&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;JoinScan&quot;</span><span class="p">,</span>
+    <span class="s">&quot;join_type&quot;</span><span class="o">:</span><span class="p">,</span> <span class="p">[</span><span class="n">optional</span><span class="p">]</span>
+    <span class="s">&quot;predicates&quot;</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s">&quot;input_left&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s">&quot;field_left&quot;</span><span class="o">:</span> <span class="s">&quot;company_id&quot;</span><span class="p">,</span>
+            <span class="s">&quot;input_right&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s">&quot;field_right&quot;</span><span class="o">:</span> <span class="s">&quot;employee_company_id&quot;</span>
+        <span class="p">}]</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">&quot;join_type&quot;:</span></tt> is currently not in use. Right now only inner joins are possible. Outer joins might be implemented at a later time.
+<tt class="docutils literal"><span class="pre">&quot;predicates&quot;:</span></tt> multiple predicates may be passed in using logical operators. (&#8220;type&#8221;: 0/1/2 -&gt; see below)</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">&quot;type&quot;:</span> <span class="pre">3,</span></tt> specify operator for join condition, here EXP_EQ, i.e. &#8220;=&#8221; (equi join)</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>0</td>
+<td>AND</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>OR</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>NOT</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>EXP_EQ</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p><tt class="docutils literal"><span class="pre">&quot;input_left&quot;:</span> <span class="pre">0,</span></tt> pass in ID of first table to be joined (e.g. 0)</p>
+<p><tt class="docutils literal"><span class="pre">&quot;field_left&quot;:</span> <span class="pre">&quot;company_id&quot;,</span></tt> pass in left part of join condition</p>
+<p><tt class="docutils literal"><span class="pre">&quot;input_right&quot;:</span> <span class="pre">1,</span></tt> pass in ID of second table to be joined (e.g. 1)</p>
+<p><tt class="docutils literal"><span class="pre">&quot;field_right&quot;:</span> <span class="pre">&quot;employee_company_id&quot;</span></tt> pass in right part of join condition</p>
+</div></blockquote>
+<p>The example given above would perform an inner join on the tables loaded in 0,1 - matching up 0.company_id with 1.employee_company_id.</p>
+</div>
+<div class="section" id="merge-join">
+<span id="mergejoin"></span><h2>Merge Join<a class="headerlink" href="#merge-join" title="Permalink to this headline">¶</a></h2>
+<p>deprecated.</p>
+</div>
+<div class="section" id="create-index">
+<span id="createindex"></span><h2>Create Index<a class="headerlink" href="#create-index" title="Permalink to this headline">¶</a></h2>
+<p>This operator can be used to add an index to a table.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;index&quot;</span><span class="o">:</span> <span class="p">{</span>
+  <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;CreateIndex&quot;</span><span class="p">,</span>
+  <span class="s">&quot;fields&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s">&quot;order_id&quot;</span><span class="p">],</span>
+  <span class="s">&quot;index_name&quot;</span><span class="o">:</span> <span class="s">&quot;vbak_order_ix&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="index-scan">
+<span id="indexscan"></span><h2>Index Scan<a class="headerlink" href="#index-scan" title="Permalink to this headline">¶</a></h2>
+<p>This operator initiates a table scan using a given index.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;index&quot;</span><span class="o">:</span> <span class="p">{</span>
+  <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;IndexScan&quot;</span><span class="p">,</span>
+  <span class="s">&quot;vtype&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s">&quot;value&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="s">&quot;fields&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s">&quot;employee_company_id&quot;</span><span class="p">],</span>
+  <span class="s">&quot;index&quot;</span><span class="o">:</span> <span class="s">&quot;emp_comp_ix&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hash-build">
+<span id="hashbuild"></span><h2>Hash Build<a class="headerlink" href="#hash-build" title="Permalink to this headline">¶</a></h2>
+<p>This one will build a hash table, hashing the columns specified in &#8220;fields&#8221;.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;hash&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;HashBuild&quot;</span><span class="p">,</span>
+    <span class="s">&quot;fields&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">&quot;fields&quot;:</span> <span class="pre">[1]</span></tt> pass in column(s) to be hashed, e.g. 1st column.</p>
+</div>
+<div class="section" id="hash-join-probe">
+<span id="hashjoinprobe"></span><h2>Hash Join Probe<a class="headerlink" href="#hash-join-probe" title="Permalink to this headline">¶</a></h2>
+<p>&#8220;probe&#8221; other input against hashed table</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;hashProbe&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;HashJoinProbe&quot;</span><span class="p">,</span>
+    <span class="s">&quot;fields&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+<p>again <tt class="docutils literal"><span class="pre">&quot;fields&quot;:</span></tt> specifies the column(s) that is to be hash joined.</p>
+<p>here&#8217;s another example of a full HashJoin for clarification. Mind the &#8220;edges&#8221; connecting HashBuild and Probe.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;operators&quot;</span><span class="o">:</span> <span class="p">{</span>
+         <span class="s">&quot;-1&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;TableLoad&quot;</span><span class="p">,</span>
+                <span class="s">&quot;table&quot;</span><span class="o">:</span> <span class="s">&quot;reference&quot;</span><span class="p">,</span>
+                <span class="s">&quot;filename&quot;</span><span class="o">:</span> <span class="s">&quot;reference/hash_join_construction_all.tbl&quot;</span>
+        <span class="p">},</span>
+        <span class="s">&quot;0&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;TableLoad&quot;</span><span class="p">,</span>
+            <span class="s">&quot;table&quot;</span><span class="o">:</span> <span class="s">&quot;smaller&quot;</span><span class="p">,</span>
+            <span class="s">&quot;filename&quot;</span><span class="o">:</span> <span class="s">&quot;tables/hash_table_test.tbl&quot;</span>
+        <span class="p">},</span>
+        <span class="s">&quot;1&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;TableLoad&quot;</span><span class="p">,</span>
+            <span class="s">&quot;table&quot;</span><span class="o">:</span> <span class="s">&quot;bigger&quot;</span><span class="p">,</span>
+            <span class="s">&quot;filename&quot;</span><span class="o">:</span> <span class="s">&quot;tables/hash_join_construction.tbl&quot;</span>
+        <span class="p">},</span>
+        <span class="s">&quot;2&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;HashBuild&quot;</span><span class="p">,</span>
+            <span class="s">&quot;fields&quot;</span> <span class="o">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="s">&quot;3&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;HashJoinProbe&quot;</span><span class="p">,</span>
+            <span class="s">&quot;fields&quot;</span> <span class="o">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s">&quot;edges&quot;</span><span class="o">:</span> <span class="p">[[</span><span class="s">&quot;1&quot;</span><span class="p">,</span> <span class="s">&quot;2&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;2&quot;</span><span class="p">,</span> <span class="s">&quot;3&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;0&quot;</span><span class="p">,</span> <span class="s">&quot;3&quot;</span><span class="p">]]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="groupby-scan">
+<span id="groupbyscan"></span><h2>GroupBy Scan<a class="headerlink" href="#groupby-scan" title="Permalink to this headline">¶</a></h2>
+<p>This scan groups a table by attributes specified in <tt class="docutils literal"><span class="pre">&quot;fields&quot;:</span></tt> using aggregation functions specified in <tt class="docutils literal"><span class="pre">&quot;functions&quot;:</span></tt>. This oeprator only works on hash tables, so perform a <a class="reference internal" href="#hashbuild"><em>Hash Build</em></a> before.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;group&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;GroupByScan&quot;</span><span class="p">,</span>
+    <span class="s">&quot;fields&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s">&quot;employee_company_id&quot;</span><span class="p">],</span>
+    <span class="s">&quot;functions&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="cm">/*COUNT*/</span> <span class="s">&quot;field&quot;</span><span class="o">:</span> <span class="s">&quot;employee_company_id&quot;</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">&quot;fields&quot;:</span></tt> array of fields by which the table is to be grouped</p>
+<p><tt class="docutils literal"><span class="pre">&quot;functions&quot;:</span></tt> pass in (aggregate) functions to be performed on the data in &#8220;field&#8221;:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">&quot;type&quot;:</span></tt> specifies type of aggregate function to be performend.</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>0</td>
+<td>SUM</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>COUNT</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>AVERAGE</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p><tt class="docutils literal"><span class="pre">&quot;field&quot;:</span></tt> field the aggregate function is to be performed on.</p>
+</div>
+<div class="section" id="materializing-scan">
+<span id="materializingscan"></span><h2>Materializing Scan<a class="headerlink" href="#materializing-scan" title="Permalink to this headline">¶</a></h2>
+<p>The Materializing Scan returns a materialized view that contains the</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;materializing&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;MaterializingScan&quot;</span><span class="p">,</span>
+    <span class="s">&quot;samples&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s">&quot;memcpy&quot;</span><span class="o">:</span> <span class="nb">false</span><span class="p">,</span> <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="nb">false</span><span class="p">]</span>
+    <span class="s">&quot;copyValues&quot;</span><span class="o">:</span> <span class="p">[</span><span class="n">deprecated</span><span class="p">]</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">&quot;samples&quot;:</span> <span class="pre">3</span></tt> will output a sample materialized table (here 3 rows).</p>
+<p><tt class="docutils literal"><span class="pre">&quot;memcpy&quot;:</span> <span class="pre">false</span></tt> will use internal copy by default. set true in order to use getValue().</p>
+<p>#TODO: note to Martin: remove &#8220;copyValues&#8221;.</p>
+</div>
+<div class="section" id="sort-scan">
+<span id="sortscan"></span><h2>Sort Scan<a class="headerlink" href="#sort-scan" title="Permalink to this headline">¶</a></h2>
+<p>This operator can be sorted a table by given the attribute(s).</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;sort&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;SortScan&quot;</span><span class="p">,</span>
+    <span class="s">&quot;fields&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">&quot;fields&quot;:</span></tt> fields/attributes by which the table is to be sorted.</p>
+</div>
+<div class="section" id="smallest-table-scan">
+<span id="smallesttablescan"></span><h2>Smallest Table Scan<a class="headerlink" href="#smallest-table-scan" title="Permalink to this headline">¶</a></h2>
+<p>This scan determines the smallest table of all given tables and projects it.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;smallest&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span><span class="s">&quot;SmallestTableScan&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="layout-single-table">
+<span id="layoutsingletable"></span><h2>Layout Single Table<a class="headerlink" href="#layout-single-table" title="Permalink to this headline">¶</a></h2>
+<p>The goal of the <strong>SingleTableLayout</strong> plan operation is to perform a
+layout decision for a given workload. Therefore it has multiple
+required input parameters. An example of the input is shown below:</p>
+<p>The runtime of the layouter plan operation depends heavily on the
+algorithm that is used to find the best layout. There are three
+different engines available:</p>
+<ol class="arabic simple">
+<li><tt class="docutils literal"><span class="pre">BaseLayouter</span></tt> - Exhaustively iterate over the problem space</li>
+<li><tt class="docutils literal"><span class="pre">CandidateLayouter</span></tt> - Perform early pruning of combinations based on primary partitions</li>
+<li><tt class="docutils literal"><span class="pre">DivideAndConquerLayouter</span></tt> - Before merging candidates, partition the problem space based on an access graph</li>
+</ol>
+<p>The layout engine that is used during the execution is set using the
+<tt class="docutils literal"><span class="pre">layouter</span></tt> member of the plan operation.</p>
+<p>The most important option for the plan operator is setting the
+number of rows for the input table, which is used to calcualte the
+correct cost for selectivities.</p>
+<p>Furthermore you can specify how many possible results the
+layouter should return. This option can be used to present multiple
+layouts in a UI.</p>
+<p>The meta data that is required to generate the best possible layout
+are the attributes of the table and the list of operations that is
+executed on this table.</p>
+</div>
+<div class="section" id="layout-table-load">
+<span id="layouttableload"></span><h2>Layout Table Load<a class="headerlink" href="#layout-table-load" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;layout&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;LayoutTableLoad&quot;</span><span class="p">,</span>
+    <span class="s">&quot;table&quot;</span><span class="o">:</span> <span class="s">&quot;emplyoees&quot;</span><span class="p">,</span>
+    <span class="s">&quot;filename&quot;</span><span class="o">:</span> <span class="s">&quot;tables/employees.data&quot;</span><span class="p">,</span>
+    <span class="s">&quot;input_row&quot;</span><span class="o">:</span> <span class="mi">3</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="noop">
+<span id="id1"></span><h2>NoOp<a class="headerlink" href="#noop" title="Permalink to this headline">¶</a></h2>
+<p>This operator does not perform any action and can be used to drop intermediate results.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;noop&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;NoOp&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="distinct">
+<span id="id2"></span><h2>Distinct<a class="headerlink" href="#distinct" title="Permalink to this headline">¶</a></h2>
+<p>The distinct operator returns a table with only distinct values in the specified fields.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="s">&quot;distinct&quot;</span><span class="o">:</span> <span class="p">{</span>
+  <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;Distinct&quot;</span><span class="p">,</span>
+  <span class="s">&quot;fields&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s">&quot;employee_company_id&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="footer">
+        &copy; Copyright 2010-2013, Martin Grund et al.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+      </div>
+
+    </div>
+  </div>
+
+
+
+  </body>
+</html>

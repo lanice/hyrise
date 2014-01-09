@@ -1,0 +1,168 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>JSON Query Execution &mdash; HYRISE latest documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/breathe.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     'latest',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="HYRISE latest documentation" href="../../index.html" />
+    <link rel="up" title="HYRISE Query Execution" href="index.html" />
+    <link rel="next" title="JSON Queries" href="json_queries.html" />
+    <link rel="prev" title="HYRISE Query Execution" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  <link rel="stylesheet" href="../../_static/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise_template.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise-pygments.css" type="text/css" />
+
+  <script src="../../_static/jquery-1.9.1.js"></script>
+  <script src="../../_static/jquery-fix.js"></script>
+  <script src="../../_static/bootstrap.js"></script>
+  <script src="../../_static/layouting.js"></script>
+
+  </head>
+  <body>
+  
+  
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="json_queries.html" title="JSON Queries"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="HYRISE Query Execution"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../contents.html">HYRISE latest documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">HYRISE Query Execution</a> &raquo;</li> 
+      </ul>
+    </div>
+  <div class="wrapper">
+    <div class="inner-wrapper">
+        <div class="container"><div class="navbar-wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top container" role="navigation" id="menu">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav topnav">
+        <li><a href="../../index.html">Home</a></li>
+        <li class="active" ><a href="../index.html">Documentation</a></li>
+        <li><a href="../../people.html">People</a></li>
+        <!-- <li><a href="../../projects.html">Projects</a></li> -->
+        <li><a href="../../publications.html">Publications</a></li>
+      </ul>
+
+      <h1>JSON Query Execution</h1>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+</div>
+            <div class="row">
+              
+  <div class="col-md-3">
+    <div class="hyrisesidebar nav"><h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="index.html">HYRISE Query Execution</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">HYRISE Query Execution</a></li>
+      <li>Next: <a href="json_queries.html" title="next chapter">JSON Queries</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/documentation/queryexecution/json_query_execution.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+  </div>
+              <div class="col-md-9" role="main">
+                
+  <div class="section" id="json-query-execution">
+<h1>JSON Query Execution<a class="headerlink" href="#json-query-execution" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p class="first">start the server:</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="p">.</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">hyrise_server</span> <span class="o">-</span><span class="n">l</span> <span class="p">.</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">log</span><span class="p">.</span><span class="n">properties</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">tell the server, where to look for Table data:</p>
+<div class="highlight-c++"><pre>export HYRISE_DB_PATH='pwd'/pathToTable</pre>
+</div>
+</li>
+<li><p class="first">post query to server:</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="n">urlencode</span> <span class="s">&quot;query@path/to/json/test.json&quot;</span>
+ <span class="nl">http:</span><span class="c1">//localhost:5000/jsonQuery</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">get back query result from server</p>
+</li>
+</ol>
+</div>
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="footer">
+        &copy; Copyright 2010-2013, Martin Grund et al.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+      </div>
+
+    </div>
+  </div>
+
+
+
+  </body>
+</html>

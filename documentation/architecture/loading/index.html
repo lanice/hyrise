@@ -1,0 +1,247 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Loading &mdash; HYRISE latest documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/breathe.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     'latest',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="HYRISE latest documentation" href="../../../index.html" />
+    <link rel="up" title="Loading" href="../loading.html" />
+    <link rel="next" title="MySQL Loader" href="mysql.html" />
+    <link rel="prev" title="Loading" href="../loading.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  <link rel="stylesheet" href="../../../_static/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/hyrise_template.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/hyrise.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/hyrise-pygments.css" type="text/css" />
+
+  <script src="../../../_static/jquery-1.9.1.js"></script>
+  <script src="../../../_static/jquery-fix.js"></script>
+  <script src="../../../_static/bootstrap.js"></script>
+  <script src="../../../_static/layouting.js"></script>
+
+  </head>
+  <body>
+  
+  
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mysql.html" title="MySQL Loader"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../loading.html" title="Loading"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../contents.html">HYRISE latest documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Implementation Details</a> &raquo;</li>
+          <li><a href="../loading.html" accesskey="U">Loading</a> &raquo;</li> 
+      </ul>
+    </div>
+  <div class="wrapper">
+    <div class="inner-wrapper">
+        <div class="container"><div class="navbar-wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top container" role="navigation" id="menu">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav topnav">
+        <li><a href="../../../index.html">Home</a></li>
+        <li class="active" ><a href="../../index.html">Documentation</a></li>
+        <li><a href="../../../people.html">People</a></li>
+        <!-- <li><a href="../../../projects.html">Projects</a></li> -->
+        <li><a href="../../../publications.html">Publications</a></li>
+      </ul>
+
+      <h1>Loading</h1>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+</div>
+            <div class="row">
+              
+  <div class="col-md-3">
+    <div class="hyrisesidebar nav">
+  <h3><a href="../../../contents.html">Contents</a></h3>
+  <div class='localtoc'>
+	<ul>
+<li><a class="reference internal" href="#">Loading</a><ul>
+<li><a class="reference internal" href="#emptyloader">EmptyLoader</a></li>
+<li><a class="reference internal" href="#csvloader">CSVLoader</a><ul>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#generic-csv-parameters">Generic CSV parameters</a></li>
+<li><a class="reference internal" href="#stringloader">StringLoader</a><ul>
+<li><a class="reference internal" href="#id1">Usage</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id2">Parameters</a></li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Implementation Details</a><ul>
+  <li><a href="../loading.html">Loading</a><ul>
+      <li>Previous: <a href="../loading.html" title="previous chapter">Loading</a></li>
+      <li>Next: <a href="mysql.html" title="next chapter">MySQL Loader</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/documentation/architecture/loading/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+  </div>
+              <div class="col-md-9" role="main">
+                
+  <div class="section" id="loading">
+<h1>Loading<a class="headerlink" href="#loading" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="emptyloader">
+<h2>EmptyLoader<a class="headerlink" href="#emptyloader" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This Loader is defined in <cite>src/lib/io/EmptyLoader.h</cite> and provides
+EmptyInput and EmptyHeader.</p>
+</div>
+<p>The classes defined in <cite>EmptyLoader.h</cite> are used when no alternative
+was specified. They create empty headers or empty table bodies.</p>
+</div>
+<div class="section" id="csvloader">
+<h2>CSVLoader<a class="headerlink" href="#csvloader" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Defined in <cite>src/lin/io/CSVLoader.h</cite> and provides <em>CSVInput</em> and
+<em>CSVHeader</em>.</p>
+</div>
+<p>This loader can be used to load arbitrary CSV-like files. The default
+format of HYRISE uses the delimiter <cite>|</cite>.</p>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>CSVLoader can be used as follows</p>
+</div>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p><cite>CSVInput::params()</cite> offers the following parameters:</p>
+<dl class="docutils">
+<dt>IgnoreHeader <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>Ignore four initial lines of header</dd>
+<dt>Unsafe <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>Ignore when input dataset is wider than target table, thus
+discarding extra data.</dd>
+<dt>CSVParams <span class="classifier-delimiter">:</span> <span class="classifier">csv::params</span></dt>
+<dd>See discussion of csv::params <a class="reference internal" href="#csvparams"><em>Generic CSV parameters</em></a></dd>
+</dl>
+<p><cite>CSVHeader::params()</cite> offers the following parameters:</p>
+<dl class="docutils">
+<dt>CSVParams <span class="classifier-delimiter">:</span> <span class="classifier">csv::params</span></dt>
+<dd>See discussion of csv::params <a class="reference internal" href="#csvparams"><em>Generic CSV parameters</em></a></dd>
+</dl>
+</div>
+<div class="section" id="generic-csv-parameters">
+<span id="csvparams"></span><h2>Generic CSV parameters<a class="headerlink" href="#generic-csv-parameters" title="Permalink to this headline">¶</a></h2>
+<p><cite>csv::params()</cite> offers the following parameters:</p>
+<dl class="docutils">
+<dt>Delimiter <span class="classifier-delimiter">:</span> <span class="classifier">unsigned char, defaults to <cite>|</cite></span></dt>
+<dd>Allows to change the CSV delimiter to a different character</dd>
+<dt>LineStart <span class="classifier-delimiter">:</span> <span class="classifier">ssize_t, defaults to <cite>0</cite>.</span></dt>
+<dd>Set to ignore initial number of lines in input file</dd>
+<dt>LineCount <span class="classifier-delimiter">:</span> <span class="classifier">ssize_t, defaults to <cite>-1</cite></span></dt>
+<dd>Set to the number of lines to read.</dd>
+</dl>
+</div>
+<div class="section" id="stringloader">
+<h2>StringLoader<a class="headerlink" href="#stringloader" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Defined in <cite>src/lib/io/StringLoader.h</cite> and provides <em>StringHeader</em>.</p>
+</div>
+<p>StringHeader allows to pass a user-defined std::string to be
+used for generating table metadata.</p>
+<div class="section" id="id1">
+<h3>Usage<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Parameters<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><cite>StringHeader::params</cite> offers the following parameters:</p>
+<dl class="docutils">
+<dt>CSVParams <span class="classifier-delimiter">:</span> <span class="classifier">csv::params</span></dt>
+<dd>See discussion of csv::params <a class="reference internal" href="#csvparams"><em>Generic CSV parameters</em></a></dd>
+</dl>
+</div>
+</div>
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="footer">
+        &copy; Copyright 2010-2013, Martin Grund et al.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+      </div>
+
+    </div>
+  </div>
+
+
+
+  </body>
+</html>

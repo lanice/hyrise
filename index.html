@@ -7,16 +7,10 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome &mdash; HYRISE latest documentation</title>
+    <title>HYRISE introduction &mdash; HYRISE latest documentation</title>
     
-    <link rel="stylesheet" href="_static/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/hyrise_template.css" type="text/css" />
-    <link rel="stylesheet" href="_static/hyrise.css" type="text/css" />
-    <link rel="stylesheet" href="_static/page-1-attributes.css" type="text/css" />
-    <link rel="stylesheet" href="_static/page-1.css" type="text/css" />
-
-    <!-- <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> -->
-    <link rel="stylesheet" href="_static/pygments-github.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/breathe.css" type="text/css" />
     
     <script type="text/javascript">
@@ -31,33 +25,48 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/hyrise.js"></script>
-    <script type="text/javascript" src="_static/bootstrap.js"></script>
-        <link rel="stylesheet" href="_static/parallax-scroll-index.css" type="text/css" />
-        <script type="text/javascript" src="_static/parallax-scroll-index.js"></script>
-        <script type="text/javascript" src="_static/jquery.localscroll-1.2.7-min.js"></script>
-        <script type="text/javascript" src="_static/jquery.scrollTo-1.4.2-min.js"></script>
-
-
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="top" title="HYRISE latest documentation" href="#" />
-    <link rel="next" title="Documentation" href="documentation.html" /> 
+    <link rel="next" title="Documentation" href="documentation/index.html" />
+    <link rel="prev" title="HYRISE documentation contents" href="contents.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  <link rel="stylesheet" href="_static/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="_static/hyrise_template.css" type="text/css" />
+  <link rel="stylesheet" href="_static/hyrise.css" type="text/css" />
+  <link rel="stylesheet" href="_static/hyrise-pygments.css" type="text/css" />
+
+  <script src="_static/jquery-1.9.1.js"></script>
+  <script src="_static/jquery-fix.js"></script>
+  <script src="_static/bootstrap.js"></script>
+  <script src="_static/layouting.js"></script>
+
   </head>
   <body>
-    <div id="backToTop">
-      <span class="glyphicon glyphicon-chevron-up"></span> <br />
-      <p>Back To Top</p>
-    </div><div id="intro">
-    <div class="story container">
-        <div class="float-left">
-      <h2>HYRISE</h2>
-          <p>...is a new relational storage engine for main memory database systems. It is built on the premise that enterprise application workloads can benefit from a dedicated main-memory storage engine.</p>
-          </div>
-      </div> <!--.story-->
-  </div>
-<div id="second">
-  <div class="container"><div class="navbar-wrapper">
+  
+  
+  <div class=indexwrapper>
+  
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="documentation/index.html" title="Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="contents.html" title="HYRISE documentation contents"
+             accesskey="P">previous</a> |</li>
+        <li><a href="contents.html">HYRISE latest documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+  <div class="wrapper">
+    <div class="inner-wrapper">
+        <div class="container"><div class="navbar-wrapper">
   <nav class="navbar navbar-default navbar-fixed-top container" role="navigation" id="menu">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -73,94 +82,119 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav topnav">
         <li class="active" ><a href="#">Home</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="documentation/index.html">Documentation</a></li>
         <li><a href="people.html">People</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <!-- <li><a href="projects.html">Projects</a></li> -->
         <li><a href="publications.html">Publications</a></li>
       </ul>
 
-      <h1>Welcome</h1>
+      <h1>HYRISE introduction</h1>
     </div><!-- /.navbar-collapse -->
   </nav>
 </div>
-    <div class="container-fluid">
-      <div class="row-fluid without">
-        <div class="col-md-12">
-          <div class="col-md-4 overview">
-            <h4>
-              In-Memory Data Storage
-            </h4>
-            <p>
-              With the use of In-Memory Data Storage predictable access times are guaranteed.
-            </p>
-          </div>
-          <div class="col-md-4 overview">
-            <h4>
-              Hybrid Partitions
-            </h4>
-            <p>
-              Hybrid layouts optimize overall performance compared to single query performance.
-            </p>
-          </div>
-          <div class="col-md-4 overview">
-            <h4>
-              Dynamic Layouts
-            </h4>
-            <p>
-              Due to changing application workload on the database, dynamic layouts increase performance visibly.
-            </p>
-          </div>
-        </div>
-      </div>
+            <div class="row">
+              
+  <div class="col-md-3">
+    <div class="hyrisesidebar nav">
+  <h3><a href="contents.html">Contents</a></h3>
+  <div class='localtoc'>
+	<ul>
+<li><a class="reference internal" href="#">HYRISE introduction</a><ul>
+<li><a class="reference internal" href="#what-is-hyrise">What is HYRISE</a><ul>
+<li><a class="reference internal" href="#in-memory-data-storage">In-Memory Data Storage</a></li>
+<li><a class="reference internal" href="#hybrid-partitions">Hybrid Partitions</a></li>
+<li><a class="reference internal" href="#dynamic-layouts">Dynamic Layouts</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#read-more">Read more</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-      <div class="row-fluid">
-        <div class="col-md-6 feature">
-          <h4>
-            In-Memory Data Storage
-          </h4>
-          <p>
-            Transactional database workloads are executed in Row Stores. Typical are single tuple lookups, many modifications and simple predicate evaluation. On the other hand analytical database workloads are executed in Column Stores (Aggregation, Full Attribute Scans, Specialized Joins). With HYRISE it is possible to combine both workloads and to find the optimal storage strusture.
-          </p>
-        </div>
-        <div class="col-md-6 image">
-          <img src="_static/overview.png">
-        </div>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="section">
-      <div class="row-fluid">
-        <div class="col-md-6 image">
-          <img src="_static/row_column.png" width="450px">
-        </div>
-        <div class="col-md-6 feature">
-          <h4>
-            Hybrid Partitions
-          </h4>
-          <p>
-            Transactional database workloads are executed in Row Stores. Typical are single tuple lookups, many modifications and simple predicate evaluation. On the other hand analytical database workloads are executed in Column Stores (Aggregation, Full Attribute Scans, Specialized Joins). When combining both workloads, what is the optimal storage structure?
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="section">
-      <div class="row-fluid">
-        <div class="col-md-6 feature">
-          <h4>
-            Dynamic Layouts
-          </h4>
-          <p>
-            In static layout selection the layout is chosen before application deployment. For narrow tables, finding the optimal layout is easy and can be done through exhaustive enumeration. But enterprise applications can have super-wide schemas  with up to 300 attributes, this would result in billions of possible layouts. However, application workload on the database might change. So workload change may require adaptation.
-            See also at <a href="projects.html">Projects</a>
-          </p>
-        </div>
-        <div class="col-md-6 image">
-          <img src="_static/layout.png">
-        </div>
-      </div>
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="contents.html">Documentation overview</a><ul>
+      <li>Previous: <a href="contents.html" title="previous chapter">HYRISE documentation contents</a></li>
+      <li>Next: <a href="documentation/index.html" title="next chapter">Documentation</a></li>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
     </div>
   </div>
+              <div class="col-md-9" role="main">
+                
+  <div class="section" id="hyrise-introduction">
+<h1>HYRISE introduction<a class="headerlink" href="#hyrise-introduction" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/skyline.png" src="_images/skyline.png" />
+<div class="section" id="what-is-hyrise">
+<h2>What is HYRISE<a class="headerlink" href="#what-is-hyrise" title="Permalink to this headline">¶</a></h2>
+<p>HYRISE is a Main Memory Hybrid Storage Engine, extendible prototype and research project of the group &#8220;Enterprise Platform and Integration Concepts&#8221; (EPIC) from Hasso Plattner Institute (HPI), Germany and the eXascale Infolab, research group at the University of Fribourg, in coorperation with SAP and MIT CSAIL. HYRISE expects to deliver significant performance improvement due to the possibility to vertically partition any table.</p>
+<div class="section" id="in-memory-data-storage">
+<h3>In-Memory Data Storage<a class="headerlink" href="#in-memory-data-storage" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/overview.png" class="align-right" src="_images/overview.png" style="width: 500px;" />
+<p>Transactional database workloads are executed in Row Stores. Typical are single tuple lookups, many modifications and simple predicate evaluation. On the other hand analytical database workloads are executed in Column Stores (Aggregation, Full Attribute Scans, Specialized Joins). With HYRISE it is possible to combine both workloads and to find the optimal storage strusture.</p>
 </div>
+<div class="section" id="hybrid-partitions">
+<h3>Hybrid Partitions<a class="headerlink" href="#hybrid-partitions" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/row_column.png" class="align-left" src="_images/row_column.png" style="width: 500px;" />
+<p>Transactional database workloads are executed in Row Stores. Typical are single tuple lookups, many modifications and simple predicate evaluation. On the other hand analytical database workloads are executed in Column Stores (Aggregation, Full Attribute Scans, Specialized Joins). When combining both workloads, what is the optimal storage structure?</p>
+</div>
+<div class="section" id="dynamic-layouts">
+<h3>Dynamic Layouts<a class="headerlink" href="#dynamic-layouts" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/layout.png" class="align-right" src="_images/layout.png" style="width: 500px;" />
+<p>In static layout selection the layout is chosen before application deployment. For narrow tables, finding the optimal layout is easy and can be done through exhaustive enumeration. But enterprise applications can have super-wide schemas with up to 300 attributes, this would result in billions of possible layouts. However, application workload on the database might change. So workload change may require adaptation. See also at Projects</p>
+</div>
+</div>
+<div class="section" id="read-more">
+<h2>Read more<a class="headerlink" href="#read-more" title="Permalink to this headline">¶</a></h2>
+<p>You are interested? Have a look at the <a class="reference internal" href="documentation/index.html"><em>documentation</em></a>.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="documentation/index.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/gettingstarted/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/architecture/index.html">Implementation Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/queryexecution/index.html">HYRISE Query Execution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/developing/index.html">Developing with HYRISE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/faq/index.html">HYRISE &amp; Development FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/proposals/index.html">Proposals</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="footer">
+        &copy; Copyright 2010-2013, Martin Grund et al.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+      </div>
+
+    </div>
+  </div>
+
+
+
   </body>
 </html>

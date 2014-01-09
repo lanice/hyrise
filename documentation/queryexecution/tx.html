@@ -1,0 +1,698 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Transaction Management System &mdash; HYRISE latest documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/breathe.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     'latest',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="HYRISE latest documentation" href="../../index.html" />
+    <link rel="up" title="HYRISE Query Execution" href="index.html" />
+    <link rel="next" title="Integrating Google V8" href="v8ops.html" />
+    <link rel="prev" title="Plan Operations" href="json_plan_operations.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  <link rel="stylesheet" href="../../_static/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise_template.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/hyrise-pygments.css" type="text/css" />
+
+  <script src="../../_static/jquery-1.9.1.js"></script>
+  <script src="../../_static/jquery-fix.js"></script>
+  <script src="../../_static/bootstrap.js"></script>
+  <script src="../../_static/layouting.js"></script>
+
+  </head>
+  <body>
+  
+  
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="v8ops.html" title="Integrating Google V8"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="json_plan_operations.html" title="Plan Operations"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../contents.html">HYRISE latest documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">HYRISE Query Execution</a> &raquo;</li> 
+      </ul>
+    </div>
+  <div class="wrapper">
+    <div class="inner-wrapper">
+        <div class="container"><div class="navbar-wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top container" role="navigation" id="menu">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav topnav">
+        <li><a href="../../index.html">Home</a></li>
+        <li class="active" ><a href="../index.html">Documentation</a></li>
+        <li><a href="../../people.html">People</a></li>
+        <!-- <li><a href="../../projects.html">Projects</a></li> -->
+        <li><a href="../../publications.html">Publications</a></li>
+      </ul>
+
+      <h1>Transaction Management System</h1>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+</div>
+            <div class="row">
+              
+  <div class="col-md-3">
+    <div class="hyrisesidebar nav">
+  <h3><a href="../../contents.html">Contents</a></h3>
+  <div class='localtoc'>
+	<ul>
+<li><a class="reference internal" href="#">Transaction Management System</a><ul>
+<li><a class="reference internal" href="#using-transactions-in-your-plan">Using transactions in your plan</a><ul>
+<li><a class="reference internal" href="#single-request-transactions">Single-request transactions</a></li>
+<li><a class="reference internal" href="#multiple-transaction-steps">Multiple transaction steps</a></li>
+<li><a class="reference internal" href="#autcommit-shortcut">Autcommit shortcut</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#architectural-overview">Architectural Overview</a></li>
+<li><a class="reference internal" href="#typical-control-flow">Typical Control Flow</a></li>
+<li><a class="reference internal" href="#necessary-plan-operations">Necessary Plan Operations</a></li>
+<li><a class="reference internal" href="#multi-version-concurrency-control-mvcc">Multi Version Concurrency Control (MVCC)</a></li>
+<li><a class="reference internal" href="#our-mvcc-implementation">Our MVCC Implementation</a></li>
+<li><a class="reference internal" href="#evaluating-the-visiblity">Evaluating the visiblity</a></li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="index.html">HYRISE Query Execution</a><ul>
+      <li>Previous: <a href="json_plan_operations.html" title="previous chapter">Plan Operations</a></li>
+      <li>Next: <a href="v8ops.html" title="next chapter">Integrating Google V8</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/documentation/queryexecution/tx.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+  </div>
+              <div class="col-md-9" role="main">
+                
+  <div class="section" id="transaction-management-system">
+<h1>Transaction Management System<a class="headerlink" href="#transaction-management-system" title="Permalink to this headline">¶</a></h1>
+<p>HYRISE uses optimistic concurrency control mechanisms to provide transactional
+guarantees during query execution. However, currently HYRISE is only able to
+guarantee atomicity, consistency, and isolation but not durability since
+currently no logging is used to store the transactions on disk.</p>
+<div class="section" id="using-transactions-in-your-plan">
+<h2>Using transactions in your plan<a class="headerlink" href="#using-transactions-in-your-plan" title="Permalink to this headline">¶</a></h2>
+<p>Transactions work on the basis of session contexts. Every executed query plan
+receives a transaction context (<cite>TXContext</cite>) as a part of parsing the plan. This
+context allows plan operations to act based on the context.</p>
+<p>There are two essential parts to transaction control in HYRISE:</p>
+<ol class="arabic simple">
+<li>Creating a transaction context/reusing an existing transaction context</li>
+<li>Commit/Rollback transaction context</li>
+</ol>
+<div class="section" id="single-request-transactions">
+<h3>Single-request transactions<a class="headerlink" href="#single-request-transactions" title="Permalink to this headline">¶</a></h3>
+<p>Typically, we will run plans which are self-contained, as an example
+we may grab a table and insert a few records and then commit those
+records in order to make our changes visible to other transactions.</p>
+<p>The above example shows what a typical insert looks like: In line
+<cite>retrieve_revenue</cite>, we retrieve a handle to the <cite>revenue</cite> table, which
+has 3 columns (year, month, revenue).</p>
+<p>Then, we continue by inserting 4 new rows into <cite>revenue</cite>. Finally, we
+expose the inserted rows to other transactions by committing them in
+the <cite>commit</cite> operation.</p>
+<p>Let&#8217;s use this example to examine the essential parts of transaction
+control: Context creation and committing of the same.</p>
+<p class="seqdiag">
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    alt="None" width="832" height="744"><?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 832 744" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs_block">
+    <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
+      <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="67" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="259" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="451" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="643" y="46" />
+  <path d="M 128 80 L 128 732" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <path d="M 320 80 L 320 732" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <path d="M 512 80 L 512 732" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <path d="M 704 80 L 704 732" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="64" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="110" y="66">client</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="256" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="302" y="66">server</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="448" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="494" y="66">parser</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="640" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="677" y="66">txmanager</text>
+  <path d="M 136 135 L 312 135" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="304,131 312,135 304,139" stroke="rgb(0,0,0)" />
+  <path d="M 328 200 L 504 200" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="496,196 504,200 496,204" stroke="rgb(0,0,0)" />
+  <path d="M 520 265 L 696 265" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="688,261 696,265 688,269" stroke="rgb(0,0,0)" />
+  <path d="M 520 330 L 696 330" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="528,326 520,330 528,334" stroke="rgb(0,0,0)" />
+  <path d="M 328 395 L 504 395" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="336,391 328,395 336,399" stroke="rgb(0,0,0)" />
+  <path d="M 328 540 L 696 540" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="688,536 696,540 688,544" stroke="rgb(0,0,0)" />
+  <path d="M 328 605 L 696 605" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="336,601 328,605 336,609" stroke="rgb(0,0,0)" />
+  <path d="M 136 670 L 312 670" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="144,666 136,670 144,674" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="140" y="133">1. POST /query/</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="332" y="198">2. query plan</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="524" y="263">3. create new context</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="636" y="328">4. context</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="396" y="393">5. plan operations</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="332" y="538">6. commit context</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="624" y="603">7. commit_id</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="246" y="668">8. response</text>
+  <path d="M 40 462 L 337 462" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 40 466 L 337 466" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 495 462 L 792 462" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 495 466 L 792 466" fill="none" stroke="rgb(0,0,0)" />
+  <rect fill="rgb(208,208,208)" height="19" stroke="rgb(0,0,0)" width="158" x="337" y="455" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="347" y="470">execute plan operations</text>
+</svg>
+
+    </svg></p>
+<p>Context creation happens during the initial plan parsing: We create a
+new plan context during every request (if you need different behavior,
+look at the <a class="reference internal" href="#multiple-tx"><em>next section</em></a>). All the operations
+created for our request may then use the context to carry out their
+operations. As an example <tt class="docutils literal"><span class="pre">InsertScan</span></tt> uses the context to insert rows
+marked with our <em>unique</em> transaction so other transactions will not
+assume that they are already visible.</p>
+<p>Finally, we commit the automatically created context in
+<tt class="docutils literal"><span class="pre">Commit</span></tt>. Commit basically checks for possible conflicts with other
+transactions - in the case of plain insertion of rows, such a conflict
+is not possible and thus, our example should always succeed.</p>
+</div>
+<div class="section" id="multiple-transaction-steps">
+<span id="multiple-tx"></span><h3>Multiple transaction steps<a class="headerlink" href="#multiple-transaction-steps" title="Permalink to this headline">¶</a></h3>
+<p>While the behavior in the beforehand example is sufficient for simple
+transactions, more elaborate transactions involving multiple queries
+and logic carried out on the client naturally involve transaction
+contexts that live longer than one request.</p>
+<p>Now in this query, we don&#8217;t use the <tt class="docutils literal"><span class="pre">Commit</span></tt> -Operation. Instead, we
+leave the context in an uncommitted state.</p>
+<p>The server will the send a response similar to the following:</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="p">{</span>
+   <span class="s">&quot;session_context&quot;</span> <span class="o">:</span> <span class="mi">12355</span><span class="p">,</span>
+   <span class="s">&quot;performanceData&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="cm">/*...*/</span> <span class="p">},</span>
+   <span class="cm">/* and more ... */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Since the session was not ended, it is up to the client to re-use the
+<tt class="docutils literal"><span class="pre">session_context</span></tt> returned by the query to eventually use the
+<tt class="docutils literal"><span class="pre">Commit</span></tt> or <tt class="docutils literal"><span class="pre">Rollback</span></tt> plan operation to end the session.</p>
+<p>The following sequence diagram illustrates the first request.</p>
+<p class="seqdiag">
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    alt="None" width="832" height="614"><?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 832 614" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs_block">
+    <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
+      <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="67" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="259" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="451" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="643" y="46" />
+  <path d="M 128 80 L 128 602" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <path d="M 320 80 L 320 602" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <path d="M 512 80 L 512 602" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <path d="M 704 80 L 704 602" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="64" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="110" y="66">client</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="256" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="302" y="66">server</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="448" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="494" y="66">parser</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="640" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="677" y="66">txmanager</text>
+  <path d="M 136 135 L 312 135" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="304,131 312,135 304,139" stroke="rgb(0,0,0)" />
+  <path d="M 328 200 L 504 200" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="496,196 504,200 496,204" stroke="rgb(0,0,0)" />
+  <path d="M 520 265 L 696 265" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="688,261 696,265 688,269" stroke="rgb(0,0,0)" />
+  <path d="M 520 330 L 696 330" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="528,326 520,330 528,334" stroke="rgb(0,0,0)" />
+  <path d="M 328 395 L 504 395" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="336,391 328,395 336,399" stroke="rgb(0,0,0)" />
+  <path d="M 136 540 L 312 540" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="144,536 136,540 144,544" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="140" y="133">1. POST /query/</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="332" y="198">2. query plan</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="524" y="263">3. create new context</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="636" y="328">4. context</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="396" y="393">5. plan operations</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="168" y="538">6. response with context</text>
+  <path d="M 40 462 L 241 462" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 40 466 L 241 466" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 591 462 L 792 462" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 591 466 L 792 466" fill="none" stroke="rgb(0,0,0)" />
+  <rect fill="rgb(208,208,208)" height="19" stroke="rgb(0,0,0)" width="350" x="241" y="455" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="251" y="470">execute plan operations `retrieve_revenue` and `insert`</text>
+</svg>
+
+    </svg></p>
+<p>To reuse an existing session context, we need to add the
+<tt class="docutils literal"><span class="pre">session_context</span></tt> as an additional <tt class="docutils literal"><span class="pre">POST</span></tt> parameter our HTTP
+request to <cite>/query/</cite>. An example implementation for Python can be
+found in <tt class="docutils literal"><span class="pre">tools/client.py</span></tt>.</p>
+<p>Following requests using a <tt class="docutils literal"><span class="pre">session_context</span></tt> post parameter will not
+create a new session context but re-use the existing context. If we
+would rerun the above query with a set session context, the sequence
+of activities would change accordingly:</p>
+<p class="seqdiag">
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    alt="None" width="832" height="640"><?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 832 640" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs_block">
+    <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
+      <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="67" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="259" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="451" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="643" y="46" />
+  <path d="M 128 80 L 128 628" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <path d="M 320 80 L 320 628" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <path d="M 512 80 L 512 628" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <path d="M 704 80 L 704 628" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="64" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="110" y="66">client</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="256" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="302" y="66">server</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="448" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="494" y="66">parser</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="640" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="677" y="66">txmanager</text>
+  <path d="M 136 148 L 312 148" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="304,144 312,148 304,152" stroke="rgb(0,0,0)" />
+  <path d="M 328 213 L 504 213" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="496,209 504,213 496,217" stroke="rgb(0,0,0)" />
+  <path d="M 520 291 L 696 291" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="688,287 696,291 688,295" stroke="rgb(0,0,0)" />
+  <path d="M 520 356 L 696 356" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="528,352 520,356 528,360" stroke="rgb(0,0,0)" />
+  <path d="M 328 421 L 504 421" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="336,417 328,421 336,425" stroke="rgb(0,0,0)" />
+  <path d="M 136 566 L 312 566" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="144,562 136,566 144,570" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="140" y="133">1. POST /query/ with session</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="140" y="146"> context</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="332" y="211">2. query plan</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="524" y="276">3. retrieve from session con</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="524" y="289">text</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="636" y="354">4. context</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="396" y="419">5. plan operations</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="168" y="564">6. response with context</text>
+  <path d="M 40 488 L 241 488" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 40 492 L 241 492" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 591 488 L 792 488" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 591 492 L 792 492" fill="none" stroke="rgb(0,0,0)" />
+  <rect fill="rgb(208,208,208)" height="19" stroke="rgb(0,0,0)" width="350" x="241" y="481" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="251" y="496">execute plan operations `retrieve_revenue` and `insert`</text>
+</svg>
+
+    </svg></p>
+<p>Eventually, we will want to end the transaction and make our changes
+visible to other transactions. This can be done by either extending
+the last query with a <tt class="docutils literal"><span class="pre">Commit</span></tt> operation or a plan simply consisting
+of one single <tt class="docutils literal"><span class="pre">Commit</span></tt> operation:</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="p">{</span> <span class="s">&quot;operations&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s">&quot;commit_op&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="s">&quot;Commit&quot;</span><span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>This would then result in a response without <tt class="docutils literal"><span class="pre">session_context</span></tt> as
+the session has been closed at this point.</p>
+<p class="seqdiag">
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    alt="None" width="832" height="690"><?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 832 690" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs_block">
+    <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
+      <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="67" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="259" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="451" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="643" y="46" />
+  <path d="M 128 80 L 128 678" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <path d="M 320 80 L 320 678" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <path d="M 512 80 L 512 678" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <path d="M 704 80 L 704 678" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="64" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="110" y="66">client</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="256" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="302" y="66">server</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="448" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="494" y="66">parser</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="640" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="677" y="66">txmanager</text>
+  <path d="M 136 148 L 312 148" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="304,144 312,148 304,152" stroke="rgb(0,0,0)" />
+  <path d="M 328 213 L 504 213" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="496,209 504,213 496,217" stroke="rgb(0,0,0)" />
+  <path d="M 520 291 L 696 291" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="688,287 696,291 688,295" stroke="rgb(0,0,0)" />
+  <path d="M 520 356 L 696 356" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="528,352 520,356 528,360" stroke="rgb(0,0,0)" />
+  <path d="M 328 421 L 504 421" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="336,417 328,421 336,425" stroke="rgb(0,0,0)" />
+  <path d="M 328 486 L 696 486" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="688,482 696,486 688,490" stroke="rgb(0,0,0)" />
+  <path d="M 328 551 L 696 551" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="336,547 328,551 336,555" stroke="rgb(0,0,0)" />
+  <path d="M 136 616 L 312 616" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="144,612 136,616 144,620" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="140" y="133">1. POST /query/ with session</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="140" y="146"> context</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="332" y="211">2. query plan</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="524" y="276">3. retrieve from session con</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="524" y="289">text</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="636" y="354">4. context</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="396" y="419">5. plan operations</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="332" y="484">6. commit context</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="624" y="549">7. commit_id</text>
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="11" font-style="normal" font-weight="normal" x="246" y="614">8. response</text>
+</svg>
+
+    </svg></p>
+</div>
+<div class="section" id="autcommit-shortcut">
+<h3>Autcommit shortcut<a class="headerlink" href="#autcommit-shortcut" title="Permalink to this headline">¶</a></h3>
+<p>As explicitly writing out commit operations at the end of your queries
+is tedious and error-prone, the <tt class="docutils literal"><span class="pre">/query/</span></tt> interface accepts an
+additional <tt class="docutils literal"><span class="pre">POST</span></tt> parameter: <tt class="docutils literal"><span class="pre">autocommit</span></tt>. This allows the query
+parser to automatically append a <tt class="docutils literal"><span class="pre">Commit</span></tt> operation at the end of
+the current query.</p>
+</div>
+</div>
+<div class="section" id="architectural-overview">
+<h2>Architectural Overview<a class="headerlink" href="#architectural-overview" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">TransactionManager</span></tt> class in HYRISE is the central point of
+serialization for transactions. During query parsing each query is assigned a
+<tt class="docutils literal"><span class="pre">TXContext</span></tt> that can be used to identify all matching positions. It contains
+a unique transaction ID and the last commit id. The transaction ID is used to
+distinguish other deletes and writes from our own deletes and writes.</p>
+</div>
+<div class="section" id="typical-control-flow">
+<h2>Typical Control Flow<a class="headerlink" href="#typical-control-flow" title="Permalink to this headline">¶</a></h2>
+<p>Typically, we can distinguish between two different scenarios: Read-Only
+Access and Read-Write Access.</p>
+<p>For read-only data access the control flow is hereby as follows:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Perform Scan on the physical table and it is required to use position lists (aka PointerCalculator) only</li>
+<li>On each intermediate result from a physical table execute the plan
+operation <tt class="docutils literal"><span class="pre">ValidatePositions</span></tt>. This PO will check given the current
+transaction context if the records satisfy the current state of the
+transaction and are visible. Once this operation is done, we can assume
+for the rest of the query that all records we read using these position
+lists are valid</li>
+</ol>
+</div></blockquote>
+<p>For read-write access the control flow is similar:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Perform a scan on the physical tables</li>
+<li>Apply the plan operation <tt class="docutils literal"><span class="pre">ValidatePositions</span></tt> to remove invisible records</li>
+<li>Call <tt class="docutils literal"><span class="pre">Commit</span></tt> plan operation in the end</li>
+</ol>
+</div></blockquote>
+<p>Currently a single commit plan operation will guarantee the correct execution
+of the transaction for all its input tables. However, TX are then serialized by commits in the TX manager.</p>
+<p>Once a transaction is committed, the TX context is no longer valid and the
+system is required to fetch a new TID to proceed.</p>
+</div>
+<div class="section" id="necessary-plan-operations">
+<h2>Necessary Plan Operations<a class="headerlink" href="#necessary-plan-operations" title="Permalink to this headline">¶</a></h2>
+<p>The following plan operations are tightly integrated with the TX management
+and should only be used in this context:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><tt class="docutils literal"><span class="pre">ValidatePositions</span></tt> - validates the input PointerCalculator so that only
+valid positions remain</li>
+<li><tt class="docutils literal"><span class="pre">Commit</span></tt> - Commits the current transaction on this table, updates the
+commit ID for all modified records when done</li>
+<li><tt class="docutils literal"><span class="pre">InsertScan</span></tt> - Inserts new records into the delta. The new state of
+inserted records is that they are invalid and the TID column of the record is set to the TID of the transaction to identify own writes</li>
+<li><tt class="docutils literal"><span class="pre">PosUpdateScan</span></tt> - performs an update on an input table. The
+modifications are specified in the JSON of the plan operation. An update
+is basically a delete + insert of the modified tuple</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="multi-version-concurrency-control-mvcc">
+<h2>Multi Version Concurrency Control (MVCC)<a class="headerlink" href="#multi-version-concurrency-control-mvcc" title="Permalink to this headline">¶</a></h2>
+<p>We use MVCC to isolate transactions. This section explains MVCC in general; see the next section for details specific to our implementation.</p>
+<p>MVCC is a method to allow multiple transactions to write on the same table concurrently while still adhering to the ACID criteria. This means that every transaction should get the impression that it is the only thing working on the table (isolation). Changes made by other transactions shall only be visible if they have been committed before a transaction was started. Changes that were done in between are not visible. Every transaction has a consistent view of the table. If a transaction commits, its changes will be made visible to new transactions all-or-nothing (atomicity). Changes made by one transaction will not get overwritten by other transactions (durability).</p>
+<p>This is done by storing multiple versions of the same row. Instead of updating a row, it is deleted (more correctly, made invisible for new transactions) and inserted with modified data (only visible to new transactions). This means that transactions that were started before the modifying transactions was committed can still access the version that was valid when they started.</p>
+</div>
+<div class="section" id="our-mvcc-implementation">
+<h2>Our MVCC Implementation<a class="headerlink" href="#our-mvcc-implementation" title="Permalink to this headline">¶</a></h2>
+<p>On the level of a Store we do so by having three vectors storing visibility information about each row:</p>
+<blockquote>
+<div><ul class="simple">
+<li>TID stores the TID of the transaction that is currently modifying the row</li>
+<li>BeginCID stores the commit id of the committed transaction that inserted the row</li>
+<li>EndCID stores the commit id of the committed transaction that deleted the row</li>
+</ul>
+</div></blockquote>
+<p>The TID vector is used by a transaction to mark that the row is being modified by the transaction identified by TID x. Obviously, the vector can only store one TID per row - thus, every row can only be modified by one transaction.</p>
+<p>If a row is inserted (but not committed), it has the TID of the transaction inserting it, but no begin and end commit id (see below). At this point, it is only visible if its TID is equal to the TID of a read operation. If a row is deleted (but the delete is uncommitted), it gets the TID of the deleting transaction. It is now invisible to this transaction but visible to others.</p>
+<p>During the commit of an insert, the transaction stores its commit id (acquired from the TransactionManager) in the beginCID vector. As soon as the last commit id is increased in the TransactionManager (meaning that lastCID &gt;= beginCID), the row is visible to new transactions.</p>
+<p>The endCID vector behaves similar. It stores the CID of the transaction that successfully deleted the row and was committed.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="17%" />
+<col width="14%" />
+<col width="15%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">v.TID</th>
+<th class="head">v.BeginCID</th>
+<th class="head">v.EndCID</th>
+<th class="head">LastCID</th>
+<th class="head">Status</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&#8211;</td>
+<td>Inf</td>
+<td>Inf</td>
+<td>12</td>
+<td>Init</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>Inf</td>
+<td>Inf</td>
+<td>12</td>
+<td>Insert uncommitted</td>
+</tr>
+<tr class="row-even"><td>&#8211;</td>
+<td>13</td>
+<td>Inf</td>
+<td>12</td>
+<td>Insert commit in prog.</td>
+</tr>
+<tr class="row-odd"><td>&#8211;</td>
+<td>13</td>
+<td>Inf</td>
+<td>13</td>
+<td>Insert committed</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>13</td>
+<td>Inf</td>
+<td>13</td>
+<td>delete uncommitted</td>
+</tr>
+<tr class="row-odd"><td>&#8211;</td>
+<td>13</td>
+<td>14</td>
+<td>13</td>
+<td>delete commit in prog.</td>
+</tr>
+<tr class="row-even"><td>&#8211;</td>
+<td>13</td>
+<td>14</td>
+<td>14</td>
+<td>delete committed</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="evaluating-the-visiblity">
+<h2>Evaluating the visiblity<a class="headerlink" href="#evaluating-the-visiblity" title="Permalink to this headline">¶</a></h2>
+<p>When checking if a row is visible to a transaction, three checks have to be made. These are shown in the table below.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="22%" />
+<col width="21%" />
+<col width="9%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">v.TID == tx.TID</th>
+<th class="head">tx.LastCID &gt;= v.BeginCID</th>
+<th class="head">tx.LastCID &gt;= v.EndCID</th>
+<th class="head">Visible?</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>No</td>
+<td>Impossible</td>
+</tr>
+<tr class="row-odd"><td>no</td>
+<td>yes</td>
+<td>yes</td>
+<td>No</td>
+<td>Past Delete</td>
+</tr>
+<tr class="row-even"><td>yes</td>
+<td>no</td>
+<td>yes</td>
+<td>No</td>
+<td>Impossible</td>
+</tr>
+<tr class="row-odd"><td>yes</td>
+<td>yes</td>
+<td>no</td>
+<td>No</td>
+<td>Own Delete, uncommitted</td>
+</tr>
+<tr class="row-even"><td>no</td>
+<td>no</td>
+<td>yes</td>
+<td>No</td>
+<td>Impossible</td>
+</tr>
+<tr class="row-odd"><td>yes</td>
+<td>no</td>
+<td>no</td>
+<td>Yes</td>
+<td>Own Insert</td>
+</tr>
+<tr class="row-even"><td>no</td>
+<td>yes</td>
+<td>no</td>
+<td>Yes</td>
+<td>Past Insert or Future Delete</td>
+</tr>
+<tr class="row-odd"><td>no</td>
+<td>no</td>
+<td>no</td>
+<td>No</td>
+<td>Uncommitted Insert or Future Insert</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="footer">
+        &copy; Copyright 2010-2013, Martin Grund et al.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+      </div>
+
+    </div>
+  </div>
+
+
+
+  </body>
+</html>

@@ -16,10 +16,10 @@ In addition to that new Plan Operations need to implement the following two meth
 
 ::
     
-    _PlanOperation *StrLenScan::parse(Json::Value &data)
+    std::shared_ptr<PlanOperation> StrLenScan::parse(const Json::Value &data)
     {
-        _PlanOperation *p = BasicParser<StrLenScan>::parse(data);
-        return p;
+        std::shared_ptr<StrLenScan> instance = BasicParser<StrLenScan>::parse(data);
+        return instance;
     }
 
 In our case using a BasicParser Object (of type StrLenScan) is sufficient to parse all required input. BasicParser will parse JSON fields named "fields:" (representing columns the plan operation is to be executed on) and "limit:" (which we don't require in this example).
@@ -37,20 +37,24 @@ If you only use the basic parser, instead of adding this method, you can also om
 
     void StrLenScan::executePlanOperation()
     {
-	    const AbstractTable* in = input.getTable(0);
+	    std::shared_ptr<const storage::AbstractTable> in = input.getTable(0);
 
     	TableBuilder::param_list list;
-    	list.append().set_type("INTEGER").set_name("str_len");
-    	AbstractTable* string_length = TableBuilder::build(list);
+    	list.append().set_type("INTEGER").set_name("LENGTH");
+    	std::shared_ptr<storage::AbstractTable> resultTable = storage::TableBuilder::build(list);
+
+        resultTable->resize(in->size());
 
     	if(in->typeOfColumn(_field_definition[0]) == StringType) {
     		for(size_t row = 0; row < in->size(); row++) {
-    			string_length->setValue<int>(_field_definition[0], row, 
-    			    (in->getValue<string>(_field_definition[0], row)).size());
+    			resultTable->setValue<hyrise_int_t>(0, row, 
+    			    (in->getValue<std::string>(_field_definition[0], row)).length());
     		}
-    	}
+    	} else {
+            throw std::runtime_error("column not of type string.");
+        }
     	
-    	addResult(string_length);
+    	addResult(resultTable);
     }
 
 The implementation of your PlanOperation will vary with degree of complexity and might require you to write several helper methods. In this example, we create a new output table using TableBuilder (-> see TableBuilder.h). We then iterate over all the (string) elements of the input column and add the string's length as integer to the end of our output table (string_length).
@@ -136,3 +140,86 @@ For a complete test you should also specify an output table for the query result
           "table" : "reference"
         },
         ...
+
+
+4. Full example
+===============
+
+StrLenScan.cpp:
+
+.. code-block:: cpp
+    :linenos:
+
+    #include "access/StrLenScan.h"
+
+    #include "access/system/BasicParser.h"
+    #include "access/system/QueryParser.h"
+
+    #include "storage/AbstractTable.h"
+    #include "storage/TableBuilder.h"
+
+    namespace hyrise {
+    namespace access {
+
+    auto _ = QueryParser::registerPlanOperation<StrLenScan>("StrLenScan");
+
+    StrLenScan::~StrLenScan() {
+    }
+
+    void StrLenScan::executePlanOperation() {
+      
+      std::shared_ptr<const storage::AbstractTable> in = input.getTable(0);
+
+      storage::TableBuilder::param_list list;
+      list.append().set_type("INTEGER").set_name("LENGTH");
+      std::shared_ptr<storage::AbstractTable> resultTable = storage::TableBuilder::build(list);
+
+      resultTable->resize(in->size());
+
+      for(size_t row = 0; row < in->size(); row++) {
+        resultTable->setValue<hyrise_int_t>(0, row, 
+          (in->getValue<std::string>(_field_definition[0], row)).length() );
+      }
+
+      addResult(resultTable);
+    }
+
+    std::shared_ptr<PlanOperation> StrLenScan::parse(const Json::Value &data) {
+      std::shared_ptr<StrLenScan> instance = BasicParser<StrLenScan>::parse(data);
+
+      return instance;
+    }
+
+    const std::string StrLenScan::vname() {
+      return "StrLenScan";
+    }
+
+    }
+    }
+
+
+StrLenScan.h:
+
+.. code-block:: cpp
+    :linenos:
+    
+    #ifndef SRC_LIB_ACCESS_STRLENSCAN_H_
+    #define SRC_LIB_ACCESS_STRLENSCAN_H_
+
+    #include "access/system/PlanOperation.h"
+
+    namespace hyrise {
+    namespace access {
+
+    class StrLenScan : public PlanOperation {
+    public:
+      virtual ~StrLenScan();
+
+      void executePlanOperation();
+      static std::shared_ptr<PlanOperation> parse(const Json::Value &data);
+      const std::string vname();
+    };
+
+    }
+    }
+    #endif  // SRC_LIB_ACCESS_STRLENSCAN_H_

@@ -103,6 +103,7 @@
 <li><a class="reference internal" href="#parse-json-input">1. Parse JSON input:</a></li>
 <li><a class="reference internal" href="#implement-your-plan-operation">2. Implement your Plan Operation</a></li>
 <li><a class="reference internal" href="#testing-your-own-plan-operation">3. Testing your own Plan Operation</a></li>
+<li><a class="reference internal" href="#full-example">4. Full example</a></li>
 </ul>
 </li>
 </ul>
@@ -148,10 +149,10 @@
 <p>In addition to that new Plan Operations need to implement the following two methods (see below a simple example for a &#8220;StrLenScan&#8221; operation, that returns a list of string lengths for a given column of strings):</p>
 <div class="section" id="parse-json-input">
 <h2>1. Parse JSON input:<a class="headerlink" href="#parse-json-input" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-c++"><div class="highlight"><pre><span class="n">_PlanOperation</span> <span class="o">*</span><span class="n">StrLenScan</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+<div class="highlight-c++"><div class="highlight"><pre><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">PlanOperation</span><span class="o">&gt;</span> <span class="n">StrLenScan</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="n">_PlanOperation</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">BasicParser</span><span class="o">&lt;</span><span class="n">StrLenScan</span><span class="o">&gt;::</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-    <span class="k">return</span> <span class="n">p</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">StrLenScan</span><span class="o">&gt;</span> <span class="n">instance</span> <span class="o">=</span> <span class="n">BasicParser</span><span class="o">&lt;</span><span class="n">StrLenScan</span><span class="o">&gt;::</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">instance</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -164,20 +165,24 @@ and then accessed using <tt class="docutils literal"><span class="pre">data[&quo
 <h2>2. Implement your Plan Operation<a class="headerlink" href="#implement-your-plan-operation" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-c++"><div class="highlight"><pre><span class="kt">void</span> <span class="n">StrLenScan</span><span class="o">::</span><span class="n">executePlanOperation</span><span class="p">()</span>
 <span class="p">{</span>
-        <span class="k">const</span> <span class="n">AbstractTable</span><span class="o">*</span> <span class="n">in</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="n">getTable</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">storage</span><span class="o">::</span><span class="n">AbstractTable</span><span class="o">&gt;</span> <span class="n">in</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="n">getTable</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 
     <span class="n">TableBuilder</span><span class="o">::</span><span class="n">param_list</span> <span class="n">list</span><span class="p">;</span>
-    <span class="n">list</span><span class="p">.</span><span class="n">append</span><span class="p">().</span><span class="n">set_type</span><span class="p">(</span><span class="s">&quot;INTEGER&quot;</span><span class="p">).</span><span class="n">set_name</span><span class="p">(</span><span class="s">&quot;str_len&quot;</span><span class="p">);</span>
-    <span class="n">AbstractTable</span><span class="o">*</span> <span class="n">string_length</span> <span class="o">=</span> <span class="n">TableBuilder</span><span class="o">::</span><span class="n">build</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+    <span class="n">list</span><span class="p">.</span><span class="n">append</span><span class="p">().</span><span class="n">set_type</span><span class="p">(</span><span class="s">&quot;INTEGER&quot;</span><span class="p">).</span><span class="n">set_name</span><span class="p">(</span><span class="s">&quot;LENGTH&quot;</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">storage</span><span class="o">::</span><span class="n">AbstractTable</span><span class="o">&gt;</span> <span class="n">resultTable</span> <span class="o">=</span> <span class="n">storage</span><span class="o">::</span><span class="n">TableBuilder</span><span class="o">::</span><span class="n">build</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+
+    <span class="n">resultTable</span><span class="o">-&gt;</span><span class="n">resize</span><span class="p">(</span><span class="n">in</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">());</span>
 
     <span class="k">if</span><span class="p">(</span><span class="n">in</span><span class="o">-&gt;</span><span class="n">typeOfColumn</span><span class="p">(</span><span class="n">_field_definition</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="n">StringType</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">for</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">in</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">();</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">string_length</span><span class="o">-&gt;</span><span class="n">setValue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_field_definition</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">row</span><span class="p">,</span>
-                        <span class="p">(</span><span class="n">in</span><span class="o">-&gt;</span><span class="n">getValue</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_field_definition</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">row</span><span class="p">)).</span><span class="n">size</span><span class="p">());</span>
+                    <span class="n">resultTable</span><span class="o">-&gt;</span><span class="n">setValue</span><span class="o">&lt;</span><span class="kt">hyrise_int_t</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span>
+                        <span class="p">(</span><span class="n">in</span><span class="o">-&gt;</span><span class="n">getValue</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_field_definition</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">row</span><span class="p">)).</span><span class="n">length</span><span class="p">());</span>
             <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;column not of type string.&quot;</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="n">addResult</span><span class="p">(</span><span class="n">string_length</span><span class="p">);</span>
+    <span class="n">addResult</span><span class="p">(</span><span class="n">resultTable</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -263,6 +268,145 @@ Finally, to output the result of your plan operation, use <tt class="docutils li
     <span class="p">...</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="full-example">
+<h2>4. Full example<a class="headerlink" href="#full-example" title="Permalink to this headline">¶</a></h2>
+<p>StrLenScan.cpp:</p>
+<div class="highlight-cpp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#include &quot;access/StrLenScan.h&quot;</span>
+
+<span class="cp">#include &quot;access/system/BasicParser.h&quot;</span>
+<span class="cp">#include &quot;access/system/QueryParser.h&quot;</span>
+
+<span class="cp">#include &quot;storage/AbstractTable.h&quot;</span>
+<span class="cp">#include &quot;storage/TableBuilder.h&quot;</span>
+
+<span class="k">namespace</span> <span class="n">hyrise</span> <span class="p">{</span>
+<span class="k">namespace</span> <span class="n">access</span> <span class="p">{</span>
+
+<span class="k">auto</span> <span class="n">_</span> <span class="o">=</span> <span class="n">QueryParser</span><span class="o">::</span><span class="n">registerPlanOperation</span><span class="o">&lt;</span><span class="n">StrLenScan</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;StrLenScan&quot;</span><span class="p">);</span>
+
+<span class="n">StrLenScan</span><span class="o">::~</span><span class="n">StrLenScan</span><span class="p">()</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">StrLenScan</span><span class="o">::</span><span class="n">executePlanOperation</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">storage</span><span class="o">::</span><span class="n">AbstractTable</span><span class="o">&gt;</span> <span class="n">in</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="n">getTable</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+  <span class="n">storage</span><span class="o">::</span><span class="n">TableBuilder</span><span class="o">::</span><span class="n">param_list</span> <span class="n">list</span><span class="p">;</span>
+  <span class="n">list</span><span class="p">.</span><span class="n">append</span><span class="p">().</span><span class="n">set_type</span><span class="p">(</span><span class="s">&quot;INTEGER&quot;</span><span class="p">).</span><span class="n">set_name</span><span class="p">(</span><span class="s">&quot;LENGTH&quot;</span><span class="p">);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">storage</span><span class="o">::</span><span class="n">AbstractTable</span><span class="o">&gt;</span> <span class="n">resultTable</span> <span class="o">=</span> <span class="n">storage</span><span class="o">::</span><span class="n">TableBuilder</span><span class="o">::</span><span class="n">build</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+
+  <span class="n">resultTable</span><span class="o">-&gt;</span><span class="n">resize</span><span class="p">(</span><span class="n">in</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">());</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">in</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">();</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">resultTable</span><span class="o">-&gt;</span><span class="n">setValue</span><span class="o">&lt;</span><span class="kt">hyrise_int_t</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span>
+      <span class="p">(</span><span class="n">in</span><span class="o">-&gt;</span><span class="n">getValue</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_field_definition</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">row</span><span class="p">)).</span><span class="n">length</span><span class="p">()</span> <span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">addResult</span><span class="p">(</span><span class="n">resultTable</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">PlanOperation</span><span class="o">&gt;</span> <span class="n">StrLenScan</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">StrLenScan</span><span class="o">&gt;</span> <span class="n">instance</span> <span class="o">=</span> <span class="n">BasicParser</span><span class="o">&lt;</span><span class="n">StrLenScan</span><span class="o">&gt;::</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="n">instance</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">StrLenScan</span><span class="o">::</span><span class="n">vname</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s">&quot;StrLenScan&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>StrLenScan.h:</p>
+<div class="highlight-cpp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#ifndef SRC_LIB_ACCESS_STRLENSCAN_H_</span>
+<span class="cp">#define SRC_LIB_ACCESS_STRLENSCAN_H_</span>
+
+<span class="cp">#include &quot;access/system/PlanOperation.h&quot;</span>
+
+<span class="k">namespace</span> <span class="n">hyrise</span> <span class="p">{</span>
+<span class="k">namespace</span> <span class="n">access</span> <span class="p">{</span>
+
+<span class="k">class</span> <span class="nc">StrLenScan</span> <span class="o">:</span> <span class="k">public</span> <span class="n">PlanOperation</span> <span class="p">{</span>
+<span class="nl">public:</span>
+  <span class="k">virtual</span> <span class="o">~</span><span class="n">StrLenScan</span><span class="p">();</span>
+
+  <span class="kt">void</span> <span class="nf">executePlanOperation</span><span class="p">();</span>
+  <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">PlanOperation</span><span class="o">&gt;</span> <span class="n">parse</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">);</span>
+  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vname</span><span class="p">();</span>
+<span class="p">};</span>
+
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">#endif  </span><span class="c1">// SRC_LIB_ACCESS_STRLENSCAN_H_</span>
+</pre></div>
+</td></tr></table></div>
 </div>
 </div>
 

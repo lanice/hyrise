@@ -8,7 +8,10 @@ HYRISE' HashJoin implementation is divided into a build and probe phase.
 Build Phase: HashBuild
 ======================
 
-For the first phase, the build phase, the HashBuild PlanOperation is used. It accepts the first AbstractTable and a list of fields as input to produce a HashTable::
+For the first phase, the build phase, the HashBuild PlanOperation is used. It accepts the first AbstractTable and a list of fields as input to produce a HashTable:
+
+.. code-block:: c
+  :linenos:
 
 	void HashBuild::executePlanOperation()
 	{
@@ -31,7 +34,10 @@ To build the HashTable, the cell values of all table's rows in the specified fie
 Probe Phase: HashJoinProbe
 ==========================
 
-In the second phase, the HashJoinProbe PlanOperation is used. It accepts the second AbstractTable and the aforementioned HashTable as input to produce the resulting joined table::
+In the second phase, the HashJoinProbe PlanOperation is used. It accepts the second AbstractTable and the aforementioned HashTable as input to produce the resulting joined table:
+
+.. code-block:: c
+  :linenos:
 
 	void HashJoinProbe::fetchPositions(                                                                                                                      
 		pos_list_t *buildTablePosList,                                                                                                                       

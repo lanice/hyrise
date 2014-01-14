@@ -8,7 +8,10 @@ JSON Queries
 ============
 
 At the moment Hyrise only accepts queries in Javascript Object Notation. These JSON Queries are a different representation of the original flow graph of the query plan. Basically a k-v map defines all operators that are connected using edges. For more details on how to write queries and how they are processed go to :doc:`../queryexecution/json_queries` and check :ref:`jsonplanops` for a list of available operators. An example for a simple query plan is defined
-below ::
+below:
+
+.. code-block:: js
+  :linenos:
 
     {
         "papi": "PAPI_L1_DCA",

@@ -5,6 +5,23 @@
 
 	$(document).ready(function () {
 
+		$(window).on('hashchange', function(event) {
+
+			var params = (event.originalEvent.newURL||'').split('#');
+			var page = params[0];
+			var anchor = params[1];
+
+			// if link on same page, animate
+			if (window.location.href.split('#')[0] === page) {			
+				var target = $('#' + anchor);
+
+				$('body, html').animate({
+				    scrollTop: (target[0] && target.offset().top || 0) - SCROLL_OFFSET
+				}, SCROLL_DURATION);
+			}
+
+		});
+
 		var $body = $('body');
 		var $menu = $('.hyrisesidebar');
 		var $list = $menu.find('.localtoc ul:first');

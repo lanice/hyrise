@@ -63,8 +63,11 @@ blockquote blockquote {
   box-shadow: 5px 0 20px -15px;
   overflow: auto;
   width: 263px;
-  position: fixed;
   margin-top: 50px;
+}
+
+.hyrisesidebar.affix-bottom {
+  position: absolute;
 }
 
 .hyrisesidebar .logo {
@@ -108,9 +111,14 @@ blockquote blockquote {
 .inner-wrapper > .container {
   background: white;
   /*padding-top: 20px;*/
-  box-shadow: 0px 0 15px -5px;
+  box-shadow: 0px 5px 15px -5px;
   position: relative;
   min-height: 400px;
+  margin-bottom: 20px;
+}
+
+.container div[role=main] {
+  min-height: 500px;
 }
 
 .container div[role=main] > .section > h1 {
@@ -119,6 +127,38 @@ blockquote blockquote {
 
 .container .content .section {
   margin-top: 60px;
+}
+
+.container .row.upper {
+  /*box-shadow: 0 5px 10px -5px;*/
+}
+
+/* footer */
+
+.container .row.footer_toc {
+  background: rgba(30,30,30,.8);
+}
+
+.container .row.footer_toc h3 {
+  color: #cccccc;
+}
+
+.container .row.footer_toc .toc-general {
+  margin-bottom: 20px;
+}
+
+.container .row.footer_toc .toc-general ul {
+  list-style-type: none;
+  margin: 0;  
+}
+
+.container .row.footer_toc .toc-general ul:last-child {
+  margin-top: 20px;
+}
+
+.container .row.footer_toc,
+.container .row.footer_toc a {
+  color: #cccccc;
 }
 
 #people .section {

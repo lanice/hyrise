@@ -92,7 +92,7 @@
     </div><!-- /.navbar-collapse -->
   </nav>
 </div>
-            <div class="row">
+            <div class="row upper">
               
   <div class="col-md-3">
     <div class="hyrisesidebar nav"><h3>Related Topics</h3>
@@ -128,37 +128,68 @@
                 
   <div class="section" id="json-query-execution">
 <h1>JSON Query Execution<a class="headerlink" href="#json-query-execution" title="Permalink to this headline">¶</a></h1>
-<ol class="arabic">
-<li><p class="first">start the server:</p>
-<div class="highlight-c++"><div class="highlight"><pre><span class="p">.</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">hyrise_server</span> <span class="o">-</span><span class="n">l</span> <span class="p">.</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">log</span><span class="p">.</span><span class="n">properties</span>
+<ol class="arabic simple">
+<li>start the server:</li>
+</ol>
+<div class="highlight-sh"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>      ./build/hyrise_server -l ./build/log.properties
 </pre></div>
-</div>
-</li>
-<li><p class="first">tell the server, where to look for Table data:</p>
-<div class="highlight-c++"><pre>export HYRISE_DB_PATH='pwd'/pathToTable</pre>
-</div>
-</li>
-<li><p class="first">post query to server:</p>
-<div class="highlight-c++"><div class="highlight"><pre><span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="n">urlencode</span> <span class="s">&quot;query@path/to/json/test.json&quot;</span>
- <span class="nl">http:</span><span class="c1">//localhost:5000/jsonQuery</span>
+</td></tr></table></div>
+<ol class="arabic simple" start="2">
+<li>tell the server, where to look for Table data:</li>
+</ol>
+<div class="highlight-sh"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="nb">export </span><span class="nv">HYRISE_DB_PATH</span><span class="o">=</span><span class="s1">&#39;pwd&#39;</span>/pathToTable
 </pre></div>
-</div>
-</li>
-<li><p class="first">get back query result from server</p>
-</li>
+</td></tr></table></div>
+<ol class="arabic simple" start="3">
+<li>post query to server:</li>
+</ol>
+<div class="highlight-sh"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>      curl -X POST --data-urlencode <span class="s2">&quot;query@path/to/json/test.json&quot;</span> http://localhost:5000/jsonQuery
+</pre></div>
+</td></tr></table></div>
+<ol class="arabic simple" start="4">
+<li>get back query result from server</li>
 </ol>
 </div>
 
 
               </div>
             </div>
+            <div class="row footer_toc">
+<!--   <h3><a href="../../contents.html">Contents</a></h3> -->
+<div class="col-md-offset-1 col-md-3">
+  <div class='toc-general'>
+  	<h3>Navigation</h3>
+	<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">HYRISE introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../people.html">People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../publications.html">Publications</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture/index.html">Implementation Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">HYRISE Query Execution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing/index.html">Developing with HYRISE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">HYRISE &amp; Development FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proposals/index.html">Proposals</a></li>
+</ul>
+
+  </div>
+</div>
+<div class="col-md-7">
+	<h3>License</h3>
+	HYRISE is licensed as open source after the OpenSource “Licence of the Hasso-Plattner Institute” declared in the LICENSE file of this project.
+
+	Question: Why does HYRISE not use MIT or BSD or XX license. The reason for our approach comes with the German copyright law. Common BSD and MIT licenses are not necessarily compatible and thus can potentially lead to problems. To overcome this problem this project uses an specifically designed open source license to be compatible with German law. The most prominent difference is the exclusion of all liabilities which is not possible in Germany.
+
+	<h3>Copyright</h3>
+    &copy; 2010-2013, Martin Grund et al.
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+
+</div>
+            </div>
         </div>
       </div>
-      <div class="footer">
-        &copy; Copyright 2010-2013, Martin Grund et al.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
-      </div>
-
     </div>
   </div>
 

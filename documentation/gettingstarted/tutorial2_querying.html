@@ -92,7 +92,7 @@
     </div><!-- /.navbar-collapse -->
   </nav>
 </div>
-            <div class="row">
+            <div class="row upper">
               
   <div class="col-md-3">
     <div class="hyrisesidebar nav">
@@ -142,34 +142,58 @@
 <div class="section" id="json-queries">
 <span id="qexec"></span><h2>JSON Queries<a class="headerlink" href="#json-queries" title="Permalink to this headline">¶</a></h2>
 <p>At the moment Hyrise only accepts queries in Javascript Object Notation. These JSON Queries are a different representation of the original flow graph of the query plan. Basically a k-v map defines all operators that are connected using edges. For more details on how to write queries and how they are processed go to <a class="reference internal" href="../queryexecution/json_queries.html"><em>JSON Queries</em></a> and check <a class="reference internal" href="../queryexecution/json_plan_operations.html#jsonplanops"><em>Plan Operations</em></a> for a list of available operators. An example for a simple query plan is defined
-below</p>
-<div class="highlight-c++"><div class="highlight"><pre><span class="p">{</span>
-    <span class="s">&quot;papi&quot;</span><span class="o">:</span> <span class="s">&quot;PAPI_L1_DCA&quot;</span><span class="p">,</span>
-    <span class="s">&quot;operators&quot;</span> <span class="o">:</span> <span class="p">{</span>
-        <span class="s">&quot;0&quot;</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="s">&quot;LoadFile&quot;</span><span class="p">,</span>
-            <span class="s">&quot;filename&quot;</span> <span class="o">:</span> <span class="s">&quot;tables/companies.tbl&quot;</span>
-        <span class="p">},</span>
-        <span class="s">&quot;1&quot;</span> <span class="o">:</span> <span class="p">{</span>
-            <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="s">&quot;SimpleTableScan&quot;</span><span class="p">,</span>
-            <span class="s">&quot;positions&quot;</span> <span class="o">:</span> <span class="nb">true</span><span class="p">,</span>
-            <span class="s">&quot;predicates&quot;</span><span class="o">:</span><span class="p">[</span>
-            <span class="p">{</span> <span class="s">&quot;type&quot;</span><span class="o">:</span> <span class="mi">7</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&quot;in&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;f&quot;</span> <span class="o">:</span> <span class="s">&quot;company_id&quot;</span><span class="p">,</span> <span class="s">&quot;vtype&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;value&quot;</span><span class="o">:</span> <span class="mi">2</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;in&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;f&quot;</span> <span class="o">:</span> <span class="s">&quot;company_name&quot;</span><span class="p">,</span> <span class="s">&quot;vtype&quot;</span> <span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&quot;value&quot;</span><span class="o">:</span> <span class="s">&quot;Microsoft&quot;</span> <span class="p">}</span>
-            <span class="p">]</span>
-        <span class="p">},</span>
-        <span class="s">&quot;2&quot;</span> <span class="o">:</span> <span class="p">{</span>
-            <span class="s">&quot;type&quot;</span> <span class="o">:</span> <span class="s">&quot;ProjectionScan&quot;</span><span class="p">,</span>
-            <span class="s">&quot;fields&quot;</span> <span class="o">:</span> <span class="p">[</span>
-            <span class="s">&quot;company_id&quot;</span><span class="p">,</span><span class="s">&quot;company_name&quot;</span>
-            <span class="p">]</span>
-            <span class="p">}</span>
-        <span class="p">},</span>
-        <span class="s">&quot;edges&quot;</span><span class="o">:</span> <span class="p">[[</span><span class="s">&quot;0&quot;</span><span class="p">,</span><span class="s">&quot;1&quot;</span><span class="p">],[</span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="s">&quot;2&quot;</span><span class="p">]]</span>
-    <span class="p">}</span>
+below:</p>
+<div class="highlight-js"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="highlight"><pre>  <span class="p">{</span>
+      <span class="s2">&quot;papi&quot;</span><span class="o">:</span> <span class="s2">&quot;PAPI_L1_DCA&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;operators&quot;</span> <span class="o">:</span> <span class="p">{</span>
+          <span class="s2">&quot;0&quot;</span><span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;LoadFile&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;filename&quot;</span> <span class="o">:</span> <span class="s2">&quot;tables/companies.tbl&quot;</span>
+          <span class="p">},</span>
+          <span class="s2">&quot;1&quot;</span> <span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&quot;type&quot;</span> <span class="o">:</span> <span class="s2">&quot;SimpleTableScan&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;positions&quot;</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="s2">&quot;predicates&quot;</span><span class="o">:</span><span class="p">[</span>
+              <span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">7</span> <span class="p">},</span>
+              <span class="p">{</span> <span class="s2">&quot;type&quot;</span> <span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span> <span class="o">:</span> <span class="s2">&quot;company_id&quot;</span><span class="p">,</span> <span class="s2">&quot;vtype&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="mi">2</span> <span class="p">},</span>
+              <span class="p">{</span> <span class="s2">&quot;type&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span> <span class="o">:</span> <span class="s2">&quot;company_name&quot;</span><span class="p">,</span> <span class="s2">&quot;vtype&quot;</span> <span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Microsoft&quot;</span> <span class="p">}</span>
+              <span class="p">]</span>
+          <span class="p">},</span>
+          <span class="s2">&quot;2&quot;</span> <span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&quot;type&quot;</span> <span class="o">:</span> <span class="s2">&quot;ProjectionScan&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;fields&quot;</span> <span class="o">:</span> <span class="p">[</span>
+              <span class="s2">&quot;company_id&quot;</span><span class="p">,</span><span class="s2">&quot;company_name&quot;</span>
+              <span class="p">]</span>
+              <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="s2">&quot;edges&quot;</span><span class="o">:</span> <span class="p">[[</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="s2">&quot;1&quot;</span><span class="p">],[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">]]</span>
+      <span class="p">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div>
 <div class="section" id="query-execution">
 <h2>Query Execution<a class="headerlink" href="#query-execution" title="Permalink to this headline">¶</a></h2>
@@ -183,13 +207,42 @@ below</p>
 
               </div>
             </div>
+            <div class="row footer_toc">
+<!--   <h3><a href="../../contents.html">Contents</a></h3> -->
+<div class="col-md-offset-1 col-md-3">
+  <div class='toc-general'>
+  	<h3>Navigation</h3>
+	<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">HYRISE introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../people.html">People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../publications.html">Publications</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture/index.html">Implementation Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../queryexecution/index.html">HYRISE Query Execution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing/index.html">Developing with HYRISE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">HYRISE &amp; Development FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proposals/index.html">Proposals</a></li>
+</ul>
+
+  </div>
+</div>
+<div class="col-md-7">
+	<h3>License</h3>
+	HYRISE is licensed as open source after the OpenSource “Licence of the Hasso-Plattner Institute” declared in the LICENSE file of this project.
+
+	Question: Why does HYRISE not use MIT or BSD or XX license. The reason for our approach comes with the German copyright law. Common BSD and MIT licenses are not necessarily compatible and thus can potentially lead to problems. To overcome this problem this project uses an specifically designed open source license to be compatible with German law. The most prominent difference is the exclusion of all liabilities which is not possible in Germany.
+
+	<h3>Copyright</h3>
+    &copy; 2010-2013, Martin Grund et al.
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+
+</div>
+            </div>
         </div>
       </div>
-      <div class="footer">
-        &copy; Copyright 2010-2013, Martin Grund et al.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
-      </div>
-
     </div>
   </div>
 

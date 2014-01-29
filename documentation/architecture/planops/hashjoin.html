@@ -93,7 +93,7 @@
     </div><!-- /.navbar-collapse -->
   </nav>
 </div>
-            <div class="row">
+            <div class="row upper">
               
   <div class="col-md-3">
     <div class="hyrisesidebar nav">
@@ -146,50 +146,83 @@
 <div class="section" id="build-phase-hashbuild">
 <h2>Build Phase: HashBuild<a class="headerlink" href="#build-phase-hashbuild" title="Permalink to this headline">¶</a></h2>
 <p>For the first phase, the build phase, the HashBuild PlanOperation is used. It accepts the first AbstractTable and a list of fields as input to produce a HashTable:</p>
-<div class="highlight-c++"><div class="highlight"><pre><span class="kt">void</span> <span class="n">HashBuild</span><span class="o">::</span><span class="n">executePlanOperation</span><span class="p">()</span>
-<span class="p">{</span>
-        <span class="n">addResult</span><span class="p">(</span><span class="k">new</span> <span class="n">HashTable</span><span class="p">(</span>
-                <span class="n">getInputTable</span><span class="p">(),</span>
-                <span class="k">new</span> <span class="kt">field_list_t</span><span class="p">(</span><span class="n">_field_definition</span><span class="p">)));</span>
-<span class="p">}</span>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="kt">void</span> <span class="n">HashBuild</span><span class="o">::</span><span class="n">executePlanOperation</span><span class="p">()</span>
+      <span class="p">{</span>
+              <span class="n">addResult</span><span class="p">(</span><span class="n">new</span> <span class="n">HashTable</span><span class="p">(</span>
+                      <span class="n">getInputTable</span><span class="p">(),</span>
+                      <span class="n">new</span> <span class="kt">field_list_t</span><span class="p">(</span><span class="n">_field_definition</span><span class="p">)));</span>
+      <span class="p">}</span>
 
-<span class="n">HashTable</span><span class="p">(</span><span class="n">AbstractTable</span> <span class="o">*</span><span class="n">table</span><span class="p">,</span> <span class="kt">field_list_t</span> <span class="o">*</span><span class="n">fields</span><span class="p">)</span>
-<span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">pos_t</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">table</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">row</span><span class="p">)</span>
-        <span class="p">{</span>
-                <span class="n">add</span><span class="p">(</span><span class="n">hashFor</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="o">*</span><span class="n">fields</span><span class="p">,</span> <span class="n">row</span><span class="p">),</span> <span class="n">row</span><span class="p">);</span>
-        <span class="p">}</span>
-<span class="p">}</span>
+      <span class="n">HashTable</span><span class="p">(</span><span class="n">AbstractTable</span> <span class="o">*</span><span class="n">table</span><span class="p">,</span> <span class="kt">field_list_t</span> <span class="o">*</span><span class="n">fields</span><span class="p">)</span>
+      <span class="p">{</span>
+              <span class="k">for</span> <span class="p">(</span><span class="kt">pos_t</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">table</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">row</span><span class="p">)</span>
+              <span class="p">{</span>
+                      <span class="n">add</span><span class="p">(</span><span class="n">hashFor</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="o">*</span><span class="n">fields</span><span class="p">,</span> <span class="n">row</span><span class="p">),</span> <span class="n">row</span><span class="p">);</span>
+              <span class="p">}</span>
+      <span class="p">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <p>To build the HashTable, the cell values of all table&#8217;s rows in the specified fields are hashed together. They are stored in a multimap, mapping onto all rows containing identical groups of cell values. This provides a fast way to look up rows belonging to a set of cell values.</p>
 </div>
 <div class="section" id="probe-phase-hashjoinprobe">
 <h2>Probe Phase: HashJoinProbe<a class="headerlink" href="#probe-phase-hashjoinprobe" title="Permalink to this headline">¶</a></h2>
 <p>In the second phase, the HashJoinProbe PlanOperation is used. It accepts the second AbstractTable and the aforementioned HashTable as input to produce the resulting joined table:</p>
-<div class="highlight-c++"><div class="highlight"><pre><span class="kt">void</span> <span class="n">HashJoinProbe</span><span class="o">::</span><span class="n">fetchPositions</span><span class="p">(</span>
-        <span class="kt">pos_list_t</span> <span class="o">*</span><span class="n">buildTablePosList</span><span class="p">,</span>
-        <span class="kt">pos_list_t</span> <span class="o">*</span><span class="n">probeTablePosList</span><span class="p">)</span>
-<span class="p">{</span>
-        <span class="n">AbstractTable</span> <span class="o">*</span><span class="n">probeTable</span> <span class="o">=</span> <span class="n">getProbeTable</span><span class="p">();</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">pos_t</span> <span class="n">probeTableRow</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">probeTableRow</span> <span class="o">&lt;</span> <span class="n">probeTable</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">probeTableRow</span><span class="p">)</span>
-        <span class="p">{</span>
-                <span class="kt">pos_list_t</span> <span class="o">*</span><span class="n">buildTableMatchingRows</span> <span class="o">=</span> <span class="n">getInputHashTable</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get</span><span class="p">(</span>
-                        <span class="n">probeTable</span><span class="p">,</span>
-                        <span class="n">_field_definition</span><span class="p">,</span>
-                        <span class="n">probeTableRow</span><span class="p">);</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">buildTableMatchingRows</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
-                <span class="p">{</span>
-                        <span class="n">BOOST_FOREACH</span><span class="p">(</span><span class="kt">pos_t</span> <span class="n">buildTableRow</span><span class="p">,</span> <span class="o">*</span><span class="n">buildTableMatchingRows</span><span class="p">)</span>
-                        <span class="p">{</span>
-                                <span class="n">buildTablePosList</span><span class="o">-&gt;</span><span class="n">push_back</span><span class="p">(</span><span class="n">buildTableRow</span><span class="p">);</span>
-                                <span class="n">probeTablePosList</span><span class="o">-&gt;</span><span class="n">push_back</span><span class="p">(</span><span class="n">probeTableRow</span><span class="p">);</span>
-                        <span class="p">}</span>
-                <span class="p">}</span>
-        <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="kt">void</span> <span class="n">HashJoinProbe</span><span class="o">::</span><span class="n">fetchPositions</span><span class="p">(</span>
+              <span class="kt">pos_list_t</span> <span class="o">*</span><span class="n">buildTablePosList</span><span class="p">,</span>
+              <span class="kt">pos_list_t</span> <span class="o">*</span><span class="n">probeTablePosList</span><span class="p">)</span>
+      <span class="p">{</span>
+              <span class="n">AbstractTable</span> <span class="o">*</span><span class="n">probeTable</span> <span class="o">=</span> <span class="n">getProbeTable</span><span class="p">();</span>
+              <span class="k">for</span> <span class="p">(</span><span class="kt">pos_t</span> <span class="n">probeTableRow</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">probeTableRow</span> <span class="o">&lt;</span> <span class="n">probeTable</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">probeTableRow</span><span class="p">)</span>
+              <span class="p">{</span>
+                      <span class="kt">pos_list_t</span> <span class="o">*</span><span class="n">buildTableMatchingRows</span> <span class="o">=</span> <span class="n">getInputHashTable</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get</span><span class="p">(</span>
+                              <span class="n">probeTable</span><span class="p">,</span>
+                              <span class="n">_field_definition</span><span class="p">,</span>
+                              <span class="n">probeTableRow</span><span class="p">);</span>
+                      <span class="k">if</span> <span class="p">(</span><span class="n">buildTableMatchingRows</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+                      <span class="p">{</span>
+                              <span class="n">BOOST_FOREACH</span><span class="p">(</span><span class="kt">pos_t</span> <span class="n">buildTableRow</span><span class="p">,</span> <span class="o">*</span><span class="n">buildTableMatchingRows</span><span class="p">)</span>
+                              <span class="p">{</span>
+                                      <span class="n">buildTablePosList</span><span class="o">-&gt;</span><span class="n">push_back</span><span class="p">(</span><span class="n">buildTableRow</span><span class="p">);</span>
+                                      <span class="n">probeTablePosList</span><span class="o">-&gt;</span><span class="n">push_back</span><span class="p">(</span><span class="n">probeTableRow</span><span class="p">);</span>
+                              <span class="p">}</span>
+                      <span class="p">}</span>
+              <span class="p">}</span>
+      <span class="p">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <p>During execution, HashJoinProbe hashes the table&#8217;s cell values of the specified row together on the fly while iterating over the table. For each calculated hash, a lookup on the HashTable is performed to fetch matching rows of the first table. Pairs of matching rows are stored in the resulting joined table.</p>
 </div>
 </div>
@@ -197,13 +230,42 @@
 
               </div>
             </div>
+            <div class="row footer_toc">
+<!--   <h3><a href="../../../contents.html">Contents</a></h3> -->
+<div class="col-md-offset-1 col-md-3">
+  <div class='toc-general'>
+  	<h3>Navigation</h3>
+	<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">HYRISE introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../people.html">People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../publications.html">Publications</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Implementation Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../queryexecution/index.html">HYRISE Query Execution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developing/index.html">Developing with HYRISE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">HYRISE &amp; Development FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../proposals/index.html">Proposals</a></li>
+</ul>
+
+  </div>
+</div>
+<div class="col-md-7">
+	<h3>License</h3>
+	HYRISE is licensed as open source after the OpenSource “Licence of the Hasso-Plattner Institute” declared in the LICENSE file of this project.
+
+	Question: Why does HYRISE not use MIT or BSD or XX license. The reason for our approach comes with the German copyright law. Common BSD and MIT licenses are not necessarily compatible and thus can potentially lead to problems. To overcome this problem this project uses an specifically designed open source license to be compatible with German law. The most prominent difference is the exclusion of all liabilities which is not possible in Germany.
+
+	<h3>Copyright</h3>
+    &copy; 2010-2013, Martin Grund et al.
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+
+</div>
+            </div>
         </div>
       </div>
-      <div class="footer">
-        &copy; Copyright 2010-2013, Martin Grund et al.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
-      </div>
-
     </div>
   </div>
 

@@ -5,31 +5,40 @@
 
 	$(document).ready(function () {
 
+		$(window).on('hashchange', function(event) {
+
+			var params = (event.originalEvent.newURL||'').split('#');
+			var page = params[0];
+			var anchor = params[1];
+
+			// if link on same page, animate
+			if (window.location.href.split('#')[0] === page) {			
+				var target = $('#' + anchor);
+
+				$('body, html').animate({
+				    scrollTop: (target[0] && target.offset().top || 0) - SCROLL_OFFSET
+				}, SCROLL_DURATION);
+			}
+
+		});
+
 		var $body = $('body');
 		var $menu = $('.hyrisesidebar');
 		var $list = $menu.find('.localtoc ul:first');
 
-		var moveNavigation = function() {
-			var $this = $(window);
-			var scroll = $('.inner-wrapper').height() - $this.scrollTop();
-			var top = Number($menu.css('margin-top').split('px')[0]);
-
-			if (scroll <= $('body').height() + 2) {
-				$menu.css('top', scroll - $menu.height() - top - 25);
-			} else {
-				$menu.css('top', 0);
-			}
-
-		};
-
+		/**
+		 * set the height of the sidebar according to the height of the window
+		 * @return {[type]} [description]
+		 */
 		var handleWindowResize = function() {
+
 			var top = $('.navbar').height();
-			var scroll = $('.inner-wrapper').height() - $(window).scrollTop();
+			var scroll = $('.inner-wrapper .upper').height()// - $(window).scrollTop();
+
 			var height = Math.min(scroll, $(window).height()) - top - 20;
 
 			$menu.height(height);
-
-			moveNavigation();
+			// $menu.affix(();
 		};
 
 		var handleLocalTocClick = function(event) {
@@ -58,11 +67,21 @@
 			});
 		}
 
-
-		$(window).resize(handleWindowResize);
-		$(window).scroll(moveNavigation);
+		var doit;
+		$(window).resize(function(){
+		  clearTimeout(doit);
+		  doit = setTimeout(handleWindowResize, 100);
+		});
 
 		handleWindowResize();
+
+		$menu.affix({
+			offset: {
+				bottom	: function() {
+					return $('.footer_toc').outerHeight(true) + $('.footer').outerHeight(true) + 45;	
+				}
+			}
+		})
 
 	});
 

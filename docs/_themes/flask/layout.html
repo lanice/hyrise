@@ -40,7 +40,8 @@
       {%- else %}
         {#- old style sidebars: using blocks -- should be deprecated #}
         {%- block sidebartoc %}
-        {%- include "localtoc.html" %}
+        {%- include "globaltoc.html" %}
+        <!-- {%- include "localtoc.html" %} -->
         {%- endblock %}
         {%- block sidebarrel %}
         {%- include "relations.html" %}

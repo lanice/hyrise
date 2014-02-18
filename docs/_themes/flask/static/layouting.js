@@ -35,7 +35,7 @@
 			var top = $('.navbar').height();
 			var scroll = $('.inner-wrapper .upper').height()// - $(window).scrollTop();
 
-			var height = Math.min(scroll, $(window).height()) - top - 20;
+			var height = Math.min(scroll, $(window).height()) - top - 25;
 
 			$menu.height(height);
 			// $menu.affix(();
@@ -51,6 +51,17 @@
 			$('body, html').animate({
 			    scrollTop: (target[0] && target.offset().top || 0) - SCROLL_OFFSET
 			}, SCROLL_DURATION);
+		};
+
+		var initFooter = function() {
+			$menu.affix({
+				offset: {
+					bottom	: function() {
+						return $('.footer_toc').outerHeight(true) + $('.footer').outerHeight(true) + 45;	
+					}
+				}
+			})
+
 		};
 
 		$menu.find('ul li:not(:has(ul))').addClass('leaf');
@@ -73,15 +84,8 @@
 		  doit = setTimeout(handleWindowResize, 100);
 		});
 
+		initFooter();
 		handleWindowResize();
-
-		$menu.affix({
-			offset: {
-				bottom	: function() {
-					return $('.footer_toc').outerHeight(true) + $('.footer').outerHeight(true) + 45;	
-				}
-			}
-		})
 
 	});
 

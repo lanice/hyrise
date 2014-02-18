@@ -7,14 +7,14 @@ HYRISE documentation contents
 .. toctree::
     :hidden:
 
-    index
+    home
     people
     publications
 
 .. toctree::
     :maxdepth: 3
 
-    /documentation/index
+    /documentation/documentation
     /documentation/architecture/index
     /documentation/gettingstarted/index
     /documentation/queryexecution/index

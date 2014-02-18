@@ -201,16 +201,3 @@ alphabetical order :)
   * Tim Berning
   * Tim Zimmermann
   * Uwe Hartmann
-
-
-License
--------
-
-HYRISE is licensed as open source after the OpenSource "Licence of the Hasso-Plattner Institute" declared in the LICENSE file of this project. 
-
-Question: Why does HYRISE not use MIT or BSD or XX license. The reason for our
-approach comes with the German copyright law. Common BSD and MIT licenses are
-not necessarily compatible and thus can potentially lead to problems. To
-overcome this problem this project uses an specifically designed open source
-license to be compatible with German law. The most prominent difference is the
-exclusion of all liabilities which is not possible in Germany.

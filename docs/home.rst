@@ -44,21 +44,21 @@ In static layout selection the layout is chosen before application deployment. F
 Read more
 =========
 
-You are interested? Have a look at the :doc:`documentation <documentation/index>`.
+You are interested? Have a look at the :doc:`documentation/documentation`.
 
 .. .. toctree::
 ..     :hidden:
 
 ..     index
 
-.. toctree::
-    :maxdepth: 1
+.. .. toctree::
+..     :maxdepth: 1
 
-    documentation/index
-    documentation/gettingstarted/index
-    documentation/architecture/index
-    documentation/queryexecution/index
-    documentation/developing/index
-    documentation/faq/index
-    documentation/proposals/index
-    doxygen/index
+..     documentation/documentation
+..     documentation/gettingstarted/index
+..     documentation/architecture/index
+..     documentation/queryexecution/index
+..     documentation/developing/index
+..     documentation/faq/index
+..     documentation/proposals/index
+..     doxygen/html/index

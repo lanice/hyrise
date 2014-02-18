@@ -11,13 +11,12 @@ experiments with different settings.
 
 .. toctree::
     :glob:
-    :titlesonly:
     
-    /queryexecution/json_query_execution
-    /queryexecution/json_queries
-    /queryexecution/available_operators
-    /queryexecution/parallelization
-    /queryexecution/json_plan_operations
-    /queryexecution/tx
-    /queryexecution/v8ops
+    json_query_execution
+    json_queries
+    available_operators
+    parallelization
+    json_plan_operations
+    tx
+    v8ops
 

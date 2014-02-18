@@ -12,7 +12,10 @@ as well as possible grouping functions (sum or count) as input.
 
 The interface for this PlanOperation is straight-forward:
 
-Example::
+Example:
+
+.. code-block:: c
+  :linenos:
 
     StorageManager *sm = StorageManager::getInstance();
 
@@ -48,7 +51,10 @@ The implementation of *HashBuild* and *HashedColumn* takes care of building the 
 executePlanOperation()
 ======================
 
-Commented Code::
+Commented Code:
+
+.. code-block:: c
+  :linenos:
 
     /* the result table layout is created with the help of the
      * added grouping fields and attached aggregate functions
@@ -184,8 +190,11 @@ After that, we replace the original complete HashTable in the operations input b
 correct iterator pair for a given instance. After all instances have completed their grouping tasks the HYRISE
 QueryTransformationEngine automatically attaches a UnionScan writing the results of all instances into one table.
 
-A parallel GroupByScan can be executed with the HYRISE JSON interface as follows::
-      
+A parallel GroupByScan can be executed with the HYRISE JSON interface as follows:
+
+.. code-block:: js
+  :linenos:
+
       {
         "operators": {
             "-1": {

@@ -1,5 +1,5 @@
 =============================
-HYRISE documentation
+HYRISE introduction
 =============================
 
 
@@ -44,21 +44,21 @@ In static layout selection the layout is chosen before application deployment. F
 Read more
 =========
 
-You are interested? Have a look at the :doc:`documentation <documentation/index>`.
+You are interested? Have a look at the :doc:`documentation/documentation`.
 
-.. toctree::
-    :hidden:
+.. .. toctree::
+..     :hidden:
 
-    index
+..     index
 
-.. toctree::
-    :maxdepth: 1
+.. .. toctree::
+..     :maxdepth: 1
 
-    /documentation/index
-    /gettingstarted/index
-    /architecture/index
-    /queryexecution/index
-    /developing/index
-    /faq/index
-    /proposals/index
-    /doxygen/index
+..     documentation/documentation
+..     documentation/gettingstarted/index
+..     documentation/architecture/index
+..     documentation/queryexecution/index
+..     documentation/developing/index
+..     documentation/faq/index
+..     documentation/proposals/index
+..     doxygen/html/index

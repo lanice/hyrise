@@ -10,6 +10,3 @@ Layout Engines
 * CandidateLayouter
 * DivideAndConquerLayouter
 
-.. toctree::
-   :glob:
-   :titlesonly:

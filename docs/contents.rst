@@ -7,23 +7,17 @@ HYRISE documentation contents
 .. toctree::
     :hidden:
 
-    index
+    home
+    people
+    publications
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 3
 
-    /documentation/index
-    /architecture/index
-    /gettingstarted/index
-    /queryexecution/index
-    /developing/index
-    /faq/index
-    /proposals/index
-    /doxygen/index
-
-Indices, glossary and tables
-============================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`glossary`
+    /documentation/documentation
+    /documentation/architecture/index
+    /documentation/gettingstarted/index
+    /documentation/queryexecution/index
+    /documentation/developing/index
+    /documentation/faq/index
+    /documentation/proposals/index

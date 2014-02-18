@@ -20,12 +20,13 @@
 
 {%- block relbar2 %}
 {% endblock %}
-
+ 
 {%- macro hyrise_sidebar() %}
   {%- if render_sidebar %}
   <div class="col-md-3">
     <div class="hyrisesidebar nav">
-      {%- block sidebarlogo %}
+      <div class="resize-handle"></div>
+      {%- block sidebarlogo %}  
       {%- if logo %}
         <p class="logo"><a href="{{ pathto(master_doc) }}">
           <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
@@ -40,7 +41,7 @@
       {%- else %}
         {#- old style sidebars: using blocks -- should be deprecated #}
         {%- block sidebartoc %}
-        {%- include "localtoc.html" %}
+        {%- include "globaltoc.html" %}
         {%- endblock %}
         {%- block sidebarrel %}
         {%- include "relations.html" %}
@@ -72,19 +73,17 @@
     <div class="inner-wrapper">
         <div class="container">
           {%- include 'topnav.html' %}
-            <div class="row">
+            <div class="row upper">
               {{ hyrise_sidebar() }}
               <div class="col-md-9" role="main">
                 {% block body %} {% endblock %}
               </div>
             </div>
+            <div class="row footer_toc">
+              {%- include 'footertoc.html' %}
+            </div>
         </div>
       </div>
-      <div class="footer">
-        &copy; Copyright {{ copyright }}.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
-      </div>
-
     </div>
   </div>
 {% endblock %}

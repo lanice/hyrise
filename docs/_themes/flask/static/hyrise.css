@@ -65,16 +65,75 @@ blockquote blockquote {
   margin-top: 50px;
 }
 
-@media (min-width: 992px) {
+/*@media (max-width: 979px) {
+
+  .navbar-wrapper {
+    display: none;
+  }
+
   .hyrisesidebar {
-    width: 228px;
-  }  
+    position: fixed !important;
+    top: 0 !important;
+    margin-top: 0;
+    background: white;
+    z-index: 1;
+    padding-left: 40px;
+    transition: width 100ms;
+    -moz-transition: width 100ms;
+    -webkit-transition: width 100ms;
+    width: 336px;
+    left: 0;
+  }
+
+  .hyrisesidebar .resize-handle {
+    width: 24px;
+    height: 100%;
+    background: #fafafa;
+    border-right: 1px solid #ddd;
+    top: 0;
+    position: fixed;
+    left: 0;
+  }
+
+  .hyrisesidebar.sidebar-collapsed {
+    padding: 0;
+    width: 24px;
+    overflow: hidden;
+  }
+
+  .hyrisesidebar.sidebar-collapsed .resize-handle {
+    left: 0px;
+  }
+
+  .container div[role=main] {
+    margin-left: 24px;
+  }
+
+  .container div[role=main] > .section {
+    margin-top: 0 !important;
+  }
+
+  .row.footer_toc .toc-general {
+    display: none !important;
+  }
+}*/
+
+.hyrisesidebar {
+  width: 228px;
+}
+
+.hyrisesidebar .resize-handle {
+  display: none;
 }
 
 @media (min-width: 1200px) {
   .hyrisesidebar {
     width: 263px;
-  }  
+  }
+
+  .hyrisesidebar .resize-handle {
+    display: none;
+  }
 }
 
 .hyrisesidebar.affix-bottom {
@@ -196,6 +255,11 @@ blockquote blockquote {
 
 #people .section img {
   margin-top: -36px;
+}
+
+.container{
+  min-width: 980px !important;
+  max-width: 1200px;
 }
 
 .container div[role=main] > .section {

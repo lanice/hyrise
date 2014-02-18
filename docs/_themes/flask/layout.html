@@ -19,13 +19,14 @@
 {% endblock %}
 
 {%- block relbar2 %}
-{% endblock %} 
-
+{% endblock %}
+ 
 {%- macro hyrise_sidebar() %}
   {%- if render_sidebar %}
   <div class="col-md-3">
     <div class="hyrisesidebar nav">
-      {%- block sidebarlogo %}
+      <div class="resize-handle"></div>
+      {%- block sidebarlogo %}  
       {%- if logo %}
         <p class="logo"><a href="{{ pathto(master_doc) }}">
           <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
@@ -41,7 +42,6 @@
         {#- old style sidebars: using blocks -- should be deprecated #}
         {%- block sidebartoc %}
         {%- include "globaltoc.html" %}
-        <!-- {%- include "localtoc.html" %} -->
         {%- endblock %}
         {%- block sidebarrel %}
         {%- include "relations.html" %}
